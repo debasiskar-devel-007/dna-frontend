@@ -14,6 +14,9 @@ import { DemoMaterialModule } from './material-module';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
+import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
@@ -36,7 +39,10 @@ export function metaFactory(): MetaLoader {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     DemoMaterialModule,
