@@ -17,6 +17,8 @@ import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { NewthewholestoryComponent } from './newthewholestory/newthewholestory.component';
+import { NewmentorComponent } from './newmentor/newmentor.component';
 
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
@@ -42,7 +44,9 @@ export function metaFactory(): MetaLoader {
     AppComponent,
     HomeComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    NewthewholestoryComponent,
+    NewmentorComponent
   ],
   imports: [
     DemoMaterialModule,
