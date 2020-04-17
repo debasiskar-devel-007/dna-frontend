@@ -2767,6 +2767,13 @@ button{ box-shadow: none!important;}
 
 @media screen and (max-width: 1199px){
 
+    .producttextblock.newmentorbannertxt .divtext2 {
+       
+        padding: 15px 0px 0 0px!important;
+    }
+    .newthewholestory_block5_row1_wrapper {
+        padding: 0!important;
+    }
     .newthewholestory_banner_section .product_banner_inner_col {
         width: 100%;
         margin: 0 auto;
@@ -3896,7 +3903,7 @@ background: rgba(1,80,149,1);
     background: linear-gradient(135deg, rgba(235,243,244,1) 0%, rgba(160,195,199,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3f4', endColorstr='#a0c3c7', GradientType=1 ); position: relative; }
 
-.newthewholestory_block2_row1_wrapper{background: url("../images/new_newthewholestory_block2_row1_bg1.png") no-repeat right bottom 18px; min-height: 530px; overflow: hidden; padding: 20px;}
+.newthewholestory_block2_row1_wrapper{background: url("../images/new_newthewholestory_block2_row1_bg1.png") no-repeat right bottom ; min-height: 530px; overflow: hidden; padding: 20px;}
 .newthewholestory_block2 h2 {background: url(../images/new_about_con_icon.png) no-repeat left top 10px;
     font-size: 24px; color: #2a2929; text-transform: uppercase; font-family: 'OpenSans-Semibold'; margin: 0px; padding: 5px 0 5px 55px; max-width: 100%;}
 .newthewholestory_block2 h3 {margin: 7px 0 0 56px; padding: 0px; font-size: 18px; color: #000000; font-family: 'OpenSans-Regular'; line-height: 24px;padding-right: 474px;}
@@ -3980,7 +3987,7 @@ background: rgba(1,80,149,1);
 .newthewholestory_block4_wrapper_left{  background: url("../images/newthewholestory_block4_col1_img1.png") no-repeat left bottom; width:696px; padding: 24px; padding-bottom: 330px; }
 .newthewholestory_block4_wrapper_left h3{ margin: 0px 0 0 56px; padding: 0px; font-size: 18px; color: #000000;  font-family: 'OpenSans-Regular'; line-height: 24px;}
 .newthewholestory_block4_wrapper h4{ margin: 30px 0 0 56px; padding: 0px; font-size: 18px; color: #000000;  font-family: 'OpenSans-Regular'; line-height: 24px;}
-.newthewholestory_block4_wrapper_right{ width: 374px;  background: url("../images/new_about_con_imgshadow.png") no-repeat left bottom; padding-left: 74px;   right: 44px;
+.newthewholestory_block4_wrapper_right{ width: 374px;  background: url("../images/new_about_con_imgshadow.png") no-repeat left 69%; padding-left: 74px;   right: 44px;
     top: 60px; position: absolute;}
 .newthewholestory_block4_wrapper_right img{ width: auto; border: solid 10px #fff; box-shadow: 0 0 2px #888;}
 
@@ -4236,7 +4243,7 @@ background: rgba(1,80,149,1);
 .newmentor_block2_wrapper_left h3{ margin: 0px 0 0 56px; padding: 0px; font-size: 18px; color: #000000;  font-family: 'OpenSans-Regular'; line-height: 24px;}
 .newmentor_block2_wrapper_left h3 span{color:#fb2516;}
 .newmentor_block2_wrapper h4{ margin: 30px 0 0 56px; padding: 0px; font-size: 18px; color: #000000;  font-family: 'OpenSans-Regular'; line-height: 24px;}
-.newmentor_block2_wrapper_right{ width: 360px;  background: url("../images/new_about_con_imgshadow.png") no-repeat left bottom; padding-left: 74px; right: 44px; top: 120px; position: absolute;}
+.newmentor_block2_wrapper_right{ width: 360px;  background: url("../images/new_about_con_imgshadow.png") no-repeat left 67%; padding-left: 74px; right: 44px; top: 120px; position: absolute;}
 .newmentor_block2_wrapper_right img{ width: 100%; border: solid 10px #fff; box-shadow: 0 0 2px #888;}
 .newmentor_block2_con_body .newabout_block5_btn {width: auto; background: rgba(47,62,71,1); background: -moz-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%); background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(47,62,71,1)), color-stop(100%, rgba(30,34,37,1))); background: -webkit-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%); background: -o-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%); background: -ms-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%); background: linear-gradient(to bottom, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f3e47', endColorstr='#1e2225', GradientType=0 ); font-size: 24px; color: #ffffff;
     text-transform: uppercase; font-family: 'OpenSans-Bold'; border-radius: 4px; float: right; margin-top: 0px; margin-bottom: 20px; border:2px solid #6e8081;}
@@ -4281,12 +4288,12 @@ background: rgba(1,80,149,1);
     display: inline-block; position: relative;}
 .newmentor_block4_wrapper{ padding: 24px 24px 24px 0; position: relative;}
 .newmentor_block4_wrapper_left{background: url(../images/newmentor_block4_col1_img1.png) no-repeat left 10% bottom; width: 718px; padding: 24px; padding-bottom: 285px; position: relative;  z-index: 99;}
-.newmentor_block4_wrapper h4{font-size: 24px; color: #2a2929; text-transform: uppercase; font-family: 'OpenSans-Semibold'; margin: 0px; padding: 5px 0 5px 55px;
+.newmentor_block4_wrapper h4{font-size: 24px; color: #2a2929; text-transform: uppercase; font-family: 'OpenSans-Semibold'; margin: 0px; padding: 5px 0 5px 24px;
     margin-top: 40px; max-width: 80%;}
 .newmentor_block4_wrapper h4 span{color:#fe4437;}
-.newmentor_block4_wrapper h3{ margin: 0px 0 10px 56px; padding: 0px; font-size: 18px; color: #000000;  font-family: 'OpenSans-Regular'; line-height: 24px;}
-.bottomh3{max-width: 72%;}
-.newmentor_block4_wrapper_right{ width: 350px;  background: url("../images/new_about_con_imgshadow.png") no-repeat left bottom; padding-left: 74px;   right: 44px; top: 60px; position: absolute; z-index: 99;}
+.newmentor_block4_wrapper h3{ margin: 0px 0 10px 0; padding: 0px; font-size: 18px; color: #000000;  font-family: 'OpenSans-Regular'; line-height: 24px;}
+.bottomh3{max-width: 72%; margin: 0px 0 10px 24px!important;}
+.newmentor_block4_wrapper_right{ width: 350px;  background: url("../images/new_about_con_imgshadow.png") no-repeat left 67%; padding-left: 74px;   right: 44px; top: 60px; position: absolute; z-index: 99;}
 .newmentor_block4_wrapper_right img{ width: 100%; border: solid 10px #fff; box-shadow: 0 0 2px #888;}
 .newmentor_block4_con_body .newabout_block5_btn {
     width: auto;
@@ -4713,8 +4720,16 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
 }
 
 @media screen and (max-width:1199px) {
+
+    .newmentor_block4_wrapper h4{    max-width: initial;}
     .newthewholestory_block4_wrapper_left h3 {
         margin: 0px 0 0 0px;
+    }
+    .bottomh3 {
+        max-width: inherit;
+        padding: 0px!important;
+        margin: 0px 10px!important;
+        width: auto!important;
     }
 
     .newthewholestory_block2{width: 90% !important; margin-bottom: 20px!important;}
@@ -4748,7 +4763,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
 
     .producttextblock.newaboutbetobannertxt{width: 100%; padding: 15px;  margin-bottom: 0px;}
     .producttextblock.newthewholestorybannertxt {width: 100%; padding: 20px 0 20px 0px;}
-    .producttextblock.newmentorbannertxt {width: 100%; padding: 20px 0 20px 0px;}
+    .producttextblock.newmentorbannertxt {width: 100%; padding: 0px 0 20px 0px;     margin: 0;}
     .producttextblock.newsuccessgeneticsbannertxt {width: 100%; padding: 20px 0 0px 0px;}
 
 
@@ -4765,7 +4780,9 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
     }
     .newthewholestory_block2_row1_wrapper .newabout_block5_btn {width: auto; margin: 20px auto 0px; display: inline-block; text-align: center; float: none;}
     .producttextblock.newthewholestorybannertxt .divtext2 {padding: 15px 15px; width: 100%;}
-    .newthewholestory_block2_row1_wrapper .newabout_block5_btn a {font-size: 18px;}
+    .newthewholestory_block2_row1_wrapper .newabout_block5_btn a {  font-size: 18px;
+        background-position: center 10px;
+        padding: 45px 10px 10px 10px;}
 
 
 
@@ -4789,7 +4806,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
     .newthewholestory_block4 {width: 90%; text-align: center;}
     .newthewholestory_block4_wrapper h2 {margin: 0px 24px; padding: 48px 0 5px 0; background-position: center top;}
     .newthewholestory_block4_wrapper h4 {width: auto; display: block; margin: 0 24px; }
-    .newthewholestory_block4_wrapper {padding: 24px 0; }
+    .newthewholestory_block4_wrapper {padding:0 0 24px 0; }
     .newthewholestory_block4_wrapper_left {width: auto; padding: 24px; padding-bottom: 43%;  background-size: 110%;}
     .newthewholestory_block4_wrapper_right {width: auto!important; background: none;padding-left: 0;right: 0; top: 0; position: inherit; display: block; margin: 25px auto;}
     .newthewholestory_block4_con_body .newabout_block5_btn {width: auto!important; margin: 20px 10px; display: inline-block; text-align: center; float: none;}
@@ -4832,7 +4849,9 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
     }
     .newthewholestory_block7_row1_wrapper .newabout_block5_btn {width: auto; margin: 20px auto 0px; display: inline-block; text-align: center; float: none;}
     .producttextblock.newthewholestorybannertxt .divtext2 {padding: 15px 15px; width: 100%;}
-    .newthewholestory_block7_row1_wrapper .newabout_block5_btn a {font-size: 18px;}
+    .newthewholestory_block7_row1_wrapper .newabout_block5_btn a { font-size: 18px;
+        background-position: center 10px;
+        padding: 45px 10px 10px 10px;}
 
 
     .newmentor_block2 {     box-shadow: none!important;
@@ -4843,8 +4862,10 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
     .newmentor_block2_wrapper {padding: 24px 0; }
     .newmentor_block2_wrapper_left {width: auto; padding: 24px;}
     .newmentor_block2_wrapper_right {width: 300px;background: none;padding-left: 0;right: 0; top: 0; position: inherit; display: block; margin: 10px auto;}
-    .newmentor_block2_con_body .newabout_block5_btn {width: auto; margin: 20px auto 0px; display: inline-block; text-align: center; float: none;}
-    .newmentor_block2_con_body .newabout_block5_btn a {font-size: 18px;}
+    .newmentor_block2_con_body .newabout_block5_btn {width: auto; margin: 20px 10px 0px; display: inline-block; text-align: center; float: none;}
+    .newmentor_block2_con_body .newabout_block5_btn a {  font-size: 18px;
+        background-position: center 10px;
+        padding: 45px 10px 10px 10px;}
     .newmentor_block2_wrapper_left h3 {margin: 0px 0 0 0px;}
 
 
@@ -4855,17 +4876,19 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
     .newmentor_block3 ul {margin: 17px 0 0 0px !important; padding: 0px !important; padding-right: 0 !important;}
     .newmentor_block3 ul li {margin: 0px; padding: 23px 0 15px 0px; background-position: center top; max-width: 100%; }
     .newmentor_block3 .newabout_block5_btn {width: auto; margin: 20px auto 0px; display: inline-block; text-align: center; float: none;}
-    .newmentor_block3 .newabout_block5_btn a {font-size: 18px;}
+    .newmentor_block3 .newabout_block5_btn a {  font-size: 18px;
+        background-position: center 10px;
+        padding: 45px 10px 10px 10px;}
     .newmentor_block3_imgleft {position: inherit; left: 0; top: 0px; z-index: 9; margin-top: -12%;}
     .newmentor_block3_imgleft img{max-width: 130%;}
 
 
     .newmentor_block4 {width: 90%; text-align: center;}
     .newmentor_block4_wrapper h2 {margin: 0px 24px; padding: 48px 0 5px 0; background-position: center top;}
-    .newmentor_block4_wrapper h4 {width: auto; display: block; margin: 0 24px;  padding: 5px 0 5px 5px;}
-    .newmentor_block3 h3 { margin: 7px 0 0 0px !important; padding-right: 0 !important; width: 100%;}
+    .newmentor_block4_wrapper h4 {width: auto; display: block; margin: 0 24px;  padding: 5px 0 5px 5px;     max-width: inherit!important;}
+    .newmentor_block3 h3 { margin: 7px 0 0 0px !important; padding-right: 0 !important; width: 100%;  max-width: inherit!important;}
     .bottomh3 { width: 100%;}
-    .newmentor_block4_wrapper {padding: 24px 0; }
+    .newmentor_block4_wrapper {padding: 0 0 24px 0; }
     .newmentor_block4_wrapper_left {width: auto; padding: 24px; padding-bottom: 43%;  background-size: 110%;}
     .newmentor_block4_wrapper_right {width: 300px;background: none;padding-left: 0;right: 0; top: 0; position: inherit; display: block; margin: 25px auto;}
     .newmentor_block4_con_body .newabout_block5_btn {width: auto; margin: 20px auto 0px; display: inline-block; text-align: center; float: none;}
@@ -4942,6 +4965,13 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
         font-size: 34px;
         line-height: 40px;
     }
+
+    .producttextblock.newmentorbannertx h2{
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+
     .newmentor_block2_con_body .newabout_block5_btn {
         width:90%;
     }

@@ -249,6 +249,12 @@
           font-size: 42px;
           line-height: 42px;
       }
+
+      
+      .producttextblock.newmentorbannertxt  h2 {
+        font-size: 42px;
+        line-height: 42px;
+    }
   
     /*  .product_banner_section { background-position:  -223px 0!important;}*/
   
@@ -1890,6 +1896,12 @@
           font-size: 32px;
           line-height: 32px;
       }
+
+      .producttextblock.newmentorbannertxt  h2 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
   
   
       .mentors_detail_block_con_right_btn .mentors_detail_bookbtn {
@@ -4554,6 +4566,22 @@
   }
   
   @media screen and (max-width:600px) {
+
+    .newmentor_block2_wrapper_right img {
+        width: 90%;
+        border: solid 10px #fff;
+        box-shadow: 0 0 2px #888;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .newmentor_block4_wrapper_right img {
+        width: 90%;
+        border: solid 10px #fff;
+        box-shadow: 0 0 2px #888;
+        display: block;
+        margin: 0 auto;
+    }
     .asnewhomemainwrapper {
         width: 90%;
     }
@@ -4561,10 +4589,10 @@
           width: 99% !important;
       }
       .newabout_block5_btn {
-          width: auto; padding: 5px 18px;}
+          width: auto; padding: 5px 0px;}
   
       .newabout_block2_btn {
-          width: auto; padding: 5px 18px;}
+          width: auto; padding: 5px 0px;}
   
       .newabout_block2_wrapper {
           background-position: bottom center;
