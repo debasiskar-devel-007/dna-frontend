@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { window.scrollTo(500, 0); }
+  
+  status: boolean = false;
+  clickEvent(){
+    this.status = !this.status;
+  }
 
   ngOnInit() {
   }

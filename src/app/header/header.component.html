@@ -46,8 +46,13 @@
 
                         </a>
                     </span>
-                    <span class=" home_banner_menu_section">
+                    <span class=" home_banner_menu_section"   (click)="clickEvent()"     [ngClass]="status ? 'menushow' : 'menuhide'">
                          
+                        <label class="menuiconlabel"> 
+ 
+                                <img src="../../assets/images/menuicon_new.png" alt="#"> 
+                              </label>
+
                             <span class="navbar-nav">
                                 
                                 
@@ -58,11 +63,11 @@
 
                                         <li><a href="javascript:void(0);" routerLink="/home">Home</a></li>
                                         <li><a href="javascript:void(0);">Products</a></li>
-                                        <li><a href="javascript:void(0);" routerLink="/newthewholestory">The Whole Story</a></li>
-                                        <li><a href="javascript:void(0);" routerLink="/newmentor">Mentor Program</a></li>
-                                        <li><a href="javascript:void(0);">Success Genetics</a></li>
-                                        <li><a href="javascript:void(0);">About Jack Zufelt</a></li>
-                                        <li><a href="javascript:void(0);">About Beto Paredes</a></li>
+                                        <li><a href="javascript:void(0);" routerLink="/thewholestory">The Whole Story</a></li>
+                                        <li><a href="javascript:void(0);" routerLink="/mentor">Mentor Program</a></li>
+                                        <li><a href="javascript:void(0);"  routerLink="/successgenetics">Success Genetics</a></li>
+                                        <li><a href="javascript:void(0);"  routerLink="/about">About Jack Zufelt</a></li>
+                                        <li><a href="javascript:void(0);" routerLink="/aboutbeto" >About Beto Paredes</a></li>
                                         <li><a href="javascript:void(0);">Blog</a></li>
                                         <li><a href="javascript:void(0);">Contact Us</a></li>
                                         <li><a href="javascript:void(0);">Live Webinar</a></li>

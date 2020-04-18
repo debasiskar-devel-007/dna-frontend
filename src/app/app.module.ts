@@ -19,6 +19,9 @@ import { FooterComponent,TermsandCondition, PrivacyPolicy } from './footer/foote
 import { HeaderComponent } from './header/header.component';
 import { NewthewholestoryComponent } from './newthewholestory/newthewholestory.component';
 import { NewmentorComponent } from './newmentor/newmentor.component';
+import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
+import { NewsuccessgeneticsComponent } from './newsuccessgenetics/newsuccessgenetics.component';
+import { AboutComponent } from './about/about.component';
 
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
@@ -49,6 +52,9 @@ export function metaFactory(): MetaLoader {
     NewmentorComponent,
     TermsandCondition,
     PrivacyPolicy,
+    NewaboutbetoComponent,
+    NewsuccessgeneticsComponent,
+    AboutComponent,
   ],
   imports: [
     DemoMaterialModule,
