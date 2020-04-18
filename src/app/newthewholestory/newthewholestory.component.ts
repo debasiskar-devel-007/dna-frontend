@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewthewholestoryComponent implements OnInit {
 
-  constructor() { }
+  constructor() {window.scrollTo(500, 0);  }
 
   ngOnInit() {
   }

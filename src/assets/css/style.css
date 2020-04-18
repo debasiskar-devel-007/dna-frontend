@@ -135,7 +135,7 @@ p{padding: 0px; margin: 0px;}
 
 .row{ display:block!important;}
 
-.home_top_section{background: #4d4f67;/* padding: 15px;*/ border-bottom: solid 4px #e3ebe7; display:block!important;}}
+.home_top_section{background: #4d4f67;/* padding: 15px;*/ border-bottom: solid 4px #e3ebe7; display:block!important;}
 .home_top_block_col{padding: 0px; display:block!important;}
 .home_top_section p{font-family:'OpenSans-Semibold'; font-size: 18px; color: #fff!important; display: inline-block; margin: 0px; padding:4px 0 4px 42px; background: url("../images/new_star.png") no-repeat left center}
 
@@ -2127,10 +2127,7 @@ box-shadow: none!important;
     width: 858px;
     padding: 35px 0 0 50px;
 }
-.s_content_profile{
-
-
-}
+ 
 .s_content_profile h3{
     margin: 0;
     padding: 0;
@@ -4607,17 +4604,63 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
 
 
     .foooter_section label a {
-        border: none;
+        border: none;     display: inline-block;
     }
 
     .foooter_section label a:hover{ color: #e75147!important;}
 
     .foooter_section label span {
-        display: none;
-        width: 0;
+        display: inline-block;
+        width: 10px;
     }
 
- 
+ .modalbody{ display:block;}
+.popuplogo{ display: block; width: 300px; max-width: 100%; margin: 0 auto;}
+.cdk-global-scrollblock{ overflow: inherit!important;}
+.modalbody  h4 {
+    display: block;
+    width: 100%;
+    color: #3e405b;
+    margin:15px 0 25px 0!important;
+    padding: 0;
+    text-align: center;
+    font-family: 'OpenSans-Semibold'!important;
+    text-transform: uppercase;  font-size:30px!important;
+}
+
+
+.modalbody h4:after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background: #3e405b;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-top: 5px;
+}
+
+.modalbody  p {
+    color: #333 !important;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'OpenSans-Semibold';
+}
+.modalbody .popupboldtext {
+    color: #e75046;
+    font-size: 18px;
+    font-family: 'OpenSans-Semibold';
+}
+.modalbody a{
+    color: #e75046; 
+}
+
+.md-dialog-content {  top: 0 !important; position: fixed !important; }
+
 
 @media screen and (min-width: 1921px) {
     .newthewholestory_banner_section {

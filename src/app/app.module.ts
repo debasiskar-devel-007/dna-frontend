@@ -15,7 +15,7 @@ import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common
 import { Router } from '@angular/router';
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent,TermsandCondition, PrivacyPolicy } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { NewthewholestoryComponent } from './newthewholestory/newthewholestory.component';
 import { NewmentorComponent } from './newmentor/newmentor.component';
@@ -46,7 +46,9 @@ export function metaFactory(): MetaLoader {
     FooterComponent,
     HeaderComponent,
     NewthewholestoryComponent,
-    NewmentorComponent
+    NewmentorComponent,
+    TermsandCondition,
+    PrivacyPolicy,
   ],
   imports: [
     DemoMaterialModule,
@@ -71,7 +73,8 @@ export function metaFactory(): MetaLoader {
     CookieService,TestresolveService,ApiService
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [TermsandCondition, PrivacyPolicy]
 })
 export class AppModule {
   constructor(public http: HttpClient, public router: Router) {
