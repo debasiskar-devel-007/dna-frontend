@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(public meta: MetaService) { window.scrollTo(500, 0); 
   
     this.meta.setTitle('DNA Of Success - The DNA Master Course');
-    // this.meta.update({ name: 'description', content: 'Dynamic Hello Angular Lovers description!' });
+
     this.meta.setTag('og:description', 'Jack Zufelt’s The DNA Of Success Master Course to help you identify and overcome barriers using the Success Attitude Formula to achieve success at the high levels you always desired.');
     this.meta.setTag('twitter:description', 'Jack Zufelt’s The DNA Of Success Master Course to help you identify and overcome barriers using the Success Attitude Formula to achieve success at the high levels you always desired.');
 
