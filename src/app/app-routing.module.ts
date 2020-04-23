@@ -6,6 +6,8 @@ import { NewmentorComponent } from './newmentor/newmentor.component';
 import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
 import { NewsuccessgeneticsComponent } from './newsuccessgenetics/newsuccessgenetics.component';
 import { AboutComponent } from './about/about.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogdetailComponent } from './blogdetail/blogdetail.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent}, 
@@ -15,6 +17,8 @@ const routes: Routes = [
   {path:'aboutbeto', component: NewaboutbetoComponent}, 
   {path:'successgenetics', component: NewsuccessgeneticsComponent}, 
   {path:'about', component: AboutComponent}, 
+  {path:'blog', component: BlogComponent}, 
+  {path:'blogdetail', component: BlogdetailComponent}, 
   
 ];
 
