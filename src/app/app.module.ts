@@ -24,6 +24,7 @@ import { NewsuccessgeneticsComponent } from './newsuccessgenetics/newsuccessgene
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
+import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
 
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
@@ -59,6 +60,7 @@ export function metaFactory(): MetaLoader {
     AboutComponent,
     BlogComponent,
     BlogdetailComponent,
+    AffiliatesignupComponent,
   ],
   imports: [
     DemoMaterialModule,

@@ -1281,7 +1281,13 @@ box-shadow: none!important;
 
 
 
-
+.modalclose {
+    background: #ff4f42!important;
+    color: #fff!important;
+    padding: 0px!important;
+    height: 35px!important;
+    line-height: 38px!important;
+}
 
 .newaboutbeto_block4 ul{margin: 7px 0 0 56px; padding: 0px; padding-right: 459px;}
 .newaboutbeto_block4 ul li {
@@ -1493,6 +1499,78 @@ box-shadow: none!important;
 
 
 
+
+.newaffiliatesignup_contextdiv {
+    background: url(../images/newaffiliatesignup_bg2.png) no-repeat center top;
+    width: 694px;
+    height: 465px;
+    position: absolute;
+    top: 401px;
+    right: -102px;
+    background-size: 100%;
+}
+
+.newaffiliatesignup_contextdiv_text {
+    width: 640px;
+    padding: 40px;
+    padding-top: 65px;
+}
+
+.newaffiliatesignup_contextdiv_text h2{ margin: 0px; padding: 0px; font-size: 28px; color: #f6ff00; text-transform: uppercase;  font-family: 'Open-Sans-bold';}
+.newaffiliatesignup_contextdiv_text h3{ margin: 0px; padding: 0px; font-size: 18px; color: #e8edec; text-transform: uppercase;     font-family: 'Open-Sans-semi-bold'; line-height: 30px;}
+.newaffiliatesignup_contextdiv_text h4{ margin: 0px; padding: 8px 0 0 0; font-size: 36px; color: #00d9ff; text-transform: uppercase;     font-family: 'Open-Sans-semi-bold'; line-height: 30px;}
+
+.newaffiliatesignup_contextdiv_text h5 {
+    margin: 28px 0 0 0;
+    padding: 14px;
+    font-size: 22px;
+    color: #ffffff;
+    font-family: 'Open-Sans-semi-bold';
+    line-height: 26px;
+}
+
+
+.newaffiliatesignup_conright{
+    
+    width: 350px;
+    box-sizing: border-box;
+      background: url(../images/newaffiliatesignup_bg3.png) no-repeat left 98%; padding-left: 0px; min-height: 600px; position: relative;
+    
+    float: right;}
+
+.newaffiliatesignup_formwrapper{ box-sizing: border-box; background: #5ee3f9; border: solid 1px #548672; border-radius: 10px; box-shadow:  0 0 5px #000;}
+
+.newaffiliatesignup_formbody{background: url(../images/newaffiliatesignup_form_bg.png) no-repeat center top; background-size: 100%; padding: 15px; }
+
+
+.newaffiliatesignup_formbody h2{ margin: 0px auto; 
+    padding: 0 0 0 60px; font-size: 36px; color: #ffffff; text-transform: uppercase; font-family: 'robotoblack'; text-shadow:  0 0 5px #0d5e81;
+  
+}
+
+
+.newaffiliatesignup_formbody h3{ margin:0 0 20px 0; background: url(../images/newaffiliatesignup_form_devider.png) no-repeat center bottom; padding: 0px 0 18px 0; font-size: 34px; color: #ffffff; text-transform: uppercase; font-family: 'robotoblack'; text-shadow:  0 0 5px #0d5e81;  text-align: center;}
+
+
+.newaffiliatesignup_formbody .form-group{ width: 100%; margin: 10px 0;}
+
+.newaffiliatesignup_formbody .form-group input{box-sizing: border-box; width: 100%; margin: 2px 0; border: none; height: 36px; border-radius: 5px; box-shadow:  0 0 3px #0d5e81!important; padding: 0 10px;   font-family:'OpenSans-Regular'; font-size: 14px; color: #333;}
+
+
+.newaffiliatesignup_formbody .form-group select{ width: 100%; margin: 0px; height: 36px; border-radius: 5px; box-shadow:  0 0 3px #0d5e81!important; padding: 0 10px;   font-family:'OpenSans-Regular'; font-size: 14px; color: #333;}
+
+.newaffiliatesignup_formbody .form-group textarea{ width: 95%; margin: 0px; height: 76px; border-radius: 5px; box-shadow:  0 0 3px #0d5e81!important; padding:10px 2%;   font-family:'OpenSans-Regular'; font-size: 14px; color: #333; resize: none;}
+
+
+.form-group2{ margin:10px 10px 5px 10px; font-size: 12px; color: #43455e;}
+
+.form-group2 input[type="checkbox"]{ float: left;}
+
+.form-group2 span{ display: inline-block;
+    float: left; padding: 5px 0 0 5px;}
+
+
+.afsignbtn{background: url(../images/newaffiliatesignup_btn.png) no-repeat left top!important; background-size: 100%!important; width: 100%!important; height: 94px!important; border: none!important; box-shadow: none!important; outline: none!important; cursor: pointer!important; font-size: 36px!important;  color: #ffffff!important;  font-family: 'Open-Sans-semi-bold'!important;     text-shadow: 0 2px 5px #5f6172!important; text-transform: uppercase!important;}
 
 
 .newcon_banner_section{padding: 0px; background: url("../images/new_con_banner.jpg") no-repeat 0 top; padding-bottom: 0px; background-size:cover;}
@@ -3367,19 +3445,29 @@ button{ box-shadow: none!important;}
  
 
 
-
+.newaffiliatesignup_conwrapper {
+    width: 1680px;
+    margin: 0 auto;
+    padding: 32px 0 22px 0;
+    position: relative;
+    padding-bottom: 100px;
+}
 
 /*affiliate*/
-.s_newAffiliate{ background: url(../images/newAffilliateBg.png) no-repeat center top;  background-size: cover; }
+.s_newAffiliate{ background: url(../images/newAffilliateBg.png) no-repeat center top;   }
 .s_newAffiliate .newaffiliatesignup_conwrapper{ padding-bottom: 50px; }
-.s_newAffiliate .newaffiliatesignup_conleft{ width: 1185px; margin-left: 60px; min-height: 100%;}
+.s_newAffiliate .newaffiliatesignup_conleft{ width: 1270px; margin-left: 60px; min-height: 100%; float: left;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .title{ font-family: "RobotoBlack"; font-size: 150px; text-transform: uppercase; color: #fff;
     line-height: 120px; }
 .s_newAffiliate .newaffiliatesignup_conleft .content_section{ width: 100%; position: relative; }
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .sub_title{ margin-top: 25px; line-height: 60px; color: #41456e; font-family: "RobotoBlack"; font-size: 60px; text-transform: uppercase; }
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .sub_title span{ color: #ff4f42; }
 .s_newAffiliate .newaffiliatesignup_conleft .content_section  .image_quote{ position: absolute; right: 100px; bottom: 10px;  max-width: 100%; width: 450px; z-index: 1; }
-.s_newAffiliate .newaffiliatesignup_conleft .content_section  .image_top{ position: absolute; right: -4px; top: 15px;  max-width: 100%; width: 438px; }
+.s_newAffiliate .newaffiliatesignup_conleft .content_section  .image_top{     position: absolute;
+    right: 0;
+    top: -33px;
+    max-width: 100%;
+    width: 470px; }
 
 .s_newAffiliate .newaffiliatesignup_conleft .content_section  .arrow_section{ background: url("../images/affiliatedirection_arrow.png") no-repeat center center; background-size: cover; width: 695px; padding: 20px; margin-top: 30px;}
 
@@ -3391,8 +3479,8 @@ button{ box-shadow: none!important;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content{ width: 600px; margin-top: 30px; }
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content h3{ font-size: 28px; color: #000; font-family: "RobotoBold"; line-height: 44px; margin-bottom: 0;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content span{ font-size: 48px; color: #fff; font-family: "RobotoBlack"; }
-.s_newAffiliate .newaffiliatesignup_conleft .content_part2{ margin-top: 25px;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{ font-size: 24px; color: #fff; font-family: "RobotoBold"; text-shadow: 1px 1px #252525; line-height: 34px; }
+
+.s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{ font-size: 24px; color: #fff;      width: 96%; font-family: "RobotoBold"; text-shadow: 1px 1px #252525; line-height: 34px; }
 .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2 span{ color: #ffe952; font-family: "RobotoBold"; text-shadow: 1px 0.5px #252525;line-height: 30px; }
 .small{ display: none;}
 .af_small{ display: none; }
@@ -3400,7 +3488,7 @@ button{ box-shadow: none!important;}
 
 .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2 p{ font-family: "RobotoBold"; font-size: 26px; color: #f5ff61; line-height: 36px; padding-left: 30px;}
 
-.s_newAffiliate .girl_image { position: absolute; left: -173px; bottom: 0; width: 550px; }
+.s_newAffiliate .girl_image { position: absolute; left: -173px; bottom: -5px; width: 550px; }
 .s_newAffiliate .girl_image  img{ margin-top: 10px; max-width: 100%;}
 .s_newAffiliate .bottom_con .af_downpara{ padding-left: 400px; }
 .s_newAffiliate .bottom_con .af_downpara .affiliate_quote{ color: #2d2d36; font-size: 30px; font-family: 'RobotoMedium'; line-height: 34px; margin-bottom: 30px;margin-top: 30px;   }

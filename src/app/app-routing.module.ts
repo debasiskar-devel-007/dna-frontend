@@ -8,6 +8,7 @@ import { NewsuccessgeneticsComponent } from './newsuccessgenetics/newsuccessgene
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
+import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent}, 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'about', component: AboutComponent}, 
   {path:'blog', component: BlogComponent}, 
   {path:'blogdetail', component: BlogdetailComponent}, 
+  {path:'affiliatesignup', component: AffiliatesignupComponent}, 
   
 ];
 
