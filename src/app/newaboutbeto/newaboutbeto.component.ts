@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
-
+ 
 @Component({
   selector: 'app-newaboutbeto',
   templateUrl: './newaboutbeto.component.html',

@@ -164,7 +164,7 @@
       .newhomeblock5_left_block3_sub {
           padding: 108px 20px;
       }
-  
+      .cart_formbox1 .subbtn_pro{ font-size: 30px;}
   
   
   }
@@ -688,7 +688,7 @@
         margin-top: 20px;
     }
    .product_banner_position {
-          background-position: -340px 0;
+          background-position: 0 0!important;
       }
   
   
@@ -1299,12 +1299,9 @@
       .as_bodycon .newproduct_list5_bottom_wrapper h3{padding-right: 13%;}
       .as_bodycon .newproduct_list5_bottom_wrapper h2{padding-right: 13%;}
       .affiliate-signup_banner{ background-position:  -300px top;}
-      .product_banner_position {
-          background-position: -500px 0;
-      }
-  
+   
         .as_bodycon .newproduct_list1_bottom {background-size: 77%;}
-      .newcon_banner_section {background-position: -140px top;}
+      .newcon_banner_section {background-position: -140px top!important;}
   
       .newabout_banner_section {
           background-position: 350px top!important;
@@ -1342,9 +1339,9 @@
     }
 
 
-      .as_bodycon .newproduct_list2_bottom {background-size: 98%; padding: 40px 40px 40px 40px;}
+      .as_bodycon .newproduct_list2_bottom { padding: 40px 40px 40px 40px;   background-size: 90%;}
       .as_bodycon .newproduct_list2_bottom_wrapper h2:nth-child(2){padding-left: 590px;}
-      .as_bodycon .newproduct_list2_bottom_wrapper h2:nth-child(3){padding-left: 590px;}
+      .as_bodycon .newproduct_list2_bottom_wrapper h2:nth-child(3){padding-left:590px;}
       .as_bodycon .newproduct_con2_btn1 {margin-left: 590px;}
   
       .as_bodycon .newproduct_list4 .bgupwrapper {left: -44px;}
@@ -1395,6 +1392,7 @@
   }
   @media screen and (max-width:1440px) {
    
+    .product_form{ margin: 10px;}
     .afsignbtn{ height: 86px!important;}
     .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote {
         bottom: 0;
@@ -1633,6 +1631,11 @@
   
   }
   @media screen and (max-width:1400px) {
+
+    .as_bodycon .newproduct_list2_bottom {
+        background-size: 98%;
+        padding: 40px 40px 40px 40px;
+    }
   
       .producttextblock.newthewholestorybannertxt {
           width: 765px;}
@@ -1697,7 +1700,7 @@
           padding: 32px 20px;
       }
   
-      .as_bodycon .newproduct_list2_bottom {background-size: 108%; padding: 40px 40px 40px 40px;}
+    
       .s-top-banner .s-top-banner-wrapper .s-top-banner-left .s-top-heading-below {
           width: 772px;
           font-size: 36px;
@@ -1839,7 +1842,7 @@
       .affiliate-signup_banner{ background-position:  -420px top;}
   
    .newcon_banner_section {
-          background-position: -260px top;
+          background-position: -260px top!important;
       }
   
       .newhomeblock5_left_block3_sub {
@@ -2065,6 +2068,11 @@
 
   }
   @media screen and (max-width:1340px) {
+
+    .as_bodycon .newproduct_list2_bottom {
+        background-size: 114%;
+        padding: 40px 40px 40px 40px;
+    }
   
      .blog_body {
           width: 1160px;
@@ -2086,9 +2094,8 @@
       .blog_mediasrc_con {  padding-bottom: 20px;
           background-size: 100%;
       }
-      .as_bodycon .newproduct_list2_bottom {background-size: 108%;}
-      .as_bodycon .newproduct_list2_bottom_wrapper h2:nth-child(2){padding-left: 530px;}
-      .as_bodycon .newproduct_list2_bottom_wrapper h2:nth-child(3){padding-left: 530px;}
+    
+    
       .as_bodycon .newproduct_con2_btn1 {margin-left: 530px;}
       .s_bottom_sec .s_bottom_left_bg {
           background-position: 188% bottom;
@@ -2121,6 +2128,10 @@
    .newhomeblock5_left_block1 {
         background-size: cover;
         background-position: -1130px top !important; padding-right: 364px!important;
+    }
+
+    .cart_formbox1 .subbtn_pro {
+        font-size: 26px;
     }
   }
   
@@ -2362,9 +2373,7 @@
           background-position: -920px top!important;
       }
   
-      .product_banner_position {
-          background-position: -580px 0;
-      }
+     
   
       .affiliate-signup_banner{ background-position:  -480px top;}
       
@@ -2411,7 +2420,7 @@
       }
   
   
-      .as_bodycon .newproduct_list2_bottom {background-size: 111%;}
+      .as_bodycon .newproduct_list2_bottom {background-size:100%;}
       .as_bodycon .newproduct_list2_bottom_wrapper h2:nth-child(2){padding-left: 515px;}
       .as_bodycon .newproduct_list2_bottom_wrapper h2:nth-child(3){padding-left: 515px;}
       .as_bodycon .newproduct_con2_btn1 {margin-left: 515px;}
@@ -2443,6 +2452,8 @@
     }
   }
   @media screen and (max-width:1260px) {
+
+    .foooter_section label{ text-align: center;}
   
         .affiliate-signup_banner{ background-position:  -510px top;}
   
@@ -2607,10 +2618,7 @@
   
   @media screen and (max-width: 1240px) {
   
-       .product_banner_position {
-          background-position: -680px 0;
-      }
-      .as_bodycon .newproduct_list2_bottom {background-size: 122%; background-position: left -30px bottom; }
+    
       .as_bodycon .newproduct_list5_bottom_wrapper {width: 59%;}
       .as_bodycon .newproduct_list5 .bgupwrapper {right: -67px;}
       .as_bodycon .newproduct_list5 .bgupwrapper img:nth-child(1) {max-width: 96%;}
@@ -2646,7 +2654,7 @@
   .video_training_wrapper .source_container { width: 80%; margin: 0px auto; }
   }
   @media screen and (max-width: 1220px) {
-      .as_bodycon .newproduct_list2_bottom {background-size: 120%;}
+    
       .as_bodycon .newproduct_list2_bottom_wrapper h2:nth-child(2) {padding-left: 490px;}
       .as_bodycon .newproduct_list2_bottom_wrapper h2:nth-child(3) {padding-left: 490px;}
       .s_bottom_sec .s_bottom_left_bg {
@@ -2878,6 +2886,23 @@
   }
 
   @media screen and (max-width:1199px) {
+    .newcon_banner_section .producttextblock h2{ color: #0a4361; font-size: 38px;}
+    .contatcwrapper{ width: 100%; margin: 0 auto;}
+    .as_container .left_pro_blog {
+        padding: 0 0px 0 0;
+        float: none;
+        width: 100%;
+    }
+
+    .as_container .product_div {
+        padding: 0;
+        float: none;
+        width: 100%;
+    }
+    .product_bannerrow {
+        width: 100%;
+        margin: 0 auto;
+    }
 
     .product_banner_section .product_banner_col { 
         width: 100%; 
@@ -3334,7 +3359,7 @@
           .home_gellary_section_left{ padding-right:0px;}
           
           .productbanner2{ display:block; width:100%;}
-          .product_banner_section{ background:none!important; padding:0!important;}
+          .product_banner_section{ background:none!important; padding:0 0 25px 0!important;}
           
           .product_banner_section .product_banner_col{padding: 0px; width:90%; margin:0 auto; float:none;}
 
@@ -3373,26 +3398,26 @@
           .cart_formbox1 .cvvno{ float:none; margin-left:0px;}
   
   
-  
+          .as_bodycon .newproduct_list4_bottom_wrapper h2 p{ padding-left: 0px;}
   
       .cart_formbox1new .form-group label{ float:none; width:100%;}
-      .cart_formbox1new .form-group .form-control{ float:none!important; width:100%!important;}
-      .cart_formbox1new .form-group .form-control_textarea{ float:none; width:100%;}
-      .cart_formbox1new .form-group .form-control_select{ float:none; width:100%;}
-      .cart_formbox1new .cardinfo{ float:none;}
-      .cart_formbox1new .Exp_Date{float:none; width:100%;}
-      .cart_formbox1new .Exp_Date select{     width: 100%;
-          margin-bottom: 5px;}
-      .cart_formbox1new .cvvno{ float:none; margin-left:0px;}
+      .cart_formbox1new .form-group .form-control{ float:none!important; width:98%!important; padding: 0 1%!important; height: 40px!important;}
+      .cart_formbox1new .form-group .form-control_textarea{ float:none; width:98%; padding: 0 1%!important; height: 40px!important;}
+     
+      .as_product_form .cart_formbox1 .form-group .form-control {
+        width: 98%!important;}
+        .as_product_form .cart_formbox1 .form-group select.form-control{ float:none; width:100%!important; padding: 0 1%!important; height: 40px!important;}
+        .as_product_form .cart_formbox1new .cvvno{ float:none; margin-left:0px;}
   
-  
+      .as_product_form .cart_formbox1 .Exp_Date .form-control{ width: 46%!important; float: left!important;}
+      .as_product_form .cart_formbox1 .Exp_Date .form-control:last-of-type{ width: 46%!important; float: right!important;}
       .productform_bottomnew img {
           width: auto;
           background: #fff;
           border-radius: 2px;
           max-width: 100%;
       }
-          
+      .cart_formbox1 .subbtn_pro{ width: 260px;}
               
           .contact_banner_section{ background:none; padding:0;}
           
@@ -3730,7 +3755,7 @@
   
       .as_bodycon .newproduct_list1_bottom_wrapper h2 p{padding-left: 0;}
       .as_bodycon .newproduct_list2_bottom_wrapper h2 p{padding-left: 0;}
-      .as_bodycon .newproduct_list3_bottom_wrapper p{padding-left: 0;}
+      
       .as_bodycon .newproduct_list4_bottom_wrapper p{padding-left: 0;}
       .as_bodycon .newproduct_list5_bottom_wrapper h2 p{padding-left: 0;}
       .as_bodycon .newproduct_list3_bottom_wrapper h2{padding: 0;}
@@ -3756,8 +3781,8 @@
   
   
       .as_bodycon .newproduct_list4{padding: 0;}
-      .as_bodycon .newproduct_list4 .newproduct_list4_top {width: 100%; padding: 20px 20px 0px 20px;}
-      .as_bodycon .newproduct_list4_bottom {width: 100%;     padding: 0px 20px 0px 20px;}
+      .as_bodycon .newproduct_list4 .newproduct_list4_top {width: auto; padding: 20px 20px 0px 20px;}
+      .as_bodycon .newproduct_list4_bottom {width: auto;     padding: 0px 20px 0px 20px;}
       .as_bodycon .newproduct_list4 .bgupwrapper {position: relative; left: 0 !important;}
       .as_bodycon .newproduct_list4 .bgupwrapper img:nth-child(1){display: none;}
       .as_bodycon .newproduct_list4 .bgupwrapper img:nth-child(2){width: 100%; display: block;}
@@ -3790,8 +3815,8 @@
       .as_bodycon .newproduct_list1_bottom {
           padding: 20px 20px 31px 20px;
           background-size: 171%;
-          width: 100%;
-          padding-bottom: 112%;
+          width: auto;
+          padding-bottom: 112%;     background-position: right bottom;
       }
       .as_bodycon .newproduct_list1_top_wrapper h2 {text-align: center;}
       .as_bodycon .newproduct_list1_top_wrapper h3 {text-align: center;}
@@ -4981,7 +5006,7 @@
       }
   
       .contact_new_form_block_wrapper {
-          width: 100%;
+          width: auto;
           float: none;
           margin: 0;
           background-size: cover;
@@ -4990,6 +5015,17 @@
           border-right: none;
       }
   
+      .contact_form_input {
+        width: 97%;
+        height: 44px;
+        padding: 0 1%;
+      }
+
+      .contact_form_textarea {
+        width: 97%;
+        height: 44px;
+        padding: 0 1%;
+      }
       .home_top_section p span {
           border-bottom: none; color:#fde01f ;
       }
@@ -6032,6 +6068,9 @@
   }
   
     @media screen and (max-width:540px) {
+
+        .login_box {
+            padding: 50px 10px!important;}
   
       .producttextblock.newthewholestorybannertxt h2 {
           font-size: 28px;
@@ -6262,6 +6301,17 @@
   }
   
     @media screen and (max-width:460px) {
+
+        .remember_me_area .remember_mecheckbox{ float: none; }
+
+        .login_box_iforget{ float: none;  margin-top: 15px;}
+
+        .login_box h3 img { 
+            width: 15px;
+        }
+
+        .login_box .fornrow{ margin-left: 14px;}
+
       .newhomeblock3 .newhomeblock3_sub1 {
           background-position: 0px top;
       }
