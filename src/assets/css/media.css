@@ -553,8 +553,14 @@
      
   .abouttext1{ width:70%; margin:2% 0 2% 0;}
   
-      .asnewhomemainwrapper {padding: 0px 14px;}
-      .asnewtextwrapper p {font-size: 16px;padding: 12px 0px;line-height: 23px;}
+  .asbuttomwrapper .col p {
+    font-size: 16px;
+    color: #181212;
+    font-family: 'OpenSans-Semibold';
+    padding: 12px 0px;
+    line-height: 22px;
+}
+     
   
       .newmentor_banner_section {
           background-position: -650px top!important;
@@ -935,14 +941,10 @@
   
     @media screen and (max-width: 1590px){
   
-      .home_new_imgblock3 {
-          padding: 0 0px 30px 280px!important;
-          background-size: 398px!important;
-      }
+   
   
-      .newhomeblock5_left_block1 {
-          background-size: cover;
-          background-position: -520px top !important; padding-right: 364px!important;
+      .newhomeblock5_left_block1 { 
+          background-position: -270px bottom !important; padding-right: 364px!important;
       }
   
       .newhomeblock5_left_block1 .home_new_imgblock3 h2{ color: #000;}
@@ -1022,9 +1024,9 @@
     @media screen and (max-width: 1560px){
 	
 	   .asnewimgwrapper {
-          height: 340px;
+          height: 180px;
       }
-      .asnewhomemainwrapper {width: 33%;}
+     
       .newhomeblock5_left_block3_sub {
           padding: 67px 20px;
       }
@@ -1034,9 +1036,8 @@
           padding: 51px 20px;
       }
   
-      .newhomeblock5_left_block1 {
-          background-size: cover;
-          background-position: -570px top !important; padding-right: 364px!important;
+      .newhomeblock5_left_block1 { 
+          background-position: -270px bottom !important; padding-right: 364px!important;
       }
   
   }
@@ -1288,9 +1289,8 @@
           line-height: 32px;
       }
 	  
-	   .newhomeblock5_left_block1 {
-          background-size: cover;
-          background-position: -644px top !important; padding-right: 364px!important;
+	   .newhomeblock5_left_block1 { 
+          background-position: -360px bottom !important; padding-right: 364px!important;
       }
   
   }
@@ -1306,10 +1306,7 @@
       .newabout_banner_section {
           background-position: 350px top!important;
       }
-  .newhomeblock5_left_block1{ 
-    background-position: -700px 0!important;
-}
-  
+ 
       .newhomeblock5_left_block2 {
           background-position: 33% top;
       }
@@ -1386,8 +1383,7 @@
       }
 	  
 	     .newhomeblock5_left_block1 {
-        background-size: cover;
-        background-position: -720px top !important; padding-right: 364px!important;
+        padding-right: 364px!important;
     }
   }
   @media screen and (max-width:1440px) {
@@ -1579,9 +1575,7 @@
   .s_newAffiliate .bottom_con .af_downpara .good_news .goodnews_quote { font-size: 22px; line-height: 30px; }
   
   
-   .newhomeblock5_left_block1 {
-          background-size: cover;
-          background-position: -850px top !important; padding-right: 364px!important;
+   .newhomeblock5_left_block1 {  padding-right: 364px!important;
       }
   }
     @media screen and (max-width:1425px) {
@@ -1915,9 +1909,7 @@
           line-height: 30px;
       }
 	  
-	      .newhomeblock5_left_block1 {
-          background-size: cover;
-          background-position: -890px top !important; padding-right: 364px!important;
+	      .newhomeblock5_left_block1 {  padding-right: 364px!important;
       }
   }
   
@@ -2061,9 +2053,8 @@
           padding-right: 210px !important;
       }
 	  
-	  .newhomeblock5_left_block1 {
-        background-size: cover;
-        background-position: -910px top !important; padding-right: 364px!important;
+	  .newhomeblock5_left_block1 { 
+        background-position: -430px bottom !important; padding-right: 364px!important;
     }
 
   }
@@ -2104,32 +2095,17 @@
           background-position: 189% bottom !important;
       }
 	  
-	   .newhomeblock5_left_block1 {
-        background-size: cover;
-        background-position: -980px top !important; padding-right: 364px!important;
-    }
+ 
   }
 
-  @media screen and (max-width: 1330px){
-    .newhomeblock5_left_block1 {
-        background-size: cover;
-        background-position: -1060px top !important; padding-right: 364px!important;
-    }
-  }
+ 
     
   @media screen and (max-width: 1320px){
     .newaboutbeto_banner_section{ background-position: -360px top!important;}
-      .newhomeblock5_left_block1 {
-          background-size: cover;
-          background-position: -1133px top !important; padding-right: 364px!important;
-      }
+   
   
   
-   .newhomeblock5_left_block1 {
-        background-size: cover;
-        background-position: -1130px top !important; padding-right: 364px!important;
-    }
-
+  
     .cart_formbox1 .subbtn_pro {
         font-size: 26px;
     }
@@ -2329,10 +2305,7 @@
   
   @media screen and (max-width: 1296px){
   
-      .newhomeblock5_left_block1 {
-          background-size: cover;
-          background-position: -1190px top !important; padding-right: 364px!important;
-      }
+    
 
 
   
@@ -2445,12 +2418,7 @@
   
   }
 
-  @media screen and (max-width: 1262px){
-    .newhomeblock5_left_block1 {
-        background-size: cover;
-        background-position: -1240px top !important; padding-right: 364px!important;
-    }
-  }
+
   @media screen and (max-width:1260px) {
 
     .foooter_section label{ text-align: center;}
@@ -2599,9 +2567,7 @@
           background-position: -26% bottom !important;
       }
 	   .menu_block .home_banner_menu_section .navbar-nav li a{font-size: 12px;}
-    .newhomeblock5_left_block1 {
-        background-size: cover;
-        background-position: -1290px top !important; padding-right: 354px!important;}
+  
 	  
 	  
   }
@@ -2666,8 +2632,8 @@
       }
 	  
 	    .newhomeblock5_left_block1 {
-            background-size: cover;
-            background-position: -1320px top !important; padding-right: 334px!important;}
+          
+            background-position:-560px bottom!important; padding-right: 334px!important;}
         }
   
   @media screen and (max-width:1200px) {
@@ -2878,14 +2844,20 @@
       }
   
       .home_new_imgblock3 {
-          background: url(../images/home_new_imgblock3.jpg) no-repeat center top;
-          padding: 29% 20px 30px 20px!important;
+          /* background: url(../images/home_new_imgblock3.jpg) no-repeat center top; */
+          padding: 0 20px 30px 20px!important;
           background-size: 44%!important;
           margin-top: 25px;
       }
   }
 
   @media screen and (max-width:1199px) {
+
+    .asnewhomemainwrapper{ width: 48%;}
+
+    .asnewimgwrapper {
+        height: 250px;
+    }
     .newcon_banner_section .producttextblock h2{ color: #0a4361; font-size: 38px;}
     .contatcwrapper{ width: 100%; margin: 0 auto;}
     .as_container .left_pro_blog {
@@ -5276,9 +5248,7 @@
   }
   
     @media screen and (max-width:880px) {
-      .asnewimgwrapper {
-          height: 285px;
-      }
+     
   
       .newproduct_list4_con_banner {
           background-position:  295px bottom;
@@ -5339,9 +5309,7 @@
  
   
     @media screen and (max-width:820px) {
-      .asnewhomemainwrapper {
-          width: 31%;
-      }
+  
       .asnewimgwrapper {
           height: 249px;
       }
