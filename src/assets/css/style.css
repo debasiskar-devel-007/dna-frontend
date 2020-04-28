@@ -5491,7 +5491,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
     color: #495b64;
 }
 
-.foot_menu a.active{color: #e75248!important;}
+/* .foot_menu a.active{color: #e75248!important;} */
 .foot_menu a:hover{color: #e75248!important;}
 
 .footer_bottom_con{ display: block;}

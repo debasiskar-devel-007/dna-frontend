@@ -3226,7 +3226,7 @@
   .aboutarticale img{float:none; width:auto; margin:0 auto; display:block; margin-bottom:8px;}
   .aboutarticale span{text-align:center; padding-top:0px;}
   .aboutwrapper .aboutblock .h2text4{text-align:center; padding-left:5px;}
-  .aboutwrapper .aboutblock .aboutblock_listing li{background:url(../images/mentor_icon3.png) no-repeat center top; padding:26px 0 0 0px; margin-top:10px;}
+  .aboutwrapper .aboutblock .aboutblock_listing li{background:url("../images/mentor_icon3.png") no-repeat center top; padding:26px 0 0 0px; margin-top:10px;}
   
   
   .dnaleftblock1 p{ text-align:center;}
@@ -3320,7 +3320,7 @@
      .home_text_blog p span{ text-align:center; padding-bottom:25px;}
        .home_text_blog img{ float:none; margin:0 auto; display:block;}
        
-       .homebottombanner{ background:url(../images/homebottombg2.png) no-repeat; width:100%; background-size:cover; height:auto; margin-bottom:25px; padding:15px;}
+       .homebottombanner{ background:url("../images/homebottombg2.png") no-repeat; width:100%; background-size:cover; height:auto; margin-bottom:25px; padding:15px;}
        
            .homebottombanner .homebanner_left{ float:none; margin:0 auto;}
           
@@ -3421,8 +3421,8 @@
       .aboutwrapper .aboutblock .aboutblock_listing{text-align:center;}
       
       
-      .aboutwrapper .aboutblock .ptext2 li{background:url(../images/mentor_icon3.png) no-repeat center top; padding:28px 0 0 0px;}
-      .aboutwrapper .aboutblock .ptext3 li{background:url(../images/mentor_icon3.png) no-repeat center top; padding:28px 0 10px 0px;}
+      .aboutwrapper .aboutblock .ptext2 li{background:url("../images/mentor_icon3.png") no-repeat center top; padding:28px 0 0 0px;}
+      .aboutwrapper .aboutblock .ptext3 li{background:url("../images/mentor_icon3.png") no-repeat center top; padding:28px 0 10px 0px;}
       
       
   
@@ -3512,7 +3512,7 @@
   
   .successblock6 .success6text{ padding:0; width:auto;}
   
-  .successblock1 .successtext1 h2{ background:url(../images/success_icon1.png) no-repeat center top; padding:80px 0 12px 0px; text-align:center;}
+  .successblock1 .successtext1 h2{ background:url("../images/success_icon1.png") no-repeat center top; padding:80px 0 12px 0px; text-align:center;}
   .successblock1 .successtext1 h3{text-align:center;}
   
       
@@ -3708,11 +3708,11 @@
       .as_bodycon .newproduct_list4_bottom_wrapper h2 p {background: none;}
       .as_bodycon .newproduct_list5_bottom_wrapper h2 p {background: none;}
   
-      .as_bodycon .newproduct_list1_bottom_wrapper h2 p::first-letter {background: url(../images/li_listicon.png) no-repeat left 5px; padding-left: 20px;}
-      .as_bodycon .newproduct_list2_bottom_wrapper h2 p::first-letter {background: url(../images/li_listicon.png) no-repeat left 5px; padding-left: 20px;}
-      .as_bodycon .newproduct_list3_bottom_wrapper h2 p::first-letter {background: url(../images/li_listicon.png) no-repeat left 5px; padding-left: 20px;}
-      .as_bodycon .newproduct_list4_bottom_wrapper h2 p::first-letter {background: url(../images/li_listicon.png) no-repeat left 5px; padding-left: 20px;}
-      .as_bodycon .newproduct_list5_bottom_wrapper h2 p::first-letter {background: url(../images/li_listicon.png) no-repeat left 5px; padding-left: 20px;}
+      .as_bodycon .newproduct_list1_bottom_wrapper h2 p::first-letter {background: url("../images/li_listicon.png") no-repeat left 5px; padding-left: 20px;}
+      .as_bodycon .newproduct_list2_bottom_wrapper h2 p::first-letter {background: url("../images/li_listicon.png") no-repeat left 5px; padding-left: 20px;}
+      .as_bodycon .newproduct_list3_bottom_wrapper h2 p::first-letter {background: url("../images/li_listicon.png") no-repeat left 5px; padding-left: 20px;}
+      .as_bodycon .newproduct_list4_bottom_wrapper h2 p::first-letter {background: url("../images/li_listicon.png") no-repeat left 5px; padding-left: 20px;}
+      .as_bodycon .newproduct_list5_bottom_wrapper h2 p::first-letter {background: url("../images/li_listicon.png") no-repeat left 5px; padding-left: 20px;}
   
   
       .as_bodycon .newproduct_con1_btn1 {float: none; margin: 0 auto;}
