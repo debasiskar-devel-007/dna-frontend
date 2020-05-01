@@ -2202,7 +2202,7 @@ box-shadow: none!important;
 .s-top-banner .s-top-banner-wrapper .s-top-banner-left .s-top-heading-bottom{
     width: 970px;
     color: #000;
-    font-family: 'Roboto-Medium';
+    font-family: 'robotomedium';
     font-size: 30px;
     line-height: 35px;
     text-align: center; margin: 6px auto;
@@ -2236,7 +2236,7 @@ box-shadow: none!important;
 .s-bottom-arrow-div .s-top-user-quote ul li span{
     margin-left: 26px;
     color: #24221d;
-    font-family: 'Roboto-Medium';
+    font-family: 'robotomedium';
     font-size: 23px;
     padding: 0 15px;
     line-height: 37px;
@@ -2605,7 +2605,7 @@ box-shadow: none!important;
 .s_mentor_content   {
     width: 610px;
     font-size: 46px;
-    font-family: 'Roboto-Medium';
+    font-family: 'robotomedium';
     color: #fff;
     line-height: 43px;
     text-transform: uppercase;
@@ -2614,7 +2614,7 @@ box-shadow: none!important;
 
 .s_mentor_content  p {
     font-size: 46px;
-    font-family: 'Roboto-Medium';
+    font-family: 'robotomedium';
     color: #fff;
     line-height: 43px;
     text-transform: uppercase;
@@ -3647,7 +3647,7 @@ button{ box-shadow: none!important;}
 .newaffiliatesignup_conbody_new .newaffiliatesignup_conbody_new_text { position: relative;  padding-bottom: 15px;  margin: 0 auto;
     width: 1530px;}
 
-.newaffiliatesignup_conbody_new .newaffiliatesignup_conbody_new_text h2{ margin: 0px; padding: 5px; text-align: center; background: #1abbfa; font-size: 45px; color: #ffffff; text-transform: uppercase;   font-family: 'Roboto-Medium';}
+.newaffiliatesignup_conbody_new .newaffiliatesignup_conbody_new_text h2{ margin: 0px; padding: 5px; text-align: center; background: #1abbfa; font-size: 45px; color: #ffffff; text-transform: uppercase;  font-family: 'robotomedium';}
 
 .newaffiliatesignup_conbody_new .newaffiliatesignup_conbody_new_text  img{ position: absolute; left: 0; bottom: 0px;}
 
@@ -3985,7 +3985,9 @@ button{ box-shadow: none!important;}
 
 /*---------------------------------------newmentorsignup--------------------------*/
 
-.newmentorsignup_top_banner{ margin: 0; padding: 0; width: 100%;  background: url("../images/newmentorsignup_banner1.jpg") no-repeat left top; background-size: cover;  position: relative;}
+.newmentorsignup_top_banner{
+    border: none!important; box-shadow: none!important; border-radius: 0px!important;
+    margin: 0!important; padding: 0!important; width: 100%!important;  background: url("../images/newmentorsignup_banner1.jpg") no-repeat left top!important; background-size: cover!important;  position: relative!important;}
 
 
 .newmentorsignup_top_banner .newmentorsignup_top_banner_wrapper{ margin: 0; padding: 0; width: 100%;  height: 572px; background: url("../images/newmentorsignup_bannerimg2.png") no-repeat right top;}
@@ -4017,12 +4019,12 @@ button{ box-shadow: none!important;}
 .bannerimg1{ display: block; position: absolute; left: 980px; bottom: 0px;}
 
 
-.newmentorsignup_block2{background: url("../images/newmentorsignup_block2_bg1.png") no-repeat left top; background-size: cover;  margin: 0; padding: 0;}
+.newmentorsignup_block2{background: url("../images/newmentorsignup_block2_bg1.png") no-repeat left top; background-size: cover!important;  margin: 0!important; padding: 0!important; border: none!important; box-shadow: none!important; border-radius: 0px!important;}
 
 .newmentorsignup_block2_wrapper{background: url("../images/newmentorsignup_block2img.png") no-repeat left bottom;  margin: 0; padding: 0 2% 0 0; overflow: hidden; background-size: 600px;}
 
 
-.newmentorsignup_block2_text1{ width: 76%; padding-left: 60px; margin: 45px 0 0 0; }
+.newmentorsignup_block2_text1{ width: 70%; padding-left: 60px; margin: 45px 0 0 0; }
 
 .newmentorsignup_block2_text1 p{ margin: 0; padding: 0; font-size: 24px; color: #1d1f37;    font-family: 'robotoregular'; line-height: 32px;}
 
@@ -4034,7 +4036,7 @@ button{ box-shadow: none!important;}
 
 
 .newmentorsignup_block2_text2 {
-    width: 76%;
+    width: 50%;
     padding-left: 25%;
 }
 
@@ -4058,7 +4060,7 @@ button{ box-shadow: none!important;}
 
 .newmentorsignup_form{
     width: 380px;
-    box-sizing: border-box;
+    box-sizing: border-box; z-index: 9;
 
     padding-left: 0px; position: absolute; right:60px; top:20px;
 
@@ -4107,17 +4109,33 @@ button{ box-shadow: none!important;}
 
 .newmentorsignup_formbody .form-group{ width: 100%; margin: 7px 0;}
 
-.newmentorsignup_formbody .form-group input{box-sizing: border-box; width: 100%; margin: 0px; height: 36px; border-radius: 5px; box-shadow:  0 0 3px #0d5e81!important; padding: 0 10px;   font-family:'OpenSans-Regular'; font-size: 14px; color: #333;}
+.newmentorsignup_formbody .form-group input{box-sizing: border-box; width: 100%; margin: 0px; height: 36px; border-radius: 5px; box-shadow:  0 0 3px #0d5e81!important; padding: 0 10px;   font-family:'OpenSans-Regular'; font-size: 14px; color: #333; border: none;}
 
 
-.newmentorsignup_formbody .form-group select{ width: 100%; margin: 0px; height: 36px; border-radius: 5px; box-shadow:  0 0 3px #0d5e81!important; padding: 0 10px;   font-family:'OpenSans-Regular'; font-size: 14px; color: #333;}
+.newmentorsignup_formbody .form-group select{ width: 100%; margin: 0px; height: 36px; border-radius: 5px; box-shadow:  0 0 3px #0d5e81!important; padding: 0 10px;   font-family:'OpenSans-Regular'; font-size: 14px; color: #333; border: none; border: none;}
 
-.newmentorsignup_formbody .form-group textarea{ width: 100%; margin: 0px; height: 76px; border-radius: 5px; box-shadow:  0 0 3px #0d5e81!important; padding:10px;   font-family:'OpenSans-Regular'; font-size: 14px; color: #333; resize: none;}
-
-
+.newmentorsignup_formbody .form-group textarea{ width: 97%; margin: 0px; height: 76px; border-radius: 5px; box-shadow:  0 0 3px #0d5e81!important; padding:10px 1.5%;   font-family:'OpenSans-Regular'; font-size: 14px; color: #333; resize: none;  border: none;}
 
 
-.newmentorsignup_block3{ background: url(../images/newmentorsignup_block3_bg1.jpg) no-repeat center top!important; background-size: cover!important; margin: 0; padding:0px;}
+
+.afsignbtnnewami {
+    background: url(../images/newaffiliatesignup_btn.png) no-repeat left top!important;
+    background-size: 100%!important;
+    width: 100%!important;
+    height: 100px!important;
+    border: none!important;
+    box-shadow: none!important;
+    outline: none!important;
+    cursor: pointer!important;
+    font-size: 36px!important;
+    color: #ffffff!important;
+    font-family: 'Open-Sans-semi-bold'!important;
+    text-shadow: 0 2px 5px #5f6172!important;
+    text-transform: uppercase!important;
+}
+
+
+.newmentorsignup_block3{ background: url(../images/newmentorsignup_block3_bg1.jpg) no-repeat center top!important; background-size: cover!important;  margin: 0!important; padding:0!important; border: none!important; box-shadow: none!important; border-radius: 0px!important;}
 
 
 .newmentorsignup_block3_wrapper{background: url(../images/newmentorsignup_block3_bg.png) no-repeat right bottom!important; padding: 40px 60px;}
@@ -4133,9 +4151,9 @@ button{ box-shadow: none!important;}
 .newmentorsignup_block3_wrapper ul li{ list-style: none; background: url(../images/newmentorsignup_block3_icon.png) no-repeat left 6px!important; font-size: 24px; color: #1d1f37;  font-family: 'robotoregular'; margin: 26px 0 0 0; padding:  0 0 0 40px; line-height: 32px; width: 70%;}
 
 
-.newmentorsignup_block4{background: url(../images/newmentorsignup_block4_bg1.jpg) no-repeat center top!important; background-size: cover!important; margin: 0; padding:0 0 38px 0;}
+.newmentorsignup_block4{background: url(../images/newmentorsignup_block4_bg1.jpg) no-repeat center top!important; background-size: cover!important; margin: 0!important; padding:0!important; border: none!important; box-shadow: none!important; border-radius: 0px!important}
 
-.newmentorsignup_block4_wrapper{background: url(../images/newmentorsignup_block4_img.png) no-repeat left bottom!important; padding: 40px 60px 0px 650px;}
+.newmentorsignup_block4_wrapper{background: url(../images/newmentorsignup_block4_img.png) no-repeat left bottom!important; padding:  0px 60px 40px 650px;}
 
 
 .newmentorsignup_block4_wrapper  h2{ margin:0; padding:5px 12px;
@@ -4152,14 +4170,14 @@ background: rgba(1,80,149,1);
 .newmentorsignup_block4_wrapper p{ margin: 18px 0 0 0; padding: 0; font-size: 24px; color: #1d1f37;  font-family: 'robotoregular'; line-height: 32px;}
 
 
-.newmentorsignup_block5{background: rgba(243,86,74,1);
-    background: -moz-linear-gradient(left, rgba(243,86,74,1) 0%, rgba(255,91,79,1) 50%, rgba(243,86,74,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,86,74,1)), color-stop(50%, rgba(255,91,79,1)), color-stop(100%, rgba(243,86,74,1)));
-    background: -webkit-linear-gradient(left, rgba(243,86,74,1) 0%, rgba(255,91,79,1) 50%, rgba(243,86,74,1) 100%);
-    background: -o-linear-gradient(left, rgba(243,86,74,1) 0%, rgba(255,91,79,1) 50%, rgba(243,86,74,1) 100%);
-    background: -ms-linear-gradient(left, rgba(243,86,74,1) 0%, rgba(255,91,79,1) 50%, rgba(243,86,74,1) 100%);
-    background: linear-gradient(to right, rgba(243,86,74,1) 0%, rgba(255,91,79,1) 50%, rgba(243,86,74,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3564a', endColorstr='#f3564a', GradientType=1 ); margin: 0; padding: 0;}
+.newmentorsignup_block5{background: rgba(243,86,74,1)!important;
+    background: -moz-linear-gradient(left, rgba(243,86,74,1) 0%, rgba(255,91,79,1) 50%, rgba(243,86,74,1) 100%)!important;
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,86,74,1)), color-stop(50%, rgba(255,91,79,1)), color-stop(100%, rgba(243,86,74,1)))!important;
+    background: -webkit-linear-gradient(left, rgba(243,86,74,1) 0%, rgba(255,91,79,1) 50%, rgba(243,86,74,1) 100%)!important;
+    background: -o-linear-gradient(left, rgba(243,86,74,1) 0%, rgba(255,91,79,1) 50%, rgba(243,86,74,1) 100%)!important;
+    background: -ms-linear-gradient(left, rgba(243,86,74,1) 0%, rgba(255,91,79,1) 50%, rgba(243,86,74,1) 100%)!important;
+    background: linear-gradient(to right, rgba(243,86,74,1) 0%, rgba(255,91,79,1) 50%, rgba(243,86,74,1) 100%)!important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3564a', endColorstr='#f3564a', GradientType=1 ); margin: 0!important; padding: 0!important; border: none!important; box-shadow: none!important; border-radius: 0px!important;}
 .newmentorsignup_block5 h2{ margin: 0; padding: 15px; text-align: center; font-size: 35px; color: #fff; font-family: 'robotobold'; }
 
 
@@ -4183,17 +4201,17 @@ background: rgba(1,80,149,1);
     background: linear-gradient(to right, rgba(227,249,255,1) 0%, rgba(255,255,255,1) 50%, rgba(227,249,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3f9ff', endColorstr='#e3f9ff', GradientType=1 );}
 
-.newmentorsignup_block6_right_heading span:nth-of-type(1){ width: 436px; display: block; float: left;  background: url(../images/newmentorsignup_block6_jacktextbg.png) no-repeat right top!important; background-size: cover!important; height: 100%; text-align: center; line-height: 70px; font-size: 40px; color: #ffffff; font-family: 'Roboto-Medium';}
+.newmentorsignup_block6_right_heading span:nth-of-type(1){ width: 436px; display: block; float: left;  background: url(../images/newmentorsignup_block6_jacktextbg.png) no-repeat right top!important; background-size: cover!important; height: 100%; text-align: center; line-height: 70px; font-size: 40px; color: #ffffff; font-family: 'robotomedium';}
 
 
 
-.newmentorsignup_block6_right_heading span:nth-of-type(2){ width: 560px; display: block; float: left; text-align: center; line-height: 70px; font-size: 40px; color: #ff4234; font-family: 'Roboto-Medium'; text-transform: uppercase;}
+.newmentorsignup_block6_right_heading span:nth-of-type(2){ width: 560px; display: block; float: left; text-align: center; line-height: 70px; font-size: 40px; color: #ff4234; font-family: 'robotomedium'; text-transform: uppercase;}
 
 .newmentorsignup_block6_right_bodycon{ width: 100%; height: 100%; display: table;}
 
-.newmentorsignup_block6_right_bodycon span{ width: 50%; height: 200px; display: table-cell;   vertical-align: middle; font-size: 30px; color: #f8f8f8; font-family: 'Roboto-Medium';}
+.newmentorsignup_block6_right_bodycon span{ width: 50%; height: 200px; display: table-cell;   vertical-align: middle; font-size: 30px; color: #f8f8f8; font-family: 'robotomedium';}
 
-.newmentorsignup_block6_right_bodycon span p{ margin: 0 auto; display: block; width: 80%; padding: 15px; font-size: 24px; line-height: 32px; color: #f8f8f8; font-family: 'Roboto-Medium';}
+.newmentorsignup_block6_right_bodycon span p{ margin: 0 auto; display: block; width: 80%; padding: 15px; font-size: 24px; line-height: 32px; color: #f8f8f8; font-family: 'robotomedium';}
 
 .newmentorsignup_block6_right_bodycon span:nth-of-type(1){ background: url(../images/newmentorsignup_block6_jacktextbg_devider.png) no-repeat right center!important;}
 /*---------*/
@@ -4222,11 +4240,11 @@ background: rgba(1,80,149,1);
 
 @media screen and (max-width: 1750px){
 
-    .newmentorsignup_block2_text1 {
+    /* .newmentorsignup_block2_text1 {
         width: 74%;}
 
     .newmentorsignup_block2_text2 {
-        width: 74%;}
+        width: 74%;} */
 
     .newmentorsignup_form{ top: 50px;}
 }
@@ -4256,13 +4274,13 @@ background: rgba(1,80,149,1);
 
 @media screen and (max-width: 1640px) {
 
-    .newmentorsignup_block2_text1 {
+    /* .newmentorsignup_block2_text1 {
         width: 72%;
     }
 
     .newmentorsignup_block2_text2 {
         width: 72%;
-    }
+    } */
 }
 
 
@@ -4289,11 +4307,11 @@ background: rgba(1,80,149,1);
 
 @media screen and (max-width: 1540px) {
 
-    .newmentorsignup_block2_text1 {
+    /* .newmentorsignup_block2_text1 {
         width: 70%;
     }
 
-    .newmentorsignup_block2_text2{   width: 70%;}
+    .newmentorsignup_block2_text2{   width: 70%;} */
 
     .bannerimg1 {
         left: 780px;
@@ -4326,18 +4344,18 @@ background: rgba(1,80,149,1);
         font-size: 29px;}
 
 
-    .newmentorsignup_block2_text1 {
+    /* .newmentorsignup_block2_text1 {
         width: 68%;
-    }
+    } */
 }
 
 
 @media screen and (max-width: 1460px) {
 
     .newmentorsignup_top_banner_wrappertext h1 { font-size: 56px;}
-    .newmentorsignup_block2_text2 {
+    /* .newmentorsignup_block2_text2 {
         width: 68%;
-    }
+    } */
 
     .newmentorsignup_block3_wrapper h2 {  width: 100%;}
 
@@ -4433,20 +4451,22 @@ background: rgba(1,80,149,1);
         font-size: 38px;}
 
 
-    .newmentorsignup_block2_text1 {
+    /* .newmentorsignup_block2_text1 {
         width: 66%;
     }
 
     .newmentorsignup_block2_text2 {
         width: 66%;
-    }
+    } */
 
 }
 
 @media screen and (max-width: 1340px) {
 .newmentorsignup_block2_text2 {
-    padding-left: 60px;
+    padding-left: 60px; 
 }
+
+.newmentorsignup_block2_text1{ width: 55%;}
 
     .newmentorsignup_block2_wrapper{ background-size: 486px;}
 
@@ -4478,13 +4498,13 @@ background: rgba(1,80,149,1);
     }
 
 
-    .newmentorsignup_block2_text1 {
+    /* .newmentorsignup_block2_text1 {
         width: 63%;
     }
 
     .newmentorsignup_block2_text2 {
         width: 63%;
-    }
+    } */
 
     .newmentorsignup_block4_wrapper p:nth-of-type(3) { padding-left: 0px;}
 
@@ -4566,7 +4586,7 @@ background: rgba(1,80,149,1);
 
     .newmentorsignup_block4_wrapper{ padding-left: 15px; padding-right: 15px;}
 
-    .newmentorsignup_block6{ background-image: none!important; background-color: #1383bd!important;}
+    .newmentorsignup_block6{ background-image: none!important; background-color: #1383bd!important; border: none!important; box-shadow: none!important; border-radius: 0px!important; padding: 0px!important;}
     .newmentorsignup_block6_wrapper {
         width: 90%;     height: auto!important;
         overflow: inherit;

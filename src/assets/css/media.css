@@ -295,6 +295,11 @@
           padding: 98px 20px;
       }
   
+      .newmentorsignup_block2_text1 {
+        width: 68%;}
+
+        .newmentorsignup_block2_text2 {
+            width: 48%;}
   }
   
   
@@ -970,6 +975,12 @@
   @media screen and (max-width:1580px) {
   
   
+    .newmentorsignup_block2_text1 {
+        width: 66%;}
+
+        .newmentorsignup_block2_text2 {
+            width: 45%;}
+
   
       .page-newaboutbeto .row {
           margin: 0px;
@@ -1365,6 +1376,10 @@
       }
   }
   @media screen and (max-width:1460px) {
+
+    .newmentorsignup_block2_text1 {
+        width: 62%;
+    }
      .newblog_banner_section {
           background-position: -870px top!important;
       }
@@ -2112,6 +2127,10 @@
   }
   
   @media screen and (max-width:1300px) {
+
+    .newmentorsignup_block2_text1 {
+        width: 58%;
+    }
 
     .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2{ width: 750px;}
 .home_top_section_col {
