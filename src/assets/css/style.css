@@ -2912,7 +2912,7 @@ box-shadow: none!important;
 }
 .end_block_left_bg .s_right_section .s_center_bg .s_end_sec_content button{
     background: url(../images/s_form-button.png) no-repeat center center;
-    font-family: Open-Sans-bold;
+    font-family:'OpenSans-Bold';
     font-size: 30px;
     border: 5px solid #cecece;
     padding: 14px 20px;
