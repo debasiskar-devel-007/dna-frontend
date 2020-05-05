@@ -18,7 +18,7 @@ export class BlogComponent implements OnInit {
   public profile:any;
 
 
-  constructor(public meta: MetaService,private cookieService: CookieService, private activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) { window.scrollTo(500, 0); 
+  constructor(public meta: MetaService,public cookieService: CookieService, public activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) { window.scrollTo(500, 0); 
     this.meta.setTitle('DNA Of Success - Blogs');
 
     this.meta.setTag('og:description', 'Description: Latest Blogs, News and Articles on the Personal Development Industry by top experts. Stay updated with everything that is happening in the industry and participate in discussions with top professionals.');

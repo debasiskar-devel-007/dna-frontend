@@ -16,7 +16,7 @@ export class BlogdetailComponent implements OnInit {
   public blogImage:any;
   public profile:any;
 
-  constructor(public meta: MetaService,private cookieService: CookieService, private activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) { window.scrollTo(500, 0); 
+  constructor(public meta: MetaService,public cookieService: CookieService, public activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) { window.scrollTo(500, 0); 
 
       FB.init({
         appId: '679836882810934',
