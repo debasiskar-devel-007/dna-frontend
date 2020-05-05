@@ -15,6 +15,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
 import { TestresolveService } from './testresolve.service';
 import { environment } from '../environments/environment';
+import { LandingpageComponent } from './landingpage/landingpage.component';
 
 // const api_url1 =  environment["api_url1"];
 
@@ -49,7 +50,7 @@ const routes: Routes = [
   {path:'contact', component: ContactComponent}, 
 
   {path:'mentorsignup', component: MentorsignupComponent}, 
-  
+  {path:'landingpage', component: LandingpageComponent}, 
 ];
 
 @NgModule({
