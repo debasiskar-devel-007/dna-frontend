@@ -39,30 +39,20 @@
                     <span class="spandiv blog_detail_div blog_detail_divdetailpage">
 
                         <span class="spandiv blog_text">
-                            <h4>THROW YOUR “GOALS” AND “TO-DO” LISTS OUT THE WINDOW. TRY SOMETHING NEW
+                            <h4 *ngIf="blogDetailstData !=null">{{blogDetailstData.blogtitle}}
                             </h4>
                           
                         </span>
                         <div class="clearfix"></div>
 
-                        <img src="../../assets/images/blog_img1.jpg" alt="#" class="blogdetailbanner">
+                        <img *ngIf="blogImage !=null" [src]="blogImage" alt="#" class="blogdetailbanner">
 
                     <span class="spandiv blogdesc">
-                    <p>
-                       <strong>Lorem ipsum dolor sit amet</strong><br/>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <p *ngIf="blogDetailstData !=null" [innerHTML]="blogDetailstData.description">
+                       <!-- <strong></strong><br/> -->
+                        
                     </p>
-                    <br/><hr><br/>
-                    <p>
-                        <strong>Lorem ipsum dolor sit amet</strong><br/>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                     </p>
-                     <br/><hr><br/>
-
-                     <p>
-                        <strong>Lorem ipsum dolor sit amet</strong><br/>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                     </p>
+              
 
                    </span>
 
@@ -70,16 +60,20 @@
                         <div class="clearfix"></div>
                         <span class="spandiv blog_detail_bottom">
 
-                            <span class="blog_post_by">By  robert </span>
-                            <span class="blog_post_date">Mar 15, 2019</span>
+                            <span class="blog_post_by" *ngIf="blogDetailstData !=null">By  {{blogDetailstData.author}} </span>
+                            <span class="blog_post_date" *ngIf="blogDetailstData !=null">{{blogDetailstData.createdon_datetime | date}}</span>
 
                             <span class="spandiv blog_share">
 
-                                <a  class="copyclipclass" href="javascript:void(0);" ><img src="../../assets/images/link__1.png" alt="#" ></a>
-                                <a href="javascript:void(0);" ><img src="../../assets/images/blog_sicon2.png" alt="#"></a>
-                                <a href="javascript:void(0);" target="_blank"><img src="../../assets/images/blog_sicon3.png" alt="#"></a>
-                                <a href="javascript:void(0);" target="_blank"><img src="../../assets/images/blog_sicon4.png" alt="#"></a>
-                                <a href="javascript:void(0);" target="_blank"><img src="../../assets/images/blog_sicon5.png" alt="#"></a>
+                                <!-- <a  class="copyclipclass" href="javascript:void(0);" ><img src="../../assets/images/link__1.png" alt="#" ></a> -->
+
+                                <a href="javascript:void(0);"  target="_blank" (click)="fbShare()"><img src="../../assets/images/blog_sicon2.png" alt="#"></a>
+
+                                <a href="javascript:void(0);" target="_blank" (click)="twitterShare()"><img src="../../assets/images/blog_sicon3.png" alt="#"></a>
+
+                                <a href="javascript:void(0);" target="_blank" (click)="linkedinShare()"><img src="../../assets/images/blog_sicon4.png" alt="#"></a>
+
+                                <a href="javascript:void(0);" target="_blank" (click)="tumblrShare()"><img src="../../assets/images/blog_sicon5.png" alt="#"></a>
 
                                 <div class="clearfix"></div>
 

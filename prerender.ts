@@ -48,6 +48,13 @@ const angularConfiguration = JSON.parse(fs.readFileSync('./angular.json').toStri
 
 let universalProjectEntryFile;
 
+var headers= {
+  'Access-Control-Allow-Origin' : '*',
+  'Access-Control-Allow-Headers':'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+  'Access-Control-Allow-Credentials' : true,
+  'Content-Type': 'application/json'
+};
+
 for (let project in angularConfiguration.projects) {
   if(angularConfiguration.projects.hasOwnProperty(project)) {
     for (let architect in angularConfiguration.projects[project].architect ) {
@@ -143,7 +150,7 @@ allRoutes.forEach((route) => {
           provideModuleMap(LAZY_MODULE_MAP),
           {
             provide: REQUEST,
-            useValue: { cookie: '', headers: {} },
+            useValue: { cookie: '', headers:headers },
           },
           {
             provide: RESPONSE,

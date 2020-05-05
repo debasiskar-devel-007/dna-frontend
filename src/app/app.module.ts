@@ -29,6 +29,7 @@ import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
+import { FacebookModule, FacebookService } from 'ngx-facebook';
 
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
@@ -72,6 +73,7 @@ export function metaFactory(): MetaLoader {
   ],
   imports: [
     DemoMaterialModule,
+    FacebookModule.forRoot(),
     BrowserAnimationsModule,
     MetaModule.forRoot(
       {
@@ -88,9 +90,10 @@ export function metaFactory(): MetaLoader {
     CommonModule,
     TransferHttpCacheModule,
     NgtUniversalModule,
+    
   ],
   providers: [
-    CookieService,TestresolveService,ApiService
+    CookieService,TestresolveService,ApiService,FacebookService
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
