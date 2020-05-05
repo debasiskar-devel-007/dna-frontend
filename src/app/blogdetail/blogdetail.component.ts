@@ -27,8 +27,10 @@ export class BlogdetailComponent implements OnInit {
 
   ngOnInit() {
   
-    this.activatedRoute.data.subscribe(resolveData => {         
-      this.blogDetailstData= resolveData.blogData.result[0];
+    this.activatedRoute.data.forEach(res => {  
+      let result:any=res;  
+
+      this.blogDetailstData= result.blogData.result[0];
       this.blogImage=  this.blogDetailstData.blogs_image[0].basepath +  this.blogDetailstData.blogs_image[0].image;
       console.log(this.blogDetailstData)
       
@@ -51,7 +53,7 @@ export class BlogdetailComponent implements OnInit {
   
         this.meta.setTag('twitter:image',  this.blogImage);
   
-  
+      console.log('https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id)
   
     });
 
