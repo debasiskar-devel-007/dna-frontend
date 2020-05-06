@@ -12,7 +12,7 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { DemoMaterialModule } from './material-module';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent,TermsandCondition, PrivacyPolicy } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
@@ -30,24 +30,26 @@ import { ContactComponent } from './contact/contact.component';
 import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
 import { FacebookModule, FacebookService } from 'ngx-facebook';
 import { LandingpageComponent } from './landingpage/landingpage.component';
-import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
+// import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
+// import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 
-export function metaFactory(): MetaLoader {
-  return new MetaStaticLoader({
-    pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
-    pageTitleSeparator: ' - ',
-    applicationName: '',
-    defaults: {
-      title: '',
-      description: '',
-      'og:image': '',
-      'og:type': 'website',
-      'og:locale': 'en_US',
-      'og:locale:alternate': 'en_US,nl_NL,tr_TR'
-    }
-  });
-}
+// import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+// export function metaFactory(): MetaLoader {
+//   return new MetaStaticLoader({
+//     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
+//     pageTitleSeparator: ' - ',
+//     applicationName: '',
+//     defaults: {
+//       title: '',
+//       description: '',
+//       'og:image': '',
+//       'og:type': 'website',
+//       'og:locale': 'en_US',
+//       'og:locale:alternate': 'en_US,nl_NL,tr_TR'
+//     }
+//   });
+// }
 // export function translateLoaderFactory(httpClient: HttpClient) {
 //   return new TranslateHttpLoader(httpClient);
 // }
@@ -78,15 +80,7 @@ export function metaFactory(): MetaLoader {
     DemoMaterialModule,
     FacebookModule.forRoot(),
     BrowserAnimationsModule,
-    MetaModule.forRoot(
-      {
-      provide: MetaLoader,
-      useFactory: (metaFactory),
-      // deps: [TranslateService]
-    }
-    ),
-      // deps: [TranslateService]
-    
+  
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
@@ -95,14 +89,32 @@ export function metaFactory(): MetaLoader {
     CommonModule,
     TransferHttpCacheModule,
     NgtUniversalModule,
+    // TranslateModule.forRoot(
+    //   {
+    //   loader: {
+    //     provide: TranslateLoader,
+    //     useFactory: translateLoaderFactory,
+    //     deps: [HttpClient]
+    //   }
+    // }
+    // ),
     
+    // MetaModule.forRoot(
+    //   {
+    //   // provide: MetaLoader,
+    //   // useFactory: (metaFactory),
+    //   // deps: [TranslateService]
+    // }
+    // ),
+  
   ],
   providers: [
     CookieService,TestresolveService,ApiService,FacebookService
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: [TermsandCondition, PrivacyPolicy]
+  entryComponents: [TermsandCondition, PrivacyPolicy],
+  // exports: [TranslateModule],
 })
 export class AppModule {
   constructor(public http: HttpClient, public router: Router) {
