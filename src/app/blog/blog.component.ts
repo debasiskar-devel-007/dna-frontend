@@ -18,7 +18,7 @@ export class BlogComponent implements OnInit {
   public title: any;
   public profile:any;
   public blogCatList:any;
-
+  public headertxt:any='Date';
   constructor(public cookieService: CookieService, public activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) { window.scrollTo(500, 0); 
     // this.meta.setTitle('DNA Of Success - Blogs');
 
@@ -110,6 +110,23 @@ export class BlogComponent implements OnInit {
     this.blogListData=resc.result;
   })
  }
+
+
+ blogbyDate(){
+this.headertxt='Date';
+ }
+
+blogbyAuthor(){
+  this.headertxt='Author';
+
+}
+
+blogbycategory(){
+  this.headertxt='Category';
+
+}
+
+
 
 
 
