@@ -41,6 +41,8 @@
                 <a href="javascript:void(0);" (click)="blogbycategory()">BY CATEGORY</a>
                 <div class="clearfix"></div>
 
+                <span class="norecordblock" *ngIf="blogListData ==null || blogListData ==''">No Record Found</span>
+
                 </span>
                 <span  *ngIf="blogListData !=null && blogListData !=''"  class="spandiv blog_heading">LIST BY  <span>{{headertxt}}</span></span>
                 <div *ngIf="blogListData !=null && blogListData !=''">
@@ -112,10 +114,7 @@
             </span>
         </span>
     
-        <div class='spandiv blog_pagination'>
-            <span *ngIf="blogListData ==null || blogListData ==''">No Record Found</span>
-
-        </div>
+     
 
         <span class="spandiv blog_right_con">
             <span class="spandiv blog_right_con1">
