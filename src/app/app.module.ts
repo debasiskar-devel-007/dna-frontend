@@ -35,6 +35,9 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 
 // import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
+
+
 // export function metaFactory(): MetaLoader {
 //   return new MetaStaticLoader({
 //     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
@@ -53,6 +56,22 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 // export function translateLoaderFactory(httpClient: HttpClient) {
 //   return new TranslateHttpLoader(httpClient);
 // }
+
+export function metaFactory(): MetaLoader {
+  return new MetaStaticLoader({
+    pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
+    pageTitleSeparator: ' - ',
+    applicationName: '',
+    defaults: {
+      title: '',
+      description: '',
+      'og:image': '',
+      'og:type': 'website',
+      'og:locale': 'en_US',
+      'og:locale:alternate': 'en_US,nl_NL,tr_TR'
+    }
+  });
+}
 
 @NgModule({
   declarations: [
@@ -89,6 +108,13 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
     CommonModule,
     TransferHttpCacheModule,
     NgtUniversalModule,
+    MetaModule.forRoot(
+      {
+      provide: MetaLoader,
+      useFactory: (metaFactory),
+      // deps: [TranslateService]
+    }
+    ),
     // TranslateModule.forRoot(
     //   {
     //   loader: {
