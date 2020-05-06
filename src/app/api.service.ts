@@ -11,7 +11,7 @@ import {environment} from '../environments/environment';
 
 @Injectable()
 export class ApiService {
-  public nodesslurl =  environment["api_url"];
+  public nodesslurl =  environment["api_url1"];
   constructor(private _http: HttpClient,public cookie:CookieService) {}
 
   getData(endpoint:string){

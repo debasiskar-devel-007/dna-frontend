@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
- 
+import { Component, OnInit ,ViewChild,Inject} from '@angular/core';
+import { ActivatedRoute ,Router} from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
+import { ApiService } from '../api.service';
+import { FacebookService, LoginResponse, UIParams, UIResponse } from 'ngx-facebook';
 
 @Component({
   selector: 'app-blogdetail',
@@ -9,24 +12,122 @@ import { MetaService } from '@ngx-meta/core';
 })
 export class BlogdetailComponent implements OnInit {
 
-  constructor(public meta: MetaService) { window.scrollTo(500, 0); 
-    this.meta.setTitle('DNA Of Success - Blogs');
+  public blogDetailstData:any;
+  public blogImage:any;
+  public profile:any;
 
-    this.meta.setTag('og:description', 'Description: Latest Blogs, News and Articles on the Personal Development Industry by top experts. Stay updated with everything that is happening in the industry and participate in discussions with top professionals.');
-    this.meta.setTag('twitter:description', 'Description: Latest Blogs, News and Articles on the Personal Development Industry by top experts. Stay updated with everything that is happening in the industry and participate in discussions with top professionals.');
+  constructor(public meta: MetaService,public cookieService: CookieService, public activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) { window.scrollTo(500, 0); 
 
-    this.meta.setTag('og:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
-    this.meta.setTag('twitter:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
-
-    this.meta.setTag('og:title', 'DNA Of Success - Blogs');
-    this.meta.setTag('twitter:title', 'DNA Of Success - Blogs');
-    this.meta.setTag('og:type', 'website');
-    this.meta.setTag('og:url','https://www.dnamastercourse.com/');
-      this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
+      FB.init({
+        appId: '679836882810934',
+        version: 'v2.9'
+      });
   
   }
 
   ngOnInit() {
+  
+    this.activatedRoute.data.forEach(res => {  
+      let result:any=res;  
+
+      this.blogDetailstData= result.blogData.result[0];
+      this.blogImage=  this.blogDetailstData.blogs_image[0].basepath +  this.blogDetailstData.blogs_image[0].image;
+      console.log(this.blogDetailstData)
+      
+      
+      this.meta.setTitle(this.blogDetailstData.blogtitle);
+
+      this.meta.setTag('og:description', this.blogDetailstData.description);
+      this.meta.setTag('twitter:description', this.blogDetailstData.description);
+  
+      this.meta.setTag('og:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
+      this.meta.setTag('twitter:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
+  
+      this.meta.setTag('og:title', this.blogDetailstData.blogtitle);
+      this.meta.setTag('twitter:title', this.blogDetailstData.blogtitle);
+      this.meta.setTag('og:type', 'website');
+      this.meta.setTag('og:url','https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id);
+      this.meta.setTag('twitter:url','https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id);
+  
+        this.meta.setTag('og:image',  this.blogImage);
+  
+        this.meta.setTag('twitter:image',  this.blogImage);
+  
+      console.log('https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id)
+  
+    });
+
   }
 
+
+
+  //FACEBOOK SHARE
+
+  login() {
+    this.FB.login()
+      .then((res: LoginResponse) => {
+       
+        this.getProfile();
+      })
+      .catch();
+  }
+  getProfile() {
+    this.FB.api('me/?fields=id,name,email,picture')
+      .then((res: any) => {
+       
+        this.profile = res;
+        
+      })
+      .catch((error: any) => {
+
+      });
+  }
+  fbShare(){
+    var url='https://dna.influxiq.com/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id;
+    // console.log(url)
+
+    let params: UIParams = {
+      href: url,
+      method: 'share',
+      quote: 'https://dna.influxiq.com'
+    };
+    this.FB.ui(params).then((res:UIResponse)=>{
+    }).catch(facebook=>{
+      // console.log(facebook)
+    });
+
+  }
+  logoutWithFacebook(): void {
+
+    this.FB.logout().then();
+  }
+
+
+   //twitter share
+
+   twitterShare(){
+
+    window.open('https://twitter.com/intent/tweet?url=https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id);
+    // console.log(url)
+
+  }
+
+  // linkedin share 
+  
+  linkedinShare(){
+
+    window.open('https://www.linkedin.com/sharing/share-offsite/?url=https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id);
+    // console.log(url)
+
+  }
+
+
+  // tumblr share 
+  
+  tumblrShare(){
+
+    window.open('https://www.tumblr.com/share?url=https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id);
+    // console.log(url)
+
+  }
 }
