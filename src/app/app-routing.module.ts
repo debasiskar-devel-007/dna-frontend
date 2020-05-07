@@ -12,22 +12,46 @@ import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.comp
 import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
+import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
+import { TestresolveService } from './testresolve.service';
+import { environment } from '../environments/environment';
+import { LandingpageComponent } from './landingpage/landingpage.component';
+// const api_url1 =  environment["api_url1"];
+
 
 const routes: Routes = [
   {path:'', component: HomeComponent}, 
+
   {path:'home', component: HomeComponent}, 
+
   {path:'thewholestory', component: NewthewholestoryComponent}, 
+
   {path:'mentor', component: NewmentorComponent}, 
+
   {path:'aboutbeto', component: NewaboutbetoComponent}, 
+
   {path:'successgenetics', component: NewsuccessgeneticsComponent}, 
+
   {path:'about', component: AboutComponent}, 
-  {path:'blog', component: BlogComponent}, 
-  {path:'blogdetail', component: BlogdetailComponent}, 
+
+  {path:'blog', component: BlogComponent,resolve: { blogData: TestresolveService },
+  data: { requestcondition: { source: '', condition: {} }, endpoint: 'api1/getblogdata'}}, 
+
+  {path:'blog/:_id', component: BlogComponent},
+
+  {path:'blog-details/:blogtitle/:_id', component: BlogdetailComponent,resolve: { blogData: TestresolveService },
+  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getblogdata'}}, 
+
   {path:'affiliatesignup', component: AffiliatesignupComponent}, 
+
   {path:'login', component: LoginComponent}, 
+
   {path:'product', component: ProductComponent}, 
+
   {path:'contact', component: ContactComponent}, 
-  
+
+  {path:'mentorsignup', component: MentorsignupComponent}, 
+  {path:'landingpage', component: LandingpageComponent}, 
 ];
 
 @NgModule({

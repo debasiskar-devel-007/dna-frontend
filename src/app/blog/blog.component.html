@@ -30,53 +30,62 @@
     </span>
 </mat-card>
 
-<mat-card class="blog_mainbody">
+<mat-card class="blog_mainbody"  >
     <span class="spandiv container-fluid blog_body">
-        <span class="spandiv blog_left_con">
-            <span class="blog_top_btn">
-                <a href="javascript:void(0);">BY DATE</a>
-                <a href="javascript:void(0);">BY AUTHOR</a>
-                <a href="javascript:void(0);">BY CATEGORY</a>
+
+      
+            <span class="spandiv blog_left_con" >
+                <span class="blog_top_btn" >
+                <a href="javascript:void(0);" (click)="blogbyDate()">BY DATE</a>
+                <a href="javascript:void(0);" (click)="blogbyAuthor()">BY AUTHOR</a>
+                <a href="javascript:void(0);" (click)="blogbycategory()">BY CATEGORY</a>
                 <div class="clearfix"></div>
 
-            </span>
-            <span class="spandiv blog_heading">LIST BY  <span>DATE</span></span>
+                <span class="norecordblock" *ngIf="blogListData ==null || blogListData ==''">No Record Found</span>
+
+                </span>
+                <span  *ngIf="blogListData !=null && blogListData !=''"  class="spandiv blog_heading">LIST BY  <span>{{headertxt}}</span></span>
+                <div *ngIf="blogListData !=null && blogListData !=''">
     
-                    <span class="spandiv blog_detail_div">
+                    <span class="spandiv blog_detail_div" *ngFor="let item of blogListData">
 
 
                         <span class="spandiv blog_media_div">
 
                             <span class="spandiv blog_mediasrc_con">
-                                <span class="spandiv blog_mediasrc">
-                                    <img src="../../assets/images/blog_img1.jpg" alt="#">
+                                <span class="spandiv blog_mediasrc" *ngIf="item !=null && item.blogs_image !=null">
+                                    <img [src]="item.blogs_image[0].basepath + item.blogs_image[0].image" alt="#">
                                    
                                 </span>
                             </span>
 
-                            <span class="blog_post_by">By  admin  </span>
-                            <span class="blog_post_date">Mar 15, 2019</span>
+                            <span class="blog_post_by" *ngIf="item !=null && item.author !=null">By  {{item.author}}  </span>
+                            <span class="blog_post_date" *ngIf="item !=null && item.createdon_datetime !=null">{{item.createdon_datetime | date}}</span>
                             <div class="clearfix"></div>
 
                         </span>
                         <span class="spandiv blog_text">
-                            <h4>Proper Action over Hard Work Is the Key to Success</h4>
-                            <h6>
-                                “Proper Action – where smart action meets optimum work”
+                            <h4 *ngIf="item !=null && item.blogtitle !=null">{{item.blogtitle}}</h4>
+                            <h6 *ngIf="item !=null && item.description !=null" [innerHTML]="item.description">
+                               
                             </h6>
                         </span>
                         <div class="clearfix"></div>
                         <span class="spandiv blog_detail_bottom">
 
-                            <a href="javascript:void(0);" routerLink="/blogdetail" class="blog_read">Read More…</a>
+                            <a href="javascript:void(0);"  class="blog_read" (click)="readMoreDetails(item)">Read More…</a>
 
                             <span class="spandiv blog_share">
 
-                                <a  class="copyclipclass" href="javascript:void(0);" ><img src="../../assets/images/link__1.png" alt="#" ></a>
-                                <a href="javascript:void(0);" ><img src="../../assets/images/blog_sicon2.png" alt="#"></a>
-                                <a href="javascript:void(0);" target="_blank"><img src="../../assets/images/blog_sicon3.png" alt="#"></a>
-                                <a href="javascript:void(0);" target="_blank"><img src="../../assets/images/blog_sicon4.png" alt="#"></a>
-                                <a href="javascript:void(0);" target="_blank"><img src="../../assets/images/blog_sicon5.png" alt="#"></a>
+                                <!-- <a  class="copyclipclass" href="javascript:void(0);" ><img src="../../assets/images/link__1.png" alt="#" ></a> -->
+
+                                <a href="javascript:void(0);"  target="_blank" (click)="fbShare(item)"><img src="../../assets/images/blog_sicon2.png" alt="#"></a>
+
+                                <a href="javascript:void(0);" target="_blank" (click)="twitterShare(item)"><img src="../../assets/images/blog_sicon3.png" alt="#"></a>
+
+                                <a href="javascript:void(0);" target="_blank" (click)="linkedinShare(item)"><img src="../../assets/images/blog_sicon4.png" alt="#"></a>
+
+                                <a href="javascript:void(0);" target="_blank" (click)="tumblrShare(item)"><img src="../../assets/images/blog_sicon5.png" alt="#"></a>
 
                                 <div class="clearfix"></div>
 
@@ -85,99 +94,12 @@
                             <div class="clearfix"></div>
                         </span>
                     </span>
+                </div>
 
-                    <span class="spandiv blog_detail_div">
-
-
-                        <span class="spandiv blog_media_div">
-
-                            <span class="spandiv blog_mediasrc_con">
-                                <span class="spandiv blog_mediasrc">
-                                    <img src="../../assets/images/blog_img1.jpg" alt="#">
-                                   
-                                </span>
-                            </span>
-
-                            <span class="blog_post_by">By  admin  </span>
-                            <span class="blog_post_date">Mar 15, 2019</span>
-                            <div class="clearfix"></div>
-
-                        </span>
-                        <span class="spandiv blog_text">
-                            <h4>Proper Action over Hard Work Is the Key to Success</h4>
-                            <h6>
-                                “Proper Action – where smart action meets optimum work”
-                            </h6>
-                        </span>
-                        <div class="clearfix"></div>
-                        <span class="spandiv blog_detail_bottom">
-
-                            <a href="javascript:void(0);" routerLink="/blogdetail" class="blog_read">Read More…</a>
-
-                            <span class="spandiv blog_share">
-
-                                <a  class="copyclipclass" href="javascript:void(0);" ><img src="../../assets/images/link__1.png" alt="#" ></a>
-                                <a href="javascript:void(0);" ><img src="../../assets/images/blog_sicon2.png" alt="#"></a>
-                                <a href="javascript:void(0);" target="_blank"><img src="../../assets/images/blog_sicon3.png" alt="#"></a>
-                                <a href="javascript:void(0);" target="_blank"><img src="../../assets/images/blog_sicon4.png" alt="#"></a>
-                                <a href="javascript:void(0);" target="_blank"><img src="../../assets/images/blog_sicon5.png" alt="#"></a>
-
-                                <div class="clearfix"></div>
-
-                            </span>
-
-                            <div class="clearfix"></div>
-                        </span>
-                    </span>
-
-                    <span class="spandiv blog_detail_div">
-
-
-                        <span class="spandiv blog_media_div">
-
-                            <span class="spandiv blog_mediasrc_con">
-                                <span class="spandiv blog_mediasrc">
-                                    <img src="../../assets/images/blog_img1.jpg" alt="#">
-                                   
-                                </span>
-                            </span>
-
-                            <span class="blog_post_by">By  admin  </span>
-                            <span class="blog_post_date">Mar 15, 2019</span>
-                            <div class="clearfix"></div>
-
-                        </span>
-                        <span class="spandiv blog_text">
-                            <h4>Proper Action over Hard Work Is the Key to Success</h4>
-                            <h6>
-                                “Proper Action – where smart action meets optimum work”
-                            </h6>
-                        </span>
-                        <div class="clearfix"></div>
-                        <span class="spandiv blog_detail_bottom">
-
-                            <a href="javascript:void(0);" routerLink="/blogdetail" class="blog_read">Read More…</a>
-
-                            <span class="spandiv blog_share">
-
-                                <a  class="copyclipclass" href="javascript:void(0);" ><img src="../../assets/images/link__1.png" alt="#" ></a>
-                                <a href="javascript:void(0);" ><img src="../../assets/images/blog_sicon2.png" alt="#"></a>
-                                <a href="javascript:void(0);" target="_blank"><img src="../../assets/images/blog_sicon3.png" alt="#"></a>
-                                <a href="javascript:void(0);" target="_blank"><img src="../../assets/images/blog_sicon4.png" alt="#"></a>
-                                <a href="javascript:void(0);" target="_blank"><img src="../../assets/images/blog_sicon5.png" alt="#"></a>
-
-                                <div class="clearfix"></div>
-
-                            </span>
-
-                            <div class="clearfix"></div>
-                        </span>
-                    </span>
-                   
                     
                
-            <div class="clearfix"></div>
-            <span class="spandiv blog_pagination">
+                <div class="clearfix"></div>
+            <span class="spandiv blog_pagination" *ngIf="blogListData !=null && blogListData !=''" >
 
               
                 <ul>
@@ -190,10 +112,10 @@
                   </ul>
 
             </span>
-
-       
-       
         </span>
+    
+     
+
         <span class="spandiv blog_right_con">
             <span class="spandiv blog_right_con1">
                 <h2>OTHER BLOG POSTS</h2>
@@ -209,24 +131,19 @@
                 <h2>CATEGORIES</h2>
                 <ul>
                     
-                            <li>
-                                <a href="javascript:void(0);">Science of Success</a>
+                            <li *ngFor="let category of blogCatList">
+                                <a href="javascript:void(0);" (click)="viewAllByBlogCat(category)">{{category.blogtitle}}</a>
 
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="javascript:void(0);">Success Attitude Formula</a>
 
                             </li>
                             <li>
                                 <a href="javascript:void(0);">Words of Jack Zufelt</a>
 
-                            </li>
+                            </li> -->
                            
-                    
-
-
-
-
                 </ul>
             </span>
         </span>
