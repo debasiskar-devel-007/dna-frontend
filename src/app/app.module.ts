@@ -8,7 +8,7 @@ import { TestresolveService } from './testresolve.service';
 import { ApiService } from './api.service';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TransferHttpCacheModule } from '@nguniversal/common';
+// import { TransferHttpCacheModule } from '@nguniversal/common';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { DemoMaterialModule } from './material-module';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
@@ -28,34 +28,11 @@ import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
-import { FacebookModule, FacebookService } from 'ngx-facebook';
+import { FacebookModule } from 'ngx-facebook';
 import { LandingpageComponent } from './landingpage/landingpage.component';
-// import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
-// import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
-
-// import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
-
-
-// export function metaFactory(): MetaLoader {
-//   return new MetaStaticLoader({
-//     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
-//     pageTitleSeparator: ' - ',
-//     applicationName: '',
-//     defaults: {
-//       title: '',
-//       description: '',
-//       'og:image': '',
-//       'og:type': 'website',
-//       'og:locale': 'en_US',
-//       'og:locale:alternate': 'en_US,nl_NL,tr_TR'
-//     }
-//   });
-// }
-// export function translateLoaderFactory(httpClient: HttpClient) {
-//   return new TranslateHttpLoader(httpClient);
-// }
+import { TranslateService } from '@ngx-translate/core';
 
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
@@ -72,6 +49,25 @@ export function metaFactory(): MetaLoader {
     }
   });
 }
+// export function translateLoaderFactory(httpClient: HttpClient) {
+//   return new TranslateHttpLoader(httpClient);
+// }
+
+// export function metaFactory(): MetaLoader {
+//   return new MetaStaticLoader({
+//     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
+//     pageTitleSeparator: ' - ',
+//     applicationName: '',
+//     defaults: {
+//       title: '',
+//       description: '',
+//       'og:image': '',
+//       'og:type': 'website',
+//       'og:locale': 'en_US',
+//       'og:locale:alternate': 'en_US,nl_NL,tr_TR'
+//     }
+//   });
+// }
 
 @NgModule({
   declarations: [
@@ -106,7 +102,7 @@ export function metaFactory(): MetaLoader {
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
-    TransferHttpCacheModule,
+    // TransferHttpCacheModule,
     NgtUniversalModule,
     MetaModule.forRoot(
       {
@@ -115,27 +111,9 @@ export function metaFactory(): MetaLoader {
       // deps: [TranslateService]
     }
     ),
-    // TranslateModule.forRoot(
-    //   {
-    //   loader: {
-    //     provide: TranslateLoader,
-    //     useFactory: translateLoaderFactory,
-    //     deps: [HttpClient]
-    //   }
-    // }
-    // ),
-    
-    // MetaModule.forRoot(
-    //   {
-    //   // provide: MetaLoader,
-    //   // useFactory: (metaFactory),
-    //   // deps: [TranslateService]
-    // }
-    // ),
-  
   ],
   providers: [
-    CookieService,TestresolveService,ApiService,FacebookService
+    CookieService,HttpClientModule,TestresolveService,ApiService
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
@@ -143,8 +121,8 @@ export function metaFactory(): MetaLoader {
   // exports: [TranslateModule],
 })
 export class AppModule {
-  constructor(public http: HttpClient, public router: Router) {
-  //  this.router.navigateByUrl('/')
-  }
+  // constructor(public http: HttpClient, public router: Router) {
+  // //  this.router.navigateByUrl('/')
+  // }
 
 }

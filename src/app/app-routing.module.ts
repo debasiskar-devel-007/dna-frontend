@@ -35,7 +35,7 @@ const routes: Routes = [
   {path:'about', component: AboutComponent}, 
 
   {path:'blog', component: BlogComponent,resolve: { blogData: TestresolveService },
-  data: { requestcondition: { source: '', condition: {} }, endpoint: 'api1/getblogdata'}}, 
+  data: { requestcondition: { source: '', condition: {} }, endpoint: 'api1/getblogbydate'}}, 
 
   {path:'blog/:_id', component: BlogComponent},
 
@@ -55,7 +55,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

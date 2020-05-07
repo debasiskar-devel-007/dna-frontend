@@ -19,14 +19,26 @@ import 'zone.js/dist/zone-node';
 
 import * as express from 'express';
 import {join} from 'path';
-
 // Express server
 export const app = express();
 var compression = require('compression');
 app.use(compression());
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
-
+const domino = require("domino");
+const fs = require("fs");
+const path = require("path");
+const templateA = fs
+  .readFileSync(path.join("dist/browser", "index.html"))
+  .toString();
+const win = domino.createWindow(templateA);
+// const win = domino.createWindow(template);
+win.Object = Object;
+global['Event'] = null;
+global["window"] = win;
+global["document"] = win.document;
+global['HTMLElement'] = win.HTMLElement;
+global['navigator'] = win.navigator;
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const {AppServerModuleNgFactory, LAZY_MODULE_MAP, ngExpressEngine, provideModuleMap} = require('./dist/server/main');
 
