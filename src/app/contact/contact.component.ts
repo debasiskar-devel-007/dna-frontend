@@ -34,10 +34,10 @@ export class ContactComponent implements OnInit {
         console.log(this.ip)
         this.formdata = {
           successmessage: "Added Successfully !!",
-          redirectpath: "/contact",
+          redirectpath: "/",
           submittext:"Submit",
           // canceltext:"Cancel Now",
-          // resettext:"reset This",
+          resettext:"Reset This",
           submitactive:true, //optional, default true
           apiUrl: this._apiService.api_url,
           endpoint: 'api/contactus',  //change endpoint
@@ -62,7 +62,7 @@ export class ContactComponent implements OnInit {
               label: "Email",
               name: "email",
               type: 'email',
-              hint: "abc@gmail.com",
+              //hint: "abc@gmail.com",
               validations: [
                 { rule: 'required', message: "Email field Needs to be required" },
                 { rule: 'pattern', value: this.emailregex, message: "Must be a valid Email" }]
