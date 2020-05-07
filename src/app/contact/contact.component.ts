@@ -20,15 +20,11 @@ export class ContactComponent implements OnInit {
   formfieldrefresh: boolean = true;
   updatetable: boolean = true;
   formfieldrefreshdata: any = null;
-  formdata: {
-  successmessage: string; redirectpath: string; submittext: string;
-    // canceltext:"Cancel Now",
-    // resettext:"reset This",
-    submitactive: boolean; //optional, default true
-    apiUrl: string; endpoint: string; //change endpoint
-    jwttoken: string; fields: ({ heading: string; label: string; name: string; value: string; type: string; validations: ({ ...; } | { ...; })[]; hint?: undefined; } | { ...; } | { ...; } | { ...; })[];
-  };
+ 
   //public formdata: any;
+
+  
+  public formdata: any;
 
   
 
