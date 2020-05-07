@@ -12,7 +12,13 @@ import {environment} from '../environments/environment';
 @Injectable()
 export class ApiService {
   public nodesslurl =  environment["api_url1"];
-  constructor(private _http: HttpClient,public cookie:CookieService) {}
+  public api_url =  environment["api_url"];
+  public jwtToken = this.cookie.get('jwtToken');
+  constructor(private _http: HttpClient,public cookie:CookieService) {
+
+
+   // jwtToken = this.cookieService.get('jwtToken');
+  }
 
   getData(endpoint:string){
     var result = this._http.get(this.getEndpointUrl(endpoint)).pipe(map(res => res));
@@ -68,7 +74,7 @@ export class ApiService {
     
    
   }
-
+  
   //ip track api function
   getclientip() {
     // console.log('endpoint');
@@ -76,6 +82,8 @@ export class ApiService {
     var result = this._http.get("https://ipinfo.io/?format=json&token=9797c42b93078a").pipe(map(res => res));
     return result;
   }
+
+
 
 
 }

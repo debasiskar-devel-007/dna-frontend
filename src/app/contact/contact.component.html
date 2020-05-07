@@ -38,22 +38,34 @@
     <span class="spandiv contact_new_form_block_bodycon">
 
     <span class="spandiv contact_new_form_block_wrapper">
-    <form >
+
+         <div > 
+             <!-- <input [(ngModel)]="temtdata" > -->
+             <!-- <button (click)="updateformval()">Update Form and Table </button>   -->
+          
+            <lib-showform *ngIf="formdata !=null"
+                          [formdata]="formdata"
+                          [formfieldrefresh]="formfieldrefresh"
+                          [formfieldrefreshdata]="formfieldrefreshdata">
+             </lib-showform>
+             <!-- <span class="spandiv contact_submit"> <button type="submit" [routerLink]="['/product']"  >Submit Now</button></span> -->
+             </div> 
+    <!-- <form >
         <h2>Fill out this short form </h2>
-        <input type="text" class="contact_form_input" placeholder="Name" name="name">
+        <input type="text" class="contact_form_input" placeholder="Name" name="name"> -->
         <!--<span class="errmsg">Error</span>-->
-        <div class="clearfix"></div>
-        <input type="text" class="contact_form_input" placeholder="Email" name="email">
+        <!-- <div class="clearfix"></div>
+        <input type="text" class="contact_form_input" placeholder="Email" name="email"> -->
         <!--<span class="errmsg">Error</span>-->
-        <div class="clearfix"></div>
-        <input type="text" class="contact_form_input" placeholder="Phone" name="phone">
+        <!-- <div class="clearfix"></div>
+        <input type="text" class="contact_form_input" placeholder="Phone" name="phone"> -->
         <!--<span class="errmsg">Error</span>-->
-        <div class="clearfix"></div>
+        <!-- <div class="clearfix"></div>
         <textarea rows="8" class="contact_form_textarea" placeholder="Message" name="message"></textarea>
     
        <span class="spandiv contact_submit"> <button type="submit" >Submit Now</button></span>
         <div class="clearfix"></div>
-    </form>
+    </form> -->
     </span>
         <div class="clearfix"></div> 
 </span>
