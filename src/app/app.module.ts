@@ -30,6 +30,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
 import { FacebookModule, FacebookService } from 'ngx-facebook';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { ListingModule } from 'listing-angular7';
 // import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 // import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -77,6 +78,7 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
     LandingpageComponent,
   ],
   imports: [
+    ListingModule,
     DemoMaterialModule,
     FacebookModule.forRoot(),
     BrowserAnimationsModule,
