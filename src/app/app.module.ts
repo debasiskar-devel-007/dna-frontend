@@ -36,6 +36,7 @@ import { ListingModule} from 'listing-angular7';
 
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 import { TranslateService } from '@ngx-translate/core';
+import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpage.component';
 
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
@@ -93,6 +94,7 @@ export function metaFactory(): MetaLoader {
     ContactComponent,
     MentorsignupComponent,
     LandingpageComponent,
+    MenteelandingpageComponent,
   ],
   imports: [
     ListingModule,
