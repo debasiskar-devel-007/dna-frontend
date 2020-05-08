@@ -30,7 +30,13 @@
 
                      <h3>mentor TODAY</h3>
 
-                    <form    >
+                     <lib-showform  class='form-inline' *ngIf="formdata !=null"
+                        [formdata]="formdata"
+                        [formfieldrefresh]="formfieldrefresh"
+                        [formfieldrefreshdata]="formfieldrefreshdata"
+                        > </lib-showform>
+
+                    <!-- <form    >
                        
                         <div class="form-group">
                             <input type="text" name="first_name" placeholder="First Name">
@@ -129,7 +135,7 @@
                         </div>
                         
                         <input type="submit" value="sign up now" class="afsignbtnnewami">
-                    </form>
+                    </form> -->
 
                 </div>
 
