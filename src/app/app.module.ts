@@ -8,7 +8,7 @@ import { TestresolveService } from './testresolve.service';
 import { ApiService } from './api.service';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TransferHttpCacheModule } from '@nguniversal/common';
+// import { TransferHttpCacheModule } from '@nguniversal/common';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { DemoMaterialModule } from './material-module';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
@@ -34,7 +34,8 @@ import { ListingModule } from 'listing-angular7';
 // import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 // import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 
-// import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+//import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
+//import { TranslateService } from '@ngx-translate/core';
 
 // export function metaFactory(): MetaLoader {
 //   return new MetaStaticLoader({
@@ -53,6 +54,22 @@ import { ListingModule } from 'listing-angular7';
 // }
 // export function translateLoaderFactory(httpClient: HttpClient) {
 //   return new TranslateHttpLoader(httpClient);
+// }
+
+// export function metaFactory(): MetaLoader {
+//   return new MetaStaticLoader({
+//     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
+//     pageTitleSeparator: ' - ',
+//     applicationName: '',
+//     defaults: {
+//       title: '',
+//       description: '',
+//       'og:image': '',
+//       'og:type': 'website',
+//       'og:locale': 'en_US',
+//       'og:locale:alternate': 'en_US,nl_NL,tr_TR'
+//     }
+//   });
 // }
 
 @NgModule({
@@ -89,29 +106,18 @@ import { ListingModule } from 'listing-angular7';
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
-    TransferHttpCacheModule,
+    // TransferHttpCacheModule,
     NgtUniversalModule,
-    // TranslateModule.forRoot(
-    //   {
-    //   loader: {
-    //     provide: TranslateLoader,
-    //     useFactory: translateLoaderFactory,
-    //     deps: [HttpClient]
-    //   }
-    // }
-    // ),
-    
     // MetaModule.forRoot(
     //   {
-    //   // provide: MetaLoader,
-    //   // useFactory: (metaFactory),
+    //   provide: MetaLoader,
+    //   useFactory: (metaFactory),
     //   // deps: [TranslateService]
     // }
     // ),
-  
   ],
   providers: [
-    CookieService,TestresolveService,ApiService,FacebookService
+    CookieService,HttpClientModule,TestresolveService,ApiService,FacebookService
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
@@ -119,8 +125,8 @@ import { ListingModule } from 'listing-angular7';
   // exports: [TranslateModule],
 })
 export class AppModule {
-  constructor(public http: HttpClient, public router: Router) {
-  //  this.router.navigateByUrl('/')
-  }
+  // constructor(public http: HttpClient, public router: Router) {
+  // //  this.router.navigateByUrl('/')
+  // }
 
 }

@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   constructor(
     // public meta: MetaService
-    ) { window.scrollTo(500, 0); 
+    ) {
+       // window.scrollTo(500, 0); 
   
     // this.meta.setTitle('DNA Of Success - DNA Master Course Login');
 

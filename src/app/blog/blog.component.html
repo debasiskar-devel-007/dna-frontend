@@ -38,14 +38,16 @@
                 <span class="blog_top_btn" >
                 <a href="javascript:void(0);" (click)="blogbyDate()">BY DATE</a>
                 <a href="javascript:void(0);" (click)="blogbyAuthor()">BY AUTHOR</a>
-                <a href="javascript:void(0);" (click)="blogbycategory()">BY CATEGORY</a>
+                <!-- <a href="javascript:void(0);" (click)="blogbycategory()">BY CATEGORY</a> -->
                 <div class="clearfix"></div>
+
+                <span class="norecordblock" *ngIf="blogListData ==null || blogListData ==''">No Record Found</span>
 
                 </span>
                 <span  *ngIf="blogListData !=null && blogListData !=''"  class="spandiv blog_heading">LIST BY  <span>{{headertxt}}</span></span>
                 <div *ngIf="blogListData !=null && blogListData !=''">
     
-                    <span class="spandiv blog_detail_div" *ngFor="let item of blogListData">
+                    <span class="spandiv blog_detail_div" *ngFor="let item of blogListData | slice:0:indexval">
 
 
                         <span class="spandiv blog_media_div">
@@ -101,21 +103,18 @@
 
               
                 <ul>
-                      <li><a href="javascript:void(0)" class="blogpageactive">1</a></li>
+                      <!-- <li><a href="javascript:void(0)" class="blogpageactive">1</a></li>
                       <li> <a href="javascript:void(0)">2</a></li>
                       <li> <a href="javascript:void(0)">3</a></li>
-                      <li> <a href="javascript:void(0)">...</a></li>
-                      <li> <a href="javascript:void(0)">Next</a></li>
+                      <li> <a href="javascript:void(0)">...</a></li> -->
+                      <li> <a href="javascript:void(0)" (click)="viewMore()">Load MOre</a></li>
 
                   </ul>
 
             </span>
         </span>
     
-        <div class='spandiv blog_pagination'>
-            <span *ngIf="blogListData ==null || blogListData ==''">No Record Found</span>
-
-        </div>
+     
 
         <span class="spandiv blog_right_con">
             <span class="spandiv blog_right_con1">

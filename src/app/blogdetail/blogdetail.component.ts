@@ -1,4 +1,4 @@
-// import { MetaService } from '@ngx-meta/core';
+import { MetaService } from '@ngx-meta/core';
 import { Component, OnInit ,ViewChild,Inject} from '@angular/core';
 import { ActivatedRoute ,Router} from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
@@ -17,7 +17,11 @@ export class BlogdetailComponent implements OnInit {
   public profile:any;
   public blogCatList:any;
 
-  constructor(public cookieService: CookieService, public activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) { window.scrollTo(500, 0); 
+  constructor(
+    public meta:MetaService,
+    public cookieService: CookieService, public activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) {
+      
+      // // window.scrollTo(500, 0); 
 
       FB.init({
         appId: '679836882810934',
@@ -35,27 +39,29 @@ export class BlogdetailComponent implements OnInit {
       this.blogImage=  this.blogDetailstData.blogs_image[0].basepath +  this.blogDetailstData.blogs_image[0].image;
       console.log(this.blogDetailstData)
       
-      
-      // this.meta.setTitle(this.blogDetailstData.blogtitle);
+      if(this.blogDetailstData !=null){
 
-      // this.meta.setTag('og:description', this.blogDetailstData.description);
-      // this.meta.setTag('twitter:description', this.blogDetailstData.description);
+      this.meta.setTitle(this.blogDetailstData.blogtitle);
+
+      this.meta.setTag('og:description', this.blogDetailstData.description);
+      this.meta.setTag('twitter:description', this.blogDetailstData.description);
       // this.meta.setTag("twitter:card",this.blogDetailstData.blogtitle,)
   
-      // this.meta.setTag('og:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
-      // this.meta.setTag('twitter:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
+      this.meta.setTag('og:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
+      this.meta.setTag('twitter:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
   
-      // this.meta.setTag('og:title', this.blogDetailstData.blogtitle);
-      // this.meta.setTag('twitter:title', this.blogDetailstData.blogtitle);
-      // this.meta.setTag('og:type', 'website');
-      // this.meta.setTag('og:url','https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id);
-      // this.meta.setTag('twitter:url','https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id);
+      this.meta.setTag('og:title', this.blogDetailstData.blogtitle);
+      this.meta.setTag('twitter:title', this.blogDetailstData.blogtitle);
+      this.meta.setTag('og:type', 'website');
+      this.meta.setTag('og:url','https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id);
+      this.meta.setTag('twitter:url','https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id);
   
-      //   this.meta.setTag('og:image',  this.blogImage);
+        this.meta.setTag('og:image',  this.blogImage);
   
-      //   this.meta.setTag('twitter:image',  this.blogImage);
+        this.meta.setTag('twitter:image',  this.blogImage);
   
-      console.log('https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id)
+      // console.log('https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id)
+      }
   
     });
 

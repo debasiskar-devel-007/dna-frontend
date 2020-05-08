@@ -22,7 +22,8 @@ export class AffiliatesignupComponent implements OnInit {
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute
     // public meta: MetaService
-    ) { window.scrollTo(500, 0); 
+    ) { 
+      // window.scrollTo(500, 0); 
     // this.meta.setTitle('DNA Of Success - Affiliates');
 
     // this.meta.setTag('og:description', 'Become an affiliate TODAY, and make a lot of money with Jack\'s world-famous, “DNA of Success” that has been taught to people in over 50 countries. The program has already paid out over $900,000 in affiliate commissions, and now YOU can also make $$$ with Jack\'s proven system!');
