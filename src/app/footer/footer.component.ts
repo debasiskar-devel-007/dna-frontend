@@ -12,14 +12,16 @@ export interface DialogData {
 })
 export class FooterComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) {window.scrollTo(500, 0); }
+  constructor(public dialog: MatDialog) {
+    // window.scrollTo(500, 0); 
+  }
 
   ngOnInit() {
   }
 
    // terms and condition modal
    termsModal(){
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
  
 
     const dialogRef = this.dialog.open(TermsandCondition, { 
@@ -36,7 +38,7 @@ export class FooterComponent implements OnInit {
   }
 
   privacyModal(){
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     
     const dialogRef = this.dialog.open(PrivacyPolicy, {
       // width: '250px',
