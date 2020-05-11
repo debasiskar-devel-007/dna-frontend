@@ -12,7 +12,7 @@ import {environment} from '../environments/environment';
 
 @Injectable()
 export class ApiService {
-  public nodesslurl =  environment["api_url1"];
+  public nodesslurl =  environment["api_url"];
   public api_url =  environment["api_url"];
   public jwtToken = this.cookie.get('jwtToken');
   constructor(private _http: HttpClient,public cookie:CookieService) {}
