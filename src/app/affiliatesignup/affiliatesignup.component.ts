@@ -43,7 +43,7 @@ export class AffiliatesignupComponent implements OnInit {
       submittext:"submit",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
-      endpoint:'addusers',                                                 // add user
+      endpoint:'api1/addusers',                                                 // add user
      jwttoken:this._apiService.jwtToken,
       fields:[
           {
@@ -154,7 +154,7 @@ export class AffiliatesignupComponent implements OnInit {
           {
             heading:"",
             label:"about_me",
-            name:"",
+            name:"about_me",
             value:'',
             type:"textarea",
             validations:[
@@ -164,7 +164,7 @@ export class AffiliatesignupComponent implements OnInit {
           {
             heading:"",
             label:"notes",
-            name:"",
+            name:"notes",
             value:'',
             type:"textarea",
             validations:[
@@ -243,13 +243,19 @@ export class AffiliatesignupComponent implements OnInit {
             label:"type",
             name:"type",
             type:'hidden',
-            value:"admin"
+            value:"affiliate"
         },
         {
             label:"id",
-            name:"_id",
+            name:"id",
             type:'hidden',
             value:""
+        },
+        {
+            label:"status",
+            name: "status",
+            type: 'hidden',
+            value: 1
         }
       ]
   };

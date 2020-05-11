@@ -148,7 +148,7 @@ export class MentorsignupComponent implements OnInit {
           {
             heading:"",
             label:"notes",
-            name:"",
+            name:"notes",
             value:'',
             type:"textarea",
             validations:[
@@ -227,14 +227,20 @@ export class MentorsignupComponent implements OnInit {
             label:"type",
             name:"type",
             type:'hidden',
-            value:"admin"
+            value:"mentor"
         },
         {
             label:"id",
-            name:"_id",
+            name:"id",
             type:'hidden',
             value:""
-        }
+        },
+        {
+          label:"status",
+          name: "status",
+          type: 'hidden',
+          value: 1
+      }
       ]
   };
 
