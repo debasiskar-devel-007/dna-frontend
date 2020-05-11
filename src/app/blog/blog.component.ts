@@ -1,4 +1,4 @@
-// import { MetaService } from '@ngx-meta/core';
+import { MetaService } from '@ngx-meta/core';
 import { Component, OnInit ,ViewChild,Inject} from '@angular/core';
 import { ActivatedRoute ,Router} from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
@@ -19,20 +19,26 @@ export class BlogComponent implements OnInit {
   public profile:any;
   public blogCatList:any;
   public headertxt:any='Date';
-  constructor(public cookieService: CookieService, public activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) { window.scrollTo(500, 0); 
-    // this.meta.setTitle('DNA Of Success - Blogs');
+  public indexval:any=3;
 
-    // this.meta.setTag('og:description', 'Description: Latest Blogs, News and Articles on the Personal Development Industry by top experts. Stay updated with everything that is happening in the industry and participate in discussions with top professionals.');
-    // this.meta.setTag('twitter:description', 'Description: Latest Blogs, News and Articles on the Personal Development Industry by top experts. Stay updated with everything that is happening in the industry and participate in discussions with top professionals.');
 
-    // this.meta.setTag('og:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
-    // this.meta.setTag('twitter:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
+  constructor(
+    public meta:MetaService,
+    public cookieService: CookieService, public activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) { 
+      // // window.scrollTo(500, 0); 
+    this.meta.setTitle('DNA Of Success - Blogs');
 
-    // this.meta.setTag('og:title', 'DNA Of Success - Blogs');
-    // this.meta.setTag('twitter:title', 'DNA Of Success - Blogs');
-    // this.meta.setTag('og:type', 'website');
-    // this.meta.setTag('og:url','https://dna.influxiq.com/');
-    //   this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
+    this.meta.setTag('og:description', 'Description: Latest Blogs, News and Articles on the Personal Development Industry by top experts. Stay updated with everything that is happening in the industry and participate in discussions with top professionals.');
+    this.meta.setTag('twitter:description', 'Description: Latest Blogs, News and Articles on the Personal Development Industry by top experts. Stay updated with everything that is happening in the industry and participate in discussions with top professionals.');
+
+    this.meta.setTag('og:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
+    this.meta.setTag('twitter:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
+
+    this.meta.setTag('og:title', 'DNA Of Success - Blogs');
+    this.meta.setTag('twitter:title', 'DNA Of Success - Blogs');
+    this.meta.setTag('og:type', 'website');
+    this.meta.setTag('og:url','https://dna.influxiq.com/');
+      this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
 
       FB.init({
         appId: '679836882810934',
@@ -61,7 +67,7 @@ export class BlogComponent implements OnInit {
         })
         } else {
           this.activatedRoute.data.subscribe(resolveData => {         
-            this.blogListData= resolveData.blogData.result; 
+            this.blogListData= resolveData.blogData.res; 
             console.log(this.blogListData) 
           });
         }
@@ -77,6 +83,12 @@ export class BlogComponent implements OnInit {
       this.router.navigateByUrl('/blog-details/' + this.blogtitle + '/' + val._id);
     }
 
+  }
+
+
+  // load more
+  viewMore(){
+    this.indexval=this.indexval + 2;
   }
 
 
@@ -111,20 +123,32 @@ export class BlogComponent implements OnInit {
   })
  }
 
-
+//by date
  blogbyDate(){
 this.headertxt='Date';
+this.apiService.postDataByEndpoint('api1/getblogbydate').subscribe(res=>{
+  console.log(res)
+  let resc:any=res;
+  this.blogListData=resc.res;
+})
+
  }
 
+ //by author
 blogbyAuthor(){
   this.headertxt='Author';
+  this.apiService.postDataByEndpoint('api1/getblogbyauthor').subscribe(res=>{
+    console.log(res)
+    let resc:any=res;
+    this.blogListData=resc.res;
+  })
 
 }
 
-blogbycategory(){
-  this.headertxt='Category';
+// blogbycategory(){
+//   this.headertxt='Category';
 
-}
+// }
 
 
 

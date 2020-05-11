@@ -9,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor(
-    // public meta: MetaService
-    ) { window.scrollTo(500, 0); 
+    
+    ) { 
+      // window.scrollTo(500, 0); 
   
     // this.meta.setTitle('DNA Of Success - The DNA Master Course');
 
