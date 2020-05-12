@@ -1620,7 +1620,7 @@ box-shadow: none!important;
 
 
         .contact_new_form_block_wrapper textarea{ resize: none!important;
-            height: 100px!important;
+            height: 100px!important;  padding: 10px 1%!important;
         }
 
         .contact_new_form_block_wrapper .mat-form-field-appearance-legacy .mat-form-field-wrapper {
