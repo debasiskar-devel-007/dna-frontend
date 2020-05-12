@@ -42,11 +42,13 @@
          <div > 
              <!-- <input [(ngModel)]="temtdata" > -->
              <!-- <button (click)="updateformval()">Update Form and Table </button>   -->
+
+             <h2>Fill out this short form </h2>
           
             <lib-showform *ngIf="formdata !=null"
                           [formdata]="formdata"
                           [formfieldrefresh]="formfieldrefresh"
-                          [formfieldrefreshdata]="formfieldrefreshdata">
+                          [formfieldrefreshdata]="formfieldrefreshdata" class="contactlib"> 
              </lib-showform>
              <!-- <span class="spandiv contact_submit"> <button type="submit" [routerLink]="['/product']"  >Submit Now</button></span> -->
              </div> 
