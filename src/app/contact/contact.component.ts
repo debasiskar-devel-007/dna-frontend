@@ -32,12 +32,14 @@ export class ContactComponent implements OnInit {
       // console.log(res);
         this.ip=res.ip;
         console.log(this.ip)
+
+        
         this.formdata = {
           successmessage: "Added Successfully !!",
-          redirectpath: "/",
+          redirectpath: "/contact",
           submittext:"Submit",
           // canceltext:"Cancel Now",
-          resettext:"Reset This",
+          //resettext:"Reset This",
           submitactive:true, //optional, default true
           apiUrl: this._apiService.api_url,
           endpoint: 'api/contactus',  //change endpoint
