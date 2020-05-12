@@ -50,8 +50,8 @@ export class MentorsignupComponent implements OnInit {
             type:"text",
             validations:[
                 {rule:'required'},
-                {rule:'maxLength',value:10},
-                {rule:'minLength',value: 2}
+               // {rule:'maxLength',value:10},
+              //{rule:'minLength',value: 2}
                 ]
           },
           {
@@ -60,11 +60,11 @@ export class MentorsignupComponent implements OnInit {
             name:"company",
             value:'',
             type:"text",
-            validations:[
-                {rule:'required'},
-                {rule:'maxLength',value:10},
-                {rule:'minLength',value: 2}
-                ]
+            // validations:[
+            //     {rule:'required'},
+            //     {rule:'maxLength',value:10},
+            //     {rule:'minLength',value: 2}
+            //     ]
           },
           {
             heading:"",
@@ -125,35 +125,15 @@ export class MentorsignupComponent implements OnInit {
                   {rule:'required',message:"Email field Needs to be required"},
                   {rule:'pattern',value: this.emailregex,message: "Must be a valid Email"}]
           },
-          // {
-          //   heading:"",
-          //   label:"Website Address",
-          //   name:"website_url",
-          //   value:'',
-          //   type:"text",
-          //   validations:[
-          //       {rule:'required'},
-          //       ]
-          // },
-          // {
-          //   heading:"",
-          //   label:"about_me",
-          //   name:"",
-          //   value:'',
-          //   type:"textarea",
-          //   validations:[
-          //       {rule:'required'},
-          //       ]
-          // },
           {
             heading:"",
             label:"notes",
             name:"notes",
             value:'',
             type:"textarea",
-            validations:[
-                {rule:'required'},
-                ]
+            // validations:[
+            //     {rule:'required'},
+            //     ]
           },
           {
             heading:"",
@@ -161,9 +141,9 @@ export class MentorsignupComponent implements OnInit {
             name:"username",
             value:'',
             type:"text",
-            validations:[
-                {rule:'required'},
-                ]
+            // validations:[
+            //     {rule:'required'},
+            //     ]
           },
           {
               label:"Password",
@@ -185,44 +165,6 @@ export class MentorsignupComponent implements OnInit {
                   {rule:'pattern',value: this.passwordregex,message: "Must contain a Capital Letter and a Number"}
                   ]
           },
-          // {
-          //     label:"Age",
-          //     name:"age",
-          //     type:'number',
-          //     hint:'dddd',
-          //     validations:[
-          //         {rule:'required'},
-          //         {rule:'min',value:5},
-          //         {rule:'max',value:50,message: "Age can't be more than 50 "}
-          //         ]
-          // } ,
-          // {
-          //     label:"Active",
-          //     name:"status",
-          //     hint:'',
-          //     type:'checkbox',
-          //     val: this.status,
-          //     //value: '',
-          //     validations:[
-          //         {rule:'required'}
-          //         ]
-          // } ,
-          // {
-          //     label:"Active",
-          //     name:"active",
-          //     hint:'check ???',
-          //     type:'checkbox',
-          //     val: null,
-          //     //value: '',
-          //     validations:[
-          //         {rule:'required'}
-          //         ]
-          // } ,
-          // {
-          //     label:"City",
-          //     name:"city",
-          //     type:'text'
-          // },
           {
             label:"type",
             name:"type",
