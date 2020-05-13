@@ -19,6 +19,7 @@ export class AffiliatesignupComponent implements OnInit {
   updatetable:boolean=true;
   formfieldrefreshdata:any=null;
  public formdata:any;
+ public parentid:any = '';
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute
     // public meta: MetaService
@@ -37,11 +38,12 @@ export class AffiliatesignupComponent implements OnInit {
     // this.meta.setTag('og:type', 'website');
     // this.meta.setTag('og:url','https://www.dnamastercourse.com/');
     //   this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
-     (this.ActivatedRoute.snapshot.params._id)
-    
-      this.formdata = {
+    if(this.ActivatedRoute.snapshot.params._id != null && typeof(ActivatedRoute.snapshot.params._id) != "undefined"){
+      this.parentid = this.ActivatedRoute.snapshot.params._id;
+    }
+    this.formdata = {
       successmessage:"Added Successfully !!",
-      redirectpath:"/affiliatesignup/_id",
+      redirectpath:"/affiliatesignup",
       submittext:"submit",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
@@ -155,7 +157,7 @@ export class AffiliatesignupComponent implements OnInit {
           },
           {
             heading:"",
-            label:"about_me",
+            label:"About Me",
             name:"About Me",
             value:'',
             type:"textarea",
@@ -165,7 +167,7 @@ export class AffiliatesignupComponent implements OnInit {
           },
           {
             heading:"",
-            label:"notes",
+            label:"Notes",
             name:"notes",
             value:'',
             type:"textarea",
@@ -248,10 +250,10 @@ export class AffiliatesignupComponent implements OnInit {
             value:"affiliate"
         },
         {
-            label:"id",
-            name:"id",
+            label:"parentid",
+            name:"parentid",
             type:'hidden',
-            value:"_id"
+            value:this.parentid
         },
         {
             label:"status",
@@ -261,6 +263,7 @@ export class AffiliatesignupComponent implements OnInit {
         }
       ]
   };
+   
 
   }
 
