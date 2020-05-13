@@ -8,7 +8,10 @@ import { MetaService } from '@ngx-meta/core';
 })
 export class NewmentorComponent implements OnInit {
 
-  constructor(public meta: MetaService) { window.scrollTo(500, 0); 
+  constructor(
+    public meta: MetaService
+    ) { 
+      // window.scrollTo(500, 0); 
   
     this.meta.setTitle('DNA Of Success - Mentorship Program');
 

@@ -50,12 +50,20 @@
                 </div>
              
             </div>
+
+            
             <div class="newaffiliatesignup_conright">
                 <div class="newaffiliatesignup_formwrapper">
                     <div class="newaffiliatesignup_formbody">
                         <h2>Become an </h2>
                         <h3>affiliate TODAY</h3>
-                        <form  class='form-inline'  > 
+                        <lib-showform  class='form-inline' *ngIf="formdata !=null"
+                        [formdata]="formdata"
+                        [formfieldrefresh]="formfieldrefresh"
+                        [formfieldrefreshdata]="formfieldrefreshdata"
+                        > </lib-showform>
+                        <!-- <input type="submit" value="sign up now" class="afsignbtn" [routerLink]="['/affiliatesignup']"> -->
+                        <!-- <form  class='form-inline'  > 
                             <div class="form-group">
                                 <input type="text" name="first_name" placeholder="First Name">
                             </div>
@@ -102,7 +110,7 @@
                             </div>
                          
                             <input type="submit" value="sign up now" class="afsignbtn">
-                        </form>
+                        </form> -->
                     </div>
                 </div>
             </div>

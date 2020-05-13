@@ -34,7 +34,7 @@
     <span class="spandiv container-fluid blog_body">
         <span class="spandiv blog_left_con">
          
-            <span class="spandiv blog_heading">LIST BY  <span>ROBERT</span></span>
+            <span class="spandiv blog_heading">  <span></span></span>
     
                     <span class="spandiv blog_detail_div blog_detail_divdetailpage">
 
@@ -108,18 +108,10 @@
                 <h2>CATEGORIES</h2>
                 <ul>
                     
-                            <li>
-                                <a href="javascript:void(0);">Science of Success</a>
+                    <li *ngFor="let category of blogCatList">
+                        <a href="javascript:void(0);" (click)="viewAllByBlogCat(category)">{{category.blogtitle}}</a>
 
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);">Success Attitude Formula</a>
-
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);">Words of Jack Zufelt</a>
-
-                            </li>
+                    </li>
                            
                     
 

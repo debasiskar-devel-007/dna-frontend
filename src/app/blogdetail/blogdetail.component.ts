@@ -15,8 +15,13 @@ export class BlogdetailComponent implements OnInit {
   public blogDetailstData:any;
   public blogImage:any;
   public profile:any;
+  public blogCatList:any;
 
-  constructor(public meta: MetaService,public cookieService: CookieService, public activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) { window.scrollTo(500, 0); 
+  constructor(
+    public meta:MetaService,
+    public cookieService: CookieService, public activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) {
+      
+      // // window.scrollTo(500, 0); 
 
       FB.init({
         appId: '679836882810934',
@@ -34,11 +39,13 @@ export class BlogdetailComponent implements OnInit {
       this.blogImage=  this.blogDetailstData.blogs_image[0].basepath +  this.blogDetailstData.blogs_image[0].image;
       console.log(this.blogDetailstData)
       
-      
+      if(this.blogDetailstData !=null){
+
       this.meta.setTitle(this.blogDetailstData.blogtitle);
 
       this.meta.setTag('og:description', this.blogDetailstData.description);
       this.meta.setTag('twitter:description', this.blogDetailstData.description);
+      // this.meta.setTag("twitter:card",this.blogDetailstData.blogtitle,)
   
       this.meta.setTag('og:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
       this.meta.setTag('twitter:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
@@ -53,11 +60,33 @@ export class BlogdetailComponent implements OnInit {
   
         this.meta.setTag('twitter:image',  this.blogImage);
   
-      console.log('https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id)
+      // console.log('https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id)
+      }
   
     });
 
+    this.getBlogCatList();
+
   }
+
+    //blog cat list
+
+ getBlogCatList(){
+  let data:any;
+  data={
+     "condition":{}
+  }
+  this.apiService.customRequest(data,'api1/getcategorydata').subscribe(res=>{
+    console.log(res)
+    let resc:any=res;
+    this.blogCatList=resc.result;
+  })
+}
+
+ //get blog data by cat id 
+ viewAllByBlogCat(val:any){
+  this.router.navigateByUrl('/blog/'+val._id);
+ }
 
 
 

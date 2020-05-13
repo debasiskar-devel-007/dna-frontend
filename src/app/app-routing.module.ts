@@ -16,7 +16,7 @@ import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
 import { TestresolveService } from './testresolve.service';
 import { environment } from '../environments/environment';
 import { LandingpageComponent } from './landingpage/landingpage.component';
-
+import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpage.component';
 // const api_url1 =  environment["api_url1"];
 
 
@@ -36,10 +36,12 @@ const routes: Routes = [
   {path:'about', component: AboutComponent}, 
 
   {path:'blog', component: BlogComponent,resolve: { blogData: TestresolveService },
-  data: { requestcondition: { source: '', condition: {} }, endpoint: 'api1/getblogdata' }}, 
+  data: { requestcondition: { source: '', condition: {} }, endpoint: 'api1/getblogbydate'}}, 
+
+  {path:'blog/:_id', component: BlogComponent},
 
   {path:'blog-details/:blogtitle/:_id', component: BlogdetailComponent,resolve: { blogData: TestresolveService },
-  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getblogdata' }}, 
+  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getblogdata'}}, 
 
   {path:'affiliatesignup', component: AffiliatesignupComponent}, 
 
@@ -51,10 +53,13 @@ const routes: Routes = [
 
   {path:'mentorsignup', component: MentorsignupComponent}, 
   {path:'landingpage', component: LandingpageComponent}, 
+  {path:'menteelandingpage', component: MenteelandingpageComponent}, 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -9,9 +9,12 @@ import { CookieService } from 'ngx-cookie-service';
 import { LOCAL_STORAGE, WINDOW } from '@ng-toolkit/universal';
 import {environment} from '../environments/environment';
 
+
 @Injectable()
 export class ApiService {
-  public nodesslurl =  environment["api_url1"];
+  public nodesslurl =  environment["api_url"];
+  public api_url =  environment["api_url"];
+  public jwtToken = this.cookie.get('jwtToken');
   constructor(private _http: HttpClient,public cookie:CookieService) {}
 
   getData(endpoint:string){
@@ -26,6 +29,12 @@ export class ApiService {
       return result;
   } //end postData
   
+
+  postDataByEndpoint(endpoint:string){
+    var result =this._http.post(this.nodesslurl +endpoint,{}/*JSON.stringify(data)*/).pipe(map(res => res));
+    return result;
+} //end postData
+
   
   putData(endpoint:string,data,id:string,is_cache_buster=true){
     if (is_cache_buster==true){
@@ -45,9 +54,10 @@ export class ApiService {
 	// 	return result;
   // } //end deleteData
 
-  private getEndpointUrl(endpoint:string){
-      return this.nodesslurl + endpoint+'?token='+this.cookie.get('jwttoken');
+  getEndpointUrl(endpoint:string){
+      return this.nodesslurl + endpoint;
   }
+
   customRequest(requestdata: any, endpoint: any) {
     // const httpOptions = {
     //   headers: new HttpHeaders({
@@ -55,16 +65,22 @@ export class ApiService {
     //     'Authorization': this.cookie.get('jwttoken')
     //   })
     // };
-    if (this.cookie.get('jwttoken') !=null && this.cookie.get('jwttoken') !='') {
-      var result = this._http.post( this.nodesslurl+endpoint+'?token='+this.cookie.get('jwttoken'), requestdata).pipe(map(res => res));
-    return result;
-    }else{
+  
       var result = this._http.post( this.nodesslurl+endpoint, requestdata).pipe(map(res => res));
       return result;
-    }
+    
    
   }
   
+  //ip track api function
+  getclientip() {
+    // console.log('endpoint');
+    // this.isTokenExpired()
+    var result = this._http.get("https://ipinfo.io/?format=json&token=9797c42b93078a").pipe(map(res => res));
+    return result;
+  }
+
+
 
 
 }

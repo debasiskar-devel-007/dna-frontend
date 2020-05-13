@@ -4,6 +4,7 @@ import { ActivatedRoute ,Router} from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { ApiService } from '../api.service';
 import { FacebookService, LoginResponse, UIParams, UIResponse } from 'ngx-facebook';
+import { CdkNestedTreeNode } from '@angular/cdk/tree';
 
 @Component({
   selector: 'app-blog',
@@ -16,9 +17,15 @@ export class BlogComponent implements OnInit {
   public blogtitle: any;
   public title: any;
   public profile:any;
+  public blogCatList:any;
+  public headertxt:any='Date';
+  public indexval:any=3;
 
 
-  constructor(public meta: MetaService,public cookieService: CookieService, public activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) { window.scrollTo(500, 0); 
+  constructor(
+    public meta:MetaService,
+    public cookieService: CookieService, public activatedRoute: ActivatedRoute,public apiService:ApiService,public router:Router,public FB:FacebookService) { 
+      // // window.scrollTo(500, 0); 
     this.meta.setTitle('DNA Of Success - Blogs');
 
     this.meta.setTag('og:description', 'Description: Latest Blogs, News and Articles on the Personal Development Industry by top experts. Stay updated with everything that is happening in the industry and participate in discussions with top professionals.');
@@ -41,12 +48,29 @@ export class BlogComponent implements OnInit {
   }
 
   ngOnInit() {
-  
-        this.activatedRoute.data.subscribe(resolveData => {         
-          this.blogListData= resolveData.blogData.result; 
-          console.log(this.blogListData) 
-        });
+
       
+        this.getBlogCatList()
+
+
+        if(this.activatedRoute.snapshot.params._id !=null){
+          let data1:any;
+          data1={
+            "condition":{
+              "blogcat":this.activatedRoute.snapshot.params._id
+            }
+         }
+         this.apiService.customRequest(data1,'api1/getblogdatabycatid').subscribe(res=>{
+          console.log(res)
+          let resc:any=res;
+          this.blogListData=resc.result;
+        })
+        } else {
+          this.activatedRoute.data.subscribe(resolveData => {         
+            this.blogListData= resolveData.blogData.res; 
+            console.log(this.blogListData) 
+          });
+        }
     
   }
 
@@ -60,6 +84,72 @@ export class BlogComponent implements OnInit {
     }
 
   }
+
+
+  // load more
+  viewMore(){
+    this.indexval=this.indexval + 2;
+  }
+
+
+  //blog cat list
+
+ getBlogCatList(){
+   let data:any;
+   data={
+      "condition":{}
+   }
+   this.apiService.customRequest(data,'api1/getcategorydata').subscribe(res=>{
+     console.log(res)
+     let resc:any=res;
+     this.blogCatList=resc.result;
+   })
+ }
+
+ //get blog data by cat id 
+ viewAllByBlogCat(val:any){
+  console.log(val)
+  let data:any;
+    data={
+      "condition":{
+        "blogcat":val._id
+      }
+   }
+  
+  this.apiService.customRequest(data,'api1/getblogdatabycatid').subscribe(res=>{
+    console.log(res)
+    let resc:any=res;
+    this.blogListData=resc.result;
+  })
+ }
+
+//by date
+ blogbyDate(){
+this.headertxt='Date';
+this.apiService.postDataByEndpoint('api1/getblogbydate').subscribe(res=>{
+  console.log(res)
+  let resc:any=res;
+  this.blogListData=resc.res;
+})
+
+ }
+
+ //by author
+blogbyAuthor(){
+  this.headertxt='Author';
+  this.apiService.postDataByEndpoint('api1/getblogbyauthor').subscribe(res=>{
+    console.log(res)
+    let resc:any=res;
+    this.blogListData=resc.res;
+  })
+
+}
+
+// blogbycategory(){
+//   this.headertxt='Category';
+
+// }
+
 
 
 

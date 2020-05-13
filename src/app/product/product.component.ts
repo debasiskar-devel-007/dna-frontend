@@ -12,8 +12,10 @@ export class ProductComponent implements OnInit {
   public selectedProduct:any = {good:0, better:0, best:0, mentor:0};
   public productDetails: any = {};
 
-  constructor(public meta: MetaService) { window.scrollTo(500, 0); 
-    this.meta.setTag('og:type', 'website');
+  constructor(
+    public meta: MetaService
+    ) { 
+      // window.scrollTo(500, 0); 
     this.meta.setTitle('DNA Of Success - Our Products    ');
 
     this.meta.setTag('og:description', 'Products and packages that help to obtain Jack Zufelt’s incredible program to success and professional mentorship guidance towards achieving your dreams and the Core desires of your heart.');
