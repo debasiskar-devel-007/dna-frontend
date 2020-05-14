@@ -44,6 +44,7 @@ const routes: Routes = [
   data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getblogdata'}}, 
 
   {path:'affiliatesignup', component: AffiliatesignupComponent}, 
+  {path : 'affiliatesignup/:_id' , component: AffiliatesignupComponent},
 
   {path:'login', component: LoginComponent}, 
 
