@@ -87,7 +87,8 @@
               "Fn::Join": [
                 "-",
                 [
-                  "dna-frontend-dev",
+                  "dev",
+                  "dna-frontend",
                   "lambda"
                 ]
               ]
@@ -98,8 +99,7 @@
                 {
                   "Effect": "Allow",
                   "Action": [
-                    "logs:CreateLogStream",
-                    "logs:CreateLogGroup"
+                    "logs:CreateLogStream"
                   ],
                   "Resource": [
                     {
@@ -127,7 +127,8 @@
           "Fn::Join": [
             "-",
             [
-              "dna-frontend-dev",
+              "dna-frontend",
+              "dev",
               {
                 "Ref": "AWS::Region"
               },
@@ -144,7 +145,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/dna-frontend/dev/1588847666852-2020-05-07T10:34:26.852Z/dna-frontend.zip"
+          "S3Key": "serverless/dna-frontend/dev/1589350220642-2020-05-13T06:10:20.642Z/dna-frontend.zip"
         },
         "FunctionName": "dna-frontend-dev-api",
         "Handler": "lambda.universal",
@@ -163,14 +164,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ApiLambdaVersionEBlUM53QfBsG5Br3ASnANVfpH30BcmSD9VRveDEsos": {
+    "ApiLambdaVersionc5PO02Y53PZQfXKLiVs5PvL7rHdJyT4tF7TppiaY": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "iyn037AAuA2kIXvgg9aMEqdRGQY/dXoi9/wy1qrWF8M="
+        "CodeSha256": "kbLxSuYvTRybhyATQooec4aJqNu3WLKpwN9iWieDXnw="
       }
     },
     "ApiGatewayRestApi": {
@@ -181,8 +182,7 @@
           "Types": [
             "EDGE"
           ]
-        },
-        "Policy": ""
+        }
       }
     },
     "ApiGatewayResourceProxyVar": {
@@ -289,7 +289,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1588847575134": {
+    "ApiGatewayDeployment1589350075132": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -349,7 +349,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersionEBlUM53QfBsG5Br3ASnANVfpH30BcmSD9VRveDEsos"
+        "Ref": "ApiLambdaVersionc5PO02Y53PZQfXKLiVs5PvL7rHdJyT4tF7TppiaY"
       }
     },
     "ServiceEndpoint": {
