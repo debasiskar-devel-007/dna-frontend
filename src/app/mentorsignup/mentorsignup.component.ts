@@ -24,10 +24,10 @@ export class MentorsignupComponent implements OnInit {
     this.formdata = {
       successmessage:"Added Successfully !!",
       redirectpath:"/mentorsignup",
-      submittext:"submit",                                  
+      submittext:"Submit",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
-      endpoint:'api1/addusers',                                                 // add user
+      endpoint:'api1/addusers',                                                 
      jwttoken:this._apiService.jwtToken,
       fields:[
           {
@@ -37,9 +37,9 @@ export class MentorsignupComponent implements OnInit {
               value:'',
               type:"text",
               validations:[
-                  {rule:'required'},
-                  // {rule:'maxLength',value:10},
-                  // {rule:'minLength',value: 2}
+                  {rule:'required', message:"Enter Your First Name"},
+                   {rule:'maxLength',value:10,message:"Maximum of 15 Letters"},
+                   {rule:'minLength',value: 2, message:"Minimum 2 Letters Required"}
                   ]
           },
           {
@@ -49,9 +49,9 @@ export class MentorsignupComponent implements OnInit {
             value:'',
             type:"text",
             validations:[
-                {rule:'required'},
-               // {rule:'maxLength',value:10},
-              //{rule:'minLength',value: 2}
+                {rule:'required',message:"Enter Your Last Name"},
+                {rule:'maxLength',value:10,message:"Maximum Of 15 Letters"},
+                {rule:'minLength',value: 2 , message:"Minimum 2 Letters Required"}
                 ]
           },
           {
@@ -72,9 +72,9 @@ export class MentorsignupComponent implements OnInit {
             name:"address",
             value:'',
             type:"text",
-            validations:[
-                {rule:'required'},
-                ]
+            // validations:[
+            //     {rule:'required'},
+            //     ]
           },
           {
             heading:"",
@@ -83,7 +83,7 @@ export class MentorsignupComponent implements OnInit {
             value:'',
             type:"text",
             validations:[
-                {rule:'required'},
+                {rule:'required',message:"Enter Your City"},
                 ]
           },
           {
@@ -93,7 +93,7 @@ export class MentorsignupComponent implements OnInit {
             value:'',
             type:"text",
             validations:[
-                {rule:'required'},
+                {rule:'required',message:"Enter Your State"},
                 ]
           },
           {
@@ -103,7 +103,7 @@ export class MentorsignupComponent implements OnInit {
             value:'',
             type:"number",
             validations:[
-                {rule:'required'},
+                {rule:'required',message:"Enter Your Contact Number"},
                 ]
           },
           {
@@ -113,7 +113,7 @@ export class MentorsignupComponent implements OnInit {
             value:'',
             type:"number",
             validations:[
-                {rule:'required'},
+                {rule:'required',message:"Enter Your Pin Code "},
                 ]
           },
           {
@@ -127,7 +127,7 @@ export class MentorsignupComponent implements OnInit {
           },
           {
             heading:"",
-            label:"notes",
+            label:"Notes",
             name:"notes",
             value:'',
             type:"textarea",
@@ -135,16 +135,16 @@ export class MentorsignupComponent implements OnInit {
             //     {rule:'required'},
             //     ]
           },
-          {
-            heading:"",
-            label:"User Name",
-            name:"username",
-            value:'',
-            type:"text",
-            // validations:[
-            //     {rule:'required'},
-            //     ]
-          },
+          // {
+          //   heading:"",
+          //   label:"User Name",
+          //   name:"username",
+          //   value:'',
+          //   type:"text",
+          //   // validations:[
+          //   //     {rule:'required'},
+          //   //     ]
+          // },
           {
               label:"Password",
               name:"password",

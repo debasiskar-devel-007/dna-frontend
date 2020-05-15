@@ -27,22 +27,28 @@
                 </div>
             </div>
             <div class="s-top-banner-right">
-                <div class="s-formsection">
-                    <div class="s-inner-form-content">
+                <!-- <div class="s-formsection"> -->
+                    <!-- <div class="s-inner-form-content">
                         <img src="../../assets/images/s_comments_icon.png" align="comment icon">
                         <h2>PICK YOUR<br>LEVEL<br>OF IMPACT NOW</h2>
-                    </div>
-                    <form  >
+                    </div> -->
+                    <lib-showform class='form-inline' *ngIf="formdata !=null"
+                        [formdata]="formdata"
+                        [formfieldrefresh]="formfieldrefresh"
+                        [formfieldrefreshdata]="formfieldrefreshdata"
+                        > </lib-showform>
+                    
+                    <!-- <form  >
                         <input type="text" name="first_name" placeholder="First Name">
                         <input type="text" name="last_name" placeholder="Last Name">
                         <input type="email" name="email" placeholder="Email">
                         <input type="text" name="phone" placeholder="Phone Number">
                         <button type="submit">let’s get you started!</button>
-                    </form>
-                    <div class="s-curved-arrow">
+                    </form> -->
+                    <!-- <div class="s-curved-arrow">
                         <img src="../../assets/images/s_arrow.png" alt="arrow">
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
             </div>
         </div>
     </div>

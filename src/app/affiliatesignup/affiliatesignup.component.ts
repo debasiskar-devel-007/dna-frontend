@@ -44,7 +44,7 @@ export class AffiliatesignupComponent implements OnInit {
     this.formdata = {
       successmessage:"Added Successfully !!",
       redirectpath:"/affiliatesignup",
-      submittext:"submit",                                  
+      submittext:"Submit",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
       endpoint:'api1/addusers',                                                 
