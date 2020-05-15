@@ -132,7 +132,7 @@ export class MentorsignupComponent implements OnInit {
               label:"Email",
               name:"email",
               type:'email',
-              hint:"abc@gmail.com",
+              hint:"",
               validations:[
                   {rule:'required',message:"Email field Needs to be required"},
                   {rule:'pattern',value: this.emailregex,message: "Must be a valid Email"}]
@@ -161,7 +161,7 @@ export class MentorsignupComponent implements OnInit {
               label:"Password",
               name:"password",
               type:'password',
-              hint:"******",
+              hint:"",
               validations:[
                   {rule:'required',message:"Password field Needs to be required"},
                   {rule:'pattern',value: this.passwordregex,message: "Must contain a Capital Letter and a Number"}
@@ -170,7 +170,7 @@ export class MentorsignupComponent implements OnInit {
               label:"Confirm Password",
               name:"confirmpassword",
               type:'password',
-              hint:"******",
+              hint:"",
               validations:[
                   {rule:'required',message:"Confirm Password field Needs to be required"},
                   {rule:'match',message:"Confirm Password field Needs to  match Password"},

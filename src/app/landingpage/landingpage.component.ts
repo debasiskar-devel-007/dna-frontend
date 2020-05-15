@@ -57,7 +57,7 @@ export class LandingpageComponent implements OnInit {
             label:"Email",
             name:"email",
             type:'email',
-            hint:"abc@gmail.com",
+            hint:"",
             validations:[
                 {rule:'required',message:"Email field Needs to be required"},
                 {rule:'pattern',value: this.emailregex,message: "Must be a valid Email"}]
