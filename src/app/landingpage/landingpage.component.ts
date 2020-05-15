@@ -36,9 +36,9 @@ export class LandingpageComponent implements OnInit {
               value:'',
               type:"text",
               validations:[
-                  {rule:'required', message:"Minimum of 2 Letters required"},
-                  // {rule:'maxLength',value:10},
-                  // {rule:'minLength',value: 2}
+                  {rule:'required', message:"Enter Your Full Name"},
+                  {rule:'maxLength',value:10, message:"Maximum 10 letters"},
+                  {rule:'minLength',value: 2, message:"Minimun 2 letters"}
                   ]
           },
           {
@@ -48,33 +48,30 @@ export class LandingpageComponent implements OnInit {
             value:'',
             type:"text",
             validations:[
-                {rule:'required',message:"Minimum of 2 Letters required"},
-               // {rule:'maxLength',value:10},
-              //{rule:'minLength',value: 2}
+                {rule:'required', message:"Enter Your last Name"},
+                {rule:'maxLength',value:10, message:"Maximum 10 letters"},
+                {rule:'minLength',value: 2, message:"Minimum 2 letters"}
                 ]
           },
           {
-            heading:"",
-            label:"Business Name",
-            name:"company",
-            value:'',
-            type:"text",
-            // validations:[
-            //     {rule:'required'},
-            //     {rule:'maxLength',value:10},
-            //     {rule:'minLength',value: 2}
-            //     ]
-          },
-          {
-            heading:"",
-            label:"Physical Address",
-            name:"address",
-            value:'',
-            type:"text",
-            // validations:[
-            //     {rule:'required'},
-            //     ]
-          },
+            label:"Email",
+            name:"email",
+            type:'email',
+            hint:"abc@gmail.com",
+            validations:[
+                {rule:'required',message:"Email field Needs to be required"},
+                {rule:'pattern',value: this.emailregex,message: "Must be a valid Email"}]
+        },
+        {
+          heading:"",
+          label:"Telephone",
+          name:"phone",
+          value:'',
+          type:"number",
+          validations:[
+              {rule:'required',message:"Enter Your Contact Number"},
+              ]
+        },
           {
             label:"type",
             name:"type",

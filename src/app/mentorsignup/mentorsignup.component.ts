@@ -17,10 +17,18 @@ export class MentorsignupComponent implements OnInit {
   formfieldrefresh:boolean=true;
   updatetable:boolean=true;
   formfieldrefreshdata:any=null;
- public formdata:any;
+  public formdata:any;
+  public statesjson : any =[];
 
-
-  constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute) {
+  constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute ) {
+    this._apiService.getState().subscribe((response:any) => {
+      console.log(response)
+      for (let i in response) {
+        this.statesjson.push(
+          { 'val': response[i].abbreviation, 'name': response[i].name }
+        );
+      }
+    })
     this.formdata = {
       successmessage:"Added Successfully !!",
       redirectpath:"/mentorsignup",
@@ -90,8 +98,8 @@ export class MentorsignupComponent implements OnInit {
             heading:"",
             label:"State",
             name:"state",
-            value:'',
-            type:"text",
+            type:"select",
+            val: this.statesjson,
             validations:[
                 {rule:'required',message:"Enter Your State"},
                 ]
