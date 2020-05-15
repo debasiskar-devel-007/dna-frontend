@@ -9,16 +9,13 @@ import { CookieService } from 'ngx-cookie-service';
 import { LOCAL_STORAGE, WINDOW } from '@ng-toolkit/universal';
 import {environment} from '../environments/environment';
 
+
 @Injectable()
 export class ApiService {
-  public nodesslurl =  environment["api_url1"];
+  public nodesslurl =  environment["api_url"];
   public api_url =  environment["api_url"];
   public jwtToken = this.cookie.get('jwtToken');
-  constructor(private _http: HttpClient,public cookie:CookieService) {
-
-
-   // jwtToken = this.cookieService.get('jwtToken');
-  }
+  constructor(private _http: HttpClient,public cookie:CookieService) {}
 
   getData(endpoint:string){
     var result = this._http.get(this.getEndpointUrl(endpoint)).pipe(map(res => res));
