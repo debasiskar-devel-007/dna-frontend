@@ -45,7 +45,7 @@
                         </span>
                         <div class="clearfix"></div>
 
-                        <img *ngIf="blogImage !=null" [src]="blogImage" alt="#" class="blogdetailbanner">
+                        <img *ngIf="blogDetailstData !=null && blogDetailstData.image !=null" [src]="blogDetailstData.image" alt="#" class="blogdetailbanner">
 
                     <span class="spandiv blogdesc">
                     <p *ngIf="blogDetailstData !=null" [innerHTML]="blogDetailstData.description">

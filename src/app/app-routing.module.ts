@@ -40,7 +40,7 @@ const routes: Routes = [
   {path:'blog/:_id', component: BlogComponent},
 
   {path:'blog-details/:blogtitle/:_id', component: BlogdetailComponent,resolve: { blogData: TestresolveService },
-  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getblogdata'}}, 
+  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getblogdatabyid'}}, 
 
   {path:'affiliatesignup', component: AffiliatesignupComponent}, 
 

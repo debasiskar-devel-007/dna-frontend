@@ -35,16 +35,14 @@ export class BlogdetailComponent implements OnInit {
     this.activatedRoute.data.forEach(res => {  
       let result:any=res;  
 
-      this.blogDetailstData= result.blogData.result[0];
-      this.blogImage=  this.blogDetailstData.blogs_image[0].basepath +  this.blogDetailstData.blogs_image[0].image;
+      this.blogDetailstData= result.blogData.res[0];
+      // this.blogImage=  this.blogDetailstData.blogs_image[0].basepath +  this.blogDetailstData.blogs_image[0].image;
       console.log(this.blogDetailstData)
       
-      if(this.blogDetailstData !=null){
-
       this.meta.setTitle(this.blogDetailstData.blogtitle);
 
-      this.meta.setTag('og:description', this.blogDetailstData.description);
-      this.meta.setTag('twitter:description', this.blogDetailstData.description);
+      this.meta.setTag('og:description', this.blogDetailstData.description_html);
+      this.meta.setTag('twitter:description', this.blogDetailstData.description_html);
       // this.meta.setTag("twitter:card",this.blogDetailstData.blogtitle,)
   
       this.meta.setTag('og:keyword', 'DNA of Success Blogs, DNA Performance Blogs, Blogs on Personal Development');
@@ -56,12 +54,11 @@ export class BlogdetailComponent implements OnInit {
       this.meta.setTag('og:url','https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id);
       this.meta.setTag('twitter:url','https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id);
   
-        this.meta.setTag('og:image',  this.blogImage);
+        this.meta.setTag('og:image',  this.blogDetailstData.image);
   
-        this.meta.setTag('twitter:image',  this.blogImage);
+        this.meta.setTag('twitter:image',  this.blogDetailstData.image);
   
       // console.log('https://dna.influxiq.com'+'/blog-details/'+this.activatedRoute.snapshot.params.blogtitle+'/'+this.activatedRoute.snapshot.params._id)
-      }
   
     });
 
