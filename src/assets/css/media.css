@@ -248,6 +248,11 @@
   
   @media screen and (max-width:1740px) {
 
+
+    .s-formsection .button:first-of-type {
+        height: 90px!important;
+        
+    }
     .s-Matercontent .s-mastersec-left {
         width: 760px;}
 
@@ -334,7 +339,7 @@
 	    .s_newAffiliate .newaffiliatesignup_conleft { width: 1145px; margin-left: 0; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .title { font-size: 140px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .sub_title { font-size: 52px; }
-  .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top { width: 470px; }
+  .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top { width: 458px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote {bottom: 0px;
     width: 400px;}
   .s_newAffiliate .girl_image { width: 554px; }
@@ -1038,7 +1043,7 @@
 	  
 	    .newaffiliatesignup_conwrapper { width: 1400px; padding: 32px 0; }
   .s_newAffiliate .newaffiliatesignup_conleft { width: 1045px; }
-  .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top { width: 470px; right: -32px; }
+  .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top { width: 460px; right: -32px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote { bottom: 0px; right: 75px; width: 400px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .title { font-size: 135px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .sub_title { font-size: 50px; }
@@ -1617,6 +1622,15 @@
   }
 
   @media screen and (max-width: 1440px) {
+
+    .newaffiliatesignup_formbody .button:first-of-type{    height: 86px!important;}
+
+    .newmentorsignup_formbody .button:first-of-type{    height: 105px!important;}
+
+    .s-formsection .button:first-of-type{    height: 76px!important;}
+
+
+    .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{ line-height: 30px;}
     .newmentor_banner_section {
         background-position: -845px top !important;
     }
@@ -2307,7 +2321,7 @@
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top { width: 398px; right: -136px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section h5 { font-size: 25px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section { width: 610px; }
-  .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote { bottom: -50px; right: 0px; width: 364px; }
+  .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote { bottom: -20px; right: 0px; width: 364px; }
   
   .s_newAffiliate .bottom_con .af_downpara .affiliate_quote { font-size: 26px; line-height: 33px; }
   }
@@ -2982,7 +2996,7 @@
   
   @media screen and (max-width: 1240px) {
   
-    
+    .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{ margin-top: 25px;}
       .as_bodycon .newproduct_list5_bottom_wrapper {width: 59%;}
       .as_bodycon .newproduct_list5 .bgupwrapper {right: -67px;}
       .as_bodycon .newproduct_list5 .bgupwrapper img:nth-child(1) {max-width: 96%;}
@@ -3252,6 +3266,22 @@
   }
 
   @media screen and (max-width:1199px) {
+    .newaffiliatesignup_formbody .button:first-of-type {
+        height: 76px!important;
+        width: 260px!important;
+    }
+    .newmentorsignup_formbody .button:first-of-type {
+        height: 76px!important;
+        width: 260px!important;
+    }
+    
+    .s-formsection .button:first-of-type {
+        height: 76px!important;
+        width: 260px!important;     margin-top: 15px!important;
+    }
+    .s_newAffiliate{ background-image: none!important; background-color: #40b6e2!important;}
+
+    .newaffiliatesignup_conblock{ border: none!important;}
 
     .home_banner_menu_section .menuiconlabel {
         display: block;
@@ -4130,7 +4160,7 @@
     }
 
     .s-top-banner .s-top-banner-wrapper .s-top-banner-left .s-top-heading {
-        width: 100%;
+        width: auto;
         padding: 14px 10px;
         font-size: 30px;
         margin: 0;
@@ -6547,7 +6577,7 @@
           margin-top: 7%;
       }
 	  
-	  .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section { background: #ff5b4f; width: 100%; text-align: center; }
+	  .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section { background: #ff5b4f; width: auto; text-align: center; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section h5 sup { top: 0px; font-size: 30px; }  
   }
   
@@ -7454,6 +7484,8 @@
 
   @media screen and (max-width:480px) {
 
+    .newaffiliatesignup_conblock { padding: 0px!important;}
+
     .producttextblock.newthewholestorybannertxt h2 {
         font-size: 34px;
         line-height: 40px;
@@ -7732,7 +7764,12 @@
   }
 
   @media screen and (max-width: 400px) {
-
+    .s-formsection .button:first-of-type {
+        height: 70px!important;
+        width: 236px!important;
+        margin-top: 15px!important;
+        font-size: 30px!important;
+    }
     .product_new_tableblock td:nth-of-type(2){text-align: right; width: 100px}
  
   
@@ -7890,7 +7927,9 @@
       }
   }
   @media screen and (max-width: 360px) {
-  
+    .newaffiliatesignup_conwrapper {
+        width: 96%;
+    }
         .newhomeblock3 .newhomeblock3_sub4 {
           background-position: -220px top;
       }

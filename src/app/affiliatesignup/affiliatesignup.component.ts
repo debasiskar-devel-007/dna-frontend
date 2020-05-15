@@ -52,7 +52,7 @@ export class AffiliatesignupComponent implements OnInit {
       fields:[
           {
               heading:"",
-              label:"First Name",
+              label:"First Nam",
               name:"firstname",
               value:'',
               type:"text",
@@ -137,10 +137,11 @@ export class AffiliatesignupComponent implements OnInit {
                 ]
           },
           {
+            heading:"",
               label:"Email",
               name:"email",
               type:'email',
-              hint:"abc@gmail.com",
+              hint:"",
               validations:[
                   {rule:'required',message:"Enter Your Email"},
                   {rule:'pattern',value: this.emailregex,message: "Must be a valid Email"}]
@@ -185,20 +186,22 @@ export class AffiliatesignupComponent implements OnInit {
           //       {rule:'required'},
           //       ]
           // },
-          {
+          { 
+            heading:"",
               label:"Password",
               name:"password",
               type:'password',
-              hint:"******",
+              hint:"",
               validations:[
                   {rule:'required',message:"Password required"},
                   {rule:'pattern',value: this.passwordregex,message: "Must contain a Capital Letter and a Number"}
                   ]
           },{
+            heading:"",
               label:"Confirm Password",
               name:"confirmpassword",
               type:'password',
-              hint:"******",
+              hint:"",
               validations:[
                   {rule:'required',message:"Confirm Password required"},
                   {rule:'match',message:"Confirm Password field Needs to  match Password"},
