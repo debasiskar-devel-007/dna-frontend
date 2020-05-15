@@ -160,7 +160,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dna-frontend/dev/1588847666852-2020-05-07T10:34:26.852Z/dna-frontend.zip"
+                "S3Key": "serverless/dna-frontend/dev/1588862074005-2020-05-07T14:34:34.005Z/dna-frontend.zip"
               },
               "FunctionName": "dna-frontend-dev-api",
               "Handler": "lambda.universal",
@@ -179,14 +179,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "ApiLambdaVersionEBlUM53QfBsG5Br3ASnANVfpH30BcmSD9VRveDEsos": {
+          "ApiLambdaVersionDmXJfMyPkXDFtF8ayPOelFApeMD1wBbCgBwHTzuKs": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "iyn037AAuA2kIXvgg9aMEqdRGQY/dXoi9/wy1qrWF8M="
+              "CodeSha256": "xxStRHC8IoC50C1wE42Z0dLZh1XhS9I3af99ymqcOIk="
             }
           },
           "ApiGatewayRestApi": {
@@ -305,7 +305,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1588847575134": {
+          "ApiGatewayDeployment1588861994377": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -365,7 +365,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionEBlUM53QfBsG5Br3ASnANVfpH30BcmSD9VRveDEsos"
+              "Ref": "ApiLambdaVersionDmXJfMyPkXDFtF8ayPOelFApeMD1wBbCgBwHTzuKs"
             }
           },
           "ServiceEndpoint": {
@@ -490,7 +490,7 @@
         "timeout": 10,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionEBlUM53QfBsG5Br3ASnANVfpH30BcmSD9VRveDEsos"
+        "versionLogicalId": "ApiLambdaVersionDmXJfMyPkXDFtF8ayPOelFApeMD1wBbCgBwHTzuKs"
       }
     },
     "serviceFilename": "serverless.yml",
@@ -499,7 +499,7 @@
     "artifact": "/home/influxiq2/Documents/uttam/project/DNA-of-Success/dna-frontend/.serverless/dna-frontend.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/dna-frontend/dev/1588847666852-2020-05-07T10:34:26.852Z",
+    "artifactDirectoryName": "serverless/dna-frontend/dev/1588862074005-2020-05-07T14:34:34.005Z",
     "artifact": "dna-frontend.zip"
   }
 }
