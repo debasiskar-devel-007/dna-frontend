@@ -26,7 +26,7 @@ export class LandingpageComponent implements OnInit {
       submittext:"Submit",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
-      endpoint:'api1/addusers',                                                 
+      endpoint:'api1/contactus',                                                 
      jwttoken:this._apiService.jwtToken,
       fields:[
           {
@@ -65,7 +65,7 @@ export class LandingpageComponent implements OnInit {
         {
           heading:"",
           label:"Telephone",
-          name:"phone",
+          name:"number",
           value:'',
           type:"number",
           validations:[
@@ -78,12 +78,12 @@ export class LandingpageComponent implements OnInit {
             type:'hidden',
             value:"landingpage"
         },
-        {
-            label:"id",
-            name:"id",
-            type:'hidden',
-            value:""
-        },
+        // {
+        //     label:"id",
+        //     name:"id",
+        //     type:'hidden',
+        //     value:""
+        // },
         {
           label:"status",
           name: "status",
