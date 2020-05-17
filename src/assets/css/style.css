@@ -2368,18 +2368,18 @@ box-shadow: none!important;
     line-height: 40px;
 }
 .s-top-banner-right .s-formsection{
-    background: url("../images/s_contactbox_shadow.png") no-repeat center top;
+    background: url("../images/s_contactbox_shadow.png") no-repeat center -40px;
     width:auto;
     padding: 20px 25px;
     border-radius: 10px;
 }
 .s-top-banner-right .s-formsection input{
-    width: 94%;
+    width: 100%;
     border: 2px solid #757575;
     height: 45px;
-    margin: 0px;
-    margin-top: 20px;
-    padding: 0 3%;
+    margin: 0px; margin-top: 8px;
+    
+     text-align: left;
     border-radius: 0px;
 }
 .s-formsection .s_input_button{
@@ -2403,14 +2403,14 @@ box-shadow: none!important;
     margin: 15px 0 0 0!important;
     background-size: 100%;
 }
-.s-top-banner-right span{
+/* .s-top-banner-right span{
     float: left;
     color: red;
     text-transform: capitalize;
     font-family: "Roboto-Medium";
     padding: 0 10px;
     display: none;
-}
+} */
 .s-top-banner-right .s-formsection  button:focus{
     outline:none;
 }
@@ -3924,7 +3924,7 @@ button{ box-shadow: none!important;}
     right: 0;
     top: -33px;
     max-width: 100%;
-    width: 470px; }
+    width: 458px; }
 
 .s_newAffiliate .newaffiliatesignup_conleft .content_section  .arrow_section{ background: url("../images/affiliatedirection_arrow.png") no-repeat center center; background-size: cover; width: 695px; padding: 20px; margin-top: 30px;}
 
@@ -5175,3 +5175,171 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
 
 .home_banner_menu_section .menuiconlabel{ display: none;}
 
+.newaffiliatesignup_formbody .mat-form-field-underline{ display: none;}
+.newaffiliatesignup_formbody  .mat-form-field-subscript-wrapper{ display: none;}
+
+.newaffiliatesignup_formbody .mat-input-element{    box-sizing: border-box;
+    width: 100%;
+    margin: 0px;
+    height: 36px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #0d5e81!important;
+    padding: 0 1.5%!important;
+    font-family: 'OpenSans-Regular';
+    font-size: 14px;
+    color: #333; display: block; background: #fff!important;}
+
+    .newaffiliatesignup_formbody textarea.mat-input-element{ resize: none!important;     height: 76px!important; padding: 5px 1.5%!important;}
+
+
+    .newaffiliatesignup_formbody  .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+        padding-bottom: 0!important;
+    }
+
+    .newaffiliatesignup_formbody  .mat-form-field-infix{ border: 0px!important;}
+    .newaffiliatesignup_formbody .button{ display: none!important;}
+    .newaffiliatesignup_formbody .button:first-of-type{background: url(../images/newaffiliatesignup_btn.png) no-repeat left top!important; 
+        background-size: 100%!important; width: 100%!important; height: 94px!important; border: none!important; box-shadow: none!important; 
+        outline: none!important; cursor: pointer!important; font-size: 36px!important;  color: #ffffff!important;     font-family:'OpenSans-Semibold'!important; 
+           text-shadow: 0 2px 5px #5f6172!important; text-transform: uppercase!important; display: block!important; margin-top: 10px!important;} 
+
+
+           .newaffiliatesignup_formbody  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{display: none!important;}
+
+           .newaffiliatesignup_formbody .mat-form-field-appearance-legacy .mat-form-field-label {
+            top: 30px;
+            left: 10px;
+        }
+        .newaffiliatesignup_formbody .mat-error {
+            color: #b11313; font-size: 14px;
+            padding-top: 4px;
+        }
+
+
+
+        /*-------css----------*/
+
+        
+.newmentorsignup_formbody .mat-form-field-underline{ display: none;}
+.newmentorsignup_formbody  .mat-form-field-subscript-wrapper{ display: none;}
+
+.newmentorsignup_formbody .mat-input-element{    box-sizing: border-box;
+    width: 100%;
+    margin: 0px;
+    height: 36px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #0d5e81!important;
+    padding: 0 1.5%!important;
+    font-family: 'OpenSans-Regular';
+    font-size: 14px;
+    color: #333; display: block; background: #fff!important;}
+
+
+    .newmentorsignup_formbody .mat-select{    box-sizing: border-box;
+        width: 100%;
+        margin: 0px;
+        height: 36px;
+        border-radius: 5px;
+        box-shadow: 0 0 3px #0d5e81!important;
+        padding: 0 1.5%!important;
+        font-family: 'OpenSans-Regular';
+        font-size: 14px;
+        color: #333; display: block; background: #fff!important;}
+
+    .newmentorsignup_formbody textarea.mat-input-element{ resize: none!important;     height: 76px!important; padding: 5px 1.5%!important;}
+
+
+    .newmentorsignup_formbody  .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+        padding-bottom: 0!important;
+    }
+
+    .newmentorsignup_formbody  .mat-form-field-infix{ border: 0px!important;}
+    .newmentorsignup_formbody .button{ display: none!important;}
+    .newmentorsignup_formbody .button:first-of-type{background: url(../images/newaffiliatesignup_btn.png) no-repeat left top!important; 
+        background-size: 100%!important; width: 100%!important; height: 110px!important; border: none!important; box-shadow: none!important; 
+        outline: none!important; cursor: pointer!important; font-size: 36px!important;  color: #ffffff!important;     font-family:'OpenSans-Semibold'!important; 
+           text-shadow: 0 2px 5px #5f6172!important; text-transform: uppercase!important; display: block!important; margin-top: 10px!important;}
+
+
+           .newmentorsignup_formbody  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{display: none!important;}
+
+           .newmentorsignup_formbody .mat-form-field-appearance-legacy .mat-form-field-label {
+            top: 30px;
+            left: 10px;
+        }
+        .newmentorsignup_formbody .mat-error {
+            color: #b11313; font-size: 14px;
+            padding-top: 4px;
+        }
+
+
+          /*-----------------*/
+
+        
+.s-formsection .mat-form-field-underline{ display: none;}
+.s-formsection  .mat-form-field-subscript-wrapper{ display: none;}
+
+.s-formsection .mat-input-element{    box-sizing: border-box;
+    width: 100%;
+    margin: 0px;
+    height: 36px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #0d5e81!important;
+    padding: 0 1.5%!important;
+    font-family: 'OpenSans-Regular';
+    font-size: 14px;
+    color: #333; display: block; background: #fff!important;}
+
+
+    .s-formsection .mat-select{    box-sizing: border-box;
+        width: 100%;
+        margin: 0px;
+        height: 36px;
+        border-radius: 5px;
+        box-shadow: 0 0 3px #0d5e81!important;
+        padding: 0 1.5%!important;
+        font-family: 'OpenSans-Regular';
+        font-size: 14px;
+        color: #333; display: block; background: #fff!important;}
+
+    .s-formsection textarea.mat-input-element{ resize: none!important;     height: 76px!important; padding: 5px 1.5%!important;}
+
+
+    .s-formsection  .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+        padding-bottom: 0!important;
+    }
+
+    .s-formsection  .mat-form-field-infix{ border: 0px!important;}
+    .s-formsection .button{ display: none!important;}
+    .s-formsection .button:first-of-type{background: url(../images/newaffiliatesignup_btn.png) no-repeat left top!important; 
+        background-size: 100%!important; width: 100%!important; height:96px!important; border: none!important; box-shadow: none!important; 
+        outline: none!important; cursor: pointer!important; font-size: 36px!important;  color: #ffffff!important;     font-family:'OpenSans-Semibold'!important; 
+           text-shadow: 0 2px 5px #5f6172!important; text-transform: uppercase!important; display: block!important;}
+
+
+           .s-formsection  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{display: none!important;}
+
+           .s-formsection .mat-form-field-appearance-legacy .mat-form-field-label {
+            top: 18px;
+            left: 10px;
+        }
+        .s-formsection .mat-error {
+            color: #b11313; font-size: 14px; text-align: left;
+            padding-top: 4px;
+        }
+
+        .s-formsection   .mat-form-field-label-wrapper {
+            position: absolute;
+            left: 0;
+            box-sizing: content-box;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            text-align: left;
+            top: 11px;
+        }
+
+        .s-formsection  .mat-form-field-label-wrapper{ padding-top: 0px!important;}
+
+        .s-formsection  .mat-form-field-label-wrapper{ padding-top: 0px!important;}

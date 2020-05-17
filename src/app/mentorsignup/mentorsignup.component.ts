@@ -17,17 +17,29 @@ export class MentorsignupComponent implements OnInit {
   formfieldrefresh:boolean=true;
   updatetable:boolean=true;
   formfieldrefreshdata:any=null;
- public formdata:any;
+  public formdata:any;
+  public statesjson : any =[];
+  public parentid:any = '';
 
-
-  constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute) {
+  constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute ) {
+    this._apiService.getState().subscribe((response:any) => {
+      console.log(response)
+      for (let i in response) {
+        this.statesjson.push(
+          { 'val': response[i].abbreviation, 'name': response[i].name }
+        );
+      }
+    })
+    if(this.ActivatedRoute.snapshot.params._id != null && typeof(ActivatedRoute.snapshot.params._id) != "undefined"){
+      this.parentid = this.ActivatedRoute.snapshot.params._id;
+    }
     this.formdata = {
       successmessage:"Added Successfully !!",
       redirectpath:"/mentorsignup",
-      submittext:"submit",                                  
+      submittext:"Submit",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
-      endpoint:'api1/addusers',                                                 // add user
+      endpoint:'api1/addusers',                                                 
      jwttoken:this._apiService.jwtToken,
       fields:[
           {
@@ -37,9 +49,9 @@ export class MentorsignupComponent implements OnInit {
               value:'',
               type:"text",
               validations:[
-                  {rule:'required'},
-                  // {rule:'maxLength',value:10},
-                  // {rule:'minLength',value: 2}
+                  {rule:'required', message:"Enter Your First Name"},
+                   {rule:'maxLength',value:10,message:"Maximum of 15 Letters"},
+                   {rule:'minLength',value: 2, message:"Minimum 2 Letters Required"}
                   ]
           },
           {
@@ -49,9 +61,9 @@ export class MentorsignupComponent implements OnInit {
             value:'',
             type:"text",
             validations:[
-                {rule:'required'},
-               // {rule:'maxLength',value:10},
-              //{rule:'minLength',value: 2}
+                {rule:'required',message:"Enter Your Last Name"},
+                {rule:'maxLength',value:10,message:"Maximum Of 15 Letters"},
+                {rule:'minLength',value: 2 , message:"Minimum 2 Letters Required"}
                 ]
           },
           {
@@ -72,9 +84,9 @@ export class MentorsignupComponent implements OnInit {
             name:"address",
             value:'',
             type:"text",
-            validations:[
-                {rule:'required'},
-                ]
+            // validations:[
+            //     {rule:'required'},
+            //     ]
           },
           {
             heading:"",
@@ -83,17 +95,17 @@ export class MentorsignupComponent implements OnInit {
             value:'',
             type:"text",
             validations:[
-                {rule:'required'},
+                {rule:'required',message:"Enter Your City"},
                 ]
           },
           {
             heading:"",
             label:"State",
             name:"state",
-            value:'',
-            type:"text",
+            type:"select",
+            val: this.statesjson,
             validations:[
-                {rule:'required'},
+                {rule:'required',message:"Enter Your State"},
                 ]
           },
           {
@@ -103,7 +115,7 @@ export class MentorsignupComponent implements OnInit {
             value:'',
             type:"number",
             validations:[
-                {rule:'required'},
+                {rule:'required',message:"Enter Your Contact Number"},
                 ]
           },
           {
@@ -113,21 +125,21 @@ export class MentorsignupComponent implements OnInit {
             value:'',
             type:"number",
             validations:[
-                {rule:'required'},
+                {rule:'required',message:"Enter Your Pin Code "},
                 ]
           },
           {
               label:"Email",
               name:"email",
               type:'email',
-              hint:"abc@gmail.com",
+              hint:"",
               validations:[
                   {rule:'required',message:"Email field Needs to be required"},
                   {rule:'pattern',value: this.emailregex,message: "Must be a valid Email"}]
           },
           {
             heading:"",
-            label:"notes",
+            label:"Notes",
             name:"notes",
             value:'',
             type:"textarea",
@@ -135,21 +147,21 @@ export class MentorsignupComponent implements OnInit {
             //     {rule:'required'},
             //     ]
           },
-          {
-            heading:"",
-            label:"User Name",
-            name:"username",
-            value:'',
-            type:"text",
-            // validations:[
-            //     {rule:'required'},
-            //     ]
-          },
+          // {
+          //   heading:"",
+          //   label:"User Name",
+          //   name:"username",
+          //   value:'',
+          //   type:"text",
+          //   // validations:[
+          //   //     {rule:'required'},
+          //   //     ]
+          // },
           {
               label:"Password",
               name:"password",
               type:'password',
-              hint:"******",
+              hint:"",
               validations:[
                   {rule:'required',message:"Password field Needs to be required"},
                   {rule:'pattern',value: this.passwordregex,message: "Must contain a Capital Letter and a Number"}
@@ -158,7 +170,7 @@ export class MentorsignupComponent implements OnInit {
               label:"Confirm Password",
               name:"confirmpassword",
               type:'password',
-              hint:"******",
+              hint:"",
               validations:[
                   {rule:'required',message:"Confirm Password field Needs to be required"},
                   {rule:'match',message:"Confirm Password field Needs to  match Password"},
@@ -172,10 +184,10 @@ export class MentorsignupComponent implements OnInit {
             value:"mentor"
         },
         {
-            label:"id",
-            name:"id",
+            label:"parentid",
+            name:"parentid",
             type:'hidden',
-            value:""
+            value:this.parentid
         },
         {
           label:"status",

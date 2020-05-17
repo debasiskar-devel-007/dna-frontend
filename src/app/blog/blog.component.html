@@ -53,8 +53,9 @@
                         <span class="spandiv blog_media_div">
 
                             <span class="spandiv blog_mediasrc_con">
-                                <span class="spandiv blog_mediasrc" *ngIf="item !=null && item.blogs_image !=null">
-                                    <img [src]="item.blogs_image[0].basepath + item.blogs_image[0].image" alt="#">
+                                <span class="spandiv blog_mediasrc" >
+                                    <img *ngIf="item !=null && item.image !=null" [src]="item.image" alt="#">
+                                    <img *ngIf="item ==null || item.image ==null" src='../../assets/images/logometa.jpg'>
                                    
                                 </span>
                             </span>
@@ -66,7 +67,7 @@
                         </span>
                         <span class="spandiv blog_text">
                             <h4 *ngIf="item !=null && item.blogtitle !=null">{{item.blogtitle}}</h4>
-                            <h6 *ngIf="item !=null && item.description !=null" [innerHTML]="item.description">
+                            <h6 *ngIf="item !=null && item.description_html !=null">{{item.description_html}}
                                
                             </h6>
                         </span>
@@ -107,7 +108,8 @@
                       <li> <a href="javascript:void(0)">2</a></li>
                       <li> <a href="javascript:void(0)">3</a></li>
                       <li> <a href="javascript:void(0)">...</a></li> -->
-                      <li> <a href="javascript:void(0)" (click)="viewMore()">Load MOre</a></li>
+                      <li> <a href="javascript:void(0)" (click)="viewMore()"
+                         *ngIf="blogListData !=nul && indexval <  blogListData.length">Load MOre</a></li>
 
                   </ul>
 

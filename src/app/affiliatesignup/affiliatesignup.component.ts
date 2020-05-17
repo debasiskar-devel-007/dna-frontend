@@ -20,6 +20,7 @@ export class AffiliatesignupComponent implements OnInit {
   formfieldrefreshdata:any=null;
  public formdata:any;
  public parentid:any = '';
+ public statesjson : any =[];
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute
     // public meta: MetaService
@@ -38,13 +39,21 @@ export class AffiliatesignupComponent implements OnInit {
     // this.meta.setTag('og:type', 'website');
     // this.meta.setTag('og:url','https://www.dnamastercourse.com/');
     //   this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
+    this._apiService.getState().subscribe((response:any) => {
+      console.log(response)
+      for (let i in response) {
+        this.statesjson.push(
+          { 'val': response[i].abbreviation, 'name': response[i].name }
+        );
+      }
+    })
     if(this.ActivatedRoute.snapshot.params._id != null && typeof(ActivatedRoute.snapshot.params._id) != "undefined"){
       this.parentid = this.ActivatedRoute.snapshot.params._id;
     }
     this.formdata = {
       successmessage:"Added Successfully !!",
       redirectpath:"/affiliatesignup",
-      submittext:"submit",                                  
+      submittext:"Submit",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
       endpoint:'api1/addusers',                                                 
@@ -110,8 +119,8 @@ export class AffiliatesignupComponent implements OnInit {
             heading:"",
             label:"State",
             name:"state",
-            value:'',
-            type:"text",
+            value:this.statesjson,
+            type:"select",
             validations:[
                 {rule:'required',message:"Enter Your State"},
                 ]
@@ -137,10 +146,11 @@ export class AffiliatesignupComponent implements OnInit {
                 ]
           },
           {
+            heading:"",
               label:"Email",
               name:"email",
               type:'email',
-              hint:"abc@gmail.com",
+              hint:"",
               validations:[
                   {rule:'required',message:"Enter Your Email"},
                   {rule:'pattern',value: this.emailregex,message: "Must be a valid Email"}]
@@ -185,20 +195,22 @@ export class AffiliatesignupComponent implements OnInit {
           //       {rule:'required'},
           //       ]
           // },
-          {
+          { 
+            heading:"",
               label:"Password",
               name:"password",
               type:'password',
-              hint:"******",
+              hint:"",
               validations:[
                   {rule:'required',message:"Password required"},
                   {rule:'pattern',value: this.passwordregex,message: "Must contain a Capital Letter and a Number"}
                   ]
           },{
+            heading:"",
               label:"Confirm Password",
               name:"confirmpassword",
               type:'password',
-              hint:"******",
+              hint:"",
               validations:[
                   {rule:'required',message:"Confirm Password required"},
                   {rule:'match',message:"Confirm Password field Needs to  match Password"},

@@ -79,6 +79,10 @@ export class ApiService {
     var result = this._http.get("https://ipinfo.io/?format=json&token=9797c42b93078a").pipe(map(res => res));
     return result;
   }
+  getState(){
+    var result = this._http.get("assets/data/states.json").pipe(map(response => response));
+    return result;
+  }
 
 
 
