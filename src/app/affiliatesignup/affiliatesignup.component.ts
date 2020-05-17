@@ -119,7 +119,8 @@ export class AffiliatesignupComponent implements OnInit {
             heading:"",
             label:"State",
             name:"state",
-            value:this.statesjson,
+            val:this.statesjson,
+            value:"",
             type:"select",
             validations:[
                 {rule:'required',message:"Enter Your State"},
