@@ -20,6 +20,7 @@ export class AffiliatesignupComponent implements OnInit {
   formfieldrefreshdata:any=null;
  public formdata:any;
  public parentid:any = '';
+ public statesjson : any =[];
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute
     // public meta: MetaService
@@ -38,6 +39,14 @@ export class AffiliatesignupComponent implements OnInit {
     // this.meta.setTag('og:type', 'website');
     // this.meta.setTag('og:url','https://www.dnamastercourse.com/');
     //   this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
+    this._apiService.getState().subscribe((response:any) => {
+      console.log(response)
+      for (let i in response) {
+        this.statesjson.push(
+          { 'val': response[i].abbreviation, 'name': response[i].name }
+        );
+      }
+    })
     if(this.ActivatedRoute.snapshot.params._id != null && typeof(ActivatedRoute.snapshot.params._id) != "undefined"){
       this.parentid = this.ActivatedRoute.snapshot.params._id;
     }
@@ -52,7 +61,7 @@ export class AffiliatesignupComponent implements OnInit {
       fields:[
           {
               heading:"",
-              label:"First Nam",
+              label:"First Name",
               name:"firstname",
               value:'',
               type:"text",
@@ -110,8 +119,9 @@ export class AffiliatesignupComponent implements OnInit {
             heading:"",
             label:"State",
             name:"state",
-            value:'',
-            type:"text",
+            val:this.statesjson,
+            value:"",
+            type:"select",
             validations:[
                 {rule:'required',message:"Enter Your State"},
                 ]

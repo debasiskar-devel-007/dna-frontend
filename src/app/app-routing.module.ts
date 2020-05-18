@@ -53,6 +53,8 @@ const routes: Routes = [
   {path:'contact', component: ContactComponent}, 
 
   {path:'mentorsignup', component: MentorsignupComponent}, 
+  {path: 'mentorsignup/:_id' , component: MentorsignupComponent},
+
   {path:'landingpage', component: LandingpageComponent}, 
   {path:'menteelandingpage', component: MenteelandingpageComponent}, 
 ];

@@ -19,6 +19,7 @@ export class MentorsignupComponent implements OnInit {
   formfieldrefreshdata:any=null;
   public formdata:any;
   public statesjson : any =[];
+  public parentid:any = '';
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute ) {
     this._apiService.getState().subscribe((response:any) => {
@@ -29,6 +30,9 @@ export class MentorsignupComponent implements OnInit {
         );
       }
     })
+    if(this.ActivatedRoute.snapshot.params._id != null && typeof(ActivatedRoute.snapshot.params._id) != "undefined"){
+      this.parentid = this.ActivatedRoute.snapshot.params._id;
+    }
     this.formdata = {
       successmessage:"Added Successfully !!",
       redirectpath:"/mentorsignup",
@@ -180,10 +184,10 @@ export class MentorsignupComponent implements OnInit {
             value:"mentor"
         },
         {
-            label:"id",
-            name:"id",
+            label:"parentid",
+            name:"parentid",
             type:'hidden',
-            value:""
+            value:this.parentid
         },
         {
           label:"status",
