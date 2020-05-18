@@ -431,6 +431,14 @@ this.formdata2 = {
     },50*(i+1));  
     }
   }
+  else{
+    for (let i = 0; i < this.formarray.length; i++) {
+      setTimeout(() => {
+        this.formfieldrefreshdata = 
+        { field: 's'+this.formarray[i].name, value: '' ,disabled: true} ;
+    },50*(i+1));  
+    }
+  }
   
 }
 }
