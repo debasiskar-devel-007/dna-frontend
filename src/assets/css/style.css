@@ -5219,7 +5219,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
 
         /*-------css----------*/
 
-        
+        .bannerarrowscroll{ cursor: pointer; outline: none;}
 .newmentorsignup_formbody .mat-form-field-underline{ display: none;}
 .newmentorsignup_formbody  .mat-form-field-subscript-wrapper{ display: none;}
 

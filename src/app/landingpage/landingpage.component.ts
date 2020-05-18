@@ -95,6 +95,15 @@ export class LandingpageComponent implements OnInit {
 
    }
 
+
+   scroll() {
+    
+
+    document.querySelector('.s-formsection').scrollIntoView({ behavior: 'smooth', });
+
+  }
+
+
   ngOnInit() {
   }
 
