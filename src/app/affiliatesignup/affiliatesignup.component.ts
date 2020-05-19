@@ -19,6 +19,7 @@ export class AffiliatesignupComponent implements OnInit {
   updatetable:boolean=true;
   formfieldrefreshdata:any=null;
  public formdata:any;
+ public parentid:any = '';
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute
     // public meta: MetaService
@@ -37,13 +38,16 @@ export class AffiliatesignupComponent implements OnInit {
     // this.meta.setTag('og:type', 'website');
     // this.meta.setTag('og:url','https://www.dnamastercourse.com/');
     //   this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
+    if(this.ActivatedRoute.snapshot.params._id != null && typeof(ActivatedRoute.snapshot.params._id) != "undefined"){
+      this.parentid = this.ActivatedRoute.snapshot.params._id;
+    }
     this.formdata = {
       successmessage:"Added Successfully !!",
       redirectpath:"/affiliatesignup",
-      submittext:"submit",                                  
+      submittext:"Submit",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
-      endpoint:'api1/addusers',                                                 // add user
+      endpoint:'api1/addusers',                                                 
      jwttoken:this._apiService.jwtToken,
       fields:[
           {
@@ -53,7 +57,7 @@ export class AffiliatesignupComponent implements OnInit {
               value:'',
               type:"text",
               validations:[
-                  {rule:'required'},
+                  {rule:'required',message:"Minimum of 2 Letters required"},
                   // {rule:'maxLength',value:10},
                   // {rule:'minLength',value: 2}
                   ]
@@ -65,9 +69,9 @@ export class AffiliatesignupComponent implements OnInit {
             value:'',
             type:"text",
             validations:[
-                {rule:'required'},
-                {rule:'maxLength',value:10},
-                {rule:'minLength',value: 2}
+                {rule:'required',message:"Minimum of 2 Letters required"},
+                //{rule:'maxLength',value:10},
+                //{rule:'minLength',value: 2}
                 ]
           },
           {
@@ -76,11 +80,11 @@ export class AffiliatesignupComponent implements OnInit {
             name:"company",
             value:'',
             type:"text",
-            validations:[
-                {rule:'required'},
-                {rule:'maxLength',value:10},
-                {rule:'minLength',value: 2}
-                ]
+            // validations:[
+            //     {rule:'required'},
+            //     {rule:'maxLength',value:10},
+            //     {rule:'minLength',value: 2}
+            //     ]
           },
           {
             heading:"",
@@ -88,9 +92,9 @@ export class AffiliatesignupComponent implements OnInit {
             name:"address",
             value:'',
             type:"text",
-            validations:[
-                {rule:'required'},
-                ]
+            // validations:[
+            //     {rule:'required'},
+            //     ]
           },
           {
             heading:"",
@@ -99,7 +103,7 @@ export class AffiliatesignupComponent implements OnInit {
             value:'',
             type:"text",
             validations:[
-                {rule:'required'},
+                {rule:'required',message:"Enter Your City"},
                 ]
           },
           {
@@ -109,7 +113,7 @@ export class AffiliatesignupComponent implements OnInit {
             value:'',
             type:"text",
             validations:[
-                {rule:'required'},
+                {rule:'required',message:"Enter Your State"},
                 ]
           },
           {
@@ -119,7 +123,7 @@ export class AffiliatesignupComponent implements OnInit {
             value:'',
             type:"number",
             validations:[
-                {rule:'required'},
+                {rule:'required',message:"Enter Your Telephone Number"},
                 ]
           },
           {
@@ -129,7 +133,7 @@ export class AffiliatesignupComponent implements OnInit {
             value:'',
             type:"number",
             validations:[
-                {rule:'required'},
+                {rule:'required',message:"Enter Your Pin Code"},
                 ]
           },
           {
@@ -138,7 +142,7 @@ export class AffiliatesignupComponent implements OnInit {
               type:'email',
               hint:"abc@gmail.com",
               validations:[
-                  {rule:'required',message:"Email field Needs to be required"},
+                  {rule:'required',message:"Enter Your Email"},
                   {rule:'pattern',value: this.emailregex,message: "Must be a valid Email"}]
           },
           {
@@ -147,47 +151,47 @@ export class AffiliatesignupComponent implements OnInit {
             name:"website_url",
             value:'',
             type:"text",
-            validations:[
-                {rule:'required'},
-                ]
+            // validations:[
+            //     {rule:'required'},
+            //     ]
           },
           {
             heading:"",
-            label:"about_me",
-            name:"about_me",
+            label:"About Me",
+            name:"About Me",
             value:'',
             type:"textarea",
-            validations:[
-                {rule:'required'},
-                ]
+            // validations:[
+            //     {rule:'required'},
+            //     ]
           },
           {
             heading:"",
-            label:"notes",
+            label:"Notes",
             name:"notes",
             value:'',
             type:"textarea",
-            validations:[
-                {rule:'required'},
-                ]
+            // validations:[
+            //     {rule:'required'},
+            //     ]
           },
-          {
-            heading:"",
-            label:"User Name",
-            name:"username",
-            value:'',
-            type:"text",
-            validations:[
-                {rule:'required'},
-                ]
-          },
+          // {
+          //   heading:"",
+          //   label:"User Name",
+          //   name:"username",
+          //   value:'',
+          //   type:"text",
+          //   validations:[
+          //       {rule:'required'},
+          //       ]
+          // },
           {
               label:"Password",
               name:"password",
               type:'password',
               hint:"******",
               validations:[
-                  {rule:'required',message:"Password field Needs to be required"},
+                  {rule:'required',message:"Password required"},
                   {rule:'pattern',value: this.passwordregex,message: "Must contain a Capital Letter and a Number"}
                   ]
           },{
@@ -196,11 +200,11 @@ export class AffiliatesignupComponent implements OnInit {
               type:'password',
               hint:"******",
               validations:[
-                  {rule:'required',message:"Confirm Password field Needs to be required"},
+                  {rule:'required',message:"Confirm Password required"},
                   {rule:'match',message:"Confirm Password field Needs to  match Password"},
                   {rule:'pattern',value: this.passwordregex,message: "Must contain a Capital Letter and a Number"}
                   ]
-          }
+          },
           // {
           //     label:"Age",
           //     name:"age",
@@ -239,17 +243,17 @@ export class AffiliatesignupComponent implements OnInit {
           //     name:"city",
           //     type:'text'
           // },
-          ,{
+          {
             label:"type",
             name:"type",
             type:'hidden',
             value:"affiliate"
         },
         {
-            label:"id",
-            name:"id",
+            label:"parentid",
+            name:"parentid",
             type:'hidden',
-            value:""
+            value:this.parentid
         },
         {
             label:"status",
@@ -259,10 +263,11 @@ export class AffiliatesignupComponent implements OnInit {
         }
       ]
   };
+   
 
   }
 
   ngOnInit() {
   }
-
+  
 }

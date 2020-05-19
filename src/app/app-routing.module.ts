@@ -16,6 +16,7 @@ import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
 import { TestresolveService } from './testresolve.service';
 import { environment } from '../environments/environment';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpage.component';
 // const api_url1 =  environment["api_url1"];
 
 
@@ -40,9 +41,10 @@ const routes: Routes = [
   {path:'blog/:_id', component: BlogComponent},
 
   {path:'blog-details/:blogtitle/:_id', component: BlogdetailComponent,resolve: { blogData: TestresolveService },
-  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getblogdata'}}, 
+  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getblogdatabyid'}}, 
 
   {path:'affiliatesignup', component: AffiliatesignupComponent}, 
+  {path : 'affiliatesignup/:_id' , component: AffiliatesignupComponent},
 
   {path:'login', component: LoginComponent}, 
 
@@ -52,6 +54,7 @@ const routes: Routes = [
 
   {path:'mentorsignup', component: MentorsignupComponent}, 
   {path:'landingpage', component: LandingpageComponent}, 
+  {path:'menteelandingpage', component: MenteelandingpageComponent}, 
 ];
 
 @NgModule({

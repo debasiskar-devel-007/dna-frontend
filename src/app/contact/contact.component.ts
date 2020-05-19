@@ -47,8 +47,8 @@ export class ContactComponent implements OnInit {
       
           fields: [
             {
-              heading: "",
-              label: " Name",
+              heading: "Name",
+              label: " ",
               name: "name",
               value: '',
               type: "text",
@@ -61,7 +61,8 @@ export class ContactComponent implements OnInit {
             },
       
             {
-              label: "Email",
+              heading: "Email",
+              label: "",
               name: "email",
               type: 'email',
               //hint: "abc@gmail.com",
@@ -70,9 +71,10 @@ export class ContactComponent implements OnInit {
                 { rule: 'pattern', value: this.emailregex, message: "Must be a valid Email" }]
             },
             {
-              label: "Phone",
+              heading: "Phone",
+              label: "",
               name: "phone",
-              type: 'number',
+              type: 'text',
               hint: '',
               validations: [
                 { rule: 'required' }
@@ -80,8 +82,8 @@ export class ContactComponent implements OnInit {
               ]
             },
             {
-              heading: "",
-              label: "Message",
+              heading: "Message",
+              label: "",
               name: "message",
               value: '',
               type: "textarea",
