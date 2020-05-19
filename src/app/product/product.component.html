@@ -437,7 +437,13 @@ PROGRAM HAS SO MUCH MORE
                                 </table>
                             </ng-container>
                                 <h3>BILLING Address</h3>
-                                <div class="form-group">
+                                <lib-showform  class='form-inline' *ngIf="formdata !=null"
+                                [formdata]="formdata"
+                                [formfieldrefresh]="formfieldrefresh"
+                                [formfieldrefreshdata]="formfieldrefreshdata"
+                                (onFormFieldChange)="listenFormFieldChange($event)"
+                                > </lib-showform>
+                                <!-- <div class="form-group">
                                     <label>First Name</label>
                                     <input type="text" class="form-control" name="bill_first_name" placeholder="First Name">
                                     <div class="clearfix"></div>
@@ -499,11 +505,16 @@ PROGRAM HAS SO MUCH MORE
                                     <input type="checkbox" name="shipping_is_billing" id="chk_bill_ship" value="1">
                                     Use my billing address as my ship-to address
                                     <div class="clearfix"></div>
-                                </div>
+                                </div> -->
 
                                 <h3>Shipping Address</h3>
+                                <lib-showform  class='form-inline' *ngIf="formdata !=null"
+                                [formdata]="formdata1"
+                                [formfieldrefresh]="formfieldrefresh"
+                                [formfieldrefreshdata]="formfieldrefreshdata"
+                                > </lib-showform>
 
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label>First Name</label>
                                     <input type="text" class="form-control" name="ship_first_name" placeholder="First Name">
                                     <div class="clearfix"></div>
@@ -537,7 +548,7 @@ PROGRAM HAS SO MUCH MORE
                                     <label>Zip</label>
                                     <input type="text" class="form-control" name="ship_postal_code" placeholder="Zip">
                                     <div class="clearfix"></div>
-                                </div>
+                                </div> -->
                                 <div class="credicardcls">
                                     <h4>Pay with Credit or Debit Card</h4>
 
@@ -548,7 +559,13 @@ PROGRAM HAS SO MUCH MORE
                                         <div class="clearfix"></div>
                                     </div>
 
-                                    <div class="pay_car_group">
+                                    <lib-showform  class='form-inline' *ngIf="formdata !=null"
+                                    [formdata]="formdata2"
+                                    [formfieldrefresh]="formfieldrefresh"
+                                    [formfieldrefreshdata]="formfieldrefreshdata"
+                                >   </lib-showform>
+
+                                    <!-- <div class="pay_car_group">
 
                                         <div class="form-group">
                                             <label>Card Type</label>
@@ -584,10 +601,10 @@ PROGRAM HAS SO MUCH MORE
 
  
 
-                                    </div>
+                                    </div> -->
 
                                 </div>
-                                <input type="submit" class="subbtn_pro" value="Rush my order">
+                                <!-- <input type="submit" class="subbtn_pro" value="Rush my order"> -->
                             </div>
                         </div>
                     </form>

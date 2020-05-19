@@ -17,10 +17,22 @@ export class MentorsignupComponent implements OnInit {
   formfieldrefresh:boolean=true;
   updatetable:boolean=true;
   formfieldrefreshdata:any=null;
- public formdata:any;
+  public formdata:any;
+  public statesjson : any =[];
+  public parentid:any = '';
 
-
-  constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute) {
+  constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute ) {
+    this._apiService.getState().subscribe((response:any) => {
+      console.log(response)
+      for (let i in response) {
+        this.statesjson.push(
+          { 'val': response[i].abbreviation, 'name': response[i].name }
+        );
+      }
+    })
+    if(this.ActivatedRoute.snapshot.params._id != null && typeof(ActivatedRoute.snapshot.params._id) != "undefined"){
+      this.parentid = this.ActivatedRoute.snapshot.params._id;
+    }
     this.formdata = {
       successmessage:"Added Successfully !!",
       redirectpath:"/mentorsignup",
@@ -90,8 +102,8 @@ export class MentorsignupComponent implements OnInit {
             heading:"",
             label:"State",
             name:"state",
-            value:'',
-            type:"text",
+            type:"select",
+            val: this.statesjson,
             validations:[
                 {rule:'required',message:"Enter Your State"},
                 ]
@@ -120,7 +132,7 @@ export class MentorsignupComponent implements OnInit {
               label:"Email",
               name:"email",
               type:'email',
-              hint:"abc@gmail.com",
+              hint:"",
               validations:[
                   {rule:'required',message:"Email field Needs to be required"},
                   {rule:'pattern',value: this.emailregex,message: "Must be a valid Email"}]
@@ -149,7 +161,7 @@ export class MentorsignupComponent implements OnInit {
               label:"Password",
               name:"password",
               type:'password',
-              hint:"******",
+              hint:"",
               validations:[
                   {rule:'required',message:"Password field Needs to be required"},
                   {rule:'pattern',value: this.passwordregex,message: "Must contain a Capital Letter and a Number"}
@@ -158,7 +170,7 @@ export class MentorsignupComponent implements OnInit {
               label:"Confirm Password",
               name:"confirmpassword",
               type:'password',
-              hint:"******",
+              hint:"",
               validations:[
                   {rule:'required',message:"Confirm Password field Needs to be required"},
                   {rule:'match',message:"Confirm Password field Needs to  match Password"},
@@ -172,10 +184,10 @@ export class MentorsignupComponent implements OnInit {
             value:"mentor"
         },
         {
-            label:"id",
-            name:"id",
+            label:"parentid",
+            name:"parentid",
             type:'hidden',
-            value:""
+            value:this.parentid
         },
         {
           label:"status",
