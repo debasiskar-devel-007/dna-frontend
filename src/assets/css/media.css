@@ -1070,8 +1070,8 @@
     @media screen and (max-width:1587px){
         .newaboutbeto_banner_section{ background-position: -260px top!important;}
   
-    .newhomeblock3 .newhomeblock3_sub1{ background-position: -80px top;}
-    .newhomeblock3 .newhomeblock3_sub2{ background-position: -80px top;}
+    .newhomeblock3 .newhomeblock3_sub1{ background-position: -130px top;}
+    .newhomeblock3 .newhomeblock3_sub2{ background-position: -130px top;}
     .newhomeblock3 .newhomeblock3_sub3{ background-position: -80px top;}
     .newhomeblock3 .newhomeblock3_sub4{ background-position: -130px top;}
 
@@ -1083,6 +1083,15 @@
   
 
 @media screen and (max-width: 1580px) {
+    .newhomeblock3 .newhomeblock3_sub4 {
+        background-position: right top;
+        background-size: cover;
+    }
+
+    .newhomeblock3 .newhomeblock3_sub3 {
+        background-position: 52% top;
+        background-size: cover;
+    }
 
     .productform .mat-raised-button {
         width: 91%;
@@ -1173,6 +1182,11 @@
   }
   
     @media screen and (max-width: 1560px){
+
+        .newhomeblock3 .newhomeblock3_sub3 {
+            background-position:70% top;
+            background-size: cover;
+        }
         .s-top-banner .s-top-banner-wrapper .s-content-wrapper {
             width: 1500px;
             margin: 0 auto;
@@ -1252,6 +1266,20 @@
   }
 
   @media screen and (max-width: 1500px) {
+    .newhomeblock3 .newhomeblock1_text h3 {
+        height: 90px;
+    }
+
+    .newhomeblock3 .newhomeblock2_text h3 {
+        height: 90px;
+    }
+    .newhomeblock3 .newhomeblock3_text h3 {
+        height: 90px;
+    }
+    .newhomeblock3 .newhomeblock3_sub4 h3 {
+        width: 200px;
+        height: 90px;
+    }
     .newmentor_banner_section {
         background-position: -790px top !important;
     }
@@ -1506,6 +1534,12 @@
 
   
 @media screen and (max-width: 1480px) {
+
+    .newhomeblock3 .newhomeblock3_sub4 h5 {
+        width: 190px;    
+    }
+    .newhomeblock3 .newhomeblock3_text h5{ height: 130px;}
+    .newhomeblock3 .newhomeblock3_text h2{ font-size: 30px;}
 
     .newmentorsignup_block2_text2 {
         padding-left: 14%;
@@ -2153,6 +2187,13 @@
   
   
   @media screen and (max-width:1380px){
+
+    .newhomeblock3 .newhomeblock3_sub3 h3 {
+        width: 150px;
+    }
+    .newhomeblock3 .newhomeblock3_text h2 {
+        font-size: 26px;
+    }
   
   .affiliate-signup_banner_inner_top {
           margin-left: 0;
@@ -2175,17 +2216,17 @@
       .newhomeblock5_left_block3_sub {
           padding: 52px 20px;
       }
-  .newhomeblock3 .newhomeblock3_sub1{ background-position: -120px top;}
-  .newhomeblock3 .newhomeblock3_sub2{ background-position: -120px top;}
-  .newhomeblock3 .newhomeblock3_sub3{ background-position: -120px top;}
-  .newhomeblock3 .newhomeblock3_sub4{ background-position: -170px top;}
+  /* .newhomeblock3 .newhomeblock3_sub1{ background-position: -120px top;}
+  .newhomeblock3 .newhomeblock3_sub2{ background-position: -120px top;} */
+  /* .newhomeblock3 .newhomeblock3_sub3{ background-position: -120px top;}
+  .newhomeblock3 .newhomeblock3_sub4{ background-position: -170px top;} */
   
       .newhomeblock3 .newhomeblock3_sub1 h5 {
           width: 170px;
       }
   
       .newhomeblock3 .newhomeblock3_sub4 h3 {
-          width: 220px;
+          width: 176px; height: 90px;
       }
   
       .newhomeblock5_left_block2 {
@@ -2729,6 +2770,10 @@
   
 
   @media screen and (max-width: 1280px) {
+    .newhomeblock3 .newhomeblock3_sub4 {
+        background-position: -270px top;
+        background-size: cover;
+    }
     .newmentorsignup_top_banner_wrappertext h1 {
         font-size: 42px;
     }
@@ -6156,7 +6201,7 @@
       .newhomeblock3 .newhomeblock3_text .newhomeblock3_link a{ margin: 0px; display: block; padding: 10px 10px 9px 40px; width: 140px; float: left; font-size: 16px; color: #fff; text-transform: uppercase;}
   
   
-      .newhomeblock3 .newhomeblock3_text h3{ margin: 0px; font-size: 18px; line-height: 24px; color: #35364d;   font-family:'OpenSans-Semibold'; height: 70px; margin-bottom: 12px;}
+      .newhomeblock3 .newhomeblock3_text h3{ margin: 0px; font-size: 18px; line-height: 24px; color: #35364d;     text-align: left!important;  font-family:'OpenSans-Semibold'; height: 70px; margin-bottom: 12px;}
   
       .newhomeblock3 .newhomeblock3_sub1 h3{ width: 270px;}
       .newhomeblock3 .newhomeblock3_sub2 h3{ width: 230px;}
@@ -6629,21 +6674,32 @@
 
 
     @media screen and (max-width:840px) {
+
+        .newhomeblock3 .newhomeblock3_sub4 h3 {
+            width: 210px;
+        }
+        .newhomeblock3 .newhomeblock3_text h3{ height: 100px;}
       .newhomeblock3 .newhomeblock3_sub1 {
-          background-position: -40px top;
+          background-position: -150px top;
       }
   
       .newhomeblock3 .newhomeblock3_sub2 {
-          background-position: -40px top;
+          background-position: -150px top;
       }
   
       .newhomeblock3 .newhomeblock3_sub3 {
-          background-position: -40px top;
+          background-position: -150px top;
       }
   
       .newhomeblock3 .newhomeblock3_sub4 {
-          background-position: -110px top;
+          background-position: -220px top;
       }
+
+      .newhomeblock3 .newhomeblock3_sub4 h5 {
+        width: 220px;
+    }
+
+    .newhomeblock3 .newhomeblock3_text h5{ height: 150px;}
   }
  
   
@@ -6949,7 +7005,7 @@
   
       .newproduct_list1_top_wrapper h3{ padding: 10px 0 0 0; font-size:24px; text-align: center;}
   
-      .newhomeblock3 .newhomeblock3_sub1 {
+      /* .newhomeblock3 .newhomeblock3_sub1 {
           background-position: -90px top;
       }
   
@@ -6963,7 +7019,101 @@
   
       .newhomeblock3 .newhomeblock3_sub4 {
           background-position: -130px top;
+      } */
+
+      .newhomeblock3 .newhomeblock3_sub1{ width: 100%; float: none;  }
+      .newhomeblock3 .newhomeblock3_sub2{width: 100%; float: none;  }
+      .newhomeblock3 .newhomeblock3_sub3{width: 100%; float: none;  }
+      .newhomeblock3 .newhomeblock3_sub4{width: 100%; float: none;  }
+      .newhomeblock3 .newhomeblock3_sub1 h2 { 
+          text-align: center!important;
       }
+      .newhomeblock3 .newhomeblock3_sub2 h2 { 
+          text-align: center!important;
+      }
+      .newhomeblock3 .newhomeblock3_sub3 h2 { 
+          text-align: center!important;
+      }
+      .newhomeblock3 .newhomeblock3_sub4 h2 { 
+          text-align: center!important;
+      }
+  
+        .newhomeblock3 .newhomeblock3_sub1 {
+            background: none !important;
+            background-color: #e4edea !important;
+        }
+        .newhomeblock3 .newhomeblock3_sub1 h2 {
+            background: url(../images/nhome_block3_icon1.png) no-repeat center top !important;
+            padding: 54px 0 0 0px !important;
+        }
+        .newhomeblock3 .newhomeblock3_sub1 h3 {
+            width: 100% !important;
+        }
+        .newhomeblock3 .newhomeblock3_sub1 h5 {
+            width: 100% !important;
+        }
+    
+        .newhomeblock3 .newhomeblock3_text .newhomeblock3_link a {
+            display: inline-block !important;
+            margin-bottom: 10px !important;
+        }
+        .newhomeblock3 .newhomeblock3_text {
+            padding: 20px 20px 20px !important;
+            text-align: center;
+        }
+    
+    
+        .newhomeblock3 .newhomeblock3_sub2 {
+            background: none !important;
+            background-color: #b2dbf1 !important;
+        }
+        .newhomeblock3 .newhomeblock3_sub2 h2 {
+            background: url(../images/nhome_block3_icon2.png) no-repeat center top !important;
+            padding: 54px 0 0 0px !important;
+        }
+        .newhomeblock3 .newhomeblock3_sub2 h3 {
+            width: 100% !important;
+        }
+        .newhomeblock3 .newhomeblock3_sub2 h5 {
+            width: 100% !important;
+        }
+    
+    
+        .newhomeblock3 .newhomeblock3_sub3 {
+            background: none !important;
+            background-color: #c3d7d5 !important;
+        }
+        .newhomeblock3 .newhomeblock3_sub3 h2 {
+            background: url(../images/nhome_block3_icon3.png) no-repeat center top !important;
+            padding: 54px 0 0 0px !important;
+        }
+        .newhomeblock3 .newhomeblock3_sub3 h3 {
+            width: 100% !important;
+        }
+        .newhomeblock3 .newhomeblock3_sub3 h5 {
+            width: 100% !important;
+        }
+    
+        .newhomeblock3 .newhomeblock3_text h3 {
+            height: auto;
+            text-align: center!important;
+        }
+    
+        .newhomeblock3 .newhomeblock3_sub4 {
+            background: none !important;
+            background-color: #e1e0ee !important;
+        }
+        .newhomeblock3 .newhomeblock3_sub4 h2 {
+            background: url(../images/nhome_block3_icon4.png) no-repeat center top !important;
+            padding: 54px 0 0 0px !important;
+        }
+        .newhomeblock3 .newhomeblock3_sub4 h3 {
+            width: 100% !important;
+        }
+        .newhomeblock3 .newhomeblock3_sub4 h5 {
+            width: 100% !important;
+        }
+    
   
       .newhomeblock4{ background-image: none;}
   
@@ -6984,7 +7134,7 @@
   }
    @media screen and (max-width:680px) {
 
-    .newhomeblock3 .newhomeblock3_sub1{ width: 100%; float: none;  }
+    /* .newhomeblock3 .newhomeblock3_sub1{ width: 100%; float: none;  }
     .newhomeblock3 .newhomeblock3_sub2{width: 100%; float: none;  }
     .newhomeblock3 .newhomeblock3_sub3{width: 100%; float: none;  }
     .newhomeblock3 .newhomeblock3_sub4{width: 100%; float: none;  }
@@ -7073,7 +7223,7 @@
       .newhomeblock3 .newhomeblock3_sub4 h5 {
           width: 100% !important;
       }
-  
+   */
   
   
       .newshop_block5_wrapper .newshop_img{ width: 280px;}
