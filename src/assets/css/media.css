@@ -1084,6 +1084,11 @@
 
 @media screen and (max-width: 1580px) {
 
+    .productform .mat-raised-button {
+        width: 91%;
+        font-size: 26px;
+    }
+
     .bannerimg1 {
         left: 760px;
         width: 430px;
