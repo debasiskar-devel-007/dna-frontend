@@ -33,11 +33,6 @@ import { ListingModule } from 'listing-angular7';
 import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpage.component';
 
 
-
-
-
-
-
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
@@ -54,6 +49,7 @@ export function metaFactory(): MetaLoader {
     }
   });
 }
+
 
 @NgModule({
   declarations: [
