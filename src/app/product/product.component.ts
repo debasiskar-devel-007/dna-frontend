@@ -55,9 +55,9 @@ export class ProductComponent implements OnInit {
       }
     })
     this.formdata = {
-      //successmessage:"Added Successfully !!",
+      successmessage:"Order Placed Sucessfully!!",
       redirectpath:"/product",
-      //submittext:"Submit",                                  
+      submittext:"Rush My Order",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
       endpoint:'api1/addusers',                                                 
@@ -186,6 +186,127 @@ export class ProductComponent implements OnInit {
                 { rule: 'required' }
             ]
         },
+        {
+          heading:"",
+          label:"First Name",
+          name:"sfirstname",
+          value:'',
+          type:"text",
+          validations:[
+              {rule:'required', message:"Enter Your First Name"},
+               {rule:'maxLength',value:10,message:"Maximum of 15 Letters"},
+               {rule:'minLength',value: 2, message:"Minimum 2 Letters Required"}
+              ]
+      },
+      {
+        heading:"",
+        label:"Last Name",
+        name:"slastname",
+        value:'',
+        type:"text",
+        validations:[
+            {rule:'required',message:"Enter Your Last Name"},
+            {rule:'maxLength',value:10,message:"Maximum Of 15 Letters"},
+            {rule:'minLength',value: 2 , message:"Minimum 2 Letters Required"}
+            ]
+      },
+      {
+        heading:"",
+        label:"Physical Address",
+        name:"saddress",
+        value:'',
+        type:"text",
+         validations:[
+             {rule:'required', message:"Enter Your Address"},
+             ]
+      },
+      {
+        heading:"",
+        label:"City",
+        name:"scity",
+        value:'',
+        type:"text",
+        validations:[
+            {rule:'required',message:"Enter Your City"},
+            ]
+      },
+      {
+        heading:"",
+        label:"State",
+        name:"sstate",
+        type:"select",
+        val: this.statesjson,
+        validations:[
+            {rule:'required',message:"Enter Your State"},
+            ]
+      },
+      {
+        heading:"",
+        label:"Zip",
+        name:"szip",
+        value:'',
+        type:"number",
+        validations:[
+            {rule:'required',message:"Enter Your Pin Code "},
+            ]
+      },
+      {
+        heading:"",
+        label:"Others",
+        name:"others",
+        value:'',
+        type:"select",
+        val: [
+          { val: "Others", name: "Others" },
+          { val: "Visa", name: "Visa"},
+          { val: "Mastercard", name: "Mastercard" },
+          { val: "AmericanExpress", name: "AmericanExpress" },
+          { val: "Discover", name: "Discover" }
+      ],
+        validations:[
+            {rule:'required', message:"Please Select Your Card"},
+            ]
+    },
+    {
+      heading:"",
+      label:"CC #",
+      name:"ccnumber",
+      value:'',
+      type:"number",
+      validations:[
+          {rule:'required',message:"Enter Your CC Number "},
+          ]
+    },
+    {
+      heading:"",
+      label:"Month",
+      name:"month",
+      value:'',
+      type:"number",
+      validations:[
+          {rule:'required',message:"Enter Your Validity Month"},
+          ]
+    },
+    {
+      heading:"",
+      label:"Year",
+      name:"year",
+      value:'',
+      type:"number",
+      validations:[
+          {rule:'required',message:"Enter Your Validity Year"},
+          ]
+    },
+    {
+      heading:"",
+      label:"CVV #",
+      name:"cvvnumber",
+      value:'',
+      type:"number",
+      validations:[
+          {rule:'required',message:"Enter Your CVV NUmber"},
+          ]
+    },
           {
             label:"type",
             name:"type",
@@ -200,178 +321,6 @@ export class ProductComponent implements OnInit {
       }
       ]
   };
-
-
-
-  this.formdata1 = {
-    //successmessage:"Added Successfully !!",
-    redirectpath:"/product",
-    //submittext:"Submit",                                  
-    submitactive:true, //optional, default true
-   apiUrl:this._apiService.nodesslurl,
-    endpoint:'api1/addusers',                                                 
-   jwttoken:this._apiService.jwtToken,
-    fields:[
-        {
-            heading:"",
-            label:"First Name",
-            name:"sfirstname",
-            value:'',
-            type:"text",
-            validations:[
-                {rule:'required', message:"Enter Your First Name"},
-                 {rule:'maxLength',value:10,message:"Maximum of 15 Letters"},
-                 {rule:'minLength',value: 2, message:"Minimum 2 Letters Required"}
-                ]
-        },
-        {
-          heading:"",
-          label:"Last Name",
-          name:"slastname",
-          value:'',
-          type:"text",
-          validations:[
-              {rule:'required',message:"Enter Your Last Name"},
-              {rule:'maxLength',value:10,message:"Maximum Of 15 Letters"},
-              {rule:'minLength',value: 2 , message:"Minimum 2 Letters Required"}
-              ]
-        },
-        {
-          heading:"",
-          label:"Physical Address",
-          name:"saddress",
-          value:'',
-          type:"text",
-           validations:[
-               {rule:'required', message:"Enter Your Address"},
-               ]
-        },
-        {
-          heading:"",
-          label:"City",
-          name:"scity",
-          value:'',
-          type:"text",
-          validations:[
-              {rule:'required',message:"Enter Your City"},
-              ]
-        },
-        {
-          heading:"",
-          label:"State",
-          name:"sstate",
-          type:"select",
-          val: this.statesjson,
-          validations:[
-              {rule:'required',message:"Enter Your State"},
-              ]
-        },
-        {
-          heading:"",
-          label:"Zip",
-          name:"szip",
-          value:'',
-          type:"number",
-          validations:[
-              {rule:'required',message:"Enter Your Pin Code "},
-              ]
-        },
-        {
-          label:"type",
-          name:"type",
-          type:'hidden',
-          value:"Product"
-      },
-      {
-        label:"status",
-        name: "status",
-        type: 'hidden',
-        value: 1
-    }
-    ]
-};
-
-this.formdata2 = {
-  successmessage:"Order Placed Sucessfully !!",
-  redirectpath:"/product",
-  submittext:"Rush My Order",                                  
-  submitactive:true, //optional, default true
- apiUrl:this._apiService.nodesslurl,
-  endpoint:'api1/addusers',                                                 
- jwttoken:this._apiService.jwtToken,
-  fields:[
-      {
-          heading:"",
-          label:"Others",
-          name:"others",
-          value:'',
-          type:"select",
-          val: [
-            { val: "Others", name: "Others" },
-            { val: "Visa", name: "Visa"},
-            { val: "Mastercard", name: "Mastercard" },
-            { val: "AmericanExpress", name: "AmericanExpress" },
-            { val: "Discover", name: "Discover" }
-        ],
-          validations:[
-              {rule:'required', message:"Please Select Your Card"},
-              ]
-      },
-      {
-        heading:"",
-        label:"CC #",
-        name:"ccnumber",
-        value:'',
-        type:"number",
-        validations:[
-            {rule:'required',message:"Enter Your CC Number "},
-            ]
-      },
-      {
-        heading:"",
-        label:"Month",
-        name:"month",
-        value:'',
-        type:"number",
-        validations:[
-            {rule:'required',message:"Enter Your Validity Month"},
-            ]
-      },
-      {
-        heading:"",
-        label:"Year",
-        name:"year",
-        value:'',
-        type:"number",
-        validations:[
-            {rule:'required',message:"Enter Your Validity Year"},
-            ]
-      },
-      {
-        heading:"",
-        label:"CVV #",
-        name:"cvvnumber",
-        value:'',
-        type:"number",
-        validations:[
-            {rule:'required',message:"Enter Your CVV NUmber"},
-            ]
-      },
-      {
-        label:"type",
-        name:"type",
-        type:'hidden',
-        value:"Product"
-    },
-    {
-      label:"status",
-      name: "status",
-      type: 'hidden',
-      value: 1
-  }
-  ]
-};
-
   
   }
 
