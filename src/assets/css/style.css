@@ -5343,3 +5343,115 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
         .s-formsection  .mat-form-field-label-wrapper{ padding-top: 0px!important;}
 
         .s-formsection  .mat-form-field-label-wrapper{ padding-top: 0px!important;}
+
+
+        .productform .mat-form-field-underline{ display: none!important;}
+        .productform .mat-form-field-wrapper{ margin: 0 15px;}
+        .productform input{    width: 98%;
+            height: 32px;
+            
+            border-radius: 0px!important;
+            border: solid 1px #c0c3c5!important;
+            padding: 2px 1%;
+            font-size: 13px;
+            box-shadow: none!important; display: block;     margin: 0 0 16px 0;     background: #fff;}
+
+            .productform mat-select{    width: 98%;
+                height: 32px;
+                
+                border-radius: 0px!important;
+                border: solid 1px #c0c3c5!important;
+                padding: 2px 1%;
+                font-size: 13px;
+                box-shadow: none!important; display: block;     margin: 0 0 16px 0;     background: #fff;}
+
+
+                .productform  .mat-form-field-label{  padding: 2px 1%; padding-top: 3px;}
+
+            .productform  .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+                padding-bottom: 0;
+            }
+
+            .productform  input.mat-input-element {
+                margin-top: 0;
+            }      
+
+            .productform .mat-form-field-appearance-legacy .mat-form-field-infix {
+                padding: 0;
+            }
+
+            .productform .mat-form-field-infix { 
+                border-top: 0;
+            }
+
+            .productform  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{display: none!important;}
+
+            .productform .mat-error { 
+                margin-top: -13px;
+                display: block;
+                font-size: 14px;
+                padding-bottom: 5px;
+            }
+
+            
+            .productform #mat-error-10 { 
+                margin-top: -13px;
+                display: block;
+                font-size: 14px;
+                padding-bottom: 5px; margin-left: 20px;     margin-left: 14px;
+            }
+
+
+            .productform   .mat-checkbox {  
+                display: block;
+                width: 92%;
+                margin: 0 auto 16px auto;
+            }
+
+            .productform   .mat-raised-button{    background-image: linear-gradient(#fe9424, #ff604b);  
+                width: 93.5%;     font-size:34px; text-transform: uppercase;
+    color: #ffffff;
+    font-family: 'robotoblack';
+    border: solid 6px #fff!important;
+    border-radius: 5px;
+    box-shadow: 0 0px 5px #888!important; padding: 15px 0;     margin: 5px auto; margin-bottom: 25px;
+}
+
+.productform .form_field_sameaddress::after{content: "SHIPPING ADDRESS";
+    background: #323232;
+    font-family: 'OpenSans-Semibold';
+    font-size: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 16px 0;
+    padding: 6px 2px;
+    line-height: inherit;
+    display: block;
+    margin-top: 15px; }    
+
+.productform   .mat-raised-button{ display: none;}
+
+.productform   .mat-raised-button:first-of-type{ display: block;}
+
+
+.productform  .form_field_szip::after{content: "Pay with Credit or Debit Card";
+    font-size: 22px;
+    color: #ffffff;
+    padding: 10px;
+    background-color: #1bb2ea;
+    text-align: center;
+    font-weight: normal;     display: block; margin: 0 0 15px 0;}    
+
+    .productform .form_field_others::before {
+        content: "We Accept";
+        background: url(../images/cardinfo.png) no-repeat 70px center;
+        display: block;
+        font-size: 12px;
+        height: 28px;
+        padding: 0 0 0 0;
+        width: 93.5%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        line-height: 30px;
+    }

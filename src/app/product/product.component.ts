@@ -252,7 +252,7 @@ export class ProductComponent implements OnInit {
       },
       {
         heading:"",
-        label:"Others",
+        label:"Select Your Card",
         name:"others",
         value:'',
         type:"select",
