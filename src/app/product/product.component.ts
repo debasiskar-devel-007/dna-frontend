@@ -27,7 +27,7 @@ export class ProductComponent implements OnInit {
   public formdata1:any;
   public formdata2:any;
   public statesjson : any =[];
-
+  public pricedata: any;
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute,
     public meta: MetaService
@@ -63,6 +63,38 @@ export class ProductComponent implements OnInit {
       endpoint:'api1/addusers',                                                 
      jwttoken:this._apiService.jwtToken,
       fields:[
+        {
+          heading:"",
+          label:"Package Name",
+          name:"packagename",
+          value:'',
+          disabled: true,
+          type:"text",
+          
+      },
+        {
+          heading:"",
+          label:"Price",
+          name:"price",
+          value:'',
+          type:"text",
+          prefix: "Product Total",
+        },
+        {
+          heading:"",
+          label:"Delivery",
+          name:"delivery",
+          value:'',
+          type:"number",
+          prefix: "Delivery",
+        },
+        {
+          heading:"",
+          label:"Promo Code",
+          name:"promocode",
+          value:'',
+          type:"number",
+        },
           {
               heading:"",
               label:"First Name",
@@ -389,5 +421,18 @@ export class ProductComponent implements OnInit {
     }
   }
   
+}
+
+updateformval(Price:any) {
+  this.pricedata=Price.textContent
+  console.log(Price.textContent);
+  //this.formdata.fields[0].value = this.pricedata;
+  this.formfieldrefreshdata = { field: 'price', value: this.pricedata };
+  // setTimeout(() => {
+  //     this.formfieldrefreshdata = { field: 'email', value: this.temtdata + '@gmail.com' },
+  //     { field: 'desc', value: this.formdata.fields[0].value };
+  // }, 50);
+  this.updatetable = !this.updatetable;
+
 }
 }
