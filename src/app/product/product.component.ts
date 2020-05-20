@@ -12,6 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductComponent implements OnInit {
   public selectedProduct:any = {good:0, better:0, best:0, mentor:0};
+  public expyear:any=[{val:20,'name':'2020'},{val:21,'name':'2021'},{val:22,'name':'2022'},{val:23,'name':'2023'},{val:24,'name':'2024'}
+  ,{val:25,'name':'2025'},{val:26,'name':'2026'},{val:27,'name':'2027'},{val:28,'name':'2028'},{val:29,'name':'2029'},{val:30,'name':'2030'}]
   public productDetails: any = {};
   public status: any = [{ val: 1, 'name': 'Active' }, { val: 0, 'name': 'Inactive' }];
   emailregex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -47,7 +49,7 @@ export class ProductComponent implements OnInit {
     this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
 
     this._apiService.getState().subscribe((response:any) => {
-      console.log(response)
+     // console.log(response)
       for (let i in response) {
         this.statesjson.push(
           { 'val': response[i].abbreviation, 'name': response[i].name }
@@ -145,16 +147,6 @@ export class ProductComponent implements OnInit {
               validations:[
                   {rule:'required',message:"Email field Needs to be required"},
                   {rule:'pattern',value: this.emailregex,message: "Must be a valid Email"}]
-          },
-          {
-            heading:"",
-            label:"User Name",
-            name:"username",
-            value:'',
-            type:"text",
-            // validations:[
-            //     {rule:'required'},
-            //     ]
           },
           {
               label:"Password",
@@ -290,9 +282,10 @@ export class ProductComponent implements OnInit {
     {
       heading:"",
       label:"Year",
-      name:"year",
+      name:"expyear",
       value:'',
-      type:"number",
+      val:this.expyear,
+      type:"select",
       validations:[
           {rule:'required',message:"Enter Your Validity Year"},
           ]
@@ -335,7 +328,7 @@ export class ProductComponent implements OnInit {
     if (flag == 'good') {
       this.productDetails.name= 'GOOD';
       this.productDetails.price= 149;
-      this.productDetails.delivery= 0;
+      this.productDetails.delivery= 4.95;
 
       this.selectedProduct.best = 0;
       this.selectedProduct.better = 0;
@@ -343,7 +336,7 @@ export class ProductComponent implements OnInit {
     }else  if (flag == 'best') {
       this.productDetails.name= 'BEST';
       this.productDetails.price= 500;
-      this.productDetails.delivery= 0;
+      this.productDetails.delivery= 4.95;
 
       this.selectedProduct.good = 0;
       this.selectedProduct.better = 0;
@@ -355,11 +348,11 @@ export class ProductComponent implements OnInit {
 
       this.selectedProduct.good = 0;
       this.selectedProduct.mentor = 0;
-      this.selectedProduct.best = 0;
+      this.selectedProduct.best = 4.95;
     } else {
       this.productDetails.name= 'MENTOR';
       this.productDetails.price= 600;
-      this.productDetails.delivery= 0;
+      this.productDetails.delivery= 4.95;
 
       this.selectedProduct.good = 0;
       this.selectedProduct.better = 0;
@@ -367,11 +360,11 @@ export class ProductComponent implements OnInit {
     }
   }
   listenFormFieldChange(val: any) {
-    console.log('listenFormFieldChange', val);
+   // console.log('listenFormFieldChange', val);
     if (val.field.name == 'firstname' || val.field.name == 'lastname' || val.field.name == 'address' || val.field.name == 'city' || val.field.name == 'state' || val.field.name == 'zip') {
       this.formarray.push( {val:val.fieldval,name:val.field.name})
     }
-    console.log(this.formarray,'+++++');
+    //console.log(this.formarray,'+++++');
        if (val.field.name == 'sameaddress' && val.fieldval == true) {
     for (let i = 0; i < this.formarray.length; i++) {
       setTimeout(() => {
