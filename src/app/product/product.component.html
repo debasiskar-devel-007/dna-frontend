@@ -49,7 +49,7 @@
                         <div class="newproduct_list1_top_wrapper">
 
                             <h2>
-                                  Good Package for <span>$149</span> 
+                                  Good Package for <span #Price >$149</span> 
 
                             </h2>
 
@@ -86,7 +86,8 @@
                             <div class="newproduct_con1_btn1 ">
                                 <a *ngIf="selectedProduct.good == 1" class="choosenbtn" style="background: rgb(249, 94, 25);" (click)="chooseProduct(selectedProduct.good = 0,'good');">Choosen</a>
 
-                                <a *ngIf="selectedProduct.good == 0" (click)="chooseProduct(selectedProduct.good = 1,'good');" style="background-image: linear-gradient(to right, #4b4c66,#494a64);">CHOOSE THIS PACKAGE</a>
+                                <!-- <a *ngIf="selectedProduct.good == 0" (click)="chooseProduct(selectedProduct.good = 1,'good');" style="background-image: linear-gradient(to right, #4b4c66,#494a64);">CHOOSE THIS PACKAGE</a> -->
+                                <button (click)="updateformval(Price)">CHOOSE THIS PACKAGE </button>
                             </div>
 
                         </div>
@@ -152,7 +153,8 @@
                             <div class="newproduct_con2_btn1">
                                 <a *ngIf="selectedProduct.better == 1" class="choosenbtn" style="background: rgb(249, 94, 25);" (click)="chooseProduct(selectedProduct.better = 0, 'better')">Choosen</a>
 
-                                <a *ngIf="selectedProduct.better == 0" (click)="chooseProduct(selectedProduct.better = 1, 'better')">CHOOSE THIS PACKAGE</a>
+                                <!-- <a *ngIf="selectedProduct.better == 0" (click)="chooseProduct(selectedProduct.better = 1, 'better')">CHOOSE THIS PACKAGE</a> -->
+                                
                             </div>
 
 
@@ -223,7 +225,7 @@
                             <div class="newproduct_con3_btn1">
                                 <a *ngIf="selectedProduct.best == 1" class="choosenbtn" style="background: rgb(249, 94, 25);" (click)="chooseProduct(selectedProduct.best = 0, 'best')">Choosen</a>
 
-                                <a *ngIf="selectedProduct.best == 0" (click)="chooseProduct(selectedProduct.best = 1, 'best')">CHOOSE THIS PACKAGE</a>
+                                <!-- <a *ngIf="selectedProduct.best == 0" (click)="chooseProduct(selectedProduct.best = 1, 'best')">CHOOSE THIS PACKAGE</a> -->
                             </div>
 
 
@@ -312,7 +314,7 @@
                             <div class="newproduct_con4_btn1">
                                 <a *ngIf="selectedProduct.mentor == 1" class="choosenbtn" style="background: rgb(249, 94, 25);" (click)="chooseProduct(selectedProduct.mentor = 0, 'mentor')">Choosen</a>
 
-                                <a class="pro_packagebtn221_btn" *ngIf="selectedProduct.mentor == 0" (click)="chooseProduct(selectedProduct.mentor = 1, 'mentor')">CHOOSE THIS PACKAGE</a>
+                                <!-- <a class="pro_packagebtn221_btn" *ngIf="selectedProduct.mentor == 0" (click)="chooseProduct(selectedProduct.mentor = 1, 'mentor')">CHOOSE THIS PACKAGE</a> -->
                             </div>
 
 
@@ -407,8 +409,9 @@ PROGRAM HAS SO MUCH MORE
                             <div class="cart_formbox1 cart_formbox1new">
                                 <ng-container *ngIf="productDetails != null && productDetails != 'undefined' && productDetails.name != null">
                                 <h3 class="productCartDetails">Order Summary</h3>
+                                
 
-                                <table class="product_new_tableblock productCartDetails" >
+                                <!-- <table class="product_new_tableblock productCartDetails" >
                                     <tr>
                                         <td colspan="2" id="productName">{{productDetails.name}} PACKAGE</td>
                                     </tr>
@@ -434,7 +437,7 @@ PROGRAM HAS SO MUCH MORE
                                     </tr> -->
 
 
-                                </table>
+                                </table> -->
                             </ng-container>
                                 <h3>BILLING Address</h3>
                                 <lib-showform  class='form-inline productform' *ngIf="formdata !=null"
