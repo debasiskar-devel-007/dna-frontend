@@ -3041,7 +3041,7 @@ button{ box-shadow: none!important;}
 }
 
 .as_bodycon .newproduct_list2_bottom{
-    border: none; background: url("../images/product_left_upimg2.png") no-repeat left bottom;
+    border: none; background: url("../images/product_left_upimg2.png") no-repeat left top;
     background-size: 75%;
     padding: 40px 40px 40px 639px;
 }
