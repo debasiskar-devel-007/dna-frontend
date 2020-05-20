@@ -55,7 +55,7 @@ export class ProductComponent implements OnInit {
      // console.log(response)
       for (let i in response) {
         this.statesjson.push(
-          { 'val': response[i].abbreviation, 'name': response[i].name }
+          { 'val': response[i].name, 'name': response[i].name }
         );
       }
     })
@@ -184,7 +184,7 @@ export class ProductComponent implements OnInit {
         {
           heading:"",
           label:"First Name",
-          name:"sfirstname",
+          name:"shipping_firstname",
           value:'',
           type:"text",
           validations:[
@@ -196,7 +196,7 @@ export class ProductComponent implements OnInit {
       {
         heading:"",
         label:"Last Name",
-        name:"slastname",
+        name:"shipping_lastname",
         value:'',
         type:"text",
         validations:[
@@ -208,7 +208,7 @@ export class ProductComponent implements OnInit {
       {
         heading:"",
         label:"Physical Address",
-        name:"saddress",
+        name:"shipping_address",
         value:'',
         type:"text",
          validations:[
@@ -218,7 +218,7 @@ export class ProductComponent implements OnInit {
       {
         heading:"",
         label:"City",
-        name:"scity",
+        name:"shipping_city",
         value:'',
         type:"text",
         validations:[
@@ -228,7 +228,7 @@ export class ProductComponent implements OnInit {
       {
         heading:"",
         label:"State",
-        name:"sstate",
+        name:"shipping_state",
         type:"select",
         val: this.statesjson,
         validations:[
@@ -238,7 +238,7 @@ export class ProductComponent implements OnInit {
       {
         heading:"",
         label:"Zip",
-        name:"szip",
+        name:"shipping_zip",
         value:'',
         type:"number",
         validations:[
@@ -248,7 +248,7 @@ export class ProductComponent implements OnInit {
       {
         heading:"",
         label:"Select Your Card",
-        name:"others",
+        name:"card_type",
         value:'',
         type:"select",
         val: [
@@ -265,7 +265,7 @@ export class ProductComponent implements OnInit {
     {
       heading:"",
       label:"CC #",
-      name:"ccnumber",
+      name:"card_cc",
       value:'',
       type:"number",
       validations:[
@@ -275,7 +275,7 @@ export class ProductComponent implements OnInit {
     {
       heading:"",
       label:"Month",
-      name:"month",
+      name:"expmonth",
       value:'',
       type:"select",
       val:this.expmonth,
@@ -297,18 +297,19 @@ export class ProductComponent implements OnInit {
     {
       heading:"",
       label:"CVV #",
-      name:"cvvnumber",
+      name:"card_cvv",
       value:'',
       type:"number",
       validations:[
           {rule:'required',message:"Enter Your CVV NUmber"},
           ]
-    },
+         },
           {
             label:"type",
-            name:"type",
+            name:"productDetails",
             type:'hidden',
-            value:"Product"
+            value:this.productDetails,
+           
         },
         {
           label:"status",
@@ -325,7 +326,7 @@ export class ProductComponent implements OnInit {
   }
 
   chooseProduct(item, flag){
-    console.log(item)
+    // console.log(item)
     this.selectedProduct.item = 1 - this.selectedProduct.item;
 
 
@@ -333,6 +334,7 @@ export class ProductComponent implements OnInit {
       this.productDetails.name= 'GOOD';
       this.productDetails.price= 149;
       this.productDetails.delivery= 4.95;
+      this.productDetails.total=this.productDetails.price+this.productDetails.delivery
 
       this.selectedProduct.best = 0;
       this.selectedProduct.better = 0;
@@ -341,6 +343,7 @@ export class ProductComponent implements OnInit {
       this.productDetails.name= 'BEST';
       this.productDetails.price= 500;
       this.productDetails.delivery= 4.95;
+      this.productDetails.total=this.productDetails.price+this.productDetails.delivery
 
       this.selectedProduct.good = 0;
       this.selectedProduct.better = 0;
@@ -348,7 +351,8 @@ export class ProductComponent implements OnInit {
     } else if(flag == 'better'){
       this.productDetails.name= 'BETTER';
       this.productDetails.price= 249;
-      this.productDetails.delivery= 0;
+      this.productDetails.delivery= 4.95;
+      this.productDetails.total=this.productDetails.price+this.productDetails.delivery
 
       this.selectedProduct.good = 0;
       this.selectedProduct.mentor = 0;
@@ -357,23 +361,26 @@ export class ProductComponent implements OnInit {
       this.productDetails.name= 'MENTOR';
       this.productDetails.price= 600;
       this.productDetails.delivery= 4.95;
+      this.productDetails.total=this.productDetails.price+this.productDetails.delivery
+
 
       this.selectedProduct.good = 0;
       this.selectedProduct.better = 0;
       this.selectedProduct.best = 0;
     }
+    console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {
    // console.log('listenFormFieldChange', val);
     if (val.field.name == 'firstname' || val.field.name == 'lastname' || val.field.name == 'address' || val.field.name == 'city' || val.field.name == 'state' || val.field.name == 'zip') {
       this.formarray.push( {val:val.fieldval,name:val.field.name})
     }
-    //console.log(this.formarray,'+++++');
+   // console.log(this.formarray,'+++++');
        if (val.field.name == 'sameaddress' && val.fieldval == true) {
     for (let i = 0; i < this.formarray.length; i++) {
       setTimeout(() => {
         this.formfieldrefreshdata = 
-        { field: 's'+this.formarray[i].name, value: this.formarray[i].val ,disabled: true} ;
+        { field: 'shipping_'+this.formarray[i].name, value: this.formarray[i].val ,disabled: true} ;
     },50*(i+1));  
     }
   }
@@ -381,7 +388,7 @@ export class ProductComponent implements OnInit {
     for (let i = 0; i < this.formarray.length; i++) {
       setTimeout(() => {
         this.formfieldrefreshdata = 
-        { field: 's'+this.formarray[i].name, value: '' ,disabled: true} ;
+        { field: 'shipping_'+this.formarray[i].name, value: '' ,disabled: true} ;
     },50*(i+1));  
     }
   }
