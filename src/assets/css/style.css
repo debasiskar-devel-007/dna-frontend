@@ -5437,7 +5437,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
 .productform   .mat-raised-button:first-of-type{ display: block;}
 
 
-.productform  .form_field_szip::after{content: "Pay with Credit or Debit Card";
+.productform  .form_field_shipping_zip::after{content: "Pay with Credit or Debit Card";
     font-size: 22px;
     color: #ffffff;
     padding: 10px;

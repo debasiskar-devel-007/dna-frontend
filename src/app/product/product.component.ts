@@ -262,7 +262,7 @@ export class ProductComponent implements OnInit {
           { val: "Others", name: "Others" },
           { val: "Visa", name: "Visa"},
           { val: "Mastercard", name: "Mastercard" },
-          { val: "AmericanExpress", name: "AmericanExpress" },
+          { val: "AmericanExpress", name: "American Express" },
           { val: "Discover", name: "Discover" }
       ],
         validations:[
@@ -350,7 +350,7 @@ export class ProductComponent implements OnInit {
 
   chooseProduct(item, flag){
     // console.log(item)
-    this.selectedProduct.item = 1 - this.selectedProduct.item;
+    //this.selectedProduct.item = 1 - this.selectedProduct.item;
     // if(this.subtotal>100) this.shipping=0;
 
     if (flag == 'good') {
@@ -407,10 +407,11 @@ export class ProductComponent implements OnInit {
       this.selectedProduct.better = 0;
       this.selectedProduct.best = 0;
     }
-    console.warn(this.productDetails);
+   // console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {
-   // console.log('listenFormFieldChange', val);
+    if(val.field.name!='card_type' && val.field.name!='card_cc' && val.field.name!='expyear' && val.field.name!='card_cvv' && val.field.name!='expmonth'){
+    //console.log('listenFormFieldChange', val);
     if (val.field.name == 'firstname' || val.field.name == 'lastname' || val.field.name == 'address' || val.field.name == 'city' || val.field.name == 'state' || val.field.name == 'zip') {
       this.formarray.push( {val:val.fieldval,name:val.field.name})
     }
@@ -433,4 +434,5 @@ export class ProductComponent implements OnInit {
   }
   
 }
+  }
 }
