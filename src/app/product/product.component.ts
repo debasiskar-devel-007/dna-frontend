@@ -65,7 +65,9 @@ export class ProductComponent implements OnInit {
       submittext:"Rush My Order",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
-      endpoint:'api1/addusers',                                                 
+     // canceltext:"Cancel Now",
+      //resettext:"Reset This",
+      endpoint:'api/order',                                                 
      jwttoken:this._apiService.jwtToken,
       fields:[
           {
@@ -81,7 +83,7 @@ export class ProductComponent implements OnInit {
                   ]
           },
           {
-            heading:"",
+            //heading:"",
             label:"Last Name",
             name:"lastname",
             value:'',
@@ -93,7 +95,7 @@ export class ProductComponent implements OnInit {
                 ]
           },
           {
-            heading:"",
+            //heading:"",
             label:"Physical Address",
             name:"address",
             value:'',
@@ -103,7 +105,7 @@ export class ProductComponent implements OnInit {
                  ]
           },
           {
-            heading:"",
+            //heading:"",
             label:"City",
             name:"city",
             value:'',
@@ -113,7 +115,7 @@ export class ProductComponent implements OnInit {
                 ]
           },
           {
-            heading:"",
+            //heading:"",
             label:"State",
             name:"state",
             type:"select",
@@ -123,7 +125,7 @@ export class ProductComponent implements OnInit {
                 ]
           },
           {
-            heading:"",
+            //heading:"",
             label:"Zip",
             name:"zip",
             value:'',
@@ -133,7 +135,7 @@ export class ProductComponent implements OnInit {
                 ]
           },
           {
-            heading:"",
+            //heading:"",
             label:"Telephone",
             name:"phone",
             value:'',
@@ -143,6 +145,7 @@ export class ProductComponent implements OnInit {
                 ]
           },
           {
+            //heading:"",
               label:"Email",
               name:"email",
               type:'email',
@@ -152,6 +155,7 @@ export class ProductComponent implements OnInit {
                   {rule:'pattern',value: this.emailregex,message: "Must be a valid Email"}]
           },
           {
+            //heading:"",
               label:"Password",
               name:"password",
               type:'password',
@@ -162,6 +166,7 @@ export class ProductComponent implements OnInit {
                   ]
           },
           {
+            //heading:"",
               label:"Confirm Password",
               name:"confirmpassword",
               type:'password',
@@ -173,6 +178,7 @@ export class ProductComponent implements OnInit {
                   ]
           },
           {
+            //heading:"",
             label: "Use My Billing Address As Shipping Address",
             name: "sameaddress",
             type: 'checkbox',
@@ -182,7 +188,7 @@ export class ProductComponent implements OnInit {
             ]
         },
         {
-          heading:"",
+          //heading:"",
           label:"First Name",
           name:"shipping_firstname",
           value:'',
@@ -194,7 +200,7 @@ export class ProductComponent implements OnInit {
               ]
       },
       {
-        heading:"",
+        //heading:"",
         label:"Last Name",
         name:"shipping_lastname",
         value:'',
@@ -206,7 +212,7 @@ export class ProductComponent implements OnInit {
             ]
       },
       {
-        heading:"",
+        //heading:"",
         label:"Physical Address",
         name:"shipping_address",
         value:'',
@@ -216,7 +222,7 @@ export class ProductComponent implements OnInit {
              ]
       },
       {
-        heading:"",
+        //heading:"",
         label:"City",
         name:"shipping_city",
         value:'',
@@ -226,7 +232,7 @@ export class ProductComponent implements OnInit {
             ]
       },
       {
-        heading:"",
+        //heading:"",
         label:"State",
         name:"shipping_state",
         type:"select",
@@ -236,7 +242,7 @@ export class ProductComponent implements OnInit {
             ]
       },
       {
-        heading:"",
+        //heading:"",
         label:"Zip",
         name:"shipping_zip",
         value:'',
@@ -246,7 +252,7 @@ export class ProductComponent implements OnInit {
             ]
       },
       {
-        heading:"",
+        //heading:"",
         label:"Select Your Card",
         name:"card_type",
         value:'',
@@ -263,7 +269,7 @@ export class ProductComponent implements OnInit {
             ]
     },
     {
-      heading:"",
+      //heading:"",
       label:"CC #",
       name:"card_cc",
       value:'',
@@ -273,7 +279,7 @@ export class ProductComponent implements OnInit {
           ]
     },
     {
-      heading:"",
+      //heading:"",
       label:"Month",
       name:"expmonth",
       value:'',
@@ -284,7 +290,7 @@ export class ProductComponent implements OnInit {
           ]
     },
     {
-      heading:"",
+      //heading:"",
       label:"Year",
       name:"expyear",
       value:'',
@@ -295,7 +301,7 @@ export class ProductComponent implements OnInit {
           ]
     },
     {
-      heading:"",
+      //heading:"",
       label:"CVV #",
       name:"card_cvv",
       value:'',
@@ -305,6 +311,7 @@ export class ProductComponent implements OnInit {
           ]
          },
           {
+            //heading:"",
             label:"type",
             name:"productDetails",
             type:'hidden',
@@ -312,10 +319,25 @@ export class ProductComponent implements OnInit {
            
         },
         {
+          //heading:"",
           label:"status",
           name: "status",
           type: 'hidden',
           value: 1
+      },
+      {
+        //heading:"",
+        label:"status",
+        name: "order_status",
+        type: 'hidden',
+        value: 'Incomplete'
+      },
+      {
+       //heading:"",
+        label:"transactiontype",
+        name: "transactiontype",
+        type: 'hidden',
+        value: 'TEST'
       }
       ]
   };
@@ -331,37 +353,41 @@ export class ProductComponent implements OnInit {
 
 
     if (flag == 'good') {
-      this.productDetails.name= 'GOOD';
+      this.productDetails.name= 'GOOD Package';
       this.productDetails.price= 149;
       this.productDetails.delivery= 4.95;
       this.productDetails.total=this.productDetails.price+this.productDetails.delivery
+      this.productDetails.usertype='mentee';
 
       this.selectedProduct.best = 0;
       this.selectedProduct.better = 0;
       this.selectedProduct.mentor = 0;
     }else  if (flag == 'best') {
-      this.productDetails.name= 'BEST';
+      this.productDetails.name= 'BEST Package';
       this.productDetails.price= 500;
       this.productDetails.delivery= 4.95;
       this.productDetails.total=this.productDetails.price+this.productDetails.delivery
+      this.productDetails.usertype='mentee';
 
       this.selectedProduct.good = 0;
       this.selectedProduct.better = 0;
       this.selectedProduct.mentor = 0;
     } else if(flag == 'better'){
-      this.productDetails.name= 'BETTER';
+      this.productDetails.name= 'BETTER Package';
       this.productDetails.price= 249;
       this.productDetails.delivery= 4.95;
       this.productDetails.total=this.productDetails.price+this.productDetails.delivery
+      this.productDetails.usertype='mentee';
 
       this.selectedProduct.good = 0;
       this.selectedProduct.mentor = 0;
       this.selectedProduct.best = 4.95;
     } else {
-      this.productDetails.name= 'MENTOR';
+      this.productDetails.name= 'MENTOR Package';
       this.productDetails.price= 600;
       this.productDetails.delivery= 4.95;
       this.productDetails.total=this.productDetails.price+this.productDetails.delivery
+      this.productDetails.usertype='mentor';
 
 
       this.selectedProduct.good = 0;
