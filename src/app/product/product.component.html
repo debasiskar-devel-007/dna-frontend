@@ -410,22 +410,22 @@ PROGRAM HAS SO MUCH MORE
 
                                 <table class="product_new_tableblock productCartDetails" >
                                     <tr>
-                                        <td colspan="2" id="productName">{{productDetails.name}} PACKAGE</td>
+                                        <td colspan="2" id="productName">{{productDetails.name}}</td>
                                     </tr>
 
                                     <tr>
-                                        <td>Product total</td>
+                                        <td>Product Price</td>
                                         <td id="productPrice">${{productDetails.price}}</td>
                                     </tr>
 
                                     <tr>
-                                        <td>Delivery</td>
+                                        <td>Shipping Charge</td>
                                         <td>${{productDetails.delivery}}</td>
                                     </tr>
 
                                     <tr>
                                         <th>Total</th>
-                                        <th id="productPriceTotal">${{productDetails.price + productDetails.delivery}}</th>
+                                        <th id="productPriceTotal">${{productDetails.price + this.saletax + productDetails.delivery}}</th>
                                     </tr>
 
                                     <!-- <tr><td><input type="text" class="form-control"  placeholder="Promo Code"></td>
