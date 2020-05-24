@@ -58,7 +58,9 @@ const routes: Routes = [
 
   {path:'landingpage', component: LandingpageComponent}, 
   {path:'menteelandingpage', component: MenteelandingpageComponent}, 
-  {path:'success', component: SuccessComponent}, 
+  {path:'success', component: SuccessComponent},
+  {path:'success/:_id', component: SuccessComponent,resolve: { successData: TestresolveService },
+  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api/ordersuccessresolve'}},
 ];
 
 @NgModule({

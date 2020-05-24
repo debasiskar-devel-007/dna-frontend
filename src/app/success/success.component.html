@@ -43,8 +43,8 @@
         </tr>
     </thead>
         <tr>
-            <td  valign="middle" data-label="Order Date:">May 23,2020 11:05 pm	</td>
-            <td valign="middle" data-label="Order Status:">Received</td>
+            <td  valign="middle" data-label="Order Date:">{{AllData.order_on | date:'medium'}}</td>
+            <td valign="middle" data-label="Order Status:">{{AllData.order_status}}</td>
         </tr>
     </table>
     <h5>Shipping Method: Standard Shipping (Residential)</h5>
