@@ -357,6 +357,9 @@
   
   }
     @media screen and (max-width:1730px){
+
+        .success_msg_con_aminew{ background-position: -100px top ;}
+
       .newhomeblock5_left_block3_sub {
           padding: 98px 20px;
       }
@@ -498,6 +501,8 @@
   
 
   @media screen and (max-width: 1680px) {
+
+    .success_msg_text{ width: 650px;}
     .bannerimg1 {
         left: 810px;
         width: 430px;
@@ -790,6 +795,13 @@
       }
 
       .s-top-banner .s-top-banner-wrapper .s-top-banner-right{ float: right;}
+  }
+
+
+  @media screen and (max-width: 1620px) {
+    .success_msg_con_aminew {
+        background-position: right top;
+    }
   }
 
   @media screen and (max-width: 1600px) {
@@ -1266,6 +1278,10 @@
   }
 
   @media screen and (max-width: 1500px) {
+
+    .success_msg_text {
+        width: 640px; padding: 0 50px 0 0;
+    }
     .newhomeblock3 .newhomeblock1_text h3 {
         height: 90px;
     }
@@ -1968,6 +1984,10 @@
 
   @media screen and (max-width: 1400px) {
 
+    .success_msg_con{ background-position: -100px top;}
+    .success_msg_con_aminew {
+        background-position: -400px top;
+    }
     .newmentorsignup_block2_text2 {
         padding-left: 15%;
     }
@@ -2770,6 +2790,13 @@
   
 
   @media screen and (max-width: 1280px) {
+    .success_msg_con {
+        background-position: -130px top;
+    }
+
+    .success_msg_con_aminew {
+        background-position: -460px top;
+    }
     .newhomeblock3 .newhomeblock3_sub4 {
         background-position: -270px top;
         background-size: cover;
@@ -3045,6 +3072,14 @@
   
   
   @media screen and (max-width: 1240px) {
+
+    .success_msg_con {
+        background-position: -140px top;
+    }
+
+    .success_msg_con_aminew {
+        background-position: -472px top;
+    }
   
     .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{ margin-top: 25px;}
       .as_bodycon .newproduct_list5_bottom_wrapper {width: 59%;}
@@ -3316,6 +3351,58 @@
   }
 
   @media screen and (max-width:1199px) {
+    .success_msg_text2new a {
+        display: inline-block;
+        width: auto;
+        margin-top: 15px;
+    }
+    .success_msg_con_aminew {
+        background-position: right top;
+        background-size: 240%;
+        padding: 41% 0 0 0;
+        height: auto;
+        background-color: #1eb8e2;
+    }
+    .success_msg_text2new {
+        width: auto;
+        background: url(../images/success_new_bgnew2_top2mobile.png) no-repeat center top;
+        margin: 0 auto;
+        text-align: center;
+        height: auto;
+        padding: 0 15px;
+        padding-top: 115px;
+        margin-top: 10px;
+    }
+
+    .success_msg_text2new h2 br {
+        display: none;
+    }
+    .success_msg_text2new h2 {
+        margin: 0px;
+        padding: 0;
+        font-family: 'RobotoBold';
+        font-size: 30px;
+    }
+
+
+    .success_msg_con {
+        background-size: 280%;
+        padding-top: 50%!important;
+        padding-bottom: 20px!important;
+        background-color: #1eb8e2;
+        height: auto;
+        width: auto;
+    }
+    .success_msg_text {
+        position: inherit;
+        width: auto;
+        text-align: center;
+        padding: 0 15px 0 15px;
+        left: 0;
+        top: 0%;
+        transform: translate(0, 0%);
+    }
+
     .newaffiliatesignup_formbody .button:first-of-type {
         height: 76px!important;
         width: 260px!important;
@@ -7364,7 +7451,7 @@
           width: 80%;
       }
   
-      .success_msg_text{ position: inherit; bottom: 0px; text-align: center; padding: 35px; padding-bottom: 0px; width:auto; background: #111;}
+      .success_msg_text{ position: inherit; bottom: 0px; text-align: center; padding: 35px; padding-bottom: 0px; width:auto;  }
   
       .callaction a {
           width: 100%;
