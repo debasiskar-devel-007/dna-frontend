@@ -146,7 +146,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/dna-frontend/dev/1590306637757-2020-05-24T07:50:37.757Z/dna-frontend.zip"
+          "S3Key": "serverless/dna-frontend/dev/1590312948443-2020-05-24T09:35:48.443Z/dna-frontend.zip"
         },
         "FunctionName": "dna-frontend-dev-api",
         "Handler": "lambda.universal",
@@ -165,14 +165,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ApiLambdaVersion19Cpo4hGWJz1LwkAsTVozLN7xrFgDSA7gDhWUhTXQpI": {
+    "ApiLambdaVersionsILSaXSUn22ezTnKl9LjxFYjlbm8ApklBV6JAMYOiaY": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "rYHfO11N2XzqSnQCKobKMVTyGKKER4TGLt5wF+La9uM="
+        "CodeSha256": "G0FpYfo9D/BXk7//OKcFQKwsJGVMzW881yqsFBnSRVo="
       }
     },
     "ApiGatewayRestApi": {
@@ -291,7 +291,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1590306553473": {
+    "ApiGatewayDeployment1590312850495": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -351,7 +351,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersion19Cpo4hGWJz1LwkAsTVozLN7xrFgDSA7gDhWUhTXQpI"
+        "Ref": "ApiLambdaVersionsILSaXSUn22ezTnKl9LjxFYjlbm8ApklBV6JAMYOiaY"
       }
     },
     "ServiceEndpoint": {
