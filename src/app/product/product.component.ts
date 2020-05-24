@@ -415,10 +415,13 @@ export class ProductComponent implements OnInit {
    // console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {
-    console.log(val);
+    //console.log(val);
     if(val.field=='fromsubmit'){
-      console.log(val.fromval.message._id)
-      //this.Router.navigateByUrl('success'+val.fromval.message._id);
+        if(val.fromval.message!=null && val.fromval.message!=''){
+          //console.log(val.fromval.message._id)
+          //this.Router.navigateByUrl('success'+val.fromval.message._id);
+        }
+     
     }
     
     if(val.field.name!='card_type' && val.field.name!='card_cc' && val.field.name!='expyear' && val.field.name!='card_cvv' && val.field.name!='expmonth'){
