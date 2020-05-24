@@ -34,8 +34,7 @@ export class ProductComponent implements OnInit {
   public formdata2:any;
   public statesjson : any =[];
 
-  @HostListener("window:scroll", [])
-  windowScrolled: boolean;
+ 
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute,
     public meta: MetaService
@@ -350,6 +349,7 @@ export class ProductComponent implements OnInit {
   };
   
   }
+  @HostListener("window:scroll", [])
 
   ngOnInit() {
   }
