@@ -3391,13 +3391,13 @@
         padding-bottom: 20px!important;
         background-color: #1eb8e2;
         height: auto;
-        width: auto;
+        width: auto; background-position: left top;
     }
     .success_msg_text {
         position: inherit;
         width: auto;
         text-align: center;
-        padding: 0 15px 0 15px;
+        padding: 10px 15px 0 15px;
         left: 0;
         top: 0%;
         transform: translate(0, 0%);
@@ -7219,99 +7219,22 @@
       }
   
   }
+  @media screen and (max-width:767px) {
+
+  .success_table3{ display: block;}
+  .success_msg_carttable .success_table3 .success_table3_tdl{ display: block;border-right: none;}
+  .success_msg_carttable .success_table3  .success_table3_tdr{ display: block;  border-left: none;}
+  .success_table3TR{ display: block;}
+  .success_table3 tbody{ display: block;}
+
+  .success_table3 tr{ display: block;}
+  .success_table3 td{ display: block;}
+  .success_table3 th{ display: block;}
+  }
+
+
    @media screen and (max-width:680px) {
-
-    /* .newhomeblock3 .newhomeblock3_sub1{ width: 100%; float: none;  }
-    .newhomeblock3 .newhomeblock3_sub2{width: 100%; float: none;  }
-    .newhomeblock3 .newhomeblock3_sub3{width: 100%; float: none;  }
-    .newhomeblock3 .newhomeblock3_sub4{width: 100%; float: none;  }
-    .newhomeblock3 .newhomeblock3_sub1 h2 { 
-        text-align: center!important;
-    }
-    .newhomeblock3 .newhomeblock3_sub2 h2 { 
-        text-align: center!important;
-    }
-    .newhomeblock3 .newhomeblock3_sub3 h2 { 
-        text-align: center!important;
-    }
-    .newhomeblock3 .newhomeblock3_sub4 h2 { 
-        text-align: center!important;
-    }
-
-      .newhomeblock3 .newhomeblock3_sub1 {
-          background: none !important;
-          background-color: #e4edea !important;
-      }
-      .newhomeblock3 .newhomeblock3_sub1 h2 {
-          background: url(../images/nhome_block3_icon1.png) no-repeat center top !important;
-          padding: 54px 0 0 0px !important;
-      }
-      .newhomeblock3 .newhomeblock3_sub1 h3 {
-          width: 100% !important;
-      }
-      .newhomeblock3 .newhomeblock3_sub1 h5 {
-          width: 100% !important;
-      }
-  
-      .newhomeblock3 .newhomeblock3_text .newhomeblock3_link a {
-          display: inline-block !important;
-          margin-bottom: 10px !important;
-      }
-      .newhomeblock3 .newhomeblock3_text {
-          padding: 20px 20px 20px !important;
-          text-align: center;
-      }
-  
-  
-      .newhomeblock3 .newhomeblock3_sub2 {
-          background: none !important;
-          background-color: #b2dbf1 !important;
-      }
-      .newhomeblock3 .newhomeblock3_sub2 h2 {
-          background: url(../images/nhome_block3_icon2.png) no-repeat center top !important;
-          padding: 54px 0 0 0px !important;
-      }
-      .newhomeblock3 .newhomeblock3_sub2 h3 {
-          width: 100% !important;
-      }
-      .newhomeblock3 .newhomeblock3_sub2 h5 {
-          width: 100% !important;
-      }
-  
-  
-      .newhomeblock3 .newhomeblock3_sub3 {
-          background: none !important;
-          background-color: #c3d7d5 !important;
-      }
-      .newhomeblock3 .newhomeblock3_sub3 h2 {
-          background: url(../images/nhome_block3_icon3.png) no-repeat center top !important;
-          padding: 54px 0 0 0px !important;
-      }
-      .newhomeblock3 .newhomeblock3_sub3 h3 {
-          width: 100% !important;
-      }
-      .newhomeblock3 .newhomeblock3_sub3 h5 {
-          width: 100% !important;
-      }
-  
-  
-  
-      .newhomeblock3 .newhomeblock3_sub4 {
-          background: none !important;
-          background-color: #e1e0ee !important;
-      }
-      .newhomeblock3 .newhomeblock3_sub4 h2 {
-          background: url(../images/nhome_block3_icon4.png) no-repeat center top !important;
-          padding: 54px 0 0 0px !important;
-      }
-      .newhomeblock3 .newhomeblock3_sub4 h3 {
-          width: 100% !important;
-      }
-      .newhomeblock3 .newhomeblock3_sub4 h5 {
-          width: 100% !important;
-      }
-   */
-  
+ 
   
       .newshop_block5_wrapper .newshop_img{ width: 280px;}
       .newshop_block5_wrapper .newshop_img img {
@@ -7451,7 +7374,7 @@
           width: 80%;
       }
   
-      .success_msg_text{ position: inherit; bottom: 0px; text-align: center; padding: 35px; padding-bottom: 0px; width:auto;  }
+      
   
       .callaction a {
           width: 100%;
@@ -7726,7 +7649,24 @@
 
   @media screen and (max-width:480px) {
 
+    .success_table2 thead{ display: none;}
+
+    .success_table2 tr{ display: block;}
+    .success_table2 td{ display: block; text-align: left;}
+    .success_table2 td:nth-of-type(5) {
+        text-align: left;
+    }
+
+    .tablelistdeta td:nth-of-type(1){ display: none;}
+    .tablelistdeta td:nth-of-type(2){ display: none;}
+  .tablelistdeta1 td:nth-of-type(4){ display: none;}
+
     .newaffiliatesignup_conblock { padding: 0px!important;}
+
+    .success_table2 td:before{
+        content: attr(data-label); font-weight: bold; color: #70aba3; padding-right: 15px; ;
+       
+    }
 
     .producttextblock.newthewholestorybannertxt h2 {
         font-size: 34px;
