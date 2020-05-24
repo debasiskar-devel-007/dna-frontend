@@ -79,8 +79,8 @@ export class ProductComponent implements OnInit {
               type:"text",
               validations:[
                   {rule:'required', message:"Enter Your First Name"},
-                   {rule:'maxLength',value:10,message:"Maximum of 15 Letters"},
-                   {rule:'minLength',value: 2, message:"Minimum 2 Letters Required"}
+                  //  {rule:'maxLength',value:10,message:"Maximum of 15 Letters"},
+                  //  {rule:'minLength',value: 2, message:"Minimum 2 Letters Required"}
                   ]
           },
           {
@@ -91,8 +91,8 @@ export class ProductComponent implements OnInit {
             type:"text",
             validations:[
                 {rule:'required',message:"Enter Your Last Name"},
-                {rule:'maxLength',value:10,message:"Maximum Of 15 Letters"},
-                {rule:'minLength',value: 2 , message:"Minimum 2 Letters Required"}
+                // {rule:'maxLength',value:10,message:"Maximum Of 15 Letters"},
+                // {rule:'minLength',value: 2 , message:"Minimum 2 Letters Required"}
                 ]
           },
           {
@@ -132,7 +132,7 @@ export class ProductComponent implements OnInit {
             value:'',
             type:"number",
             validations:[
-                {rule:'required',message:"Enter Your Pin Code "},
+                {rule:'required',message:"Enter Your Zip Code "},
                 ]
           },
           {
@@ -184,9 +184,9 @@ export class ProductComponent implements OnInit {
             name: "sameaddress",
             type: 'checkbox',
             value: '',
-            validations: [
-                { rule: 'required' }
-            ]
+            // validations: [
+            //     { rule: 'required' }
+            // ]
         },
         {
           //heading:"",
@@ -196,8 +196,8 @@ export class ProductComponent implements OnInit {
           type:"text",
           validations:[
               {rule:'required', message:"Enter Your First Name"},
-               {rule:'maxLength',value:10,message:"Maximum of 15 Letters"},
-               {rule:'minLength',value: 2, message:"Minimum 2 Letters Required"}
+              //  {rule:'maxLength',value:10,message:"Maximum of 15 Letters"},
+              //  {rule:'minLength',value: 2, message:"Minimum 2 Letters Required"}
               ]
       },
       {
@@ -208,8 +208,8 @@ export class ProductComponent implements OnInit {
         type:"text",
         validations:[
             {rule:'required',message:"Enter Your Last Name"},
-            {rule:'maxLength',value:10,message:"Maximum Of 15 Letters"},
-            {rule:'minLength',value: 2 , message:"Minimum 2 Letters Required"}
+            // {rule:'maxLength',value:10,message:"Maximum Of 15 Letters"},
+            // {rule:'minLength',value: 2 , message:"Minimum 2 Letters Required"}
             ]
       },
       {
@@ -249,7 +249,7 @@ export class ProductComponent implements OnInit {
         value:'',
         type:"number",
         validations:[
-            {rule:'required',message:"Enter Your Pin Code "},
+            {rule:'required',message:"Enter Your Zip Code "},
             ]
       },
       {
@@ -317,7 +317,9 @@ export class ProductComponent implements OnInit {
             name:"productDetails",
             type:'hidden',
             value:this.productDetails,
-           
+            validations:[
+              {rule:'required',message:"Please chose a product"},
+              ]
         },
         {
           //heading:"",
