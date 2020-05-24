@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,HostListener } from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
@@ -34,11 +34,15 @@ export class ProductComponent implements OnInit {
   public formdata2:any;
   public statesjson : any =[];
 
+  @HostListener("window:scroll", [])
+  windowScrolled: boolean;
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute,
     public meta: MetaService
     ) { 
       // window.scrollTo(500, 0); 
+      
+
     this.meta.setTitle('DNA Of Success - Our Products    ');
 
     this.meta.setTag('og:description', 'Products and packages that help to obtain Jack Zufelt’s incredible program to success and professional mentorship guidance towards achieving your dreams and the Core desires of your heart.');
@@ -368,6 +372,7 @@ export class ProductComponent implements OnInit {
       this.selectedProduct.best = 0;
       this.selectedProduct.better = 0;
       this.selectedProduct.mentor = 0;
+
     }else  if (flag == 'best') {
       this.productDetails.name= 'BEST Package';
       this.productDetails.price= 500;
@@ -381,6 +386,10 @@ export class ProductComponent implements OnInit {
       this.selectedProduct.good = 0;
       this.selectedProduct.better = 0;
       this.selectedProduct.mentor = 0;
+      var elmt: HTMLElement|null = document.getElementById("newproduct_list3");
+      if (elmt) {
+        this.scrollToTop();
+      }
     } else if(flag == 'better'){
       this.productDetails.name= 'BETTER Package';
       this.productDetails.price= 249;
@@ -394,6 +403,10 @@ export class ProductComponent implements OnInit {
       this.selectedProduct.good = 0;
       this.selectedProduct.mentor = 0;
       this.selectedProduct.best = 4.95;
+      var elmt: HTMLElement|null = document.getElementById("newproduct_list3");
+      if (elmt) {
+        this.scrollToTop();
+      }
     } else {
       this.productDetails.name= 'MENTOR Package';
       this.productDetails.price= 600;
@@ -408,6 +421,10 @@ export class ProductComponent implements OnInit {
       this.selectedProduct.good = 0;
       this.selectedProduct.better = 0;
       this.selectedProduct.best = 0;
+      var elmt: HTMLElement|null = document.getElementById("mentor");
+      if (elmt) {
+        this.scrollToTop();
+      }
     }
    // console.warn(this.productDetails);
   }
@@ -437,4 +454,17 @@ export class ProductComponent implements OnInit {
   
 }
   }
+
+  scrollToTop() {
+    (function smoothscroll() {
+
+        var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+        if (currentScroll > 0) {
+            window.requestAnimationFrame(smoothscroll);
+            window.scrollTo(0, currentScroll - (currentScroll / 8));
+        }
+
+    })();
+}
 }
