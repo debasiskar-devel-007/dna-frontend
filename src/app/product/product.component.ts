@@ -2,8 +2,6 @@ import { Component, OnInit,HostListener } from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
- 
-
 
 @Component({
   selector: 'app-product',
@@ -354,7 +352,10 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
   }
 
-  chooseProduct(item, flag){
+  chooseProduct(item, flag) {
+    
+    
+
     // console.log(item)
     //this.selectedProduct.item = 1 - this.selectedProduct.item;
     // if(this.subtotal>100) this.shipping=0;
@@ -386,10 +387,10 @@ export class ProductComponent implements OnInit {
       this.selectedProduct.good = 0;
       this.selectedProduct.better = 0;
       this.selectedProduct.mentor = 0;
-      var elmt: HTMLElement|null = document.getElementById("newproduct_list3");
-      if (elmt) {
-        this.scrollToTop();
-      }
+      // var elmt: HTMLElement|null = document.getElementById("newproduct_list3");
+      // if (elmt) {
+      //   this.scrollToTop();
+      // }
     } else if(flag == 'better'){
       this.productDetails.name= 'BETTER Package';
       this.productDetails.price= 249;
@@ -403,10 +404,10 @@ export class ProductComponent implements OnInit {
       this.selectedProduct.good = 0;
       this.selectedProduct.mentor = 0;
       this.selectedProduct.best = 4.95;
-      var elmt: HTMLElement|null = document.getElementById("newproduct_list3");
-      if (elmt) {
-        this.scrollToTop();
-      }
+      // var elmt: HTMLElement|null = document.getElementById("newproduct_list3");
+      // if (elmt) {
+      //   this.scrollToTop();
+      // }
     } else {
       this.productDetails.name= 'MENTOR Package';
       this.productDetails.price= 600;
@@ -421,10 +422,10 @@ export class ProductComponent implements OnInit {
       this.selectedProduct.good = 0;
       this.selectedProduct.better = 0;
       this.selectedProduct.best = 0;
-      var elmt: HTMLElement|null = document.getElementById("mentor");
-      if (elmt) {
-        this.scrollToTop();
-      }
+      // var elmt: HTMLElement|null = document.getElementById("mentor");
+      // if (elmt) {
+      //   this.scrollToTop();
+      // }
     }
    // console.warn(this.productDetails);
   }
@@ -459,7 +460,6 @@ export class ProductComponent implements OnInit {
     (function smoothscroll() {
 
         var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-
         if (currentScroll > 0) {
             window.requestAnimationFrame(smoothscroll);
             window.scrollTo(0, currentScroll - (currentScroll / 8));

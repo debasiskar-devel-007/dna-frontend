@@ -37,7 +37,7 @@
 
  
     <mat-card class="container as_container">
-        <div class="row">
+        <div class="row"  id="mentor">
             <div class="left_pro_blog as_bodycon">
 
 
@@ -46,7 +46,7 @@
 
                     <div class="newproduct_list1_top">
 
-                        <div class="newproduct_list1_top_wrapper">
+                        <div class="newproduct_list1_top_wrapper" >
 
                             <h2>
                                   Good Package for <span>$149</span> 
@@ -239,7 +239,7 @@
 
 
 
-                <div class="newproduct_list4" id="mentor">
+                <div class="newproduct_list4">
 
                     <div class="newproduct_list4_top">
                         <div class="newproduct_list4_top_wrapper">
@@ -312,7 +312,7 @@
                             <div class="newproduct_con4_btn1">
                                 <a *ngIf="selectedProduct.mentor == 1" class="choosenbtn" style="background: rgb(249, 94, 25);" (click)="chooseProduct(selectedProduct.mentor = 0, 'mentor')">Choosen</a>
 
-                                <a class="pro_packagebtn221_btn" *ngIf="selectedProduct.mentor == 0" (click)="chooseProduct(selectedProduct.mentor = 1, 'mentor')">CHOOSE THIS PACKAGE</a>
+                                <a class="pro_packagebtn221_btn" *ngIf="selectedProduct.mentor == 0" (click)="chooseProduct(selectedProduct.mentor = 1, 'mentor','ordersummery')">CHOOSE THIS PACKAGE</a>
                             </div>
 
 
