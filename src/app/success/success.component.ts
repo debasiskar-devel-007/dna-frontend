@@ -15,7 +15,7 @@ public AllData:any =[];
     this.activatedRoute.data.forEach((res:any) => {
       //console.log(res.successData);
       this.AllData=res.successData;
-      console.warn(this.AllData);
+      //console.warn(this.AllData);
      })
   }
 

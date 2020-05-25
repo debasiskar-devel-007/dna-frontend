@@ -35,7 +35,7 @@ export class ProductComponent implements OnInit {
  
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute,
-    public meta: MetaService,public Router:Router
+    public meta: MetaService,public router:Router
     ) { 
       // window.scrollTo(500, 0); 
       
@@ -63,7 +63,7 @@ export class ProductComponent implements OnInit {
     })
     this.formdata = {
       successmessage:"Order Placed Sucessfully!!",
-      redirectpath:"/product",
+      //redirectpath:"/product",
       submittext:"Rush My Order",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
@@ -356,13 +356,15 @@ export class ProductComponent implements OnInit {
     // console.log(item)
     //this.selectedProduct.item = 1 - this.selectedProduct.item;
     // if(this.subtotal>100) this.shipping=0;
-
+    // this.subtotal=(this.price*this.qty);
+    // this.subtotal=parseFloat(this.subtotal.toFixed(2));
     if (flag == 'good') {
       this.productDetails.name= 'GOOD Package';
       this.productDetails.price= 149;
       this.productDetails.delivery= 4.95;
       this.saletax=this.productDetails.price/100*6;
       this.saletax=parseFloat(this.saletax.toFixed(2));
+      this.productDetails.saletax=this.saletax;
       this.productDetails.total=this.productDetails.price+this.saletax+this.productDetails.delivery;
       this.productDetails.total=parseFloat(this.productDetails.total.toFixed(2));
       this.productDetails.usertype='mentee';
@@ -377,6 +379,7 @@ export class ProductComponent implements OnInit {
       this.productDetails.delivery= 4.95;
      this.saletax=this.productDetails.price/100*6;
       this.saletax=parseFloat(this.saletax.toFixed(2));
+      this.productDetails.saletax=this.saletax;
       this.productDetails.total=this.productDetails.price+this.saletax+this.productDetails.delivery;
       this.productDetails.total=parseFloat(this.productDetails.total.toFixed(2));
       this.productDetails.usertype='mentee';
@@ -388,8 +391,9 @@ export class ProductComponent implements OnInit {
       this.productDetails.name= 'BETTER Package';
       this.productDetails.price= 249;
       this.productDetails.delivery= 4.95;
-     this.saletax=this.productDetails.price/100*6;
+      this.saletax=this.productDetails.price/100*6;
       this.saletax=parseFloat(this.saletax.toFixed(2));
+      this.productDetails.saletax=this.saletax;
       this.productDetails.total=this.productDetails.price+this.saletax+this.productDetails.delivery;
       this.productDetails.total=parseFloat(this.productDetails.total.toFixed(2));
       this.productDetails.usertype='mentee';
@@ -403,6 +407,7 @@ export class ProductComponent implements OnInit {
       this.productDetails.delivery= 4.95;
       this.saletax=this.productDetails.price/100*6;
       this.saletax=parseFloat(this.saletax.toFixed(2));
+      this.productDetails.saletax=this.saletax;
       this.productDetails.total=this.productDetails.price+this.saletax+this.productDetails.delivery;
       this.productDetails.total=parseFloat(this.productDetails.total.toFixed(2));
       this.productDetails.usertype='mentor';
@@ -418,8 +423,9 @@ export class ProductComponent implements OnInit {
     //console.log(val);
     if(val.field=='fromsubmit'){
         if(val.fromval.message!=null && val.fromval.message!=''){
-          //console.log(val.fromval.message._id)
-          //this.Router.navigateByUrl('success'+val.fromval.message._id);
+          console.log(val.fromval.message._id);
+          this.router.navigateByUrl('success/'+val.fromval.message._id);
+          
         }
      
     }
