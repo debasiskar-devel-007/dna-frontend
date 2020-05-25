@@ -73,7 +73,7 @@ export class ProductComponent implements OnInit {
      jwttoken:this._apiService.jwtToken,
       fields:[
           {
-              heading:"",
+              //heading:"",
               label:"First Name",
               name:"firstname",
               value:'',
