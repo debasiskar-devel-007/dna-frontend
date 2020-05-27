@@ -1059,7 +1059,7 @@
 	  
 	    .newaffiliatesignup_conwrapper { width: 1400px; padding: 32px 0; }
   .s_newAffiliate .newaffiliatesignup_conleft { width: 1045px; }
-  .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top { width: 460px; right: -32px; }
+  .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top { width: 460px; right: -32px;      top: -14px;}
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote { bottom: 0px; right: 75px; width: 400px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .title { font-size: 135px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .sub_title { font-size: 50px; }

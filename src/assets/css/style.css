@@ -3911,7 +3911,7 @@ button{ box-shadow: none!important;}
 }
 
 /*affiliate*/
-.s_newAffiliate{ background: url(../images/newAffilliateBg.png) no-repeat center top!important; border: none!important;  box-shadow: none!important; border-radius: 0px!important;  }
+.s_newAffiliate{ background: url(../images/newAffilliateBg.png) no-repeat center top!important; border: none!important;  box-shadow: none!important; border-radius: 0px!important; background-size: cover!important;  }
 .s_newAffiliate .newaffiliatesignup_conwrapper{ padding-bottom: 50px; }
 .s_newAffiliate .newaffiliatesignup_conleft{ width: 1270px; margin-left: 60px; min-height: 100%; float: left;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .title{ font-family: "RobotoBlack"; font-size: 150px; text-transform: uppercase; color: #fff;
@@ -3922,7 +3922,7 @@ button{ box-shadow: none!important;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section  .image_quote{ position: absolute; right: 100px; bottom: 10px;  max-width: 100%; width: 450px; z-index: 1; }
 .s_newAffiliate .newaffiliatesignup_conleft .content_section  .image_top{     position: absolute;
     right: 0;
-    top: -33px;
+    top: -28px;
     max-width: 100%;
     width: 458px; }
 
