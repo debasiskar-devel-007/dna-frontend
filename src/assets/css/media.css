@@ -19,6 +19,8 @@
 
 
  @media screen and (max-width:1880px){
+
+    .s_newAffiliate .girl_image{    left: -148px;}
  
    .newhomeblock5_left_block3_sub {
           width: 33.3%;
@@ -107,7 +109,7 @@
       }
   }
   @media screen and (max-width:1800px) {
-  
+    .s_newAffiliate .girl_image{    left: -130px;}
     .end_block_left_bg .s_right_section .s_center_bg .s_end_sec_content{    width: 700px;}
 
       .newhomeblock5_left_block1{background-size: cover;}
@@ -211,6 +213,8 @@
   }
 
   @media screen and (max-width: 1760px){
+
+    .s_newAffiliate .girl_image{    left: -80px;}
     .newmentorsignup_block6_wrapper { width: 1400px;}
 
     .newmentorsignup_block6_right {
@@ -346,14 +350,12 @@
   .s_newAffiliate .bottom_con .af_downpara .affiliate_quote { font-size: 28px; line-height: 34px; margin-bottom: 34px; margin-top: 24px; }
   .s_newAffiliate .bottom_con .af_downpara .good_news .goodnews_quote { color: #7bebff; font-size: 24px; margin-left: 26px; line-height: 30px; margin-top: -15px; }
   
-  .s_newAffiliate .girl_image { left: -120px; }
+  .s_newAffiliate .girl_image { left: -150px; }
 
   .newaffiliatesignup_conwrapper {
     width: 1496px;}
 
-    .s_newAffiliate .girl_image {
-        left: -220px;
-    }
+   
   
   }
     @media screen and (max-width:1730px){
@@ -805,6 +807,8 @@
   }
 
   @media screen and (max-width: 1600px) {
+
+    .s_newAffiliate{ padding: 0px!important;}
     .newmentorsignup_block4_wrapper{ padding-left: 60px;}
     
         .newmentorsignup_block4_wrapper p{ padding-left: 440px;}
@@ -1278,7 +1282,9 @@
   }
 
   @media screen and (max-width: 1500px) {
-
+    .s_newAffiliate .girl_image {
+        left: -55px; 
+    }
     .success_msg_text {
         width: 640px; padding: 0 50px 0 0;
     }
@@ -6398,11 +6404,13 @@
   .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2 { background: #ff5b4f; width: auto; float: none; padding: 20px;     margin-right: 0px;}
   .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2 p br{ display: none; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2 p { padding-left: 0; text-align: center; }
-  .newaffiliatesignup_conright { width: 80%; float: none; margin: 45px auto; }
+  .newaffiliatesignup_conright { width: 80%; float: none; margin: 45px auto; margin-bottom: 0px; }
+  
   .s_newAffiliate .newaffiliatesignup_formbody .afsignbtn { margin: 20px auto!important; margin-bottom: 10px!important;     width: 280px!important;
     display: block; }
+
   .s_newAffiliate .bottom_con .af_downpara { padding-left: 0; }
-  .s_newAffiliate .girl_image { left: 0; width: 100%; position: inherit; }
+  .s_newAffiliate .girl_image {display: none; }
   .newaffiliatesignup_conbody{ padding: 0; }
   .af_small{ display: block; max-width: 100%;}
   .af_large{ display: none; max-width: 100%;}
@@ -6410,7 +6418,7 @@
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section h5 span { display: block; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content h3 { margin-bottom: 25px; }
   .newaffiliatesignup_formbody h2{ padding-left: 0; }
-  .s_newAffiliate .girl_image img { margin: auto; }
+  /* .s_newAffiliate .girl_image img { margin: auto; } */
   .video_training_wrapper .text_header p { line-height: 44px; font-size: 36px; }
   
   .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{ width: auto;}

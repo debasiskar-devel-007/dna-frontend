@@ -3945,7 +3945,7 @@ button{ box-shadow: none!important;}
 
 .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2 p{ font-family: "RobotoBold"; font-size: 26px; color: #f5ff61; line-height: 36px; padding-left: 30px;}
 
-.s_newAffiliate .girl_image { position: absolute; left: -173px; bottom: -5px; width: 550px; }
+.s_newAffiliate .girl_image { position: absolute; left: -173px; bottom: -20px; width: 550px; }
 .s_newAffiliate .girl_image  img{ margin-top: 10px; max-width: 100%;}
 .s_newAffiliate .bottom_con .af_downpara{ padding-left: 400px; }
 .s_newAffiliate .bottom_con .af_downpara .affiliate_quote{ color: #2d2d36; font-size: 30px; font-family: 'RobotoMedium'; line-height: 34px; margin-bottom: 30px;margin-top: 30px;   }
@@ -3986,7 +3986,7 @@ button{ box-shadow: none!important;}
 
 .newmentorsignup_top_banner_wrappertext{ width: 1000px; padding-left: 60px; position: relative; height: 100%;}
 
-.newmentorsignup_top_banner_wrappertext h1{ margin: 0px; padding: 60px 0 40px 0; font-size: 58px; color: #ffffff; text-transform: uppercase; font-family: "RobotoBlack"; text-shadow: 0 1px 2px #125079;}
+.newmentorsignup_top_banner_wrappertext h1{ margin: 0px; padding: 60px 0 25px 0; font-size: 58px; color: #ffffff; text-transform: uppercase; font-family: "RobotoBlack"; text-shadow: 0 1px 2px #125079;}
 
 .newmentorsignup_top_banner_wrappertext h2 { font-size: 0px; color: #ffffff; text-transform: uppercase; font-family: "RobotoBlack"; text-shadow: 0 1px 2px #125079; margin: 0; padding: 0;}
 
@@ -3998,12 +3998,12 @@ button{ box-shadow: none!important;}
 .newmentorsignup_top_banner_wrappertext h3 { font-size: 30px; color: #1d1f37; text-transform: uppercase; font-family: "RobotoBlack";   margin: 10px 0 0 0; padding: 0;}
 
 
-.newmentorsignup_top_banner_wrappertext h4{background: url("../images/newmentorsignup_banneTEXTbg1.png") no-repeat left top; width: 868px; height: 101px; margin-top: 50px; font-size: 60px; color: #ff5246; text-transform: uppercase; text-shadow: 0 1px 2px #000;  font-family: 'robotobold';}
+.newmentorsignup_top_banner_wrappertext h4{background: url("../images/newmentorsignup_banneTEXTbg1.png") no-repeat left top; width: 868px; height: 101px; margin-top: 25px; font-size: 60px; color: #ff5246; text-transform: uppercase; text-shadow: 0 1px 2px #000;  font-family: 'robotobold';}
 
 .newmentorsignup_top_banner_wrappertext h4 span{ display: block; line-height: 100px; padding: 0 26px;}
 
 
-.newmentorsignup_top_banner_wrappertext h5{ font-size: 48px; color: #103a4d;  font-family: "RobotoBlack"; margin: 0px; padding: 40px 0 0 0; text-transform: uppercase;}
+.newmentorsignup_top_banner_wrappertext h5{ font-size: 48px; color: #103a4d;  font-family: "RobotoBlack"; margin: 0px; padding: 25px 0 0 0; text-transform: uppercase;}
 
 .newmentorsignup_top_banner_wrappertext h5 span{ color: #fff;  }
 
@@ -5189,6 +5189,21 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
     font-size: 14px;
     color: #333; display: block; background: #fff!important;}
 
+    .newaffiliatesignup_formbody .mat-select{    box-sizing: border-box;
+        width: 100%;
+        margin: 0px;
+        height: 36px;
+        border-radius: 5px;
+        box-shadow: 0 0 3px #0d5e81!important;
+        padding: 0 1.5%!important;
+        font-family: 'OpenSans-Regular';
+        font-size: 14px;
+        color: #333; display: block; background: #fff!important;}
+
+        .newaffiliatesignup_formbody  .mat-select-trigger {
+            height: auto;
+            margin-top: 8px;}
+
     .newaffiliatesignup_formbody textarea.mat-input-element{ resize: none!important;     height: 76px!important; padding: 5px 1.5%!important;}
 
 
@@ -5245,6 +5260,10 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
         font-family: 'OpenSans-Regular';
         font-size: 14px;
         color: #333; display: block; background: #fff!important;}
+
+        .newmentorsignup_formbody .mat-select-trigger {
+            height: auto;  margin-top: 8px;
+        }
 
     .newmentorsignup_formbody textarea.mat-input-element{ resize: none!important;     height: 76px!important; padding: 5px 1.5%!important;}
 
