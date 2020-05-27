@@ -23,7 +23,7 @@ export class MentorsignupComponent implements OnInit {
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute ) {
     this._apiService.getState().subscribe((response:any) => {
-      console.log(response)
+     // console.log(response)
       for (let i in response) {
         this.statesjson.push(
           { 'val': response[i].abbreviation, 'name': response[i].name },

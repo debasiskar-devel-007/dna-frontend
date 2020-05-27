@@ -6,7 +6,7 @@
     },
     "provider": {
       "stage": "dev",
-      "variableSyntax": "\\${([^{}]+?)}",
+      "variableSyntax": "\\${([ ~:a-zA-Z0-9._@'\",\\-\\/\\(\\)*?]+?)}",
       "name": "aws",
       "runtime": "nodejs10.x",
       "memorySize": 192,
@@ -103,7 +103,8 @@
                     "Fn::Join": [
                       "-",
                       [
-                        "dna-frontend-dev",
+                        "dev",
+                        "dna-frontend",
                         "lambda"
                       ]
                     ]
@@ -143,7 +144,8 @@
                 "Fn::Join": [
                   "-",
                   [
-                    "dna-frontend-dev",
+                    "dna-frontend",
+                    "dev",
                     {
                       "Ref": "AWS::Region"
                     },
@@ -160,7 +162,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dna-frontend/dev/1588862074005-2020-05-07T14:34:34.005Z/dna-frontend.zip"
+                "S3Key": "serverless/dna-frontend/dev/1590385703427-2020-05-25T05:48:23.427Z/dna-frontend.zip"
               },
               "FunctionName": "dna-frontend-dev-api",
               "Handler": "lambda.universal",
@@ -179,14 +181,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "ApiLambdaVersionDmXJfMyPkXDFtF8ayPOelFApeMD1wBbCgBwHTzuKs": {
+          "ApiLambdaVersionObFBQpjWhZSAiMtbgCPAurT8rc2c4RWO2vcKZSuHyY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "xxStRHC8IoC50C1wE42Z0dLZh1XhS9I3af99ymqcOIk="
+              "CodeSha256": "ofNOsgZFWq8d5IMP+CFhS7vwMpGrvDvnUWj8AUDsqek="
             }
           },
           "ApiGatewayRestApi": {
@@ -305,7 +307,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1588861994377": {
+          "ApiGatewayDeployment1590385612360": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -365,7 +367,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionDmXJfMyPkXDFtF8ayPOelFApeMD1wBbCgBwHTzuKs"
+              "Ref": "ApiLambdaVersionObFBQpjWhZSAiMtbgCPAurT8rc2c4RWO2vcKZSuHyY"
             }
           },
           "ServiceEndpoint": {
@@ -490,16 +492,16 @@
         "timeout": 10,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionDmXJfMyPkXDFtF8ayPOelFApeMD1wBbCgBwHTzuKs"
+        "versionLogicalId": "ApiLambdaVersionObFBQpjWhZSAiMtbgCPAurT8rc2c4RWO2vcKZSuHyY"
       }
     },
     "serviceFilename": "serverless.yml",
     "layers": {},
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "/home/influxiq2/Documents/uttam/project/DNA-of-Success/dna-frontend/.serverless/dna-frontend.zip"
+    "artifact": "/home/influxiq-03/Downloads/dna-frontend/.serverless/dna-frontend.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/dna-frontend/dev/1588862074005-2020-05-07T14:34:34.005Z",
+    "artifactDirectoryName": "serverless/dna-frontend/dev/1590385703427-2020-05-25T05:48:23.427Z",
     "artifact": "dna-frontend.zip"
   }
 }

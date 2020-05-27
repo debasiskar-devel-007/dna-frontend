@@ -17,6 +17,7 @@ import { TestresolveService } from './testresolve.service';
 import { environment } from '../environments/environment';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpage.component';
+import { SuccessComponent } from './success/success.component';
 // const api_url1 =  environment["api_url1"];
 
 
@@ -57,6 +58,9 @@ const routes: Routes = [
 
   {path:'landingpage', component: LandingpageComponent}, 
   {path:'menteelandingpage', component: MenteelandingpageComponent}, 
+  {path:'success', component: SuccessComponent},
+  {path:'success/:_id', component: SuccessComponent,resolve: { successData: TestresolveService },
+  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api/ordersuccessresolve'}},
 ];
 
 @NgModule({
