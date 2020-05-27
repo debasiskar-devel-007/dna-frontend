@@ -419,33 +419,18 @@ this.formdata2 = {
   }
   listenFormFieldChange(val: any) {
     console.log('listenFormFieldChange', val);
-    // if (val.field.name == 'firstname'){
-    //   this.formarray.push(val.fieldval);
-    // }
-    // if (val.field.name == 'lastname'){
-    //   this.formarray.push(val.fieldval);
-    // }
-    // if (val.field.name == 'address'){
-    //   this.formarray.push(val.fieldval);
-    // }
-    // if (val.field.name == 'city'){
-    //   this.formarray.push(val.fieldval);
-    // }
-    // if (val.field.name == 'state'){
-    //   this.formarray.push(val.fieldval);
-    // }
-    // if (val.field.name == 'zip'){
-    //   this.formarray.push(val.fieldval);
-    // }
-    // console.log(this.formarray);
-    // if (val.field.name == 'sameaddress' && val.fieldval == true) {
-        // this.formfieldrefreshdata = { field: 'sfirstname', value: this.formarray[0] },
-        // { field: 'slastname', value: this.formarray[1] };
-    // }
-    // else{
-    //   this.formfieldrefreshdata = { field: 'sfirstname', value: '' },
-    //   { field: 'slastname', value: '' };
-    // }
-   
+    if (val.field.name == 'firstname' || val.field.name == 'lastname' || val.field.name == 'address' || val.field.name == 'city' || val.field.name == 'state' || val.field.name == 'zip') {
+      this.formarray.push( {val:val.fieldval,name:val.field.name})
+    }
+    console.log(this.formarray,'+++++');
+       if (val.field.name == 'sameaddress' && val.fieldval == true) {
+    for (let i = 0; i < this.formarray.length; i++) {
+      setTimeout(() => {
+        this.formfieldrefreshdata = 
+        { field: 's'+this.formarray[i].name, value: this.formarray[i].val ,disabled: true} ;
+    },50*(i+1));  
+    }
+  }
+  
 }
 }
