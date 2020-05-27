@@ -22,11 +22,11 @@ export class LandingpageComponent implements OnInit {
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute) {
     this.formdata = {
       successmessage:"Added Successfully !!",
-      redirectpath:"/landingpage",
+      redirectpath:"product",
       submittext:"Submit",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
-      endpoint:'api1/contactus',                                                 
+      endpoint:'api1/addusers',                                                 
      jwttoken:this._apiService.jwtToken,
       fields:[
           {
@@ -76,7 +76,7 @@ export class LandingpageComponent implements OnInit {
             label:"type",
             name:"type",
             type:'hidden',
-            value:"landingpage"
+            value:"lead"
         },
         // {
         //     label:"id",
@@ -94,6 +94,15 @@ export class LandingpageComponent implements OnInit {
   };
 
    }
+
+
+   scroll() {
+    
+
+    document.querySelector('.s-formsection').scrollIntoView({ behavior: 'smooth', });
+
+  }
+
 
   ngOnInit() {
   }

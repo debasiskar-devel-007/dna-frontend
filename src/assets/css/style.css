@@ -3041,7 +3041,7 @@ button{ box-shadow: none!important;}
 }
 
 .as_bodycon .newproduct_list2_bottom{
-    border: none; background: url("../images/product_left_upimg2.png") no-repeat left bottom;
+    border: none; background: url("../images/product_left_upimg2.png") no-repeat left top;
     background-size: 75%;
     padding: 40px 40px 40px 639px;
 }
@@ -5219,7 +5219,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
 
         /*-------css----------*/
 
-        
+        .bannerarrowscroll{ cursor: pointer; outline: none;}
 .newmentorsignup_formbody .mat-form-field-underline{ display: none;}
 .newmentorsignup_formbody  .mat-form-field-subscript-wrapper{ display: none;}
 
@@ -5343,3 +5343,244 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
         .s-formsection  .mat-form-field-label-wrapper{ padding-top: 0px!important;}
 
         .s-formsection  .mat-form-field-label-wrapper{ padding-top: 0px!important;}
+
+
+        .productform .mat-form-field-underline{ display: none!important;}
+        .productform .mat-form-field-wrapper{ margin: 0 15px;}
+        .productform input{    width: 96%;
+            height: 32px;
+            
+            border-radius: 0px!important;
+            border: solid 1px #c0c3c5!important;
+            padding: 2px 2%;
+            font-size: 13px;
+            box-shadow: none!important; display: block;     margin: 0 0 16px 0;     background: #fff;}
+
+            .productform mat-select{  width: 96%;
+                height: 32px;
+                
+                border-radius: 0px!important;
+                border: solid 1px #c0c3c5!important;
+                padding: 2px 2%;
+                font-size: 13px;
+                box-shadow: none!important; display: block;     margin: 0 0 16px 0;     background: #fff;}
+
+
+                .productform  .mat-form-field-label{  padding: 2px 2%; padding-top: 3px;}
+
+            .productform  .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+                padding-bottom: 0;
+            }
+
+            .productform  input.mat-input-element {
+                margin-top: 0;
+            }      
+
+            .productform .mat-form-field-appearance-legacy .mat-form-field-infix {
+                padding: 0;
+            }
+
+            .productform .mat-form-field-infix { 
+                border-top: 0;
+            }
+
+            .productform  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{display: none!important;}
+
+            .productform .mat-error { 
+                margin-top: -13px;
+                display: block;
+                font-size: 14px;
+                padding-bottom: 5px;
+            }
+
+            
+            .productform #mat-error-10 { 
+                margin-top: -13px;
+                display: block;
+                font-size: 14px;
+                padding-bottom: 5px; margin-left: 20px;     margin-left: 14px;
+            }
+
+
+            .productform   .mat-checkbox {  
+                display: block;
+                width: 92%;
+                margin: 0 auto 16px auto;
+            }
+
+            .productform   .mat-raised-button{    background-image: linear-gradient(#fe9424, #ff604b);  
+                width: 92%;     font-size:34px; text-transform: uppercase;
+    color: #ffffff;
+    font-family: 'robotoblack';
+    border: solid 6px #fff!important;
+    border-radius: 5px;
+    box-shadow: 0 0px 5px #888!important; padding: 15px 0;     margin: 5px auto; margin-bottom: 25px;
+}
+
+.productform .form_field_sameaddress::after{content: "SHIPPING ADDRESS";
+    background: #323232;
+    font-family: 'OpenSans-Semibold';
+    font-size: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 16px 0;
+    padding: 6px 2px;
+    line-height: inherit;
+    display: block;
+    margin-top: 15px; }    
+
+    .productform  .mat-checkbox-layout{ display: block;     white-space: normal;}
+
+.productform   .mat-raised-button{ display: none;}
+
+.productform   .mat-raised-button:first-of-type{ display: block;}
+
+
+.productform  .form_field_shipping_zip::after{content: "Pay with Credit or Debit Card";
+    font-size: 22px;
+    color: #ffffff;
+    padding: 10px;
+    background-color: #1bb2ea;
+    text-align: center;
+    font-weight: normal;     display: block; margin: 0 0 15px 0;}    
+
+    .productform .form_field_others::before {
+        content: "We Accept";
+        background: url(../images/cardinfo.png) no-repeat 70px center;
+        display: block;
+        font-size: 12px;
+        height: 28px;
+        padding: 0 0 0 0;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        line-height: 30px;
+    }
+
+
+    .success_wrapper{ margin: 32px auto; width:90%;}
+
+.success_heading{ background: #0092df;  color: #fff;
+    font-family: 'robotoblack';
+    font-size: 36px;
+    line-height: 38px;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;}
+
+.success_msg_con{ position: relative;     background: url("../images/newsuccess_banner1.jpg") no-repeat left top; height: 268px; background-size: cover;}
+
+.success_msg_con .success_msg_img { width: 100%;}
+.success_msg_con .success_msg_img img{ width: 100%;}
+
+
+.success_msg_text{ position: absolute; width: 840px; text-align: left; padding: 0 100px 0 0;    right: 0; top: 50%;  transform: translate(0, -50%);}
+
+.success_msg_text h2{ color: #ffffff;
+   /* font-family: "TheBoldFont-Regular";*/
+    font-family: 'robotoblack';
+    font-size: 40px;
+    line-height: 45px;
+    margin: 0;
+
+    text-shadow: 0 0 5px #888;
+    text-transform: uppercase;}
+
+.success_msg_text h3{ color: #202020;
+    font-family:'OpenSans-Semibold';
+    font-size: 30px;
+    line-height: 34px;
+    margin: 15px 0 0 0;
+
+    text-shadow: 0 0 5px #888;
+    text-transform: uppercase;}
+
+
+.success_msg_con2new{position: relative;    background:#21c1e9 url("../images/newsuccess_banner2.jpg") no-repeat right top; height: 268px;
+    background-size: cover;   border-top: solid 1px #fff;}
+
+
+.success_msg_textnew2{ position: absolute; width: 840px; text-align: center; padding: 0;    right: 140px; top: 50%;  transform: translate(0, -50%);}
+
+.success_msg_textnew2 h2{ margin: 0; padding: 0; font-size: 36px; line-height: 40px; color: #ffffff; font-family: 'RobotoBold';  text-shadow: 0 0 5px #888;}
+
+.success_msg_textnew2 a{ display: inline-block; margin-top: 25px; background: #23363c; border-top: solid 1px #79d7f2; border-radius: 8px; padding:10px 15px; font-size: 26px; color: #ffffff; text-transform: uppercase; font-family: 'RobotoBold';}
+
+
+.success_msg_text a{ display: inline-block; margin-top: 15px; background: #23363c; border-top: solid 1px #79d7f2; border-radius: 6px; padding:4px 25px 6px 25px; font-size: 26px; color: #ffffff; text-transform: uppercase; font-family: 'RobotoBold';}
+
+
+.success_msg_carttable{ margin-top: 32px;}
+
+.success_msg_carttable .success_table1 { margin-bottom: 0px;}
+
+.success_msg_carttable .success_table1 th{ font-family:'OpenSans-Semibold'; font-size: 16px; color: #fff; background: #70aba3; padding: 10px; border: solid 1px #e4e7e8;}
+
+.success_msg_carttable .success_table1 td{   font-family:'OpenSans-Regular'; font-size: 14px; color: #000; padding: 10px; background: #fff; border: solid 1px #e4e7e8;}
+
+.success_msg_carttable h5{font-family: "OpenSans-Semibold";
+    font-size: 24px;
+    line-height: 26px; color: #000; margin: 0; padding: 35px 4px; text-align: center;}
+
+.success_msg_carttable .success_table2{ margin-bottom: 0px;}
+.success_msg_carttable .success_table2 th{ font-family:'OpenSans-Semibold'; font-size: 16px; color: #fff; background: #70aba3; padding: 10px; }
+
+.success_msg_carttable .success_table2 td{   font-family:'OpenSans-Regular'; font-size: 14px; color: #000; padding: 10px;  }
+
+.success_msg_carttable tr:nth-child(even) { background: #eef2f0;}
+.success_msg_carttable tr:nth-child(odd) { background: #fff;}
+
+
+.success_msg_carttable .success_table3 { margin-bottom: 30px;}
+
+.success_msg_carttable .success_table3 table{ margin-bottom: 0px;}
+
+.success_msg_carttable .success_table3 .success_table3_tdl{ border-right: solid 10px #e4e7e8; padding: 0px;}
+
+.success_msg_carttable .success_table3 .success_table3_tdr{ border-left: solid 10px #e4e7e8; padding: 0px;}
+
+
+.success_msg_carttable .success_table3 th{ font-family:'OpenSans-Semibold'; font-size: 16px; color: #fff; background: #70aba3; padding: 10px; }
+
+.success_msg_carttable .success_table3 td{   font-family:'OpenSans-Regular'; font-size: 14px; color: #000; padding: 10px;  }
+
+.success_msg_con_aminew{ position: relative;     background: url("../images/success_new_bgnew2.jpg") no-repeat left top; height: 289px; background-size: cover;}
+
+.success_msg_text2new{ width: 1004px;    background: url("../images/success_new_bgnew2_top2.png") no-repeat left top; height: 289px;}
+
+.success_msg_text2new h2{    margin: 0px;
+    padding: 27px 150px 27px 100px;
+    font-family: 'RobotoBold';
+    font-size: 34px;
+    color: #fff;
+    text-shadow: 0 0 5px #888;
+    text-align: center;
+    line-height: 40px;}
+
+
+.success_msg_text2new a{   margin-top: 25px; background: #23363c; border-top: solid 1px #79d7f2; border-radius: 6px; padding:10px 15px; font-size: 26px; color: #ffffff; text-transform: uppercase; font-family: 'RobotoBold'; margin-left: auto; margin-right: auto; display: block; text-align: center; width: 730px;}
+
+.success_msg_text2new h3{ text-align: center; padding: 18px 15px; text-align: center; font-size: 26px; color: #fe4b3e; text-shadow: 0 0 2px #30c8e0; margin: 0px; font-weight: normal;}
+
+
+.newaffiliatesignup_conbody_new{ background: url("../images/newaffiliatesignup_new_bg.jpg") no-repeat center center; }
+
+.success_table1 th{ text-align: center;}
+
+.success_table1 td{ text-align: center;}
+
+.success_table2 th{ text-align: left;}
+
+.success_table2 td{ text-align: left;}
+
+.success_table2 th:nth-of-type(4){ text-align: right;}
+
+.success_table2 td:nth-of-type(4){ text-align: right;}
+
+.success_table2 th:nth-of-type(5){ text-align: right;}
+
+.success_table2 td:nth-of-type(5){ text-align: right;}
+
+.tablelistdeta td{ text-align: right;}

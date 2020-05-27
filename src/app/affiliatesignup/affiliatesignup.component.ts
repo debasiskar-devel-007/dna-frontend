@@ -43,7 +43,8 @@ export class AffiliatesignupComponent implements OnInit {
       console.log(response)
       for (let i in response) {
         this.statesjson.push(
-          { 'val': response[i].abbreviation, 'name': response[i].name }
+          { 'val': response[i].abbreviation, 'name': response[i].name },
+          //{ 'val': response[i].name, 'name': response[i].name }
         );
       }
     })
