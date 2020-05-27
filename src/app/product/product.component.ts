@@ -1,9 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,HostListener } from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
 import { ApiService } from '../api.service';
-import { ActivatedRoute } from '@angular/router';
- 
-
+import { ActivatedRoute ,Router} from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -34,11 +32,14 @@ export class ProductComponent implements OnInit {
   public formdata2:any;
   public statesjson : any =[];
 
+ 
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute,
-    public meta: MetaService
+    public meta: MetaService,public router:Router
     ) { 
       // window.scrollTo(500, 0); 
+      
+
     this.meta.setTitle('DNA Of Success - Our Products    ');
 
     this.meta.setTag('og:description', 'Products and packages that help to obtain Jack Zufelt’s incredible program to success and professional mentorship guidance towards achieving your dreams and the Core desires of your heart.');
@@ -62,7 +63,7 @@ export class ProductComponent implements OnInit {
     })
     this.formdata = {
       successmessage:"Order Placed Sucessfully!!",
-      redirectpath:"/product",
+      //redirectpath:"/product",
       submittext:"Rush My Order",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
@@ -72,7 +73,7 @@ export class ProductComponent implements OnInit {
      jwttoken:this._apiService.jwtToken,
       fields:[
           {
-              heading:"",
+              //heading:"",
               label:"First Name",
               name:"firstname",
               value:'',
@@ -317,9 +318,6 @@ export class ProductComponent implements OnInit {
             name:"productDetails",
             type:'hidden',
             value:this.productDetails,
-            validations:[
-              {rule:'required',message:"Please chose a product"},
-              ]
         },
         {
           //heading:"",
@@ -346,21 +344,27 @@ export class ProductComponent implements OnInit {
   };
   
   }
+  @HostListener("window:scroll", [])
 
   ngOnInit() {
   }
 
-  chooseProduct(item, flag){
+  chooseProduct(item, flag) {
+    
+    document.querySelector('.newproduct_list1_top').scrollIntoView({ behavior: 'smooth', });
+
     // console.log(item)
     //this.selectedProduct.item = 1 - this.selectedProduct.item;
     // if(this.subtotal>100) this.shipping=0;
-
+    // this.subtotal=(this.price*this.qty);
+    // this.subtotal=parseFloat(this.subtotal.toFixed(2));
     if (flag == 'good') {
       this.productDetails.name= 'GOOD Package';
       this.productDetails.price= 149;
       this.productDetails.delivery= 4.95;
       this.saletax=this.productDetails.price/100*6;
       this.saletax=parseFloat(this.saletax.toFixed(2));
+      this.productDetails.saletax=this.saletax;
       this.productDetails.total=this.productDetails.price+this.saletax+this.productDetails.delivery;
       this.productDetails.total=parseFloat(this.productDetails.total.toFixed(2));
       this.productDetails.usertype='mentee';
@@ -368,12 +372,14 @@ export class ProductComponent implements OnInit {
       this.selectedProduct.best = 0;
       this.selectedProduct.better = 0;
       this.selectedProduct.mentor = 0;
+
     }else  if (flag == 'best') {
       this.productDetails.name= 'BEST Package';
       this.productDetails.price= 500;
       this.productDetails.delivery= 4.95;
      this.saletax=this.productDetails.price/100*6;
       this.saletax=parseFloat(this.saletax.toFixed(2));
+      this.productDetails.saletax=this.saletax;
       this.productDetails.total=this.productDetails.price+this.saletax+this.productDetails.delivery;
       this.productDetails.total=parseFloat(this.productDetails.total.toFixed(2));
       this.productDetails.usertype='mentee';
@@ -385,8 +391,9 @@ export class ProductComponent implements OnInit {
       this.productDetails.name= 'BETTER Package';
       this.productDetails.price= 249;
       this.productDetails.delivery= 4.95;
-     this.saletax=this.productDetails.price/100*6;
+      this.saletax=this.productDetails.price/100*6;
       this.saletax=parseFloat(this.saletax.toFixed(2));
+      this.productDetails.saletax=this.saletax;
       this.productDetails.total=this.productDetails.price+this.saletax+this.productDetails.delivery;
       this.productDetails.total=parseFloat(this.productDetails.total.toFixed(2));
       this.productDetails.usertype='mentee';
@@ -400,6 +407,7 @@ export class ProductComponent implements OnInit {
       this.productDetails.delivery= 4.95;
       this.saletax=this.productDetails.price/100*6;
       this.saletax=parseFloat(this.saletax.toFixed(2));
+      this.productDetails.saletax=this.saletax;
       this.productDetails.total=this.productDetails.price+this.saletax+this.productDetails.delivery;
       this.productDetails.total=parseFloat(this.productDetails.total.toFixed(2));
       this.productDetails.usertype='mentor';
@@ -412,6 +420,16 @@ export class ProductComponent implements OnInit {
    // console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {
+    //console.log(val);
+    if(val.field=='fromsubmit'){
+        if(val.fromval.message!=null && val.fromval.message!=''){
+          console.log(val.fromval.message._id);
+          this.router.navigateByUrl('success/'+val.fromval.message._id);
+          
+        }
+     
+    }
+    
     if(val.field.name!='card_type' && val.field.name!='card_cc' && val.field.name!='expyear' && val.field.name!='card_cvv' && val.field.name!='expmonth'){
     //console.log('listenFormFieldChange', val);
     if (val.field.name == 'firstname' || val.field.name == 'lastname' || val.field.name == 'address' || val.field.name == 'city' || val.field.name == 'state' || val.field.name == 'zip') {

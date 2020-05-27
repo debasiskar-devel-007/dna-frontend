@@ -43,8 +43,8 @@
         </tr>
     </thead>
         <tr>
-            <td  valign="middle" data-label="Order Date:">May 23,2020 11:05 pm	</td>
-            <td valign="middle" data-label="Order Status:">Received</td>
+            <td  valign="middle" data-label="Order Date:">{{AllData.order_on | date:'medium'}}</td>
+            <td valign="middle" data-label="Order Status:">{{AllData.order_status}}</td>
         </tr>
     </table>
     <h5>Shipping Method: Standard Shipping (Residential)</h5>
@@ -53,7 +53,7 @@
         <tr>
             <th width="12%"  valign="middle">Item</th>
             <th width="45%" valign="middle"   >Name</th>
-            <th width="13%"  valign="middle"  >Qty</th>
+            <th width="13%"  valign="middle"  ></th>
             <th width="20%">&nbsp;</th>
             <th width="10%" valign="middle"  >Amount</th>
         </tr>
@@ -65,36 +65,36 @@
            <tr class="tablelistdeta1">
           
             <td  data-label="Item:"  valign="middle" style="padding:8px 10px;  font-size:16px; color:#111; font-weight:normal;   font-family:Arial, Helvetica, sans-serif;">1</td>
-             <td data-label="Name:"  valign="middle" style="padding:8px 10px;  font-size:16px; color:#111; font-weight:normal;   font-family:Arial, Helvetica, sans-serif;">The Essential Success Method with Weekly PLUS	</td>
+             <td data-label="Name:"  valign="middle" style="padding:8px 10px;  font-size:16px; color:#111; font-weight:normal;   font-family:Arial, Helvetica, sans-serif;">{{AllData.product_name}}	</td>
 
-             <td data-label="Qty:"  valign="middle" style="padding:8px 10px;  font-size:16px; color:#111; font-weight:normal;   font-family:Arial, Helvetica, sans-serif;">1</td>
+             <td data-label="Qty:"  valign="middle" style="padding:8px 10px;  font-size:16px; color:#111; font-weight:normal;   font-family:Arial, Helvetica, sans-serif;"></td>
              <td data-label=""  valign="middle" style="padding:8px 10px;  font-size:16px; color:#111; font-weight:normal;    font-family:Arial, Helvetica, sans-serif;">&nbsp;</td>
             
-           <td data-label="Amount:"  valign="middle" style="padding:8px 10px;  font-size:16px; color:#111; font-weight:normal;    font-family:Arial, Helvetica, sans-serif;">$249.00
+           <td data-label="Amount:"  valign="middle" style="padding:8px 10px;  font-size:16px; color:#111; font-weight:normal;    font-family:Arial, Helvetica, sans-serif;">${{AllData.price}}
            </td>
             
           </tr>
 
-          <tr class="tablelistdeta">
+          <!-- <tr class="tablelistdeta">
             <td colspan="3" style="border: none;">&nbsp;</td>
             <td  valign="middle">Sub Total</td>
-            <td  valign="middle" data-label="Sub Total:">$249.00</td>
-        </tr>
+            <td  valign="middle" data-label="Sub Total:">$00.00</td>
+        </tr> -->
 
         <tr class="tablelistdeta">
             <td colspan="3">&nbsp;</td>
-            <td  valign="middle">Shipping</td>
-            <td valign="middle"  data-label="Shipping:">$0.00</td>
+            <td  valign="middle">Shipping:</td>
+            <td valign="middle"  data-label="Shipping:">${{AllData.shipping_charge}}</td>
         </tr>
         <tr class="tablelistdeta">
             <td colspan="3">&nbsp;</td>
-            <td  valign="middle">Tax Rate</td>
-            <td valign="middle"  data-label="Tax Rate:">$0.00</td>
+            <td  valign="middle">Sale Tax:</td>
+            <td valign="middle"  data-label="Tax Rate:">${{AllData.saletax}}</td>
         </tr>
         <tr class="tablelistdeta">
             <td colspan="3">&nbsp;</td>
-            <td  valign="middle">Total</td>
-            <td valign="middle"  data-label="Total:">$249.00</td>
+            <td  valign="middle">Total:</td>
+            <td valign="middle"  data-label="Total:">${{AllData.total}}</td>
         </tr>
 
         </table>
@@ -108,22 +108,22 @@
                             <th align="left" valign="middle">Bill To</th>
                         </tr>
                         <tr>
-                            <td align="left" valign="middle">Name: Menteeg One</td>
+                            <td align="left" valign="middle">Name: {{AllData.billing_firstname}} {{AllData.billing_lastname}}</td>
                             </tr>
                         <tr>
-                            <td align="left" valign="middle">Address: Add Road no. 1</td>
+                            <td align="left" valign="middle">Address: {{AllData.billing_address}}</td>
                             </tr>
                         <tr>
-                            <td align="left" valign="middle">City: Blessedcity</td>
+                            <td align="left" valign="middle">City: {{AllData.billing_city}}</td>
                             </tr>
                         <tr>
-                            <td align="left" valign="middle">State: Indiana</td>
+                            <td align="left" valign="middle">State: {{AllData.billing_state}}</td>
                             </tr>
                         <tr>
-                            <td align="left" valign="middle">Zip: 778899</td>
+                            <td align="left" valign="middle">Zip: {{AllData.billing_zip}}</td>
                             </tr>
                         <tr>
-                            <td align="left" valign="middle">Email: ramseybolton2@yopmail.com</td>
+                            <td align="left" valign="middle">Email: {{AllData.user_info.email}}</td>
                         </tr>
                     </tbody></table></td>
                 <td class="success_table3_tdr"><table width="100%" border="0">
@@ -131,19 +131,19 @@
                             <th align="left" valign="middle">Ship To</th>
                             </tr>
                         <tr>
-                            <td align="left" valign="middle">Name: Menteeg One</td>
+                            <td align="left" valign="middle">Name:{{AllData.shipping_firstname}} {{AllData.shipping_lastname}}</td>
                             </tr>
                         <tr>
-                            <td align="left" valign="middle">Address: Add Road no. 1</td>
+                            <td align="left" valign="middle">Address: {{AllData.shipping_address}}</td>
                             </tr>
                         <tr>
-                            <td align="left" valign="middle">City: Blessedcity</td>
+                            <td align="left" valign="middle">City: {{AllData.billing_city}}</td>
                             </tr>
                         <tr>
-                            <td align="left" valign="middle">State: Indiana</td>
+                            <td align="left" valign="middle">State: {{AllData.billing_state}}</td>
                             </tr>
                         <tr>
-                            <td align="left" valign="middle">Zip: 778899</td>
+                            <td align="left" valign="middle">Zip: {{AllData.shipping_zip}}</td>
                         </tr>
                         <tr>
                             <td align="left" valign="middle">&nbsp;</td>

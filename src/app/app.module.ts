@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+import { MyLoaderComponent } from './components/my-loader/my-loader.component';
+import { LoaderService } from './services/loader.service';
+import { LoaderInterceptor } from './interceptors/loader-interceptor.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CookieService } from 'ngx-cookie-service';
@@ -75,6 +78,7 @@ export function metaFactory(): MetaLoader {
     LandingpageComponent,
     MenteelandingpageComponent,
     SuccessComponent,
+    MyLoaderComponent,
   ],
   imports: [
     ListingModule,
@@ -97,7 +101,7 @@ export function metaFactory(): MetaLoader {
     ),
   ],
   providers: [
-    CookieService,HttpClientModule,TestresolveService,ApiService,FacebookService
+    CookieService,HttpClientModule,TestresolveService,ApiService,FacebookService, LoaderService, { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
