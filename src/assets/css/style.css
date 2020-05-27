@@ -3901,7 +3901,7 @@ button{ box-shadow: none!important;}
 /*Ceo name section added*/
  
 
-
+ 
 .newaffiliatesignup_conwrapper {
     width: 1680px;
     margin: 0 auto;
@@ -3945,11 +3945,14 @@ button{ box-shadow: none!important;}
 
 .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2 p{ font-family: "RobotoBold"; font-size: 26px; color: #f5ff61; line-height: 36px; padding-left: 30px;}
 
-.s_newAffiliate .girl_image { position: absolute; left: -173px; bottom: -20px; width: 550px; }
+.s_newAffiliate .girl_image {     position: absolute;
+    left: -145px;
+    bottom: -20px;
+    width: 587px; }
 .s_newAffiliate .girl_image  img{ margin-top: 10px; max-width: 100%;}
 .s_newAffiliate .bottom_con .af_downpara{ padding-left: 400px; }
 .s_newAffiliate .bottom_con .af_downpara .affiliate_quote{ color: #2d2d36; font-size: 30px; font-family: 'RobotoMedium'; line-height: 34px; margin-bottom: 30px;margin-top: 30px;   }
-.s_newAffiliate .bottom_con .af_downpara .good_news{  background: #2d2d36; display: flex; align-items: center;  justify-content: space-between; padding: 20px; }
+.s_newAffiliate .bottom_con .af_downpara .good_news{  background: #2d2d36; display: flex; align-items: center;  justify-content: space-between; padding: 20px;  position: relative;}
 .s_newAffiliate .bottom_con .af_downpara .good_news .goodnews_quote{  color: #7bebff; font-family: "RobotoMedium"; font-size: 30px;
     margin-left: 26px; line-height: 34px; margin-top: -15px; }
 

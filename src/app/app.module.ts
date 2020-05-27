@@ -38,6 +38,7 @@ import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpag
 
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 import { SuccessComponent } from './success/success.component';
+import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
@@ -79,6 +80,7 @@ export function metaFactory(): MetaLoader {
     MenteelandingpageComponent,
     SuccessComponent,
     MyLoaderComponent,
+    LiveWebinarComponent,
   ],
   imports: [
     ListingModule,
