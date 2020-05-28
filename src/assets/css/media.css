@@ -109,6 +109,10 @@
       }
   }
   @media screen and (max-width:1800px) {
+
+    .newshop_banner_section {
+        background-position: -175px top!important;
+    }
     .s_newAffiliate .girl_image{    left: -130px;}
     .end_block_left_bg .s_right_section .s_center_bg .s_end_sec_content{    width: 700px;}
 
@@ -504,6 +508,11 @@
 
   @media screen and (max-width: 1680px) {
 
+    .newshop_banner_section {
+        background-position: -275px top!important;
+    }
+ 
+
     .success_msg_text{ width: 650px;}
     .bannerimg1 {
         left: 810px;
@@ -571,9 +580,7 @@
           background-position: -72px top;
       }
   
-      .newshop_banner_section {
-          background-position: -215px top;
-      }
+    
       .s_masterCourse_work_sec .s_masterCourse_work-bg_right .s-masterCourse_work_bg_center {
           background: url(../images/s_makemone_idol2.png) no-repeat bottom left -73px !important;
       }
@@ -865,7 +872,7 @@
       }
   
       .newshop_banner_section {
-          background-position: -275px top;
+          background-position: -275px top!important;
       }
   
       .s-Matercontent .s-mastersec-left p {
@@ -1158,7 +1165,7 @@
   
   
       .newshop_banner_section {
-          background-position: -305px top;
+          background-position: -305px top!important;
       }
   
   
@@ -2431,7 +2438,7 @@
   }
   
       .newshop_banner_section {
-          background-position: -365px top;
+          background-position: -365px top!important;
       }
   
   
@@ -2620,7 +2627,7 @@
       }
   
       .newshop_banner_section {
-          background-position: -425px top;
+          background-position: -425px top!important;
       }
 
 
@@ -3358,6 +3365,43 @@
   }
 
   @media screen and (max-width:1199px) {
+
+    .nwshoppriceblock {background: rgba(250,210,11,1);
+        background: -moz-linear-gradient(top, rgba(250,210,11,1) 0%, rgba(254,114,67,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250,210,11,1)), color-stop(100%, rgba(254,114,67,1)));
+        background: -webkit-linear-gradient(top, rgba(250,210,11,1) 0%, rgba(254,114,67,1) 100%);
+        background: -o-linear-gradient(top, rgba(250,210,11,1) 0%, rgba(254,114,67,1) 100%);
+        background: -ms-linear-gradient(top, rgba(250,210,11,1) 0%, rgba(254,114,67,1) 100%);
+        background: linear-gradient(to bottom, rgba(250,210,11,1) 0%, rgba(254,114,67,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fad20b', endColorstr='#fe7243', GradientType=0 ); padding: 10px; border-radius: 5px;}
+    .nwshoppriceblock label{ text-align: center; padding: 0;}
+    .nwshoppriceblock span{ text-align: center;  padding: 0;}
+
+    .newshop_block1_wrapper .newshop_img{  width: auto; height: auto; padding: 0; background: none;}
+
+    .shop_newtextblock{ display: block; padding:16px 0px;}
+
+    .shop_newtextblock .shop_newtextblock_textcon{ width:auto; display: block; padding: 25px 0; margin: 0 15px; margin-bottom: 0px;}
+    .shop_newtextblock_imgcon{ width: auto; margin: 0 8px; display: block;}
+    .shop_newtextblock_imgcon ul li{ margin: 16px 8px 0 8px;}
+
+    .nwshoppriceblock::after{ display: none;}
+
+    .nwshoppriceblock { 
+        width: auto;
+        height: auto;
+        position: inherit;
+        right: 0;
+        top: 0;
+        padding-left: 0;
+        display: block;
+        margin: 0 15px;
+        margin-top: 25px; text-align: center;
+  
+    }
+
+    .newshop_block3_wrapper .newshop_img{  width: auto; height: auto; padding: 0; background: none;}
+
     .success_msg_text2new a {
         display: inline-block;
         width: auto;
@@ -5888,7 +5932,7 @@
   
   
       .newshop_block1_wrapper .newshop_buynow{ position: inherit; left: 0; right: 0; top: 0; bottom: 0; display: block; margin: 16px auto; margin-bottom: 30px;}
-      .newshop_block2_wrapper .newshop_buynow{ position: inherit; left: 0; right: 0; top: 0; bottom: 0; display: block; margin: 16px auto; margin-bottom: 30px; margin-top: 0px;}
+      .newshop_block2_wrapper .newshop_buynow{ position: inherit; left: 0; right: 0; top: 0; bottom: 0; display: block; margin: 16px auto; margin-bottom: 30px;  }
       .newshop_block3_wrapper .newshop_buynow{ position: inherit; left: 0; right: 0; top: 0; bottom: 0; display: block; margin: 16px auto; margin-bottom: 30px;}
       .newshop_block4_wrapper .newshop_buynow{ position: inherit; left: 0; right: 0; top: 0; bottom: 0; display: block; margin: 16px auto; margin-bottom: 30px;}
       .newshop_block5_wrapper .newshop_buynow{ position: inherit; left: 0; right: 0; top: 0; bottom: 0; display: block; margin: 16px auto; margin-bottom: 30px;}
@@ -6855,7 +6899,9 @@
   
    @media screen and (max-width: 767px){
    
-   
+    .webinar_newrow { 
+        width: 31%; 
+    }
     .contact_submit {
           width: 233px;}
   
@@ -7369,6 +7415,10 @@
   
   
   @media screen and (max-width: 600px){
+
+    .webinar_newrow { 
+        width: 48%; 
+    }
   
     .mentors_detail_block_con_top  .productblock ul li {
           width: 93%;
@@ -7657,6 +7707,10 @@
   
 
   @media screen and (max-width:480px) {
+
+    .webinar_newrow { 
+        width: 98%; 
+    }
 
     .success_table2 thead{ display: none;}
 
