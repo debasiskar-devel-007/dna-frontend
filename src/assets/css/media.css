@@ -6899,9 +6899,7 @@
   
    @media screen and (max-width: 767px){
    
-    .webinar_newrow { 
-        width: 31%; 
-    }
+ 
     .contact_submit {
           width: 233px;}
   
@@ -7416,9 +7414,6 @@
   
   @media screen and (max-width: 600px){
 
-    .webinar_newrow { 
-        width: 48%; 
-    }
   
     .mentors_detail_block_con_top  .productblock ul li {
           width: 93%;
@@ -7708,9 +7703,7 @@
 
   @media screen and (max-width:480px) {
 
-    .webinar_newrow { 
-        width: 98%; 
-    }
+  
 
     .success_table2 thead{ display: none;}
 
