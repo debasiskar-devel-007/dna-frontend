@@ -5738,3 +5738,9 @@ newsuccessgenetics_block3_row1_wrapper .content-row  { display: table-row;}
     .webinar_newrow_text label{ display: block; margin-bottom: 14px; text-transform: uppercase;   font-family:'OpenSans-Semibold'; font-size: 16px; color: #fff;}
 
     .webinar_newrow_text  p{ font-size: 14px; color: #ffdc65; font-family:'OpenSans-Regular';}
+
+
+    .product_form_main .mat-select-trigger {
+        height: 1.125em;
+        padding: 8px 0 0 0;
+    }
