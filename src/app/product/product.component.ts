@@ -10,6 +10,7 @@ import { ActivatedRoute ,Router} from '@angular/router';
 })
 export class ProductComponent implements OnInit {
   public saletax:number=0;
+  public total:number=0;
   public selectedProduct:any = {good:0, better:0, best:0, mentor:0};
   public expyear:any=[{val:20,'name':'2020'},{val:21,'name':'2021'},{val:22,'name':'2022'},{val:23,'name':'2023'},{val:24,'name':'2024'}
   ,{val:25,'name':'2025'},{val:26,'name':'2026'},{val:27,'name':'2027'},{val:28,'name':'2028'},{val:29,'name':'2029'},{val:30,'name':'2030'}]
@@ -367,6 +368,7 @@ export class ProductComponent implements OnInit {
       this.productDetails.saletax=this.saletax;
       this.productDetails.total=this.productDetails.price+this.saletax+this.productDetails.delivery;
       this.productDetails.total=parseFloat(this.productDetails.total.toFixed(2));
+      this.total=this.productDetails.total;
       this.productDetails.usertype='mentee';
 
       this.selectedProduct.best = 0;
@@ -375,13 +377,15 @@ export class ProductComponent implements OnInit {
 
     }else  if (flag == 'best') {
       this.productDetails.name= 'BEST Package';
-      this.productDetails.price= 500;
+      this.productDetails.price= 349;
       this.productDetails.delivery= 4.95;
      this.saletax=this.productDetails.price/100*6;
       this.saletax=parseFloat(this.saletax.toFixed(2));
       this.productDetails.saletax=this.saletax;
       this.productDetails.total=this.productDetails.price+this.saletax+this.productDetails.delivery;
       this.productDetails.total=parseFloat(this.productDetails.total.toFixed(2));
+      this.total=this.productDetails.total;
+
       this.productDetails.usertype='mentee';
 
       this.selectedProduct.good = 0;
@@ -396,6 +400,8 @@ export class ProductComponent implements OnInit {
       this.productDetails.saletax=this.saletax;
       this.productDetails.total=this.productDetails.price+this.saletax+this.productDetails.delivery;
       this.productDetails.total=parseFloat(this.productDetails.total.toFixed(2));
+      this.total=this.productDetails.total;
+
       this.productDetails.usertype='mentee';
 
       this.selectedProduct.good = 0;
@@ -403,13 +409,14 @@ export class ProductComponent implements OnInit {
       this.selectedProduct.best = 4.95;
     } else {
       this.productDetails.name= 'MENTOR Package';
-      this.productDetails.price= 600;
+      this.productDetails.price= 749;
       this.productDetails.delivery= 4.95;
       this.saletax=this.productDetails.price/100*6;
       this.saletax=parseFloat(this.saletax.toFixed(2));
       this.productDetails.saletax=this.saletax;
       this.productDetails.total=this.productDetails.price+this.saletax+this.productDetails.delivery;
       this.productDetails.total=parseFloat(this.productDetails.total.toFixed(2));
+      this.total=this.productDetails.total;
       this.productDetails.usertype='mentor';
 
 
@@ -417,7 +424,7 @@ export class ProductComponent implements OnInit {
       this.selectedProduct.better = 0;
       this.selectedProduct.best = 0;
     }
-   // console.warn(this.productDetails);
+  //  console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {
     //console.log(val);
