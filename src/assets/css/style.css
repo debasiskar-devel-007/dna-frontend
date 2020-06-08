@@ -336,7 +336,7 @@ p{padding: 0px; margin: 0px;}
 .newhomeblock3 .newhomeblock3_text .newhomeblock3_link a:nth-of-type(2){ background:#e75046 url("../images/nhome_block3_moreicon.png") no-repeat 15px center; border-left: solid 1px #fff; border-radius: 0 3px 3px 0;}
 
 
-.newhomeblock3 .newhomeblock3_text .newhomeblock3_link a{ margin: 0px; display: block; padding: 10px 10px 9px 58px; width: 180px; float: left; font-size: 16px; color: #fff; text-transform: uppercase;}
+.newhomeblock3 .newhomeblock3_text .newhomeblock3_link a{ margin: 0px; display: block; padding: 10px 10px 9px 58px; width: 100px; float: left; font-size: 16px; color: #fff; text-transform: uppercase;}
 
 
 .newhomeblock4{ padding: 0px!important; background:#f6f7f7 url("../images/nhome_block4_bg1.png") no-repeat right bottom; box-shadow: none!important;
