@@ -14,9 +14,9 @@ export class ProductComponent implements OnInit {
   public selectedProduct:any = {good:0, better:0, best:0, mentor:0};
   public expyear:any=[{val:20,'name':'2020'},{val:21,'name':'2021'},{val:22,'name':'2022'},{val:23,'name':'2023'},{val:24,'name':'2024'}
   ,{val:25,'name':'2025'},{val:26,'name':'2026'},{val:27,'name':'2027'},{val:28,'name':'2028'},{val:29,'name':'2029'},{val:30,'name':'2030'}]
-  public expmonth:any=[{ val:'01' ,'name':'JAN'},{val:'02','name':'FEB'},{val:'03','name':'MAR'},{val:'04','name':'APR'},{val:'05','name':'MAY'}
-  ,{val:'06','name':'JUN'},{val:'07','name':'JUL'},{val:'08','name':'AUG'},{val:'09','name':'SEP'},{val:'10','name':'OCT'},{val:'11','name':'NOV'}
-  ,{val:'12','name':'DEC'}];
+  public expmonth:any=[{ val:'01' ,'name':'JANUARY'},{val:'02','name':'FEBRUARY'},{val:'03','name':'MARCH'},{val:'04','name':'APRIL'},{val:'05','name':'MAY'}
+  ,{val:'06','name':'JUNE'},{val:'07','name':'JULY'},{val:'08','name':'AUGUST'},{val:'09','name':'SEPTEMBER'},{val:'10','name':'OCTOBER'},{val:'11','name':'NOVEMBER'}
+  ,{val:'12','name':'DECEMBER'}];
   public productDetails: any = {};
   public status: any = [{ val: 1, 'name': 'Active' }, { val: 0, 'name': 'Inactive' }];
   emailregex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
