@@ -1,4 +1,4 @@
-import { Component, OnInit,HostListener } from '@angular/core';
+import { Component, OnInit,HostListener,Inject} from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute ,Router} from '@angular/router';
@@ -17,7 +17,7 @@ export class ProductComponent implements OnInit {
   public expmonth:any=[{ val:'01' ,'name':'JANUARY'},{val:'02','name':'FEBRUARY'},{val:'03','name':'MARCH'},{val:'04','name':'APRIL'},{val:'05','name':'MAY'}
   ,{val:'06','name':'JUNE'},{val:'07','name':'JULY'},{val:'08','name':'AUGUST'},{val:'09','name':'SEPTEMBER'},{val:'10','name':'OCTOBER'},{val:'11','name':'NOVEMBER'}
   ,{val:'12','name':'DECEMBER'}];
-  public productDetails: any = {};
+  public productDetails: any;
   public status: any = [{ val: 1, 'name': 'Active' }, { val: 0, 'name': 'Inactive' }];
   emailregex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   passwordregex: RegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
@@ -36,12 +36,8 @@ export class ProductComponent implements OnInit {
  
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute,
-    public meta: MetaService,public router:Router
-    ) { 
-      // window.scrollTo(500, 0); 
-      
-
-    this.meta.setTitle('DNA Of Success - Our Products    ');
+    public meta: MetaService,public router:Router) { 
+    this.meta.setTitle('DNA Of Success - Our Products ');
 
     this.meta.setTag('og:description', 'Products and packages that help to obtain Jack Zufelt’s incredible program to success and professional mentorship guidance towards achieving your dreams and the Core desires of your heart.');
     this.meta.setTag('twitter:description', 'Products and packages that help to obtain Jack Zufelt’s incredible program to success and professional mentorship guidance towards achieving your dreams and the Core desires of your heart.');
@@ -73,6 +69,16 @@ export class ProductComponent implements OnInit {
       endpoint:'api/order',                                                 
      jwttoken:this._apiService.jwtToken,
       fields:[
+        {
+          //heading:"",
+          label:"type",
+          name:"productDetails",
+          type:'hidden',
+          value:this.productDetails,
+          validations:[
+            {rule:'required',message:"Please Choose a Product"},
+            ]
+          },
           {
               //heading:"",
               label:"First Name",
@@ -313,13 +319,6 @@ export class ProductComponent implements OnInit {
           {rule:'required',message:"Enter Your CVV NUmber"},
           ]
          },
-          {
-            //heading:"",
-            label:"type",
-            name:"productDetails",
-            type:'hidden',
-            value:this.productDetails,
-        },
         {
           //heading:"",
           label:"status",
@@ -345,14 +344,20 @@ export class ProductComponent implements OnInit {
   };
   
   }
-  @HostListener("window:scroll", [])
+
 
   ngOnInit() {
+    //console.log(this.ActivatedRoute.snapshot.params.class);
+    if(this.ActivatedRoute.snapshot.params.class!=null) {
+      document.querySelector('.'+this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', });
+      // console.log(document.querySelector('.'+this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', }))
+    }    
+
   }
 
   chooseProduct(item, flag) {
     
-    document.querySelector('.newproduct_list1_top').scrollIntoView({ behavior: 'smooth', });
+    document.querySelector('.newproduct_list1').scrollIntoView({ behavior: 'smooth', });
 
     // console.log(item)
     //this.selectedProduct.item = 1 - this.selectedProduct.item;
@@ -462,4 +467,5 @@ export class ProductComponent implements OnInit {
   
 }
   }
+ 
 }
