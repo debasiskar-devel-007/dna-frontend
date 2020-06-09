@@ -17,7 +17,7 @@ export class ProductComponent implements OnInit {
   public expmonth:any=[{ val:'01' ,'name':'JANUARY'},{val:'02','name':'FEBRUARY'},{val:'03','name':'MARCH'},{val:'04','name':'APRIL'},{val:'05','name':'MAY'}
   ,{val:'06','name':'JUNE'},{val:'07','name':'JULY'},{val:'08','name':'AUGUST'},{val:'09','name':'SEPTEMBER'},{val:'10','name':'OCTOBER'},{val:'11','name':'NOVEMBER'}
   ,{val:'12','name':'DECEMBER'}];
-  public productDetails: any = {};
+  public productDetails: any;
   public status: any = [{ val: 1, 'name': 'Active' }, { val: 0, 'name': 'Inactive' }];
   emailregex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   passwordregex: RegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
@@ -69,6 +69,16 @@ export class ProductComponent implements OnInit {
       endpoint:'api/order',                                                 
      jwttoken:this._apiService.jwtToken,
       fields:[
+        {
+          //heading:"",
+          label:"type",
+          name:"productDetails",
+          type:'hidden',
+          value:this.productDetails,
+          validations:[
+            {rule:'required',message:"Please Choose a Product"},
+            ]
+          },
           {
               //heading:"",
               label:"First Name",
@@ -309,13 +319,6 @@ export class ProductComponent implements OnInit {
           {rule:'required',message:"Enter Your CVV NUmber"},
           ]
          },
-          {
-            //heading:"",
-            label:"type",
-            name:"productDetails",
-            type:'hidden',
-            value:this.productDetails,
-        },
         {
           //heading:"",
           label:"status",

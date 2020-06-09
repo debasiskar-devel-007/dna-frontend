@@ -11,5 +11,5 @@ export class SuccessbookComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  goToHome(){}
 }
