@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
-
+import { ActivatedRoute ,Router} from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,10 +8,7 @@ import { MetaService } from '@ngx-meta/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(
-    public meta: MetaService
-    
-    ) { 
+  constructor(public meta: MetaService,public router:Router) { 
       // window.scrollTo(500, 0); 
   
     this.meta.setTitle('DNA Of Success - The DNA Master Course');
@@ -31,5 +28,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  learnproduct(value:any){
+    console.log(value);
+    this.router.navigateByUrl('/product/'+value)
+  }
 }

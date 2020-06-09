@@ -1,4 +1,4 @@
-import { Component, OnInit,HostListener } from '@angular/core';
+import { Component, OnInit,HostListener,Inject} from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute ,Router} from '@angular/router';
@@ -36,12 +36,8 @@ export class ProductComponent implements OnInit {
  
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute,
-    public meta: MetaService,public router:Router
-    ) { 
-      // window.scrollTo(500, 0); 
-      
-
-    this.meta.setTitle('DNA Of Success - Our Products    ');
+    public meta: MetaService,public router:Router) { 
+    this.meta.setTitle('DNA Of Success - Our Products ');
 
     this.meta.setTag('og:description', 'Products and packages that help to obtain Jack Zufelt’s incredible program to success and professional mentorship guidance towards achieving your dreams and the Core desires of your heart.');
     this.meta.setTag('twitter:description', 'Products and packages that help to obtain Jack Zufelt’s incredible program to success and professional mentorship guidance towards achieving your dreams and the Core desires of your heart.');
@@ -345,14 +341,20 @@ export class ProductComponent implements OnInit {
   };
   
   }
-  @HostListener("window:scroll", [])
+
 
   ngOnInit() {
+    //console.log(this.ActivatedRoute.snapshot.params.class);
+    if(this.ActivatedRoute.snapshot.params.class!=null) {
+      document.querySelector('.'+this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', });
+      // console.log(document.querySelector('.'+this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', }))
+    }    
+
   }
 
   chooseProduct(item, flag) {
     
-    document.querySelector('.newproduct_list1_top').scrollIntoView({ behavior: 'smooth', });
+    document.querySelector('.newproduct_list1').scrollIntoView({ behavior: 'smooth', });
 
     // console.log(item)
     //this.selectedProduct.item = 1 - this.selectedProduct.item;
@@ -462,4 +464,5 @@ export class ProductComponent implements OnInit {
   
 }
   }
+ 
 }
