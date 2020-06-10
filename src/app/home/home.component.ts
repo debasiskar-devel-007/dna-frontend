@@ -30,6 +30,6 @@ export class HomeComponent implements OnInit {
   }
   learnproduct(value:any){
     // console.log(value);
-    this.router.navigateByUrl('/product/'+value)
+    this.router.navigateByUrl('/products/'+value)
   }
 }
