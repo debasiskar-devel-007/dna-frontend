@@ -53,8 +53,8 @@ const routes: Routes = [
 
   {path:'login', component: LoginComponent}, 
 
-  {path:'product', component: ProductComponent},
-  {path:'product/:class', component: ProductComponent},
+  {path:'products', component: ProductComponent},
+  {path:'products/:class', component: ProductComponent},
 
   {path:'contact', component: ContactComponent}, 
 
