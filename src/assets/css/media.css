@@ -3087,6 +3087,30 @@
   
   @media screen and (max-width: 1240px) {
 
+    .AddON_modal_block3 label:nth-of-type(1) span {
+         font-size: 32px; 
+    }
+
+    .AddON_modal_block2_heading h2 label:nth-of-type(1)::before{ font-size: 40px; top: 6px;}
+    .AddON_modal_block2_heading h2 label:nth-of-type(2)::before{ font-size: 40px; top: 6px;}
+
+    .AddONWrapper {
+        width: 1100px!important; 
+    }
+
+    .AddON_modal_body_left {
+        width: 690px;
+        float: left;
+    }
+
+    .AddON_modal_body_left h3 {
+        font-size: 38px!important;
+        line-height: 40px!important;}
+
+        .AddON_modal_block2_heading h2 label span {   
+            font-size: 40px;
+            line-height: 42px;}
+
     .success_msg_con {
         background-position: -140px top;
     }
@@ -3365,6 +3389,52 @@
   }
 
   @media screen and (max-width:1199px) {
+
+    .AddONWrapper {
+        width: 90%!important;
+    }
+    .AddON_modal_block3 label:nth-of-type(1) span {
+        font-size: 32px;
+        line-height: 40px; margin-top: -20px;
+    }
+    .AddON_modal_block3 label span {
+        display: block;
+        width: 80%;
+        float: left;      margin-top: -15px;
+        line-height: 32px;}
+
+    .AddON_modal_block3 input[type="checkbox"]{ float: left;}
+
+    .AddON_modal_block3 label{display: block;     overflow: hidden;}
+
+    .AddON_modal_block2_heading h2 label span{text-align: center!important;}
+    .AddON_modal_block2_heading h2{ background: none; text-align: center!important;}
+    .AddON_modal_block2_heading h2 label:nth-of-type(1)::before{ display: none;}
+    .AddON_modal_block2_heading h2 label:nth-of-type(2)::before{ display: none;}
+    .AddON_modal_block2 {
+        background: none;
+        padding-left: 0;
+        padding-bottom: 25px;
+        margin-top: -30px;
+    }
+
+    .AddON_modal_body_top{ background-position: center bottom;}
+
+    .addon_modal_bookimg {
+        display: block;
+        float: none;
+        margin: 30px auto;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .AddON_modal_body_left h2{ text-align: center!important;     width: auto;}
+
+    .AddON_modal_body_left h3{ text-align: center!important;}
+    .AddON_modal_body_left {
+        width: 100%;
+        float: none;
+    }
 
     .nwshoppriceblock {background: rgba(250,210,11,1);
         background: -moz-linear-gradient(top, rgba(250,210,11,1) 0%, rgba(254,114,67,1) 100%);
@@ -6898,7 +6968,12 @@
   }
   
    @media screen and (max-width: 767px){
-   
+    .AddON_modal_body_top { 
+        background-image: none;
+        padding-bottom: 0px;
+    }
+
+    .AddON_modal_block2{ margin-top: 0px;}
  
     .contact_submit {
           width: 233px;}
@@ -7263,16 +7338,7 @@
       .newhomeblock4_bodycon_text{ padding-bottom: 46%;}
   
       .home_new_imgblock3 {  background-size: 100%!important; padding: 68% 20px 30px 20px!important;}
-  }
-    @media screen and (max-width:700px) {
-      .mentors_detail_block_con_right_btn .mentors_detail_bookbtn {
-          display: inline-block;
-          font-size: 20px;
-          padding: 13px 24px;
-      }
-  
-  }
-  @media screen and (max-width:767px) {
+   
 
   .success_table3{ display: block;}
   .success_msg_carttable .success_table3 .success_table3_tdl{ display: block;border-right: none;}
@@ -7285,7 +7351,14 @@
   .success_table3 th{ display: block;}
   }
 
+  @media screen and (max-width:700px) {
+    .mentors_detail_block_con_right_btn .mentors_detail_bookbtn {
+        display: inline-block;
+        font-size: 20px;
+        padding: 13px 24px;
+    }
 
+}
    @media screen and (max-width:680px) {
  
   
@@ -7940,6 +8013,26 @@
 }
   
     @media screen and (max-width: 420px){
+
+        .AddON_modal_block3 input[type="checkbox"] {
+            float: none;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .AddON_modal_block3 label:nth-of-type(1) span {
+            margin-top: 10px;
+        }
+
+        .AddON_modal_block3 label span {
+            display: block;
+            width: auto;
+            float: none;
+            margin-top: 10px;
+            line-height: 32px;
+            text-align: center;
+            padding: 0px;
+        }
 	
 	      .newhomeblock3 .newhomeblock3_text {
           padding: 15px;
@@ -8002,6 +8095,22 @@
   }
 
   @media screen and (max-width: 400px) {
+
+    .AddON_modal_block3{ padding-left: 15px; padding-right: 15px;}
+    .addonbtn{ width: 230px;}
+    .AddON_modal_block2_heading h2 label span {
+        font-size: 34px;
+        line-height: 38px;
+    }
+    .AddON_modal_body_left h3 {
+        font-size: 32px!important;
+        line-height: 38px!important;
+    }
+
+    .AddON_modal_body_left h2 { 
+        font-size: 34px!important;
+        line-height: 36px!important; 
+    }
     .s-formsection .button:first-of-type {
         height: 70px!important;
         width: 236px!important;
