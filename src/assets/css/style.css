@@ -2631,7 +2631,7 @@ box-shadow: none!important;
     color: #434358;
     text-transform: uppercase;
 }
-.s_content_profile span,p span{
+.s_content_profile span .s_content_profile p span{
     color: #fa4f43;
 }
 .s-section-content p{
