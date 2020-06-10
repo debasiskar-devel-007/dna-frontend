@@ -19,6 +19,13 @@ export class SuccessbookComponent implements OnInit {
   goToHome(){} 
 
 
+  scroll() {
+    
+
+    document.querySelector('.top_body_right').scrollIntoView({ behavior: 'smooth', });
+
+  }
+
   // terms and condition modal
   termsModal(){
     // window.scrollTo(0, 0);

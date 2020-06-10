@@ -40,6 +40,7 @@ import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '
 import { SuccessComponent } from './success/success.component';
 import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
 import { SuccessbookComponent,TermsandConditionSB, PrivacyPolicySB, AddON } from './successbook/successbook.component';
+import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
@@ -86,6 +87,7 @@ export function metaFactory(): MetaLoader {
     LiveWebinarComponent,
     SuccessbookComponent,
     AddON,
+    OrdersuccessComponent,
   ],
   imports: [
     ListingModule,

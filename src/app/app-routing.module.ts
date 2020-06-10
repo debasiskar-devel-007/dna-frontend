@@ -20,6 +20,7 @@ import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpag
 import { SuccessComponent } from './success/success.component';
 import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
 import { SuccessbookComponent } from './successbook/successbook.component';
+import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 // const api_url1 =  environment["api_url1"];
 
 
@@ -27,7 +28,10 @@ const routes: Routes = [
 
   {path:'home', component: HomeComponent}, 
 
-  {path:'successbook', component: SuccessbookComponent}, 
+  {path:'ordersuccess', component: OrdersuccessComponent}, 
+
+  {path:'successbook', component: SuccessbookComponent},
+
   {path:'live-webinar', component: LiveWebinarComponent}, 
 
   {path:'thewholestory', component: NewthewholestoryComponent}, 
