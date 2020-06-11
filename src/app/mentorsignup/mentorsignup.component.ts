@@ -36,7 +36,7 @@ export class MentorsignupComponent implements OnInit {
     }
     this.formdata = {
       successmessage:"Added Successfully !!",
-      redirectpath:"/mentorsignup",
+      redirectpath:"",
       submittext:"Submit",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
