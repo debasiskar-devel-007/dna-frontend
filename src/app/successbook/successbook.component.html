@@ -5,7 +5,7 @@
 
         <div class="top_body_left">
 
-           <div class="top_body_left_logo"> <a href="javascript:void(0);" (click)="goToHome()">  <img src="../../assets/images/logo.png" alt="#">  </a></div>
+           <div class="top_body_left_logo"> <a href="javascript:void(0);"  [routerLink]="['/home']">  <img src="../../assets/images/logo.png" alt="#">  </a></div>
 
                  <div class="top_body_left_text_wraaper">
 
@@ -67,8 +67,8 @@
                 <form>
                     <div class="form_step">
 
-                        <div class="ster1"> <span > <span class="linespan"> </span>  </span> </div>
-                        <div class="ster2"> <span class="activestep"> <span class="linespan"></span> </span> </div>
+                        <div class="ster1"> <span class="activestep"> <span class="linespan"> </span>  </span> </div>
+                        <div class="ster2"> <span > <span class="linespan"></span> </span> </div>
                         <div class="ster3"> <span> <span class="linespan"></span> </span> </div>
                         <div class="ster4"> <span> <span class="linespan"></span> </span> </div>
 
@@ -109,7 +109,7 @@
                         <input matInput>
                       </mat-form-field>
 
-                      <button class="nextbtn"><span>next</span></button>
+                      <button class="nextbtn" (click)="AddONModal();"><span>next</span></button>
 
                     </div>
 
@@ -217,11 +217,11 @@
                       line every time you set out in pursuit of a goal?</h2>
 
 
-
+                      <button class="SB_body3_btn" (click)="scroll()"><span>ORDER now</span></button>
            </div>
               
 
-           <button class="SB_body3_btn"><span>ORDER now</span></button>
+         
 
    
        </div>
@@ -241,7 +241,7 @@
 
        <div class="SB_body4_wrapper">
 
-        <img src="../../assets/images/SB_block3_IMG.png" alt="#" class="SB_block3_IMG">
+       
 
         <div class="SB_body4_text">
 
@@ -258,7 +258,7 @@
 
 
         </div>
-
+        <img src="../../assets/images/SB_block3_IMG.png" alt="#" class="SB_block3_IMG">
 
 
           <div class="clearfix"></div>
@@ -281,7 +281,7 @@
 
             <img src="../../assets/images/SB_block3_book.png" alt="#" class="SB_block3_book">
 
-            <button class="SB_body4_btn"><span>ORDER now</span></button> 
+            <button class="SB_body4_btn" (click)="scroll()"><span>ORDER now</span></button> 
 
             <div class="clearfix"></div>
 
@@ -327,7 +327,7 @@
 
         </div>
 
-        <button class="SB_body5_btn"><span>ORDER now</span></button> 
+        <button class="SB_body5_btn" (click)="scroll()"><span>ORDER now</span></button> 
 
         <div class="clearfix"></div>
 
@@ -371,7 +371,7 @@
             </div>
 
 
-            <button class="SB_body6_btn"><span>Order Now and Just Pay Shipping</span></button>
+            <button class="SB_body6_btn" (click)="scroll()"><span>Order Now and Just Pay Shipping</span></button>
 
 
 
@@ -389,8 +389,8 @@
    <p>
   <span>© 2016 The dna of success. All rights reserved.   TERMS OF SERVICE  PRIVACY POLICY</span>
 
-  <a href="javascript:void(0);"  > TERMS OF SERVICE </a> 
-  <a href="javascript:void(0);"  > PRIVACY POLICY</a> 
+  <a href="javascript:void(0);"  (click)="termsModal();"> TERMS OF SERVICE </a> 
+  <a href="javascript:void(0);"  (click)="privacyModal();"> PRIVACY POLICY</a> 
    </p>
 
     </div>

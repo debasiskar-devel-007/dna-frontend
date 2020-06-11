@@ -39,7 +39,8 @@ import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpag
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 import { SuccessComponent } from './success/success.component';
 import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
-import { SuccessbookComponent } from './successbook/successbook.component';
+import { SuccessbookComponent,TermsandConditionSB, PrivacyPolicySB, AddON } from './successbook/successbook.component';
+import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
@@ -67,6 +68,8 @@ export function metaFactory(): MetaLoader {
     NewmentorComponent,
     TermsandCondition,
     PrivacyPolicy,
+    TermsandConditionSB,
+    PrivacyPolicySB,
     NewaboutbetoComponent,
     NewsuccessgeneticsComponent,
     AboutComponent,
@@ -83,6 +86,8 @@ export function metaFactory(): MetaLoader {
     MyLoaderComponent,
     LiveWebinarComponent,
     SuccessbookComponent,
+    AddON,
+    OrdersuccessComponent,
   ],
   imports: [
     ListingModule,
@@ -109,7 +114,7 @@ export function metaFactory(): MetaLoader {
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: [TermsandCondition, PrivacyPolicy],
+  entryComponents: [TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
 })
 export class AppModule {
 
