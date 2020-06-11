@@ -349,8 +349,7 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     //console.log(this.ActivatedRoute.snapshot.params.class);
     if (this.ActivatedRoute.snapshot.params.class != null) {
-      document.querySelector('.' + this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', });
-      // console.log(document.querySelector('.'+this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', }))
+      document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', });
     }
 
   }
@@ -367,7 +366,7 @@ export class ProductComponent implements OnInit {
     if (flag == 'good') {
       this.productDetails.name = 'GOOD Package';
       this.productDetails.price = 149;
-      this.productDetails.delivery = 4.95;
+      this.productDetails.delivery = 6.95;
       this.saletax = this.productDetails.price / 100 * 6;
       this.saletax = parseFloat(this.saletax.toFixed(2));
       this.productDetails.saletax = this.saletax;
@@ -383,7 +382,7 @@ export class ProductComponent implements OnInit {
     } else if (flag == 'best') {
       this.productDetails.name = 'BEST Package';
       this.productDetails.price = 349;
-      this.productDetails.delivery = 4.95;
+      this.productDetails.delivery = 6.95;
       this.saletax = this.productDetails.price / 100 * 6;
       this.saletax = parseFloat(this.saletax.toFixed(2));
       this.productDetails.saletax = this.saletax;
@@ -399,7 +398,7 @@ export class ProductComponent implements OnInit {
     } else if (flag == 'better') {
       this.productDetails.name = 'BETTER Package';
       this.productDetails.price = 249;
-      this.productDetails.delivery = 4.95;
+      this.productDetails.delivery = 6.95;
       this.saletax = this.productDetails.price / 100 * 6;
       this.saletax = parseFloat(this.saletax.toFixed(2));
       this.productDetails.saletax = this.saletax;
@@ -415,7 +414,7 @@ export class ProductComponent implements OnInit {
     } else {
       this.productDetails.name = 'MENTOR Package';
       this.productDetails.price = 749;
-      this.productDetails.delivery = 4.95;
+      this.productDetails.delivery = 6.95;
       this.saletax = this.productDetails.price / 100 * 6;
       this.saletax = parseFloat(this.saletax.toFixed(2));
       this.productDetails.saletax = this.saletax;
