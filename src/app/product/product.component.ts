@@ -339,6 +339,12 @@ export class ProductComponent implements OnInit {
           name: "transactiontype",
           type: 'hidden',
           value: 'TEST'
+        }, {
+          //heading:"",
+          label: "parentid",
+          name: "parentid",
+          type: 'hidden',
+          value:this.ActivatedRoute.snapshot.params.class
         }
       ]
     };
