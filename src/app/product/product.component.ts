@@ -410,7 +410,7 @@ export class ProductComponent implements OnInit {
 
       this.selectedProduct.good = 0;
       this.selectedProduct.mentor = 0;
-      this.selectedProduct.best = 4.95;
+      this.selectedProduct.best = 0;
     } else {
       this.productDetails.name = 'MENTOR Package';
       this.productDetails.price = 749;
