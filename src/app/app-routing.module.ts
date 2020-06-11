@@ -18,13 +18,21 @@ import { environment } from '../environments/environment';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpage.component';
 import { SuccessComponent } from './success/success.component';
+import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
+import { SuccessbookComponent } from './successbook/successbook.component';
+import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 // const api_url1 =  environment["api_url1"];
 
 
 const routes: Routes = [
-  {path:'', component: HomeComponent}, 
 
   {path:'home', component: HomeComponent}, 
+
+  {path:'ordersuccess', component: OrdersuccessComponent}, 
+
+  {path:'successbook', component: SuccessbookComponent},
+
+  {path:'live-webinar', component: LiveWebinarComponent}, 
 
   {path:'thewholestory', component: NewthewholestoryComponent}, 
 
@@ -49,7 +57,8 @@ const routes: Routes = [
 
   {path:'login', component: LoginComponent}, 
 
-  {path:'product', component: ProductComponent}, 
+  {path:'products', component: ProductComponent},
+  {path:'products/:class', component: ProductComponent},
 
   {path:'contact', component: ContactComponent}, 
 
@@ -61,6 +70,12 @@ const routes: Routes = [
   {path:'success', component: SuccessComponent},
   {path:'success/:_id', component: SuccessComponent,resolve: { successData: TestresolveService },
   data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api/ordersuccessresolve'}},
+
+
+
+
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '**', component: HomeComponent}
 ];
 
 @NgModule({

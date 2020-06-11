@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+import { MyLoaderComponent } from './components/my-loader/my-loader.component';
+import { LoaderService } from './services/loader.service';
+import { LoaderInterceptor } from './interceptors/loader-interceptor.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CookieService } from 'ngx-cookie-service';
@@ -35,6 +38,9 @@ import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpag
 
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 import { SuccessComponent } from './success/success.component';
+import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
+import { SuccessbookComponent,TermsandConditionSB, PrivacyPolicySB, AddON } from './successbook/successbook.component';
+import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
@@ -62,6 +68,8 @@ export function metaFactory(): MetaLoader {
     NewmentorComponent,
     TermsandCondition,
     PrivacyPolicy,
+    TermsandConditionSB,
+    PrivacyPolicySB,
     NewaboutbetoComponent,
     NewsuccessgeneticsComponent,
     AboutComponent,
@@ -75,6 +83,11 @@ export function metaFactory(): MetaLoader {
     LandingpageComponent,
     MenteelandingpageComponent,
     SuccessComponent,
+    MyLoaderComponent,
+    LiveWebinarComponent,
+    SuccessbookComponent,
+    AddON,
+    OrdersuccessComponent,
   ],
   imports: [
     ListingModule,
@@ -97,11 +110,11 @@ export function metaFactory(): MetaLoader {
     ),
   ],
   providers: [
-    CookieService,HttpClientModule,TestresolveService,ApiService,FacebookService
+    CookieService,HttpClientModule,TestresolveService,ApiService,FacebookService, LoaderService, { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: [TermsandCondition, PrivacyPolicy],
+  entryComponents: [TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
 })
 export class AppModule {
 

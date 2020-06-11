@@ -19,6 +19,8 @@
 
 
  @media screen and (max-width:1880px){
+
+    .s_newAffiliate .girl_image{    left: -148px;}
  
    .newhomeblock5_left_block3_sub {
           width: 33.3%;
@@ -107,7 +109,11 @@
       }
   }
   @media screen and (max-width:1800px) {
-  
+
+    .newshop_banner_section {
+        background-position: -175px top!important;
+    }
+    .s_newAffiliate .girl_image{    left: -130px;}
     .end_block_left_bg .s_right_section .s_center_bg .s_end_sec_content{    width: 700px;}
 
       .newhomeblock5_left_block1{background-size: cover;}
@@ -211,6 +217,8 @@
   }
 
   @media screen and (max-width: 1760px){
+
+    .s_newAffiliate .girl_image{    left: -80px;}
     .newmentorsignup_block6_wrapper { width: 1400px;}
 
     .newmentorsignup_block6_right {
@@ -342,18 +350,16 @@
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top { width: 458px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote {bottom: 0px;
     width: 400px;}
-  .s_newAffiliate .girl_image { width: 554px; }
+  .s_newAffiliate .girl_image { width: 570px;  left: -150px;}
   .s_newAffiliate .bottom_con .af_downpara .affiliate_quote { font-size: 28px; line-height: 34px; margin-bottom: 34px; margin-top: 24px; }
   .s_newAffiliate .bottom_con .af_downpara .good_news .goodnews_quote { color: #7bebff; font-size: 24px; margin-left: 26px; line-height: 30px; margin-top: -15px; }
   
-  .s_newAffiliate .girl_image { left: -120px; }
+ 
 
   .newaffiliatesignup_conwrapper {
     width: 1496px;}
 
-    .s_newAffiliate .girl_image {
-        left: -220px;
-    }
+   
   
   }
     @media screen and (max-width:1730px){
@@ -400,7 +406,7 @@
       .newhomeblock4_bodycon_text h3 {
           margin: 24px 170px 24px 250px;}
   
-      .newhomeblock3 .newhomeblock3_text .newhomeblock3_link a{ width: 168px;}
+      /* .newhomeblock3 .newhomeblock3_text .newhomeblock3_link a{ width: 168px;} */
   
       .newhomeblock3 .newhomeblock3_text .newhomeblock3_link a {padding: 10px 5px 10px 48px;}
   
@@ -502,6 +508,11 @@
 
   @media screen and (max-width: 1680px) {
 
+    .newshop_banner_section {
+        background-position: -275px top!important;
+    }
+ 
+
     .success_msg_text{ width: 650px;}
     .bannerimg1 {
         left: 810px;
@@ -520,7 +531,8 @@
     
     .s_newAffiliate .girl_image {
         left: -92px;
-        width: 460px;
+        width: 529px;
+        bottom: -20px;
     }
    .menu_block {
         
@@ -568,9 +580,7 @@
           background-position: -72px top;
       }
   
-      .newshop_banner_section {
-          background-position: -215px top;
-      }
+    
       .s_masterCourse_work_sec .s_masterCourse_work-bg_right .s-masterCourse_work_bg_center {
           background: url(../images/s_makemone_idol2.png) no-repeat bottom left -73px !important;
       }
@@ -805,6 +815,8 @@
   }
 
   @media screen and (max-width: 1600px) {
+
+    .s_newAffiliate{ padding: 0px!important;}
     .newmentorsignup_block4_wrapper{ padding-left: 60px;}
     
         .newmentorsignup_block4_wrapper p{ padding-left: 440px;}
@@ -860,7 +872,7 @@
       }
   
       .newshop_banner_section {
-          background-position: -275px top;
+          background-position: -275px top!important;
       }
   
       .s-Matercontent .s-mastersec-left p {
@@ -1055,13 +1067,13 @@
 	  
 	    .newaffiliatesignup_conwrapper { width: 1400px; padding: 32px 0; }
   .s_newAffiliate .newaffiliatesignup_conleft { width: 1045px; }
-  .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top { width: 460px; right: -32px; }
+  .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top { width: 460px; right: -32px;      top: -14px;}
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote { bottom: 0px; right: 75px; width: 400px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .title { font-size: 135px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .sub_title { font-size: 50px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section h5 { font-size: 30px; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section { width: 645px; }
-  .s_newAffiliate .girl_image { left: -100px; width: 480px; }
+  .s_newAffiliate .girl_image { left: -100px; width: 510px; }
   }
   
     @media screen and (max-width: 1590px){
@@ -1153,7 +1165,7 @@
   
   
       .newshop_banner_section {
-          background-position: -305px top;
+          background-position: -305px top!important;
       }
   
   
@@ -1278,7 +1290,9 @@
   }
 
   @media screen and (max-width: 1500px) {
-
+    .s_newAffiliate .girl_image {
+        left: -55px; 
+    }
     .success_msg_text {
         width: 640px; padding: 0 50px 0 0;
     }
@@ -1860,7 +1874,7 @@
       
       .s_newAffiliate .girl_image {
         left: -100px;
-        width: 430px;
+        width: 510px;     bottom: -10px
     }
 	    .newaffiliatesignup_conwrapper{ margin-left: 0; }
   .newaffiliatesignup_conwrapper { width: 1200px;  margin: 0 auto; }
@@ -2424,7 +2438,7 @@
   }
   
       .newshop_banner_section {
-          background-position: -365px top;
+          background-position: -365px top!important;
       }
   
   
@@ -2613,7 +2627,7 @@
       }
   
       .newshop_banner_section {
-          background-position: -425px top;
+          background-position: -425px top!important;
       }
 
 
@@ -2903,7 +2917,7 @@
           margin: 0 auto;
       }
 	  
-	    .s_newAffiliate .girl_image { left: -60px; width: 430px; }
+	    .s_newAffiliate .girl_image { left: -60px; width: 480px; }
   .s_newAffiliate .bottom_con .af_downpara .good_news .goodnews_quote { font-size: 20px; line-height: 26px; }
   
   }
@@ -3072,6 +3086,30 @@
   
   
   @media screen and (max-width: 1240px) {
+
+    .AddON_modal_block3 label:nth-of-type(1) span {
+         font-size: 32px; 
+    }
+
+    .AddON_modal_block2_heading h2 label:nth-of-type(1)::before{ font-size: 40px; top: 6px;}
+    .AddON_modal_block2_heading h2 label:nth-of-type(2)::before{ font-size: 40px; top: 6px;}
+
+    .AddONWrapper {
+        width: 1100px!important; 
+    }
+
+    .AddON_modal_body_left {
+        width: 690px;
+        float: left;
+    }
+
+    .AddON_modal_body_left h3 {
+        font-size: 38px!important;
+        line-height: 40px!important;}
+
+        .AddON_modal_block2_heading h2 label span {   
+            font-size: 40px;
+            line-height: 42px;}
 
     .success_msg_con {
         background-position: -140px top;
@@ -3351,6 +3389,89 @@
   }
 
   @media screen and (max-width:1199px) {
+
+    .AddONWrapper {
+        width: 90%!important;
+    }
+    .AddON_modal_block3 label:nth-of-type(1) span {
+        font-size: 32px;
+        line-height: 40px; margin-top: -20px;
+    }
+    .AddON_modal_block3 label span {
+        display: block;
+        width: 80%;
+        float: left;      margin-top: -15px;
+        line-height: 32px;}
+
+    .AddON_modal_block3 input[type="checkbox"]{ float: left;}
+
+    .AddON_modal_block3 label{display: block;     overflow: hidden;}
+
+    .AddON_modal_block2_heading h2 label span{text-align: center!important;}
+    .AddON_modal_block2_heading h2{ background: none; text-align: center!important;}
+    .AddON_modal_block2_heading h2 label:nth-of-type(1)::before{ display: none;}
+    .AddON_modal_block2_heading h2 label:nth-of-type(2)::before{ display: none;}
+    .AddON_modal_block2 {
+        background: none;
+        padding-left: 0;
+        padding-bottom: 25px;
+        margin-top: -30px;
+    }
+
+    .AddON_modal_body_top{ background-position: center bottom;}
+
+    .addon_modal_bookimg {
+        display: block;
+        float: none;
+        margin: 30px auto;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .AddON_modal_body_left h2{ text-align: center!important;     width: auto;}
+
+    .AddON_modal_body_left h3{ text-align: center!important;}
+    .AddON_modal_body_left {
+        width: 100%;
+        float: none;
+    }
+
+    .nwshoppriceblock {background: rgba(250,210,11,1);
+        background: -moz-linear-gradient(top, rgba(250,210,11,1) 0%, rgba(254,114,67,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250,210,11,1)), color-stop(100%, rgba(254,114,67,1)));
+        background: -webkit-linear-gradient(top, rgba(250,210,11,1) 0%, rgba(254,114,67,1) 100%);
+        background: -o-linear-gradient(top, rgba(250,210,11,1) 0%, rgba(254,114,67,1) 100%);
+        background: -ms-linear-gradient(top, rgba(250,210,11,1) 0%, rgba(254,114,67,1) 100%);
+        background: linear-gradient(to bottom, rgba(250,210,11,1) 0%, rgba(254,114,67,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fad20b', endColorstr='#fe7243', GradientType=0 ); padding: 10px; border-radius: 5px;}
+    .nwshoppriceblock label{ text-align: center; padding: 0;}
+    .nwshoppriceblock span{ text-align: center;  padding: 0;}
+
+    .newshop_block1_wrapper .newshop_img{  width: auto; height: auto; padding: 0; background: none;}
+
+    .shop_newtextblock{ display: block; padding:16px 0px;}
+
+    .shop_newtextblock .shop_newtextblock_textcon{ width:auto; display: block; padding: 25px 0; margin: 0 15px; margin-bottom: 0px;}
+    .shop_newtextblock_imgcon{ width: auto; margin: 0 8px; display: block;}
+    .shop_newtextblock_imgcon ul li{ margin: 16px 8px 0 8px;}
+
+    .nwshoppriceblock::after{ display: none;}
+
+    .nwshoppriceblock { 
+        width: auto;
+        height: auto;
+        position: inherit;
+        right: 0;
+        top: 0;
+        padding-left: 0;
+        display: block;
+        margin: 0 15px;
+        margin-top: 25px; text-align: center;
+  
+    }
+
+    .newshop_block3_wrapper .newshop_img{  width: auto; height: auto; padding: 0; background: none;}
+
     .success_msg_text2new a {
         display: inline-block;
         width: auto;
@@ -5881,7 +6002,7 @@
   
   
       .newshop_block1_wrapper .newshop_buynow{ position: inherit; left: 0; right: 0; top: 0; bottom: 0; display: block; margin: 16px auto; margin-bottom: 30px;}
-      .newshop_block2_wrapper .newshop_buynow{ position: inherit; left: 0; right: 0; top: 0; bottom: 0; display: block; margin: 16px auto; margin-bottom: 30px; margin-top: 0px;}
+      .newshop_block2_wrapper .newshop_buynow{ position: inherit; left: 0; right: 0; top: 0; bottom: 0; display: block; margin: 16px auto; margin-bottom: 30px;  }
       .newshop_block3_wrapper .newshop_buynow{ position: inherit; left: 0; right: 0; top: 0; bottom: 0; display: block; margin: 16px auto; margin-bottom: 30px;}
       .newshop_block4_wrapper .newshop_buynow{ position: inherit; left: 0; right: 0; top: 0; bottom: 0; display: block; margin: 16px auto; margin-bottom: 30px;}
       .newshop_block5_wrapper .newshop_buynow{ position: inherit; left: 0; right: 0; top: 0; bottom: 0; display: block; margin: 16px auto; margin-bottom: 30px;}
@@ -6398,11 +6519,13 @@
   .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2 { background: #ff5b4f; width: auto; float: none; padding: 20px;     margin-right: 0px;}
   .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2 p br{ display: none; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2 p { padding-left: 0; text-align: center; }
-  .newaffiliatesignup_conright { width: 80%; float: none; margin: 45px auto; }
+  .newaffiliatesignup_conright { width: 80%; float: none; margin: 45px auto; margin-bottom: 0px; }
+  
   .s_newAffiliate .newaffiliatesignup_formbody .afsignbtn { margin: 20px auto!important; margin-bottom: 10px!important;     width: 280px!important;
     display: block; }
+
   .s_newAffiliate .bottom_con .af_downpara { padding-left: 0; }
-  .s_newAffiliate .girl_image { left: 0; width: 100%; position: inherit; }
+  .s_newAffiliate .girl_image {display: none; }
   .newaffiliatesignup_conbody{ padding: 0; }
   .af_small{ display: block; max-width: 100%;}
   .af_large{ display: none; max-width: 100%;}
@@ -6410,7 +6533,7 @@
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section h5 span { display: block; }
   .s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content h3 { margin-bottom: 25px; }
   .newaffiliatesignup_formbody h2{ padding-left: 0; }
-  .s_newAffiliate .girl_image img { margin: auto; }
+  /* .s_newAffiliate .girl_image img { margin: auto; } */
   .video_training_wrapper .text_header p { line-height: 44px; font-size: 36px; }
   
   .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{ width: auto;}
@@ -6845,8 +6968,13 @@
   }
   
    @media screen and (max-width: 767px){
-   
-   
+    .AddON_modal_body_top { 
+        background-image: none;
+        padding-bottom: 0px;
+    }
+
+    .AddON_modal_block2{ margin-top: 0px;}
+ 
     .contact_submit {
           width: 233px;}
   
@@ -7210,16 +7338,7 @@
       .newhomeblock4_bodycon_text{ padding-bottom: 46%;}
   
       .home_new_imgblock3 {  background-size: 100%!important; padding: 68% 20px 30px 20px!important;}
-  }
-    @media screen and (max-width:700px) {
-      .mentors_detail_block_con_right_btn .mentors_detail_bookbtn {
-          display: inline-block;
-          font-size: 20px;
-          padding: 13px 24px;
-      }
-  
-  }
-  @media screen and (max-width:767px) {
+   
 
   .success_table3{ display: block;}
   .success_msg_carttable .success_table3 .success_table3_tdl{ display: block;border-right: none;}
@@ -7232,7 +7351,14 @@
   .success_table3 th{ display: block;}
   }
 
+  @media screen and (max-width:700px) {
+    .mentors_detail_block_con_right_btn .mentors_detail_bookbtn {
+        display: inline-block;
+        font-size: 20px;
+        padding: 13px 24px;
+    }
 
+}
    @media screen and (max-width:680px) {
  
   
@@ -7360,6 +7486,7 @@
   
   
   @media screen and (max-width: 600px){
+
   
     .mentors_detail_block_con_top  .productblock ul li {
           width: 93%;
@@ -7649,6 +7776,8 @@
 
   @media screen and (max-width:480px) {
 
+  
+
     .success_table2 thead{ display: none;}
 
     .success_table2 tr{ display: block;}
@@ -7686,7 +7815,7 @@
         width:90%;
     }
     .newmentor_block2_wrapper_right {
-        width: 90%;
+        width: 90%; 
     }
     .newmentor_block4_wrapper_right {
         width: 90%;
@@ -7884,6 +8013,26 @@
 }
   
     @media screen and (max-width: 420px){
+
+        .AddON_modal_block3 input[type="checkbox"] {
+            float: none;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .AddON_modal_block3 label:nth-of-type(1) span {
+            margin-top: 10px;
+        }
+
+        .AddON_modal_block3 label span {
+            display: block;
+            width: auto;
+            float: none;
+            margin-top: 10px;
+            line-height: 32px;
+            text-align: center;
+            padding: 0px;
+        }
 	
 	      .newhomeblock3 .newhomeblock3_text {
           padding: 15px;
@@ -7946,6 +8095,22 @@
   }
 
   @media screen and (max-width: 400px) {
+
+    .AddON_modal_block3{ padding-left: 15px; padding-right: 15px;}
+    .addonbtn{ width: 230px;}
+    .AddON_modal_block2_heading h2 label span {
+        font-size: 34px;
+        line-height: 38px;
+    }
+    .AddON_modal_body_left h3 {
+        font-size: 32px!important;
+        line-height: 38px!important;
+    }
+
+    .AddON_modal_body_left h2 { 
+        font-size: 34px!important;
+        line-height: 36px!important; 
+    }
     .s-formsection .button:first-of-type {
         height: 70px!important;
         width: 236px!important;
