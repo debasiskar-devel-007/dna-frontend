@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener, Inject } from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import {environment} from '../../environments/environment';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -32,7 +32,7 @@ export class ProductComponent implements OnInit {
   public formdata1: any;
   public formdata2: any;
   public statesjson: any = [];
-
+  public parentdetails:any = [];
 
 
   constructor(public _apiService: ApiService, public ActivatedRoute: ActivatedRoute,
@@ -58,6 +58,24 @@ export class ProductComponent implements OnInit {
         );
       }
     })
+  }
+
+
+  ngOnInit() {
+     // console.log(this.ActivatedRoute.snapshot.params.class.length);
+     if (this.ActivatedRoute.snapshot.params.class != null && this.ActivatedRoute.snapshot.params.class.length==1) {
+      document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', });
+    }else{
+      let data:any = {
+        "id":this.ActivatedRoute.snapshot.params.class
+      }
+      this._apiService.customRequest1(data,'api1/usergetone',environment['api_url']).subscribe((res:any) => {
+        // console.log(res)
+        this.parentdetails=res.result[0];
+      })
+    }
+/////////////////////////
+
     this.formdata = {
       successmessage: "Order Placed Sucessfully!!",
       //redirectpath:"/product",
@@ -339,18 +357,37 @@ export class ProductComponent implements OnInit {
           name: "transactiontype",
           type: 'hidden',
           value: 'TEST'
-        }
+        }, {
+          //heading:"",
+          label: "parentid",
+          name: "parentid",
+          type: 'hidden',
+          value:this.ActivatedRoute.snapshot.params.class
+        },
+        // {
+        //   //heading:"",
+        //   label: "parenttype",
+        //   name: "parenttype",
+        //   type: 'hidden',
+        //   value:this.parentdetails.type
+        // }
       ]
     };
-
-  }
-
-
-  ngOnInit() {
-    //console.log(this.ActivatedRoute.snapshot.params.class);
-    if (this.ActivatedRoute.snapshot.params.class != null) {
-      document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', });
-    }
+    
+      setTimeout(() => {
+        console.log(this.parentdetails.type)
+       this.formfieldrefreshdata = {
+         field: 'addfromcontrol',
+             value: {
+             label: 'parenttype',
+             name: 'parenttype',
+             type: 'hidden',
+             after: 'parentid',
+             value: this.parentdetails.type
+         }
+     };
+     }, 3000);
+    
 
   }
 
@@ -410,7 +447,7 @@ export class ProductComponent implements OnInit {
 
       this.selectedProduct.good = 0;
       this.selectedProduct.mentor = 0;
-      this.selectedProduct.best = 4.95;
+      this.selectedProduct.best = 0;
     } else {
       this.productDetails.name = 'MENTOR Package';
       this.productDetails.price = 749;
