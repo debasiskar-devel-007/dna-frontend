@@ -366,8 +366,8 @@ p{padding: 0px; margin: 0px;}
 .newhomeblock5{      background: #e4e7e8!important;   margin: 0px;
     padding: 0px!important;
     display: block;
-    clear: both;
-    overflow: hidden; border: none!important;
+    
+    border: none!important;
     margin: 0!important;
     border-radius: 0px!important; box-shadow:none!important;}
 
@@ -378,7 +378,7 @@ p{padding: 0px; margin: 0px;}
 
 .newhomeblock5_right{ background: #fff!important; padding:1%!important; width:25%; float: right; border: none!important;
   margin: 0!important;
-  border-radius: 0px!important; box-shadow:none!important;}
+  border-radius: 0px!important; box-shadow:none!important; position:-webkit-sticky; position:sticky; top:0; }
 
 .newhomeblock5_right h2{ margin: 0px; padding: 20px 5px; text-align: center; background: #0eadff; font-size: 36px; color: #fff; text-transform: uppercase;  font-family: 'OpenSans-Semibold'; border-bottom: solid 1px #fff;}
 
