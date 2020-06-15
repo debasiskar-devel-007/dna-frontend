@@ -62,7 +62,7 @@ export class ProductComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log(this.ActivatedRoute.snapshot.url[0].path);
+    //console.log(this.ActivatedRoute.snapshot.url[0].path);
     //  console.log(this.ActivatedRoute.snapshot.params.id.substring(0, 1));
     if(this.ActivatedRoute.snapshot.url[0].path=='products-list'){
       document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.id).scrollIntoView({ behavior: 'smooth', });
