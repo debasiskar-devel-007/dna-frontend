@@ -406,7 +406,7 @@ export class ProductComponent implements OnInit {
 
   chooseProduct(item, flag) {
 
-    document.querySelector('.newproduct_list1').scrollIntoView({ behavior: 'smooth', });
+    // document.querySelector('.newproduct_list1').scrollIntoView({ behavior: 'smooth', });
 
     console.log(flag)
     //this.selectedProduct.item = 1 - this.selectedProduct.item;
