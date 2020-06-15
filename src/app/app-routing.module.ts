@@ -22,6 +22,7 @@ import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
 import { SuccessbookComponent } from './successbook/successbook.component';
 import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 // const api_url1 =  environment["api_url1"];
+const api_url = environment['api_url'];
 
 
 const routes: Routes = [
@@ -32,7 +33,16 @@ const routes: Routes = [
 
   {path:'successbook', component: SuccessbookComponent},
 
-  {path:'live-webinar', component: LiveWebinarComponent}, 
+  {path:'live-webinar', component: LiveWebinarComponent, 
+  resolve: {
+    shop: TestresolveService
+  },data: {requestcondition: {source: '',condition: {
+      }
+    },
+    endpoint: 'api/getwebinarshop',
+    api_url: api_url
+  }
+}, 
 
   {path:'thewholestory', component: NewthewholestoryComponent}, 
 
@@ -58,6 +68,7 @@ const routes: Routes = [
   {path:'login', component: LoginComponent}, 
 
   {path:'products', component: ProductComponent},
+  // {path:'products/:id', component: ProductComponent},
   {path:'products/:class', component: ProductComponent},
 
   {path:'contact', component: ContactComponent}, 

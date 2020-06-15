@@ -1,6 +1,8 @@
 import { Injectable, Inject, Component } from '@angular/core';
-import { Observable, interval, pipe } from 'rxjs';
-import { switchMap, map, takeWhile } from 'rxjs/operators';
+
+import { Observable, interval, pipe ,throwError} from 'rxjs';
+import {switchMap, map, takeWhile, catchError} from 'rxjs/operators';
+
 /*import { environment } from '../../environments/environment';*/
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 /*import { JwtHelperService } from '@auth0/angular-jwt';
@@ -8,6 +10,7 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { LOCAL_STORAGE, WINDOW } from '@ng-toolkit/universal';
 import {environment} from '../environments/environment';
+import {MatSnackBar} from '@angular/material';
 
 
 @Injectable()
@@ -15,7 +18,7 @@ export class ApiService {
   public nodesslurl =  environment["api_url"];
   public api_url =  environment["api_url"];
   public jwtToken = this.cookie.get('jwtToken');
-  constructor(private _http: HttpClient,public cookie:CookieService) {}
+  constructor(private _http: HttpClient,public cookie:CookieService,public _snackBar: MatSnackBar) {}
 
   getData(endpoint:string){
     var result = this._http.get(this.getEndpointUrl(endpoint)).pipe(map(res => res));
@@ -72,6 +75,20 @@ export class ApiService {
    
   }
   
+  customRequest1(requestdata: any, endpoint: any, url: any) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: this.cookie.get('jwtToken')
+      })
+    };
+    // console.log("souresh",url,endpoint);
+    const result = this._http.post(url + endpoint, JSON.stringify(requestdata), httpOptions).pipe(catchError((error) => {
+      this.openSnackBar();
+      return throwError(error);
+    }), map(response => response));
+    return result;
+  }
   //ip track api function
   getclientip() {
     // console.log('endpoint');
@@ -84,7 +101,11 @@ export class ApiService {
     return result;
   }
 
-
+  openSnackBar() {
+    this._snackBar.open('Something Went Wrong ,Try Again!!', 'ok', {
+      duration: 6000,
+    });
+  }
 
 
 }

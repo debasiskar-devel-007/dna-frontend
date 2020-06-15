@@ -33,7 +33,7 @@
     </span>
 </mat-card>
 
-<mat-card class="container newshop_block1">
+<!-- <mat-card class="container newshop_block1">
     <span class="spandiv newshop1_main_wrapper">
         <span class="spandiv newshop_block1_wrapper">
             <h2>The DNA of Success Incredible Quarterly Success Intensive Webinar - Fall - 2021</h2>
@@ -60,25 +60,21 @@
 
             </span>
 
-            <span class="spandiv newshop_img">
+            <span class="spandiv newshop_img"> -->
                <!-- <img src="../../assets/images/new_shop_con1_img1.png" alt="#"> -->
-               <span class="spandiv newshop_buynow">
+               <!-- <span class="spandiv newshop_buynow">
                 <a href="javascript:void(0)">Buy Now</a>
                
                     </span>
-            </span>
+            </span> -->
             <!-- <span class="spandiv newshop_buynow">
                 <a href="javascript:void(0)">Buy Now</a>
                
             </span> -->
-        </span>
+        <!-- </span>
+    </span> -->
 
-       
-          
-
-    </span>
-
-    <span  class="webinar_newconblock">
+    <!-- <span  class="webinar_newconblock">
         <span  class="webinar_newconblock_wrapper">
             <h2>THIS WEBINAR WILL BE HOSTED BY:</h2>
     
@@ -110,9 +106,9 @@
         </span>
     
     </span>
-</mat-card>
+</mat-card> -->
 
-<mat-card class="container newshop_block2">
+<!-- <mat-card class="container newshop_block2">
     <span class="spandiv newshop2_main_wrapper">
         <span class="spandiv newshop_block2_wrapper">
             <h2>The DNA of Success Incredible Quarterly Success Intensive Webinar - Winter - 2021</h2>
@@ -132,24 +128,24 @@
                  <span><strong>$ 49</strong> for you</span>
     
                 </span>
-            <span class="spandiv newshop_img">
+            <span class="spandiv newshop_img"> -->
                <!-- <img src="../../assets/images/new_shop_con2_img1.png" alt="#"> -->
              <!-- <img src="../../assets/images/new_shop_con1_img1.png" alt="#"> -->
-             <span class="spandiv newshop_buynow">
+             <!-- <span class="spandiv newshop_buynow">
                 <a href="javascript:void(0)">Buy Now</a>
                
                     </span>
-            </span>
+            </span> -->
             <!-- <span class="spandiv newshop_buynow">
                 <a href="javascript:void(0)">Buy Now</a>
                
             </span> -->
-        </span>
+        <!-- </span>
 
       
-    </span>
+    </span> -->
 
-    <span  class="webinar_newconblock">
+    <!-- <span  class="webinar_newconblock">
         <span  class="webinar_newconblock_wrapper">
             <h2>THIS WEBINAR WILL BE HOSTED BY:</h2>
     
@@ -193,9 +189,9 @@
     
     </span>
 
-</mat-card>
+</mat-card> -->
 
-<mat-card class="container newshop_block3">
+<!-- <mat-card class="container newshop_block3">
     <span class="spandiv newshop3_main_wrapper">
         <span class="spandiv newshop_block3_wrapper">
             <h2>The DNA of Success Incredible Quarterly Success Intensive Webinar - Spring - 2021</h2>
@@ -212,21 +208,21 @@
                  <span><strong>$ 49</strong> for you</span>
     
                 </span>
-            <span class="spandiv newshop_img">
+            <span class="spandiv newshop_img"> -->
                 <!-- <img src="../../assets/images/new_shop_con3_img1.png" alt="#"> -->
-                <span class="spandiv newshop_buynow">
+                <!-- <span class="spandiv newshop_buynow">
                     <a href="javascript:void(0)">Buy Now</a>
                   
                 </span>
-            </span>
+            </span> -->
             <!-- <span class="spandiv newshop_buynow">
                 <a href="javascript:void(0)">Buy Now</a>
               
             </span> -->
-        </span>
-      
-    </span>
-    <span  class="webinar_newconblock">
+        <!-- </span>
+       -->
+    <!-- </span> -->
+    <!-- <span  class="webinar_newconblock">
         <span  class="webinar_newconblock_wrapper">
             <h2>THIS WEBINAR WILL BE HOSTED BY:</h2>
     
@@ -281,8 +277,8 @@
     
     </span>
 
-</mat-card>
-<mat-card class="container newshop_block4">
+</mat-card> -->
+<!-- <mat-card class="container newshop_block4">
     <span class="spandiv newshop4_main_wrapper">
         <span class="spandiv newshop_block4_wrapper">
             <h2>The DNA of Success Incredible Quarterly Success Intensive Webinar - Winter - 2021</h2>
@@ -301,22 +297,22 @@
                  <span><strong>$ 49</strong> for you</span>
     
                 </span>
-                <span class="spandiv newshop_img">
+                <span class="spandiv newshop_img"> -->
                     <!-- <img src="../../assets/images/new_shop_con2_img1.png" alt="#"> -->
                   <!-- <img src="../../assets/images/new_shop_con1_img1.png" alt="#"> -->
-                  <span class="spandiv newshop_buynow">
+                  <!-- <span class="spandiv newshop_buynow">
                      <a href="javascript:void(0)">Buy Now</a>
                     
                          </span>
-                 </span>
+                 </span> -->
             <!-- <span class="spandiv newshop_buynow">
                 <a href="javascript:void(0)">Buy Now</a>
                
             </span> -->
-        </span>
-    </span>
+        <!-- </span>
+    </span> -->
 
-    <span  class="webinar_newconblock">
+    <!-- <span  class="webinar_newconblock">
         <span  class="webinar_newconblock_wrapper">
             <h2>THIS WEBINAR WILL BE HOSTED BY:</h2>
     
@@ -391,7 +387,23 @@
         </span>
     
     </span>
-</mat-card>
-
+</mat-card> -->
+<ng-container *ngFor="let item of allproduct;let i = index;">
+ 
+    <div class="block_main_CON">   
+      <div class="blockconwrapper block{{i}}">
+             
+             <div  class="con_wrapper" [innerHTML]="item.description">
+            </div>
+          <div class="con_BTN_DIV_Wrapper"> 
+             <div class="con_BTN_DIV"> 
+               <button (click)="productselect(item);" class="con_BTN">Buy Now</button>
+            </div>
+          </div>
+         
+      </div>
+    </div>
+ 
+</ng-container>
 
 <app-footer></app-footer>
