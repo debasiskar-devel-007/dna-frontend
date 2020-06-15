@@ -32,4 +32,8 @@ export class HomeComponent implements OnInit {
     console.log(value);
     this.router.navigateByUrl('/products/'+value)
   }
+  learnproduct1(value){
+    this.router.navigateByUrl('/products-list/'+value)
+
+  }
 }
