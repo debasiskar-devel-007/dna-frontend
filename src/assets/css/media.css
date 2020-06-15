@@ -6737,7 +6737,7 @@
   
       .newhomeblock5_left{ width: 100%; max-width: inherit;}
   
-      .newhomeblock5_right{ width: 100%; max-width: inherit;     padding: 0!important;}
+      .newhomeblock5_right{ width: 100%; max-width: inherit;     padding: 0!important; position: inherit;}
   
       .newhomeblock5_left_block1 {
           padding: 20px;
