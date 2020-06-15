@@ -65,7 +65,7 @@ export class LandingpageComponent implements OnInit {
         {
           heading:"",
           label:"Telephone",
-          name:"number",
+          name:"contactnumber",
           value:'',
           type:"number",
           validations:[
