@@ -65,6 +65,19 @@ export class ProductComponent implements OnInit {
      // console.log(this.ActivatedRoute.snapshot.params.class.length);
      if (this.ActivatedRoute.snapshot.params.class != null && this.ActivatedRoute.snapshot.params.class.length==1) {
       document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', });
+        if(this.ActivatedRoute.snapshot.params.class==1){
+          this.chooseProduct('','good');
+          this.selectedProduct.good = 1;
+        }else if(this.ActivatedRoute.snapshot.params.class==2){
+          this.chooseProduct('','better');
+          this.selectedProduct.better = 1;
+        }else if(this.ActivatedRoute.snapshot.params.class==3){
+          this.chooseProduct('','best');
+          this.selectedProduct.best = 1;
+        }else if(this.ActivatedRoute.snapshot.params.class==4){
+          this.chooseProduct('','mentor');
+          this.selectedProduct.mentor = 1;
+        }
     }else{
       let data:any = {
         "id":this.ActivatedRoute.snapshot.params.class
