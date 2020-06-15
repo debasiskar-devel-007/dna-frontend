@@ -67,9 +67,14 @@ const routes: Routes = [
 
   {path:'login', component: LoginComponent}, 
 
-  {path:'products', component: ProductComponent},
+  {path:'products', component: ProductComponent,
+  resolve: { packagedata: TestresolveService },
+  data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage'}
+},
   {path:'products-list/:id', component: ProductComponent},
-  {path:'products/:class', component: ProductComponent},
+  {path:'products/:class', component: ProductComponent,
+  resolve: { packagedata: TestresolveService },
+  data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage'}},
 
   {path:'contact', component: ContactComponent}, 
 

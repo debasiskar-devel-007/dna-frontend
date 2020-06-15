@@ -11,6 +11,8 @@ import {environment} from '../../environments/environment';
 export class ProductComponent implements OnInit {
   public saletax: number = 0;
   public total: number = 0;
+  public allPackage:any=[];
+  public index:number;
   public selectedProduct: any = { good: 0, better: 0, best: 0, mentor: 0 };
   public expyear: any = [{ val: 20, 'name': '2020' }, { val: 21, 'name': '2021' }, { val: 22, 'name': '2022' }, { val: 23, 'name': '2023' }, { val: 24, 'name': '2024' }
     , { val: 25, 'name': '2025' }, { val: 26, 'name': '2026' }, { val: 27, 'name': '2027' }, { val: 28, 'name': '2028' }, { val: 29, 'name': '2029' }, { val: 30, 'name': '2030' }]
@@ -62,6 +64,10 @@ export class ProductComponent implements OnInit {
 
 
   ngOnInit() {
+    this.ActivatedRoute.data.subscribe((resolveData:any) => {
+      this.allPackage=resolveData.packagedata.message;
+      // console.log(resolveData.packagedata.message) 
+    });
     //console.log(this.ActivatedRoute.snapshot.url[0].path);
     //  console.log(this.ActivatedRoute.snapshot.params.id.substring(0, 1));
     if(this.ActivatedRoute.snapshot.url[0].path=='products-list'){
@@ -393,7 +399,7 @@ export class ProductComponent implements OnInit {
     };
     
       setTimeout(() => {
-        console.log(this.parentdetails.type)
+        // console.log(this.parentdetails.type)
        this.formfieldrefreshdata = {
          field: 'addfromcontrol',
              value: {
@@ -409,11 +415,19 @@ export class ProductComponent implements OnInit {
 
   }
 
+  //choose
+  choose(i:any,item:any){
+    console.log(item);
+    console.log(i);
+    this.index = i;
+    this.allPackage[i].flag=item._id;
+    console.log(item);
+  }
   chooseProduct(item, flag) {
 
     // document.querySelector('.newproduct_list1').scrollIntoView({ behavior: 'smooth', });
 
-    console.log(flag)
+    // console.log(flag)
     //this.selectedProduct.item = 1 - this.selectedProduct.item;
     // if(this.subtotal>100) this.shipping=0;
     // this.subtotal=(this.price*this.qty);
@@ -483,13 +497,13 @@ export class ProductComponent implements OnInit {
       this.selectedProduct.better = 0;
       this.selectedProduct.best = 0;
     }
-    //  console.warn(this.productDetails);
+    //  // console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {
-    //console.log(val);
+    //// console.log(val);
     if (val.field == 'fromsubmit') {
       if (val.fromval.message != null && val.fromval.message != '') {
-        console.log(val.fromval.message._id);
+        // console.log(val.fromval.message._id);
         this.router.navigateByUrl('success/' + val.fromval.message._id);
 
       }
