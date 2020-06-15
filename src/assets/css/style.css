@@ -3071,7 +3071,9 @@ button{ box-shadow: none!important;}
 .norecordblock{ display: block;   padding: 80px 10px; text-align: center; font-size: 34px; color: #e75248;     font-family: 'OpenSans-Semibold';}
 .container.as_container{max-width: 100% !important; padding: 0;}
 .as_container .left_pro_blog {padding: 0 0px 0 0; float: left; width: 75%;}
-.as_container .product_div {padding: 0; float: left;  width: 25%;}
+.as_container .product_div {padding: 0; float: left;  width: 25%; position: -webkit-sticky;
+    position: sticky;
+    top: 0;}
 .as_bodycon .newproduct_list1{background:url(../images/product_bg1.jpg) no-repeat left top !important; border: none; margin-top: -2px; background-size: cover !important;}
 .as_bodycon .newproduct_list1_top{background: none; border: none;}
 .as_bodycon .newproduct_list1_top_wrapper {padding-left: 0px; min-height: auto; background: none; padding: 30px 40px 4px 40px;}
