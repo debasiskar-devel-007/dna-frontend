@@ -68,7 +68,7 @@ export class ProductComponent implements OnInit {
     this.ActivatedRoute.data.subscribe((resolveData:any) => {
       this.allPackage=resolveData.packagedata.results.package;
       this.acctoken=resolveData.packagedata.results.token.access_token;
-      console.log(this.acctoken);
+      // console.log(this.acctoken);
       //  console.log(resolveData.packagedata) 
     });
     //console.log(this.ActivatedRoute.snapshot.url[0].path);
@@ -467,7 +467,7 @@ export class ProductComponent implements OnInit {
     this.total = this.productDetails.total;
     this.productDetails.usertype =item.role.toLowerCase();
     this.productDetails.webinarid =item.webinar;
-    console.warn(this.productDetails);
+    // console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {
     //// console.log(val);
