@@ -1038,9 +1038,9 @@ box-shadow: none!important;
     background: -o-linear-gradient(45deg, rgba(216,230,232,1) 0%, rgba(216,233,236,1) 100%);
     background: -ms-linear-gradient(45deg, rgba(216,230,232,1) 0%, rgba(216,233,236,1) 100%);
     background: linear-gradient(45deg, rgba(216,230,232,1) 0%, rgba(216,233,236,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e6e8', endColorstr='#d8e9ec', GradientType=1 ); position: relative; padding: 0px;     width: auto;}
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e6e8', endColorstr='#d8e9ec', GradientType=1 ); position: relative; padding: 0px;   padding-bottom: 10px;  width: auto;}
 
-.newabout_block1_wrapper{background: url("../images/new_about_con1.png") no-repeat right bottom; min-height: 540px; overflow: hidden; padding: 24px; padding-right: 480px;}
+.newabout_block1_wrapper{background: url("../images/new_about_con1.png") no-repeat right bottom;  overflow: hidden; padding: 24px; padding-right: 530px; }
 
 
 .newabout_block1_wrapper h2{background: url("../images/new_about_con_icon.png") no-repeat left center; font-size: 24px; color: #2a2929; text-transform: uppercase;  font-family: 'OpenSans-Semibold'; margin: 0px; padding: 5px 0 5px 55px;}
@@ -1185,7 +1185,8 @@ box-shadow: none!important;
 
 
 
-.newabout_block5_left h3{background: url("../images/new_about_con_icon2.png") no-repeat left 10px; font-size: 18px; color: #000000;   font-family: 'OpenSans-Regular'; font-weight: normal; margin:10px  0px; padding: 5px 0 5px 40px; line-height: 24px; }
+.newabout_block5_left h3{background: url("../images/new_about_con_icon2.png") no-repeat left 10px; font-size: 20px; 
+    color: #000000;   font-family: 'OpenSans-Regular'; font-weight: normal; margin:10px  0px; padding: 5px 0 5px 40px; line-height: 26px; }
 
 .newabout_block5_left:nth-of-type(1){ padding-left: 56px;}
 .newabout_block5_left:nth-of-type(2){ padding-left: 45px;}
@@ -1235,7 +1236,8 @@ box-shadow: none!important;
 
 .newabout_block6_con3{background: url("../images/new_about_con6_bg3.png") no-repeat center bottom;  padding-bottom: 25%; padding-top: 15px;}
 
-.newabout_block6_con3 h2{ width: 90%; margin: 0 auto; text-align: center; padding: 16px; background: #27c8fb; border: solid 1px #fff; border-radius: 10px; font-size: 24px; color: #fff; text-transform: uppercase; font-family: 'OpenSans-Semibold';}
+.newabout_block6_con3 h2{ width: 90%; margin: 0 auto; text-align: center; padding: 16px; background: #27c8fb; border: solid 1px #fff; border-radius: 10px;
+     font-size: 28px; color: #fff; text-transform: uppercase; font-family: 'OpenSans-Semibold';}
 
 
 
@@ -4118,6 +4120,7 @@ button{ box-shadow: none!important;}
 .newmentorsignup_block2_text3 .newmentorsignup_block2_text3_wrapper p{ margin: 12px; font-size: 24px; color: #ffffff; font-family: 'robotoregular'; line-height: 32px;  text-shadow: 0 1px 2px #125079;}
 
 .newmentorsignup_block2_text3 .newmentorsignup_block2_text3_wrapper p span{ color: #fff47a;}
+
 .newmentorsignup_block2_text3 .newmentorsignup_block2_text3_wrapper p strong{ color: #363849;  }
 
 .newmentorsignup_form{
