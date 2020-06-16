@@ -342,10 +342,10 @@
                            
                                 <div class="newproduct_con4_btn1">
                                     <a class="choosenbtn" *ngIf="item.flag == item._id && index == i"
-                                        style="background: rgb(249, 94, 25);" (click)="choose(i,item)">Choosen</a>
+                                        style="background: rgb(249, 94, 25);" (click)="chooseProduct(i,item)">Choosen</a>
 
                                     <a class="pro_packagebtn221_btn" *ngIf="item.flag !=item._id || index != i"
-                                        (click)="choose(i,item)">CHOOSE THIS PACKAGE</a>
+                                        (click)="chooseProduct(i,item)">CHOOSE THIS PACKAGE</a>
                                 </div>
                             <div class="clearfix"></div>
                     
