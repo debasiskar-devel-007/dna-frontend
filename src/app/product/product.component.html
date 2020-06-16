@@ -333,13 +333,13 @@
                 </div> -->
             <ng-container *ngFor="let item of allPackage;let i = index;">
 
-                <div class="cooming">
-                    <div class="{{i}}">
+                <div class="package_group">
+                    <div class="package{{i}}">
 
-                        <div class="cooming" [innerHTML]="item.description">
+                        <div  [innerHTML]="item.description">
                         </div>
-                        <div class="cooming">
-                            <div class="cooming">
+                      
+                           
                                 <div class="newproduct_con4_btn1">
                                     <a class="choosenbtn" *ngIf="item.flag == item._id && index == i"
                                         style="background: rgb(249, 94, 25);" (click)="choose(i,item)">Choosen</a>
@@ -347,8 +347,8 @@
                                     <a class="pro_packagebtn221_btn" *ngIf="item.flag !=item._id || index != i"
                                         (click)="choose(i,item)">CHOOSE THIS PACKAGE</a>
                                 </div>
-                            </div>
-                        </div>
+                            <div class="clearfix"></div>
+                    
 
                     </div>
                 </div>
