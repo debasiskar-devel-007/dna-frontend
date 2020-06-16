@@ -20,7 +20,7 @@ export class MentorsignupComponent implements OnInit {
   public formdata:any;
   public statesjson : any =[];
   public parentid:any = '';
-
+  public shareUser:any =[];
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute ) {
     this._apiService.getState().subscribe((response:any) => {
      // console.log(response)
@@ -33,6 +33,10 @@ export class MentorsignupComponent implements OnInit {
     })
     if(this.ActivatedRoute.snapshot.params._id != null && typeof(ActivatedRoute.snapshot.params._id) != "undefined"){
       this.parentid = this.ActivatedRoute.snapshot.params._id;
+      this.ActivatedRoute.data.subscribe((resolveData:any) => {
+       this.shareUser=resolveData.Data.results.res[0]
+       // console.log(this.shareUser,resolveData);
+      });
     }
     this.formdata = {
       successmessage:"Added Successfully !!",
@@ -185,12 +189,6 @@ export class MentorsignupComponent implements OnInit {
             value:"mentor"
         },
         {
-            label:"parentid",
-            name:"parentid",
-            type:'hidden',
-            value:this.parentid
-        },
-        {
           label:"status",
           name: "status",
           type: 'hidden',
@@ -202,6 +200,38 @@ export class MentorsignupComponent implements OnInit {
    }
 
   ngOnInit() {
-  }
+    if(this.ActivatedRoute.snapshot.params._id != null && typeof(this.ActivatedRoute.snapshot.params._id) != "undefined"){
+    setTimeout(() => {
+       console.log(this.shareUser)
+       console.log(this.shareUser.type)
 
+       if(this.shareUser.type=='affiliate'){
+              this.formfieldrefreshdata = {
+       field: 'addfromcontrol',
+           value: {
+           label: 'affiliate_id',
+           name: 'affiliate_id',
+           type: 'hidden',
+           after: 'type',
+           value: this.parentid
+       }
+   };
+       }
+       //mentor
+       if(this.shareUser.type=='mentor'){
+               this.formfieldrefreshdata = {
+       field: 'addfromcontrol',
+           value: {
+           label: 'parentid',
+           name: 'parentid',
+           type: 'hidden',
+           after: 'type',
+           value: this.parentid
+       }
+   };
+       }
+
+   }, 3000);
+  }
+  }
 }
