@@ -63,7 +63,9 @@ const routes: Routes = [
   data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getblogdatabyid'}}, 
 
   {path:'affiliatesignup', component: AffiliatesignupComponent}, 
-  {path : 'affiliatesignup/:_id' , component: AffiliatesignupComponent},
+  {path : 'affiliatesignup/:_id' , component: AffiliatesignupComponent,
+  resolve: { Data: TestresolveService },
+  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getuserdatabyid'}},
 
   {path:'login', component: LoginComponent}, 
 
@@ -79,9 +81,17 @@ const routes: Routes = [
   {path:'contact', component: ContactComponent}, 
 
   {path:'mentorsignup', component: MentorsignupComponent}, 
-  {path: 'mentorsignup/:_id' , component: MentorsignupComponent},
+
+  {path: 'mentorsignup/:_id' , component: MentorsignupComponent,
+  resolve: { Data: TestresolveService },
+  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getuserdatabyid'}},
 
   {path:'landingpage', component: LandingpageComponent}, 
+  {path:'landingpage/:_id', component: LandingpageComponent,
+  resolve: { Data: TestresolveService },
+  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getuserdatabyid'}}, 
+
+
   {path:'menteelandingpage', component: MenteelandingpageComponent}, 
   {path:'success', component: SuccessComponent},
   {path:'success/:_id', component: SuccessComponent,resolve: { successData: TestresolveService },

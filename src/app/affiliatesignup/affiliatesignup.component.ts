@@ -21,6 +21,7 @@ export class AffiliatesignupComponent implements OnInit {
  public formdata:any;
  public parentid:any = '';
  public statesjson : any =[];
+ public shareUser:any =[];
 
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute
     // public meta: MetaService
@@ -40,7 +41,7 @@ export class AffiliatesignupComponent implements OnInit {
     // this.meta.setTag('og:url','https://www.dnamastercourse.com/');
     //   this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
     this._apiService.getState().subscribe((response:any) => {
-      console.log(response)
+      // console.log(response)
       for (let i in response) {
         this.statesjson.push(
           { 'val': response[i].abbreviation, 'name': response[i].name },
@@ -50,6 +51,10 @@ export class AffiliatesignupComponent implements OnInit {
     })
     if(this.ActivatedRoute.snapshot.params._id != null && typeof(ActivatedRoute.snapshot.params._id) != "undefined"){
       this.parentid = this.ActivatedRoute.snapshot.params._id;
+      this.ActivatedRoute.data.subscribe((resolveData:any) => {
+        this.shareUser=resolveData.Data.results.res[0]
+         //console.log(this.shareUser,resolveData);
+       });
     }
     this.formdata = {
       successmessage:"Added Successfully !!",
@@ -264,12 +269,6 @@ export class AffiliatesignupComponent implements OnInit {
             value:"affiliate"
         },
         {
-            label:"parentid",
-            name:"parentid",
-            type:'hidden',
-            value:this.parentid
-        },
-        {
             label:"status",
             name: "status",
             type: 'hidden',
@@ -282,6 +281,39 @@ export class AffiliatesignupComponent implements OnInit {
   }
 
   ngOnInit() {
+    if(this.ActivatedRoute.snapshot.params._id != null && typeof(this.ActivatedRoute.snapshot.params._id) != "undefined"){
+      setTimeout(() => {
+         console.log(this.shareUser)
+         console.log(this.shareUser.type)
+  
+         if(this.shareUser.type=='affiliate'){
+                this.formfieldrefreshdata = {
+         field: 'addfromcontrol',
+             value: {
+             label: 'affiliate_id',
+             name: 'affiliate_id',
+             type: 'hidden',
+             after: 'type',
+             value: this.parentid
+         }
+     };
+         }
+         //mentor
+         if(this.shareUser.type=='mentor'){
+                 this.formfieldrefreshdata = {
+         field: 'addfromcontrol',
+             value: {
+             label: 'parentid',
+             name: 'parentid',
+             type: 'hidden',
+             after: 'type',
+             value: this.parentid
+         }
+     };
+         }
+  
+     }, 3000);
+    }
   }
   
 }
