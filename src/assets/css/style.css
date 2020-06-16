@@ -1038,9 +1038,9 @@ box-shadow: none!important;
     background: -o-linear-gradient(45deg, rgba(216,230,232,1) 0%, rgba(216,233,236,1) 100%);
     background: -ms-linear-gradient(45deg, rgba(216,230,232,1) 0%, rgba(216,233,236,1) 100%);
     background: linear-gradient(45deg, rgba(216,230,232,1) 0%, rgba(216,233,236,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e6e8', endColorstr='#d8e9ec', GradientType=1 ); position: relative; padding: 0px;   padding-bottom: 10px;  width: auto;}
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e6e8', endColorstr='#d8e9ec', GradientType=1 ); position: relative; padding: 0px;     width: auto;}
 
-.newabout_block1_wrapper{background: url("../images/new_about_con1.png") no-repeat right bottom;  overflow: hidden; padding: 24px; padding-right: 530px; }
+.newabout_block1_wrapper{background: url("../images/new_about_con1.png") no-repeat right bottom;  overflow: hidden; padding: 24px; padding-right: 530px; padding-bottom: 30px;}
 
 
 .newabout_block1_wrapper h2{background: url("../images/new_about_con_icon.png") no-repeat left center; font-size: 24px; color: #2a2929; text-transform: uppercase;  font-family: 'OpenSans-Semibold'; margin: 0px; padding: 5px 0 5px 55px;}
