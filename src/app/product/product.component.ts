@@ -447,7 +447,7 @@ export class ProductComponent implements OnInit {
 
   }
 
-  chooseProduct(i:any, item:any,flag:any) {
+  chooseProduct(i:any, item:any) {
 
     // document.querySelector('.newproduct_list1').scrollIntoView({ behavior: 'smooth', });
     // console.log(item);
