@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
   public total: number = 0;
   public allPackage:any=[];
   public index:number;
+  public acctoken:any;
   public selectedProduct: any = { good: 0, better: 0, best: 0, mentor: 0 };
   public expyear: any = [{ val: 20, 'name': '2020' }, { val: 21, 'name': '2021' }, { val: 22, 'name': '2022' }, { val: 23, 'name': '2023' }, { val: 24, 'name': '2024' }
     , { val: 25, 'name': '2025' }, { val: 26, 'name': '2026' }, { val: 27, 'name': '2027' }, { val: 28, 'name': '2028' }, { val: 29, 'name': '2029' }, { val: 30, 'name': '2030' }]
@@ -65,8 +66,10 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
     this.ActivatedRoute.data.subscribe((resolveData:any) => {
-      this.allPackage=resolveData.packagedata.message;
-      // console.log(resolveData.packagedata.message) 
+      this.allPackage=resolveData.packagedata.results.package;
+      this.acctoken=resolveData.packagedata.results.token.access_token;
+      // console.log(this.acctoken);
+      //  console.log(resolveData.packagedata) 
     });
     //console.log(this.ActivatedRoute.snapshot.url[0].path);
     //  console.log(this.ActivatedRoute.snapshot.params.id.substring(0, 1));
@@ -75,20 +78,20 @@ export class ProductComponent implements OnInit {
       
     }
      if (this.ActivatedRoute.snapshot.params.class != null && this.ActivatedRoute.snapshot.params.class.length==1) {
-      document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', });
-        if(this.ActivatedRoute.snapshot.params.class==1){
-          this.chooseProduct('','good');
-          this.selectedProduct.good = 1;
-        }else if(this.ActivatedRoute.snapshot.params.class==2){
-          this.chooseProduct('','better');
-          this.selectedProduct.better = 1;
-        }else if(this.ActivatedRoute.snapshot.params.class==3){
-          this.chooseProduct('','best');
-          this.selectedProduct.best = 1;
-        }else if(this.ActivatedRoute.snapshot.params.class==4){
-          this.chooseProduct('','mentor');
-          this.selectedProduct.mentor = 1;
-        }
+      // document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', });
+      //   if(this.ActivatedRoute.snapshot.params.class==1){
+      //     this.chooseProduct('','good');
+      //     this.selectedProduct.good = 1;
+      //   }else if(this.ActivatedRoute.snapshot.params.class==2){
+      //     this.chooseProduct('','better');
+      //     this.selectedProduct.better = 1;
+      //   }else if(this.ActivatedRoute.snapshot.params.class==3){
+      //     this.chooseProduct('','best');
+      //     this.selectedProduct.best = 1;
+      //   }else if(this.ActivatedRoute.snapshot.params.class==4){
+      //     this.chooseProduct('','mentor');
+      //     this.selectedProduct.mentor = 1;
+        // }
     }else{
       let data:any = {
         "id":this.ActivatedRoute.snapshot.params.class
@@ -112,14 +115,10 @@ export class ProductComponent implements OnInit {
       jwttoken: this._apiService.jwtToken,
       fields: [
         {
-          //heading:"",
-          label: "type",
-          name: "productDetails",
-          type: 'hidden',
-          value: this.productDetails,
-          validations: [
-            { rule: 'required', message: "Please Choose a Product" },
-          ]
+          label:'productdetails',
+          name:'productDetails',
+          type:'hidden',
+          value:this.productDetails
         },
         {
           //heading:"",
@@ -172,7 +171,7 @@ export class ProductComponent implements OnInit {
           type: "select",
           val: this.statesjson,
           validations: [
-            { rule: 'required', message: "Enter Your State" },
+            { rule: 'required', message: "Select Your State" },
           ]
         },
         {
@@ -203,7 +202,7 @@ export class ProductComponent implements OnInit {
           hint: "",
           validations: [
             { rule: 'required', message: "Email field Needs to be required" },
-            { rule: 'pattern', value: this.emailregex, message: "Must be a valid Email" }]
+            { rule: 'pattern', value: this.emailregex, message: "Enter a valid Email" }]
         },
         {
           //heading:"",
@@ -212,7 +211,7 @@ export class ProductComponent implements OnInit {
           type: 'password',
           hint: "",
           validations: [
-            { rule: 'required', message: "Password field Needs to be required" },
+            { rule: 'required', message: "Enter your required" },
             { rule: 'pattern', value: this.passwordregex, message: "Must contain a Capital Letter and a Number" }
           ]
         },
@@ -289,7 +288,7 @@ export class ProductComponent implements OnInit {
           type: "select",
           val: this.statesjson,
           validations: [
-            { rule: 'required', message: "Enter Your State" },
+            { rule: 'required', message: "Select Your State" },
           ]
         },
         {
@@ -299,7 +298,7 @@ export class ProductComponent implements OnInit {
           value: '',
           type: "number",
           validations: [
-            { rule: 'required', message: "Enter Your Zip Code " },
+            { rule: 'required', message: "Enter Your Zip Code" },
           ]
         },
         {
@@ -381,13 +380,20 @@ export class ProductComponent implements OnInit {
           name: "transactiontype",
           type: 'hidden',
           value: 'TEST'
-        }, {
-          //heading:"",
-          label: "parentid",
-          name: "parentid",
-          type: 'hidden',
-          value:this.ActivatedRoute.snapshot.params.class
         },
+        {
+          label:'accesstoken',
+          name:'accesstoken',
+          type:'hidden',
+          value:this.acctoken
+        }
+        // {
+        //   //heading:"",
+        //   label: "parentid",
+        //   name: "parentid",
+        //   type: 'hidden',
+        //   value:this.ActivatedRoute.snapshot.params.class
+        // },
         // {
         //   //heading:"",
         //   label: "parenttype",
@@ -399,105 +405,69 @@ export class ProductComponent implements OnInit {
     };
     
       setTimeout(() => {
-        // console.log(this.parentdetails.type)
+        //console.log(this.parentdetails.type)
        this.formfieldrefreshdata = {
          field: 'addfromcontrol',
              value: {
              label: 'parenttype',
              name: 'parenttype',
              type: 'hidden',
-             after: 'parentid',
+             after: 'status',
              value: this.parentdetails.type
          }
      };
+      //affiliate
+     if(this.parentdetails.type=='affiliate'){
+      this.formfieldrefreshdata = {
+        field: 'addfromcontrol',
+            value: {
+            label: 'affiliate_id',
+            name: 'affiliate_id',
+            type: 'hidden',
+            after: 'transactiontype',
+            value: this.parentdetails._id
+        }
+    };
+}
+        //mentor
+      if(this.parentdetails.type=='mentor'){
+        this.formfieldrefreshdata = {
+      field: 'addfromcontrol',
+      value: {
+      label: 'parentid',
+      name: 'parentid',
+      type: 'hidden',
+      after: 'transactiontype',
+      value: this.parentdetails._id
+      }
+      };
+      }
      }, 3000);
     
 
   }
 
-  //choose
-  choose(i:any,item:any){
-    console.log(item);
-    console.log(i);
-    this.index = i;
-    this.allPackage[i].flag=item._id;
-    console.log(item);
-  }
-  chooseProduct(item, flag) {
+  chooseProduct(i:any, item:any) {
 
     // document.querySelector('.newproduct_list1').scrollIntoView({ behavior: 'smooth', });
-
-    // console.log(flag)
-    //this.selectedProduct.item = 1 - this.selectedProduct.item;
-    // if(this.subtotal>100) this.shipping=0;
-    // this.subtotal=(this.price*this.qty);
-    // this.subtotal=parseFloat(this.subtotal.toFixed(2));
-    if (flag == 'good') {
-      this.productDetails.name = 'GOOD Package';
-      this.productDetails.price = 149;
-      this.productDetails.delivery = 6.95;
-      this.saletax = this.productDetails.price / 100 * 6;
-      this.saletax = parseFloat(this.saletax.toFixed(2));
-      this.productDetails.saletax = this.saletax;
-      this.productDetails.total = this.productDetails.price + this.saletax + this.productDetails.delivery;
-      this.productDetails.total = parseFloat(this.productDetails.total.toFixed(2));
-      this.total = this.productDetails.total;
-      this.productDetails.usertype = 'mentee';
-
-      this.selectedProduct.best = 0;
-      this.selectedProduct.better = 0;
-      this.selectedProduct.mentor = 0;
-
-    } else if (flag == 'best') {
-      this.productDetails.name = 'BEST Package';
-      this.productDetails.price = 349;
-      this.productDetails.delivery = 6.95;
-      this.saletax = this.productDetails.price / 100 * 6;
-      this.saletax = parseFloat(this.saletax.toFixed(2));
-      this.productDetails.saletax = this.saletax;
-      this.productDetails.total = this.productDetails.price + this.saletax + this.productDetails.delivery;
-      this.productDetails.total = parseFloat(this.productDetails.total.toFixed(2));
-      this.total = this.productDetails.total;
-
-      this.productDetails.usertype = 'mentee';
-
-      this.selectedProduct.good = 0;
-      this.selectedProduct.better = 0;
-      this.selectedProduct.mentor = 0;
-    } else if (flag == 'better') {
-      this.productDetails.name = 'BETTER Package';
-      this.productDetails.price = 249;
-      this.productDetails.delivery = 6.95;
-      this.saletax = this.productDetails.price / 100 * 6;
-      this.saletax = parseFloat(this.saletax.toFixed(2));
-      this.productDetails.saletax = this.saletax;
-      this.productDetails.total = this.productDetails.price + this.saletax + this.productDetails.delivery;
-      this.productDetails.total = parseFloat(this.productDetails.total.toFixed(2));
-      this.total = this.productDetails.total;
-
-      this.productDetails.usertype = 'mentee';
-
-      this.selectedProduct.good = 0;
-      this.selectedProduct.mentor = 0;
-      this.selectedProduct.best = 0;
-    } else {
-      this.productDetails.name = 'MENTOR Package';
-      this.productDetails.price = 749;
-      this.productDetails.delivery = 6.95;
-      this.saletax = this.productDetails.price / 100 * 6;
-      this.saletax = parseFloat(this.saletax.toFixed(2));
-      this.productDetails.saletax = this.saletax;
-      this.productDetails.total = this.productDetails.price + this.saletax + this.productDetails.delivery;
-      this.productDetails.total = parseFloat(this.productDetails.total.toFixed(2));
-      this.total = this.productDetails.total;
-      this.productDetails.usertype = 'mentor';
-
-
-      this.selectedProduct.good = 0;
-      this.selectedProduct.better = 0;
-      this.selectedProduct.best = 0;
-    }
-    //  // console.warn(this.productDetails);
+    // console.log(item);
+    // console.log(i);
+    this.index = i;
+    this.allPackage[i].flag=item._id;
+    // console.log(item);
+    this.productDetails.name =item.productname;
+    this.productDetails.price = item.price;
+    this.productDetails.delivery = 6.95;
+    this.saletax = this.productDetails.price / 100 * 6;
+    this.saletax = parseFloat(this.saletax.toFixed(2));
+    this.productDetails.saletax = this.saletax;
+    this.productDetails.subtotal = this.productDetails.price*1;
+    this.productDetails.total = this.productDetails.subtotal + this.saletax + this.productDetails.delivery;
+    this.productDetails.total = parseFloat(this.productDetails.total.toFixed(2));
+    this.total = this.productDetails.total;
+    this.productDetails.usertype =item.role.toLowerCase();
+    this.productDetails.webinarid =item.webinar;
+    // console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {
     //// console.log(val);
