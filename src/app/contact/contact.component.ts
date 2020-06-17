@@ -53,7 +53,7 @@ export class ContactComponent implements OnInit {
               value: '',
               type: "text",
               validations: [
-                { rule: 'required' },
+                { rule: 'required', message: 'Name field is required' },
                 { rule: 'maxLength', value: 10 },
                 { rule: 'minLength', value: 2 }
               ],
@@ -67,7 +67,7 @@ export class ContactComponent implements OnInit {
               type: 'email',
               //hint: "abc@gmail.com",
               validations: [
-                { rule: 'required', message: "Email field Needs to be required" },
+                { rule: 'required', message: "Email field is required" },
                 { rule: 'pattern', value: this.emailregex, message: "Must be a valid Email" }]
             },
             {
@@ -77,7 +77,7 @@ export class ContactComponent implements OnInit {
               type: 'text',
               hint: '',
               validations: [
-                { rule: 'required' }
+                { rule: 'required', message: "Phone field is required" }
       
               ]
             },
@@ -88,7 +88,7 @@ export class ContactComponent implements OnInit {
               value: '',
               type: "textarea",
               validations: [
-                { rule: 'required' },
+                { rule: 'required' , message: 'Message field is required'},
               ]
             },
             {

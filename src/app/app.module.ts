@@ -20,15 +20,15 @@ import { TermsandCondition, PrivacyPolicy } from './footer/footer.component';
 // import { HeaderComponent } from './header/header.component';
 // import { NewthewholestoryComponent } from './newthewholestory/newthewholestory.component';
 // import { NewmentorComponent } from './newmentor/newmentor.component';
-import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
+//import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
 import { NewsuccessgeneticsComponent } from './newsuccessgenetics/newsuccessgenetics.component';
-import { AboutComponent } from './about/about.component';
+//import { AboutComponent } from './about/about.component';
 // import { BlogComponent } from './blog/blog.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
 import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
 import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
-import { ContactComponent } from './contact/contact.component';
+//import { ContactComponent } from './contact/contact.component';
 import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
 import { FacebookModule, FacebookService } from 'ngx-facebook';
 import { LandingpageComponent } from './landingpage/landingpage.component';
@@ -75,15 +75,15 @@ export function metaFactory(): MetaLoader {
     PrivacyPolicy,
     TermsandConditionSB,
     PrivacyPolicySB,
-    NewaboutbetoComponent,
+   // NewaboutbetoComponent,
     NewsuccessgeneticsComponent,
-    AboutComponent,
+   // AboutComponent,
     // BlogComponent, 
     BlogdetailComponent,
     AffiliatesignupComponent,
     LoginComponent,
     ProductComponent,
-    ContactComponent,
+    //ContactComponent,
     MentorsignupComponent,
     LandingpageComponent,
     MenteelandingpageComponent,
