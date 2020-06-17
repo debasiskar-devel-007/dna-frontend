@@ -406,6 +406,7 @@ export class ProductComponent implements OnInit {
     
       setTimeout(() => {
         //console.log(this.parentdetails.type)
+        if(this.parentdetails!=null && this.parentdetails!=''){
        this.formfieldrefreshdata = {
          field: 'addfromcontrol',
              value: {
@@ -416,32 +417,35 @@ export class ProductComponent implements OnInit {
              value: this.parentdetails.type
          }
      };
+
       //affiliate
-     if(this.parentdetails.type=='affiliate'){
-      this.formfieldrefreshdata = {
-        field: 'addfromcontrol',
-            value: {
-            label: 'affiliate_id',
-            name: 'affiliate_id',
-            type: 'hidden',
-            after: 'transactiontype',
-            value: this.parentdetails._id
-        }
-    };
-}
-        //mentor
-      if(this.parentdetails.type=='mentor'){
+      if(this.parentdetails.type=='affiliate'){
         this.formfieldrefreshdata = {
-      field: 'addfromcontrol',
-      value: {
-      label: 'parentid',
-      name: 'parentid',
-      type: 'hidden',
-      after: 'transactiontype',
-      value: this.parentdetails._id
-      }
+          field: 'addfromcontrol',
+              value: {
+              label: 'affiliate_id',
+              name: 'affiliate_id',
+              type: 'hidden',
+              after: 'transactiontype',
+              value: this.parentdetails._id
+          }
       };
-      }
+  }
+          //mentor
+        if(this.parentdetails.type=='mentor'){
+          this.formfieldrefreshdata = {
+        field: 'addfromcontrol',
+        value: {
+        label: 'parentid',
+        name: 'parentid',
+        type: 'hidden',
+        after: 'transactiontype',
+        value: this.parentdetails._id
+        }
+        };
+        }
+    }
+
      }, 3000);
     
 
