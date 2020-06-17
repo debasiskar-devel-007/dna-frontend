@@ -29,39 +29,31 @@ const api_url = environment['api_url'];
 
 const routes: Routes = [
 
-  { path: 'home', component: HomeComponent },
-  { path: '', component: HomeComponent },
+  {path:'home', component: HomeComponent}, 
+  {path:'', component: HomeComponent}, 
+  {path:'ordersuccess', component: OrdersuccessComponent},
+  {path:'ordersuccess/:_id', component: OrdersuccessComponent,resolve: {successData: TestresolveService},
+  data: {requestcondition: {source: '', condition: {'_id': '_id'}}, endpoint: 'api/ordersuccessresolve', api_url: api_url}}, 
 
-  { path: 'ordersuccess', component: OrdersuccessComponent },
+  {path:'successbook', component: SuccessbookComponent},
 
-  { path: 'successbook', component: SuccessbookComponent },
-
-  {
-    path: 'live-webinar', component: LiveWebinarComponent,
-    resolve: {
-      shop: TestresolveService
-    }, data: {
-      requestcondition: {
-        source: '', condition: {
-        }
-      },
-      endpoint: 'api/getwebinarshop',
-      api_url: api_url
+  {path:'live-webinar', component: LiveWebinarComponent, 
+  resolve: {
+    shop: TestresolveService
+  },data: {requestcondition: {source: '',condition: {
+      }
+    },
+    endpoint: 'api/getwebinarshop',
+    api_url: api_url
+  }
+}, 
+{path:'live-webinar/:shopid', component: LiveWebinarComponent, 
+resolve: {
+  shop: TestresolveService
+},data: {requestcondition: {source: '',condition: {
     }
-  },
-  {
-    path: 'live-webinar/:shopid', component: LiveWebinarComponent,
-    resolve: {
-      shop: TestresolveService
-    }, data: {
-      requestcondition: {
-        source: '', condition: {
-        }
-      },
-      endpoint: 'api/getwebinarshop',
-      api_url: api_url
-    }
-  },
+  },}
+},
 
   // {path:'thewholestory', component: NewthewholestoryComponent}, 
 
