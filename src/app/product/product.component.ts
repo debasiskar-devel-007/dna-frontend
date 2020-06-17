@@ -53,7 +53,7 @@ export class ProductComponent implements OnInit {
     this.meta.setTag('twitter:title', 'DNA Of Success - Our Products');
     this.meta.setTag('og:url', 'https://www.dnamastercourse.com/');
     if(this.router.url == '/products' || this.ActivatedRoute.snapshot.routeConfig.path == 'products/:class'){
-      this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
+      this.meta.setTag('og:image', '../../assets/images/default_image.jpg');
     }
 
 
