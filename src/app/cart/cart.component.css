@@ -1,0 +1,102 @@
+/* .admindashboard_block1_bg{ background: #f2f8fa url(../../assets/images/admindashboard_topbg.png) no-repeat center top; background-size: 100%; display: block; padding-top: 60px;}
+
+.adminDB_block1{ display: block; background: #fff; padding: 25px;  width: 1430px; margin: 0 auto; border-radius:8px; margin-bottom: 60px;}
+
+.adminDB_block1_con{ display: block; background: url(../../assets/images/checkout_pagebanner.jpg) no-repeat right top; border-radius: 0 6px 6px 0;     background-size: 50%;}
+
+.adminDB_block1_con_text{ display: block; background: url(../../assets/images/admindashboard_topbanner.png) no-repeat right top; width: 845px;   border-radius: 6px 0 0 6px;}
+
+.adminDB_block1_con_text_block{ display: flex; flex-wrap: wrap; justify-content: center; align-items: center; height: 222px;}  
+
+.adminDB_block1_con_text_block h2{ margin: 0; padding: 0; font-size: 48px;  color: #ffffff;  font-family:'OpenSans-Bold'; text-transform: uppercase;}
+ 
+
+
+       
+     
+
+            @media screen and (max-width: 1500px) {
+ 
+
+              .adminDB_block1{ width: 1300px;} 
+         
+
+          }
+          
+          @media screen and (max-width: 1380px) {
+          
+              .adminDB_block1{ width: 1200px;} 
+
+          
+           }
+           
+           
+          
+          @media screen and (max-width: 1280px) {
+
+            
+          
+              .adminDB_block1{ width: 1100px;}
+     
+          }
+          
+          @media screen and (max-width: 1199px) {
+           
+
+            .adminDB_block1_con_text_block h2{font-size: 40px;}
+              .adminDB_block1{ width: 90%;}
+           
+          
+              .adminDB_block1_con_text{ width: 650px;}
+          
+              
+
+   }
+          
+          
+ 
+   
+
+
+          @media screen and (max-width: 991px) {
+          
+            
+          
+              .adminDB_block1_con {
+                background-position: right top;
+                background-size: 180%;
+                padding-top: 66%;
+                text-align: center;
+              }
+           
+              .adminDB_block1_con h2{ padding: 20px 15px;}
+              .adminDB_block1{    padding: 15px;
+                  border-radius: 8px;
+                  background: #fff;}
+          
+          
+                  .adminDB_block1_con_text_block {
+                      display: block;
+                      height: auto;
+                  }
+          
+                  .adminDB_block1_con_text_block{ display: block;}
+          
+                  .adminDB_block1_con_text {
+                      width: 100%;
+                      background-image: none;
+                      background-color: #fd5b5b;
+                      border-radius: 6px;
+                  }
+           
+          }
+          
+          
+       
+          
+ 
+ 
+
+ 
+
+    */

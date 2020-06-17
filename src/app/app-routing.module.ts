@@ -21,6 +21,8 @@ import { SuccessComponent } from './success/success.component';
 import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
 import { SuccessbookComponent } from './successbook/successbook.component';
 import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
+import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 // const api_url1 =  environment["api_url1"];
 const api_url = environment['api_url'];
 
@@ -98,7 +100,31 @@ const routes: Routes = [
   data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api/ordersuccessresolve'}},
 
 
-
+  {
+    path: 'cart', component: CartComponent,
+  },
+  {
+    path: 'cart/:_id', component: CartComponent,
+    resolve: {cart: TestresolveService},
+    data: {
+      requestcondition: {source: '', condition: {_id: '_id'}},
+      endpoint: 'api/getcartdetails',
+      api_url: api_url
+    }
+  },
+  {
+    path: 'checkout', component: CheckoutComponent,
+   
+  },
+  {
+    path: 'checkout/:_id', component: CheckoutComponent,
+    resolve: {checkout: TestresolveService},
+    data: {
+      requestcondition: {source: '', condition: {_id: '_id'}},
+      endpoint: 'api/getcartdetails',
+      api_url: api_url
+    }
+  },
 
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: HomeComponent}

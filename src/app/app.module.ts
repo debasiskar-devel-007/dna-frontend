@@ -35,12 +35,13 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { ListingModule } from 'listing-angular7';
 import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpage.component';
 
-
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 import { SuccessComponent } from './success/success.component';
 import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
 import { SuccessbookComponent,TermsandConditionSB, PrivacyPolicySB, AddON } from './successbook/successbook.component';
 import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
+import { CartComponent } from './cart/cart.component';
+import {CheckoutComponent} from './checkout/checkout.component'
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
     pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
@@ -88,6 +89,8 @@ export function metaFactory(): MetaLoader {
     SuccessbookComponent,
     AddON,
     OrdersuccessComponent,
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     ListingModule,

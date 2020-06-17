@@ -49,7 +49,9 @@ export class LiveWebinarComponent implements OnInit {
     product.name = value.product_name;
     product.sq_no = value.product_sq_no;
     product.image = value.image;
-    // console.log(product);
+    product.webinarid = value._id;
+     console.log(product);
+     return;
     let data: any = {};
     if (this.activatedRoute.snapshot.params.shopid != '' && this.activatedRoute.snapshot.params.shopid != null) {
       data = {
