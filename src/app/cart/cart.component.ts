@@ -205,8 +205,10 @@ checkout() {
 
 openDialog(): void {
   const dialogRef = this.dialog.open(loginModal, {
-    width: '250px',
-    data:this.cartDetails
+    // width: '250px',
+    data:this.cartDetails,
+    panelClass: 'cartpopup',
+     
   });
 
   dialogRef.afterClosed().subscribe(result => {
