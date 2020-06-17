@@ -1,10 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
 import {CookieService} from 'ngx-cookie-service';
 import {ApiService} from '../api.service';
 import {ActivatedRoute, Router} from '@angular/router';
 // import {CartService} from '../cart.service';
 import {environment} from '../../environments/environment';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
+export interface DialogData {
+  alldata: any;
+  
+}
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -17,7 +22,7 @@ public saletax = 0;
 public quantity = 1;
 public uniqueId: any = 0;
 
-  constructor(public CookieService: CookieService, public activatedRoute: ActivatedRoute, public apiService: ApiService, public router: Router) { 
+  constructor(public dialog: MatDialog,public CookieService: CookieService, public activatedRoute: ActivatedRoute, public apiService: ApiService, public router: Router) { 
     this.uniqueId=this.CookieService.get('uniqueID')
   }
 
@@ -174,6 +179,9 @@ continushopping() {
 // checkout functions
 checkout() {
   let checkout: any = {};
+  this.openDialog()
+  // console.log(this.cartDetails[0]);
+  return;
   if (this.activatedRoute.snapshot.params._id != null && this.activatedRoute.snapshot.params._id != undefined) {
    checkout = {
     cartid: this.activatedRoute.snapshot.params._id,
@@ -194,4 +202,58 @@ checkout() {
 
   });
 }
+
+openDialog(): void {
+  const dialogRef = this.dialog.open(loginModal, {
+    width: '250px',
+    data:this.cartDetails
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+    // this.cartDetails[0].type=result
+    console.log('The dialog was closed');
+  });
+}
+
+}
+
+@Component({
+  selector: 'loginModal',
+  templateUrl: 'login.html',
+})
+export class loginModal {
+  public dta:any =[];
+  constructor(
+    public dialogRef: MatDialogRef<loginModal>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,public activatedRoute: ActivatedRoute, public apiService: ApiService, public router: Router) {
+      this.dta=data;
+      // console.log(data)
+    }
+
+    guestuser(value:any){
+    let checkout: any = {};
+    console.log(value)
+    console.log(this.dta)
+    this.dta[0].usertype='guest'
+    if (this.activatedRoute.snapshot.params._id != null && this.activatedRoute.snapshot.params._id != undefined) {
+      checkout = {
+       cartid: this.activatedRoute.snapshot.params._id,
+       cartdetails: this.dta[0]
+     };
+     } else {
+       checkout = {
+         cartid: this.dta[0]._id,
+         cartdetails: this.dta[0]
+       };
+     }
+    console.log(checkout);
+     this.apiService.customRequest1(checkout, 'api/checkout', environment['api_url']).subscribe((res: any) => {
+       if (res.status == 'success') {
+         this.router.navigateByUrl('checkout/' + res.results._id);
+       }
+   
+     });
+    this.dialogRef.close(value);
+  }
+
 }

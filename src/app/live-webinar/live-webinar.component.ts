@@ -11,6 +11,8 @@ import { environment } from '../../environments/environment';
 export class LiveWebinarComponent implements OnInit {
   public allproduct: any = [];
   public uniqueId: any = 0;
+  public acctoken:any;
+
   constructor(public cookieService: CookieService, private apiService: ApiService, public router: Router, public activatedRoute: ActivatedRoute) {
     this.uniqueId = this.makeid(14);
     let uid = this.cookieService.get('uniqueID');
@@ -39,6 +41,8 @@ export class LiveWebinarComponent implements OnInit {
     this.activatedRoute.data.forEach((response: any) => {
       // console.warn('shop',response);
       this.allproduct = response.shop.results.package;
+      this.acctoken=response.shop.results.token.access_token;
+      // console.log(this.acctoken)
       for (const i in this.allproduct) {
         this.allproduct[i].description_html = this.allproduct[i].description.replace(/(<p[^>]+?>|<p>|<\/p>)/img, '');
       }
@@ -62,11 +66,13 @@ export class LiveWebinarComponent implements OnInit {
       data = {
         product,
         tempid:this.uniqueId,
+        token:this.acctoken,
         id: this.activatedRoute.snapshot.params.shopid
       };
     } else {
       data = {
         product,
+        token:this.acctoken,
         tempid:this.uniqueId
       };
     }

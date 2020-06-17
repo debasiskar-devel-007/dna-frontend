@@ -131,7 +131,7 @@ resolve: {
     resolve: {checkout: TestresolveService},
     data: {
       requestcondition: {source: '', condition: {_id: '_id'}},
-      endpoint: 'api/getcartdetails',
+      endpoint: 'api/getcartdetailsfrontend',
       api_url: api_url
     }
   },

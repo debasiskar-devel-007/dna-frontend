@@ -40,7 +40,7 @@ import { SuccessComponent } from './success/success.component';
 import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
 import { SuccessbookComponent,TermsandConditionSB, PrivacyPolicySB, AddON } from './successbook/successbook.component';
 import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
-import { CartComponent } from './cart/cart.component';
+import { CartComponent ,loginModal} from './cart/cart.component';
 import {CheckoutComponent} from './checkout/checkout.component'
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
@@ -90,7 +90,8 @@ export function metaFactory(): MetaLoader {
     AddON,
     OrdersuccessComponent,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    loginModal
   ],
   imports: [
     ListingModule,
@@ -117,7 +118,7 @@ export function metaFactory(): MetaLoader {
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: [TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
+  entryComponents: [loginModal,TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
 })
 export class AppModule {
 

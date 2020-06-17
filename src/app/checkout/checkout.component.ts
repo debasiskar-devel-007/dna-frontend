@@ -13,11 +13,14 @@ export class CheckoutComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   public saletax = 0;
   public selectedProduct: any = { good: 0, better: 0, best: 0, mentor: 0 };
+  emailregex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   public expyear: any = [{ val: 20, name: '2020' }, { val: 21, name: '2021' }, { val: 22, name: '2022' }, { val: 23, name: '2023' }, { val: 24, name: '2024' }
     , { val: 25, name: '2025' }, { val: 26, name: '2026' }, { val: 27, name: '2027' }, { val: 28, name: '2028' }, { val: 29, name: '2029' }, { val: 30, name: '2030' }];
     public expmonth: any = [{ val: '01', 'name': 'JANUARY' }, { val: '02', 'name': 'FEBRUARY' }, { val: '03', 'name': 'MARCH' }, { val: '04', 'name': 'APRIL' }, { val: '05', 'name': 'MAY' }
     , { val: '06', 'name': 'JUNE' }, { val: '07', 'name': 'JULY' }, { val: '08', 'name': 'AUGUST' }, { val: '09', 'name': 'SEPTEMBER' }, { val: '10', 'name': 'OCTOBER' }, { val: '11', 'name': 'NOVEMBER' }
     , { val: '12', 'name': 'DECEMBER' }];
+  passwordregex: RegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
+
   public productDetails: any = {};
   public userDetails: any = {};
   public status: any = [{ val: 1, name: 'Active' }, { val: 0, name: 'Inactive' }];
@@ -35,8 +38,8 @@ export class CheckoutComponent implements OnInit {
     this.activatedRoute.data.forEach((response: any) => {
       // console.warn('checkoutdetails', response.checkout);
       this.productDetails = response.checkout.results;
-      this.userDetails = response.checkout.user;
-      console.log(this.userDetails);
+      
+      console.log(this.productDetails);
       const carData = {
         carData: response.checkout.results[0].product.length
       };
@@ -57,14 +60,14 @@ export class CheckoutComponent implements OnInit {
         apiUrl: environment['api_url'],
         // canceltext:"Cancel Now",
         // resettext:"Reset This",
-        endpoint: 'api/backendorder',
+        endpoint: 'api/cooming',
         jwttoken: this.apiService.jwtToken,
         fields: [
           {
             // heading:"",
             label: 'First Name',
             name: 'firstname',
-            value: this.userDetails.firstname,
+            value: '',
             type: 'text',
             validations: [
               { rule: 'required', message: 'Enter Your First Name' },
@@ -76,7 +79,7 @@ export class CheckoutComponent implements OnInit {
             // heading:"",
             label: 'Last Name',
             name: 'lastname',
-            value: this.userDetails.lastname,
+            value: '',
             type: 'text',
             validations: [
               { rule: 'required', message: 'Enter Your Last Name' },
@@ -88,7 +91,7 @@ export class CheckoutComponent implements OnInit {
             // heading:"",
             label: 'Address',
             name: 'address',
-            value: this.userDetails.address,
+            value: '',
             type: 'text',
             validations: [
               { rule: 'required', message: 'Enter Your Address' },
@@ -98,7 +101,7 @@ export class CheckoutComponent implements OnInit {
             // heading:"",
             label: 'City',
             name: 'city',
-            value: this.userDetails.city,
+            value: '',
             type: 'text',
             validations: [
               { rule: 'required', message: 'Enter Your City' },
@@ -110,7 +113,7 @@ export class CheckoutComponent implements OnInit {
             name: 'state',
             type: 'select',
             val: this.statesjson,
-            value: this.userDetails.state,
+            value: '',
             validations: [
               { rule: 'required', message: 'Enter Your State' },
             ]
@@ -119,7 +122,7 @@ export class CheckoutComponent implements OnInit {
             // heading:"",
             label: 'Zip',
             name: 'zip',
-            value: this.userDetails.zip,
+            value: '',
             type: 'number',
             validations: [
               { rule: 'required', message: 'Enter Your Zip Code ' },
@@ -133,6 +136,39 @@ export class CheckoutComponent implements OnInit {
             type: 'number',
             validations: [
               { rule: 'required', message: 'Enter Your Contact Number' },
+            ]
+          },
+          {
+            //heading:"",
+            label: "Email",
+            name: "email",
+            type: 'email',
+            hint: "",
+            validations: [
+              { rule: 'required', message: "Email field Needs to be required" },
+              { rule: 'pattern', value: this.emailregex, message: "Enter a valid Email" }]
+          },
+          {
+            //heading:"",
+            label: "Password",
+            name: "password",
+            type: 'password',
+            hint: "",
+            validations: [
+              { rule: 'required', message: "Enter your required" },
+              { rule: 'pattern', value: this.passwordregex, message: "Must contain a Capital Letter and a Number" }
+            ]
+          },
+          {
+            //heading:"",
+            label: "Confirm Password",
+            name: "confirmpassword",
+            type: 'password',
+            hint: "",
+            validations: [
+              { rule: 'required', message: "Confirm Password field Needs to be required" },
+              { rule: 'match', message: "Confirm Password field Needs to  match Password" },
+              { rule: 'pattern', value: this.passwordregex, message: "Must contain a Capital Letter and a Number" }
             ]
           },
           {
@@ -305,13 +341,15 @@ export class CheckoutComponent implements OnInit {
             name: 'transactiontype',
             type: 'hidden',
             value: 'TEST'
-          }, {
-            // heading:"",
-            label: 'userid',
-            name: 'userid',
-            type: 'hidden',
-            value: JSON.parse(this.CookieService.get('userid'))
-          }, {
+          }, 
+          // {
+          //   // heading:"",
+          //   label: 'userid',
+          //   name: 'userid',
+          //   type: 'hidden',
+          //   value: JSON.parse(this.CookieService.get('userid'))
+          // }, 
+          {
             // heading:"",
             label: 'cartid',
             name: 'cartid',
@@ -345,20 +383,20 @@ export class CheckoutComponent implements OnInit {
     if (val.field.name != 'card_type' && val.field.name != 'card_cc' && val.field.name != 'expyear' && val.field.name != 'card_cvv' && val.field.name != 'expmonth') {
       // console.log('listenFormFieldChange', val);
       // console.log(val.field.name, val.fieldval);
-      // if (val.field.name == 'firstname' || val.field.name == 'lastname' || val.field.name == 'address' || val.field.name == 'city' || val.field.name == 'state' || val.field.name == 'zip' || val.field.name == 'phone') {
-      //   this.formarray.push({ val: val.fieldval, name: val.field.name });
-      // }
-      // for(const i in this.userDetails){
-      //   this.formarray.push({ val: val.fieldval, name: val.field.name });
-      // }
+      if (val.field.name == 'firstname' || val.field.name == 'lastname' || val.field.name == 'address' || val.field.name == 'city' || val.field.name == 'state' || val.field.name == 'zip' || val.field.name == 'phone') {
+        this.formarray.push({ val: val.fieldval, name: val.field.name });
+      }
+      for(const i in this.userDetails){
+        this.formarray.push({ val: val.fieldval, name: val.field.name });
+      }
       // if (val.field.name == 'state') {
-        this.formarray.push({ val:this.userDetails.firstname , name:'firstname'},
-                            {val:this.userDetails.lastname,name:'lastname'},
-                            {val:this.userDetails.address,name:'address'},
-                            {val:this.userDetails.city,name:'city'},
-                            {val:this.userDetails.state,name:'state'},
-                            {val:this.userDetails.zip,name:'zip'}
-        )
+        // this.formarray.push({ val:this.userDetails.firstname , name:'firstname'},
+        //                     {val:this.userDetails.lastname,name:'lastname'},
+        //                     {val:this.userDetails.address,name:'address'},
+        //                     {val:this.userDetails.city,name:'city'},
+        //                     {val:this.userDetails.state,name:'state'},
+        //                     {val:this.userDetails.zip,name:'zip'}
+        // )
       // }
       console.log(this.formarray,'+++++');
       // console.log(val.field.name,val.fieldval,'+++++');
