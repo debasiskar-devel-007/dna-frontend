@@ -1,12 +1,12 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { NewthewholestoryComponent } from './newthewholestory/newthewholestory.component';
-import { NewmentorComponent } from './newmentor/newmentor.component';
+// import { NewthewholestoryComponent } from './newthewholestory/newthewholestory.component';
+// import { NewmentorComponent } from './newmentor/newmentor.component';
 import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
 import { NewsuccessgeneticsComponent } from './newsuccessgenetics/newsuccessgenetics.component';
 import { AboutComponent } from './about/about.component';
-import { BlogComponent } from './blog/blog.component';
+// import { BlogComponent } from './blog/blog.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
 import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
 import { LoginComponent } from './login/login.component';
@@ -30,6 +30,7 @@ const api_url = environment['api_url'];
 const routes: Routes = [
 
   {path:'home', component: HomeComponent}, 
+  {path:'', component: HomeComponent}, 
 
   {path:'ordersuccess', component: OrdersuccessComponent}, 
 
@@ -56,9 +57,9 @@ resolve: {
 }
 }, 
 
-  {path:'thewholestory', component: NewthewholestoryComponent}, 
+  // {path:'thewholestory', component: NewthewholestoryComponent}, 
 
-  {path:'mentor', component: NewmentorComponent}, 
+  // {path:'mentor', component: NewmentorComponent}, 
 
   {path:'aboutbeto', component: NewaboutbetoComponent}, 
 
@@ -66,10 +67,10 @@ resolve: {
 
   {path:'about', component: AboutComponent}, 
 
-  {path:'blog', component: BlogComponent,resolve: { blogData: TestresolveService },
-  data: { requestcondition: { source: '', condition: {} }, endpoint: 'api1/getblogbydate'}}, 
+  // // {path:'blog', component: BlogComponent,resolve: { blogData: TestresolveService },
+  // // data: { requestcondition: { source: '', condition: {} }, endpoint: 'api1/getblogbydate'}}, 
 
-  {path:'blog/:_id', component: BlogComponent},
+  // {path:'blog/:_id', component: BlogComponent},
 
   {path:'blog-details/:blogtitle/:_id', component: BlogdetailComponent,resolve: { blogData: TestresolveService },
   data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getblogdatabyid'}}, 
@@ -136,8 +137,10 @@ resolve: {
     }
   },
 
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: '**', component: HomeComponent}
+  // {path: '', redirectTo: 'home', pathMatch: 'full'},
+  // {path: '**', component: HomeComponent},
+
+  { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) }
 ];
 
 @NgModule({

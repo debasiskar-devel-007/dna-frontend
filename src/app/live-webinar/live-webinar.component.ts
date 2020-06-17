@@ -18,7 +18,7 @@ export class LiveWebinarComponent implements OnInit {
     let uid = this.cookieService.get('uniqueID');
     if (uid != null && uid != undefined && uid != '') {
       // console.log(this.cookieService.get('uniqueID'));
-      this.uniqueId=this.cookieService.get('uniqueID')
+      this.uniqueId = this.cookieService.get('uniqueID')
     } else {
       this.cookieService.set('uniqueID', this.uniqueId);
       //console.log(this.uniqueId);
@@ -60,7 +60,7 @@ export class LiveWebinarComponent implements OnInit {
     product.image = value.image;
     product.webinarid = value._id;
     //  console.log(product);
-     
+
     let data: any = {};
     if (this.activatedRoute.snapshot.params.shopid != '' && this.activatedRoute.snapshot.params.shopid != null) {
       data = {
