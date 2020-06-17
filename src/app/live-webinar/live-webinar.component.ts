@@ -16,7 +16,7 @@ export class LiveWebinarComponent implements OnInit {
     let uid = this.cookieService.get('uniqueID');
     if (uid != null && uid != undefined && uid != '') {
       // console.log(this.cookieService.get('uniqueID'));
-      this.uniqueId=this.cookieService.get('uniqueID')
+      this.uniqueId = this.cookieService.get('uniqueID')
     } else {
       this.cookieService.set('uniqueID', this.uniqueId);
       //console.log(this.uniqueId);
@@ -38,7 +38,8 @@ export class LiveWebinarComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.data.forEach((response: any) => {
       // console.warn('shop',response);
-      this.allproduct = response.shop.results.package;
+      if (response.shop.results != null && response.shop.results != null)
+        this.allproduct = response.shop.results;
       for (const i in this.allproduct) {
         this.allproduct[i].description_html = this.allproduct[i].description.replace(/(<p[^>]+?>|<p>|<\/p>)/img, '');
       }
@@ -56,18 +57,18 @@ export class LiveWebinarComponent implements OnInit {
     product.image = value.image;
     product.webinarid = value._id;
     //  console.log(product);
-     
+
     let data: any = {};
     if (this.activatedRoute.snapshot.params.shopid != '' && this.activatedRoute.snapshot.params.shopid != null) {
       data = {
         product,
-        tempid:this.uniqueId,
+        tempid: this.uniqueId,
         id: this.activatedRoute.snapshot.params.shopid
       };
     } else {
       data = {
         product,
-        tempid:this.uniqueId
+        tempid: this.uniqueId
       };
     }
 
