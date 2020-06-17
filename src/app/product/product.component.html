@@ -10,21 +10,25 @@
                     <span class="spandiv product_banner_inner_col">
                         <span class="spandiv product_banner_inner_top">
                             <span class="spandiv product_banner_inner_top_content">
-                                <span class="spandiv ptext1"> 
-                                    <span>Realize Your Core Desires</span> <span>*</span> Live an Incredible Life <span>*</span> Earn the Income You Want <span>*</span> Build Lasting Meaningful Relationships
-                                    
+                                <span class="spandiv ptext1">
+                                    <span>Realize Your Core Desires</span> <span>*</span> Live an Incredible Life
+                                    <span>*</span> Earn the Income You Want <span>*</span> Build Lasting Meaningful
+                                    Relationships
+
                                 </span>
                             </span>
                             <img src="../../assets/images/home_banner_top_ankle.png" alt="#">
                         </span>
                         <span class="spandiv producttextblock newprodutlistbannertxt">
-                         
+
                             <h2>CHOOSE ONE OF OUR INCREDIBLE, LIFE-CHANGING PACKAGES!</h2>
-                         
+
                             <span class="spandiv divtext2">
-                               
-                                There is so much value packed into every one of my courses - you can’t go wrong no matter which one you choose! You will receive IMMEDIATE access to online course materials and products within 24-hours!
-                                
+
+                                There is so much value packed into every one of my courses - you can’t go wrong no
+                                matter which one you choose! You will receive IMMEDIATE access to online course
+                                materials and products within 24-hours!
+
                             </span>
                         </span>
                     </span>
@@ -35,18 +39,18 @@
 </mat-card>
 
 
- 
-    <mat-card class="container as_container">
-        <div class="row">
-            <div class="left_pro_blog as_bodycon">
+
+<mat-card class="container as_container">
+    <div class="row" id="mentor">
+        <div class="left_pro_blog as_bodycon">
 
 
-                <div class="newproduct_list1">
+            <!-- <div class="newproduct_list1">
 
 
                     <div class="newproduct_list1_top">
 
-                        <div class="newproduct_list1_top_wrapper">
+                        <div class="newproduct_list1_top_wrapper" >
 
                             <h2>
                                   Good Package for <span>$149</span> 
@@ -93,16 +97,16 @@
                     </div>
 
 
-                </div>
+                </div> -->
 
 
-                <div class="newproduct_list2" id="newproduct_list2">
+            <!-- <div class="newproduct_list2" id="newproduct_list2">
 
                     <div class="newproduct_list2_top">
                         <div class="newproduct_list2_top_wrapper">
 
                             <h2>
-                                Better Package - <span>$500</span>
+                                Better Package - <span>$249</span>
                             </h2>
                             <h3>
                                 “The Essential Success Methods With Weekly Plus”
@@ -162,18 +166,18 @@
                     </div>
 
 
-                </div>
+                </div> -->
 
 
 
-
+            <!-- 
                 <div class="newproduct_list3" id="newproduct_list3">
 
                     <div class="newproduct_list3_top">
                         <div class="newproduct_list3_top_wrapper">
 
                             <h2>
-                                Best Package - <span>$500</span>
+                                Best Package - <span>$349</span>
                             </h2>
 
                            
@@ -234,12 +238,12 @@
 
 
 
-                </div>
+                </div> -->
 
 
 
 
-                <div class="newproduct_list4">
+            <!-- <div class="newproduct_list4">
 
                     <div class="newproduct_list4_top">
                         <div class="newproduct_list4_top_wrapper">
@@ -251,7 +255,7 @@
                             </h2>
 
                             <h3>
-                                <span>$600 includes:</span>
+                                <span>$749 includes:</span>
 
 
                             </h3>
@@ -326,124 +330,153 @@
                         <img src="../../assets/images/product_left_upimg03.png" alt="#">
                     </div>
 
+                </div> -->
+            <ng-container *ngFor="let item of allPackage;let i = index;">
+
+                <div class="package_group">
+                    <div class="package{{i}}">
+
+                        <div  [innerHTML]="item.description">
+                        </div>
+                      
+                           
+                                <div class="newproduct_con4_btn1">
+                                    <a class="choosenbtn" *ngIf="item.flag == item._id && index == i"
+                                        style="background: rgb(249, 94, 25);" (click)="chooseProduct(i,item)">Choosen</a>
+
+                                    <a class="pro_packagebtn221_btn" *ngIf="item.flag !=item._id || index != i"
+                                        (click)="chooseProduct(i,item)">CHOOSE THIS PACKAGE</a>
+                                </div>
+                            <div class="clearfix"></div>
+                    
+
+                    </div>
                 </div>
 
+            </ng-container>
 
 
-                <div class="newproduct_list5" >
+            <div class="newproduct_list5">
 
-                    <div class="newproduct_list5_top">
-                        <div class="newproduct_list5_top_wrapper">
+                <div class="newproduct_list5_top">
+                    <div class="newproduct_list5_top_wrapper">
 
-                            <h2>NOTICE:'
+                        <h2>NOTICE:
 
-                            </h2>
+                        </h2>
 
-                            <h3>THE INCREDIBLE DNA OF SUCCESS MENTOR<br/>
-PROGRAM HAS SO MUCH MORE
+                        <h3>THE INCREDIBLE DNA OF SUCCESS MENTOR<br />
+                            PROGRAM HAS SO MUCH MORE
 
-                            </h3>
-
-
+                        </h3>
 
 
+
+
+                    </div>
+                </div>
+
+                <div class="newproduct_list5_bottom">
+
+                    <div class="newproduct_list5_bottom_wrapper">
+
+
+                        <h2>
+                            <p> You will receive everything that you see above, but there is so much more to this
+                                program. Please take the time to review the special page that we have dedicated to
+                                understand what this program can do for your life.</p>
+
+                            <p>This is a career path for the right person. One that will change your life financially
+                                while you are helping others changes their entire lives completely.
+                                You are able to charge for your services, earn money selling our products and much more.
+                            </p>
+                        </h2>
+
+
+
+
+
+
+
+                        <h3>
+                            Learn more about our Mentor Program Now!
+
+                        </h3>
+
+
+
+
+
+
+                        <div class="newproduct_con5_btn1"><a href="javascript:void(0);" routerLink="/mentor">CLICK
+                                HERE</a>
                         </div>
+
+
                     </div>
 
-                    <div class="newproduct_list5_bottom">
-
-                        <div class="newproduct_list5_bottom_wrapper">
-
-
-                            <h2>
-                          <p> You will receive everything that you see above, but there is so much more to this program. Please take the time to review the special page that we have dedicated to understand what this program can do for your life.</p>
-
- <p>This is a career path for the right person. One that will change your life financially while you are helping others changes their entire lives completely. 
-     You are able to charge for your services, earn money selling our products and much more.</p>
-                            </h2>
-
-
-
-
-
-
-
-                            <h3> 
-                         Learn more about our Mentor Program Now!
-
-                            </h3>
-
-
-
-
-
-
-                            <div class="newproduct_con5_btn1"><a href="javascript:void(0);"  routerLink="/about">CLICK HERE</a>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                    <div class="bgupwrapper">
-                        <img src="../../assets/images/product_left_upimg4.png" alt="#">
-                        <img src="../../assets/images/product_left_upimg04.png" alt="#">
-                    </div>
+                </div>
+                <div class="bgupwrapper">
+                    <img src="../../assets/images/product_left_upimg4.png" alt="#">
+                    <img src="../../assets/images/product_left_upimg04.png" alt="#">
                 </div>
             </div>
+        </div>
 
 
 
 
 
-            <div class="product_div">
-                <div class="product_form as_product_form"  >
-                 
+        <div class="product_div">
+            <div class="product_form as_product_form">
 
 
-                    <!-- <form> -->
-                       
-                        <div class="product_form_main">
-                            <div class="cart_formbox1 cart_formbox1new">
-                                <ng-container *ngIf="productDetails != null && productDetails != 'undefined' && productDetails.name != null">
-                                <h3 class="productCartDetails">Order Summary</h3>
 
-                                <table class="product_new_tableblock productCartDetails" >
-                                    <tr>
-                                        <td colspan="2" id="productName">{{productDetails.name}} PACKAGE</td>
-                                    </tr>
+                <!-- <form> -->
 
-                                    <tr>
-                                        <td>Product total</td>
-                                        <td id="productPrice">${{productDetails.price}}</td>
-                                    </tr>
+                <div class="product_form_main">
+                    <div class="cart_formbox1 cart_formbox1new">
+                        <ng-container
+                            *ngIf="productDetails != null && productDetails != 'undefined' && productDetails.name != null">
+                            <h3 class="productCartDetails">Order Summary</h3>
 
-                                    <tr>
-                                        <td>Delivery</td>
-                                        <td>${{productDetails.delivery}}</td>
-                                    </tr>
+                            <table class="product_new_tableblock productCartDetails">
+                                <tr>
+                                    <td colspan="2" id="productName">{{productDetails.name}}</td>
+                                </tr>
 
-                                    <tr>
-                                        <th>Total</th>
-                                        <th id="productPriceTotal">${{productDetails.price + productDetails.delivery}}</th>
-                                    </tr>
+                                <tr>
+                                    <td>Product Price</td>
+                                    <td id="productPrice">${{productDetails.price}}</td>
+                                </tr>
 
-                                    <!-- <tr><td><input type="text" class="form-control"  placeholder="Promo Code"></td>
+                                <tr>
+                                    <td>Shipping Charge</td>
+                                    <td>${{productDetails.delivery}}</td>
+                                </tr>
+                                <tr>
+                                    <td>SaleTax</td>
+                                    <td>${{saletax}}</td>
+                                </tr>
+
+                                <tr>
+                                    <th>Total</th>
+                                    <th id="productPriceTotal">${{total}}</th>
+                                </tr>
+
+                                <!-- <tr><td><input type="text" class="form-control"  placeholder="Promo Code"></td>
 
                                         <td> <button>Apply</button> </td>
                                     </tr> -->
 
 
-                                </table>
-                            </ng-container>
-                                <h3>BILLING Address</h3>
-                                <lib-showform  class='form-inline productform' *ngIf="formdata !=null"
-                                [formdata]="formdata"
-                                [formfieldrefresh]="formfieldrefresh"
-                                [formfieldrefreshdata]="formfieldrefreshdata"
-                                (onFormFieldChange)="listenFormFieldChange($event)"
-                                > </lib-showform>
-                                <!-- <div class="form-group">
+                            </table>
+                        </ng-container>
+                        <h3>BILLING Address</h3>
+                        <lib-showform class='form-inline productform' *ngIf="formdata !=null" [formdata]="formdata"
+                            [formfieldrefresh]="formfieldrefresh" [formfieldrefreshdata]="formfieldrefreshdata"
+                            (onFormFieldChange)="listenFormFieldChange($event)"> </lib-showform>
+                        <!-- <div class="form-group">
                                     <label>First Name</label>
                                     <input type="text" class="form-control" name="bill_first_name" placeholder="First Name">
                                     <div class="clearfix"></div>
@@ -507,10 +540,10 @@ PROGRAM HAS SO MUCH MORE
                                     <div class="clearfix"></div>
                                 </div> -->
 
-                                <!-- <h3>Shipping Address</h3> -->
-                                
+                        <!-- <h3>Shipping Address</h3> -->
 
-                                <!-- <div class="form-group">
+
+                        <!-- <div class="form-group">
                                     <label>First Name</label>
                                     <input type="text" class="form-control" name="ship_first_name" placeholder="First Name">
                                     <div class="clearfix"></div>
@@ -545,8 +578,8 @@ PROGRAM HAS SO MUCH MORE
                                     <input type="text" class="form-control" name="ship_postal_code" placeholder="Zip">
                                     <div class="clearfix"></div>
                                 </div> -->
-                                <!-- <div class="credicardcls"> -->
-                                    <!-- <h4>Pay with Credit or Debit Card</h4>
+                        <!-- <div class="credicardcls"> -->
+                        <!-- <h4>Pay with Credit or Debit Card</h4>
 
 
                                     <div class="form-group pay_car">
@@ -555,9 +588,9 @@ PROGRAM HAS SO MUCH MORE
                                         <div class="clearfix"></div>
                                     </div> -->
 
-                                    
 
-                                    <!-- <div class="pay_car_group">
+
+                        <!-- <div class="pay_car_group">
 
                                         <div class="form-group">
                                             <label>Card Type</label>
@@ -595,22 +628,22 @@ PROGRAM HAS SO MUCH MORE
 
                                     </div> -->
 
-                                <!-- </div> -->
-                                <!-- <input type="submit" class="subbtn_pro" value="Rush my order"> -->
-                            </div>
-                        </div>
-                    <!-- </form> -->
+                        <!-- </div> -->
+                        <!-- <input type="submit" class="subbtn_pro" value="Rush my order"> -->
+                    </div>
                 </div>
-               
+                <!-- </form> -->
             </div>
-            <div class="clearfix"></div>
-
-
 
         </div>
+        <div class="clearfix"></div>
 
-    </mat-card>
 
- 
+
+    </div>
+
+</mat-card>
+
+
 
 <app-footer></app-footer>

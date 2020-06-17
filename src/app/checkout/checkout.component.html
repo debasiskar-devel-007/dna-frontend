@@ -1,0 +1,197 @@
+<app-header></app-header> 
+
+<div class="admindashboard_block1_bg">
+
+    <div class="adminDB_block1">
+      
+        <span class="adminDB_block1_con">
+
+            <span class="adminDB_block1_con_text">
+                <span class="adminDB_block1_con_text_block">
+                 <h2>CHECKOUT</h2>
+    
+                   
+                </span>
+            </span>
+    
+    
+        </span>
+
+
+
+        <div class="checkout_body">
+
+            <div class="checkout_body_left">
+
+                <h3>BILLING Address</h3>
+                <div class="card_form_block">
+                <lib-showform  class='form-inline productform' *ngIf="formdata !=null"
+                [formdata]="formdata"
+                [formfieldrefresh]="formfieldrefresh"
+                [formfieldrefreshdata]="formfieldrefreshdata"
+                (onFormFieldChange)="listenFormFieldChange($event)"
+                > </lib-showform>
+            </div>
+                <!-- cart summary -->
+
+          
+                <!-- <h3>Shipping ADDRESS</h3>
+                <div class="card_form_block">
+
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                    <textarea placeholder="Address"></textarea>
+                    <input type="text" placeholder="City">
+
+                    <select>
+                        <option>State </option>
+                        <option>State </option>
+                        <option>State </option>
+                     </select>
+                     <input type="text" placeholder="Zip">
+                </div>
+
+
+
+                <h2>Pay with Credit or Debit Card</h2>
+
+                <div class="card_form_block">
+                  <h5><span>We Accept</span> <img src="../../assets/images/card_img.png"></h5>
+
+                  <select>
+                     <option>Card Type</option>
+                     <option>Card Type</option>
+                     <option>Card Type</option>
+                  </select>
+
+                  <input type="text" placeholder="CC #">
+
+                  <select>
+                    <option>Card Type</option>
+                    <option>Card Type</option>
+                    <option>Card Type</option>
+                 </select>
+
+                 <span class="select_mm">
+                 <select>
+                    <option>Select Month</option>
+                    <option>Select Month</option>
+                    <option>Select Month</option>
+                 </select>
+                </span>
+
+                <span class="select_yy">
+                    <select>
+                        <option>Select Year</option>
+                    <option>Select Year</option>
+                    <option>Select Year</option>
+                    </select>
+                   </span>
+                
+
+                 
+
+                 <input type="text" placeholder="CVV">
+                  
+                </div>
+
+                <button class="checkout_BTN">checkout</button> -->
+
+            </div>
+            <div class="checkout_body_right">
+
+
+                <!-- <div class="cartblock">
+
+                    <h2>Your Cart</h2>
+
+                    <div class="cartblock_wrapper">
+                        <div class="cartblock_IMG"> <img src="../../assets/images/productdefault.jpg"> </div>
+
+                         <div class="cartblock_text"> 
+                            
+                                <label>The DNA of Success Incredible Quarterly Success 
+                                    Intensive Webinar - Spring</label> 
+
+                                    <strong> $ $149.00</strong>
+
+
+                                    <div class="cartblock_btnGroup">
+                                        <div class="cartblock_btnGroup_left">
+                                           <label>Quantity :</label>
+                                           <input type="number">
+                                        
+                                        </div>
+
+
+                                        <button class="Remove_btn">Remove</button>
+
+                             </div>
+                            
+                           
+
+                         </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="promocode_block">
+
+                    <h2>Have a promo code ?</h2>
+                    <input type="text">
+                    <button class="ApplyBTn">Apply</button>
+                    <div class="clearfix"></div>
+                </div> -->
+
+                <div class="order_block">
+
+                <h2>ORDER SUMMARY</h2>
+                <div class="order_block_wrapper">
+                <ng-container *ngFor="let item of productDetails[0].product">
+            <mat-card-subtitle>Item:<span>{{item.name}}</span></mat-card-subtitle>
+            <mat-card-subtitle>Quantity:<span>{{item.quantity}}</span></mat-card-subtitle>
+            </ng-container>
+            <mat-card-subtitle>SubTotal: <span>${{productDetails[0].subtotal}}</span></mat-card-subtitle>
+            <mat-card-subtitle>SaleTax: <span>${{productDetails[0].saletax}}</span></mat-card-subtitle>
+            <mat-card-subtitle>Shipping: <span>${{productDetails[0].shipping_charge}}</span></mat-card-subtitle>
+            <mat-card-subtitle>Total:<span>${{productDetails[0].total}}</span></mat-card-subtitle>
+         
+             </div>
+
+            </div>
+
+
+            <div class="security_block">
+
+                <h2>100% SECURE AND SAFE TRANSACTIONS</h2>
+
+                <img src="../../assets/images/security_img.png" alt="#">
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+   
+
+
+</div>
+  
+<app-footer></app-footer> 

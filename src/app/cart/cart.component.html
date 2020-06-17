@@ -1,0 +1,203 @@
+<app-header></app-header> 
+
+<div class="admindashboard_block1_bg">
+
+   <div class="adminDB_block1">
+     
+       <span class="adminDB_block1_con">
+
+           <span class="adminDB_block1_con_text">
+               <span class="adminDB_block1_con_text_block">
+                  <h2>Your Shopping Cart</h2>
+   
+                  
+               </span>
+           </span>
+   
+   
+       </span>
+
+
+
+       <div class="checkout_body">
+
+         <mat-card class="cartpagebody">
+
+            <!-- <h2>Your Shopping Cart</h2> -->
+       
+      <!-- cart page start -->
+            <span class="cartbodycon">
+      
+                <span class="cartleft">
+      
+                   <!-- cart loop start -->
+      
+                  <ng-container *ngIf="cartDetails!=null && cartDetails.length>0">
+                     
+                     <ng-container *ngFor="let item of cartDetails[0].product; index as i;">
+                        <span class="cartdetail">
+                           <span class="cartpro"><img [src]="item.image"></span>
+         
+                           <span class="carttext">
+                             <h5>{{item.name}}</h5>
+                             <label>${{item.price}}</label>
+                           
+         
+         
+                             <span class="carttext_info">
+                                  <span class="Quantity_text"><p>Quantity:</p><input type="number" [(ngModel)]="item.quantity" value="item.quantity" (change)="calculation(i)" min="1">
+                                    <button class="remove_cartbtn" (click)="removeItem(cartDetails[0]._id,i)">Remove</button>
+                                 </span>
+                    
+                                  
+                                 <span class="spandiv clearfix"></span>
+                             </span>
+         
+                           </span>
+         
+         
+                           <span class="spandiv clearfix"></span>
+                       </span>
+                     </ng-container>
+                     <button class="shoppingbtn" (click)="continushopping()" routerLinkActive="router-link-active" > Continue Shopping</button>
+                  </ng-container>
+                    
+      
+                  <!-- cart loop end -->
+                   <!-- cart loop start -->
+                  
+                   <!-- <span class="cartdetail">
+                      <span class="cartpro"><img src="../../assets/images/productdefault.jpg"></span>
+      
+                      <span class="carttext">
+                       <h5>The DNA of Success Incredible Quarterly Success 
+                        Intensive Webinar - Spring</h5>
+                        <label>$149.00</label>
+      
+      
+                        <span class="carttext_info">
+                             <span class="Quantity_text"><p>Quantity:</p> <input type="number"></span>
+               
+                             <button class="remove_btn">Remove</button>
+                            <span class="spandiv clearfix"></span>
+                        </span>
+      
+                      </span>
+      
+      
+                      <span class="spandiv clearfix"></span>
+                  </span> -->
+      
+                <!-- cart loop end -->
+      
+      
+      
+      
+                  
+      
+      
+                </span>
+                <ng-container *ngIf="cartDetails!=null && cartDetails.length>0">
+                <span class="cartright">
+                 <h3>ORDER SUMMARY</h3>
+      
+                  <table cellspacing="0px" cellpadding="0px"> 
+                   <tr>
+                      <td>Subtotal</td>
+                      <td>${{cartDetails[0].subtotal}}</td>
+      
+                   </tr>
+      
+                   <tr>
+                      <td>Discount</td>
+                      <td>$0.00</td>
+      
+                   </tr>
+                   <tr>
+                      <td>Shipping</td>
+                      <td>$6.95</td>
+      
+                   </tr>
+                   <tr>
+                     <td>SaleTax</td>
+                     <td>${{cartDetails[0].saletax}}</td>
+      
+                  </tr>
+                  </table>
+      
+                        <table cellspacing="0px" cellpadding="0px"> 
+                   <tr>
+                      <th>Total</th>
+                      <th>${{cartDetails[0].total}}</th>
+      
+                   </tr>
+                   <tr>
+                      <td colspan="2"><button class="checkoutbtn" (click)="checkout()">checkout</button></td>
+                     
+      
+                   </tr>
+                   </table>
+                 
+                  
+      
+      
+                  
+      
+                  
+      
+                </span>
+               </ng-container>
+            </span>
+      
+      <!-- cart page end -->
+      
+      
+      
+      
+      
+      <!-- currently empty start -->
+      <ng-container *ngIf="flag==true">
+         <span class="empty_block_body"> 
+            <span class="empty_block">
+                Your cart is currently empty.
+            <button class="emptycartbtn" (click)="continushopping()"> Continue Shopping</button>
+            </span>
+            </span>
+      </ng-container>
+      
+        <!-- currently empty end -->    
+            
+      
+      
+      
+      
+      </mat-card>
+
+
+       </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+  
+
+
+</div>
+
+
+
+ 
+
+
+
+
+
+<app-footer></app-footer> 

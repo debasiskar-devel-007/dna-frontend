@@ -18,15 +18,24 @@ export class LandingpageComponent implements OnInit {
   updatetable:boolean=true;
   formfieldrefreshdata:any=null;
  public formdata:any;
-
+ public parentid:any = '';
+ public shareUser:any =[];
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute) {
+    if(this.ActivatedRoute.snapshot.params._id != null && typeof(ActivatedRoute.snapshot.params._id) != "undefined"){
+      this.parentid = this.ActivatedRoute.snapshot.params._id;
+      this.ActivatedRoute.data.subscribe((resolveData:any) => {
+       this.shareUser=resolveData.Data.results.res[0]
+       // console.log(this.shareUser,resolveData);
+      });
+    }
+
     this.formdata = {
       successmessage:"Added Successfully !!",
-      redirectpath:"/landingpage",
+      redirectpath:"product",
       submittext:"Submit",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
-      endpoint:'api1/contactus',                                                 
+      endpoint:'api1/addusers',                                                 
      jwttoken:this._apiService.jwtToken,
       fields:[
           {
@@ -65,7 +74,7 @@ export class LandingpageComponent implements OnInit {
         {
           heading:"",
           label:"Telephone",
-          name:"number",
+          name:"contactnumber",
           value:'',
           type:"number",
           validations:[
@@ -76,7 +85,7 @@ export class LandingpageComponent implements OnInit {
             label:"type",
             name:"type",
             type:'hidden',
-            value:"landingpage"
+            value:"lead"
         },
         // {
         //     label:"id",
@@ -105,6 +114,40 @@ export class LandingpageComponent implements OnInit {
 
 
   ngOnInit() {
+     if(this.ActivatedRoute.snapshot.params._id != null && typeof(this.ActivatedRoute.snapshot.params._id) != "undefined"){
+     setTimeout(() => {
+    //      console.log(this.shareUser)
+    //      console.log(this.shareUser.type)
+  
+         if(this.shareUser.type=='affiliate'){
+                this.formfieldrefreshdata = {
+         field: 'addfromcontrol',
+             value: {
+             label: 'affiliate_id',
+             name: 'affiliate_id',
+             type: 'hidden',
+             after: 'type',
+             value: this.parentid
+         }
+     };
+         }
+    //      //mentor
+         if(this.shareUser.type=='mentor'){
+                 this.formfieldrefreshdata = {
+         field: 'addfromcontrol',
+             value: {
+             label: 'parentid',
+             name: 'parentid',
+             type: 'hidden',
+             after: 'type',
+             value: this.parentid
+         }
+     };
+         }
+  
+    }, 3000)
+    }
+
   }
 
 }
