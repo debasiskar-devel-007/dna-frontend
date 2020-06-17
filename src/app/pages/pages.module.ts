@@ -10,7 +10,11 @@ import { DemoMaterialModule } from '../material-module';
 import { TemplateModule } from '../templatemodule';
 import { NewmentorComponent } from '../newmentor/newmentor.component';
 import { BlogComponent } from '../blog/blog.component';
+import { AboutComponent } from '../about/about.component';
+import { NewaboutbetoComponent } from '../newaboutbeto/newaboutbeto.component';
+//import { ContactComponent } from '../contact/contact.component';
 // import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
@@ -18,7 +22,10 @@ import { BlogComponent } from '../blog/blog.component';
     PagesComponent,
     NewthewholestoryComponent,
     NewmentorComponent,
-    BlogComponent
+    BlogComponent,
+    AboutComponent,
+    NewaboutbetoComponent,
+    //ContactComponent
     // FooterComponent,
     // HeaderComponent
 

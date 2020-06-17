@@ -5,13 +5,13 @@ import { HomeComponent } from './home/home.component';
 // import { NewmentorComponent } from './newmentor/newmentor.component';
 import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
 import { NewsuccessgeneticsComponent } from './newsuccessgenetics/newsuccessgenetics.component';
-import { AboutComponent } from './about/about.component';
+//import { AboutComponent } from './about/about.component';
 // import { BlogComponent } from './blog/blog.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
 import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
 import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
-import { ContactComponent } from './contact/contact.component';
+//import { ContactComponent } from './contact/contact.component';
 import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
 import { TestresolveService } from './testresolve.service';
 import { environment } from '../environments/environment';
@@ -61,11 +61,11 @@ resolve: {
 
   // {path:'mentor', component: NewmentorComponent}, 
 
-  {path:'aboutbeto', component: NewaboutbetoComponent}, 
+ // {path:'aboutbeto', component: NewaboutbetoComponent}, 
 
   {path:'successgenetics', component: NewsuccessgeneticsComponent}, 
 
-  {path:'about', component: AboutComponent}, 
+ // {path:'about', component: AboutComponent}, 
 
   // // {path:'blog', component: BlogComponent,resolve: { blogData: TestresolveService },
   // // data: { requestcondition: { source: '', condition: {} }, endpoint: 'api1/getblogbydate'}}, 
@@ -91,7 +91,7 @@ resolve: {
   resolve: { packagedata: TestresolveService },
   data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage'}},
 
-  {path:'contact', component: ContactComponent}, 
+ // {path:'contact', component: ContactComponent}, 
 
   {path:'mentorsignup', component: MentorsignupComponent}, 
 
