@@ -60,7 +60,7 @@ export class CheckoutComponent implements OnInit {
         apiUrl: environment['api_url'],
         // canceltext:"Cancel Now",
         // resettext:"Reset This",
-        endpoint: 'api/cooming',
+        endpoint: 'api/frontendorder',
         jwttoken: this.apiService.jwtToken,
         fields: [
           {
@@ -371,7 +371,7 @@ export class CheckoutComponent implements OnInit {
     if (val.field == 'fromsubmit') {
       if (val.fromval.message != null && val.fromval.message != '') {
         console.log(val.fromval.message._id);
-        this.router.navigateByUrl('success/' + val.fromval.message._id);
+        this.router.navigateByUrl('ordersuccess/' + val.fromval.message._id);
         const carData = {
           carData: 0
         };
