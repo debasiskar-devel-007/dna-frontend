@@ -34,8 +34,8 @@ export class LiveWebinarComponent implements OnInit {
   }
   ngOnInit() {
     this.activatedRoute.data.forEach((response: any) => {
-      // console.warn('shop',response);
-      this.allproduct = response.shop.result;
+      console.warn('shop',response);
+      this.allproduct = response.shop.results.package;
       for (const i in this.allproduct) {
         this.allproduct[i].description_html = this.allproduct[i].description.replace(/(<p[^>]+?>|<p>|<\/p>)/img, '');
       }
