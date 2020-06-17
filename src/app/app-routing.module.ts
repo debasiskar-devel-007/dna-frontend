@@ -97,12 +97,12 @@ const routes: Routes = [
     resolve: { packagedata: TestresolveService },
     data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
   },
-  
+
   //banner image display route
   {
-    path: 'landingpage/:_id/:banner_id', component: ProductComponent,
+    path: 'landingpage/:class/:_id', component: ProductComponent,
     resolve: { packagedata: TestresolveService },
-    data: { requestcondition: { source: '', condition: {} }, endpoint: 'api2/getbannerdataforlandingpage' }
+    data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getbannerdataforlandingpage' }
   },
 
   { path: 'products-list/:id', component: ProductComponent },

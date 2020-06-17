@@ -87,7 +87,12 @@
               "Fn::Join": [
                 "-",
                 [
+<<<<<<< HEAD
                   "dna-frontend-dev",
+=======
+                  "dev",
+                  "dna-frontend",
+>>>>>>> 34d9bb4ea80e6449f3da2831cabdc1fcfe8df0a0
                   "lambda"
                 ]
               ]
@@ -127,7 +132,12 @@
           "Fn::Join": [
             "-",
             [
+<<<<<<< HEAD
               "dna-frontend-dev",
+=======
+              "dna-frontend",
+              "dev",
+>>>>>>> 34d9bb4ea80e6449f3da2831cabdc1fcfe8df0a0
               {
                 "Ref": "AWS::Region"
               },
@@ -144,7 +154,11 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
+<<<<<<< HEAD
           "S3Key": "serverless/dna-frontend/dev/1589973319097-2020-05-20T11:15:19.097Z/dna-frontend.zip"
+=======
+          "S3Key": "serverless/dna-frontend/dev/1592388427824-2020-06-17T10:07:07.824Z/dna-frontend.zip"
+>>>>>>> 34d9bb4ea80e6449f3da2831cabdc1fcfe8df0a0
         },
         "FunctionName": "dna-frontend-dev-api",
         "Handler": "lambda.universal",
@@ -163,14 +177,22 @@
         "IamRoleLambdaExecution"
       ]
     },
+<<<<<<< HEAD
     "ApiLambdaVersionjegTLvm2dQZMpirBKAQuJsOa2xVjTYOaY7k1ovsPsok": {
+=======
+    "ApiLambdaVersionMdwmDQecF5ICxvy4PkervVTBHIEjCjkgkD0WUvza8es": {
+>>>>>>> 34d9bb4ea80e6449f3da2831cabdc1fcfe8df0a0
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
+<<<<<<< HEAD
         "CodeSha256": "CnCFxe2MrxPUrQZ/cUl0zEKSVBOUrVvFhXLLZgicRqg="
+=======
+        "CodeSha256": "oFHOBwugrcw3k3ys2tUkxxwVSXBdCj71iZdtU/6QKB0="
+>>>>>>> 34d9bb4ea80e6449f3da2831cabdc1fcfe8df0a0
       }
     },
     "ApiGatewayRestApi": {
@@ -289,7 +311,11 @@
         "MethodResponses": []
       }
     },
+<<<<<<< HEAD
     "ApiGatewayDeployment1589973228425": {
+=======
+    "ApiGatewayDeployment1592388331639": {
+>>>>>>> 34d9bb4ea80e6449f3da2831cabdc1fcfe8df0a0
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -349,7 +375,11 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
+<<<<<<< HEAD
         "Ref": "ApiLambdaVersionjegTLvm2dQZMpirBKAQuJsOa2xVjTYOaY7k1ovsPsok"
+=======
+        "Ref": "ApiLambdaVersionMdwmDQecF5ICxvy4PkervVTBHIEjCjkgkD0WUvza8es"
+>>>>>>> 34d9bb4ea80e6449f3da2831cabdc1fcfe8df0a0
       }
     },
     "ServiceEndpoint": {

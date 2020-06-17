@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Router, Resolve, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
+import {Router, Resolve, ActivatedRouteSnapshot, RouterStateSnapshot,ActivatedRoute} from '@angular/router';
 //import { Observable } from 'rxjs/Observable';
 import { ApiService } from './api.service';
 import { Observable } from 'rxjs';
@@ -46,7 +46,11 @@ export class TestresolveService implements Resolve<EndpointComponent> {
             // requestData.userid =this.userid;
         }  else if(route.data.requestcondition.condition!=null && route.data.requestcondition.condition._id == 'product_id'){
             requestData.condition._id =  route.params.product_id;
-        }
+
+        }   else if(route.data.requestcondition.condition!=null && route.data.requestcondition.condition._id == 'banner_id'){
+            requestData.condition._id =  route.params._id;
+        } 
+
         
     
         else requestData.condition = Object.assign(requestData.condition, route.params);
