@@ -15,7 +15,8 @@ export class LiveWebinarComponent implements OnInit {
     this.uniqueId = this.makeid(14);
     let uid = this.cookieService.get('uniqueID');
     if (uid != null && uid != undefined && uid != '') {
-      console.log(this.cookieService.get('uniqueID'));
+      // console.log(this.cookieService.get('uniqueID'));
+      this.uniqueId=this.cookieService.get('uniqueID')
     } else {
       this.cookieService.set('uniqueID', this.uniqueId);
       //console.log(this.uniqueId);
@@ -32,9 +33,11 @@ export class LiveWebinarComponent implements OnInit {
     }
     return result;
   }
+
+
   ngOnInit() {
     this.activatedRoute.data.forEach((response: any) => {
-      console.warn('shop',response);
+      // console.warn('shop',response);
       this.allproduct = response.shop.results.package;
       for (const i in this.allproduct) {
         this.allproduct[i].description_html = this.allproduct[i].description.replace(/(<p[^>]+?>|<p>|<\/p>)/img, '');
@@ -42,6 +45,8 @@ export class LiveWebinarComponent implements OnInit {
       // console.log(this.allproduct)
     });
   }
+
+
   productselect(value: any) {
     const product: any = {};
     product.price = 49;
@@ -50,24 +55,24 @@ export class LiveWebinarComponent implements OnInit {
     product.sq_no = value.product_sq_no;
     product.image = value.image;
     product.webinarid = value._id;
-     console.log(product);
-     return;
+    //  console.log(product);
+     
     let data: any = {};
     if (this.activatedRoute.snapshot.params.shopid != '' && this.activatedRoute.snapshot.params.shopid != null) {
       data = {
         product,
-        userid: '123',
+        tempid:this.uniqueId,
         id: this.activatedRoute.snapshot.params.shopid
       };
     } else {
       data = {
         product,
-        userid: '12'
+        tempid:this.uniqueId
       };
     }
 
     // console.log(data);
-    this.apiService.customRequest1(data, 'api/cart', environment['api_url']).subscribe((res: any) => {
+    this.apiService.customRequest1(data, 'api/frontendcart', environment['api_url']).subscribe((res: any) => {
       // console.warn(res);
       if (res.status == 'success') {
         this.router.navigateByUrl('cart/' + res.result._id);

@@ -15,7 +15,11 @@ public cartDetails: any = [];
 public flag = false;
 public saletax = 0;
 public quantity = 1;
-  constructor(public CookieService: CookieService, public activatedRoute: ActivatedRoute, public apiService: ApiService, public router: Router) { }
+public uniqueId: any = 0;
+
+  constructor(public CookieService: CookieService, public activatedRoute: ActivatedRoute, public apiService: ApiService, public router: Router) { 
+    this.uniqueId=this.CookieService.get('uniqueID')
+  }
 
   ngOnInit() {
     if (this.activatedRoute.snapshot.params._id != null && this.activatedRoute.snapshot.params._id != undefined) {
@@ -57,9 +61,9 @@ public quantity = 1;
     });
   }else{
     let data:any = {
-      "userid":JSON.parse(this.CookieService.get('userid'))
+      "userid":this.uniqueId
     }
-    this.apiService.customRequest1(data,'api/getcartdetailsbyuserid',environment['api_url']).subscribe((res:any) => {
+    this.apiService.customRequest1(data,'api/getcartdetailsbytempid',environment['api_url']).subscribe((res:any) => {
     //  console.log(res);
       this.cartDetails=res.results;
       if(res.length==0){
@@ -157,12 +161,12 @@ removeItem(id: any, idx: any) {
 
 continushopping() {
   if (this.flag == true) {
-    this.router.navigateByUrl('shop/');
+    this.router.navigateByUrl('live-webinar/');
   } else {
     if (this.activatedRoute.snapshot.params._id != null && this.activatedRoute.snapshot.params._id != undefined) {
-    this.router.navigateByUrl('shop/' + this.activatedRoute.snapshot.params._id);
+    this.router.navigateByUrl('live-webinar/' + this.activatedRoute.snapshot.params._id);
     } else {
-      this.router.navigateByUrl('shop/' + this.cartDetails[0]._id);
+      this.router.navigateByUrl('live-webinar/' + this.cartDetails[0]._id);
     }
   }
 

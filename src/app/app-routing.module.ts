@@ -45,6 +45,16 @@ const routes: Routes = [
     api_url: api_url
   }
 }, 
+{path:'live-webinar/:shopid', component: LiveWebinarComponent, 
+resolve: {
+  shop: TestresolveService
+},data: {requestcondition: {source: '',condition: {
+    }
+  },
+  endpoint: 'api/getwebinarshop',
+  api_url: api_url
+}
+}, 
 
   {path:'thewholestory', component: NewthewholestoryComponent}, 
 
