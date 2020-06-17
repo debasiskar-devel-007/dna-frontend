@@ -36,6 +36,7 @@ export class ProductComponent implements OnInit {
   public formdata2: any;
   public statesjson: any = [];
   public parentdetails:any = [];
+  public banner_image:any;
 
 
   constructor(public _apiService: ApiService, public ActivatedRoute: ActivatedRoute,
@@ -51,7 +52,10 @@ export class ProductComponent implements OnInit {
     this.meta.setTag('og:title', 'DNA Of Success - Our Products');
     this.meta.setTag('twitter:title', 'DNA Of Success - Our Products');
     this.meta.setTag('og:url', 'https://www.dnamastercourse.com/');
-    this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
+    if(this.router.url == '/products' || this.ActivatedRoute.snapshot.routeConfig.path == 'products/:class'){
+      this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
+    }
+
 
     this._apiService.getState().subscribe((response: any) => {
       // console.log(response)
@@ -65,12 +69,31 @@ export class ProductComponent implements OnInit {
 
 
   ngOnInit() {
-    this.ActivatedRoute.data.subscribe((resolveData:any) => {
-      this.allPackage=resolveData.packagedata.results.package;
-      this.acctoken=resolveData.packagedata.results.token.access_token;
-      // console.log(this.acctoken);
-      //  console.log(resolveData.packagedata) 
-    });
+
+    if(this.ActivatedRoute.snapshot.routeConfig.path == 'landingpage/:class/:_id' ){
+      this.ActivatedRoute.data.subscribe((resolveData:any) => {
+        this.allPackage=resolveData.packagedata.results.package;
+        this.acctoken=resolveData.packagedata.results.token.access_token;
+        this.banner_image=resolveData.packagedata.results.banner[0].image;
+
+        // console.log('@@@@>>>>>',this.ActivatedRoute.params);
+
+        this.meta.setTag('og:image', this.banner_image);
+        this.meta.setTag('twitter:image', this.banner_image);
+      });
+    }
+
+
+
+    if(this.router.url == '/products' ){
+      this.ActivatedRoute.data.subscribe((resolveData:any) => {
+        this.allPackage=resolveData.packagedata.results.package;
+        this.acctoken=resolveData.packagedata.results.token.access_token;
+        // console.log(this.acctoken);
+        //  console.log(resolveData.packagedata) 
+      });
+    }
+  
     //console.log(this.ActivatedRoute.snapshot.url[0].path);
     //  console.log(this.ActivatedRoute.snapshot.params.id.substring(0, 1));
     if(this.ActivatedRoute.snapshot.url[0].path=='products-list'){

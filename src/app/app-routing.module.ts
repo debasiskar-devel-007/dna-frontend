@@ -23,6 +23,7 @@ import { SuccessbookComponent } from './successbook/successbook.component';
 import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ContactComponent } from './contact/contact.component';
 // const api_url1 =  environment["api_url1"];
 const api_url = environment['api_url'];
 
@@ -31,8 +32,9 @@ const routes: Routes = [
 
   {path:'home', component: HomeComponent}, 
   {path:'', component: HomeComponent}, 
-
-  {path:'ordersuccess', component: OrdersuccessComponent}, 
+  {path:'ordersuccess', component: OrdersuccessComponent},
+  {path:'ordersuccess/:_id', component: OrdersuccessComponent,resolve: {successData: TestresolveService},
+  data: {requestcondition: {source: '', condition: {'_id': '_id'}}, endpoint: 'api/ordersuccessresolve', api_url: api_url}}, 
 
   {path:'successbook', component: SuccessbookComponent},
 
@@ -51,64 +53,92 @@ resolve: {
   shop: TestresolveService
 },data: {requestcondition: {source: '',condition: {
     }
-  },
-  endpoint: 'api/getwebinarshop',
-  api_url: api_url
-}
-}, 
+  },}
+},
 
   // {path:'thewholestory', component: NewthewholestoryComponent}, 
 
   // {path:'mentor', component: NewmentorComponent}, 
 
- // {path:'aboutbeto', component: NewaboutbetoComponent}, 
 
-  {path:'successgenetics', component: NewsuccessgeneticsComponent}, 
+ // {path:'aboutbeto', component: NewaboutbetoComponent}, 
+// { path: 'aboutbeto', component: NewaboutbetoComponent },
+
+
+  { path: 'successgenetics', component: NewsuccessgeneticsComponent },
+
 
  // {path:'about', component: AboutComponent}, 
+
+  // { path: 'about', component: AboutComponent },
+
 
   // // {path:'blog', component: BlogComponent,resolve: { blogData: TestresolveService },
   // // data: { requestcondition: { source: '', condition: {} }, endpoint: 'api1/getblogbydate'}}, 
 
   // {path:'blog/:_id', component: BlogComponent},
 
-  {path:'blog-details/:blogtitle/:_id', component: BlogdetailComponent,resolve: { blogData: TestresolveService },
-  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getblogdatabyid'}}, 
+  {
+    path: 'blog-details/:blogtitle/:_id', component: BlogdetailComponent, resolve: { blogData: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getblogdatabyid' }
+  },
 
-  {path:'affiliatesignup', component: AffiliatesignupComponent}, 
-  {path : 'affiliatesignup/:_id' , component: AffiliatesignupComponent,
-  resolve: { Data: TestresolveService },
-  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getuserdatabyid'}},
+  { path: 'affiliatesignup', component: AffiliatesignupComponent },
+  {
+    path: 'affiliatesignup/:_id', component: AffiliatesignupComponent,
+    resolve: { Data: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  },
 
-  {path:'login', component: LoginComponent}, 
+  { path: 'login', component: LoginComponent },
 
-  {path:'products', component: ProductComponent,
-  resolve: { packagedata: TestresolveService },
-  data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage'}
-},
-  {path:'products-list/:id', component: ProductComponent},
-  {path:'products/:class', component: ProductComponent,
-  resolve: { packagedata: TestresolveService },
-  data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage'}},
+  {
+    path: 'products', component: ProductComponent,
+    resolve: { packagedata: TestresolveService },
+    data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+  },
+
+  //banner image display route
+  {
+    path: 'landingpage/:class/:_id', component: ProductComponent,
+    resolve: { packagedata: TestresolveService },
+    data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getbannerdataforlandingpage' }
+  },
+
+  { path: 'products-list/:id', component: ProductComponent },
+  {
+    path: 'products/:class', component: ProductComponent,
+    resolve: { packagedata: TestresolveService },
+    data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+  },
 
  // {path:'contact', component: ContactComponent}, 
 
-  {path:'mentorsignup', component: MentorsignupComponent}, 
-
-  {path: 'mentorsignup/:_id' , component: MentorsignupComponent,
-  resolve: { Data: TestresolveService },
-  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getuserdatabyid'}},
-
-  {path:'landingpage', component: LandingpageComponent}, 
-  {path:'landingpage/:_id', component: LandingpageComponent,
-  resolve: { Data: TestresolveService },
-  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getuserdatabyid'}}, 
+ //{ path: 'contact', component: ContactComponent },
 
 
-  {path:'menteelandingpage', component: MenteelandingpageComponent}, 
-  {path:'success', component: SuccessComponent},
-  {path:'success/:_id', component: SuccessComponent,resolve: { successData: TestresolveService },
-  data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api/ordersuccessresolve'}},
+  { path: 'mentorsignup', component: MentorsignupComponent },
+
+  {
+    path: 'mentorsignup/:_id', component: MentorsignupComponent,
+    resolve: { Data: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  },
+
+  { path: 'landingpage', component: LandingpageComponent },
+  {
+    path: 'landingpage/:_id', component: LandingpageComponent,
+    resolve: { Data: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  },
+
+
+  { path: 'menteelandingpage', component: MenteelandingpageComponent },
+  { path: 'success', component: SuccessComponent },
+  {
+    path: 'success/:_id', component: SuccessComponent, resolve: { successData: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api/ordersuccessresolve' }
+  },
 
 
   {
@@ -116,22 +146,22 @@ resolve: {
   },
   {
     path: 'cart/:_id', component: CartComponent,
-    resolve: {cart: TestresolveService},
+    resolve: { cart: TestresolveService },
     data: {
-      requestcondition: {source: '', condition: {_id: '_id'}},
+      requestcondition: { source: '', condition: { _id: '_id' } },
       endpoint: 'api/getcartdetails',
       api_url: api_url
     }
   },
   {
     path: 'checkout', component: CheckoutComponent,
-   
+
   },
   {
     path: 'checkout/:_id', component: CheckoutComponent,
-    resolve: {checkout: TestresolveService},
+    resolve: { checkout: TestresolveService },
     data: {
-      requestcondition: {source: '', condition: {_id: '_id'}},
+      requestcondition: { source: '', condition: { _id: '_id' } },
       endpoint: 'api/getcartdetailsfrontend',
       api_url: api_url
     }
@@ -144,7 +174,7 @@ resolve: {
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{
+  imports: [RouterModule.forRoot(routes, {
     scrollPositionRestoration: 'enabled'
   })],
   exports: [RouterModule]

@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
         
         this.formdata = {
           successmessage: "Added Successfully !!",
-          redirectpath: "/contact",
+          redirectpath: "",
           submittext:"Submit",
           // canceltext:"Cancel Now",
           //resettext:"Reset This",

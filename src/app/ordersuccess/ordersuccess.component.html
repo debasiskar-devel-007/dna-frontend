@@ -5,7 +5,7 @@
     <div class="ordersuccess_body_wrapper">
 
         <h2>CONGRATULATIONS!! </h2>
-        <h3>Your Order for Jack M. Zufelt’s International Best-Seller “The DNA of Success” 2nd Edition has been successfully placed.</h3>
+        <!-- <h3>Your Order for Jack M. Zufelt’s International Best-Seller “The DNA of Success” 2nd Edition has been successfully placed.</h3> -->
         <div class="videowrapper">
         <div class="video-responsive2">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/rOT9ij2k2uY" frameborder="0" 
@@ -25,8 +25,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td  valign="middle" data-label="Order Date:"> May 23,2020 11:05 pm</td>
-                    <td valign="middle" data-label="Order Status:">Received</td>
+                    <td  valign="middle" data-label="Order Date:"> {{AllData.order_on | date:'medium'}}</td>
+                    <td valign="middle" data-label="Order Status:">{{AllData.order_status}}</td>
                 </tr>
             </tbody>
             </table>
@@ -50,37 +50,41 @@
             
             <tbody>
             
-                   <tr>
-                  
-                    <td  data-label="Item:"  valign="middle"  >1</td>
-                     <td data-label="Name:"  valign="middle" >The Essential Success Method with Weekly PLUS</td>
-             
-                     <td data-label="Qty"  valign="middle"> 1</td>
-                    
-                   <td data-label="Amount:"  valign="middle" > $249.00</td>
-                    
-                  </tr>
+                <ng-container *ngFor="let item of AllData.product_namebackend;index as i">
+           
+                    <tr>
+                   
+                     <td  data-label="Item:"  valign="middle"  >{{i+1}}</td>
+                      <td data-label="Name:"  valign="middle" >{{item.name}}	</td>
+              
+                      <td data-label="Qty"  valign="middle">{{item.quantity}}</td>
+                     
+                    <td data-label="Amount:"  valign="middle" >${{item.price}}
+                    </td>
+                     
+                   </tr>
+                 </ng-container>
             
                    <tr class="tablelistdeta">
                     <td colspan="2" style="border: none;">&nbsp;</td>
                     <td  valign="middle">Sub Total</td>
-                    <td  valign="middle" data-label="Sub Total:">$00.00</td>
+                    <td  valign="middle" data-label="Sub Total:">${{AllData.subtotal}}</td>
                 </tr> 
             
                 <tr class="tablelistdeta">
                     <td colspan="2">&nbsp;</td>
                     <td  valign="middle">Shipping:</td>
-                    <td valign="middle"  data-label="Shipping:">$00.00</td>
+                    <td valign="middle"  data-label="Shipping:">${{AllData.shipping_charge}}</td>
                 </tr>
                 <tr class="tablelistdeta">
                     <td colspan="2">&nbsp;</td>
                     <td  valign="middle">Sale Tax:</td>
-                    <td valign="middle"  data-label="Sale Tax:">$00.00</td>
+                    <td valign="middle"  data-label="Sale Tax:">${{AllData.saletax}}</td>
                 </tr>
                 <tr class="tablelistdeta">
                     <td colspan="2">&nbsp;</td>
                     <td  valign="middle">Total:</td>
-                    <td valign="middle"  data-label="Total:">$00.00</td>
+                    <td valign="middle"  data-label="Total:">${{AllData.total}}</td>
                 </tr>
             </tbody>
                 </table>
@@ -101,22 +105,22 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td align="left" valign="middle">Name: Menteeg One</td>
+                                <td align="left" valign="middle">Name:  {{AllData.billing_firstname}} {{AllData.billing_lastname}}</td>
                                 </tr>
                             <tr>
-                                <td align="left" valign="middle">Address: Add Road no. 1</td>
+                                <td align="left" valign="middle">Address: {{AllData.billing_address}}</td>
                                 </tr>
                             <tr>
-                                <td align="left" valign="middle">City: Blessedcity</td>
+                                <td align="left" valign="middle">City: {{AllData.billing_city}}</td>
                                 </tr>
                             <tr>
-                                <td align="left" valign="middle">State: Indiana</td>
+                                <td align="left" valign="middle">State: {{AllData.billing_state}}</td>
                                 </tr>
                             <tr>
-                                <td align="left" valign="middle">Zip: 778899</td>
+                                <td align="left" valign="middle">Zip: {{AllData.billing_zip}}</td>
                                 </tr>
                             <tr>
-                                <td align="left" valign="middle">Email: ramseybolton2@yopmail.com</td>
+                                <td align="left" valign="middle">Email: {{AllData.user_info.email}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -133,19 +137,19 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td align="left" valign="middle">Name: Menteeg One</td>
+                                    <td align="left" valign="middle">Name: {{AllData.shipping_firstname}} {{AllData.shipping_lastname}}</td>
                                     </tr>
                                 <tr>
-                                    <td align="left" valign="middle">Address: Add Road no. 1</td>
+                                    <td align="left" valign="middle">Address: {{AllData.shipping_address}}</td>
                                     </tr>
                                 <tr>
-                                    <td align="left" valign="middle">City: Blessedcity</td>
+                                    <td align="left" valign="middle">City: {{AllData.billing_city}}</td>
                                     </tr>
                                 <tr>
-                                    <td align="left" valign="middle">State: Indiana</td>
+                                    <td align="left" valign="middle">State: {{AllData.billing_state}}</td>
                                     </tr>
                                 <tr>
-                                    <td align="left" valign="middle">Zip: 778899</td>
+                                    <td align="left" valign="middle">Zip: {{AllData.shipping_zip}}</td>
                                     </tr>
                                 
                         </tbody>
