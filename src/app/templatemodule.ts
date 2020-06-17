@@ -4,6 +4,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+//import { ListingModule } from 'listing-angular7';
+//import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +15,10 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+   // ListingModule,
+    //ReactiveFormsModule,
+   // FormsModule,
   ],
   exports: [
     // A11yModule,
