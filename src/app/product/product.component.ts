@@ -112,15 +112,15 @@ export class ProductComponent implements OnInit {
       });
     }
 
-    if(this.CookieService.check('shareid')!=null && this.ActivatedRoute.snapshot.params.class==null){
-      let data: any = {
-        "id": this.CookieService.get('shareid')
-      }
-      this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-        // console.log(res)
-        this.parentdetails = res.result[0];
-      })
-    }
+    // if(this.CookieService.check('shareid')!=null && this.ActivatedRoute.snapshot.params.class==null){
+    //   let data: any = {
+    //     "id": this.CookieService.get('shareid')
+    //   }
+    //   this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
+    //     console.log(res)
+    //     this.parentdetails = res.result[0];
+    //   })
+    // }
 
     //console.log(this.ActivatedRoute.snapshot.url[0].path);
     //  console.log(this.ActivatedRoute.snapshot.params.id.substring(0, 1));
@@ -140,7 +140,7 @@ export class ProductComponent implements OnInit {
         "id": this.ActivatedRoute.snapshot.params.class
       }
       this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-        // console.log(res)
+        console.log(res)
         this.parentdetails = res.result[0];
       })
     
