@@ -60,7 +60,7 @@ export class CheckoutComponent implements OnInit {
         apiUrl: environment['api_url'],
         // canceltext:"Cancel Now",
         // resettext:"Reset This",
-        endpoint: 'api/cooming',
+        endpoint: 'api/frontendorder',
         jwttoken: this.apiService.jwtToken,
         fields: [
           {
@@ -355,11 +355,24 @@ export class CheckoutComponent implements OnInit {
             name: 'cartid',
             type: 'hidden',
             value: this.activatedRoute.snapshot.params._id
+          },
+          {
+            label: 'affiliate_id',
+            name: 'affiliate_id',
+            type: 'hidden',
+            value: this.productDetails[0].affiliate_id
+          },
+          {
+            label: 'parentid',
+            name: 'parentid',
+            type: 'hidden',
+            value: this.productDetails[0].parentid
           }
         ]
       };
 
     });
+  
    }
 
   ngOnInit() {
@@ -371,7 +384,7 @@ export class CheckoutComponent implements OnInit {
     if (val.field == 'fromsubmit') {
       if (val.fromval.message != null && val.fromval.message != '') {
         console.log(val.fromval.message._id);
-        this.router.navigateByUrl('success/' + val.fromval.message._id);
+        this.router.navigateByUrl('ordersuccess/' + val.fromval.message._id);
         const carData = {
           carData: 0
         };

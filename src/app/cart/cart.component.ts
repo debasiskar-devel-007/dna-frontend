@@ -165,15 +165,16 @@ removeItem(id: any, idx: any) {
 }
 
 continushopping() {
-  if (this.flag == true) {
-    this.router.navigateByUrl('live-webinar/');
-  } else {
-    if (this.activatedRoute.snapshot.params._id != null && this.activatedRoute.snapshot.params._id != undefined) {
-    this.router.navigateByUrl('live-webinar/' + this.activatedRoute.snapshot.params._id);
-    } else {
-      this.router.navigateByUrl('live-webinar/' + this.cartDetails[0]._id);
-    }
-  }
+  // if (this.flag == true) {
+    this.router.navigateByUrl('/live-webinar');
+  //  } 
+  // else {
+  //   if (this.activatedRoute.snapshot.params._id != null && this.activatedRoute.snapshot.params._id != undefined) {
+  //   this.router.navigateByUrl('live-webinar/' + this.activatedRoute.snapshot.params._id);
+  //   } else {
+  //     this.router.navigateByUrl('live-webinar/' + this.cartDetails[0]._id);
+  //   }
+  // }
 
 }
 // checkout functions
@@ -205,8 +206,10 @@ checkout() {
 
 openDialog(): void {
   const dialogRef = this.dialog.open(loginModal, {
-    width: '250px',
-    data:this.cartDetails
+    // width: '250px',
+    data:this.cartDetails,
+    panelClass: 'cartpopup',
+     
   });
 
   dialogRef.afterClosed().subscribe(result => {
@@ -255,5 +258,9 @@ export class loginModal {
      });
     this.dialogRef.close(value);
   }
-
+  loginuser(){
+    // this.router.navigateByUrl('https://dna-backend.influxiq.com/login');
+    window.open('https://dna-backend.influxiq.com/login')
+    this.dialogRef.close();
+  }
 }
