@@ -31,7 +31,7 @@ export class LandingpageComponent implements OnInit {
 
     this.formdata = {
       successmessage:"Added Successfully !!",
-      redirectpath:"/products",
+      redirectpath:"/pages/products",
       submittext:"Submit",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
