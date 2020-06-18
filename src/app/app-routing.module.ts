@@ -112,7 +112,7 @@ resolve: {
     data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
   },
 
- // {path:'contact', component: ContactComponent}, 
+  {path:'contact-us', component: ContactComponent}, 
 
  //{ path: 'contact', component: ContactComponent },
 
