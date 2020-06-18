@@ -4,6 +4,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ListingModule } from 'listing-angular7';
 //import { ListingModule } from 'listing-angular7';
 //import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
@@ -16,6 +17,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule,
+    ListingModule,
    // ListingModule,
   //ReactiveFormsModule,(app component bootstrap}
   // FormsModule,
@@ -23,7 +25,8 @@ import { RouterModule } from '@angular/router';
   exports: [
     // A11yModule,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ListingModule
 
 
 
