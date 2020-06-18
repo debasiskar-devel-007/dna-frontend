@@ -88,6 +88,14 @@ export class ProductComponent implements OnInit {
         this.meta.setTag('twitter:url', 'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
 
       });
+    } else {
+      let data: any = {
+        "id": this.ActivatedRoute.snapshot.params.class
+      }
+      this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
+        // console.log(res)
+        this.parentdetails = res.result[0];
+      })
     }
 
 

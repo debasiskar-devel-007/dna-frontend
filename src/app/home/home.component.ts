@@ -29,11 +29,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
   learnproduct(value:any){
-    console.log(value);
-    this.router.navigateByUrl('/products/'+value)
+    // console.log(value);
+    // this.router.navigateByUrl('/products/'+value)
   }
   learnproduct1(value){
-    this.router.navigateByUrl('/products-list/'+value)
+    // this.router.navigateByUrl('/products-list/'+value)
 
   }
 }
