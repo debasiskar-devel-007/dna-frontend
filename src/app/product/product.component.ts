@@ -3,6 +3,7 @@ import { MetaService } from '@ngx-meta/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../environments/environment';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-product',
@@ -40,7 +41,7 @@ export class ProductComponent implements OnInit {
   public banner_image: any;
 
 
-  constructor(public _apiService: ApiService, public ActivatedRoute: ActivatedRoute,
+  constructor(public CookieService:CookieService,public _apiService: ApiService, public ActivatedRoute: ActivatedRoute,
     public meta: MetaService, public router: Router) {
     this.meta.setTitle('DNA Of Success - Our Products ');
 
@@ -119,6 +120,7 @@ export class ProductComponent implements OnInit {
 
     }
     if (this.ActivatedRoute.snapshot.params.class != null) {
+      this.CookieService.set('shareid',this.ActivatedRoute.snapshot.params.class);
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
         this.acctoken = resolveData.packagedata.results.token.access_token;
