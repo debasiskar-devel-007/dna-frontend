@@ -171,10 +171,13 @@ const routes: Routes = [
   },
 
   // {path: '', redirectTo: 'home', pathMatch: 'full'},
+
   
 
   { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
   {path: '**', component: HomeComponent},
+
+  
 ];
 
 @NgModule({
