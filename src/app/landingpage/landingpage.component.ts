@@ -31,7 +31,7 @@ export class LandingpageComponent implements OnInit {
 
     this.formdata = {
       successmessage:"Added Successfully !!",
-      redirectpath:"product",
+      redirectpath:"/pages/products",
       submittext:"Submit",                                  
       submitactive:true, //optional, default true
      apiUrl:this._apiService.nodesslurl,
@@ -45,7 +45,7 @@ export class LandingpageComponent implements OnInit {
               value:'',
               type:"text",
               validations:[
-                  {rule:'required', message:"Enter Your Full Name"},
+                  {rule:'required', message:"Enter Your First Name"},
                   {rule:'maxLength',value:10, message:"Maximum 10 letters"},
                   {rule:'minLength',value: 2, message:"Minimun 2 letters"}
                   ]
@@ -68,7 +68,7 @@ export class LandingpageComponent implements OnInit {
             type:'email',
             hint:"",
             validations:[
-                {rule:'required',message:"Email field Needs to be required"},
+                {rule:'required',message:"Enter Your Email"},
                 {rule:'pattern',value: this.emailregex,message: "Must be a valid Email"}]
         },
         {

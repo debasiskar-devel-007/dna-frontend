@@ -15,6 +15,7 @@ import { NewaboutbetoComponent } from '../newaboutbeto/newaboutbeto.component';
 import { NewsuccessgeneticsComponent } from '../newsuccessgenetics/newsuccessgenetics.component';
 import { LiveWebinarComponent } from '../live-webinar/live-webinar.component';
 import { ProductComponent } from '../product/product.component';
+import { ContactComponent } from '../contact/contact.component';
 
 // import { ContactComponent } from '../contact/contact.component';
 // import { RouterModule } from '@angular/router';
@@ -32,6 +33,7 @@ import { ProductComponent } from '../product/product.component';
     NewsuccessgeneticsComponent,
     LiveWebinarComponent,
     ProductComponent,
+    ContactComponent,
 
     // ContactComponent,
     // FooterComponent,
