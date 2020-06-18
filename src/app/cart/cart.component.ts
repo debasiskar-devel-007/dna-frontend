@@ -258,5 +258,9 @@ export class loginModal {
      });
     this.dialogRef.close(value);
   }
-
+  loginuser(){
+    // this.router.navigateByUrl('https://dna-backend.influxiq.com/login');
+    window.open('https://dna-backend.influxiq.com/login')
+    this.dialogRef.close();
+  }
 }

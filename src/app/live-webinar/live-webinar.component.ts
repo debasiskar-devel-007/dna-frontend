@@ -95,7 +95,7 @@ export class LiveWebinarComponent implements OnInit {
       };
 
     console.log(data);
-    return;
+
     this.apiService.customRequest1(data, 'api/frontendcart', environment['api_url']).subscribe((res: any) => {
       // console.warn(res);
       if (res.status == 'success') {
