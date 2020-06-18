@@ -10,15 +10,15 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    FooterComponent,
+    FooterComponent,//custom ng module created
     HeaderComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
    // ListingModule,
-    //ReactiveFormsModule,
-   // FormsModule,
+  //ReactiveFormsModule,(app component bootstrap}
+  // FormsModule,
   ],
   exports: [
     // A11yModule,

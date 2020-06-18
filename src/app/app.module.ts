@@ -21,7 +21,7 @@ import { TermsandCondition, PrivacyPolicy } from './footer/footer.component';
 // import { NewthewholestoryComponent } from './newthewholestory/newthewholestory.component';
 // import { NewmentorComponent } from './newmentor/newmentor.component';
 //import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
-import { NewsuccessgeneticsComponent } from './newsuccessgenetics/newsuccessgenetics.component';
+//import { NewsuccessgeneticsComponent } from './newsuccessgenetics/newsuccessgenetics.component';
 //import { AboutComponent } from './about/about.component';
 // import { BlogComponent } from './blog/blog.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
@@ -37,7 +37,7 @@ import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpag
 
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 import { SuccessComponent } from './success/success.component';
-import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
+//import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
 import { SuccessbookComponent, TermsandConditionSB, PrivacyPolicySB, AddON } from './successbook/successbook.component';
 import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 
@@ -76,7 +76,7 @@ export function metaFactory(): MetaLoader {
     TermsandConditionSB,
     PrivacyPolicySB,
    // NewaboutbetoComponent,
-    NewsuccessgeneticsComponent,
+   // NewsuccessgeneticsComponent,
    // AboutComponent,
     // BlogComponent, 
     BlogdetailComponent,
@@ -89,7 +89,7 @@ export function metaFactory(): MetaLoader {
     MenteelandingpageComponent,
     SuccessComponent,
     MyLoaderComponent,
-    LiveWebinarComponent,
+    //LiveWebinarComponent,
     SuccessbookComponent,
     AddON,
     OrdersuccessComponent,
