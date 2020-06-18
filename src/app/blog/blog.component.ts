@@ -38,7 +38,7 @@ export class BlogComponent implements OnInit {
     this.meta.setTag('twitter:title', 'DNA Of Success - Blogs');
     this.meta.setTag('og:type', 'website');
     this.meta.setTag('og:url','https://dna.influxiq.com/');
-      this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
+      this.meta.setTag('og:image', '../../assets/images/default_image.jpg');
 
       FB.init({
         appId: '679836882810934',

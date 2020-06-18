@@ -7175,3 +7175,96 @@ top: 4px;
             }
 
             .package3 .newproduct_con4_btn1{float: right!important;}
+
+
+
+            .cartpopup{    border: solid 5px #0eadff; min-width: 300px; height:auto!important;
+                text-align: center;     display: block!important;}
+          
+            .cartpopup h1{background: rgba(76,125,198,1);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(76,125,198,1)), color-stop(100%, rgba(60,202,230,1)));
+                background: -webkit-gradient(linear, left top, right top, from(rgba(76,125,198,1)), to(rgba(60,202,230,1)));
+                background: linear-gradient(to right, rgba(76,125,198,1) 0%, rgba(60,202,230,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c7dc6', endColorstr='#3ccae6', GradientType=1 );
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 22px;
+                color: #ffffff;
+                margin: 0;
+                padding: 12px;
+                font-family: 'OpenSans-Semibold';}   
+
+                .cartpopup  .mat-dialog-container{ padding: 0px!important;}     
+
+                .cartpopup  .mat-dialog-actions{ text-align: center!important; display: block!important; margin-bottom: 0px;}    
+                
+                .cartpopup .mat-dialog-container{    overflow: inherit;
+                    height: auto;
+                    display: block!important;}
+
+
+                    .cartpopup  .cdk-overlay-pane{ display: block!important;}
+
+                .cartpopup  .mat-dialog-actions button{ margin-top: 10px 0 0 0!important;  
+            
+                    background: #e75248;
+                    border: none;
+                    box-shadow: none;
+                    border-radius: 4px;
+                    text-align: center;
+                    line-height: 45px;
+                    cursor: pointer;
+                    color: #fff;
+                    font-family: 'OpenSans-Semibold';
+                    text-transform: uppercase;
+                    outline: none;
+                    font-size: 18px;
+                    margin-top: 20px;}     
+
+              
+                    
+                    .checkout_body .productform .mat-raised-button{ width: 100%!important;}
+
+
+                    .checkout_body  .productform input{  background: #fff6f6!important;}
+
+                    .checkout_body .productform mat-select{  background: #fff6f6!important;}
+
+
+
+                    .checkout_body .productform .mat-form-field-wrapper {
+                        margin: 0;
+                    }         
+
+                    .checkout_body .productform .mat-checkbox {
+                        display: block!important;
+                        width: 100%!important;
+                        margin: 16px auto!important;
+                        margin-top: 0px!important;
+                    }
+
+                    .checkout_body  .productform .form_field_sameaddress::after{background: rgba(76,125,198,1)!important;
+                        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(76,125,198,1)), color-stop(100%, rgba(60,202,230,1)))!important;
+                        background: -webkit-gradient(linear, left top, right top, from(rgba(76,125,198,1)), to(rgba(60,202,230,1)))!important;
+                        background: linear-gradient(to right, rgba(76,125,198,1) 0%, rgba(60,202,230,1) 100%)!important;
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c7dc6', endColorstr='#3ccae6', GradientType=1 )!important;
+                        text-align: center!important;
+                        text-transform: uppercase!important;
+                        font-size: 20px!important;
+                        color: #ffffff!important;
+                        margin: 0!important;
+                        padding: 12px!important;
+                        font-family: 'OpenSans-Semibold'!important;  margin-bottom: 20px!important;}
+
+
+                        .checkout_body   .productform .mat-raised-button{ margin-bottom: 0px;}
+
+
+                        .checkout_body   .productform .mat-select-trigger {
+                            height: 32px;
+                        }
+
+                        .checkout_body   .productform  .mat-select-value {
+                            
+                            padding-top: 8px;
+                        }
