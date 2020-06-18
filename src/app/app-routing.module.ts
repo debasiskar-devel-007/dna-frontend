@@ -10,7 +10,7 @@ import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
 import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
 import { LoginComponent } from './login/login.component';
-import { ProductComponent } from './product/product.component';
+// import { ProductComponent } from './product/product.component';
 //import { ContactComponent } from './contact/contact.component';
 import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
 import { TestresolveService } from './testresolve.service';
@@ -95,25 +95,25 @@ const routes: Routes = [
 
   { path: 'login', component: LoginComponent },
 
-  {
-    path: 'products', component: ProductComponent,
-    resolve: { packagedata: TestresolveService },
-    data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
-  },
+  // {
+  //   path: 'products', component: ProductComponent,
+  //   resolve: { packagedata: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+  // },
 
-  //banner image display route
-  {
-    path: 'landingpage/:class/:_id', component: ProductComponent,
-    resolve: { packagedata: TestresolveService },
-    data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getbannerdataforlandingpage' }
-  },
+  // //banner image display route
+  // {
+  //   path: 'landingpage/:class/:_id', component: ProductComponent,
+  //   resolve: { packagedata: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getbannerdataforlandingpage' }
+  // },
 
-  { path: 'products-list/:id', component: ProductComponent },
-  {
-    path: 'products/:class', component: ProductComponent,
-    resolve: { packagedata: TestresolveService },
-    data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
-  },
+  // { path: 'products-list/:id', component: ProductComponent },
+  // {
+  //   path: 'products/:class', component: ProductComponent,
+  //   resolve: { packagedata: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+  // },
 
   {path:'contact', component: ContactComponent}, 
 
