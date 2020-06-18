@@ -18,7 +18,7 @@ import { environment } from '../environments/environment';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpage.component';
 import { SuccessComponent } from './success/success.component';
-import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
+//import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
 import { SuccessbookComponent } from './successbook/successbook.component';
 import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 import { CartComponent } from './cart/cart.component';
@@ -38,26 +38,26 @@ const routes: Routes = [
 
   {path:'successbook', component: SuccessbookComponent},
 
-  {path:'live-webinar', component: LiveWebinarComponent, 
-  resolve: {
-    shop: TestresolveService
-  },data: {requestcondition: {source: '',condition: {
-      }
-    },
-    endpoint: 'api/getwebinarshop',
-    api_url: api_url
-  }
-}, 
-{path:'live-webinar/:id', component: LiveWebinarComponent, 
-resolve: {
-  shop: TestresolveService
-},data: {requestcondition: {source: '',condition: {
-    }
-  },
-  endpoint: 'api/getwebinarshop',
-  api_url: api_url
-}
-},
+//   {path:'live-webinar', component: LiveWebinarComponent, 
+//   resolve: {
+//     shop: TestresolveService
+//   },data: {requestcondition: {source: '',condition: {
+//       }
+//     },
+//     endpoint: 'api/getwebinarshop',
+//     api_url: api_url
+//   }
+// }, 
+// {path:'live-webinar/:id', component: LiveWebinarComponent, 
+// resolve: {
+//   shop: TestresolveService
+// },data: {requestcondition: {source: '',condition: {
+//     }
+//   },
+//   endpoint: 'api/getwebinarshop',
+//   api_url: api_url
+// }
+// },
 
   // {path:'thewholestory', component: NewthewholestoryComponent}, 
 

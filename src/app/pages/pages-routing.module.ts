@@ -9,8 +9,13 @@ import { TestresolveService } from '../testresolve.service';
 import { AboutComponent } from '../about/about.component';
 import { NewaboutbetoComponent } from '../newaboutbeto/newaboutbeto.component';
 import { NewsuccessgeneticsComponent } from '../newsuccessgenetics/newsuccessgenetics.component';
+import { LiveWebinarComponent } from '../live-webinar/live-webinar.component';
+import { environment } from 'src/environments/environment';
+//import { environment } from '../environments/environment';
 //import { ProductComponent } from '../product/product.component';
 //import { ContactComponent } from '../contact/contact.component';
+
+const api_url = environment['api_url'];
 
 const routes: Routes = [
   { path: '', component: PagesComponent },
@@ -25,6 +30,26 @@ const routes: Routes = [
   {path:'about', component: AboutComponent},
   {path:'aboutbeto', component: NewaboutbetoComponent},
   { path: 'successgenetics', component: NewsuccessgeneticsComponent },
+  {path:'live-webinar', component: LiveWebinarComponent, 
+  resolve: {
+    shop: TestresolveService
+  },data: {requestcondition: {source: '',condition: {
+      }
+    },
+    endpoint: 'api/getwebinarshop',
+    api_url: api_url
+  }
+}, 
+{path:'live-webinar/:id', component: LiveWebinarComponent, 
+resolve: {
+  shop: TestresolveService
+},data: {requestcondition: {source: '',condition: {
+    }
+  },
+  endpoint: 'api/getwebinarshop',
+  api_url: api_url
+}
+},
   // {
   //   path: 'products', component: ProductComponent,
   //   resolve: { packagedata: TestresolveService },

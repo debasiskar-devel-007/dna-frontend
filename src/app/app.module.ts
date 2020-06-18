@@ -37,7 +37,7 @@ import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpag
 
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
 import { SuccessComponent } from './success/success.component';
-import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
+//import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
 import { SuccessbookComponent, TermsandConditionSB, PrivacyPolicySB, AddON } from './successbook/successbook.component';
 import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 
@@ -89,7 +89,7 @@ export function metaFactory(): MetaLoader {
     MenteelandingpageComponent,
     SuccessComponent,
     MyLoaderComponent,
-    LiveWebinarComponent,
+    //LiveWebinarComponent,
     SuccessbookComponent,
     AddON,
     OrdersuccessComponent,
