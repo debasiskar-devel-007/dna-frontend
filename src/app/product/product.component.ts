@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener, Inject } from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import {environment} from '../../environments/environment';
+import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -11,16 +11,16 @@ import {environment} from '../../environments/environment';
 export class ProductComponent implements OnInit {
   public saletax: number = 0;
   public total: number = 0;
-  public allPackage:any=[];
-  public index:number;
-  public acctoken:any;
+  public allPackage: any = [];
+  public index: number;
+  public acctoken: any;
   public selectedProduct: any = { good: 0, better: 0, best: 0, mentor: 0 };
   public expyear: any = [{ val: 20, 'name': '2020' }, { val: 21, 'name': '2021' }, { val: 22, 'name': '2022' }, { val: 23, 'name': '2023' }, { val: 24, 'name': '2024' }
     , { val: 25, 'name': '2025' }, { val: 26, 'name': '2026' }, { val: 27, 'name': '2027' }, { val: 28, 'name': '2028' }, { val: 29, 'name': '2029' }, { val: 30, 'name': '2030' }]
   public expmonth: any = [{ val: '01', 'name': 'JANUARY' }, { val: '02', 'name': 'FEBRUARY' }, { val: '03', 'name': 'MARCH' }, { val: '04', 'name': 'APRIL' }, { val: '05', 'name': 'MAY' }
     , { val: '06', 'name': 'JUNE' }, { val: '07', 'name': 'JULY' }, { val: '08', 'name': 'AUGUST' }, { val: '09', 'name': 'SEPTEMBER' }, { val: '10', 'name': 'OCTOBER' }, { val: '11', 'name': 'NOVEMBER' }
     , { val: '12', 'name': 'DECEMBER' }];
-  public productDetails: any={};
+  public productDetails: any = {};
   public status: any = [{ val: 1, 'name': 'Active' }, { val: 0, 'name': 'Inactive' }];
   emailregex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   passwordregex: RegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
@@ -35,8 +35,8 @@ export class ProductComponent implements OnInit {
   public formdata1: any;
   public formdata2: any;
   public statesjson: any = [];
-  public parentdetails:any = [];
-  public banner_image:any;
+  public parentdetails: any = [];
+  public banner_image: any;
 
 
   constructor(public _apiService: ApiService, public ActivatedRoute: ActivatedRoute,
@@ -51,9 +51,13 @@ export class ProductComponent implements OnInit {
 
     this.meta.setTag('og:title', 'DNA Of Success - Our Products');
     this.meta.setTag('twitter:title', 'DNA Of Success - Our Products');
-    this.meta.setTag('og:url', 'https://www.dnamastercourse.com/');
-    if(this.router.url == '/products' || this.ActivatedRoute.snapshot.routeConfig.path == 'products/:class'){
+
+    if (this.router.url == '/products' || this.ActivatedRoute.snapshot.routeConfig.path == 'products/:class') {
       this.meta.setTag('og:image', '../../assets/images/default_image.jpg');
+      this.meta.setTag('og:url', 'https://dna.influxiq.com/');
+      this.meta.setTag('twitter:url', 'https://dna.influxiq.com/');
+
+
     }
 
 
@@ -70,37 +74,40 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
 
-    if(this.ActivatedRoute.snapshot.routeConfig.path == 'landingpage/:class/:_id' ){
-      this.ActivatedRoute.data.subscribe((resolveData:any) => {
-        this.allPackage=resolveData.packagedata.results.package;
-        this.acctoken=resolveData.packagedata.results.token.access_token;
-        this.banner_image=resolveData.packagedata.results.banner[0].image;
+    if (this.ActivatedRoute.snapshot.routeConfig.path == 'landingpage/:class/:_id') {
+      this.ActivatedRoute.data.subscribe((resolveData: any) => {
+        this.allPackage = resolveData.packagedata.results.package;
+        this.acctoken = resolveData.packagedata.results.token.access_token;
+        this.banner_image = resolveData.packagedata.results.banner[0].image;
 
-        // console.log('@@@@>>>>>',this.ActivatedRoute.params);
+        console.log('@@@@>>>>>',this.ActivatedRoute.params,'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
 
         this.meta.setTag('og:image', this.banner_image);
         this.meta.setTag('twitter:image', this.banner_image);
+        this.meta.setTag('og:url', 'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
+        this.meta.setTag('twitter:url', 'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
+
       });
     }
 
 
 
-    if(this.router.url == '/products' ){
-      this.ActivatedRoute.data.subscribe((resolveData:any) => {
-        this.allPackage=resolveData.packagedata.results.package;
-        this.acctoken=resolveData.packagedata.results.token.access_token;
+    if (this.router.url == '/products') {
+      this.ActivatedRoute.data.subscribe((resolveData: any) => {
+        this.allPackage = resolveData.packagedata.results.package;
+        this.acctoken = resolveData.packagedata.results.token.access_token;
         // console.log(this.acctoken);
         //  console.log(resolveData.packagedata) 
       });
     }
-  
+
     //console.log(this.ActivatedRoute.snapshot.url[0].path);
     //  console.log(this.ActivatedRoute.snapshot.params.id.substring(0, 1));
-    if(this.ActivatedRoute.snapshot.url[0].path=='products-list'){
+    if (this.ActivatedRoute.snapshot.url[0].path == 'products-list') {
       document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.id).scrollIntoView({ behavior: 'smooth', });
-      
+
     }
-     if (this.ActivatedRoute.snapshot.params.class != null && this.ActivatedRoute.snapshot.params.class.length==1) {
+    if (this.ActivatedRoute.snapshot.params.class != null && this.ActivatedRoute.snapshot.params.class.length == 1) {
       // document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', });
       //   if(this.ActivatedRoute.snapshot.params.class==1){
       //     this.chooseProduct('','good');
@@ -114,17 +121,17 @@ export class ProductComponent implements OnInit {
       //   }else if(this.ActivatedRoute.snapshot.params.class==4){
       //     this.chooseProduct('','mentor');
       //     this.selectedProduct.mentor = 1;
-        // }
-    }else{
-      let data:any = {
-        "id":this.ActivatedRoute.snapshot.params.class
+      // }
+    } else {
+      let data: any = {
+        "id": this.ActivatedRoute.snapshot.params.class
       }
-      this._apiService.customRequest1(data,'api1/usergetone',environment['api_url']).subscribe((res:any) => {
+      this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
         // console.log(res)
-        this.parentdetails=res.result[0];
+        this.parentdetails = res.result[0];
       })
     }
-/////////////////////////
+    /////////////////////////
 
     this.formdata = {
       successmessage: "Order Placed Sucessfully!!",
@@ -138,10 +145,10 @@ export class ProductComponent implements OnInit {
       jwttoken: this._apiService.jwtToken,
       fields: [
         {
-          label:'productdetails',
-          name:'productDetails',
-          type:'hidden',
-          value:this.productDetails
+          label: 'productdetails',
+          name: 'productDetails',
+          type: 'hidden',
+          value: this.productDetails
         },
         {
           //heading:"",
@@ -405,10 +412,10 @@ export class ProductComponent implements OnInit {
           value: 'TEST'
         },
         {
-          label:'accesstoken',
-          name:'accesstoken',
-          type:'hidden',
-          value:this.acctoken
+          label: 'accesstoken',
+          name: 'accesstoken',
+          type: 'hidden',
+          value: this.acctoken
         }
         // {
         //   //heading:"",
@@ -426,74 +433,74 @@ export class ProductComponent implements OnInit {
         // }
       ]
     };
-    
-      setTimeout(() => {
-        //console.log(this.parentdetails.type)
-        if(this.parentdetails!=null && this.parentdetails!=''){
-       this.formfieldrefreshdata = {
-         field: 'addfromcontrol',
-             value: {
-             label: 'parenttype',
-             name: 'parenttype',
-             type: 'hidden',
-             after: 'status',
-             value: this.parentdetails.type
-         }
-     };
 
-      //affiliate
-      if(this.parentdetails.type=='affiliate'){
+    setTimeout(() => {
+      //console.log(this.parentdetails.type)
+      if (this.parentdetails != null && this.parentdetails != '') {
         this.formfieldrefreshdata = {
           field: 'addfromcontrol',
-              value: {
+          value: {
+            label: 'parenttype',
+            name: 'parenttype',
+            type: 'hidden',
+            after: 'status',
+            value: this.parentdetails.type
+          }
+        };
+
+        //affiliate
+        if (this.parentdetails.type == 'affiliate') {
+          this.formfieldrefreshdata = {
+            field: 'addfromcontrol',
+            value: {
               label: 'affiliate_id',
               name: 'affiliate_id',
               type: 'hidden',
               after: 'transactiontype',
               value: this.parentdetails._id
-          }
-      };
-  }
-          //mentor
-        if(this.parentdetails.type=='mentor'){
+            }
+          };
+        }
+        //mentor
+        if (this.parentdetails.type == 'mentor') {
           this.formfieldrefreshdata = {
-        field: 'addfromcontrol',
-        value: {
-        label: 'parentid',
-        name: 'parentid',
-        type: 'hidden',
-        after: 'transactiontype',
-        value: this.parentdetails._id
+            field: 'addfromcontrol',
+            value: {
+              label: 'parentid',
+              name: 'parentid',
+              type: 'hidden',
+              after: 'transactiontype',
+              value: this.parentdetails._id
+            }
+          };
         }
-        };
-        }
-    }
+      }
 
-     }, 3000);
-    
+    }, 3000);
+
 
   }
 
-  chooseProduct(i:any, item:any) {
+  chooseProduct(i: any, item: any) {
 
     // document.querySelector('.newproduct_list1').scrollIntoView({ behavior: 'smooth', });
     // console.log(item);
     // console.log(i);
     this.index = i;
-    this.allPackage[i].flag=item._id;
+    this.allPackage[i].flag = item._id;
     // console.log(item);
-    this.productDetails.name =item.productname;
+    this.productDetails.name = item.productname;
     this.productDetails.price = item.price;
     this.productDetails.delivery = 6.95;
     this.saletax = this.productDetails.price / 100 * 6;
     this.saletax = parseFloat(this.saletax.toFixed(2));
     this.productDetails.saletax = this.saletax;
-    this.productDetails.subtotal = this.productDetails.price*1;
+    this.productDetails.subtotal = this.productDetails.price * 1;
     this.productDetails.total = this.productDetails.subtotal + this.saletax + this.productDetails.delivery;
     this.productDetails.total = parseFloat(this.productDetails.total.toFixed(2));
     this.total = this.productDetails.total;
-    this.productDetails.usertype =item.role.toLowerCase();
-    this.productDetails.webinarid =item.webinar;
+    this.productDetails.usertype = item.role.toLowerCase();
+    this.productDetails.webinarid = item.webinar;
     // console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {

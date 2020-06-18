@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     this.meta.setTag('og:title', 'DNA Of Success - The DNA Master Course');
     this.meta.setTag('twitter:title', 'DNA Of Success - The DNA Master Course');
     this.meta.setTag('og:type', 'website');
-    this.meta.setTag('og:url','https://www.dnamastercourse.com/');
+    this.meta.setTag('og:url','https://dna.influxiq.com/');
       this.meta.setTag('og:image', '../../assets/images/default_image.jpg');
   }
 
