@@ -12,6 +12,8 @@ import { NewmentorComponent } from '../newmentor/newmentor.component';
 import { BlogComponent } from '../blog/blog.component';
 import { AboutComponent } from '../about/about.component';
 import { NewaboutbetoComponent } from '../newaboutbeto/newaboutbeto.component';
+import { NewsuccessgeneticsComponent } from '../newsuccessgenetics/newsuccessgenetics.component';
+//import { ProductComponent } from '../product/product.component';
 //import { ContactComponent } from '../contact/contact.component';
 // import { RouterModule } from '@angular/router';
 
@@ -25,6 +27,8 @@ import { NewaboutbetoComponent } from '../newaboutbeto/newaboutbeto.component';
     BlogComponent,
     AboutComponent,
     NewaboutbetoComponent,
+    NewsuccessgeneticsComponent,
+   // ProductComponent
     //ContactComponent
     // FooterComponent,
     // HeaderComponent

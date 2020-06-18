@@ -21,7 +21,7 @@ import { TermsandCondition, PrivacyPolicy } from './footer/footer.component';
 // import { NewthewholestoryComponent } from './newthewholestory/newthewholestory.component';
 // import { NewmentorComponent } from './newmentor/newmentor.component';
 //import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
-import { NewsuccessgeneticsComponent } from './newsuccessgenetics/newsuccessgenetics.component';
+//import { NewsuccessgeneticsComponent } from './newsuccessgenetics/newsuccessgenetics.component';
 //import { AboutComponent } from './about/about.component';
 // import { BlogComponent } from './blog/blog.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
@@ -76,7 +76,7 @@ export function metaFactory(): MetaLoader {
     TermsandConditionSB,
     PrivacyPolicySB,
    // NewaboutbetoComponent,
-    NewsuccessgeneticsComponent,
+   // NewsuccessgeneticsComponent,
    // AboutComponent,
     // BlogComponent, 
     BlogdetailComponent,
