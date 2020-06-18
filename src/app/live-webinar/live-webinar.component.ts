@@ -3,6 +3,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { ApiService } from '../api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../environments/environment';
+
 @Component({
   selector: 'app-live-webinar',
   templateUrl: './live-webinar.component.html',
@@ -12,7 +13,7 @@ export class LiveWebinarComponent implements OnInit {
   public allproduct: any = [];
   public uniqueId: any = 0;
   public acctoken:any;
-
+  public parentdetails:any =[];
   constructor(public cookieService: CookieService, private apiService: ApiService, public router: Router, public activatedRoute: ActivatedRoute) {
     this.uniqueId = this.makeid(14);
     let uid = this.cookieService.get('uniqueID');
@@ -22,6 +23,15 @@ export class LiveWebinarComponent implements OnInit {
     } else {
       this.cookieService.set('uniqueID', this.uniqueId);
       //console.log(this.uniqueId);
+    }
+    if (this.activatedRoute.snapshot.routeConfig.path == 'live-webinar/:id') {
+      let data: any = {
+        "id": this.activatedRoute.snapshot.params.id
+      }
+      this.apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
+        // console.log(res)
+        this.parentdetails = res.result[0];
+      })
     }
 
   }
@@ -52,6 +62,19 @@ export class LiveWebinarComponent implements OnInit {
 
 
   productselect(value: any) {
+    let parentid='';
+    let affiliate_id='';
+    if(this.parentdetails!=null && this.parentdetails!=''){
+      console.log(this.parentdetails);
+      if(this.parentdetails.type=="mentor"){
+        parentid=this.parentdetails._id
+      }
+      if(this.parentdetails.type=="affiliate"){
+        affiliate_id=this.parentdetails._id
+      }
+    }
+    console.log(parentid);
+   
     const product: any = {};
     product.price = 49;
     product.quantity = 1;
@@ -62,22 +85,17 @@ export class LiveWebinarComponent implements OnInit {
     //  console.log(product);
 
     let data: any = {};
-    if (this.activatedRoute.snapshot.params.shopid != '' && this.activatedRoute.snapshot.params.shopid != null) {
+    
       data = {
         product,
         tempid:this.uniqueId,
         token:this.acctoken,
-        id: this.activatedRoute.snapshot.params.shopid
+        parentid:parentid,
+        affiliate_id:affiliate_id
       };
-    } else {
-      data = {
-        product,
-        token:this.acctoken,
-        tempid:this.uniqueId
-      };
-    }
 
-    // console.log(data);
+    console.log(data);
+    return;
     this.apiService.customRequest1(data, 'api/frontendcart', environment['api_url']).subscribe((res: any) => {
       // console.warn(res);
       if (res.status == 'success') {
