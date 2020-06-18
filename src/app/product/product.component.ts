@@ -52,7 +52,7 @@ export class ProductComponent implements OnInit {
     this.meta.setTag('og:title', 'DNA Of Success - Our Products');
     this.meta.setTag('twitter:title', 'DNA Of Success - Our Products');
 
-    if (this.router.url == '/products' || this.ActivatedRoute.snapshot.routeConfig.path == 'products/:class') {
+    if (this.router.url == '/pages/products' || this.ActivatedRoute.snapshot.routeConfig.path == 'products/:class') {
       this.meta.setTag('og:image', '../../assets/images/default_image.jpg');
       this.meta.setTag('og:url', 'https://dna.influxiq.com/');
       this.meta.setTag('twitter:url', 'https://dna.influxiq.com/');
@@ -100,7 +100,7 @@ export class ProductComponent implements OnInit {
 
 
 
-    if (this.router.url == '/products') {
+    if (this.router.url == '/pages/products') {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
         this.acctoken = resolveData.packagedata.results.token.access_token;

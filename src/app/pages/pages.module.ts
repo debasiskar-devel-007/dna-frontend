@@ -14,9 +14,9 @@ import { AboutComponent } from '../about/about.component';
 import { NewaboutbetoComponent } from '../newaboutbeto/newaboutbeto.component';
 import { NewsuccessgeneticsComponent } from '../newsuccessgenetics/newsuccessgenetics.component';
 import { LiveWebinarComponent } from '../live-webinar/live-webinar.component';
-//import { ProductComponent } from '../product/product.component';
+import { ProductComponent } from '../product/product.component';
 
-//import { ContactComponent } from '../contact/contact.component';
+// import { ContactComponent } from '../contact/contact.component';
 // import { RouterModule } from '@angular/router';
 
 
@@ -31,9 +31,9 @@ import { LiveWebinarComponent } from '../live-webinar/live-webinar.component';
     NewaboutbetoComponent,
     NewsuccessgeneticsComponent,
     LiveWebinarComponent,
-    //ProductComponent
-   
-    //ContactComponent
+    ProductComponent,
+
+    // ContactComponent,
     // FooterComponent,
     // HeaderComponent
 
