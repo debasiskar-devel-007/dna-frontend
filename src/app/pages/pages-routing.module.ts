@@ -11,6 +11,7 @@ import { NewaboutbetoComponent } from '../newaboutbeto/newaboutbeto.component';
 import { NewsuccessgeneticsComponent } from '../newsuccessgenetics/newsuccessgenetics.component';
 import { LiveWebinarComponent } from '../live-webinar/live-webinar.component';
 import { environment } from 'src/environments/environment';
+
 //import { environment } from '../environments/environment';
 //import { ProductComponent } from '../product/product.component';
 //import { ContactComponent } from '../contact/contact.component';
@@ -50,6 +51,26 @@ resolve: {
   api_url: api_url
 }
 },
+
+// {
+//   path: 'products', component: ProductComponent,
+//   resolve: { packagedata: TestresolveService },
+//   data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+// },
+
+// //banner image display route
+// {
+//   path: 'landingpage/:class/:_id', component: ProductComponent,
+//   resolve: { packagedata: TestresolveService },
+//   data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getbannerdataforlandingpage' }
+// },
+
+// { path: 'products-list/:id', component: ProductComponent },
+// {
+//   path: 'products/:class', component: ProductComponent,
+//   resolve: { packagedata: TestresolveService },
+//   data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+// },
   // {
   //   path: 'products', component: ProductComponent,
   //   resolve: { packagedata: TestresolveService },

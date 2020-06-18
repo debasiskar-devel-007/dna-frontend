@@ -115,7 +115,7 @@ const routes: Routes = [
     data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
   },
 
- // {path:'contact', component: ContactComponent}, 
+  {path:'contact', component: ContactComponent}, 
 
  //{ path: 'contact', component: ContactComponent },
 
