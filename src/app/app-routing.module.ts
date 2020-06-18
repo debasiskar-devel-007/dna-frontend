@@ -121,7 +121,6 @@ const routes: Routes = [
 
 
   { path: 'mentorsignup', component: MentorsignupComponent },
-
   {
     path: 'mentorsignup/:_id', component: MentorsignupComponent,
     resolve: { Data: TestresolveService },

@@ -1,0 +1,13 @@
+<h1>Product</h1>
+<h3>Product name:{{dta.product.name}}</h3>
+<h3>Price:{{dta.product.price}}</h3>
+<h3>Saletax:{{dta.product.saletax}}</h3>
+<h3>Subtotal:{{dta.product.subtotal}}</h3>
+<h3>Shipping Charge:{{dta.product.delivery}}</h3>
+<h3>Total:{{dta.product.total}}</h3>
+<lib-showform  class='form-line' *ngIf="formdata !=null"
+[formdata]="formdata"
+[formfieldrefresh]="formfieldrefresh"
+[formfieldrefreshdata]="formfieldrefreshdata"
+(onFormFieldChange)="listenFormFieldChange($event)"
+> </lib-showform>

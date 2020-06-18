@@ -29,7 +29,7 @@ import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.comp
 import { LoginComponent } from './login/login.component';
 // import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
-import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
+import { MentorsignupComponent,formModal} from './mentorsignup/mentorsignup.component';
 import { FacebookModule, FacebookService } from 'ngx-facebook';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 // import { ListingModule } from 'listing-angular7';
@@ -86,6 +86,7 @@ export function metaFactory(): MetaLoader {
     // ProductComponent,
     ContactComponent,
     MentorsignupComponent,
+    formModal,
     LandingpageComponent,
     MenteelandingpageComponent,
     SuccessComponent,
@@ -124,7 +125,7 @@ export function metaFactory(): MetaLoader {
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: [loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
+  entryComponents: [formModal,loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
 })
 export class AppModule {
 
