@@ -115,7 +115,7 @@ const routes: Routes = [
   //   data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
   // },
 
-  {path:'contact', component: ContactComponent}, 
+  {path:'contact-us', component: ContactComponent}, 
 
  //{ path: 'contact', component: ContactComponent },
 
@@ -171,7 +171,7 @@ const routes: Routes = [
   },
 
   // {path: '', redirectTo: 'home', pathMatch: 'full'},
-  // {path: '**', component: HomeComponent},
+   {path: '**', component: HomeComponent},
 
   { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) }
 ];
