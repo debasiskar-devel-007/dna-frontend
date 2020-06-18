@@ -9,6 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MentorsignupComponent implements OnInit {
   public status: any = [{ val: 1, 'name': 'Active' }, { val: 0, 'name': 'Inactive' }];
+  public productDetails: any = {};
+  public saletax:number;
+  total:number;
   emailregex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   passwordregex: RegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
 
@@ -22,6 +25,17 @@ export class MentorsignupComponent implements OnInit {
   public parentid:any = '';
   public shareUser:any =[];
   constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute ) {
+    this.productDetails.name = 'Mentor Package for $749"';
+    this.productDetails.price = 0;
+    this.productDetails.delivery = 6.95;
+    this.saletax = this.productDetails.price / 100 * 6;
+    this.saletax = parseFloat(this.saletax.toFixed(2));
+    this.productDetails.saletax = this.saletax;
+    this.productDetails.subtotal = this.productDetails.price * 1;
+    this.productDetails.total = this.productDetails.subtotal + this.saletax + this.productDetails.delivery;
+    this.productDetails.total = parseFloat(this.productDetails.total.toFixed(2));
+    this.total = this.productDetails.total;
+    console.log(this.productDetails)
     this._apiService.getState().subscribe((response:any) => {
      // console.log(response)
       for (let i in response) {
@@ -193,7 +207,13 @@ export class MentorsignupComponent implements OnInit {
           name: "status",
           type: 'hidden',
           value: 1
-      }
+      },
+      // {
+      //   label:"type",
+      //   name:"type",
+      //   type:'hidden',
+      //   value:this.productDetails
+      // }
       ]
   };
 
