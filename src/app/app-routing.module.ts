@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 // import { NewthewholestoryComponent } from './newthewholestory/newthewholestory.component';
 // import { NewmentorComponent } from './newmentor/newmentor.component';
 import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
-import { NewsuccessgeneticsComponent } from './newsuccessgenetics/newsuccessgenetics.component';
+//import { NewsuccessgeneticsComponent } from './newsuccessgenetics/newsuccessgenetics.component';
 //import { AboutComponent } from './about/about.component';
 // import { BlogComponent } from './blog/blog.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
@@ -18,7 +18,7 @@ import { environment } from '../environments/environment';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpage.component';
 import { SuccessComponent } from './success/success.component';
-import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
+//import { LiveWebinarComponent } from './live-webinar/live-webinar.component';
 import { SuccessbookComponent } from './successbook/successbook.component';
 import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 import { CartComponent } from './cart/cart.component';
@@ -38,23 +38,26 @@ const routes: Routes = [
 
   {path:'successbook', component: SuccessbookComponent},
 
-  {path:'live-webinar', component: LiveWebinarComponent, 
-  resolve: {
-    shop: TestresolveService
-  },data: {requestcondition: {source: '',condition: {
-      }
-    },
-    endpoint: 'api/getwebinarshop',
-    api_url: api_url
-  }
-}, 
-{path:'live-webinar/:shopid', component: LiveWebinarComponent, 
-resolve: {
-  shop: TestresolveService
-},data: {requestcondition: {source: '',condition: {
-    }
-  },}
-},
+//   {path:'live-webinar', component: LiveWebinarComponent, 
+//   resolve: {
+//     shop: TestresolveService
+//   },data: {requestcondition: {source: '',condition: {
+//       }
+//     },
+//     endpoint: 'api/getwebinarshop',
+//     api_url: api_url
+//   }
+// }, 
+// {path:'live-webinar/:id', component: LiveWebinarComponent, 
+// resolve: {
+//   shop: TestresolveService
+// },data: {requestcondition: {source: '',condition: {
+//     }
+//   },
+//   endpoint: 'api/getwebinarshop',
+//   api_url: api_url
+// }
+// },
 
   // {path:'thewholestory', component: NewthewholestoryComponent}, 
 
@@ -65,7 +68,7 @@ resolve: {
 // { path: 'aboutbeto', component: NewaboutbetoComponent },
 
 
-  { path: 'successgenetics', component: NewsuccessgeneticsComponent },
+  // { path: 'successgenetics', component: NewsuccessgeneticsComponent },
 
 
  // {path:'about', component: AboutComponent}, 
