@@ -23,7 +23,7 @@ import { SuccessbookComponent } from './successbook/successbook.component';
 import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { ContactComponent } from './contact/contact.component';
+//import { ContactComponent } from './contact/contact.component';
 // const api_url1 =  environment["api_url1"];
 const api_url = environment['api_url'];
 
@@ -115,7 +115,7 @@ const routes: Routes = [
   //   data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
   // },
 
-  {path:'contact-us', component: ContactComponent}, 
+  //{path:'contact-us', component: ContactComponent}, 
 
  //{ path: 'contact', component: ContactComponent },
 
@@ -171,9 +171,10 @@ const routes: Routes = [
   },
 
   // {path: '', redirectTo: 'home', pathMatch: 'full'},
-   {path: '**', component: HomeComponent},
+  
 
-  { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) }
+  { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+  {path: '**', component: HomeComponent},
 ];
 
 @NgModule({
