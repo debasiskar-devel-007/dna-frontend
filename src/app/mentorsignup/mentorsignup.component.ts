@@ -1,6 +1,6 @@
 import { Component, OnInit,Inject } from '@angular/core';
 import { ApiService } from '../api.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 // import * as console from 'console';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 export interface DialogData {
@@ -16,7 +16,7 @@ export class MentorsignupComponent implements OnInit {
   public status: any = [{ val: 1, 'name': 'Active' }, { val: 0, 'name': 'Inactive' }];
   public productDetails: any = {};
   public saletax:number;
-  total:number;
+
   emailregex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   passwordregex: RegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
 
@@ -39,9 +39,10 @@ export class MentorsignupComponent implements OnInit {
     this.productDetails.subtotal = this.productDetails.price * 1;
     this.productDetails.total = this.productDetails.subtotal + this.saletax + this.productDetails.delivery;
     this.productDetails.total = parseFloat(this.productDetails.total.toFixed(2));
-    this.total = this.productDetails.total;
+    this.productDetails.usertype='mentor';
+    this.productDetails.webinarid=[null];
     
-    console.log(this.productDetails)
+    // console.log(this.productDetails)
     this._apiService.getState().subscribe((response:any) => {
      // console.log(response)
       for (let i in response) {
@@ -228,8 +229,8 @@ export class MentorsignupComponent implements OnInit {
   ngOnInit() {
     if(this.ActivatedRoute.snapshot.params._id != null && typeof(this.ActivatedRoute.snapshot.params._id) != "undefined"){
     setTimeout(() => {
-       console.log(this.shareUser)
-       console.log(this.shareUser.type)
+      //  console.log(this.shareUser)
+      //  console.log(this.shareUser.type)
 
        if(this.shareUser.type=='affiliate'){
               this.formfieldrefreshdata = {
@@ -296,9 +297,14 @@ export class formModal {
   public formdata1: any;
   public formdata2: any;
   public statesjson: any = [];
+  public expyear: any = [{ val: 20, 'name': '2020' }, { val: 21, 'name': '2021' }, { val: 22, 'name': '2022' }, { val: 23, 'name': '2023' }, { val: 24, 'name': '2024' }
+  , { val: 25, 'name': '2025' }, { val: 26, 'name': '2026' }, { val: 27, 'name': '2027' }, { val: 28, 'name': '2028' }, { val: 29, 'name': '2029' }, { val: 30, 'name': '2030' }]
+public expmonth: any = [{ val: '01', 'name': 'JANUARY' }, { val: '02', 'name': 'FEBRUARY' }, { val: '03', 'name': 'MARCH' }, { val: '04', 'name': 'APRIL' }, { val: '05', 'name': 'MAY' }
+  , { val: '06', 'name': 'JUNE' }, { val: '07', 'name': 'JULY' }, { val: '08', 'name': 'AUGUST' }, { val: '09', 'name': 'SEPTEMBER' }, { val: '10', 'name': 'OCTOBER' }, { val: '11', 'name': 'NOVEMBER' }
+  , { val: '12', 'name': 'DECEMBER' }];
   constructor(
     public dialogRef: MatDialogRef<formModal>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,public activatedRoute: ActivatedRoute, public apiService: ApiService) {
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,public activatedRoute: ActivatedRoute, public apiService: ApiService, public router: Router) {
       this.apiService.getState().subscribe((response:any) => {
         // console.log(response)
          for (let i in response) {
@@ -309,17 +315,17 @@ export class formModal {
          }
        })
       this.dta=data;
-      console.log(data)
+     
       console.log(this.dta)
-      console.log(this.dta.firstname)
+     
       this.formdata = {
         successmessage: "Order Placed Sucessfully!!",
         //redirectpath:"/product",
         submittext: "Rush My Order",
         submitactive: true, //optional, default true
-        apiUrl:'',
+        apiUrl:this.apiService.nodesslurl,
         // canceltext:"Cancel Now",
-        //resettext:"Reset This",
+        // resettext:"Reset",
         endpoint: 'api/order',
         jwttoken: '',
         fields: [
@@ -327,7 +333,13 @@ export class formModal {
             label: 'productdetails',
             name: 'productDetails',
             type: 'hidden',
-            value: ''
+            value:this.dta.product
+          },
+          {
+            label:'company',
+            name:'company',
+            type:'hidden',
+            value:this.dta.company
           },
           {
             //heading:"",
@@ -463,7 +475,7 @@ export class formModal {
             label: "State",
             name: "shipping_state",
             type: "select",
-            val: '',
+            val:this.statesjson,
             validations: [
               { rule: 'required', message: "Select Your State" },
             ]
@@ -511,7 +523,7 @@ export class formModal {
             name: "expmonth",
             value: '',
             type: "select",
-            val: '',
+            val: this.expmonth,
             validations: [
               { rule: 'required', message: "Enter Your Validity Month" },
             ]
@@ -521,7 +533,7 @@ export class formModal {
             label: "Year",
             name: "expyear",
             value: '',
-            val:'',
+            val:this.expyear,
             type: "select",
             validations: [
               { rule: 'required', message: "Enter Your Validity Year" },
@@ -563,40 +575,64 @@ export class formModal {
             name: 'accesstoken',
             type: 'hidden',
             value: ''
+          },
+          {
+            //heading:"",
+            label: "parentid",
+            name: "parentid",
+            type: 'hidden',
+            value:this.dta.parentid
+          },
+          {
+            //heading:"",
+            label: "affiliate_id",
+            name: "affiliate_id",
+            type: 'hidden',
+            value:this.dta.affiliate_id
+          },
+          { 
+            label:"Password",
+            name:"password",
+            type:'hidden',
+            value:this.dta.password,
+          },
+          {
+            label:"email",
+            name:"email",
+            type:'hidden',
+            value:this.dta.email,
           }
-          // {
-          //   //heading:"",
-          //   label: "parentid",
-          //   name: "parentid",
-          //   type: 'hidden',
-          //   value:this.ActivatedRoute.snapshot.params.class
-          // },
-          // {
-          //   //heading:"",
-          //   label: "parenttype",
-          //   name: "parenttype",
-          //   type: 'hidden',
-          //   value:this.parentdetails.type
-          // }
         ]
       };
     }
-    listenFormFieldChange(val: any) {
+    listenFormFieldChange1(val: any) {
       //// console.log(val);
+      console.log('val.feild.name',val.field.name);
+      console.log('val.field',val.fieldval);
       if (val.field == 'fromsubmit') {
-        // if (val.fromval.message != null && val.fromval.message != '') {
-        //   // console.log(val.fromval.message._id);
-        //   this.router.navigateByUrl('success/' + val.fromval.message._id);
-  
-        // }
+        if (val.fromval.message != null && val.fromval.message != '') {
+          // console.log(val.fromval.message._id);
+          this.dialogRef.close();
+          this.router.navigateByUrl('success/' + val.fromval.message._id);
+          
+        }
   
       }
   
       if (val.field.name != 'card_type' && val.field.name != 'card_cc' && val.field.name != 'expyear' && val.field.name != 'card_cvv' && val.field.name != 'expmonth') {
         //console.log('listenFormFieldChange', val);
-        if (val.field.name == 'firstname' || val.field.name == 'lastname' || val.field.name == 'address' || val.field.name == 'city' || val.field.name == 'state' || val.field.name == 'zip') {
-          this.formarray.push({ val: val.fieldval, name: val.field.name })
-        }
+        // if (val.field.name == 'firstname' || val.field.name == 'lastname' || val.field.name == 'address' || val.field.name == 'city' || val.field.name == 'state' || val.field.name == 'zip') {
+        //   this.formarray.push({ val: val.fieldval, name: val.field.name })
+        // }
+
+        this.formarray.push({ val:this.dta.firstname, name:'firstname'},
+        {val:this.dta.lastname,name:'lastname'},
+        {val:this.dta.address,name:'address'},
+        {val:this.dta.city,name:'city'},
+        {val:this.dta.state,name:'state'},
+        {val:this.dta.zip,name:'zip'},
+        {val:this.dta.phone,name:'phone'}
+)
         console.log(this.formarray,'+++++');
         if (val.field.name == 'sameaddress' && val.fieldval == true) {
           for (let i = 0; i < this.formarray.length; i++) {
