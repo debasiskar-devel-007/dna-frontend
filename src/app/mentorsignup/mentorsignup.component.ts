@@ -271,7 +271,7 @@ export class MentorsignupComponent implements OnInit {
     const dialogRef = this.dialog.open(formModal, {
       width: '',
       data:val,
-      panelClass: 'formpopup',
+      panelClass: 'formpopupMS',
        
     });
   

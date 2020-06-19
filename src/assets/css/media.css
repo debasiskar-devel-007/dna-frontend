@@ -1997,7 +1997,9 @@ success5_2_textblock{text-align:center;}
 .video_training_wrapper .text_header p{line-height:44px;font-size:36px;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{width:auto;}
 }
-@media screen and (max-width:991px){.producttextblock.newthewholestorybannertxt{width:100%;padding:0px!important;margin:0px !important;}
+@media screen and (max-width:991px){
+    .formpopupMS  .mat-dialog-container {  display: block; padding: 10px;}
+    .producttextblock.newthewholestorybannertxt{width:100%;padding:0px!important;margin:0px !important;}
 .mentors_detail_block_con_top .dnaimgwrapper{display:block;padding:10px;}
 .mentors_detail_block_con_top .productblockibberright{display:block;width:100%;}
 .blog_left_con{width:100%;float:none;}
