@@ -116,6 +116,9 @@
 .newhomeblock5_left_block3_sub{padding:98px 20px;}
 .newmentorsignup_block2_text1{width:68%;}
 .newmentorsignup_block2_text2{width:48%;}
+.newmentorsignup_block2_text3 {
+    width: 68%;
+}
 }
 @media screen and (max-width:1720px){.bannerimg1{left:850px;}
 .newmentorsignup_formbody .form-group{width:100%;margin:9px 0;}
@@ -161,7 +164,10 @@
 .newshop_banner_section{background-position:-275px top!important;}
 .success_msg_text{width:650px;}
 .bannerimg1{left:810px;width:430px;}
-.newmentorsignup_block2_text3{width:69%;margin-left:30%;}
+/* .newmentorsignup_block2_text3{width:69%; } */
+.ms_left_text {
+    width: 68%;
+    padding-right: 4%;}
 .newsuccessgenetics_banner_section{background-position:-360px top !important;}
 .s_newAffiliate .girl_image{left:-92px;width:529px;bottom:-20px;}
 .menu_block{width:1400px!important;}
@@ -325,6 +331,9 @@
 .newhomeblock3 .newhomeblock3_text .newhomeblock3_link a{float:none;}
 }
 @media screen and (max-width:1580px){.newhomeblock3 .newhomeblock3_sub4{background-position:right top;background-size:cover;}
+.newmentorsignup_block2_text3 {
+    width: 66%;
+}
 .newhomeblock3 .newhomeblock3_sub3{background-position:52% top;background-size:cover;}
 .productform .mat-raised-button{width:91%;font-size:26px;}
 .bannerimg1{left:760px;width:430px;}
@@ -364,6 +373,12 @@
 }
 @media screen and (max-width:1540px){.bannerimg1{left:780px;width:360px;}
 .newmentorsignup_block2_text2{padding-left:25%;}
+
+.ms_left_text {
+    width: 62%;
+    padding-right: 4%;     font-size: 25px;
+    line-height: 32px;
+}
 }
 @media screen and (max-width:1530px){.mentordetail-arowcurvenew{max-width:100%;width:36%;}
 .affiliate-signup_banner{background-position:-240px top;}
@@ -477,6 +492,21 @@
 .s-education .s-money-bg{background-position:146% bottom !important;}
 }
 @media screen and (max-width:1460px){.newmentorsignup_top_banner_wrappertext h1{font-size:56px;}
+.newmentorsignup_block2_text3 {
+    width: 62%;
+}
+
+/* .newmentorsignup_block2_text3 {
+    width: 80%;
+    margin-right: 60px;
+}
+
+.ms_left_text {
+    width: 70%;
+    padding-right: 4%;
+    font-size: 25px;
+    line-height: 32px;
+} */
 .newmentorsignup_block3_wrapper h2{width:100%;}
 /* .newmentorsignup_block3_wrapper ul li{width:68%;} */
 .newmentorsignup_block2_text1{width:62%;}
@@ -733,6 +763,15 @@
 }
 @media screen and (max-width:1320px){.newaboutbeto_banner_section{background-position:-360px top!important;}
 .cart_formbox1 .subbtn_pro{font-size:26px;}
+.newmentorsignup_block2_text3 {
+    width: 55%;
+}
+.ms_left_text {
+    width: 54%;
+    padding-right: 4%;
+    font-size: 22px;
+    line-height: 30px;
+}
 }
 @media screen and (max-width:1300px){.package_group:nth-of-type(3){background:url(../images/product_bg3.jpg) no-repeat 88% top;background-size:cover!important;}
 .newmentor_banner_section{background-position:-913px top !important;}
@@ -980,6 +1019,20 @@
 .home_new_imgblock3{padding:0 20px 30px 20px!important;background-size:44%!important;margin-top:25px;}
 }
 @media screen and (max-width:1199px){.package3{padding:0px!important;}
+
+.newmentorsignup_block2_text3{ margin-left: 15px!important; margin-right: 15px!important;}
+
+.newmentorsignup_block2_text3 .newmentorsignup_block2_text3_wrapper{ display: block; padding: 15px;}
+
+.ms_left_img{ margin: 0 auto;}
+
+.ms_left_text {
+    width: auto;
+    padding: 15px;
+    font-size: 25px;
+    line-height: 32px;
+}
+
 .newmentorsignup_block3_textwrap {
     padding-left: 0;
 }

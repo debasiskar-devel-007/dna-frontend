@@ -921,11 +921,17 @@ button{box-shadow:none!important;}
 .newmentorsignup_block2_text2{width:50%;padding-left:25%;}
 .newmentorsignup_block2_text2 p{margin:25px 0 0 0;padding:0;font-size:24px;color:#1d1f37;font-family:'robotoregular';line-height:32px;}
 .newmentorsignup_block2_text2 p span{color:#ff5246;font-weight:bold;}
-.newmentorsignup_block2_text3{width:70%;margin-left:60px;margin-top:40px;background:#01a3e3;}
-.newmentorsignup_block2_text3 .newmentorsignup_block2_text3_wrapper{padding:8px;}
+.newmentorsignup_block2_text3{width:70%;margin-left:60px;margin-top:30px;background:#01a3e3;     box-shadow: 0 2px 5px #91b4c0;}
+.newmentorsignup_block2_text3 .newmentorsignup_block2_text3_wrapper{padding:0px; background:url("../images/mentorsignup_new_top_arrow.png") no-repeat right top!important; position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;}
 .newmentorsignup_block2_text3 .newmentorsignup_block2_text3_wrapper p{margin:12px;font-size:24px;color:#ffffff;font-family:'robotoregular';line-height:32px;text-shadow:0 1px 2px #125079;}
 .newmentorsignup_block2_text3 .newmentorsignup_block2_text3_wrapper p span{color:#fff47a;}
 .newmentorsignup_block2_text3 .newmentorsignup_block2_text3_wrapper p strong{color:#363849;}
+
+.newmentorsignup_block2_text3 .newmentorsignup_block2_text3_wrapper::after{ content: '';  background:url("../images/mentorsignup_new_bottom_arrow.png") no-repeat right top!important;
+width: 41px; height: 33px; position: absolute; right: 0; bottom: -33px;
+
+}
+
 .newmentorsignup_form{width:380px;box-sizing:border-box;z-index:9;padding-left:0px;position:absolute;right:60px;top:20px;}
 .newmentorsignup_formwrapper{box-sizing:border-box;background:#5ee3f9;border:solid 1px #548672;border-radius:10px;box-shadow:0 0 5px #000;}
 .newmentorsignup_formbody{background:url(../images/newaffiliatesignup_form_bg.png) no-repeat center top;background-size:100%;padding:15px;}
@@ -1657,3 +1663,12 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 
 
 .newmentorsignup_block3_textwrap{ padding-left: 610px;}
+
+
+.ms_left_img{ width: 230px; padding: 22px; padding-left: 5px; background: #fdff50;  }
+
+.ms_left_img img{ width: 100%;}
+
+.ms_left_text{ width: 70%;  padding-right: 5%; font-size: 36px; line-height: 38px; color: #ffffff; font-family:'robotomedium'; text-shadow: 0 2px 5px #708992; }
+
+.ms_left_text strong{ color: #fff959; font-weight: normal;}
