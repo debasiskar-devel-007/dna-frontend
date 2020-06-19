@@ -922,7 +922,7 @@
 .block2 .block_main_wrapper1 h2{width:70%;}
 .block3 .block_main_wrapper1 h2{width:70%;}
 .block4 .block_main_wrapper1 h2{width:70%;}
-.AddON_modal_block3 label:nth-of-type(1) span{font-size:32px;}
+/* .AddON_modal_block3 label:nth-of-type(1) span{font-size:32px;} */
 .AddON_modal_block2_heading h2 label:nth-of-type(1)::before{font-size:40px;top:6px;}
 .AddON_modal_block2_heading h2 label:nth-of-type(2)::before{font-size:40px;top:6px;}
 .AddONWrapper{width:1100px!important;}
@@ -1096,9 +1096,11 @@
 .block3 .block_con_wrapper1 h5{width:auto;margin:0 16px;text-align:center;}
 .block4 .block_con_wrapper1 h5{width:auto;margin:0 16px;text-align:center;}
 .AddONWrapper{width:90%!important;}
-.AddON_modal_block3 label:nth-of-type(1) span{font-size:32px;line-height:40px;margin-top:-20px;}
-.AddON_modal_block3 label span{display:block;width:80%;float:left;margin-top:-15px;line-height:32px;}
-.AddON_modal_block3 input[type="checkbox"]{float:left;}
+/* .AddON_modal_block3 label:nth-of-type(1) span{font-size:32px;line-height:40px;margin-top:-20px;} */
+.AddON_modal_block3 label span{display:block;width:80%;float:left;margin-top:-15px;line-height:40px;}
+.AddON_modal_block3 input[type="radio"]{float:left;     margin-top: 5px;}
+
+
 .AddON_modal_block3 label{display:block;overflow:hidden;}
 .AddON_modal_block2_heading h2 label span{text-align:center!important;}
 .AddON_modal_block2_heading h2{background:none;text-align:center!important;}
@@ -2493,8 +2495,8 @@ a.home_banner_btn{width:100%;font-size:16px;}
 .newmentorsignup_block3_wrapper{background-size:130%!important;padding-bottom:87%;}
 }
 @media screen and (max-width:420px){.package3 .newproduct_con4_btn1{width:80%;}
-.AddON_modal_block3 input[type="checkbox"]{float:none;display:block;margin:0 auto;}
-.AddON_modal_block3 label:nth-of-type(1) span{margin-top:10px;}
+.AddON_modal_block3 input[type="radio"]{float:none;display:block;margin:0 auto;}
+/* .AddON_modal_block3 label:nth-of-type(1) span{margin-top:10px;} */
 .AddON_modal_block3 label span{display:block;width:auto;float:none;margin-top:10px;line-height:32px;text-align:center;padding:0px;}
 .newhomeblock3 .newhomeblock3_text{padding:15px;}
 .newhomeblock3 .newhomeblock3_sub1 h5{width:210px;}
