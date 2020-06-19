@@ -80,35 +80,46 @@
                     <label>card INFORMATION</label>
 
                      <div class="SB_topformwrapper">
-                    <mat-form-field appearance="fill">
-                        <mat-label>First Name</mat-label>
-                        <input matInput>
-                      </mat-form-field>
-
-                      <mat-form-field appearance="fill">
-                        <mat-label>Last Name</mat-label>
-                        <input matInput>
-                      </mat-form-field>
-
-                      <mat-form-field appearance="fill">
-                        <mat-label>Company</mat-label>
-                        <input matInput>
-                      </mat-form-field>
-
-                      <mat-form-field appearance="fill">
-                        <mat-label>Email</mat-label>
-                        <input matInput>
-                      </mat-form-field>
-
-                      <mat-form-field appearance="fill">
-                        <mat-label>Username</mat-label>
-                        <input matInput>
-                      </mat-form-field>
-                      <mat-form-field appearance="fill">
-                        <mat-label>Password</mat-label>
-                        <input matInput>
-                      </mat-form-field>
-
+                   <!-- user info here -->
+                   <ng-container *ngIf="form1">
+                    <lib-showform *ngIf="formdata !=null"
+                    [formdata]="formdata"
+                    [formfieldrefresh]="formfieldrefresh"
+                    [formfieldrefreshdata]="formfieldrefreshdata"
+                    (onFormFieldChange)="listenFormFieldChange($event)">
+                     </lib-showform>
+                   </ng-container>
+                <!-- billing address -->
+                   <ng-container *ngIf="form2">
+                    <lib-showform *ngIf="formdata1 !=null"
+                    [formdata]="formdata1"
+                    [formfieldrefresh]="formfieldrefresh"
+                    [formfieldrefreshdata]="formfieldrefreshdata"
+                    (onFormFieldChange)="listenFormFieldChange1($event)"
+                    >
+                     </lib-showform>
+                   </ng-container>
+                   <!-- shipping address -->
+                 
+                   <ng-container *ngIf="form3">
+                    <lib-showform *ngIf="formdata2 !=null"
+                    [formdata]="formdata2"
+                    [formfieldrefresh]="formfieldrefresh"
+                    [formfieldrefreshdata]="formfieldrefreshdata"
+                    (onFormFieldChange)="listenFormFieldChange2($event)"
+                    >
+                     </lib-showform>
+                   </ng-container>
+                    <!-- CARD INFORMATION-->
+                    <ng-container *ngIf="form4">
+                      <lib-showform *ngIf="formdata3 !=null"
+                      [formdata]="formdata3"
+                      [formfieldrefresh]="formfieldrefresh"
+                      [formfieldrefreshdata]="formfieldrefreshdata"
+                      (onFormFieldChange)="listenFormFieldChange1($event)"
+                      >
+                       </lib-showform>
+                     </ng-container>
                       <button class="nextbtn" (click)="AddONModal();"><span>next</span></button>
 
                     </div>
