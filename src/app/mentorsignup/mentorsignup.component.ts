@@ -40,6 +40,7 @@ export class MentorsignupComponent implements OnInit {
     this.productDetails.total = this.productDetails.subtotal + this.saletax + this.productDetails.delivery;
     this.productDetails.total = parseFloat(this.productDetails.total.toFixed(2));
     this.productDetails.usertype='mentor';
+    this.productDetails.webinarid=[null];
     
     // console.log(this.productDetails)
     this._apiService.getState().subscribe((response:any) => {
@@ -335,6 +336,12 @@ public expmonth: any = [{ val: '01', 'name': 'JANUARY' }, { val: '02', 'name': '
             value:this.dta.product
           },
           {
+            label:'company',
+            name:'company',
+            type:'hidden',
+            value:this.dta.company
+          },
+          {
             //heading:"",
             label: "Billing Name",
             name: "firstname",
@@ -600,28 +607,23 @@ public expmonth: any = [{ val: '01', 'name': 'JANUARY' }, { val: '02', 'name': '
     }
     listenFormFieldChange(val: any) {
       //// console.log(val);
+      console.log(val.field.name);
       if (val.field == 'fromsubmit') {
         if (val.fromval.message != null && val.fromval.message != '') {
-          // console.log(val.fromval.message._id);
+          console.log(val.fromval.message._id);
+          this.dialogRef.close();
           this.router.navigateByUrl('success/' + val.fromval.message._id);
-  
+          
         }
   
       }
   
       if (val.field.name != 'card_type' && val.field.name != 'card_cc' && val.field.name != 'expyear' && val.field.name != 'card_cvv' && val.field.name != 'expmonth') {
         //console.log('listenFormFieldChange', val);
-        // if (val.field.name == 'firstname' || val.field.name == 'lastname' || val.field.name == 'address' || val.field.name == 'city' || val.field.name == 'state' || val.field.name == 'zip') {
-        //   this.formarray.push({ val: val.fieldval, name: val.field.name })
-        // }
-        // console.log(this.formarray,'+++++');
-//         this.formarray.push({ val:this.userDetails.firstname , name:'firstname'},
-//         {val:this.userDetails.lastname,name:'lastname'},
-//         {val:this.userDetails.address,name:'address'},
-//         {val:this.userDetails.city,name:'city'},
-//         {val:this.userDetails.state,name:'state'},
-//         {val:this.userDetails.zip,name:'zip'}
-// )
+        if (val.field.name == 'firstname' || val.field.name == 'lastname' || val.field.name == 'address' || val.field.name == 'city' || val.field.name == 'state' || val.field.name == 'zip') {
+          this.formarray.push({ val: val.fieldval, name: val.field.name })
+        }
+        console.log(this.formarray,'+++++');
         if (val.field.name == 'sameaddress' && val.fieldval == true) {
           for (let i = 0; i < this.formarray.length; i++) {
             setTimeout(() => {
