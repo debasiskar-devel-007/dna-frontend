@@ -1564,10 +1564,86 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 
 
 
-.formpopup{ width: 800px;}
+.formpopupMS{width: 800px;
+    border: solid 6px #01a3e3;
+    background: #fff;}
 
-.formpopup mat-form-field{ width: 50%; float: left;}
+    .formpopupMS .form { margin-top: 15px;}
 
-.formpopup  lib-showform{    height: 280px;
+.formpopupMS .form_field_wrapper {    width: 99%;
+    margin: 0 auto; }
+
+ 
+
+.formpopupMS  lib-showform{    height: 280px;
     overflow-y: scroll;
     display: block;}
+
+
+    .formpopupMS h1{    font-size: 30px;
+        color: #fff;
+        font-family: 'OpenSans-Semibold';
+        margin: 0;
+        padding: 10px; 
+        line-height: 28px;
+        background: #063c65; text-align: center;}  
+
+        .formpopupMS table{ width: 100%;}     
+
+        .formpopupMS table tr:nth-child(odd){ background: #f3f2f2;}  
+
+        .formpopupMS table tr:nth-child(even){ background: #d4f1f6;}  
+
+        .formpopupMS table tr th{    font-family: 'OpenSans-Semibold'; font-size: 16px; color: #103a4d;     text-align: left;
+            padding: 5px;}    
+        .formpopupMS table tr td{    font-family: 'OpenSans-Semibold'; font-size: 16px; color: #333;     text-align: left;
+            padding: 5px;}    
+
+
+            /* .formpopupMS .form-element button {position: fixed;
+                bottom: 45px;}        */
+
+         
+
+
+                .mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-label-wrapper .mat-form-field-label{ display: none!important;}     
+                
+                
+
+                .formpopupMS .mat-form-field-underline{display:none;}
+                .formpopupMS .mat-form-field-subscript-wrapper{display:none;}
+
+                .formpopupMS .mat-input-element{box-sizing:border-box;width:99.6%;margin:0px;height:36px;border-radius:5px; border: solid 1px #bebebe;
+                    padding:0 1.5%!important;font-family:'OpenSans-Regular';font-size:14px;color:#333;display:block;background:#fff8f8!important;}
+
+
+                .formpopupMS .mat-select{box-sizing:border-box;width:99.6%;margin:0px;height:36px;border-radius:5px;
+                    border: solid 1px #bebebe; padding:0 1.5%!important;font-family:'OpenSans-Regular';font-size:14px;color:#333;display:block;background:#fff8f8!important;}
+                
+                .formpopupMS .mat-select-trigger{height:auto;margin-top:8px;}
+                .formpopupMS textarea.mat-input-element{resize:none!important;height:76px!important;padding:5px 1.5%!important;}
+                .formpopupMS .mat-form-field-appearance-legacy .mat-form-field-wrapper{padding-bottom:0!important;}
+                .formpopupMS .mat-form-field-infix{border:0px!important;}            
+      
+
+                .formpopupMS .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{display:none!important;}
+
+                .formpopupMS .mat-form-field-appearance-legacy .mat-form-field-label {
+                    top: 29px;
+                    left: 10px;
+                }
+
+                .formpopupMS .form_field_sameaddres{ margin: 10px 0!important;}
+
+                .formpopupMS .button{ display: none;}
+                .formpopupMS .button:nth-of-type(1) {display: block!important; background: rgba(14,133,202,1);
+                    background: -moz-linear-gradient(top, rgba(14,133,202,1) 0%, rgba(4,100,156,1) 100%);
+                    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(14,133,202,1)), color-stop(100%, rgba(4,100,156,1)));
+                    background: -webkit-linear-gradient(top, rgba(14,133,202,1) 0%, rgba(4,100,156,1) 100%);
+                    background: -o-linear-gradient(top, rgba(14,133,202,1) 0%, rgba(4,100,156,1) 100%);
+                    background: -ms-linear-gradient(top, rgba(14,133,202,1) 0%, rgba(4,100,156,1) 100%);
+                    background: linear-gradient(to bottom, rgba(14,133,202,1) 0%, rgba(4,100,156,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e85ca', endColorstr='#04649c', GradientType=0 );
+                    font-size: 16px;
+                    margin: 6px 0 0 0.5%;
+                    height: 40px;}

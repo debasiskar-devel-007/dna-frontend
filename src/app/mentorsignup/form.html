@@ -1,10 +1,41 @@
 <h1>Product</h1>
-<h3>Product name:{{dta.product.name}}</h3>
-<h3>Price:{{dta.product.price}}</h3>
-<h3>Saletax:{{dta.product.saletax}}</h3>
-<h3>Subtotal:{{dta.product.subtotal}}</h3>
-<h3>Shipping Charge:{{dta.product.delivery}}</h3>
-<h3>Total:{{dta.product.total}}</h3>
+
+
+ 
+<table cellspacing="0" cellpadding="0">
+
+    <tr>
+      <th>Product name:</th>
+      <td>{{dta.product.name}}</td>
+    </tr>
+    <tr>
+        <th>Price:</th>
+        <td>{{dta.product.price}}</td>
+    </tr>
+    <tr>
+        <th>Saletax:</th>
+        <td>{{dta.product.saletax}}</td>
+    </tr>
+    <tr>
+        <th>Subtotal:</th>
+        <td>{{dta.product.subtotal}}</td>
+    </tr>
+    <tr>
+        <th>Shipping Charge:</th>
+        <td>{{dta.product.delivery}}</td>
+    </tr>
+
+    <tr>
+        <th>Total:</th>
+        <td>{{dta.product.total}}</td>
+    </tr>
+ 
+
+
+</table>
+
+
+
 <lib-showform  class='form-line' *ngIf="formdata !=null"
 [formdata]="formdata"
 [formfieldrefresh]="formfieldrefresh"
