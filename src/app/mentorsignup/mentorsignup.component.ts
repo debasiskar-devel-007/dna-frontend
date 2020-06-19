@@ -605,12 +605,13 @@ public expmonth: any = [{ val: '01', 'name': 'JANUARY' }, { val: '02', 'name': '
         ]
       };
     }
-    listenFormFieldChange(val: any) {
+    listenFormFieldChange1(val: any) {
       //// console.log(val);
-      console.log(val.field.name);
+      console.log('val.feild.name',val.field.name);
+      console.log('val.field',val.fieldval);
       if (val.field == 'fromsubmit') {
         if (val.fromval.message != null && val.fromval.message != '') {
-          console.log(val.fromval.message._id);
+          // console.log(val.fromval.message._id);
           this.dialogRef.close();
           this.router.navigateByUrl('success/' + val.fromval.message._id);
           
@@ -620,9 +621,18 @@ public expmonth: any = [{ val: '01', 'name': 'JANUARY' }, { val: '02', 'name': '
   
       if (val.field.name != 'card_type' && val.field.name != 'card_cc' && val.field.name != 'expyear' && val.field.name != 'card_cvv' && val.field.name != 'expmonth') {
         //console.log('listenFormFieldChange', val);
-        if (val.field.name == 'firstname' || val.field.name == 'lastname' || val.field.name == 'address' || val.field.name == 'city' || val.field.name == 'state' || val.field.name == 'zip') {
-          this.formarray.push({ val: val.fieldval, name: val.field.name })
-        }
+        // if (val.field.name == 'firstname' || val.field.name == 'lastname' || val.field.name == 'address' || val.field.name == 'city' || val.field.name == 'state' || val.field.name == 'zip') {
+        //   this.formarray.push({ val: val.fieldval, name: val.field.name })
+        // }
+
+        this.formarray.push({ val:this.dta.firstname, name:'firstname'},
+        {val:this.dta.lastname,name:'lastname'},
+        {val:this.dta.address,name:'address'},
+        {val:this.dta.city,name:'city'},
+        {val:this.dta.state,name:'state'},
+        {val:this.dta.zip,name:'zip'},
+        {val:this.dta.phone,name:'phone'}
+)
         console.log(this.formarray,'+++++');
         if (val.field.name == 'sameaddress' && val.fieldval == true) {
           for (let i = 0; i < this.formarray.length; i++) {
