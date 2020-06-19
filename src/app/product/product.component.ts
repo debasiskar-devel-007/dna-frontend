@@ -111,16 +111,16 @@ export class ProductComponent implements OnInit {
          console.log(resolveData.packagedata) 
       });
     }
-
-    // if(this.CookieService.check('shareid')!=null && this.ActivatedRoute.snapshot.params.class==null){
-    //   let data: any = {
-    //     "id": this.CookieService.get('shareid')
-    //   }
-    //   this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-    //     console.log(res)
-    //     this.parentdetails = res.result[0];
-    //   })
-    // }
+    let uid = this.CookieService.get('shareid');
+    if(uid!=null && uid!=undefined && uid!='' && this.ActivatedRoute.snapshot.params.class==null){
+      let data: any = {
+        "id": this.CookieService.get('shareid')
+      }
+      this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
+        console.log(res)
+        this.parentdetails = res.result[0];
+      })
+    }
 
     //console.log(this.ActivatedRoute.snapshot.url[0].path);
     //  console.log(this.ActivatedRoute.snapshot.params.id.substring(0, 1));
@@ -128,7 +128,7 @@ export class ProductComponent implements OnInit {
       document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.id).scrollIntoView({ behavior: 'smooth', });
 
     }
-    if (this.ActivatedRoute.snapshot.params.class != null) {
+    if (this.ActivatedRoute.snapshot.params.class != null && this.ActivatedRoute.snapshot.params.class != undefined) {
       this.CookieService.set('shareid',this.ActivatedRoute.snapshot.params.class);
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
@@ -136,28 +136,30 @@ export class ProductComponent implements OnInit {
         // console.log(this.acctoken);
          //console.log(resolveData.packagedata) 
       });
-      let data: any = {
-        "id": this.ActivatedRoute.snapshot.params.class
-      }
-      this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-        console.log(res)
-        this.parentdetails = res.result[0];
-      })
-    
-      // document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', });
-      //   if(this.ActivatedRoute.snapshot.params.class==1){
-      //     this.chooseProduct('','good');
-      //     this.selectedProduct.good = 1;
-      //   }else if(this.ActivatedRoute.snapshot.params.class==2){
-      //     this.chooseProduct('','better');
-      //     this.selectedProduct.better = 1;
-      //   }else if(this.ActivatedRoute.snapshot.params.class==3){
-      //     this.chooseProduct('','best');
-      //     this.selectedProduct.best = 1;
-      //   }else if(this.ActivatedRoute.snapshot.params.class==4){
-      //     this.chooseProduct('','mentor');
-      //     this.selectedProduct.mentor = 1;
-      // }
+    //   let data: any = {
+    //   //     this.selectedProduct.good = 1;
+    //   //   }else if(this.ActivatedRoute.snapshot.params.class==2){
+    //   //     this.chooseProduct('','better');
+    //   //     this.selectedProduct.better = 1;
+    //   //   }else if(this.ActivatedRoute.snapshot.params.class==3){
+    //   //     this.chooseProduct('','best');
+    //   //     this.selectedProduct.best = 1;
+    //   //   }else if(this.ActivatedRoute.snapshot.params.class==4){
+    //   //     this.chooseProduct('','mentor');
+    //   //     this.selectedProduct.mentor = 1;
+    //   // }
+    // }       //     this.chooseProduct('','good');
+    //   //     this.selectedProduct.good = 1;
+    //   //   }else if(this.ActivatedRoute.snapshot.params.class==2){
+    //   //     this.chooseProduct('','better');
+    //   //     this.selectedProduct.better = 1;
+    //   //   }else if(this.ActivatedRoute.snapshot.params.class==3){
+    //   //     this.chooseProduct('','best');
+    //   //     this.selectedProduct.best = 1;
+    //   //   }else if(this.ActivatedRoute.snapshot.params.class==4){
+    //   //     this.chooseProduct('','mentor');
+    //   //     this.selectedProduct.mentor = 1;
+    //   // }
     } 
     // else {
     //   let data: any = {
