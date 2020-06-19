@@ -25,6 +25,8 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 //import { ContactComponent } from './contact/contact.component';
 // const api_url1 =  environment["api_url1"];
+
+import { MentordetailComponent } from './mentordetail/mentordetail.component';
 const api_url = environment['api_url'];
 
 
@@ -33,6 +35,7 @@ const routes: Routes = [
   {path:'home', component: HomeComponent}, 
   {path:'', component: HomeComponent}, 
   {path:'ordersuccess', component: OrdersuccessComponent},
+  {path:'mentordetail', component: MentordetailComponent},
   {path:'ordersuccess/:_id', component: OrdersuccessComponent,resolve: {successData: TestresolveService},
   data: {requestcondition: {source: '', condition: {'_id': '_id'}}, endpoint: 'api/ordersuccessresolve', api_url: api_url}}, 
 

@@ -44,6 +44,7 @@ import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 import { CartComponent, loginModal } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component'
 import { TemplateModule } from './templatemodule';
+import { MentordetailComponent } from './mentordetail/mentordetail.component';
 
 //import { ContactComponent } from './contact/contact.component';
 
@@ -101,7 +102,8 @@ export function metaFactory(): MetaLoader {
     OrdersuccessComponent,
     CartComponent,
     CheckoutComponent,
-    loginModal
+    loginModal,
+    MentordetailComponent
   ],
   imports: [
     // ListingModule,
