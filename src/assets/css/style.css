@@ -1561,3 +1561,13 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .checkout_body .productform .mat-select-value{padding-top:8px;}
 .checkout_body .productform .form_field_shipping_zip::after{display:none;}
 .checkout_body .productform .form_field_shipping_phone::after{content:"Pay with Credit or Debit Card";font-size:22px;color:#ffffff;padding:10px;background-color:#1bb2ea;text-align:center;font-weight:normal;display:block;margin:0 0 15px 0;}
+
+
+
+.formpopup{ width: 800px;}
+
+.formpopup mat-form-field{ width: 50%; float: left;}
+
+.formpopup  lib-showform{    height: 280px;
+    overflow-y: scroll;
+    display: block;}
