@@ -27,31 +27,33 @@ start working together!  </label>
             <span class="mentordetail_block1">
 
                 <span class="mentordetail_block1_img">
-                    <img src="../../assets/images/Mentor_DetaiIMG1l.jpg" alt="#">
+                   
+                    <span *ngIf="mentordetail.image != null; else elseSpan">  <img src="{{safeurl(mentordetail.image)}}" alt="#"> </span>
+<ng-template #elseSpan> km </ng-template>
 
                 </span>
 
                 <span class="mentordetail_block1_text">
-                    <h2>ROCK TEST  </h2>
+                    <h2>{{mentordetail.fullname != null ? mentordetail.fullname : 'N/A'}} </h2>
 
-                    <h3 >Email: rocktest@yopmail.com</h3>   
+                    <h3 >Email: {{mentordetail.email != null ? mentordetail.email : 'N/A'}} </h3>   
                     
-                    <h4>cvbn, kol, AL, 123456
+                    <h4>{{mentordetail.fulladdress != null ? mentordetail.fulladdress : 'N/A'}} 
                         <br/>
-                       <span> Mob: 000000000 </span></h4>
+                       <span> Mob: {{mentordetail.phone != null ? mentordetail.phone : 'N/A'}}  </span></h4>
 
-                        <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h5>
+                        <h5>{{mentordetail.about_me != null ? mentordetail.about_me : 'N/A'}} </h5>
 
-                        <h6>Mentor Since : Jun 16, 2020, 4:28:52 PM</h6>
+                        <h6>Mentor Since : {{mentordetail.createdon_datetime != null ? (mentordetail.createdon_datetime | date:'medium') : 'N/A'}} </h6>
                 </span>
             </span>
 
             <span class="mentordetail_block2">
 
-                <label class="fb_icon"  ><a target="_blank">https://www.facebook.com/</a></label>
-                <label class="ig_icon" ><a  target="_blank" >https://www.tumblr.com/</a></label>
-                <label class="tw_icon" ><a  target="_blank" >https://twitter.com/</a></label>
-                <label class="in_icon" ><a  target="_blank" >https://in.linkedin.com/</a></label> 
+                <label class="fb_icon" *ngIf="mentordetail.facebook_id != null" ><a target="_blank" href="https://www.facebook.com/{{mentordetail.facebook_id}}">https://www.facebook.com/{{mentordetail.facebook_id}}</a></label>
+                <label class="ig_icon" *ngIf="mentordetail.tumblr_id != null" ><a  target="_blank"  href="https://www.tumblr.com/{{mentordetail.tumblr_id}}">https://www.tumblr.com/{{mentordetail.tumblr_id}}</a></label>
+                <label class="tw_icon" *ngIf="mentordetail.twiter_id != null" ><a  target="_blank" href="https://twitter.com/{{mentordetail.twiter_id}}">https://twitter.com/{{mentordetail.twiter_id}}</a></label>
+                <label class="in_icon" *ngIf="mentordetail.linkedin_id != null" ><a  target="_blank" href="https://in.linkedin.com/{{mentordetail.linkedin_id}}">https://in.linkedin.com/{{mentordetail.linkedin_id}}</a></label> 
             </span>
 
 

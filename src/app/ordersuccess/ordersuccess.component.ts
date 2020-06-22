@@ -20,7 +20,7 @@ export class OrdersuccessComponent implements OnInit {
       //   carData: 0
       // };
       // this.cartService.carData(carData);
-     });
+    });
   }
 
 }
