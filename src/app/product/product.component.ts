@@ -118,7 +118,7 @@ export class ProductComponent implements OnInit {
         "id": this.CookieService.get('shareid')
       }
       this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-        console.log(res)
+        console.warn(res)
         this.parentdetails = res.result[0];
       })
     }
