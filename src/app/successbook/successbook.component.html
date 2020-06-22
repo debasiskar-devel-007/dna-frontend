@@ -74,14 +74,13 @@
 
                     </div>
 
-                    <label class="activelabel">USER INFORMATION</label>
-                    <label>BILLING INFORMATION</label>
-                    <label>Shipping Address</label>
-                    <label>card INFORMATION</label>
 
                      <div class="SB_topformwrapper">
+
                    <!-- user info here -->
                    <ng-container *ngIf="form1">
+                    <label class="activelabel">USER INFORMATION</label>
+
                     <lib-showform *ngIf="formdata !=null"
                     [formdata]="formdata"
                     [formfieldrefresh]="formfieldrefresh"
@@ -91,6 +90,7 @@
                    </ng-container>
                 <!-- billing address -->
                    <ng-container *ngIf="form2">
+                    <label>BILLING INFORMATION</label>
                     <lib-showform *ngIf="formdata1 !=null"
                     [formdata]="formdata1"
                     [formfieldrefresh]="formfieldrefresh"
@@ -102,6 +102,8 @@
                    <!-- shipping address -->
                  
                    <ng-container *ngIf="form3">
+                    <label>Shipping Address</label>
+
                     <lib-showform *ngIf="formdata2 !=null"
                     [formdata]="formdata2"
                     [formfieldrefresh]="formfieldrefresh"
@@ -112,15 +114,17 @@
                    </ng-container>
                     <!-- CARD INFORMATION-->
                     <ng-container *ngIf="form4">
+                      <label>card INFORMATION</label>
+
                       <lib-showform *ngIf="formdata3 !=null"
                       [formdata]="formdata3"
                       [formfieldrefresh]="formfieldrefresh"
                       [formfieldrefreshdata]="formfieldrefreshdata"
-                      (onFormFieldChange)="listenFormFieldChange1($event)"
+                      (onFormFieldChange)="listenFormFieldChange3($event)"
                       >
                        </lib-showform>
                      </ng-container>
-                      <button class="nextbtn" (click)="AddONModal();"><span>next</span></button>
+                      <!-- <button class="nextbtn" (click)="AddONModal();"><span>next</span></button> -->
 
                     </div>
 

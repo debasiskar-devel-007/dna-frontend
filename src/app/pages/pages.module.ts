@@ -16,6 +16,9 @@ import { NewsuccessgeneticsComponent } from '../newsuccessgenetics/newsuccessgen
 import { LiveWebinarComponent } from '../live-webinar/live-webinar.component';
 import { ProductComponent } from '../product/product.component';
 import { ContactComponent } from '../contact/contact.component';
+import { MentorsignupComponent, formModal } from '../mentorsignup/mentorsignup.component';
+import { LandingpageComponent } from '../landingpage/landingpage.component';
+import { AffiliatesignupComponent } from '../affiliatesignup/affiliatesignup.component';
 
 // import { ContactComponent } from '../contact/contact.component';
 // import { RouterModule } from '@angular/router';
@@ -34,6 +37,10 @@ import { ContactComponent } from '../contact/contact.component';
     LiveWebinarComponent,
     ProductComponent,
     ContactComponent,
+    MentorsignupComponent,
+    formModal,
+    LandingpageComponent,
+    AffiliatesignupComponent
 
     // ContactComponent,
     // FooterComponent,
@@ -47,6 +54,8 @@ import { ContactComponent } from '../contact/contact.component';
     TemplateModule,
     // RouterModule
     // FooterComponent
-  ]
+  ],
+  entryComponents: [formModal],
+
 })
 export class PagesModule { }

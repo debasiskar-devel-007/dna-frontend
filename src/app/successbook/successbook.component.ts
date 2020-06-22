@@ -2,7 +2,6 @@ import { Component, OnInit,Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { ApiService } from '../api.service';
 import { ActivatedRoute,Router } from '@angular/router';
-// import * as console from 'console';
 export interface DialogData {
   animal: string;
   name: string;
@@ -29,8 +28,17 @@ public form1:boolean=true;
 public form2:boolean=false;
 public form3:boolean=false;
 public form4:boolean=false;
+public form1Value:any;
+public form2Value:any;
+public form3Value:any;
+public form4Value:any;
+public menteeSignupData:any=[];
 passwordregex: RegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
-
+public expyear: any = [{ val: 20, 'name': '2020' }, { val: 21, 'name': '2021' }, { val: 22, 'name': '2022' }, { val: 23, 'name': '2023' }, { val: 24, 'name': '2024' }
+    , { val: 25, 'name': '2025' }, { val: 26, 'name': '2026' }, { val: 27, 'name': '2027' }, { val: 28, 'name': '2028' }, { val: 29, 'name': '2029' }, { val: 30, 'name': '2030' }]
+  public expmonth: any = [{ val: '01', 'name': 'JANUARY' }, { val: '02', 'name': 'FEBRUARY' }, { val: '03', 'name': 'MARCH' }, { val: '04', 'name': 'APRIL' }, { val: '05', 'name': 'MAY' }
+    , { val: '06', 'name': 'JUNE' }, { val: '07', 'name': 'JULY' }, { val: '08', 'name': 'AUGUST' }, { val: '09', 'name': 'SEPTEMBER' }, { val: '10', 'name': 'OCTOBER' }, { val: '11', 'name': 'NOVEMBER' }
+    , { val: '12', 'name': 'DECEMBER' }];
 formdata: any = {
   successmessage: 'Banner added Successfully !!',
   redirectpath: '',
@@ -143,13 +151,15 @@ formdata1: any = {
         
       ]
     },
-   {
-      label: 'State',
-      name: 'state',
-      type: 'select',
-      value: this.statesjson,
+    {
+      //heading:"",
+      label: "State",
+      name: "state",
+      type: "select",
+      val:this.statesjson,
+      value:'',
       validations: [
-        { rule: 'required', message: 'Email is required' },
+        { rule: 'required', message: "Select Your State" },
       ]
     },
     {
@@ -171,6 +181,13 @@ formdata1: any = {
       validations: [
         { rule: 'required', message: 'Zip is required' }
       ],
+    },
+    {
+      //heading:"",
+      label: "Use My Billing Address As Shipping Address",
+      name: "sameaddress",
+      type: 'checkbox',
+      value: '',
     }
 
   ]
@@ -210,13 +227,15 @@ formdata2: any = {
         
       ]
     },
-   {
-      label: 'State',
-      name: 'state',
-      type: 'select',
-      value: this.statesjson,
+    {
+      //heading:"",
+      label: "State",
+      name: "state",
+      type: "select",
+      val:this.statesjson,
+      value:'',
       validations: [
-        { rule: 'required', message: 'Email is required' },
+        { rule: 'required', message: "Select Your State" },
       ]
     },
     {
@@ -257,22 +276,20 @@ formdata3: any = {
 
   fields: [
     {
-      label: 'We accept',
-      name: 'is_acept',
+      //heading:"",
+      label: "Select Your Card",
+      name: "card_type",
       value: '',
-      type: 'text',
+      type: "select",
+      val: [
+        { val: "Others", name: "Others" },
+        { val: "Visa", name: "Visa" },
+        { val: "Mastercard", name: "Mastercard" },
+        { val: "AmericanExpress", name: "American Express" },
+        { val: "Discover", name: "Discover" }
+      ],
       validations: [
-        { rule: 'required', message: 'We accept is required' },
-        
-      ]
-    },
-   {
-      label: 'Card Type',
-      name: 'card_type',
-      type: 'select',
-      value: this.statesjson,
-      validations: [
-        { rule: 'required', message: 'Card Type is required' },
+        { rule: 'required', message: "Please Select Your Card" },
       ]
     },
     {
@@ -285,15 +302,28 @@ formdata3: any = {
         { rule: 'required', message: 'CC is required' }
       ],
     },
+    
     {
-      label: 'Expiration Date',
-      name: 'expirationdate',
-      hint: '',
-      type: 'number',
-      val: '',
+      //heading:"",
+      label: "Month",
+      name: "expmonth",
+      value: '',
+      type: "select",
+      val: this.expmonth,
       validations: [
-        { rule: 'required', message: 'Expiration Date is required' }
-      ],
+        { rule: 'required', message: "Enter Your Validity Month" },
+      ]
+    },
+    {
+      //heading:"",
+      label: "Year",
+      name: "expyear",
+      value: '',
+      val: this.expyear,
+      type: "select",
+      validations: [
+        { rule: 'required', message: "Enter Your Validity Year" },
+      ]
     },
     {
       label: 'CVV',
@@ -304,12 +334,33 @@ formdata3: any = {
       validations: [
         { rule: 'required', message: 'CVV is required' }
       ],
+    },
+    {
+      //heading:"",
+      label: "status",
+      name: "status",
+      type: 'hidden',
+      value: 1
+    },
+    {
+      //heading:"",
+      label: "status",
+      name: "order_status",
+      type: 'hidden',
+      value: 'Incomplete'
+    },
+    {
+      //heading:"",
+      label: "transactiontype",
+      name: "transactiontype",
+      type: 'hidden',
+      value: 'TEST'
     }
 
   ]
 };
   constructor(public dialog: MatDialog,public _apiService: ApiService,public ActivatedRoute:ActivatedRoute ) { 
-    this.productDetails.name = 'Mentor Package for $749"';
+    this.productDetails.name = 'mentee Package for $149"';
     this.productDetails.price = 0;
     this.productDetails.delivery = 6.95;
     this.saletax = this.productDetails.price / 100 * 6;
@@ -318,10 +369,11 @@ formdata3: any = {
     this.productDetails.subtotal = this.productDetails.price * 1;
     this.productDetails.total = this.productDetails.subtotal + this.saletax + this.productDetails.delivery;
     this.productDetails.total = parseFloat(this.productDetails.total.toFixed(2));
-    this.productDetails.usertype='mentor';
+    this.productDetails.usertype='mentee';
     this.productDetails.webinarid=[null];
     
     this._apiService.getState().subscribe((response:any) => {
+     
       for (let i in response) {
         this.statesjson.push(
           { 'val': response[i].abbreviation, 'name': response[i].name },
@@ -402,6 +454,9 @@ formdata3: any = {
     if (val.field == 'fromsubmit') {
       this.form1=false;
       this.form2=true;
+      this.form1Value = val.fromval;
+      this.menteeSignupData.push(this.form1Value);
+     
     }
   }
   listenFormFieldChange1(val: any) {
@@ -409,6 +464,9 @@ formdata3: any = {
       this.form1=false;
       this.form2=false;
       this.form3=true;
+      this.form2Value = val.fromval;
+      this.menteeSignupData.push(this.form2Value);
+
     }
   }
   listenFormFieldChange2(val: any) {
@@ -417,6 +475,20 @@ formdata3: any = {
       this.form2=false;
       this.form3=false;
       this.form4=true;
+      this.form3Value = val.fromval;
+      this.menteeSignupData.push(this.form3Value);
+
+    }
+  }
+  listenFormFieldChange3(val: any) {
+    if (val.field == 'fromsubmit') {
+      this.form1=false;
+      this.form2=false;
+      this.form3=false;
+      this.form4=false;
+      this.form4Value = val.fromval;
+      this.menteeSignupData.push(this.form4Value);
+      console.log("submitted data",this.menteeSignupData);
     }
   }
 }
