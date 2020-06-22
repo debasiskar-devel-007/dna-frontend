@@ -1019,6 +1019,28 @@
 .home_new_imgblock3{padding:0 20px 30px 20px!important;background-size:44%!important;margin-top:25px;}
 }
 @media screen and (max-width:1199px){.package3{padding:0px!important;}
+.newaffiliatesignup_formbody .mat-error {
+    color: #b11313;
+    font-size: 14px;
+    padding-top: 4px;
+    position: inherit;
+    background: none;
+    display: block;
+    width: auto;
+    padding: 0;
+    border-radius: 5px;
+    left: 0;
+    z-index: 9;
+    top: 0;
+}
+.mentorsignup_popuptext h2 {
+    font-size: 30px; text-align: center;}
+
+    .mentorsignup_popuptext h3 {
+        font-size: 20px; text-align: center;}
+
+.mentorsignup_popuptext h4{ text-align: center;     font-size: 20px;}
+.mentorsignup_popuptext h5{ text-align: center;     font-size: 20px;}
 
 .newmentorsignup_block2_text3{ margin-left: 15px!important; margin-right: 15px!important;}
 
@@ -2060,6 +2082,11 @@ success5_2_textblock{text-align:center;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{width:auto;}
 }
 @media screen and (max-width:991px){
+
+    .mentorsignup_popuptext{border-radius: 10px 10px 0 0;}
+
+    .formpopupMS .mat-dialog-container {
+        border-radius: 10px;}
     .formpopupMS  .mat-dialog-container {  display: block; padding: 10px;}
     .producttextblock.newthewholestorybannertxt{width:100%;padding:0px!important;margin:0px !important;}
 .mentors_detail_block_con_top .dnaimgwrapper{display:block;padding:10px;}
@@ -2186,6 +2213,24 @@ success5_2_textblock{text-align:center;}
 .s_work_Matercontent .s-mastersec_work_left{margin-top:80%;}
 }
 @media screen and (max-width:767px){.AddON_modal_body_top{background-image:none;padding-bottom:0px;}
+
+ 
+/* .formpopupMS lib-showform {
+    height: auto;
+    overflow-y: scroll;
+    display: inherit;
+} */
+.formpopupMS .container {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.mentorsignup_popuptext{ padding: 15px;}
+
+.formpopupMS .mat-checkbox-layout{    display: block!important;
+    white-space: inherit!important;}
+
+
 .AddON_modal_block2{margin-top:0px;}
 .contact_submit{width:233px;}
 .contact_submit button{padding:6px 40px 6px 18px;background-position:87% center;}

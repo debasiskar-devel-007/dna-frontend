@@ -13,6 +13,9 @@ import { LiveWebinarComponent } from '../live-webinar/live-webinar.component';
 import { environment } from 'src/environments/environment';
 import { ProductComponent } from '../product/product.component';
 import { ContactComponent } from '../contact/contact.component';
+import { MentorsignupComponent } from '../mentorsignup/mentorsignup.component';
+import { LandingpageComponent } from '../landingpage/landingpage.component';
+import { AffiliatesignupComponent } from '../affiliatesignup/affiliatesignup.component';
 //import { ContactComponent } from '../contact/contact.component';
 
 const api_url = environment['api_url'];
@@ -85,6 +88,28 @@ const routes: Routes = [
     resolve: { packagedata: TestresolveService },
     data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
   },
+
+  { path: 'mentorsignup', component: MentorsignupComponent },
+  {
+    path: 'mentorsignup/:_id', component: MentorsignupComponent,
+    resolve: { Data: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  },
+
+  { path: 'landingpage', component: LandingpageComponent },
+  {
+    path: 'landingpage/:_id', component: LandingpageComponent,
+    resolve: { Data: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  },
+  { path: 'affiliatesignup', component: AffiliatesignupComponent },
+  {
+    path: 'affiliatesignup/:_id', component: AffiliatesignupComponent,
+    resolve: { Data: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  },
+
+
 
   // {path:'contact', component: ContactComponent}, 
 ];
