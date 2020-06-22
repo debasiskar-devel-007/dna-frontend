@@ -32,6 +32,7 @@ public form1Value:any;
 public form2Value:any;
 public form3Value:any;
 public form4Value:any;
+public menteeSignupData:any=[];
 passwordregex: RegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
 public expyear: any = [{ val: 20, 'name': '2020' }, { val: 21, 'name': '2021' }, { val: 22, 'name': '2022' }, { val: 23, 'name': '2023' }, { val: 24, 'name': '2024' }
     , { val: 25, 'name': '2025' }, { val: 26, 'name': '2026' }, { val: 27, 'name': '2027' }, { val: 28, 'name': '2028' }, { val: 29, 'name': '2029' }, { val: 30, 'name': '2030' }]
@@ -180,6 +181,13 @@ formdata1: any = {
       validations: [
         { rule: 'required', message: 'Zip is required' }
       ],
+    },
+    {
+      //heading:"",
+      label: "Use My Billing Address As Shipping Address",
+      name: "sameaddress",
+      type: 'checkbox',
+      value: '',
     }
 
   ]
@@ -268,16 +276,6 @@ formdata3: any = {
 
   fields: [
     {
-      label: 'We accept',
-      name: 'is_acept',
-      value: '',
-      type: 'text',
-      validations: [
-        { rule: 'required', message: 'We accept is required' },
-        
-      ]
-    },
-    {
       //heading:"",
       label: "Select Your Card",
       name: "card_type",
@@ -304,16 +302,7 @@ formdata3: any = {
         { rule: 'required', message: 'CC is required' }
       ],
     },
-    {
-      label: 'Expiration Date',
-      name: 'expirationdate',
-      hint: '',
-      type: 'number',
-      val: '',
-      validations: [
-        { rule: 'required', message: 'Expiration Date is required' }
-      ],
-    },
+    
     {
       //heading:"",
       label: "Month",
@@ -345,6 +334,27 @@ formdata3: any = {
       validations: [
         { rule: 'required', message: 'CVV is required' }
       ],
+    },
+    {
+      //heading:"",
+      label: "status",
+      name: "status",
+      type: 'hidden',
+      value: 1
+    },
+    {
+      //heading:"",
+      label: "status",
+      name: "order_status",
+      type: 'hidden',
+      value: 'Incomplete'
+    },
+    {
+      //heading:"",
+      label: "transactiontype",
+      name: "transactiontype",
+      type: 'hidden',
+      value: 'TEST'
     }
 
   ]
@@ -441,41 +451,46 @@ formdata3: any = {
   }
 
   listenFormFieldChange(val: any) {
-    
-    this.form1Value = val.fromval;
-
-
     if (val.field == 'fromsubmit') {
       this.form1=false;
       this.form2=true;
+      this.form1Value = val.fromval;
+      this.menteeSignupData.push(this.form1Value);
+      console.log("array of object",this.menteeSignupData);
+     
     }
   }
   listenFormFieldChange1(val: any) {
-    this.form2Value = val.fromval;
-    console.log("testing",this.form2Value);
     if (val.field == 'fromsubmit') {
       this.form1=false;
       this.form2=false;
       this.form3=true;
+      this.form2Value = val.fromval;
+      this.menteeSignupData.push(this.form2Value);
+
     }
   }
   listenFormFieldChange2(val: any) {
-    this.form3Value = val.fromval;
     if (val.field == 'fromsubmit') {
       this.form1=false;
       this.form2=false;
       this.form3=false;
       this.form4=true;
+      this.form3Value = val.fromval;
+      this.menteeSignupData.push(this.form3Value);
+
     }
   }
   listenFormFieldChange3(val: any) {
-    this.form4Value = val.fromval;
-    console.log(this.form4Value)
     if (val.field == 'fromsubmit') {
       this.form1=false;
       this.form2=false;
       this.form3=false;
       this.form4=false;
+      this.form4Value = val.fromval;
+      this.menteeSignupData.push(this.form4Value);
+      console.log("array of object",this.menteeSignupData);
+      
     }
   }
 }
