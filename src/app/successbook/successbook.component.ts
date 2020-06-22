@@ -95,7 +95,7 @@ formdata: any = {
       label: 'New Password',
       name: 'password',
       type: 'password',
-      hint: '******',
+      // hint: '******',
      // value: response.result[0].password,
 
       validations: [
@@ -107,7 +107,7 @@ formdata: any = {
       label: 'Confirm Password',
       name: 'confirmpassword',
       type: 'password',
-      hint: '******',
+      // hint: '******',
       validations: [
         { rule: 'required', message: 'Your provided Password must contain at-least one Uppercase letter, one Lower case letter, and one Number' },
         // { rule: 'match', message: 'Confirm Password field Needs to  match Password' },
