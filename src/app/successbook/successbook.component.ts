@@ -457,7 +457,6 @@ formdata3: any = {
       this.form2=true;
       this.form1Value = val.fromval;
       this.menteeSignupData.push(this.form1Value);
-      console.log("array of object",this.menteeSignupData);
      
     }
   }
@@ -490,8 +489,7 @@ formdata3: any = {
       this.form4=false;
       this.form4Value = val.fromval;
       this.menteeSignupData.push(this.form4Value);
-      console.log("array of object",this.menteeSignupData);
-      
+      console.log("submitted data",this.menteeSignupData);
     }
   }
 }
