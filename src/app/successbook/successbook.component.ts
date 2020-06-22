@@ -364,7 +364,7 @@ formdata3: any = {
     this.productDetails.webinarid=[null];
     
     this._apiService.getState().subscribe((response:any) => {
-      console.log("testing",response);
+     
       for (let i in response) {
         this.statesjson.push(
           { 'val': response[i].abbreviation, 'name': response[i].name },
@@ -442,9 +442,9 @@ formdata3: any = {
   }
 
   listenFormFieldChange(val: any) {
-    console.log("form 1 submit value",val);
+    
     this.form1Value = val.fromval;
-    console.log("form 1 submit value",this.form1Value);
+
 
     if (val.field == 'fromsubmit') {
       this.form1=false;
@@ -453,6 +453,7 @@ formdata3: any = {
   }
   listenFormFieldChange1(val: any) {
     this.form2Value = val.fromval;
+    console.log("testing",this.form2Value);
     if (val.field == 'fromsubmit') {
       this.form1=false;
       this.form2=false;
