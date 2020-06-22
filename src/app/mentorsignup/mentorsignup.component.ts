@@ -1,6 +1,9 @@
 import { Component, OnInit,Inject } from '@angular/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute,Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
+import { environment } from '../../environments/environment';
+
 // import * as console from 'console';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 export interface DialogData {
@@ -16,6 +19,7 @@ export class MentorsignupComponent implements OnInit {
   public status: any = [{ val: 1, 'name': 'Active' }, { val: 0, 'name': 'Inactive' }];
   public productDetails: any = {};
   public saletax:number;
+  public parentdetails: any = [];
 
   emailregex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   passwordregex: RegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
@@ -29,7 +33,7 @@ export class MentorsignupComponent implements OnInit {
   public statesjson : any =[];
   public parentid:any = '';
   public shareUser:any =[];
-  constructor(public dialog: MatDialog,public _apiService: ApiService,public ActivatedRoute:ActivatedRoute ) {
+  constructor(public CookieService:CookieService,public dialog: MatDialog,public _apiService: ApiService,public ActivatedRoute:ActivatedRoute ) {
     this.productDetails.name = 'Mentor Package for $749"';
     this.productDetails.price = 0;
     this.productDetails.delivery = 6.95;
@@ -52,7 +56,19 @@ export class MentorsignupComponent implements OnInit {
         );
       }
     })
+    let uid = this.CookieService.get('shareid');
+    if(uid!=null && uid!=undefined && uid!='' && this.ActivatedRoute.snapshot.params.class==null){
+      let data: any = {
+        "id": this.CookieService.get('shareid')
+      }
+      this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
+        // console.warn(res)
+        this.shareUser = res.result[0];
+      })
+    }
+
     if(this.ActivatedRoute.snapshot.params._id != null && typeof(ActivatedRoute.snapshot.params._id) != "undefined"){
+      this.CookieService.set('shareid',this.ActivatedRoute.snapshot.params._id);
       this.parentid = this.ActivatedRoute.snapshot.params._id;
       this.ActivatedRoute.data.subscribe((resolveData:any) => {
        this.shareUser=resolveData.Data.results.res[0]

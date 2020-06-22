@@ -2,7 +2,6 @@ import { Component, OnInit,Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { ApiService } from '../api.service';
 import { ActivatedRoute,Router } from '@angular/router';
-// import * as console from 'console';
 export interface DialogData {
   animal: string;
   name: string;
@@ -471,6 +470,7 @@ formdata3: any = {
   }
   listenFormFieldChange3(val: any) {
     this.form4Value = val.fromval;
+    console.log(this.form4Value)
     if (val.field == 'fromsubmit') {
       this.form1=false;
       this.form2=false;
