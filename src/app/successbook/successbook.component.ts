@@ -309,7 +309,7 @@ formdata3: any = {
   ]
 };
   constructor(public dialog: MatDialog,public _apiService: ApiService,public ActivatedRoute:ActivatedRoute ) { 
-    this.productDetails.name = 'Mentor Package for $749"';
+    this.productDetails.name = 'mentee Package for $149"';
     this.productDetails.price = 0;
     this.productDetails.delivery = 6.95;
     this.saletax = this.productDetails.price / 100 * 6;
@@ -318,7 +318,7 @@ formdata3: any = {
     this.productDetails.subtotal = this.productDetails.price * 1;
     this.productDetails.total = this.productDetails.subtotal + this.saletax + this.productDetails.delivery;
     this.productDetails.total = parseFloat(this.productDetails.total.toFixed(2));
-    this.productDetails.usertype='mentor';
+    this.productDetails.usertype='mentee';
     this.productDetails.webinarid=[null];
     
     this._apiService.getState().subscribe((response:any) => {
