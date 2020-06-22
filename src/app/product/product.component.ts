@@ -71,6 +71,7 @@ export class ProductComponent implements OnInit {
         );
       }
     })
+
   }
 
 
@@ -124,8 +125,23 @@ export class ProductComponent implements OnInit {
 
     //console.log(this.ActivatedRoute.snapshot.url[0].path);
     //  console.log(this.ActivatedRoute.snapshot.params.id.substring(0, 1));
+    //for learn product button in home page
     if (this.ActivatedRoute.snapshot.url[0].path == 'products-list') {
-      document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.id).scrollIntoView({ behavior: 'smooth', });
+      this.ActivatedRoute.data.subscribe((resolveData: any) => {
+        if(resolveData.packagedata.status=='success'){
+          this.allPackage = resolveData.packagedata.results.package;
+          this.acctoken = resolveData.packagedata.results.token.access_token;
+          // console.log(this.acctoken);
+          //  console.warn('learn product',resolveData.packagedata) 
+          setTimeout(()=>{    
+            document.querySelector('.package' + this.ActivatedRoute.snapshot.params.id).scrollIntoView({ behavior: 'smooth', });
+       }, 1000);
+          
+          
+        }
+        
+      });
+     
 
     }
     if (this.ActivatedRoute.snapshot.params.class != null && this.ActivatedRoute.snapshot.params.class != undefined) {
