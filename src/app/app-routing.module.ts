@@ -8,7 +8,7 @@ import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
 //import { AboutComponent } from './about/about.component';
 // import { BlogComponent } from './blog/blog.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
-import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
+//import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
 import { LoginComponent } from './login/login.component';
 // import { ProductComponent } from './product/product.component';
 //import { ContactComponent } from './contact/contact.component';
@@ -94,12 +94,12 @@ const routes: Routes = [
     data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getblogdatabyid' }
   },
 
-  { path: 'affiliatesignup', component: AffiliatesignupComponent },
-  {
-    path: 'affiliatesignup/:_id', component: AffiliatesignupComponent,
-    resolve: { Data: TestresolveService },
-    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
-  },
+  // { path: 'affiliatesignup', component: AffiliatesignupComponent },
+  // {
+  //   path: 'affiliatesignup/:_id', component: AffiliatesignupComponent,
+  //   resolve: { Data: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  // },
 
   { path: 'login', component: LoginComponent },
 
@@ -128,19 +128,19 @@ const routes: Routes = [
  //{ path: 'contact', component: ContactComponent },
 
 
-  { path: 'mentorsignup', component: MentorsignupComponent },
-  {
-    path: 'mentorsignup/:_id', component: MentorsignupComponent,
-    resolve: { Data: TestresolveService },
-    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
-  },
+  // { path: 'mentorsignup', component: MentorsignupComponent },
+  // {
+  //   path: 'mentorsignup/:_id', component: MentorsignupComponent,
+  //   resolve: { Data: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  // },
 
-  { path: 'landingpage', component: LandingpageComponent },
-  {
-    path: 'landingpage/:_id', component: LandingpageComponent,
-    resolve: { Data: TestresolveService },
-    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
-  },
+  // { path: 'landingpage', component: LandingpageComponent },
+  // {
+  //   path: 'landingpage/:_id', component: LandingpageComponent,
+  //   resolve: { Data: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  // },
 
 
   { path: 'menteelandingpage', component: MenteelandingpageComponent },

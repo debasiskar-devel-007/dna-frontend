@@ -25,13 +25,13 @@ import { TermsandCondition, PrivacyPolicy } from './footer/footer.component';
 //import { AboutComponent } from './about/about.component';
 // import { BlogComponent } from './blog/blog.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
-import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
+//import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
 import { LoginComponent } from './login/login.component';
 // import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
-import { MentorsignupComponent,formModal} from './mentorsignup/mentorsignup.component';
+//import { MentorsignupComponent,formModal} from './mentorsignup/mentorsignup.component';
 import { FacebookModule, FacebookService } from 'ngx-facebook';
-import { LandingpageComponent } from './landingpage/landingpage.component';
+//import { LandingpageComponent } from './landingpage/landingpage.component';
 // import { ListingModule } from 'listing-angular7';
 import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpage.component';
 
@@ -86,13 +86,13 @@ export function metaFactory(): MetaLoader {
     // AboutComponent,
     // BlogComponent, 
     BlogdetailComponent,
-    AffiliatesignupComponent,
+   // AffiliatesignupComponent,
     LoginComponent,
     // ProductComponent,
     //ContactComponent,
-    MentorsignupComponent,
-    formModal,
-    LandingpageComponent,
+    // MentorsignupComponent,
+    // formModal,
+    //LandingpageComponent,
     MenteelandingpageComponent,
     SuccessComponent,
     MyLoaderComponent,
@@ -131,7 +131,7 @@ export function metaFactory(): MetaLoader {
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: [formModal,loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
+  entryComponents: [loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
 })
 export class AppModule {
 
