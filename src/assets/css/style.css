@@ -1198,7 +1198,18 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .newaffiliatesignup_formbody .button:first-of-type{background:url(../images/newaffiliatesignup_btn.png) no-repeat left top!important;background-size:100%!important;width:100%!important;height:94px!important;border:none!important;box-shadow:none!important;outline:none!important;cursor:pointer!important;font-size:36px!important;color:#ffffff!important;font-family:'OpenSans-Semibold'!important;text-shadow:0 2px 5px #5f6172!important;text-transform:uppercase!important;display:block!important;margin-top:10px!important;}
 .newaffiliatesignup_formbody .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{display:none!important;}
 .newaffiliatesignup_formbody .mat-form-field-appearance-legacy .mat-form-field-label{top:30px;left:10px;}
-.newaffiliatesignup_formbody .mat-error{color:#b11313;font-size:14px;padding-top:4px;}
+.newaffiliatesignup_formbody .mat-error{    color: #b11313;
+    font-size: 14px;
+    padding-top: 4px;
+    position: absolute;
+    background: #000;
+    display: block;
+    width: 180px;
+    padding: 5px;
+    border-radius: 5px;
+    left: -195px;
+    z-index: 9;
+    top: 10px;}
 .bannerarrowscroll{cursor:pointer;outline:none;}
 .newmentorsignup_formbody .mat-form-field-underline{display:none;}
 .newmentorsignup_formbody .mat-form-field-subscript-wrapper{display:none;}
@@ -1467,8 +1478,8 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .SB_body3_heading_con{background:url(../../assets/images/SB_block2_textBG.png) no-repeat center 61px;background-size:100%;padding:15px;text-align:center;}
 .SB_body3_heading_con label{display:block;position:relative;}
 .SB_body3_heading_con label span{text-align:center;font-family:'robotoblack';font-size:44px;line-height:46px;text-transform:uppercase;display:block;background:-webkit-linear-gradient(#ffffff, #e4e4e4, #ffffff, #cfcccd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.SB_body3_heading_con label:nth-of-type(1)::before{text-align:center;font-family:'robotoblack';font-size:44px;width:100%;height:30px;display:block;content:'The â€œDNA Of Successâ€ 2ND Edition by Jack  M. Zufelt';z-index:9;position:absolute;left:0;top:-7px;color:#fff;text-transform:uppercase;overflow:hidden;background:-webkit-linear-gradient(#fdfdfd, #d9d4d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.SB_body3_heading_con label:nth-of-type(2)::before{text-align:center;font-family:'robotoblack';font-size:44px;width:100%;height:30px;display:block;content:'will give you the answer that you seek.';z-index:9;position:absolute;left:0;top:-7px;color:#fff;text-transform:uppercase;overflow:hidden;background:-webkit-linear-gradient(#fdfdfd, #d9d4d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+/* .SB_body3_heading_con label:nth-of-type(1)::before{text-align:center;font-family:'robotoblack';font-size:44px;width:100%;height:30px;display:block;content:'The â€œDNA Of Successâ€ 2ND Edition by Jack  M. Zufelt';z-index:9;position:absolute;left:0;top:-7px;color:#fff;text-transform:uppercase;overflow:hidden;background:-webkit-linear-gradient(#fdfdfd, #d9d4d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.SB_body3_heading_con label:nth-of-type(2)::before{text-align:center;font-family:'robotoblack';font-size:44px;width:100%;height:30px;display:block;content:'will give you the answer that you seek.';z-index:9;position:absolute;left:0;top:-7px;color:#fff;text-transform:uppercase;overflow:hidden;background:-webkit-linear-gradient(#fdfdfd, #d9d4d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;} */
 .SB_body3_contain_block{width:630px;margin-top:30px;min-height:420px;}
 .SB_body3_contain_block h2{font-size:24px;color:#ffffff;font-family:'OpenSans-Semibold';padding:18px;border:solid 1px #fff;font-family:'OpenSans-Bold';position:relative;margin:0px;}
 .SB_body3_contain_block h2:nth-of-type(1){background:rgba(0,155,198,1);background:-moz-linear-gradient(left, rgba(0,155,198,1) 0%, rgba(8,217,240,1) 100%);background:-webkit-gradient(left top, right top, color-stop(0%, rgba(0,155,198,1)), color-stop(100%, rgba(8,217,240,1)));background:-webkit-linear-gradient(left, rgba(0,155,198,1) 0%, rgba(8,217,240,1) 100%);background:-o-linear-gradient(left, rgba(0,155,198,1) 0%, rgba(8,217,240,1) 100%);background:-ms-linear-gradient(left, rgba(0,155,198,1) 0%, rgba(8,217,240,1) 100%);background:linear-gradient(to right, rgba(0,155,198,1) 0%, rgba(8,217,240,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#009bc6', endColorstr='#08d9f0', GradientType=1);border-radius:10px;padding-bottom:28px;}
@@ -1491,7 +1502,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .SB_body4_text_heading{position:relative;background:rgba(73,74,75,1);background:-moz-linear-gradient(top, rgba(73,74,75,1) 0%, rgba(15,15,15,1) 100%);background:-webkit-gradient(left top, left bottom, color-stop(0%, rgba(73,74,75,1)), color-stop(100%, rgba(15,15,15,1)));background:-webkit-linear-gradient(top, rgba(73,74,75,1) 0%, rgba(15,15,15,1) 100%);background:-o-linear-gradient(top, rgba(73,74,75,1) 0%, rgba(15,15,15,1) 100%);background:-ms-linear-gradient(top, rgba(73,74,75,1) 0%, rgba(15,15,15,1) 100%);background:linear-gradient(to bottom, rgba(73,74,75,1) 0%, rgba(15,15,15,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#494a4b', endColorstr='#0f0f0f', GradientType=0);border-radius:5px 5px 5px 0;margin-bottom:20px;}
 .SB_body4_text_heading::after{content:'';background:url(../../assets/images/SB_block3_textbg.png) no-repeat left bottom;width:33px;height:17px;display:block;position:absolute;left:0;bottom:-17px;}
 .SB_body4_text_heading span{display:block;text-align:center;font-size:40px;color:#b7b8b6;text-transform:uppercase;font-family:'OpenSans-Bold';padding:7px 0 10px 0;}
-.SB_body4_text_heading::before{content:'So, Why Donâ€™t They Seem To Work?';display:block;text-align:center;font-size:40px;color:#ffffff;text-transform:uppercase;font-family:'OpenSans-Bold';height:30px;overflow:hidden;position:absolute;left:0;top:7px;width:100%;}
+.SB_body4_text_heading::before{content:'So, Why Don’t They Seem To Work? ';display:block;text-align:center;font-size:40px;color:#ffffff;text-transform:uppercase;font-family:'OpenSans-Bold';height:30px;overflow:hidden;position:absolute;left:0;top:7px;width:100%;}
 .SB_body4_text p{margin:0;padding:20px 0 0 0;font-size:24px;color:#313232;}
 .SB_body4_text p span{color:#ff0000;}
 .SB_body4_text_part2{position:relative;}
@@ -1567,10 +1578,14 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .checkout_body .productform .mat-select-value{padding-top:8px;}
 .checkout_body .productform .form_field_shipping_zip::after{display:none;}
 .checkout_body .productform .form_field_shipping_phone::after{content:"Pay with Credit or Debit Card";font-size:22px;color:#ffffff;padding:10px;background-color:#1bb2ea;text-align:center;font-weight:normal;display:block;margin:0 0 15px 0;}
-.formpopupMS{width: 800px; border: solid 6px #01a3e3;background: #fff;}
+
+.formpopupMS{width:1200px;    background: #fff;    border-radius: 30px;}
+
+.formpopupMS .mat-dialog-container{border-radius: 30px;  background: #fff url(../images/mentorsignup_newpopupbg.png) no-repeat center bottom;  background-size: 100%; }
+
 .formpopupMS .form { margin-top: 15px;}
 .formpopupMS .form_field_wrapper { width: 99%; margin: 0 auto; }
-.formpopupMS  lib-showform{    height: 280px;  overflow-y: scroll;  display: block;}
+.formpopupMS  lib-showform{    display: block;}
 .formpopupMS h1{    font-size: 30px; color: #fff; font-family: 'OpenSans-Semibold';  margin: 0;  padding: 10px;  line-height: 28px; background: #063c65; text-align: center;}  
 .formpopupMS table{ width: 100%;}     
 .formpopupMS table tr:nth-child(odd){ background: #f3f2f2;}  
@@ -1590,17 +1605,8 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .formpopupMS .mat-form-field-appearance-legacy .mat-form-field-label {  top: 29px;  left: 10px;   }
 .formpopupMS .form_field_sameaddres{ margin: 10px 0!important;}
 .formpopupMS .button{ display: none;}
- .formpopupMS .button:nth-of-type(1) {display: block!important; background: rgba(14,133,202,1);
-                    background: -moz-linear-gradient(top, rgba(14,133,202,1) 0%, rgba(4,100,156,1) 100%);
-                    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(14,133,202,1)), color-stop(100%, rgba(4,100,156,1)));
-                    background: -webkit-linear-gradient(top, rgba(14,133,202,1) 0%, rgba(4,100,156,1) 100%);
-                    background: -o-linear-gradient(top, rgba(14,133,202,1) 0%, rgba(4,100,156,1) 100%);
-                    background: -ms-linear-gradient(top, rgba(14,133,202,1) 0%, rgba(4,100,156,1) 100%);
-                    background: linear-gradient(to bottom, rgba(14,133,202,1) 0%, rgba(4,100,156,1) 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e85ca', endColorstr='#04649c', GradientType=0 );
-                    font-size: 16px;
-                    margin: 6px 0 0 0.5%;
-                    height: 40px;}
+ .formpopupMS .button:nth-of-type(1) {display: block!important; background: #ff4828; border-radius: 4px; font-size: 20px; color: #ffffff; text-transform: uppercase;
+     text-align: center;  margin: 6px  auto;  width: 200px; margin-top: 10px; height: 40px;}
 
 
  /*---------------------------*/
@@ -1672,3 +1678,68 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .ms_left_text{ width: 70%;  padding-right: 5%; font-size: 36px; line-height: 38px; color: #ffffff; font-family:'robotomedium'; text-shadow: 0 2px 5px #708992; }
 
 .ms_left_text strong{ color: #fff959; font-weight: normal;}
+
+
+
+.mentorsignup_popuptext{background: rgba(69,134,213,1);
+    background: -moz-linear-gradient(45deg, rgba(69,134,213,1) 0%, rgba(100,120,187,1) 29%, rgba(150,91,136,1) 57%, rgba(220,47,61,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(69,134,213,1)), color-stop(29%, rgba(100,120,187,1)), color-stop(57%, rgba(150,91,136,1)), color-stop(100%, rgba(220,47,61,1)));
+    background: -webkit-linear-gradient(45deg, rgba(69,134,213,1) 0%, rgba(100,120,187,1) 29%, rgba(150,91,136,1) 57%, rgba(220,47,61,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(69,134,213,1) 0%, rgba(100,120,187,1) 29%, rgba(150,91,136,1) 57%, rgba(220,47,61,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(69,134,213,1) 0%, rgba(100,120,187,1) 29%, rgba(150,91,136,1) 57%, rgba(220,47,61,1) 100%);
+    background: linear-gradient(45deg, rgba(69,134,213,1) 0%, rgba(100,120,187,1) 29%, rgba(150,91,136,1) 57%, rgba(220,47,61,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4586d5', endColorstr='#dc2f3d', GradientType=1 ); padding: 20px;}
+
+
+    .mentorsignup_popuptext h2{ font-size: 40px; color: #ffffff; text-transform: uppercase; font-family:'robotoblack'; text-shadow: 0 0 4px #5c5165; margin: 0; padding: 0;}   
+
+    .mentorsignup_popuptext h3{ font-size: 26px; color: #ffffff;  font-family:'robotobold';   text-shadow: 0 0 4px #5c5165; margin: 0; padding: 0;}   
+
+    .mentorsignup_popuptext h3 span{ color: #fff951;} 
+
+    .mentorsignup_popuptext h4{ font-size: 26px; color: #ffffff; text-transform: uppercase; font-family:'robotomedium'; text-shadow: 0 0 4px #5c5165; margin: 15px 0; padding: 0;}
+    
+    
+    .mentorsignup_popuptext h5{ font-size: 26px; color: #71ff99; font-family:'robotomedium'; text-shadow: 0 0 4px #5c5165; margin: 0 ; padding: 0;}   
+
+
+    .mentorsignuppopupform .form_field_firstname::before{ content: 'BILLING ADDRESS'; display: block; background: rgba(76,125,198,1);
+        background: -moz-linear-gradient(left, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(76,125,198,1)), color-stop(100%, rgba(60,205,230,1)));
+        background: -webkit-linear-gradient(left, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+        background: -o-linear-gradient(left, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+        background: -ms-linear-gradient(left, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+        background: linear-gradient(to right, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c7dc6', endColorstr='#3ccde6', GradientType=1 ); text-align:center; padding: 10px;      font-size: 20px;    color: #fff; text-transform: uppercase;}
+
+
+
+        
+    .mentorsignuppopupform .form_field_shipping_firstname::before{ content: 'shipping ADDRESS'; display: block; background: rgba(76,125,198,1);
+        background: -moz-linear-gradient(left, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(76,125,198,1)), color-stop(100%, rgba(60,205,230,1)));
+        background: -webkit-linear-gradient(left, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+        background: -o-linear-gradient(left, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+        background: -ms-linear-gradient(left, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+        background: linear-gradient(to right, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c7dc6', endColorstr='#3ccde6', GradientType=1 ); text-align:center; padding: 10px;      margin-top: 15px;
+        font-size: 20px;    color: #fff; text-transform: uppercase;}
+
+
+        .mentorsignuppopupform .form_field_card_type::before{ content: 'Pay with Credit or Debit Card'; display: block; background: rgba(76,125,198,1);
+            background: -moz-linear-gradient(left, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(76,125,198,1)), color-stop(100%, rgba(60,205,230,1)));
+            background: -webkit-linear-gradient(left, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+            background: -o-linear-gradient(left, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+            background: -ms-linear-gradient(left, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+            background: linear-gradient(to right, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c7dc6', endColorstr='#3ccde6', GradientType=1 ); text-align:center; padding: 10px;      margin-top: 15px;
+            font-size: 20px;    color: #fff;  }
+
+
+            .mentorsignuppopupform  .mat-checkbox label{ color: #ff0000!important;}
+
+
+            .mentorsignup_popup_main{ display: block;}
+
+            .mentorsignup_popup_main{ display: block; height: 80vh; overflow-y: scroll;     overflow-x: hidden;}  
