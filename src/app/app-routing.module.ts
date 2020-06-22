@@ -8,7 +8,7 @@ import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
 //import { AboutComponent } from './about/about.component';
 // import { BlogComponent } from './blog/blog.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
-import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
+//import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
 import { LoginComponent } from './login/login.component';
 // import { ProductComponent } from './product/product.component';
 //import { ContactComponent } from './contact/contact.component';
@@ -25,6 +25,8 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 //import { ContactComponent } from './contact/contact.component';
 // const api_url1 =  environment["api_url1"];
+
+import { MentordetailComponent } from './mentordetail/mentordetail.component';
 const api_url = environment['api_url'];
 
 
@@ -33,10 +35,16 @@ const routes: Routes = [
   {path:'home', component: HomeComponent}, 
   {path:'', component: HomeComponent}, 
   {path:'ordersuccess', component: OrdersuccessComponent},
+  {path:'mentordetail', component: MentordetailComponent},
   {path:'ordersuccess/:_id', component: OrdersuccessComponent,resolve: {successData: TestresolveService},
   data: {requestcondition: {source: '', condition: {'_id': '_id'}}, endpoint: 'api/ordersuccessresolve', api_url: api_url}}, 
-
-  {path:'successbook', component: SuccessbookComponent},
+  {
+    path:'successbook', component: SuccessbookComponent
+  },
+  {path:'successbook/:_id', component: SuccessbookComponent,
+  resolve: { Data: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  },
 
 //   {path:'live-webinar', component: LiveWebinarComponent, 
 //   resolve: {
@@ -86,12 +94,12 @@ const routes: Routes = [
     data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getblogdatabyid' }
   },
 
-  { path: 'affiliatesignup', component: AffiliatesignupComponent },
-  {
-    path: 'affiliatesignup/:_id', component: AffiliatesignupComponent,
-    resolve: { Data: TestresolveService },
-    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
-  },
+  // { path: 'affiliatesignup', component: AffiliatesignupComponent },
+  // {
+  //   path: 'affiliatesignup/:_id', component: AffiliatesignupComponent,
+  //   resolve: { Data: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  // },
 
   { path: 'login', component: LoginComponent },
 
@@ -120,19 +128,19 @@ const routes: Routes = [
  //{ path: 'contact', component: ContactComponent },
 
 
-  { path: 'mentorsignup', component: MentorsignupComponent },
-  {
-    path: 'mentorsignup/:_id', component: MentorsignupComponent,
-    resolve: { Data: TestresolveService },
-    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
-  },
+  // { path: 'mentorsignup', component: MentorsignupComponent },
+  // {
+  //   path: 'mentorsignup/:_id', component: MentorsignupComponent,
+  //   resolve: { Data: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  // },
 
-  { path: 'landingpage', component: LandingpageComponent },
-  {
-    path: 'landingpage/:_id', component: LandingpageComponent,
-    resolve: { Data: TestresolveService },
-    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
-  },
+  // { path: 'landingpage', component: LandingpageComponent },
+  // {
+  //   path: 'landingpage/:_id', component: LandingpageComponent,
+  //   resolve: { Data: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  // },
 
 
   { path: 'menteelandingpage', component: MenteelandingpageComponent },
