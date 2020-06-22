@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
     // this.router.navigateByUrl('/pages/products/'+value)
   }
   learnproduct1(value){
-    // this.router.navigateByUrl('/pages/products-list/'+value)
+    this.router.navigateByUrl('/pages/products-list/'+value)
 
   }
 }

@@ -71,7 +71,10 @@ const routes: Routes = [
     data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getbannerdataforlandingpage' }
   },
 
-  { path: 'products-list/:id', component: ProductComponent },
+  { path: 'products-list/:id', component: ProductComponent,
+  resolve: { packagedata: TestresolveService },
+    data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+ },
   {
     path: 'products/:class', component: ProductComponent,
     resolve: { packagedata: TestresolveService },
