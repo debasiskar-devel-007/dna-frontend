@@ -80,7 +80,7 @@ export class ProductComponent implements OnInit {
         this.acctoken = resolveData.packagedata.results.token.access_token;
         this.banner_image = resolveData.packagedata.results.banner[0].image;
 
-        console.log('@@@@>>>>>',this.ActivatedRoute.params,'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
+        // console.log('@@@@>>>>>',this.ActivatedRoute.params,'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
 
         this.meta.setTag('og:image', this.banner_image);
         this.meta.setTag('twitter:image', this.banner_image);
