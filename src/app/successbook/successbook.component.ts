@@ -3,7 +3,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import { ApiService } from '../api.service';
 import { ActivatedRoute,Router } from '@angular/router';
 import {environment} from '../../environments/environment';
-
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 
 export interface DialogData {
@@ -563,7 +563,7 @@ formdata3: any = {
       this.form1=false;
       this.form2=false;
       this.form3=false;
-      this.form4=false;
+      // this.form4=false;
       this.form4Value = val.fromval;
       this.menteeSignupData.push(this.form4Value);
       // console.log("submitted data",this.menteeSignupData);
@@ -650,7 +650,7 @@ public value:any=null;
 public dat:any=[];
   constructor(
     public dialogRef: MatDialogRef<AddON>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,public apiService: ApiService, public router: Router) {
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,public _snackBar: MatSnackBar,public apiService: ApiService, public router: Router) {
       // console.log('modalData',data)
       this.dat=data;
     }
@@ -669,6 +669,10 @@ public dat:any=[];
         console.warn(res);
         if (res.status == 'success') {
           this.router.navigateByUrl('success/' + res.message._id);
+        }else{
+          this._snackBar.open(res.errormessage, '', {
+            duration: 2000,
+          });
         }
     
       });
