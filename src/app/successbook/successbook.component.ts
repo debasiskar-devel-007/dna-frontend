@@ -146,27 +146,7 @@ formdata1: any = {
 
   fields: [
     {
-      label: 'First Name',
-      name: 'firstname',
-      value: '',
-      type: 'text',
-      validations: [
-        { rule: 'required', message: 'First Name is required' },
-        
-      ]
-    },
-    {
-      label: 'Last Name',
-      name: 'lastname',
-      value: '',
-      type: 'text',
-      validations: [
-        { rule: 'required', message: 'Last Name is required' },
-        
-      ]
-    },
-    {
-      label: "address",
+      label: "Address",
       name: "address",
       type: "text",
       value:'',
@@ -540,8 +520,8 @@ formdata3: any = {
   listenFormFieldChange2(val: any) {
     if (val.field.name != 'card_type' && val.field.name != 'card_cc' && val.field.name != 'expyear' && val.field.name != 'card_cvv' && val.field.name != 'expmonth') {
       
-      this.formarray.push({ val:this.menteeSignupData[1].firstname, name:'firstname'},
-      {val:this.menteeSignupData[1].lastname,name:'lastname'},
+      this.formarray.push({ val:this.menteeSignupData[0].firstname, name:'firstname'},
+      {val:this.menteeSignupData[0].lastname,name:'lastname'},
       {val:this.menteeSignupData[1].address,name:'address'},
       {val:this.menteeSignupData[1].city,name:'city'},
       {val:this.menteeSignupData[1].state,name:'state'},
