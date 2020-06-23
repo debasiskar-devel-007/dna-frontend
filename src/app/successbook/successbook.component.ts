@@ -3,7 +3,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import { ApiService } from '../api.service';
 import { ActivatedRoute,Router } from '@angular/router';
 import {environment} from '../../environments/environment';
-
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 
 export interface DialogData {
@@ -146,27 +146,7 @@ formdata1: any = {
 
   fields: [
     {
-      label: 'First Name',
-      name: 'firstname',
-      value: '',
-      type: 'text',
-      validations: [
-        { rule: 'required', message: 'First Name is required' },
-        
-      ]
-    },
-    {
-      label: 'Last Name',
-      name: 'lastname',
-      value: '',
-      type: 'text',
-      validations: [
-        { rule: 'required', message: 'Last Name is required' },
-        
-      ]
-    },
-    {
-      label: "address",
+      label: "Address",
       name: "address",
       type: "text",
       value:'',
@@ -510,9 +490,19 @@ formdata3: any = {
      
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-     
+    dialogRef.afterClosed().subscribe((result:any) => {
+      console.log('The dialog was closed',result);
+     if(result=='email error'){
+       this.form1=true;
+       this.form2=false;
+      this.form3=false;
+      this.form4=false;
+      this.active1=false;
+      this.active2=false;
+      this.active3=false;
+      // console.log(this.form1Value);
+
+     }
     });
   }
 
@@ -540,8 +530,8 @@ formdata3: any = {
   listenFormFieldChange2(val: any) {
     if (val.field.name != 'card_type' && val.field.name != 'card_cc' && val.field.name != 'expyear' && val.field.name != 'card_cvv' && val.field.name != 'expmonth') {
       
-      this.formarray.push({ val:this.menteeSignupData[1].firstname, name:'firstname'},
-      {val:this.menteeSignupData[1].lastname,name:'lastname'},
+      this.formarray.push({ val:this.menteeSignupData[0].firstname, name:'firstname'},
+      {val:this.menteeSignupData[0].lastname,name:'lastname'},
       {val:this.menteeSignupData[1].address,name:'address'},
       {val:this.menteeSignupData[1].city,name:'city'},
       {val:this.menteeSignupData[1].state,name:'state'},
@@ -580,10 +570,11 @@ formdata3: any = {
   }
   listenFormFieldChange3(val: any) {
     if (val.field == 'fromsubmit') {
+      
       this.form1=false;
       this.form2=false;
       this.form3=false;
-      this.form4=false;
+      // this.form4=false;
       this.form4Value = val.fromval;
       this.menteeSignupData.push(this.form4Value);
       // console.log("submitted data",this.menteeSignupData);
@@ -670,7 +661,7 @@ public value:any=null;
 public dat:any=[];
   constructor(
     public dialogRef: MatDialogRef<AddON>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,public apiService: ApiService, public router: Router) {
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,public _snackBar: MatSnackBar,public apiService: ApiService, public router: Router) {
       // console.log('modalData',data)
       this.dat=data;
     }
@@ -686,13 +677,19 @@ public dat:any=[];
       }
       // console.warn(cartdata);
       this.apiService.customRequest1(cartdata, 'api/order', environment['api_url']).subscribe((res: any) => {
-        console.warn(res);
+        // console.warn(res);
         if (res.status == 'success') {
           this.router.navigateByUrl('success/' + res.message._id);
+          this.dialogRef.close();
+        }else{
+          this._snackBar.open(res.errormessage, '', {
+            duration: 2000,
+          });
+          this.dialogRef.close('email error');
         }
     
       });
-     this.dialogRef.close();
+    //  this.dialogRef.close();
     }
   onNoClick(): void {
     this.dialogRef.close();
