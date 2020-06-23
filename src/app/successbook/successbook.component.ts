@@ -490,9 +490,19 @@ formdata3: any = {
      
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-     
+    dialogRef.afterClosed().subscribe((result:any) => {
+      console.log('The dialog was closed',result);
+     if(result=='email error'){
+       this.form1=true;
+       this.form2=false;
+      this.form3=false;
+      this.form4=false;
+      this.active1=false;
+      this.active2=false;
+      this.active3=false;
+      // console.log(this.form1Value);
+
+     }
     });
   }
 
@@ -560,6 +570,7 @@ formdata3: any = {
   }
   listenFormFieldChange3(val: any) {
     if (val.field == 'fromsubmit') {
+      
       this.form1=false;
       this.form2=false;
       this.form3=false;
@@ -666,17 +677,19 @@ public dat:any=[];
       }
       // console.warn(cartdata);
       this.apiService.customRequest1(cartdata, 'api/order', environment['api_url']).subscribe((res: any) => {
-        console.warn(res);
+        // console.warn(res);
         if (res.status == 'success') {
           this.router.navigateByUrl('success/' + res.message._id);
+          this.dialogRef.close();
         }else{
           this._snackBar.open(res.errormessage, '', {
             duration: 2000,
           });
+          this.dialogRef.close('email error');
         }
     
       });
-     this.dialogRef.close();
+    //  this.dialogRef.close();
     }
   onNoClick(): void {
     this.dialogRef.close();
