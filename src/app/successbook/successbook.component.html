@@ -67,20 +67,21 @@
                 <form>
                     <div class="form_step">
 
-                        <div class="ster1"> <span class="activestep"> <span class="linespan"> </span>  </span> </div>
-                        <div class="ster2"> <span [class.activestep]="active1 === true"> <span class="linespan"></span> </span> </div>
-                        <div class="ster3"> <span [class.activestep]="active2 === true"> <span class="linespan"></span> </span> </div>
-                        <div class="ster4"> <span [class.activestep]="active3 === true"> <span class="linespan"></span> </span> </div>
+                        <div class="ster1"> <span [ngClass]="{'activestep': form1 === true}"> <span class="linespan"> </span>  </span> </div>
+                        <div class="ster2"> <span [ngClass]="{'activestep': form2 === true}"> <span class="linespan"></span> </span> </div>
+                        <div class="ster3"> <span [ngClass]="{'activestep': form3 === true}"> <span class="linespan"></span> </span> </div>
+                        <div class="ster4"> <span [ngClass]="{'activestep': form4 === true}"> <span class="linespan"></span> </span> </div>
 
                     </div>
 
 
                      <div class="SB_topformwrapper">
-
+                      <label [ngClass]="{'activelabel': form1 === true}">USER INFORMATION</label>
+                      <label [ngClass]="{'activelabel': form2 === true}">BILLING INFORMATION</label>
+                      <label [ngClass]="{'activelabel': form3 === true}">Shipping Address</label>
+                      <label [ngClass]="{'activelabel': form4 === true}">card INFORMATION</label>
                    <!-- user info here -->
                    <ng-container *ngIf="form1">
-                    <label class="activelabel">USER INFORMATION</label>
-
                     <lib-showform *ngIf="formdata !=null"
                     [formdata]="formdata"
                     [formfieldrefresh]="formfieldrefresh"
@@ -90,7 +91,7 @@
                    </ng-container>
                 <!-- billing address -->
                    <ng-container *ngIf="form2">
-                    <label>BILLING INFORMATION</label>
+                   
                     <lib-showform *ngIf="formdata1 !=null"
                     [formdata]="formdata1"
                     [formfieldrefresh]="formfieldrefresh"
@@ -102,7 +103,7 @@
                    <!-- shipping address -->
                  
                    <ng-container *ngIf="form3">
-                    <label>Shipping Address</label>
+                   
 
                     <lib-showform *ngIf="formdata2 !=null"
                     [formdata]="formdata2"
@@ -114,8 +115,6 @@
                    </ng-container>
                     <!-- CARD INFORMATION-->
                     <ng-container *ngIf="form4">
-                      <label>card INFORMATION</label>
-
                       <lib-showform *ngIf="formdata3 !=null"
                       [formdata]="formdata3"
                       [formfieldrefresh]="formfieldrefresh"
