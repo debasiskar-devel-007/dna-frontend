@@ -14,9 +14,13 @@ import { AboutComponent } from '../about/about.component';
 import { NewaboutbetoComponent } from '../newaboutbeto/newaboutbeto.component';
 import { NewsuccessgeneticsComponent } from '../newsuccessgenetics/newsuccessgenetics.component';
 import { LiveWebinarComponent } from '../live-webinar/live-webinar.component';
-//import { ProductComponent } from '../product/product.component';
+import { ProductComponent } from '../product/product.component';
+import { ContactComponent } from '../contact/contact.component';
+import { MentorsignupComponent, formModal } from '../mentorsignup/mentorsignup.component';
+import { LandingpageComponent } from '../landingpage/landingpage.component';
+import { AffiliatesignupComponent } from '../affiliatesignup/affiliatesignup.component';
 
-//import { ContactComponent } from '../contact/contact.component';
+// import { ContactComponent } from '../contact/contact.component';
 // import { RouterModule } from '@angular/router';
 
 
@@ -31,9 +35,14 @@ import { LiveWebinarComponent } from '../live-webinar/live-webinar.component';
     NewaboutbetoComponent,
     NewsuccessgeneticsComponent,
     LiveWebinarComponent,
-    //ProductComponent
-   
-    //ContactComponent
+    ProductComponent,
+    ContactComponent,
+    MentorsignupComponent,
+    formModal,
+    LandingpageComponent,
+    AffiliatesignupComponent
+
+    // ContactComponent,
     // FooterComponent,
     // HeaderComponent
 
@@ -45,6 +54,8 @@ import { LiveWebinarComponent } from '../live-webinar/live-webinar.component';
     TemplateModule,
     // RouterModule
     // FooterComponent
-  ]
+  ],
+  entryComponents: [formModal],
+
 })
 export class PagesModule { }

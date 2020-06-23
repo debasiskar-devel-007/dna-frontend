@@ -3,6 +3,8 @@ import { MetaService } from '@ngx-meta/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../environments/environment';
+import { CookieService } from 'ngx-cookie-service';
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -39,7 +41,7 @@ export class ProductComponent implements OnInit {
   public banner_image: any;
 
 
-  constructor(public _apiService: ApiService, public ActivatedRoute: ActivatedRoute,
+  constructor(public CookieService:CookieService,public _apiService: ApiService, public ActivatedRoute: ActivatedRoute,
     public meta: MetaService, public router: Router) {
     this.meta.setTitle('DNA Of Success - Our Products ');
 
@@ -52,7 +54,7 @@ export class ProductComponent implements OnInit {
     this.meta.setTag('og:title', 'DNA Of Success - Our Products');
     this.meta.setTag('twitter:title', 'DNA Of Success - Our Products');
 
-    if (this.router.url == '/products' || this.ActivatedRoute.snapshot.routeConfig.path == 'products/:class') {
+    if (this.router.url == '/pages/products' || this.ActivatedRoute.snapshot.routeConfig.path == 'products/:class') {
       this.meta.setTag('og:image', '../../assets/images/default_image.jpg');
       this.meta.setTag('og:url', 'https://dna.influxiq.com/');
       this.meta.setTag('twitter:url', 'https://dna.influxiq.com/');
@@ -69,6 +71,7 @@ export class ProductComponent implements OnInit {
         );
       }
     })
+
   }
 
 
@@ -86,7 +89,8 @@ export class ProductComponent implements OnInit {
         this.meta.setTag('twitter:image', this.banner_image);
         this.meta.setTag('og:url', 'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
         this.meta.setTag('twitter:url', 'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
-
+        console.log(resolveData.packagedata.results.package)
+        console.log(resolveData)
       });
     } else {
       let data: any = {
@@ -100,45 +104,88 @@ export class ProductComponent implements OnInit {
 
 
 
-    if (this.router.url == '/products') {
+    if (this.router.url == '/pages/products') {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
         this.acctoken = resolveData.packagedata.results.token.access_token;
         // console.log(this.acctoken);
-        //  console.log(resolveData.packagedata) 
+         console.log(resolveData.packagedata) 
       });
+    }
+    let uid = this.CookieService.get('shareid');
+    if(uid!=null && uid!=undefined && uid!='' && this.ActivatedRoute.snapshot.params.class==null){
+      let data: any = {
+        "id": this.CookieService.get('shareid')
+      }
+      this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
+        console.warn(res)
+        this.parentdetails = res.result[0];
+      })
     }
 
     //console.log(this.ActivatedRoute.snapshot.url[0].path);
     //  console.log(this.ActivatedRoute.snapshot.params.id.substring(0, 1));
+    //for learn product button in home page
     if (this.ActivatedRoute.snapshot.url[0].path == 'products-list') {
-      document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.id).scrollIntoView({ behavior: 'smooth', });
+      this.ActivatedRoute.data.subscribe((resolveData: any) => {
+        if(resolveData.packagedata.status=='success'){
+          this.allPackage = resolveData.packagedata.results.package;
+          this.acctoken = resolveData.packagedata.results.token.access_token;
+          // console.log(this.acctoken);
+          //  console.warn('learn product',resolveData.packagedata) 
+          setTimeout(()=>{    
+            document.querySelector('.package' + this.ActivatedRoute.snapshot.params.id).scrollIntoView({ behavior: 'smooth', });
+       }, 1000);
+          
+          
+        }
+        
+      });
+     
 
     }
-    if (this.ActivatedRoute.snapshot.params.class != null && this.ActivatedRoute.snapshot.params.class.length == 1) {
-      // document.querySelector('.newproduct_list' + this.ActivatedRoute.snapshot.params.class).scrollIntoView({ behavior: 'smooth', });
-      //   if(this.ActivatedRoute.snapshot.params.class==1){
-      //     this.chooseProduct('','good');
-      //     this.selectedProduct.good = 1;
-      //   }else if(this.ActivatedRoute.snapshot.params.class==2){
-      //     this.chooseProduct('','better');
-      //     this.selectedProduct.better = 1;
-      //   }else if(this.ActivatedRoute.snapshot.params.class==3){
-      //     this.chooseProduct('','best');
-      //     this.selectedProduct.best = 1;
-      //   }else if(this.ActivatedRoute.snapshot.params.class==4){
-      //     this.chooseProduct('','mentor');
-      //     this.selectedProduct.mentor = 1;
-      // }
-    } else {
-      let data: any = {
-        "id": this.ActivatedRoute.snapshot.params.class
-      }
-      this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-        // console.log(res)
-        this.parentdetails = res.result[0];
-      })
-    }
+    if (this.ActivatedRoute.snapshot.params.class != null && this.ActivatedRoute.snapshot.params.class != undefined) {
+      this.CookieService.set('shareid',this.ActivatedRoute.snapshot.params.class);
+      this.ActivatedRoute.data.subscribe((resolveData: any) => {
+        this.allPackage = resolveData.packagedata.results.package;
+        this.acctoken = resolveData.packagedata.results.token.access_token;
+        // console.log(this.acctoken);
+         //console.log(resolveData.packagedata) 
+      });
+    //   let data: any = {
+    //   //     this.selectedProduct.good = 1;
+    //   //   }else if(this.ActivatedRoute.snapshot.params.class==2){
+    //   //     this.chooseProduct('','better');
+    //   //     this.selectedProduct.better = 1;
+    //   //   }else if(this.ActivatedRoute.snapshot.params.class==3){
+    //   //     this.chooseProduct('','best');
+    //   //     this.selectedProduct.best = 1;
+    //   //   }else if(this.ActivatedRoute.snapshot.params.class==4){
+    //   //     this.chooseProduct('','mentor');
+    //   //     this.selectedProduct.mentor = 1;
+    //   // }
+    // }       //     this.chooseProduct('','good');
+    //   //     this.selectedProduct.good = 1;
+    //   //   }else if(this.ActivatedRoute.snapshot.params.class==2){
+    //   //     this.chooseProduct('','better');
+    //   //     this.selectedProduct.better = 1;
+    //   //   }else if(this.ActivatedRoute.snapshot.params.class==3){
+    //   //     this.chooseProduct('','best');
+    //   //     this.selectedProduct.best = 1;
+    //   //   }else if(this.ActivatedRoute.snapshot.params.class==4){
+    //   //     this.chooseProduct('','mentor');
+    //   //     this.selectedProduct.mentor = 1;
+    //   // }
+    } 
+    // else {
+    //   let data: any = {
+    //     "id": this.ActivatedRoute.snapshot.params.class
+    //   }
+    //   this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
+    //     // console.log(res)
+    //     this.parentdetails = res.result[0];
+    //   })
+    // }
     /////////////////////////
 
     this.formdata = {
@@ -509,7 +556,7 @@ export class ProductComponent implements OnInit {
     this.total = this.productDetails.total;
     this.productDetails.usertype = item.role.toLowerCase();
     this.productDetails.webinarid = item.webinar;
-    // console.warn(this.productDetails);
+    console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {
     //// console.log(val);

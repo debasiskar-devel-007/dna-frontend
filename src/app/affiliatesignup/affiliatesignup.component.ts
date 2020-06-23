@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 // import { MetaService } from '@ngx-meta/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
-
+import { CookieService } from 'ngx-cookie-service';
+import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-affiliatesignup',
   templateUrl: './affiliatesignup.component.html',
@@ -23,7 +24,7 @@ export class AffiliatesignupComponent implements OnInit {
  public statesjson : any =[];
  public shareUser:any =[];
 
-  constructor(public _apiService: ApiService,public ActivatedRoute:ActivatedRoute
+  constructor(public CookieService:CookieService,public _apiService: ApiService,public ActivatedRoute:ActivatedRoute
     // public meta: MetaService
     ) { 
       // window.scrollTo(500, 0); 
@@ -50,12 +51,26 @@ export class AffiliatesignupComponent implements OnInit {
       }
     })
     if(this.ActivatedRoute.snapshot.params._id != null && typeof(ActivatedRoute.snapshot.params._id) != "undefined"){
+      this.CookieService.set('shareid',this.ActivatedRoute.snapshot.params._id);
       this.parentid = this.ActivatedRoute.snapshot.params._id;
       this.ActivatedRoute.data.subscribe((resolveData:any) => {
         this.shareUser=resolveData.Data.results.res[0]
          //console.log(this.shareUser,resolveData);
        });
     }
+
+
+    let uid = this.CookieService.get('shareid');
+    if(uid!=null && uid!=undefined && uid!='' && this.ActivatedRoute.snapshot.params.class==null){
+      let data: any = {
+        "id": this.CookieService.get('shareid')
+      }
+      this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
+        // console.warn(res)
+        this.shareUser = res.result[0];
+      })
+    }
+    
     this.formdata = {
       successmessage:"Added Successfully !!",
       redirectpath:"",

@@ -8,9 +8,9 @@ import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
 //import { AboutComponent } from './about/about.component';
 // import { BlogComponent } from './blog/blog.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
-import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
+//import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
 import { LoginComponent } from './login/login.component';
-import { ProductComponent } from './product/product.component';
+// import { ProductComponent } from './product/product.component';
 //import { ContactComponent } from './contact/contact.component';
 import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
 import { TestresolveService } from './testresolve.service';
@@ -23,8 +23,10 @@ import { SuccessbookComponent } from './successbook/successbook.component';
 import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { ContactComponent } from './contact/contact.component';
+//import { ContactComponent } from './contact/contact.component';
 // const api_url1 =  environment["api_url1"];
+
+import { MentordetailComponent } from './mentordetail/mentordetail.component';
 const api_url = environment['api_url'];
 
 
@@ -33,10 +35,17 @@ const routes: Routes = [
   {path:'home', component: HomeComponent}, 
   {path:'', component: HomeComponent}, 
   {path:'ordersuccess', component: OrdersuccessComponent},
+  {path:'mentordetail/:_id', component: MentordetailComponent,resolve: {mentordetail: TestresolveService},
+  data: {requestcondition: {source: '', condition: {'_id': '_id'}}, endpoint: 'api1/getuserdatabyid', api_url: api_url}},
   {path:'ordersuccess/:_id', component: OrdersuccessComponent,resolve: {successData: TestresolveService},
   data: {requestcondition: {source: '', condition: {'_id': '_id'}}, endpoint: 'api/ordersuccessresolve', api_url: api_url}}, 
-
-  {path:'successbook', component: SuccessbookComponent},
+  {
+    path:'successbook', component: SuccessbookComponent
+  },
+  {path:'successbook/:_id', component: SuccessbookComponent,
+  resolve: { Data: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  },
 
 //   {path:'live-webinar', component: LiveWebinarComponent, 
 //   resolve: {
@@ -86,54 +95,53 @@ const routes: Routes = [
     data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getblogdatabyid' }
   },
 
-  { path: 'affiliatesignup', component: AffiliatesignupComponent },
-  {
-    path: 'affiliatesignup/:_id', component: AffiliatesignupComponent,
-    resolve: { Data: TestresolveService },
-    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
-  },
+  // { path: 'affiliatesignup', component: AffiliatesignupComponent },
+  // {
+  //   path: 'affiliatesignup/:_id', component: AffiliatesignupComponent,
+  //   resolve: { Data: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  // },
 
   { path: 'login', component: LoginComponent },
 
-  {
-    path: 'products', component: ProductComponent,
-    resolve: { packagedata: TestresolveService },
-    data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
-  },
+  // {
+  //   path: 'products', component: ProductComponent,
+  //   resolve: { packagedata: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+  // },
 
-  //banner image display route
-  {
-    path: 'landingpage/:class/:_id', component: ProductComponent,
-    resolve: { packagedata: TestresolveService },
-    data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getbannerdataforlandingpage' }
-  },
+  // //banner image display route
+  // {
+  //   path: 'landingpage/:class/:_id', component: ProductComponent,
+  //   resolve: { packagedata: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getbannerdataforlandingpage' }
+  // },
 
-  { path: 'products-list/:id', component: ProductComponent },
-  {
-    path: 'products/:class', component: ProductComponent,
-    resolve: { packagedata: TestresolveService },
-    data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
-  },
+  // { path: 'products-list/:id', component: ProductComponent },
+  // {
+  //   path: 'products/:class', component: ProductComponent,
+  //   resolve: { packagedata: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+  // },
 
-  {path:'contact-us', component: ContactComponent}, 
+  //{path:'contact-us', component: ContactComponent}, 
 
  //{ path: 'contact', component: ContactComponent },
 
 
-  { path: 'mentorsignup', component: MentorsignupComponent },
+  // { path: 'mentorsignup', component: MentorsignupComponent },
+  // {
+  //   path: 'mentorsignup/:_id', component: MentorsignupComponent,
+  //   resolve: { Data: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  // },
 
-  {
-    path: 'mentorsignup/:_id', component: MentorsignupComponent,
-    resolve: { Data: TestresolveService },
-    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
-  },
-
-  { path: 'landingpage', component: LandingpageComponent },
-  {
-    path: 'landingpage/:_id', component: LandingpageComponent,
-    resolve: { Data: TestresolveService },
-    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
-  },
+  // { path: 'landingpage', component: LandingpageComponent },
+  // {
+  //   path: 'landingpage/:_id', component: LandingpageComponent,
+  //   resolve: { Data: TestresolveService },
+  //   data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  // },
 
 
   { path: 'menteelandingpage', component: MenteelandingpageComponent },
@@ -171,12 +179,13 @@ const routes: Routes = [
   },
 
   // {path: '', redirectTo: 'home', pathMatch: 'full'},
-   {path: '**', component: HomeComponent},
 
+  
 
+  { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+  {path: '**', component: HomeComponent},
 
-
-  { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) }
+  
 ];
 
 @NgModule({

@@ -25,14 +25,14 @@ import { TermsandCondition, PrivacyPolicy } from './footer/footer.component';
 //import { AboutComponent } from './about/about.component';
 // import { BlogComponent } from './blog/blog.component';
 import { BlogdetailComponent } from './blogdetail/blogdetail.component';
-import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
+//import { AffiliatesignupComponent } from './affiliatesignup/affiliatesignup.component';
 import { LoginComponent } from './login/login.component';
-import { ProductComponent } from './product/product.component';
+// import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
-import { MentorsignupComponent } from './mentorsignup/mentorsignup.component';
+//import { MentorsignupComponent,formModal} from './mentorsignup/mentorsignup.component';
 import { FacebookModule, FacebookService } from 'ngx-facebook';
-import { LandingpageComponent } from './landingpage/landingpage.component';
-import { ListingModule } from 'listing-angular7';
+//import { LandingpageComponent } from './landingpage/landingpage.component';
+// import { ListingModule } from 'listing-angular7';
 import { MenteelandingpageComponent } from './menteelandingpage/menteelandingpage.component';
 
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@ngx-meta/core';
@@ -41,10 +41,15 @@ import { SuccessComponent } from './success/success.component';
 import { SuccessbookComponent, TermsandConditionSB, PrivacyPolicySB, AddON } from './successbook/successbook.component';
 import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 
-import { CartComponent ,loginModal} from './cart/cart.component';
-import {CheckoutComponent} from './checkout/checkout.component'
+import { CartComponent, loginModal } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component'
 import { TemplateModule } from './templatemodule';
-import { ContactComponent } from './contact/contact.component';
+import { MentordetailComponent } from './mentordetail/mentordetail.component';
+
+//import { ContactComponent } from './contact/contact.component';
+
+
+
 
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
@@ -76,17 +81,18 @@ export function metaFactory(): MetaLoader {
     PrivacyPolicy,
     TermsandConditionSB,
     PrivacyPolicySB,
-   // NewaboutbetoComponent,
-   // NewsuccessgeneticsComponent,
-   // AboutComponent,
+    // NewaboutbetoComponent,
+    // NewsuccessgeneticsComponent,
+    // AboutComponent,
     // BlogComponent, 
     BlogdetailComponent,
-    AffiliatesignupComponent,
+   // AffiliatesignupComponent,
     LoginComponent,
-    ProductComponent,
-    ContactComponent,
-    MentorsignupComponent,
-    LandingpageComponent,
+    // ProductComponent,
+    //ContactComponent,
+    // MentorsignupComponent,
+    // formModal,
+    //LandingpageComponent,
     MenteelandingpageComponent,
     SuccessComponent,
     MyLoaderComponent,
@@ -96,10 +102,11 @@ export function metaFactory(): MetaLoader {
     OrdersuccessComponent,
     CartComponent,
     CheckoutComponent,
-    loginModal
+    loginModal,
+    MentordetailComponent
   ],
   imports: [
-    ListingModule,
+    // ListingModule,
     TemplateModule,
     DemoMaterialModule,
     FacebookModule.forRoot(),
@@ -124,7 +131,7 @@ export function metaFactory(): MetaLoader {
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: [loginModal,TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
+  entryComponents: [loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
 })
 export class AppModule {
 

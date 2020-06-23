@@ -11,9 +11,11 @@ import { NewaboutbetoComponent } from '../newaboutbeto/newaboutbeto.component';
 import { NewsuccessgeneticsComponent } from '../newsuccessgenetics/newsuccessgenetics.component';
 import { LiveWebinarComponent } from '../live-webinar/live-webinar.component';
 import { environment } from 'src/environments/environment';
-
-//import { environment } from '../environments/environment';
-//import { ProductComponent } from '../product/product.component';
+import { ProductComponent } from '../product/product.component';
+import { ContactComponent } from '../contact/contact.component';
+import { MentorsignupComponent } from '../mentorsignup/mentorsignup.component';
+import { LandingpageComponent } from '../landingpage/landingpage.component';
+import { AffiliatesignupComponent } from '../affiliatesignup/affiliatesignup.component';
 //import { ContactComponent } from '../contact/contact.component';
 
 const api_url = environment['api_url'];
@@ -28,56 +30,88 @@ const routes: Routes = [
   },
 
   { path: 'blog/:_id', component: BlogComponent },
-  {path:'about', component: AboutComponent},
-  {path:'aboutbeto', component: NewaboutbetoComponent},
+  { path: 'about', component: AboutComponent },
+  { path: 'aboutbeto', component: NewaboutbetoComponent },
   { path: 'successgenetics', component: NewsuccessgeneticsComponent },
-  {path:'live-webinar', component: LiveWebinarComponent, 
-  resolve: {
-    shop: TestresolveService
-  },data: {requestcondition: {source: '',condition: {
-      }
-    },
-    endpoint: 'api/getwebinarshop',
-    api_url: api_url
-  }
-}, 
-{path:'live-webinar/:id', component: LiveWebinarComponent, 
-resolve: {
-  shop: TestresolveService
-},data: {requestcondition: {source: '',condition: {
+  {path:'contact-us', component: ContactComponent},
+  {
+    path: 'live-webinar', component: LiveWebinarComponent,
+    resolve: {
+      shop: TestresolveService
+    }, data: {
+      requestcondition: {
+        source: '', condition: {
+        }
+      },
+      endpoint: 'api/getwebinarshop',
+      api_url: api_url
     }
   },
-  endpoint: 'api/getwebinarshop',
-  api_url: api_url
-}
-},
+  {
+    path: 'live-webinar/:id', component: LiveWebinarComponent,
+    resolve: {
+      shop: TestresolveService
+    }, data: {
+      requestcondition: {
+        source: '', condition: {
+        }
+      },
+      endpoint: 'api/getwebinarshop',
+      api_url: api_url
+    }
+  },
 
-// {
-//   path: 'products', component: ProductComponent,
-//   resolve: { packagedata: TestresolveService },
-//   data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
-// },
+  {
+    path: 'products', component: ProductComponent,
+    resolve: { packagedata: TestresolveService },
+    data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+  },
 
-// //banner image display route
-// {
-//   path: 'landingpage/:class/:_id', component: ProductComponent,
-//   resolve: { packagedata: TestresolveService },
-//   data: { requestcondition: { source: '', condition: {"_id":"_id"} }, endpoint: 'api1/getbannerdataforlandingpage' }
-// },
+  //banner image display route
+  {
+    path: 'landingpage/:class/:_id', component: ProductComponent,
+    resolve: { packagedata: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getbannerdataforlandingpage' }
+  },
 
-// { path: 'products-list/:id', component: ProductComponent },
-// {
-//   path: 'products/:class', component: ProductComponent,
-//   resolve: { packagedata: TestresolveService },
-//   data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
-// },
-  // {
-  //   path: 'products', component: ProductComponent,
-  //   resolve: { packagedata: TestresolveService },
-  //   data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
-  // },
-  
- // {path:'contact', component: ContactComponent}, 
+  { path: 'products-list/:id', component: ProductComponent,
+  resolve: { packagedata: TestresolveService },
+    data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+ },
+  {
+    path: 'products/:class', component: ProductComponent,
+    resolve: { packagedata: TestresolveService },
+    data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+  },
+  {
+    path: 'products', component: ProductComponent,
+    resolve: { packagedata: TestresolveService },
+    data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+  },
+
+  { path: 'mentorsignup', component: MentorsignupComponent },
+  {
+    path: 'mentorsignup/:_id', component: MentorsignupComponent,
+    resolve: { Data: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  },
+
+  { path: 'landingpage', component: LandingpageComponent },
+  {
+    path: 'landingpage/:_id', component: LandingpageComponent,
+    resolve: { Data: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  },
+  { path: 'affiliatesignup', component: AffiliatesignupComponent },
+  {
+    path: 'affiliatesignup/:_id', component: AffiliatesignupComponent,
+    resolve: { Data: TestresolveService },
+    data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
+  },
+
+
+
+  // {path:'contact', component: ContactComponent}, 
 ];
 
 @NgModule({
