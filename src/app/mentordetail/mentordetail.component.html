@@ -42,7 +42,7 @@ start working together!  </label>
                         <br/>
                        <span> Mob: {{mentordetail.phone != null ? mentordetail.phone : 'N/A'}}  </span></h4>
 
-                        <h5>{{mentordetail.about_me != null ? mentordetail.about_me : 'N/A'}} </h5>
+                        <span *ngIf="mentordetail.about_me != null && mentordetail.about_me != ''" [innerHtml]="mentordetail.about_me"></span>
 
                         <h6>Mentor Since : {{mentordetail.createdon_datetime != null ? (mentordetail.createdon_datetime | date:'medium') : 'N/A'}} </h6>
                 </span>
@@ -67,42 +67,14 @@ start working together!  </label>
                     <!-- !!!!*image  upload size height='560px' width='315px' (16:9 ratio)* -->
  
                         <span class="MDgaller_imagewrapper">
-                            <span class="MDgaller_imagecon">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/8qkgcCBOQM4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                 <span class="MDgaller_detail">
-                                   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                 </span>
+                            <span class="MDgaller_imagecon" *ngIf="mentordetail.youtube_links != null && mentordetail.youtube_links != ''">
+                                <iframe width="560" height="315"  [src]='mentordetail.youtube_links' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </span>
                         </span>
-                        <span class="MDgaller_imagewrapper">
-                            <span class="MDgaller_imagecon"><img src="../../assets/images/Mentor_DetaiIMG3.jpg">
-                                <span class="MDgaller_detail">
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                 </span>
-                            </span>
-                        </span>
-                        <span class="MDgaller_imagewrapper">
-                            <span class="MDgaller_imagecon"><img src="../../assets/images/Mentor_DetaiIMG4.jpg">
-                                <span class="MDgaller_detail">
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                 </span>
-                            
-                            </span>
-                        </span>
-                        <span class="MDgaller_imagewrapper">
-                            <span class="MDgaller_imagecon"><img src="../../assets/images/Mentor_DetaiIMG5.jpg">
-                                <span class="MDgaller_detail">
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                 </span>
-                            
-                            </span>
-                        </span>
-                        <span class="MDgaller_imagewrapper">
-                            <span class="MDgaller_imagecon"><img src="../../assets/images/Mentor_DetaiIMG6.jpg">
-                            
-                                <span class="MDgaller_detail">
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                 </span>
+                        <span *ngIf="mentordetail.gallery_image_array != null && mentordetail.gallery_image_array != ''">
+                            <span class="MDgaller_imagewrapper"*ngFor="let item of mentordetail.gallery_image_array">
+                                <span class="MDgaller_imagecon"><img  [src]='safeurl(item)'>
+                                </span>
                             </span>
                         </span>
 
