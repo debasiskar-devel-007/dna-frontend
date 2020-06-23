@@ -25,8 +25,6 @@ export class MentordetailComponent implements OnInit {
     this.activatedRoute.data.forEach((res: any) => {
       this.mentordetail = res.mentordetail.results.res[0];
 
-
-
       // this.meta.setTitle(this.blogDetailstData.blogtitle);
 
       this.meta.setTag('og:description', 'Please review our programs with the DNA Master Course.com and choose a package to get started so we can start working together!');
