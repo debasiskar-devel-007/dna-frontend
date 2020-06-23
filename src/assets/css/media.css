@@ -79,6 +79,8 @@
 @media screen and (max-width:1750px){.newmentorsignup_form{top:50px;}
 }
 @media screen and (max-width:1740px){.s-formsection .button:first-of-type{height:90px!important;}
+
+.SB_topformwrapper .form {   min-height: 500px;  }
 .s-Matercontent .s-mastersec-left{width:760px;}
 .s-Matercontent .s-mastersec-right{width:580px;}
 .affiliate-signup_banner{background-position:-180px top;}
@@ -1019,6 +1021,10 @@
 .home_new_imgblock3{padding:0 20px 30px 20px!important;background-size:44%!important;margin-top:25px;}
 }
 @media screen and (max-width:1199px){.package3{padding:0px!important;}
+
+.SB_topformwrapper .form{ min-height: inherit!important;}
+
+.top_body_right{ margin-top: 30px!important;}
 .newaffiliatesignup_formbody .mat-error {
     color: #b11313;
     font-size: 14px;
@@ -2654,6 +2660,8 @@ a.home_banner_btn{width:100%;font-size:16px;}
 .MDetailadminDB_block1_con{ background-position: 730px top;}
 }
 @media screen and (max-width: 1199px) { .MDetailadminDB_block1{ width: 90%;}
+
+.SB_topformwrapper  button:nth-of-type(1){ width: 250px;}
 .MDetailadminDB_block1_con{ background-position: 560px top}
 .MDetailadminDB_block1_con_text{ width: 650px;}
 .mentordetail_block1{ display: block;}
@@ -2683,4 +2691,11 @@ a.home_banner_btn{width:100%;font-size:16px;}
 
  
 
+
+@media screen and (max-width:380px){
+
+    .SB_topformwrapper  button:nth-of-type(1)  {
+        width: 238px;
+    }
+}
  

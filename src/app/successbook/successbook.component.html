@@ -68,9 +68,9 @@
                     <div class="form_step">
 
                         <div class="ster1"> <span class="activestep"> <span class="linespan"> </span>  </span> </div>
-                        <div class="ster2"> <span > <span class="linespan"></span> </span> </div>
-                        <div class="ster3"> <span> <span class="linespan"></span> </span> </div>
-                        <div class="ster4"> <span> <span class="linespan"></span> </span> </div>
+                        <div class="ster2"> <span [class.activestep]="active1 === true"> <span class="linespan"></span> </span> </div>
+                        <div class="ster3"> <span [class.activestep]="active2 === true"> <span class="linespan"></span> </span> </div>
+                        <div class="ster4"> <span [class.activestep]="active3 === true"> <span class="linespan"></span> </span> </div>
 
                     </div>
 
@@ -124,7 +124,7 @@
                       >
                        </lib-showform>
                      </ng-container>
-                      <!-- <button class="nextbtn" (click)="AddONModal();"><span>next</span></button> -->
+                      <!-- <button class="nextbtn" (click)="AddONModal();"><span>next</span></button>  -->
 
                     </div>
 

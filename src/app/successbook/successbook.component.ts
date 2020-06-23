@@ -2,9 +2,12 @@ import { Component, OnInit,Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { ApiService } from '../api.service';
 import { ActivatedRoute,Router } from '@angular/router';
+import {environment} from '../../environments/environment';
+
+
+
 export interface DialogData {
-  animal: string;
-  name: string;
+ allData:any;
 }
 
 @Component({
@@ -13,11 +16,13 @@ export interface DialogData {
   styleUrls: ['./successbook.component.css']
 })
 export class SuccessbookComponent implements OnInit {
-  public productDetails:any=[];
+  public productDetails:any={};
   public saletax:any;
   public statesjson:any=[];
   public parentid:any;
   public shareUser:any;
+  formarray: any = [];
+
   // form start here
   public accountDetails:any=[];
 public formfieldrefreshdata:any;
@@ -28,6 +33,9 @@ public form1:boolean=true;
 public form2:boolean=false;
 public form3:boolean=false;
 public form4:boolean=false;
+public active1:boolean=false;
+public active2:boolean=false;
+public active3:boolean=false;
 public form1Value:any;
 public form2Value:any;
 public form3Value:any;
@@ -95,7 +103,7 @@ formdata: any = {
       label: 'New Password',
       name: 'password',
       type: 'password',
-      hint: '******',
+      //hint: '******',
      // value: response.result[0].password,
 
       validations: [
@@ -107,12 +115,18 @@ formdata: any = {
       label: 'Confirm Password',
       name: 'confirmpassword',
       type: 'password',
-      hint: '******',
+     // hint: '******',
       validations: [
         { rule: 'required', message: 'Your provided Password must contain at-least one Uppercase letter, one Lower case letter, and one Number' },
         // { rule: 'match', message: 'Confirm Password field Needs to  match Password' },
         { rule: 'pattern', value: this.passwordregex, message: 'Must contain a Capital Letter and a Number' }
       ]
+    },
+    {
+      label: 'productdetails',
+      name: 'productDetails',
+      type: 'hidden',
+      value:this.productDetails
     }
 
   ]
@@ -152,6 +166,15 @@ formdata1: any = {
       ]
     },
     {
+      label: "address",
+      name: "address",
+      type: "text",
+      value:'',
+      validations: [
+        { rule: 'required', message: "Select Your State" },
+      ] 
+    },
+    {
       //heading:"",
       label: "State",
       name: "state",
@@ -182,13 +205,7 @@ formdata1: any = {
         { rule: 'required', message: 'Zip is required' }
       ],
     },
-    {
-      //heading:"",
-      label: "Use My Billing Address As Shipping Address",
-      name: "sameaddress",
-      type: 'checkbox',
-      value: '',
-    }
+    
 
   ]
 };
@@ -199,17 +216,18 @@ formdata2: any = {
   redirectpath: '',
   submitactive: true, // optional, default true
   submittext: 'Next',
-  // resettext: 'Reset',
-  // canceltext: 'Cancel',
-  // apiUrl: this._apiService.api_url,
-  // endpoint: 'api1/test',
   jwttoken: '',
-  // cancelroute: '/manage-banner',
-
   fields: [
     {
+      //heading:"",
+      label: "Use My Billing Address As Shipping Address",
+      name: "sameaddress",
+      type: 'checkbox',
+      value: '',
+    },
+    {
       label: 'First Name',
-      name: 'firstname',
+      name: 'shipping_firstname',
       value: '',
       type: 'text',
       validations: [
@@ -219,7 +237,7 @@ formdata2: any = {
     },
     {
       label: 'Last Name',
-      name: 'lastname',
+      name: 'shipping_lastname',
       value: '',
       type: 'text',
       validations: [
@@ -228,9 +246,18 @@ formdata2: any = {
       ]
     },
     {
+      label: "address",
+      name: "shipping_address",
+      type: "text",
+      value:'',
+      validations: [
+        { rule: 'required', message: "Select Your State" },
+      ] 
+    },
+    {
       //heading:"",
       label: "State",
-      name: "state",
+      name: "shipping_state",
       type: "select",
       val:this.statesjson,
       value:'',
@@ -240,7 +267,7 @@ formdata2: any = {
     },
     {
       label: 'City',
-      name: 'city',
+      name: 'shipping_city',
       hint: '',
       type: 'text',
       val: '',
@@ -250,7 +277,7 @@ formdata2: any = {
     },
     {
       label: 'Zip',
-      name: 'zip',
+      name: 'shipping_zip',
       hint: '',
       type: 'number',
       val: '',
@@ -267,12 +294,7 @@ formdata3: any = {
   redirectpath: '',
   submitactive: true, // optional, default true
   submittext: 'Next',
-  // resettext: 'Reset',
-  // canceltext: 'Cancel',
-  // apiUrl: this._apiService.api_url,
-  // endpoint: 'api1/test',
   jwttoken: '',
-  // cancelroute: '/manage-banner',
 
   fields: [
     {
@@ -360,7 +382,7 @@ formdata3: any = {
   ]
 };
   constructor(public dialog: MatDialog,public _apiService: ApiService,public ActivatedRoute:ActivatedRoute ) { 
-    this.productDetails.name = 'mentee Package for $149"';
+    this.productDetails.name = 'mentee Package';
     this.productDetails.price = 0;
     this.productDetails.delivery = 6.95;
     this.saletax = this.productDetails.price / 100 * 6;
@@ -391,6 +413,49 @@ formdata3: any = {
   }
 
   ngOnInit() {
+    setTimeout(() => {
+      // console.log(this.shareUser)
+      if (this.shareUser != null && this.shareUser != '') {
+        this.formfieldrefreshdata = {
+          field: 'addfromcontrol',
+          value: {
+            label: 'parenttype',
+            name: 'parenttype',
+            type: 'hidden',
+            after: 'status',
+            value: this.shareUser.type
+          }
+        };
+
+        //affiliate
+        if (this.shareUser.type == 'affiliate') {
+          this.formfieldrefreshdata = {
+            field: 'addfromcontrol',
+            value: {
+              label: 'affiliate_id',
+              name: 'affiliate_id',
+              type: 'hidden',
+              after: 'email',
+              value: this.shareUser._id
+            }
+          };
+        }
+        //mentor
+        if (this.shareUser.type == 'mentor') {
+          this.formfieldrefreshdata = {
+            field: 'addfromcontrol',
+            value: {
+              label: 'parentid',
+              name: 'parentid',
+              type: 'hidden',
+              after: 'email',
+              value: this.shareUser._id
+            }
+          };
+        }
+      }
+
+    }, 3000);
   }
   goToHome(){} 
 
@@ -411,7 +476,7 @@ formdata3: any = {
       
      // width: '250px',
      panelClass: ['footermodal'],
-     
+         
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -435,12 +500,13 @@ formdata3: any = {
     });
   }
 
-  AddONModal(){
+  AddONModal(val:any){
     // window.scrollTo(0, 0);
     
     const dialogRef = this.dialog.open(AddON, {
       // width: '250px',
       panelClass: ['AddONWrapper'],
+      data:val
      
     });
 
@@ -452,6 +518,7 @@ formdata3: any = {
 
   listenFormFieldChange(val: any) {
     if (val.field == 'fromsubmit') {
+      this.active1=true;
       this.form1=false;
       this.form2=true;
       this.form1Value = val.fromval;
@@ -461,6 +528,7 @@ formdata3: any = {
   }
   listenFormFieldChange1(val: any) {
     if (val.field == 'fromsubmit') {
+      this.active2=true;
       this.form1=false;
       this.form2=false;
       this.form3=true;
@@ -470,7 +538,37 @@ formdata3: any = {
     }
   }
   listenFormFieldChange2(val: any) {
+    if (val.field.name != 'card_type' && val.field.name != 'card_cc' && val.field.name != 'expyear' && val.field.name != 'card_cvv' && val.field.name != 'expmonth') {
+      
+      this.formarray.push({ val:this.menteeSignupData[1].firstname, name:'firstname'},
+      {val:this.menteeSignupData[1].lastname,name:'lastname'},
+      {val:this.menteeSignupData[1].address,name:'address'},
+      {val:this.menteeSignupData[1].city,name:'city'},
+      {val:this.menteeSignupData[1].state,name:'state'},
+      {val:this.menteeSignupData[1].zip,name:'zip'},
+      
+)
+      console.log(this.formarray,'+++++');
+      if (val.field.name == 'sameaddress' && val.fieldval == true) {
+        for (let i = 0; i < this.formarray.length; i++) {
+          setTimeout(() => {
+            this.formfieldrefreshdata =
+              { field: 'shipping_' + this.formarray[i].name, value: this.formarray[i].val, disabled: true };
+          }, 50 * (i + 1));
+        }
+      }
+      if (val.field.name == 'sameaddress' && val.fieldval == false) {
+        for (let i = 0; i < this.formarray.length; i++) {
+          setTimeout(() => {
+            this.formfieldrefreshdata =
+              { field: 'shipping_' + this.formarray[i].name, value: '', disabled: true };
+          }, 50 * (i + 1));
+        }
+      }
+
+    }
     if (val.field == 'fromsubmit') {
+      this.active3=true;
       this.form1=false;
       this.form2=false;
       this.form3=false;
@@ -488,7 +586,40 @@ formdata3: any = {
       this.form4=false;
       this.form4Value = val.fromval;
       this.menteeSignupData.push(this.form4Value);
-      console.log("submitted data",this.menteeSignupData);
+      // console.log("submitted data",this.menteeSignupData);
+      let data:any={
+        "productDetails":this.menteeSignupData[0].productDetails,
+        "firstname":this.menteeSignupData[0].firstname,
+        "lastname": this.menteeSignupData[0].lastname,
+        "address": this.menteeSignupData[1].address,
+        "city": this.menteeSignupData[1].city,
+        "state": this.menteeSignupData[1].state,
+        "zip": this.menteeSignupData[1].zip,
+        "phone": this.menteeSignupData[0].phoneno,
+        "email":this.menteeSignupData[0].email,
+        "password":this.menteeSignupData[0].password,
+        "confirmpassword":this.menteeSignupData[0].confirmpassword,
+
+        "shipping_firstname": this.menteeSignupData[2].shipping_firstname,
+        "shipping_lastname": this.menteeSignupData[2].shipping_lastname,
+        "shipping_address":this.menteeSignupData[2].shipping_address ,
+        "shipping_city":this.menteeSignupData[2].shipping_city,
+        "shipping_state":this.menteeSignupData[2].shipping_state ,
+        "shipping_zip": this.menteeSignupData[2].shipping_zip,
+
+        "card_type": this.menteeSignupData[3].card_type,
+        "card_cc":  this.menteeSignupData[3].cc,
+        "expmonth": this.menteeSignupData[3].expmonth,
+        "expyear": this.menteeSignupData[3].expyear,
+        "card_cvv":this.menteeSignupData[3].cvv,
+        "status": this.menteeSignupData[3].status,
+        "order_status": this.menteeSignupData[3].order_status,
+        "transactiontype":this.menteeSignupData[3].transactiontype,
+        "parentid":this.menteeSignupData[0].parentid,
+        "affiliate_id":this.menteeSignupData[0].affiliate_id
+      }
+      
+      this.AddONModal(data);
     }
   }
 }
@@ -503,7 +634,9 @@ export class TermsandConditionSB {
 
   constructor(
     public dialogRef: MatDialogRef<TermsandConditionSB>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {
+     
+    }
   onNoClick(): void {
     this.dialogRef.close();
   }
@@ -533,11 +666,34 @@ export class PrivacyPolicySB {
   templateUrl: 'Add-On.html',
 })
 export class  AddON {
-
+public value:any=null;
+public dat:any=[];
   constructor(
     public dialogRef: MatDialogRef<AddON>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,public apiService: ApiService, public router: Router) {
+      // console.log('modalData',data)
+      this.dat=data;
+    }
+    continue(){
+      if(this.value!=null){
+        this.dat.productDetails.usertype=this.value
+      }
 
+      // console.log('value',this.value);
+      //console.log('dat',this.dat)
+      let cartdata:any ={
+        "data":this.dat
+      }
+      // console.warn(cartdata);
+      this.apiService.customRequest1(cartdata, 'api/order', environment['api_url']).subscribe((res: any) => {
+        console.warn(res);
+        if (res.status == 'success') {
+          this.router.navigateByUrl('success/' + res.message._id);
+        }
+    
+      });
+     this.dialogRef.close();
+    }
   onNoClick(): void {
     this.dialogRef.close();
   }

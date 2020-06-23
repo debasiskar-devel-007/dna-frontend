@@ -1327,7 +1327,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .SB_topformwrapper .mat-form-field-appearance-fill .mat-form-field-flex{border-radius:0;padding:0;}
 .SB_topformwrapper .mat-form-field-appearance-fill .mat-form-field-flex{background-color:#fff;}
 .SB_topformwrapper .mat-form-field{display:block;position:relative;text-align:left;}
-.SB_topformwrapper .mat-form-field-wrapper{padding-bottom:0;margin:0 0 14px 0;}
+.SB_topformwrapper .mat-form-field-wrapper{padding-bottom:0!important;margin:0;}
 .SB_topformwrapper .mat-form-field-appearance-fill .mat-form-field-infix{padding:10px 5px;border:solid 1px #848586;}
 .SB_topformwrapper .mat-form-field-underline{display:none;}
 .SB_topformwrapper .mat-form-field-appearance-fill.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label{display:none;}
@@ -1455,7 +1455,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .SB_body2{background:#e8f6f1;}
 .SB_body2_con{background:url(../../assets/images/SB_innerbg.png) no-repeat right top;overflow:hidden;background-size:35%;}
 .SB_body2_con_sub{background:url(../../assets/images/SB_innerbg2.png) no-repeat left top;background-size:24%;}
-.SB_body2_wrapper{width:1300px;margin:30px auto;margin-bottom:0px;background:url(../../assets/images/successbook_block2bg.png) no-repeat center bottom;padding-bottom:30px;}
+.SB_body2_wrapper{width:1300px;margin:30px auto;margin-bottom:0px;background:url(../../assets/images/successbook_block2bg.png) no-repeat center bottom;padding-bottom:30px;  }
 .SB_body2_wrapper h1{margin:0;padding:0 0 6px 0;text-align:center;font-size:28px;color:#3a3a3b;font-family:'OpenSans-Bold';}
 .SB_body2_wrapper h1 span{color:#fe6004;}
 .SB_body2_con_box{background:#105d7b;border:solid 3px #ecf9f4;border-radius:10px;box-shadow:0 0 2px #888;margin:12px 0 0 0;padding:26px;}
@@ -1743,3 +1743,58 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
             .mentorsignup_popup_main{ display: block;}
 
             .mentorsignup_popup_main{ display: block; height: 80vh; overflow-y: scroll;     overflow-x: hidden;}  
+
+
+            .SB_topformwrapper .mat-form-field-flex input{     display: block;
+                background: #fff;
+                padding: 10px 2%;
+                width: 96%;
+                border: solid 1px #2473a5;}
+
+                .SB_topformwrapper .mat-form-field-flex mat-select{     display: block;
+                    background: #fff;
+                    padding: 10px 2%;
+                    width: 96%;
+                    border: solid 1px #2473a5;}
+
+
+                .SB_topformwrapper  .form  { margin-top: 26px;     min-height: 450px; position: relative;}    
+
+
+                .SB_topformwrapper .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{display:none!important;}   
+
+
+                .SB_topformwrapper .mat-form-field-appearance-legacy .mat-form-field-label {
+                    top: 29px;
+                    left: 2%;
+                }
+
+                .SB_topformwrapper  button{ display: none; margin-top: 12px;}
+
+                .SB_topformwrapper  button:nth-of-type(1) {background: rgba(68,69,70,1);
+                    background: -moz-linear-gradient(top, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
+                    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(68,69,70,1)), color-stop(50%, rgba(39,39,40,1)), color-stop(51%, rgba(0,0,0,1)), color-stop(100%, rgba(11,11,11,1)));
+                    background: -webkit-linear-gradient(top, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
+                    background: -o-linear-gradient(top, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
+                    background: -ms-linear-gradient(top, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
+                    background: linear-gradient(to bottom, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444546', endColorstr='#0b0b0b', GradientType=0 ); display: block; width: 100%; 
+                    border: solid 6px #6e6e6f; border-radius: 8px; font-family: 'robotoblack'; color: #fff; text-transform: uppercase; padding: 5px 0;   box-shadow: none; font-size: 32px;
+                 outline: none; cursor: pointer; position: relative;
+                }
+        
+                /* .SB_topformwrapper  button{background: -webkit-linear-gradient(#ffffff, #c3c3c1);  -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;} */
+         
+                    .SB_topformwrapper  button::before{ content: ''; background: url(../../assets/images/successbook_form_bg.png) no-repeat right top; width: 58px; height: 57px; position: absolute; right: -4px;
+                        top: 0;}
+
+
+                        .SB_topformwrapper  .mat-error {
+                            color: #881d1d;
+                        }
+
+
+                        .SB_topformwrapper  .form_field_sameaddress {
+                            margin: 20px 0;
+                        }
