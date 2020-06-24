@@ -11,7 +11,6 @@ export class NewsuccessgeneticsComponent implements OnInit {
   constructor(
     public meta: MetaService
     ) { 
-      // window.scrollTo(500, 0); 
   
     this.meta.setTitle('DNA Of Success - Success Genetics');
 
@@ -24,8 +23,8 @@ export class NewsuccessgeneticsComponent implements OnInit {
     this.meta.setTag('og:title', 'DNA Of Success - Success Genetics');
     this.meta.setTag('twitter:title', 'DNA Of Success - Success Genetics');
     this.meta.setTag('og:type', 'website');
-    this.meta.setTag('og:url','https://www.dnamastercourse.com/');
-      this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
+    this.meta.setTag('og:url','https://dna.influxiq.com/pages/successgenetics');
+      this.meta.setTag('og:image', 'https://dna.influxiq.com/assets/images/default_image.jpg');
   }
 
   ngOnInit() {

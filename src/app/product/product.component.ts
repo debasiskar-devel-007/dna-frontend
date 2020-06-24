@@ -41,10 +41,9 @@ export class ProductComponent implements OnInit {
   public banner_image: any;
 
 
-  constructor(public CookieService:CookieService,public _apiService: ApiService, public ActivatedRoute: ActivatedRoute,
+  constructor(public CookieService: CookieService, public _apiService: ApiService, public ActivatedRoute: ActivatedRoute,
     public meta: MetaService, public router: Router) {
     this.meta.setTitle('DNA Of Success - Our Products ');
-
     this.meta.setTag('og:description', 'Products and packages that help to obtain Jack Zufelt’s incredible program to success and professional mentorship guidance towards achieving your dreams and the Core desires of your heart.');
     this.meta.setTag('twitter:description', 'Products and packages that help to obtain Jack Zufelt’s incredible program to success and professional mentorship guidance towards achieving your dreams and the Core desires of your heart.');
 
@@ -55,9 +54,9 @@ export class ProductComponent implements OnInit {
     this.meta.setTag('twitter:title', 'DNA Of Success - Our Products');
 
     if (this.router.url == '/pages/products' || this.ActivatedRoute.snapshot.routeConfig.path == 'products/:class') {
-      this.meta.setTag('og:image', '../../assets/images/default_image.jpg');
-      this.meta.setTag('og:url', 'https://dna.influxiq.com/');
-      this.meta.setTag('twitter:url', 'https://dna.influxiq.com/');
+      this.meta.setTag('og:image', 'https://dna.influxiq.com/assets/images/default_image.jpg');
+      this.meta.setTag('og:url', 'https://dna.influxiq.com/pages/products');
+      this.meta.setTag('twitter:url', 'https://dna.influxiq.com/pages/products');
 
 
     }
@@ -89,8 +88,8 @@ export class ProductComponent implements OnInit {
         this.meta.setTag('twitter:image', this.banner_image);
         this.meta.setTag('og:url', 'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
         this.meta.setTag('twitter:url', 'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
-        console.log(resolveData.packagedata.results.package)
-        console.log(resolveData)
+        // console.log(resolveData.packagedata.results.package)
+        // console.log(resolveData)
       });
     } else {
       let data: any = {
@@ -109,16 +108,16 @@ export class ProductComponent implements OnInit {
         this.allPackage = resolveData.packagedata.results.package;
         this.acctoken = resolveData.packagedata.results.token.access_token;
         // console.log(this.acctoken);
-         console.log(resolveData.packagedata) 
+        //  console.log(resolveData.packagedata) 
       });
     }
     let uid = this.CookieService.get('shareid');
-    if(uid!=null && uid!=undefined && uid!='' && this.ActivatedRoute.snapshot.params.class==null){
+    if (uid != null && uid != undefined && uid != '' && this.ActivatedRoute.snapshot.params.class == null) {
       let data: any = {
         "id": this.CookieService.get('shareid')
       }
       this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-        console.warn(res)
+        // console.warn(res)
         this.parentdetails = res.result[0];
       })
     }
@@ -128,55 +127,55 @@ export class ProductComponent implements OnInit {
     //for learn product button in home page
     if (this.ActivatedRoute.snapshot.url[0].path == 'products-list') {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
-        if(resolveData.packagedata.status=='success'){
+        if (resolveData.packagedata.status == 'success') {
           this.allPackage = resolveData.packagedata.results.package;
           this.acctoken = resolveData.packagedata.results.token.access_token;
           // console.log(this.acctoken);
           //  console.warn('learn product',resolveData.packagedata) 
-          setTimeout(()=>{    
+          setTimeout(() => {
             document.querySelector('.package' + this.ActivatedRoute.snapshot.params.id).scrollIntoView({ behavior: 'smooth', });
-       }, 1000);
-          
-          
+          }, 1000);
+
+
         }
-        
+
       });
-     
+
 
     }
     if (this.ActivatedRoute.snapshot.params.class != null && this.ActivatedRoute.snapshot.params.class != undefined) {
-      this.CookieService.set('shareid',this.ActivatedRoute.snapshot.params.class);
+      this.CookieService.set('shareid', this.ActivatedRoute.snapshot.params.class);
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
         this.acctoken = resolveData.packagedata.results.token.access_token;
         // console.log(this.acctoken);
-         //console.log(resolveData.packagedata) 
+        //console.log(resolveData.packagedata) 
       });
-    //   let data: any = {
-    //   //     this.selectedProduct.good = 1;
-    //   //   }else if(this.ActivatedRoute.snapshot.params.class==2){
-    //   //     this.chooseProduct('','better');
-    //   //     this.selectedProduct.better = 1;
-    //   //   }else if(this.ActivatedRoute.snapshot.params.class==3){
-    //   //     this.chooseProduct('','best');
-    //   //     this.selectedProduct.best = 1;
-    //   //   }else if(this.ActivatedRoute.snapshot.params.class==4){
-    //   //     this.chooseProduct('','mentor');
-    //   //     this.selectedProduct.mentor = 1;
-    //   // }
-    // }       //     this.chooseProduct('','good');
-    //   //     this.selectedProduct.good = 1;
-    //   //   }else if(this.ActivatedRoute.snapshot.params.class==2){
-    //   //     this.chooseProduct('','better');
-    //   //     this.selectedProduct.better = 1;
-    //   //   }else if(this.ActivatedRoute.snapshot.params.class==3){
-    //   //     this.chooseProduct('','best');
-    //   //     this.selectedProduct.best = 1;
-    //   //   }else if(this.ActivatedRoute.snapshot.params.class==4){
-    //   //     this.chooseProduct('','mentor');
-    //   //     this.selectedProduct.mentor = 1;
-    //   // }
-    } 
+      //   let data: any = {
+      //   //     this.selectedProduct.good = 1;
+      //   //   }else if(this.ActivatedRoute.snapshot.params.class==2){
+      //   //     this.chooseProduct('','better');
+      //   //     this.selectedProduct.better = 1;
+      //   //   }else if(this.ActivatedRoute.snapshot.params.class==3){
+      //   //     this.chooseProduct('','best');
+      //   //     this.selectedProduct.best = 1;
+      //   //   }else if(this.ActivatedRoute.snapshot.params.class==4){
+      //   //     this.chooseProduct('','mentor');
+      //   //     this.selectedProduct.mentor = 1;
+      //   // }
+      // }       //     this.chooseProduct('','good');
+      //   //     this.selectedProduct.good = 1;
+      //   //   }else if(this.ActivatedRoute.snapshot.params.class==2){
+      //   //     this.chooseProduct('','better');
+      //   //     this.selectedProduct.better = 1;
+      //   //   }else if(this.ActivatedRoute.snapshot.params.class==3){
+      //   //     this.chooseProduct('','best');
+      //   //     this.selectedProduct.best = 1;
+      //   //   }else if(this.ActivatedRoute.snapshot.params.class==4){
+      //   //     this.chooseProduct('','mentor');
+      //   //     this.selectedProduct.mentor = 1;
+      //   // }
+    }
     // else {
     //   let data: any = {
     //     "id": this.ActivatedRoute.snapshot.params.class
@@ -543,7 +542,7 @@ export class ProductComponent implements OnInit {
     // console.log(i);
     this.index = i;
     this.allPackage[i].flag = item._id;
-    // console.log(item);
+  
     this.productDetails.name = item.productname;
     this.productDetails.price = item.price;
     this.productDetails.delivery = 6.95;
@@ -556,7 +555,8 @@ export class ProductComponent implements OnInit {
     this.total = this.productDetails.total;
     this.productDetails.usertype = item.role.toLowerCase();
     this.productDetails.webinarid = item.webinar;
-    console.warn(this.productDetails);
+    this.productDetails.webinar_credit=item.webinar_credit;
+    // console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {
     //// console.log(val);
