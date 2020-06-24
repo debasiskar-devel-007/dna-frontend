@@ -45,74 +45,6 @@ export class ContactComponent implements OnInit {
 
     this._apiService.getclientip().subscribe((res: any) => {
       // console.log(res);
-<<<<<<< HEAD
-      this.ip = res.ip;
-      // console.log(this.ip)
-
-
-      this.formdata = {
-        successmessage: "Added Successfully !!",
-        redirectpath: "",
-        submittext: "Submit",
-        // canceltext:"Cancel Now",
-        //resettext:"Reset This",
-        submitactive: true, //optional, default true
-        apiUrl: this._apiService.api_url,
-        endpoint: 'api/contactus',  //change endpoint
-        jwttoken: this._apiService.jwtToken,
-
-        fields: [
-          {
-            heading: "Name",
-            label: " ",
-            name: "name",
-            value: '',
-            type: "text",
-            validations: [
-              { rule: 'required', message: 'Name field is required' },
-              { rule: 'maxLength', value: 10 },
-              { rule: 'minLength', value: 2 }
-            ],
-
-          },
-
-          {
-            heading: "Email",
-            label: "",
-            name: "email",
-            type: 'email',
-            //hint: "abc@gmail.com",
-            validations: [
-              { rule: 'required', message: "Email field is required" },
-              { rule: 'pattern', value: this.emailregex, message: "Must be a valid Email" }]
-          },
-          {
-            heading: "Phone",
-            label: "",
-            name: "phone",
-            type: 'text',
-            hint: '',
-            validations: [
-              { rule: 'required', message: "Phone field is required" }
-
-            ]
-          },
-          {
-            heading: "Message",
-            label: "",
-            name: "message",
-            value: '',
-            type: "textarea",
-            validations: [
-              { rule: 'required', message: 'Message field is required' },
-            ]
-          },
-          {
-            label: "ip",
-            name: "ip",
-            type: 'hidden',
-            value: this.ip
-=======
         this.ip=res.ip;
         // console.log(this.ip)
 
@@ -179,7 +111,6 @@ export class ContactComponent implements OnInit {
               name:"ip",
               type:'hidden',
               value:this.ip
->>>>>>> a695165c776482ce12b567266a0aa57cf6667bcd
           }
 
 

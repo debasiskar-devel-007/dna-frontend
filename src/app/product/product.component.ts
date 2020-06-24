@@ -86,17 +86,10 @@ export class ProductComponent implements OnInit {
 
         this.meta.setTag('og:image', this.banner_image);
         this.meta.setTag('twitter:image', this.banner_image);
-<<<<<<< HEAD
-        this.meta.setTag('og:url', 'https://dna.influxiq.com/landingpage/' + this.ActivatedRoute.snapshot.params.class + '/' + this.ActivatedRoute.snapshot.params._id);
-        this.meta.setTag('twitter:url', 'https://dna.influxiq.com/landingpage/' + this.ActivatedRoute.snapshot.params.class + '/' + this.ActivatedRoute.snapshot.params._id);
-        console.log(resolveData.packagedata.results.package)
-        console.log(resolveData)
-=======
         this.meta.setTag('og:url', 'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
         this.meta.setTag('twitter:url', 'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
         // console.log(resolveData.packagedata.results.package)
         // console.log(resolveData)
->>>>>>> a695165c776482ce12b567266a0aa57cf6667bcd
       });
     } else {
       let data: any = {
@@ -115,11 +108,7 @@ export class ProductComponent implements OnInit {
         this.allPackage = resolveData.packagedata.results.package;
         this.acctoken = resolveData.packagedata.results.token.access_token;
         // console.log(this.acctoken);
-<<<<<<< HEAD
-        console.log(resolveData.packagedata)
-=======
         //  console.log(resolveData.packagedata) 
->>>>>>> a695165c776482ce12b567266a0aa57cf6667bcd
       });
     }
     let uid = this.CookieService.get('shareid');
