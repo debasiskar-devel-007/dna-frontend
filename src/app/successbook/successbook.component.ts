@@ -149,7 +149,7 @@ export class SuccessbookComponent implements OnInit {
       {
         label: 'First Name',
         name: 'firstname',
-        value:'ss',
+        value:'',
         type: 'text',
         validations: [
           { rule: 'required', message: 'First Name is required' },
