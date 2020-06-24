@@ -1332,7 +1332,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .SB_topformwrapper .mat-form-field-underline{display:none;}
 .SB_topformwrapper .mat-form-field-appearance-fill.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label{display:none;}
 .SB_topformwrapper .mat-form-field-appearance-fill.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{display:none;}
-.SB_topformwrapper .mat-form-field-infix{border:none;}
+.SB_topformwrapper .mat-form-field-infix{border:none;     margin: 2px 15px;}
 .SB_topformwrapper .mat-form-field-can-float .mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-label-wrapper .mat-form-field-label{display:none;}
 .SB_topformwrapper .mat-form-field-appearance-fill .mat-form-field-label{top:0;margin-top:0;padding:24px 5px 0 5px;color:#292929;font-size:14px;}
 .AddONWrapper{width:1200px!important;max-width:inherit!important;}
@@ -1448,10 +1448,13 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .block4 .newshop_img img{width:100%;}
 .block4 .con_BTN_DIV{width:190px;background:rgba(47,62,71,1);background:-moz-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);background:-webkit-gradient(left top, left bottom, color-stop(0%, rgba(47,62,71,1)), color-stop(100%, rgba(30,34,37,1)));background:-webkit-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);background:-o-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);background:-ms-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);background:linear-gradient(to bottom, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f3e47', endColorstr='#1e2225', GradientType=0);font-size:24px;color:#ffffff;text-transform:uppercase;font-family:'OpenSans-Bold';border-radius:4px;position:absolute;bottom:20px;right:307px;z-index:99;}
 .block_main_CON:last-of-type{margin-bottom:40px;}
-.successbook_top_bookimg{display:block;width:670px;margin:20px 0 0 240px;z-index:4;position:relative;}
+.successbook_top_bookimg{display:block;width:670px;margin:0px 0 0 240px;z-index:4;position:relative;}
 .successbook_top_img1{display:block;position:absolute;left:20px;top:140px;z-index:5;width:364px;}
-.successbook_top_guarantee_img{position:absolute;top:100px;left:614px;z-index:5;}
-.SB_topformwrapper{display:block;padding:14px 25px;margin-top:10px;}
+.successbook_top_guarantee_img{position:absolute;top:66px;left:614px;z-index:5;}
+.SB_topformwrapper{    display: block;
+    padding: 14px 15px;
+    margin-top: 0;
+    padding-top: 3px;  }
 .SB_body2{background:#e8f6f1;}
 .SB_body2_con{background:url(../../assets/images/SB_innerbg.png) no-repeat right top;overflow:hidden;background-size:35%;}
 .SB_body2_con_sub{background:url(../../assets/images/SB_innerbg2.png) no-repeat left top;background-size:24%;}
@@ -1478,8 +1481,8 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .SB_body3_heading_con{background:url(../../assets/images/SB_block2_textBG.png) no-repeat center 61px;background-size:100%;padding:15px;text-align:center;}
 .SB_body3_heading_con label{display:block;position:relative;}
 .SB_body3_heading_con label span{text-align:center;font-family:'robotoblack';font-size:44px;line-height:46px;text-transform:uppercase;display:block;background:-webkit-linear-gradient(#ffffff, #e4e4e4, #ffffff, #cfcccd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-/* .SB_body3_heading_con label:nth-of-type(1)::before{text-align:center;font-family:'robotoblack';font-size:44px;width:100%;height:30px;display:block;content:'The â€œDNA Of Successâ€ 2ND Edition by Jack  M. Zufelt';z-index:9;position:absolute;left:0;top:-7px;color:#fff;text-transform:uppercase;overflow:hidden;background:-webkit-linear-gradient(#fdfdfd, #d9d4d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.SB_body3_heading_con label:nth-of-type(2)::before{text-align:center;font-family:'robotoblack';font-size:44px;width:100%;height:30px;display:block;content:'will give you the answer that you seek.';z-index:9;position:absolute;left:0;top:-7px;color:#fff;text-transform:uppercase;overflow:hidden;background:-webkit-linear-gradient(#fdfdfd, #d9d4d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;} */
+ .SB_body3_heading_con label:nth-of-type(1)::before{text-align:center;font-family:'robotoblack';font-size:44px;width:100%;height:30px;display:block;content:'The “DNA Of Success” 2ND Edition by Jack M. Zufelt ';z-index:9;position:absolute;left:0;top:-7px;color:#fff;text-transform:uppercase;overflow:hidden;background:-webkit-linear-gradient(#fdfdfd, #d9d4d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.SB_body3_heading_con label:nth-of-type(2)::before{text-align:center;font-family:'robotoblack';font-size:44px;width:100%;height:30px;display:block;content:'will give you the answer that you seek.';z-index:9;position:absolute;left:0;top:-7px;color:#fff;text-transform:uppercase;overflow:hidden;background:-webkit-linear-gradient(#fdfdfd, #d9d4d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;} 
 .SB_body3_contain_block{width:630px;margin-top:30px;min-height:420px;}
 .SB_body3_contain_block h2{font-size:24px;color:#ffffff;font-family:'OpenSans-Semibold';padding:18px;border:solid 1px #fff;font-family:'OpenSans-Bold';position:relative;margin:0px;}
 .SB_body3_contain_block h2:nth-of-type(1){background:rgba(0,155,198,1);background:-moz-linear-gradient(left, rgba(0,155,198,1) 0%, rgba(8,217,240,1) 100%);background:-webkit-gradient(left top, right top, color-stop(0%, rgba(0,155,198,1)), color-stop(100%, rgba(8,217,240,1)));background:-webkit-linear-gradient(left, rgba(0,155,198,1) 0%, rgba(8,217,240,1) 100%);background:-o-linear-gradient(left, rgba(0,155,198,1) 0%, rgba(8,217,240,1) 100%);background:-ms-linear-gradient(left, rgba(0,155,198,1) 0%, rgba(8,217,240,1) 100%);background:linear-gradient(to right, rgba(0,155,198,1) 0%, rgba(8,217,240,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#009bc6', endColorstr='#08d9f0', GradientType=1);border-radius:10px;padding-bottom:28px;}
@@ -1734,67 +1737,68 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
             background: -ms-linear-gradient(left, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
             background: linear-gradient(to right, rgba(76,125,198,1) 0%, rgba(60,205,230,1) 100%);
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c7dc6', endColorstr='#3ccde6', GradientType=1 ); text-align:center; padding: 10px;      margin-top: 15px;
-            font-size: 20px;    color: #fff;  }
+      font-size: 20px;    color: #fff;  }
 
 
-            .mentorsignuppopupform  .mat-checkbox label{ color: #ff0000!important;}
+ .mentorsignuppopupform  .mat-checkbox label{ color: #ff0000!important;}
 
 
-            .mentorsignup_popup_main{ display: block;}
+ .mentorsignup_popup_main{ display: block;}
 
-            .mentorsignup_popup_main{ display: block; height: 80vh; overflow-y: scroll;     overflow-x: hidden;}  
-
-
-            .SB_topformwrapper .mat-form-field-flex input{     display: block;
-                background: #fff;
-                padding: 10px 2%;
-                width: 96%;
-                border: solid 1px #2473a5;}
-
-                .SB_topformwrapper .mat-form-field-flex mat-select{     display: block;
-                    background: #fff;
-                    padding: 10px 2%;
-                    width: 96%;
-                    border: solid 1px #2473a5;}
+ .mentorsignup_popup_main{ display: block; height: 80vh; overflow-y: scroll;     overflow-x: hidden;}  
 
 
-                .SB_topformwrapper  .form  { margin-top: 26px;     min-height: 450px; position: relative;}    
+.SB_topformwrapper .mat-form-field-flex input{   display: block;  background: #fff;  padding: 9px 2%; width: 96%; border: solid 1px #2473a5;}
+
+.SB_topformwrapper .mat-form-field-flex mat-select{     display: block; background: #fff; padding: 10px 2%;  width: 96%;  border: solid 1px #2473a5;}
 
 
-                .SB_topformwrapper .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{display:none!important;}   
+.SB_topformwrapper  .form  { margin-top: 10px;   position: relative; padding-bottom: 5px;}    
 
 
-                .SB_topformwrapper .mat-form-field-appearance-legacy .mat-form-field-label {
-                    top: 29px;
-                    left: 2%;
-                }
+  .SB_topformwrapper .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{display:none!important;}   
 
-                .SB_topformwrapper  button{ display: none; margin-top: 12px;}
 
-                .SB_topformwrapper  button:nth-of-type(1) {background: rgba(68,69,70,1);
-                    background: -moz-linear-gradient(top, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
-                    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(68,69,70,1)), color-stop(50%, rgba(39,39,40,1)), color-stop(51%, rgba(0,0,0,1)), color-stop(100%, rgba(11,11,11,1)));
-                    background: -webkit-linear-gradient(top, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
-                    background: -o-linear-gradient(top, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
-                    background: -ms-linear-gradient(top, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
-                    background: linear-gradient(to bottom, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444546', endColorstr='#0b0b0b', GradientType=0 ); display: block; width: 100%; 
-                    border: solid 6px #6e6e6f; border-radius: 8px; font-family: 'robotoblack'; color: #fff; text-transform: uppercase; padding: 5px 0;   box-shadow: none; font-size: 32px;
-                 outline: none; cursor: pointer; position: relative;
-                }
+ .SB_topformwrapper .mat-form-field-appearance-legacy .mat-form-field-label {  top: 29px; left: 2%; }
+
+ .SB_topformwrapper  button{ display: none; margin-top: 12px;}
+
+ .SB_topformwrapper  button:nth-of-type(1) {background: rgba(68,69,70,1);
+  background: -moz-linear-gradient(top, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
+   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(68,69,70,1)), color-stop(50%, rgba(39,39,40,1)), color-stop(51%, rgba(0,0,0,1)), color-stop(100%, rgba(11,11,11,1)));
+   background: -webkit-linear-gradient(top, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
+   background: -o-linear-gradient(top, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
+    background: -ms-linear-gradient(top, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
+     background: linear-gradient(to bottom, rgba(68,69,70,1) 0%, rgba(39,39,40,1) 50%, rgba(0,0,0,1) 51%, rgba(11,11,11,1) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444546', endColorstr='#0b0b0b', GradientType=0 ); display: block; width: 100%; 
+    border: solid 6px #6e6e6f; border-radius: 8px; font-family: 'robotoblack'; color: #fff; text-transform: uppercase; padding: 5px 0;   box-shadow: none; font-size: 32px;
+     outline: none; cursor: pointer; position: relative;
+    }
         
-                /* .SB_topformwrapper  button{background: -webkit-linear-gradient(#ffffff, #c3c3c1);  -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;} */
+ /* .SB_topformwrapper  button{background: -webkit-linear-gradient(#ffffff, #c3c3c1);  -webkit-background-clip: text; -webkit-text-fill-color: transparent;} */
          
-                    .SB_topformwrapper  button::before{ content: ''; background: url(../../assets/images/successbook_form_bg.png) no-repeat right top; width: 58px; height: 57px; position: absolute; right: -4px;
-                        top: 0;}
+.SB_topformwrapper  button::before{ content: ''; background: url(../../assets/images/successbook_form_bg.png) no-repeat right top; width: 58px; height: 57px; position: absolute;  right: -9px; top: -6px;}
 
 
-                        .SB_topformwrapper  .mat-error {
-                            color: #881d1d;
-                        }
+.SB_topformwrapper  .mat-error {color: #881d1d; }
 
 
-                        .SB_topformwrapper  .form_field_sameaddress {
-                            margin: 20px 0;
-                        }
+.SB_topformwrapper  .form_field_sameaddress {     margin: 10px 0 0 2px;}
+
+  .top_body_right{ position: relative;}                      
+
+  .successbook_topformarrow{ position: absolute; right: -57px;
+    top: 28px;}
+
+    .SB_topformwrapper .formstep2 .mat-form-field-infix {
+        border: none;
+        margin: 0 15px;
+    }
+
+  .formstap2 form{ min-height: 400px;}  
+  .formstap4 form{ min-height: 400px;} 
+  
+  .SB_topformwrapper .formstap3 .mat-form-field-infix {
+    border: none;
+    margin: 0 15px;
+}

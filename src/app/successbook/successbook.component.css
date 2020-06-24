@@ -38,9 +38,9 @@
                 text-align: center;     display: block; line-height: 38px;}
 
 
-       .top_body_left_text_wraaper{ width: 512px; float: right; margin-top: -20px; margin-right: 10px; }         
+       .top_body_left_text_wraaper{ width: 520px; float: right; margin-top: -50px; margin-right: 10px; }         
 
-       .top_body_left_text2{  width: 100%;  margin-top: 10px; padding-bottom: 40px;}
+       .top_body_left_text2{  width: 96%;  margin-top: 10px; padding-bottom: 40px; margin-left: auto; margin-right: auto;}
 
        .top_body_left_text2  label{font-size: 42px;
         color: #0c2144;
@@ -57,7 +57,7 @@
         .successbook_bg1{ position: absolute; right: 0; bottom: 30px;  z-index: 2;}
 
         .top_arrowtext{ background: url(../../assets/images/success_book_textbg.png) no-repeat left bottom; width: 1285px; height: 185px;  position: absolute;
-            bottom: -55px; left: 36px;
+            bottom: -88px; left: 36px;
             z-index: 9;   overflow: hidden; }
 
           .top_arrowtext h2 {margin: 85px 0 0 0;
@@ -111,11 +111,11 @@
    font-size: 44px; color: #ffffff; text-transform: uppercase; text-shadow: 0 2px 2px #2e7da0; padding: 8px 5px;
     } 
   
-    .top_body_right_wrapper h3{ margin: 5px; padding: 5px; text-align: center; background:#fd5605 url(../../assets/images/SBformtextbg2.png) no-repeat left top; border-radius: 5px;
-    border: solid 1px #99d7f4;   font-family: 'robotoblack'; font-size: 18px; color: #ffffff; line-height: 20px;
+    .top_body_right_wrapper h3{ margin: 5px; padding:8px 5px; text-align: center; background:#fd5605 url(../../assets/images/SBformtextbg2.png) no-repeat left top; border-radius: 5px;
+    border: solid 1px #99d7f4;   font-family: 'robotoblack'; font-size: 16px; color: #ffffff; line-height: 18px;
     }
 
-    .top_body_right_wrapper h4{ text-align: center; font-size: 18px; color: #000000; padding:0 5px 5px 5px; margin: 0px;}
+    .top_body_right_wrapper h4{ text-align: center; font-size: 18px; color: #000000; padding:0 5px 5px 5px; margin: 0px; font-family:'OpenSans-Regular';}
 
 
     .form_step{ margin: 2px 0; display: flex; flex-wrap: wrap; justify-content: space-between; margin: 0  auto; width: 320px;}
@@ -165,10 +165,10 @@
                 
                 .ster1  .activestep  .linespan{ background: #8ce13b!important;}   
                 .ster2  .activestep  .linespan{ background: #8ce13b!important;}   
-                .ster2  .activestep  .linespan{ background: #8ce13b!important;}     
+                .ster3  .activestep  .linespan{ background: #8ce13b!important;}     
           
-     .top_body_right_wrapper label{ display: block; background: #404142; text-align: center; margin: 1px 14px; border-radius: 4px; font-size: 18px; color: #ffffff; 
-        font-family: 'robotomedium'; padding:8px 5px; text-transform: uppercase;}           
+     .top_body_right_wrapper label{ display: block; background: #404142; text-align: center; margin: 1px 0px; border-radius: 4px; font-size: 16px; color: #ffffff; 
+        font-family: 'robotomedium'; padding:5px 5px; text-transform: uppercase;}           
 
         .top_body_right_wrapper .activelabel{ color: #6edd5f;}
 
@@ -217,7 +217,7 @@
     .top_body_right_wrapper h3 {font-size: 16px;}
 
     .top_arrowtext{width: 1150px;
-      height: 166px; background-size: 100%;     bottom: -140px; }
+      height: 166px; background-size: 100%;     bottom: -110px; }
 
       .top_arrowtext h2 {
         margin: 82px 0 0 0;
@@ -241,7 +241,7 @@
 }
 
 .successbook_top_guarantee_img { 
-  left: 494px;  top: 140px;
+  left: 478px;  top: 140px;
 }
 
 .top_body_left_logo img { 
@@ -321,7 +321,7 @@
 .top_arrowtext {
   width: 920px;
   height: 134px; 
-  bottom: -125px;
+  bottom: -110px;
 }
 
 .top_arrowtext h2  {
@@ -379,12 +379,12 @@
 .top_arrowtext{
   width: 820px;
   height: 130px;
-  bottom: -115px;
+  bottom: -90px;
 }
 
 .successbook_top_img1 {
   left: 13px;
-  top: 236px;
+  top: 215px;
   width: 329px;
 }
 
