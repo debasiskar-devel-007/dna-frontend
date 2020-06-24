@@ -28,7 +28,7 @@
 
                 <span class="mentordetail_block1_img">
 
-                    <span *ngIf="mentordetail.image != null; else elseSpan"> <img src="{{safeurl(mentordetail.image)}}"
+                    <span *ngIf="mentordetail.image != null; else elseSpan"> <img src="{{mentordetail.image}}"
                             alt="#"> </span>
                     <ng-template #elseSpan> km </ng-template>
 

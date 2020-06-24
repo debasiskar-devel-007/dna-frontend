@@ -40,7 +40,7 @@ export class AffiliatesignupComponent implements OnInit {
     // this.meta.setTag('twitter:title', 'DNA Of Success - Affiliates');
     // this.meta.setTag('og:type', 'website');
     // this.meta.setTag('og:url','https://www.dnamastercourse.com/');
-    //   this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
+    //   this.meta.setTag('og:image', '../../assets/images/default_image.jpg');
     this._apiService.getState().subscribe((response:any) => {
       // console.log(response)
       for (let i in response) {

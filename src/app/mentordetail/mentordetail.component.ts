@@ -51,10 +51,10 @@ export class MentordetailComponent implements OnInit {
     });
   }
 
-  
+
   safeurl(val) {
-      // return "https://images.influxiq.com/image.php?url=" + val + "&quality=30";
-      return val
+      return "https://images.influxiq.com/image.php?url=" + val + "&quality=30";
+      // return val
   }
 
 }
