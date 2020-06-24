@@ -69,7 +69,7 @@ url('https://all-frontend-assets.s3.amazonaws.com/dna-frontend/assets/fonts/robo
 .home_top_block_col .top_logo_div{width:690px;float:right;background:#fff;border:solid 5px #5f617b;padding:2px; text-align: center;}
 .home_top_block_col .top_logo_div img{width:7.5%!important;margin:0.4%;}
 .home_banner_bottomnew{background:#4d5e67;padding:25px;text-align:center;}
-.home_banner_bottomnew h2{color:#fff;font-family:"MyriadPro-Semibold";font-size:36px;text-transform:uppercase;margin:0;padding:0;}
+.home_banner_bottomnew h2{color:#fff;font-family:"MyriadPro-Semibold";font-size:36px;text-transform:uppercase;margin:0; padding:0;}
 .home_banner_bottomnew h3{color:#fff;font-family:"MyriadPro-Regular";font-size:22px;margin:15px 0 0 0;padding:0;}
 .newthewholestory_banner_section .product_banner_inner_col{width:90%;margin:0 auto;}
 .newthewholestory_banner_section h2{text-transform:uppercase;}
@@ -1448,7 +1448,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .block4 .newshop_img img{width:100%;}
 .block4 .con_BTN_DIV{width:190px;background:rgba(47,62,71,1);background:-moz-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);background:-webkit-gradient(left top, left bottom, color-stop(0%, rgba(47,62,71,1)), color-stop(100%, rgba(30,34,37,1)));background:-webkit-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);background:-o-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);background:-ms-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);background:linear-gradient(to bottom, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f3e47', endColorstr='#1e2225', GradientType=0);font-size:24px;color:#ffffff;text-transform:uppercase;font-family:'OpenSans-Bold';border-radius:4px;position:absolute;bottom:20px;right:307px;z-index:99;}
 .block_main_CON:last-of-type{margin-bottom:40px;}
-.successbook_top_bookimg{display:block;width:670px;margin:0px 0 0 240px;z-index:4;position:relative;}
+.successbook_top_bookimg{display:block;width:670px;margin:0px 0 0 240px;z-index:4;position: absolute;;}
 .successbook_top_img1{display:block;position:absolute;left:20px;top:140px;z-index:5;width:364px;}
 .successbook_top_guarantee_img{position:absolute;top:66px;left:614px;z-index:5;}
 .SB_topformwrapper{    display: block;
@@ -1802,3 +1802,4 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
     border: none;
     margin: 0 15px;
 }
+

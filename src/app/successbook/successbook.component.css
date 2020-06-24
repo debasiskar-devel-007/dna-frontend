@@ -54,10 +54,10 @@
 
         .top_body_left_text2  label span{ color: #ff3231; }
 
-        .successbook_bg1{ position: absolute; right: 0; bottom: 30px;  z-index: 2;}
+        .successbook_bg1{ position: absolute; right: 0; bottom: -120px;  z-index: 2;}
 
         .top_arrowtext{ background: url(../../assets/images/success_book_textbg.png) no-repeat left bottom; width: 1285px; height: 185px;  position: absolute;
-            bottom: -88px; left: 36px;
+            bottom: -224px; left: 36px;
             z-index: 9;   overflow: hidden; }
 
           .top_arrowtext h2 {margin: 85px 0 0 0;
@@ -67,15 +67,15 @@
     font-size: 65px;
     color: #ffffff;
     text-transform: uppercase;
-    background: -webkit-linear-gradient(#ffffff, #c3c3c1);
+    background: -webkit-linear-gradient(#ffffff, #dadad4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;  position: relative; display: block;}
 
-  .top_arrowtext_div{     position: absolute;
+  .top_arrowtext_div{     position: relative;
     display: block;
     width: 100%;}
 
-  .top_arrowtext_div::before{  text-align: center;
+  /* .top_arrowtext_div::before{  text-align: center;
     font-family: 'robotoblack';
     font-size: 65px;
     width: 100%;
@@ -85,10 +85,10 @@
     z-index: 9;
     position: absolute;
     left: 0;
-    top: 85px;
+    top: 0px;
     color: #fff;
     text-transform: uppercase;
-    overflow: hidden;}
+    overflow: hidden;} */
 
 
   .top_body_right{ width: 390px; float: right; margin-top:16px; position: relative; background: #fcfdfd; padding: 6px; border-radius: 10px; box-shadow: 0 0 5px #888;}
@@ -217,7 +217,7 @@
     .top_body_right_wrapper h3 {font-size: 16px;}
 
     .top_arrowtext{width: 1150px;
-      height: 166px; background-size: 100%;     bottom: -110px; }
+      height: 166px; background-size: 100%;     bottom: -214px; }
 
       .top_arrowtext h2 {
         margin: 82px 0 0 0;
@@ -254,7 +254,7 @@
 
 .successbook_bg1 { 
   right: 0;
-  bottom: -43px; 
+  bottom: -150px; 
 }
     }
 
@@ -311,7 +311,7 @@
 
 .successbook_bg1  {
   right: 47px;
-  bottom: -43px;
+  bottom: -130px;
 }
 .top_arrowtext h2 {
   margin: 82px 0 0 0;
@@ -321,7 +321,7 @@
 .top_arrowtext {
   width: 920px;
   height: 134px; 
-  bottom: -110px;
+  bottom: -196px;
 }
 
 .top_arrowtext h2  {
@@ -379,7 +379,7 @@
 .top_arrowtext{
   width: 820px;
   height: 130px;
-  bottom: -90px;
+  bottom: -108px;
 }
 
 .successbook_top_img1 {
@@ -553,7 +553,7 @@
 .successbook_top_bookimg {
   width: auto;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 100%; position: initial; left: 0; top: 0;
 }
 .successbook_top_guarantee_img  {
   left: 0;
