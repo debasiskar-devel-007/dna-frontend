@@ -41,7 +41,7 @@ export class BlogComponent implements OnInit {
       this.meta.setTag('og:image', '../../assets/images/default_image.jpg');
 
       FB.init({
-        appId: '679836882810934',
+        appId: '284977756033837',
         version: 'v2.9'
       });
   

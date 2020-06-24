@@ -16,7 +16,7 @@ export class MentordetailComponent implements OnInit {
   constructor(public cookieService: CookieService, public activatedRoute: ActivatedRoute, public apiService: ApiService, public router: Router, public sanitizer: DomSanitizer,
     public meta: MetaService, public FB: FacebookService) {
     FB.init({
-      appId: '679836882810934',
+      appId: '284977756033837',
       version: 'v2.9'
     });
   }
