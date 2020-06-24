@@ -47,13 +47,13 @@ export class MentorsignupComponent implements OnInit {
     this.meta.setTag('twitter:description', " Jack M. Zufelt’s “The DNA Master Course” Online Training System and Mentor Program is the ultimate stage for Mentors to put their skills to good use, and make incredible money in the process. Become a Mentor TODAY and join a program that has been taught to millions in over 50 countries.");
 
     this.meta.setTag('og:keyword', "DNA Master Course Mentor Signup, Mentor Signup DNA Master Course, DNA Master Course for Mentors");
-    
+
     this.meta.setTag('twitter:keyword', "DNA Master Course Mentor Signup, Mentor Signup DNA Master Course, DNA Master Course for Mentors");
 
     this.meta.setTag('og:title', 'DNA Of Success - Mentor SignUp');
     this.meta.setTag('twitter:title', 'DNA Of Success - Mentor SignUp');
     this.meta.setTag('og:type', 'website');
-    this.meta.setTag('og:url', 'https://dna.influxiq.com/mentorsignup');
+    this.meta.setTag('og:url', 'https://dna.influxiq.com/pages/mentorsignup');
     this.meta.setTag('og:image', 'https://dna.influxiq.com/assets/images/default_image.jpg');
 
 
