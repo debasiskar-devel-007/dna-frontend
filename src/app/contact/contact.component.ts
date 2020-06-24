@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-// import { MetaService } from '@ngx-meta/core';
+import { MetaService } from '@ngx-meta/core';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ContactComponent implements OnInit {
 
-  public ip:any;
+  public ip: any;
   public status: any = [{ val: 1, 'name': 'Active' }, { val: 0, 'name': 'Inactive' }];
   emailregex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -22,16 +22,31 @@ export class ContactComponent implements OnInit {
   formfieldrefreshdata: any = null;
   //public formdata: any;
 
-  
+
   public formdata: any;
 
 
-  constructor(public _apiService: ApiService, public ActivatedRoute: ActivatedRoute) {
+  constructor(public _apiService: ApiService, public ActivatedRoute: ActivatedRoute, private meta: MetaService) {
+
+
+    this.meta.setTitle(' DNA Of Success - Contact Us');
+
+    this.meta.setTag('og:description', 'Get in touch with our support team at the DNA Master Course and we will be happy to answer any questions for you. Learn about our mentorship programs, personal development programs and much more.');
+    this.meta.setTag('twitter:description', 'Get in touch with our support team at the DNA Master Course and we will be happy to answer any questions for you. Learn about our mentorship programs, personal development programs and much more.');
+
+    this.meta.setTag('og:keyword', 'Contact DNA Of Success, DNA Of Success Contact, Contact DNA Master Course, DNA Master Course Contact');
+    this.meta.setTag('twitter:keyword', 'Contact DNA Of Success, DNA Of Success Contact, Contact DNA Master Course, DNA Master Course Contact');
+
+    this.meta.setTag('og:title', ' DNA Of Success - Contact Us');
+    this.meta.setTag('twitter:title', ' DNA Of Success - Contact Us');
+    this.meta.setTag('og:type', 'website');
+    this.meta.setTag('og:url', 'https://dna.influxiq.com/pages/contact-us');
+    this.meta.setTag('og:image', 'https://dna.influxiq.com/assets/images/default_image.jpg');
 
     this._apiService.getclientip().subscribe((res: any) => {
       // console.log(res);
         this.ip=res.ip;
-        console.log(this.ip)
+        // console.log(this.ip)
 
         
         this.formdata = {
@@ -97,12 +112,12 @@ export class ContactComponent implements OnInit {
               type:'hidden',
               value:this.ip
           }
-      
-      
-          ]
-        };
-      
-     })
+
+
+        ]
+      };
+
+    })
 
   }
 

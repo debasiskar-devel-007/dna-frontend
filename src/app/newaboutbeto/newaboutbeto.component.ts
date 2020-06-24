@@ -24,8 +24,8 @@ export class NewaboutbetoComponent implements OnInit {
     this.meta.setTag('og:title', 'DNA Of Success - Beto Paredes');
     this.meta.setTag('twitter:title', 'DNA Of Success - Beto Paredes');
     this.meta.setTag('og:type', 'website');
-    this.meta.setTag('og:url','https://www.dnamastercourse.com/');
-      this.meta.setTag('og:image', '../../assets/images/logometa.jpg');
+    this.meta.setTag('og:url','https://dna.influxiq.com/pages/aboutbeto');
+      this.meta.setTag('og:image', 'https://dna.influxiq.com/assets/images/default_image.jpg');
   }
 
   ngOnInit() {

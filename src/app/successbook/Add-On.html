@@ -60,17 +60,17 @@
     <div class="AddON_modal_block3">
 
         <label>
-            <input type="radio">
+            <input type="radio" [(ngModel)]="value" value="mentee">
               <span>I agree to the <a href="javascript:void(0);">Terms and Conditions</a> of the 7-Day Free Trial </span>
          </label>
          <label>
-            <input type="radio">
+            <input type="radio" [(ngModel)]="value" value="guest">
               <span>No, thank you. I do not need ths incredible offer. </span>
          </label>
     </div>
  
 
-      <button class="addonbtn"><span>CONTINUE</span></button>
+      <button class="addonbtn" (click)="continue();"><span>CONTINUE</span></button>
 
 
 

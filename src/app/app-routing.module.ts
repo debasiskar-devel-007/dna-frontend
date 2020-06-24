@@ -35,7 +35,8 @@ const routes: Routes = [
   {path:'home', component: HomeComponent}, 
   {path:'', component: HomeComponent}, 
   {path:'ordersuccess', component: OrdersuccessComponent},
-  {path:'mentordetail', component: MentordetailComponent},
+  {path:'mentordetail/:_id', component: MentordetailComponent,resolve: {mentordetail: TestresolveService},
+  data: {requestcondition: {source: '', condition: {'_id': '_id'}}, endpoint: 'api1/getuserdatabyid', api_url: api_url}},
   {path:'ordersuccess/:_id', component: OrdersuccessComponent,resolve: {successData: TestresolveService},
   data: {requestcondition: {source: '', condition: {'_id': '_id'}}, endpoint: 'api/ordersuccessresolve', api_url: api_url}}, 
   {
