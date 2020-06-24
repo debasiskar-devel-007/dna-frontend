@@ -37,7 +37,7 @@ export class SuccessbookComponent implements OnInit {
   public active1: boolean = false;
   public active2: boolean = false;
   public active3: boolean = false;
-  public form1Value: any;
+  public form1Value: any=[];
   public form2Value: any;
   public form3Value: any;
   public form4Value: any;
@@ -146,6 +146,25 @@ export class SuccessbookComponent implements OnInit {
     // cancelroute: '/manage-banner',
 
     fields: [
+      {
+        label: 'First Name',
+        name: 'firstname',
+        value:'ss',
+        type: 'text',
+        validations: [
+          { rule: 'required', message: 'First Name is required' },
+
+        ]
+      },
+      {
+        label: 'Last Name',
+        name: 'lastname',
+        value: this.form1Value.lastname,
+        type: 'text',
+        validations: [
+          { rule: 'required', message: 'Last Name is required' },
+        ]
+      },
       {
         label: "Address",
         name: "address",
@@ -537,6 +556,7 @@ export class SuccessbookComponent implements OnInit {
       this.form1Value = val.fromval;
       this.menteeSignupData.push(this.form1Value);
     }
+    this.form1Value=val.fromval;
   }
   listenFormFieldChange1(val: any) {
     if (val.field == 'fromsubmit') {
