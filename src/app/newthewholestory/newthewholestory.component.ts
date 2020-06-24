@@ -29,7 +29,7 @@ export class NewthewholestoryComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("test-git")
+    //console.log("test-git")
   }
 
 }
