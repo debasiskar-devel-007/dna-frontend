@@ -140,9 +140,11 @@
           "configurations": {
             "production": {
               "devServerTarget": "helios-serverless:serve:production"
-            },"dev": {
+            },
+            "dev": {
               "devServerTarget": "helios-serverless:serve:dev"
-            },"local": {
+            },
+            "local": {
               "devServerTarget": "helios-serverless:serve:local"
             }
           }
@@ -199,5 +201,8 @@
       }
     }
   },
-  "defaultProject": "helios-serverless"
+  "defaultProject": "helios-serverless",
+  "cli": {
+    "analytics": "5d94458f-49e9-4d0f-ae1a-e34ea7d58290"
+  }
 }

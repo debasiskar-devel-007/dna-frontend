@@ -23,12 +23,13 @@ export class MentordetailComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.data.forEach((res: any) => {
-      if ( res.mentordetail.results.res[0] != null && res.mentordetail.results.res[0].youtube_links != null && res.mentordetail.results.res[0].youtube_links != '') {
+      if (res.mentordetail.results.res[0] != null && res.mentordetail.results.res[0].youtube_links != null && res.mentordetail.results.res[0].youtube_links != '') {
         // for (const key in object) {
-          res.mentordetail.results.res[0].youtube_links = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + res.mentordetail.results.res[0].youtube_links);
+        res.mentordetail.results.res[0].youtube_links = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + res.mentordetail.results.res[0].youtube_links);
         // }
         this.mentordetail = res.mentordetail.results.res[0];
-        
+      } else {
+        this.mentordetail = res.mentordetail.results.res[0];
       }
 
       // this.meta.setTitle(this.blogDetailstData.blogtitle);
@@ -53,8 +54,8 @@ export class MentordetailComponent implements OnInit {
 
 
   safeurl(val) {
-      return "https://images.influxiq.com/image.php?url=" + val + "&quality=30";
-      // return val
+    return "https://images.influxiq.com/image.php?url=" + val + "&quality=30";
+    // return val
   }
 
 }

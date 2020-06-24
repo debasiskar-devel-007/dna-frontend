@@ -12,14 +12,13 @@
                             <span class="spandiv product_banner_inner_top_content">
                                 <span class="spandiv ptext1">
                                     <span>Realize Your Core Desires</span> <span>*</span> Live an Incredible Life
-                                    <span>*</span> Earn the Income You Want <span>*</span> Build Lasting Meaningful
-                                    Relationships
+    <span>*</span> Earn the Income You Want <span>*</span> Build Lasting Meaningful Relationships
 
-                                </span>
-                            </span>
-                            <img src="../../assets/images/home_banner_top_ankle.png" alt="#">
-                        </span>
-                        <span class="spandiv producttextblock newprodutlistbannertxt">
+    </span>
+    </span>
+    <img src="../../assets/images/home_banner_top_ankle.png" alt="#">
+    </span>
+    <span class="spandiv producttextblock newprodutlistbannertxt">
 
                             <h2>CHOOSE ONE OF OUR INCREDIBLE, LIFE-CHANGING PACKAGES!</h2>
 
@@ -30,11 +29,11 @@
                                 materials and products within 24-hours!
 
                             </span>
-                        </span>
-                    </span>
-                </span>
-            </span>
-        </span>
+    </span>
+    </span>
+    </span>
+    </span>
+    </span>
     </span>
 </mat-card>
 
@@ -336,19 +335,17 @@
                 <div class="package_group">
                     <div class="package{{i}}">
 
-                        <div  [innerHTML]="item.description">
+                        <div [innerHTML]="item.description">
                         </div>
-                      
-                           
-                                <div class="newproduct_con4_btn1">
-                                    <a class="choosenbtn" *ngIf="item.flag == item._id && index == i"
-                                        style="background: rgb(249, 94, 25);" (click)="chooseProduct(i,item)">Choosen</a>
 
-                                    <a class="pro_packagebtn221_btn" *ngIf="item.flag !=item._id || index != i"
-                                        (click)="chooseProduct(i,item)">CHOOSE THIS PACKAGE</a>
-                                </div>
-                            <div class="clearfix"></div>
-                    
+
+                        <div class="newproduct_con4_btn1">
+                            <a class="choosenbtn" *ngIf="item.flag == item._id && index == i" style="background: rgb(249, 94, 25);" (click)="chooseProduct(i,item)">Choosen</a>
+
+                            <a class="pro_packagebtn221_btn" *ngIf="item.flag !=item._id || index != i" (click)="chooseProduct(i,item)">CHOOSE THIS PACKAGE</a>
+                        </div>
+                        <div class="clearfix"></div>
+
 
                     </div>
                 </div>
@@ -365,8 +362,7 @@
 
                         </h2>
 
-                        <h3>THE INCREDIBLE DNA OF SUCCESS MENTOR<br />
-                            PROGRAM HAS SO MUCH MORE
+                        <h3>THE INCREDIBLE DNA OF SUCCESS MENTOR<br /> PROGRAM HAS SO MUCH MORE
 
                         </h3>
 
@@ -382,13 +378,10 @@
 
 
                         <h2>
-                            <p> You will receive everything that you see above, but there is so much more to this
-                                program. Please take the time to review the special page that we have dedicated to
-                                understand what this program can do for your life.</p>
+                            <p> You will receive everything that you see above, but there is so much more to this program. Please take the time to review the special page that we have dedicated to understand what this program can do for your life.</p>
 
-                            <p>This is a career path for the right person. One that will change your life financially
-                                while you are helping others changes their entire lives completely.
-                                You are able to charge for your services, earn money selling our products and much more.
+                            <p>This is a career path for the right person. One that will change your life financially while you are helping others changes their entire lives completely. You are able to charge for your services, earn money selling our products
+                                and much more.
                             </p>
                         </h2>
 
@@ -408,7 +401,7 @@
 
 
 
-                        <div class="newproduct_con5_btn1"><a href="javascript:void(0);" routerLink="/mentor">CLICK
+                        <div class="newproduct_con5_btn1"><a href="javascript:void(0);" routerLink="/pages/mentor">CLICK
                                 HERE</a>
                         </div>
 
@@ -436,8 +429,7 @@
 
                 <div class="product_form_main">
                     <div class="cart_formbox1 cart_formbox1new">
-                        <ng-container
-                            *ngIf="productDetails != null && productDetails != 'undefined' && productDetails.name != null">
+                        <ng-container *ngIf="productDetails != null && productDetails != 'undefined' && productDetails.name != null">
                             <h3 class="productCartDetails">Order Summary</h3>
 
                             <table class="product_new_tableblock productCartDetails">
@@ -473,9 +465,7 @@
                             </table>
                         </ng-container>
                         <h3>BILLING Address</h3>
-                        <lib-showform class='form-inline productform' *ngIf="formdata !=null" [formdata]="formdata"
-                            [formfieldrefresh]="formfieldrefresh" [formfieldrefreshdata]="formfieldrefreshdata"
-                            (onFormFieldChange)="listenFormFieldChange($event)"> </lib-showform>
+                        <lib-showform class='form-inline productform' *ngIf="formdata !=null" [formdata]="formdata" [formfieldrefresh]="formfieldrefresh" [formfieldrefreshdata]="formfieldrefreshdata" (onFormFieldChange)="listenFormFieldChange($event)"> </lib-showform>
                         <!-- <div class="form-group">
                                     <label>First Name</label>
                                     <input type="text" class="form-control" name="bill_first_name" placeholder="First Name">
