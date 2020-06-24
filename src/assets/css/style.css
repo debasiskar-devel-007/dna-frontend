@@ -66,7 +66,7 @@ url('https://all-frontend-assets.s3.amazonaws.com/dna-frontend/assets/fonts/robo
 .menu_section{position:relative;overflow:hidden;clear:both;display:block!important;background:#fff;border-top:solid 4px #e3ebe7;}
 .menu_block{position:relative;overflow:hidden;clear:both;width:1600px!important;margin:0 auto;display:block;}
 .home_top_block_col p{width:774px;float:left;margin-top:10px;}
-.home_top_block_col .top_logo_div{width:690px;float:right;background:#fff;border:solid 5px #5f617b;padding:2px}
+.home_top_block_col .top_logo_div{width:690px;float:right;background:#fff;border:solid 5px #5f617b;padding:2px; text-align: center;}
 .home_top_block_col .top_logo_div img{width:7.5%!important;margin:0.4%;}
 .home_banner_bottomnew{background:#4d5e67;padding:25px;text-align:center;}
 .home_banner_bottomnew h2{color:#fff;font-family:"MyriadPro-Semibold";font-size:36px;text-transform:uppercase;margin:0;padding:0;}
