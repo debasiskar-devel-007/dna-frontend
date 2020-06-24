@@ -1,24 +1,24 @@
 <app-header></app-header>
- 
+
 <div class="MDetailadmindashboard_block1_bg">
 
     <span class="MDetailadminDB_block1">
-      
+
         <span class="MDetailadminDB_block1_con">
 
             <span class="MDetailadminDB_block1_con_text">
                 <span class="MDetailadminDB_block1_con_text_block">
-                 <h2>I AM A DNA OF SUCCESS MASTER MENTOR
-                    <label>Please review our programs with the DNA Master Course.com 
-and choose a package to get started so we can 
-start working together!  </label>
-                </h2>
-    
-                   
+                    <h2>I AM A DNA OF SUCCESS MASTER MENTOR
+                        <label>Please review our programs with the DNA Master Course.com
+                            and choose a package to get started so we can
+                            start working together! </label>
+                    </h2>
+
+
                 </span>
             </span>
-    
-    
+
+
         </span>
 
 
@@ -27,105 +27,89 @@ start working together!  </label>
             <span class="mentordetail_block1">
 
                 <span class="mentordetail_block1_img">
-                   
-                    <span *ngIf="mentordetail.image != null; else elseSpan">  <img src="{{safeurl(mentordetail.image)}}" alt="#"> </span>
-<ng-template #elseSpan> km </ng-template>
+
+                    <span *ngIf="mentordetail.image != null; else elseSpan"> <img src="{{safeurl(mentordetail.image)}}"
+                            alt="#"> </span>
+                    <ng-template #elseSpan> km </ng-template>
 
                 </span>
 
                 <span class="mentordetail_block1_text">
                     <h2>{{mentordetail.fullname != null ? mentordetail.fullname : 'N/A'}} </h2>
 
-                    <h3 >Email: {{mentordetail.email != null ? mentordetail.email : 'N/A'}} </h3>   
-                    
-                    <h4>{{mentordetail.fulladdress != null ? mentordetail.fulladdress : 'N/A'}} 
-                        <br/>
-                       <span> Mob: {{mentordetail.phone != null ? mentordetail.phone : 'N/A'}}  </span></h4>
+                    <h3>Email: {{mentordetail.email != null ? mentordetail.email : 'N/A'}} </h3>
 
-                        <h5>{{mentordetail.about_me != null ? mentordetail.about_me : 'N/A'}} </h5>
+                    <h4>{{mentordetail.fulladdress != null ? mentordetail.fulladdress : 'N/A'}}
+                        <br />
+                        <span> Mob: {{mentordetail.phone != null ? mentordetail.phone : 'N/A'}} </span></h4>
 
-                        <h6>Mentor Since : {{mentordetail.createdon_datetime != null ? (mentordetail.createdon_datetime | date:'medium') : 'N/A'}} </h6>
+                    <span *ngIf="mentordetail.about_me != null && mentordetail.about_me != ''"
+                        [innerHtml]="mentordetail.about_me"></span>
+
+                    <h6>Mentor Since :
+                        {{mentordetail.createdon_datetime != null ? (mentordetail.createdon_datetime | date:'medium') : 'N/A'}}
+                    </h6>
                 </span>
             </span>
 
             <span class="mentordetail_block2">
 
-                <label class="fb_icon" *ngIf="mentordetail.facebook_id != null" ><a target="_blank" href="https://www.facebook.com/{{mentordetail.facebook_id}}">https://www.facebook.com/{{mentordetail.facebook_id}}</a></label>
-                <label class="ig_icon" *ngIf="mentordetail.tumblr_id != null" ><a  target="_blank"  href="https://www.tumblr.com/{{mentordetail.tumblr_id}}">https://www.tumblr.com/{{mentordetail.tumblr_id}}</a></label>
-                <label class="tw_icon" *ngIf="mentordetail.twiter_id != null" ><a  target="_blank" href="https://twitter.com/{{mentordetail.twiter_id}}">https://twitter.com/{{mentordetail.twiter_id}}</a></label>
-                <label class="in_icon" *ngIf="mentordetail.linkedin_id != null" ><a  target="_blank" href="https://in.linkedin.com/{{mentordetail.linkedin_id}}">https://in.linkedin.com/{{mentordetail.linkedin_id}}</a></label> 
+                <label class="fb_icon" *ngIf="mentordetail.facebook_id != null"><a target="_blank"
+                        href="https://www.facebook.com/{{mentordetail.facebook_id}}">https://www.facebook.com/{{mentordetail.facebook_id}}</a></label>
+                <label class="ig_icon" *ngIf="mentordetail.tumblr_id != null"><a target="_blank"
+                        href="https://www.tumblr.com/{{mentordetail.tumblr_id}}">https://www.tumblr.com/{{mentordetail.tumblr_id}}</a></label>
+                <label class="tw_icon" *ngIf="mentordetail.twiter_id != null"><a target="_blank"
+                        href="https://twitter.com/{{mentordetail.twiter_id}}">https://twitter.com/{{mentordetail.twiter_id}}</a></label>
+                <label class="in_icon" *ngIf="mentordetail.linkedin_id != null"><a target="_blank"
+                        href="https://in.linkedin.com/{{mentordetail.linkedin_id}}">https://in.linkedin.com/{{mentordetail.linkedin_id}}</a></label>
             </span>
 
 
             <span class="mentordetail_block3">
 
-                   <h2>Gallery</h2>
+                <h2>Gallery</h2>
 
 
-                   <span class="mentordetail_block3_wrapper">
+                <span class="mentordetail_block3_wrapper">
 
                     <!-- !!!!*image  upload size height='560px' width='315px' (16:9 ratio)* -->
- 
-                        <span class="MDgaller_imagewrapper">
-                            <span class="MDgaller_imagecon">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/8qkgcCBOQM4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                 <span class="MDgaller_detail">
-                                   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                 </span>
-                            </span>
-                        </span>
-                        <span class="MDgaller_imagewrapper">
-                            <span class="MDgaller_imagecon"><img src="../../assets/images/Mentor_DetaiIMG3.jpg">
-                                <span class="MDgaller_detail">
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                 </span>
-                            </span>
-                        </span>
-                        <span class="MDgaller_imagewrapper">
-                            <span class="MDgaller_imagecon"><img src="../../assets/images/Mentor_DetaiIMG4.jpg">
-                                <span class="MDgaller_detail">
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                 </span>
-                            
-                            </span>
-                        </span>
-                        <span class="MDgaller_imagewrapper">
-                            <span class="MDgaller_imagecon"><img src="../../assets/images/Mentor_DetaiIMG5.jpg">
-                                <span class="MDgaller_detail">
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                 </span>
-                            
-                            </span>
-                        </span>
-                        <span class="MDgaller_imagewrapper">
-                            <span class="MDgaller_imagecon"><img src="../../assets/images/Mentor_DetaiIMG6.jpg">
-                            
-                                <span class="MDgaller_detail">
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                 </span>
-                            </span>
-                        </span>
 
-
-
-
+                    <span class="MDgaller_imagewrapper">
+                        <span class="MDgaller_imagecon"
+                            *ngIf="mentordetail.youtube_links != null && mentordetail.youtube_links != ''">
+                            <iframe width="560" height="315" [src]='mentordetail.youtube_links' frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </span>
                     </span>
+                    <ng-container
+                        *ngIf="mentordetail.gallery_image_array != null && mentordetail.gallery_image_array != ''">
+                        <span class="MDgaller_imagewrapper" *ngFor="let item of mentordetail.gallery_image_array">
+                            <span class="MDgaller_imagecon"><img [src]='safeurl(item)'>
+                            </span>
+                        </span>
+                    </ng-container>
 
-                    <button class="MDetailPurchase_BTN">Choose this Mentor as your Guide <span>(No Cost for Choice) </span> </button>
+
 
 
                 </span>
 
+                <button class="MDetailPurchase_BTN">Choose this Mentor as your Guide <span>(No Cost for Choice) </span>
+                </button>
+
+
+            </span>
+
 
 
         </span>
-   
+
     </span>
 
-   
+
 
 
 </div>
 
 <app-footer></app-footer>
- 

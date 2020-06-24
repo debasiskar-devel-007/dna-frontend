@@ -14,18 +14,22 @@ import { MetaService } from '@ngx-meta/core';
 export class MentordetailComponent implements OnInit {
   public mentordetail: any;
   constructor(public cookieService: CookieService, public activatedRoute: ActivatedRoute, public apiService: ApiService, public router: Router, public sanitizer: DomSanitizer,
-    public meta: MetaService, public FB: FacebookService) { 
-      FB.init({
-        appId: '679836882810934',
-        version: 'v2.9'
-      });
-    }
+    public meta: MetaService, public FB: FacebookService) {
+    FB.init({
+      appId: '679836882810934',
+      version: 'v2.9'
+    });
+  }
 
   ngOnInit() {
     this.activatedRoute.data.forEach((res: any) => {
-      this.mentordetail = res.mentordetail.results.res[0];
-
-
+      if ( res.mentordetail.results.res[0] != null && res.mentordetail.results.res[0].youtube_links != null && res.mentordetail.results.res[0].youtube_links != '') {
+        // for (const key in object) {
+          res.mentordetail.results.res[0].youtube_links = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + res.mentordetail.results.res[0].youtube_links);
+        // }
+        this.mentordetail = res.mentordetail.results.res[0];
+        
+      }
 
       // this.meta.setTitle(this.blogDetailstData.blogtitle);
 
@@ -47,9 +51,10 @@ export class MentordetailComponent implements OnInit {
     });
   }
 
+  
   safeurl(val) {
-    // return "https://images.influxiq.com/image.php?url=" + val + "&quality=20"
-    return val
+      // return "https://images.influxiq.com/image.php?url=" + val + "&quality=30";
+      return val
   }
 
 }

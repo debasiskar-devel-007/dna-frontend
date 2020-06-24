@@ -89,8 +89,8 @@ export class ProductComponent implements OnInit {
         this.meta.setTag('twitter:image', this.banner_image);
         this.meta.setTag('og:url', 'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
         this.meta.setTag('twitter:url', 'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
-        console.log(resolveData.packagedata.results.package)
-        console.log(resolveData)
+        // console.log(resolveData.packagedata.results.package)
+        // console.log(resolveData)
       });
     } else {
       let data: any = {
@@ -109,7 +109,7 @@ export class ProductComponent implements OnInit {
         this.allPackage = resolveData.packagedata.results.package;
         this.acctoken = resolveData.packagedata.results.token.access_token;
         // console.log(this.acctoken);
-         console.log(resolveData.packagedata) 
+        //  console.log(resolveData.packagedata) 
       });
     }
     let uid = this.CookieService.get('shareid');
@@ -118,7 +118,7 @@ export class ProductComponent implements OnInit {
         "id": this.CookieService.get('shareid')
       }
       this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-        console.warn(res)
+        // console.warn(res)
         this.parentdetails = res.result[0];
       })
     }
@@ -543,7 +543,7 @@ export class ProductComponent implements OnInit {
     // console.log(i);
     this.index = i;
     this.allPackage[i].flag = item._id;
-    // console.log(item);
+  
     this.productDetails.name = item.productname;
     this.productDetails.price = item.price;
     this.productDetails.delivery = 6.95;
@@ -556,7 +556,8 @@ export class ProductComponent implements OnInit {
     this.total = this.productDetails.total;
     this.productDetails.usertype = item.role.toLowerCase();
     this.productDetails.webinarid = item.webinar;
-    console.warn(this.productDetails);
+    this.productDetails.webinar_credit=item.webinar_credit;
+    // console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {
     //// console.log(val);

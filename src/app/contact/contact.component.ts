@@ -46,7 +46,7 @@ export class ContactComponent implements OnInit {
     this._apiService.getclientip().subscribe((res: any) => {
       // console.log(res);
         this.ip=res.ip;
-        console.log(this.ip)
+        // console.log(this.ip)
 
         
         this.formdata = {
