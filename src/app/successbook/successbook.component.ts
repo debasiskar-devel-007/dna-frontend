@@ -299,7 +299,7 @@ export class SuccessbookComponent implements OnInit {
         label: 'CC',
         name: 'cc',
         hint: '',
-        type: 'text',
+        type: 'number',
         val: '',
         validations: [
           { rule: 'required', message: 'CC is required' }
@@ -332,7 +332,7 @@ export class SuccessbookComponent implements OnInit {
         label: 'CVV',
         name: 'cvv',
         hint: '',
-        type: 'text',
+        type: 'number',
         val: '',
         validations: [
           { rule: 'required', message: 'CVV is required' }
@@ -536,7 +536,6 @@ export class SuccessbookComponent implements OnInit {
       this.form2 = true;
       this.form1Value = val.fromval;
       this.menteeSignupData.push(this.form1Value);
-
     }
   }
   listenFormFieldChange1(val: any) {
@@ -689,8 +688,14 @@ export class AddON {
     this.dat = data;
   }
   continue() {
+    console.log(this.value);
     if (this.value != null) {
       this.dat.productDetails.usertype = this.value
+    }else{
+      this._snackBar.open('Please Select an Option to Continue', '', {
+        duration: 2000,
+      });
+      return;
     }
 
     // console.log('value',this.value);
@@ -698,9 +703,10 @@ export class AddON {
     let cartdata: any = {
       "data": this.dat
     }
-    // console.warn(cartdata);
+  // console.warn(cartdata);
+ 
     this.apiService.customRequest1(cartdata, 'api/order', environment['api_url']).subscribe((res: any) => {
-      // console.warn(res);
+      console.warn(res);
       if (res.status == 'success') {
         this.router.navigateByUrl('success/' + res.message._id);
         this.dialogRef.close();
