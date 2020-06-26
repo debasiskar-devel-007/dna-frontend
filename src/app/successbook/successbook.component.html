@@ -82,7 +82,7 @@
                       <label class="activelabel">USER INFORMATION</label>
                       <label [class.activelabel]="active1 === true">BILLING INFORMATION</label>
                     <label [class.activelabel]="active2 === true">Shipping Address</label>
-                    <label [class.activelabel]="active3 === true">card INFORMATION</label>
+                    <label [class.activelabel]="active3 === true">card INFORMATION  </label>
 
                    <!-- user info here -->
                    <ng-container *ngIf="form1">
@@ -120,7 +120,7 @@
                    </ng-container>
                     <!-- CARD INFORMATION-->
                     <ng-container *ngIf="form4">
-
+                      <img src="../../assets/images/cardinfo_new.png" class="SBcardinfo">
                       <lib-showform class="formstap4" *ngIf="formdata3 !=null"
                       [formdata]="formdata3"
                       [formfieldrefresh]="formfieldrefresh"

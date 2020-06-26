@@ -1099,6 +1099,11 @@
 .home_new_imgblock3{padding:0 20px 30px 20px!important;background-size:44%!important;margin-top:25px;}
 }
 @media screen and (max-width:1199px){.package3{padding:0px!important;}
+.SB_topformwrapper .form_field_sameaddress {
+    margin: 10px auto;
+    width: 96%;
+    margin-bottom: 0px;
+}
 .formstap2 form{ min-height: inherit;}  
 .formstap4 form{ min-height: inherit;} 
 
