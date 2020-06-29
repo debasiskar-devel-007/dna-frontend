@@ -574,7 +574,7 @@
 .newmentorsignup_formbody .button:first-of-type{height:105px!important;}
 .s-formsection .button:first-of-type{height:76px!important;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{line-height:30px;}
-.newmentor_banner_section{background-position:-845px top !important;}
+.newmentor_banner_section{background-position:-720px top !important;}
 .newsuccessgenetics_banner_section{background-position:-660px top !important;}
 .product_form{margin:10px;}
 .afsignbtn{height:86px!important;}
@@ -671,7 +671,7 @@
 .newmentorsignup_block2_text2{padding-left:15%;}
 .newthewholestory_banner_section{background-position:-350px top !important;}
 .newaboutbeto_banner_section{background-position:-533px top !important;}
-.newmentor_banner_section{background-position:-885px top !important;}
+.newmentor_banner_section{background-position:-620px top !important;}
 .s-top-banner .s-top-banner-wrapper .s-content-wrapper{width:1200px;margin:0 auto;}
 .package1{background-size:98%;padding:40px 40px 40px 560px;}
 .producttextblock.newthewholestorybannertxt{width:765px;}
@@ -754,7 +754,7 @@
 .newcon2{font-size:44px;}
 .newcon5{width:605px;padding:13px 12px 15px 14px;font-size:20px;}
 .top_right_part .form_wrapper_header h4{font-size:42px;}
-.top_right_part .form_wrapper_header h3{font-size:26px;}
+.top_right_part .form_wrapper_header h3{font-size:26px;}  
 .s-learnmore-section .s-learnmoreButton{padding:75px;width:660px !important;float:left;font-size:27px;}
 .s-mentor-fluid{width:60%;height:auto;}
 .s-top-banner .s-top-banner-wrapper .s-top-banner-left .s-top-heading-bottom{padding-right:108px;}
@@ -848,7 +848,7 @@
 }
 }
 @media screen and (max-width:1300px){.package_group:nth-of-type(3){background:url(../images/product_bg3.jpg) no-repeat 88% top;background-size:cover!important;}
-.newmentor_banner_section{background-position:-913px top !important;}
+.newmentor_banner_section{background-position:-670px top !important;}
 .newsuccessgenetics_banner_section{background-position:-710px top !important;}
 .producttextblock.newmentorbannertxt{padding-left:0px;}
 .newmentorsignup_block2_text1{width:58%;}
@@ -917,7 +917,7 @@
 .newmentorsignup_block4_wrapper p{ padding-right: 0px;}
 .newmentorsignup_block4_wrapper p:nth-of-type(3){padding-left:0px;}
 .newmentorsignup_block4_wrapper{padding-left:60px;background-position:left bottom!important;padding-bottom:80%;background-size:100%!important; padding-right: 60px;}
-.newmentor_banner_section{background-position:-934px top !important;}
+/* .newmentor_banner_section{background-position:-934px top !important;} */
 .newblog_banner_section{background-position:-920px top!important;}
 .affiliate-signup_banner{background-position:-480px top;}
 .newabout_banner_section{background-position:230px top!important;}
@@ -988,7 +988,7 @@
 .end_block_left_bg .s_right_section .s_center_bg{background-position:-26% bottom !important;}
 .menu_block .home_banner_menu_section .navbar-nav li a{font-size:12px;}
 }
-@media screen and (max-width:1250px){.newmentor_banner_section{background-position:-943px top !important;}
+@media screen and (max-width:1250px){
 .newblog_banner_section{background-position:-960px top!important;}
 .product_banner_section .product_banner_inner_top_content .ptext1{font-size:14px;}
 }
