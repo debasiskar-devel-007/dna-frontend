@@ -848,6 +848,11 @@
 }
 }
 @media screen and (max-width:1300px){.package_group:nth-of-type(3){background:url(../images/product_bg3.jpg) no-repeat 88% top;background-size:cover!important;}
+
+.newblog_banner_section .producttextblock {
+    width: 680px;
+    padding: 44px 0 90px 25px;
+}
 .newmentor_banner_section{background-position:-670px top !important;}
 .newsuccessgenetics_banner_section{background-position:-710px top !important;}
 .producttextblock.newmentorbannertxt{padding-left:0px;}
