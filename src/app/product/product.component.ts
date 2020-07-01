@@ -76,7 +76,7 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
 
-    if (this.ActivatedRoute.snapshot.routeConfig.path == 'landingpage/:class/:_id') {
+    if (this.ActivatedRoute.snapshot.routeConfig.path == 'products/:class/:_id') {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
         this.acctoken = resolveData.packagedata.results.token.access_token;

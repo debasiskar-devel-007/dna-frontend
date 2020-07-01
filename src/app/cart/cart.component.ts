@@ -165,17 +165,7 @@ removeItem(id: any, idx: any) {
 }
 
 continushopping() {
-  // if (this.flag == true) {
-    this.router.navigateByUrl('/live-webinar');
-  //  } 
-  // else {
-  //   if (this.activatedRoute.snapshot.params._id != null && this.activatedRoute.snapshot.params._id != undefined) {
-  //   this.router.navigateByUrl('live-webinar/' + this.activatedRoute.snapshot.params._id);
-  //   } else {
-  //     this.router.navigateByUrl('live-webinar/' + this.cartDetails[0]._id);
-  //   }
-  // }
-
+    this.router.navigateByUrl('/pages/live-webinar');
 }
 // checkout functions
 checkout() {
@@ -250,6 +240,7 @@ export class loginModal {
        };
      }
     console.log(checkout);
+    
      this.apiService.customRequest1(checkout, 'api/checkout', environment['api_url']).subscribe((res: any) => {
        if (res.status == 'success') {
          this.router.navigateByUrl('checkout/' + res.results._id);
