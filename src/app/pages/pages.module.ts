@@ -14,7 +14,7 @@ import { AboutComponent } from '../about/about.component';
 import { NewaboutbetoComponent } from '../newaboutbeto/newaboutbeto.component';
 import { NewsuccessgeneticsComponent } from '../newsuccessgenetics/newsuccessgenetics.component';
 import { LiveWebinarComponent } from '../live-webinar/live-webinar.component';
-import { ProductComponent } from '../product/product.component';
+import { ProductComponent,CommingSoon2} from '../product/product.component';
 import { ContactComponent } from '../contact/contact.component';
 import { MentorsignupComponent, formModal } from '../mentorsignup/mentorsignup.component';
 import { LandingpageComponent } from '../landingpage/landingpage.component';
@@ -36,6 +36,7 @@ import { AffiliatesignupComponent } from '../affiliatesignup/affiliatesignup.com
     NewsuccessgeneticsComponent,
     LiveWebinarComponent,
     ProductComponent,
+    CommingSoon2,
     ContactComponent,
     MentorsignupComponent,
     formModal,
@@ -55,7 +56,7 @@ import { AffiliatesignupComponent } from '../affiliatesignup/affiliatesignup.com
     // RouterModule
     // FooterComponent
   ],
-  entryComponents: [formModal],
+  entryComponents: [formModal,CommingSoon2],
 
 })
 export class PagesModule { }

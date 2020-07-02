@@ -15,7 +15,7 @@ import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { DemoMaterialModule } from './material-module';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent,CommingSoon } from './home/home.component';
 import { TermsandCondition, PrivacyPolicy } from './footer/footer.component';
 // import { HeaderComponent } from './header/header.component';
 // import { NewthewholestoryComponent } from './newthewholestory/newthewholestory.component';
@@ -72,6 +72,7 @@ export function metaFactory(): MetaLoader {
   declarations: [
     AppComponent,
     HomeComponent,
+    CommingSoon,
     // FooterComponent,
     // TemplateModule,
     // HeaderComponent,
@@ -131,7 +132,7 @@ export function metaFactory(): MetaLoader {
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: [loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
+  entryComponents: [CommingSoon,loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
 })
 export class AppModule {
 
