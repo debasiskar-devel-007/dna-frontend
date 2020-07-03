@@ -17,7 +17,7 @@ import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common
 import { Router, RouterModule } from '@angular/router';
 import { HomeComponent,CommingSoon } from './home/home.component';
 import { TermsandCondition, PrivacyPolicy } from './footer/footer.component';
-// import { HeaderComponent } from './header/header.component';
+import { HeaderComponent ,CommingSoon3} from './header/header.component';
 // import { NewthewholestoryComponent } from './newthewholestory/newthewholestory.component';
 // import { NewmentorComponent } from './newmentor/newmentor.component';
 //import { NewaboutbetoComponent } from './newaboutbeto/newaboutbeto.component';
@@ -73,6 +73,7 @@ export function metaFactory(): MetaLoader {
     AppComponent,
     HomeComponent,
     CommingSoon,
+    CommingSoon3,
     // FooterComponent,
     // TemplateModule,
     // HeaderComponent,
@@ -132,7 +133,7 @@ export function metaFactory(): MetaLoader {
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: [CommingSoon,loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
+  entryComponents: [CommingSoon3,CommingSoon,loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
 })
 export class AppModule {
 

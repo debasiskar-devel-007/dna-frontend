@@ -30,9 +30,9 @@ export class HeaderComponent implements OnInit {
   comming(){
     console.log('comming');
     this.openDialog();
-    return;
+    
   }
-  openDialog(): void {
+  openDialog() {
     const dialogRef = this.dialog.open(CommingSoon3, {
       width: '250px',
       data: '',
@@ -45,7 +45,7 @@ export class HeaderComponent implements OnInit {
   }
 }
 @Component({
-  selector: 'dialog-overview-example-dialog',
+  selector: 'overview-example-dialog',
   templateUrl: '../home/commingsoon.html',
 })
 export class CommingSoon3 {

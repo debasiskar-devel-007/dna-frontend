@@ -732,7 +732,8 @@ export class AddON {
       if (res.status == 'success') {
         this.router.navigateByUrl('success/' + res.message._id);
         this.dialogRef.close();
-      } else {
+      }
+       if(res.status=='error'){
         this._snackBar.open(res.errormessage, '', {
           duration: 2000,
         });
