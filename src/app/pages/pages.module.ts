@@ -5,7 +5,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { NewthewholestoryComponent } from '../newthewholestory/newthewholestory.component';
 import { FooterComponent } from '../footer/footer.component';
-import { HeaderComponent } from '../header/header.component';
+import { HeaderComponent,CommingSoon3 } from '../header/header.component';
 import { DemoMaterialModule } from '../material-module';
 import { TemplateModule } from '../templatemodule';
 import { NewmentorComponent } from '../newmentor/newmentor.component';
@@ -28,6 +28,7 @@ import { AffiliatesignupComponent } from '../affiliatesignup/affiliatesignup.com
 @NgModule({
   declarations: [
     PagesComponent,
+    CommingSoon3,
     NewthewholestoryComponent,
     NewmentorComponent,
     BlogComponent,
@@ -56,7 +57,7 @@ import { AffiliatesignupComponent } from '../affiliatesignup/affiliatesignup.com
     // RouterModule
     // FooterComponent
   ],
-  entryComponents: [formModal,CommingSoon2],
+  entryComponents: [CommingSoon3,formModal,CommingSoon2],
 
 })
 export class PagesModule { }
