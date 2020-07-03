@@ -24,7 +24,7 @@ export class BlogdetailComponent implements OnInit {
       // // window.scrollTo(500, 0); 
 
       FB.init({
-        appId: '679836882810934',
+        appId: '284977756033837',
         version: 'v2.9'
       });
   

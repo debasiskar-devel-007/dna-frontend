@@ -69,7 +69,7 @@ const routes: Routes = [
 
   //banner image display route
   {
-    path: 'landingpage/:class/:_id', component: ProductComponent,
+    path: 'products/:class/:_id', component: ProductComponent,
     resolve: { packagedata: TestresolveService },
     data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getbannerdataforlandingpage' }
   },

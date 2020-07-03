@@ -19,6 +19,12 @@
 .s_masterCourse_work_sec .s_masterCourse_work-bg_right .s-masterCourse_work_bg_center{background-position:10% bottom;}
 }
 @media screen and (max-width:1840px){.newhomeblock5_left_block3_sub{padding:110px 20px;}
+.successbook_topformarrow {
+    position: absolute;
+    right: -29px;
+    top: 70px;
+    width: 40px;
+}
 .s_bottom_sec .s_right_bg .s_bottom_start_section_content p{font-size:40px;line-height:44px;}
 }
 @media screen and (max-width:1810px){.s-top-banner-wrapper .s-top-banner-left .s-top-user-quote{top:3px;left:-39px;}
@@ -60,6 +66,13 @@
 .s_bottom_sec{background:url(../images/s_make_money_bottommBG.png) no-repeat left -5% bottom;}
 .s_bottom_sec .s_bottom_left_bg{background:url(../images/s_money_bg.png) no-repeat right -8% bottom;}
 .s_bottom_sec .s_right_bg .s_bottom_start_section_content p{font-size:37px;margin:24px 0 0 0px;line-height:40px;}
+
+.successbook_topformarrow {
+    position: absolute;
+    right: -15px;
+    top: 70px;
+    width: 31px;
+}
 }
 @media screen and (max-width:1780px){.s-education .s-money-bg .s-mentor-icon{padding:0 0px 0 380px;}
 .newhome_testimonial_con .tes_textdiv1{padding:19px 0;}
@@ -75,12 +88,27 @@
 .newhomeblock5_left_block4_devider{margin-top:10px;}
 .newhomeblock5_left_block3_sub{padding:88px 20px;}
 .newhome_testimonial_linkdiv{background:#f0f0ee;border-bottom:solid 1px #fff;padding:20px 5px;}
+
+.successbook_topformarrow {
+    position: absolute;
+    right: -4px;
+    top: 42px;
+    width: 31px;
+}
 }
 @media screen and (max-width:1750px){.newmentorsignup_form{top:50px;}
 }
 @media screen and (max-width:1740px){.s-formsection .button:first-of-type{height:90px!important;}
 
-.SB_topformwrapper .form {   min-height: 500px;  }
+
+.successbook_topformarrow {
+    position: absolute;
+    right: -32px;
+    top: 42px;
+    width: 42px;
+}
+
+/* .SB_topformwrapper .form {   min-height: 500px;  } */
 .s-Matercontent .s-mastersec-left{width:760px;}
 .s-Matercontent .s-mastersec-right{width:580px;}
 .affiliate-signup_banner{background-position:-180px top;}
@@ -124,6 +152,8 @@
 }
 @media screen and (max-width:1720px){.bannerimg1{left:850px;}
 .newmentorsignup_formbody .form-group{width:100%;margin:9px 0;}
+
+
 }
 @media screen and (max-width:1700px){.asnewimgwrapper{height:226px;}
 .newhomeblock5_left_block3_sub{padding:109px 20px;}
@@ -248,6 +278,13 @@
 @media screen and (max-width:1620px){.success_msg_con_aminew{background-position:right top;}
 }
 @media screen and (max-width:1600px){.as_bodycon .newproduct_list2_bottom_wrapper .newproduct_list2_list p:nth-of-type(1){margin-left:-470px;}
+
+.successbook_topformarrow {
+    position: absolute;
+    right: -18px;
+    top: 57px;
+    width: 29px;
+}
 .s_newAffiliate{padding:0px!important;}
 .newmentorsignup_block4_wrapper{padding-right:60px; padding-right:500px;}
 /* .newmentorsignup_block4_wrapper p{padding-right:440px;} */
@@ -372,8 +409,22 @@
 .as_bodycon .newproduct_list2_bottom{background-size:105%;}
 .newhomeblock5_left_block3_sub{padding:51px 20px;}
 .newhomeblock5_left_block1{background-position:-270px bottom !important;padding-right:364px!important;}
+
+.successbook_topformarrow {
+    position: absolute;
+    right: 0px;
+    top: 57px;
+    width: 25px;
+}
 }
 @media screen and (max-width:1540px){.bannerimg1{left:780px;width:360px;}
+
+.successbook_topformarrow {
+    position: absolute;
+    right: -28px;
+    top: 57px;
+    width: 38px;
+}
 .newmentorsignup_block2_text2{padding-left:25%;}
 
 .ms_left_text {
@@ -523,7 +574,7 @@
 .newmentorsignup_formbody .button:first-of-type{height:105px!important;}
 .s-formsection .button:first-of-type{height:76px!important;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{line-height:30px;}
-.newmentor_banner_section{background-position:-845px top !important;}
+.newmentor_banner_section{background-position:-720px top !important;}
 .newsuccessgenetics_banner_section{background-position:-660px top !important;}
 .product_form{margin:10px;}
 .afsignbtn{height:86px!important;}
@@ -620,7 +671,7 @@
 .newmentorsignup_block2_text2{padding-left:15%;}
 .newthewholestory_banner_section{background-position:-350px top !important;}
 .newaboutbeto_banner_section{background-position:-533px top !important;}
-.newmentor_banner_section{background-position:-885px top !important;}
+.newmentor_banner_section{background-position:-620px top !important;}
 .s-top-banner .s-top-banner-wrapper .s-content-wrapper{width:1200px;margin:0 auto;}
 .package1{background-size:98%;padding:40px 40px 40px 560px;}
 .producttextblock.newthewholestorybannertxt{width:765px;}
@@ -703,7 +754,7 @@
 .newcon2{font-size:44px;}
 .newcon5{width:605px;padding:13px 12px 15px 14px;font-size:20px;}
 .top_right_part .form_wrapper_header h4{font-size:42px;}
-.top_right_part .form_wrapper_header h3{font-size:26px;}
+.top_right_part .form_wrapper_header h3{font-size:26px;}  
 .s-learnmore-section .s-learnmoreButton{padding:75px;width:660px !important;float:left;font-size:27px;}
 .s-mentor-fluid{width:60%;height:auto;}
 .s-top-banner .s-top-banner-wrapper .s-top-banner-left .s-top-heading-bottom{padding-right:108px;}
@@ -724,6 +775,13 @@
 .s_newAffiliate .bottom_con .af_downpara .affiliate_quote{font-size:26px;line-height:33px;}
 }
 @media screen and (max-width:1360px){.newmentorsignup_formbody .form-group{width:100%;margin:11px 0;}
+
+.successbook_topformarrow {
+    position: absolute;
+    right: -16px;
+    top: 57px;
+    width: 28px;
+}
 .bannerimg1{left:570px;width:340px;}
 .newmentorsignup_top_banner_wrappertext h2 img{width:615px;}
 .newmentorsignup_top_banner_wrappertext h3{font-size:24px;}
@@ -743,6 +801,13 @@
 .newhomeblock5_left_block1{background-position:-430px bottom !important;padding-right:364px!important;}
 }
 @media screen and (max-width:1340px){.newmentorsignup_block2_text2{padding-left:60px;}
+
+.successbook_topformarrow {
+    position: absolute;
+    right: -4px;
+    top: 53px;
+    width: 25px;
+}
 .newmentorsignup_block2_text1{width:55%;}
 .newmentorsignup_block2_wrapper{background-size:486px;}
 .newmentorsignup_top_banner_wrappertext h1{font-size:48px;}
@@ -764,6 +829,13 @@
 .s-education .s-money-bg{background-position:189% bottom !important;}
 }
 @media screen and (max-width:1320px){.newaboutbeto_banner_section{background-position:-360px top!important;}
+
+.successbook_topformarrow {
+    position: absolute;
+    right: -29px;
+    top: 53px;
+    width: 38px;
+}
 .cart_formbox1 .subbtn_pro{font-size:26px;}
 .newmentorsignup_block2_text3 {
     width: 55%;
@@ -776,7 +848,12 @@
 }
 }
 @media screen and (max-width:1300px){.package_group:nth-of-type(3){background:url(../images/product_bg3.jpg) no-repeat 88% top;background-size:cover!important;}
-.newmentor_banner_section{background-position:-913px top !important;}
+
+.newblog_banner_section .producttextblock {
+    width: 680px;
+    padding: 44px 0 90px 25px;
+}
+.newmentor_banner_section{background-position:-670px top !important;}
 .newsuccessgenetics_banner_section{background-position:-710px top !important;}
 .producttextblock.newmentorbannertxt{padding-left:0px;}
 .newmentorsignup_block2_text1{width:58%;}
@@ -845,7 +922,7 @@
 .newmentorsignup_block4_wrapper p{ padding-right: 0px;}
 .newmentorsignup_block4_wrapper p:nth-of-type(3){padding-left:0px;}
 .newmentorsignup_block4_wrapper{padding-left:60px;background-position:left bottom!important;padding-bottom:80%;background-size:100%!important; padding-right: 60px;}
-.newmentor_banner_section{background-position:-934px top !important;}
+/* .newmentor_banner_section{background-position:-934px top !important;} */
 .newblog_banner_section{background-position:-920px top!important;}
 .affiliate-signup_banner{background-position:-480px top;}
 .newabout_banner_section{background-position:230px top!important;}
@@ -871,6 +948,12 @@
 .s_newAffiliate .bottom_con .af_downpara .good_news .goodnews_quote{font-size:20px;line-height:26px;}
 }
 @media screen and (max-width:1260px){.as_bodycon .newproduct_list2_bottom_wrapper .newproduct_list2_list p:nth-of-type(4){margin-left:-530px;}
+.successbook_topformarrow {
+    position: absolute;
+    right: -9px;
+    top: 53px;
+    width: 28px;
+}
 .foooter_section label{text-align:center;}
 .affiliate-signup_banner{background-position:-510px top;}
 .foooter_section_col{width:90%;}
@@ -910,7 +993,7 @@
 .end_block_left_bg .s_right_section .s_center_bg{background-position:-26% bottom !important;}
 .menu_block .home_banner_menu_section .navbar-nav li a{font-size:12px;}
 }
-@media screen and (max-width:1250px){.newmentor_banner_section{background-position:-943px top !important;}
+@media screen and (max-width:1250px){
 .newblog_banner_section{background-position:-960px top!important;}
 .product_banner_section .product_banner_inner_top_content .ptext1{font-size:14px;}
 }
@@ -1021,7 +1104,15 @@
 .home_new_imgblock3{padding:0 20px 30px 20px!important;background-size:44%!important;margin-top:25px;}
 }
 @media screen and (max-width:1199px){.package3{padding:0px!important;}
+.SB_topformwrapper .form_field_sameaddress {
+    margin: 10px auto;
+    width: 96%;
+    margin-bottom: 0px;
+}
+.formstap2 form{ min-height: inherit;}  
+.formstap4 form{ min-height: inherit;} 
 
+.successbook_topformarrow{ display: none;}
 .SB_topformwrapper .form{ min-height: inherit!important;}
 
 .top_body_right{ margin-top: 30px!important;}

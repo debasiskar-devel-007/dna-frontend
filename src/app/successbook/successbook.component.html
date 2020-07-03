@@ -54,6 +54,9 @@
         </div>
 
         <div class="top_body_right">
+
+          <img src="../../assets/images/successbook_topformarrow.png" alt="#" class="successbook_topformarrow"> 
+
             <div class="top_body_right_wrapper">
 
                 <div class="formheading">
@@ -70,7 +73,7 @@
                         <div class="ster1"> <span class="activestep"> <span class="linespan"> </span>  </span> </div>
                         <div class="ster2"> <span [class.activestep]="active1 === true"> <span class="linespan"></span> </span> </div>
                         <div class="ster3"> <span [class.activestep]="active2 === true"> <span class="linespan"></span> </span> </div>
-                        <div class="ster4"> <span [class.activestep]="active3 === true"> <span class="linespan"></span> </span> </div>
+                        <div class="ster4"> <span [class.activestep]="active3 === true">  </span> </div>
 
                     </div>
 
@@ -79,13 +82,13 @@
                       <label class="activelabel">USER INFORMATION</label>
                       <label [class.activelabel]="active1 === true">BILLING INFORMATION</label>
                     <label [class.activelabel]="active2 === true">Shipping Address</label>
-                    <label [class.activelabel]="active3 === true">card INFORMATION</label>
+                    <label [class.activelabel]="active3 === true">card INFORMATION  </label>
 
                    <!-- user info here -->
                    <ng-container *ngIf="form1">
                     
 
-                    <lib-showform *ngIf="formdata !=null"
+                    <lib-showform class="formstap1" *ngIf="formdata !=null"
                     [formdata]="formdata"
                     [formfieldrefresh]="formfieldrefresh"
                     [formfieldrefreshdata]="formfieldrefreshdata"
@@ -95,7 +98,7 @@
                 <!-- billing address -->
                    <ng-container *ngIf="form2">
                     
-                    <lib-showform *ngIf="formdata1 !=null"
+                    <lib-showform class="formstap2" *ngIf="formdata1 !=null"
                     [formdata]="formdata1"
                     [formfieldrefresh]="formfieldrefresh"
                     [formfieldrefreshdata]="formfieldrefreshdata"
@@ -107,7 +110,7 @@
                  
                    <ng-container *ngIf="form3">
 
-                    <lib-showform *ngIf="formdata2 !=null"
+                    <lib-showform  class="formstap3" *ngIf="formdata2 !=null"
                     [formdata]="formdata2"
                     [formfieldrefresh]="formfieldrefresh"
                     [formfieldrefreshdata]="formfieldrefreshdata"
@@ -117,8 +120,8 @@
                    </ng-container>
                     <!-- CARD INFORMATION-->
                     <ng-container *ngIf="form4">
-
-                      <lib-showform *ngIf="formdata3 !=null"
+                      <img src="../../assets/images/cardinfo_new.png" class="SBcardinfo">
+                      <lib-showform class="formstap4" *ngIf="formdata3 !=null"
                       [formdata]="formdata3"
                       [formfieldrefresh]="formfieldrefresh"
                       [formfieldrefreshdata]="formfieldrefreshdata"

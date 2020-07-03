@@ -29,7 +29,7 @@
          
          
                              <span class="carttext_info">
-                                  <span class="Quantity_text"><p>Quantity:</p><input type="number" [(ngModel)]="item.quantity" value="item.quantity" (change)="calculation(i)" min="1">
+                                  <span class="Quantity_text"><p>Quantity:</p>{{item.quantity}}
                                     <button class="remove_cartbtn" (click)="removeItem(cartDetails[0]._id,i)">Remove</button>
                                  </span>
                     
