@@ -69,7 +69,7 @@ export class ContactComponent implements OnInit {
               type: "text",
               validations: [
                 { rule: 'required', message: 'Name field is required' },
-                { rule: 'maxLength', value: 10 },
+                //{ rule: 'maxLength', value: 10 },
                 { rule: 'minLength', value: 2 }
               ],
       
