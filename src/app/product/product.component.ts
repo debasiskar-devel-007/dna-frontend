@@ -538,10 +538,10 @@ export class ProductComponent implements OnInit {
   }
 
   chooseProduct(i: any, item: any) {
-    this.openDialog();
-    return;
+    // this.openDialog();
+    // return;
     // document.querySelector('.newproduct_list1').scrollIntoView({ behavior: 'smooth', });
-    // console.log(item);
+    console.log(item);
     // console.log(i);
     this.index = i;
     this.allPackage[i].flag = item._id;
