@@ -1,14 +1,18 @@
 
-.cartpagebody{  margin: 30px auto; width: 1400px;  box-shadow: none!important; border-radius: 10px!important; background: #fff!important; border: solid 1px #dedede!important; padding: 30px;}
+.cartpagebody{  margin: 30px auto; width: 1400px;  box-shadow: none!important; border-radius: 10px!important; background: #fff!important;
+   border: solid 1px #dedede!important; padding: 25px;}
 .cartpagebody h2{ display: block; font-size: 30px; margin: 0 0 20px 0; border-bottom: solid 1px #dedede!important; padding: 0 0 16px 0;  
      font-family:'OpenSans-Semibold'; color: #282828;}
 
 
-.cartbodycon{ display: flex;}
+.cartbodycon{ display: flex;     background: #f2f8fa;
+  border: 1px solid #e3ecef;
+  border-radius: 10px;
+  padding: 12px; flex-wrap: wrap;     justify-content: space-between;}
 
-.cartleft{ width: 49%; border-right: solid 1px #dedede!important; padding: 0 20px 0 0; }
+.cartleft{ width: 49%; padding: 0 0 0 0; }
 
-.cartright{ width: 49%; padding: 0 0 0 20px;}
+.cartright{ width: 49%; padding: 0 0 0 0;}
 
 
 .cartdetail{ display: flex; background:#f1f5f7 url(../../assets/images/cartbg.png) no-repeat right center; padding: 20px; margin-bottom: 5px;}
@@ -226,14 +230,14 @@
           padding: 12px;
           font-family: 'OpenSans-Semibold';}
 
-          .order_block_wrapper{padding: 18px;}
+          /* .order_block_wrapper{padding: 18px;} */
 
 
           .mat-card-subtitle{ display: block; margin-bottom: 15px; font-size: 16px; color: #363636; font-family:'OpenSans-Semibold'; clear: both; overflow: hidden;}
 
           .mat-card-subtitle span{ display: inline-block; float: right; text-align: right;}
 
-          .mat-card-subtitle:last-of-type{ margin-top: 60px;  border-top: solid 1px #cbd0d2;  padding-top: 15px; margin-bottom: 0px;  }
+          /* .mat-card-subtitle:last-of-type{ margin-top: 60px;  border-top: solid 1px #cbd0d2;  padding-top: 15px; margin-bottom: 0px;  } */
 
 
           .security_block{border: solid 1px #cbd0d2;     background: #ffffff;      margin: 15px 0 0 0; padding: 18px;}
@@ -258,6 +262,25 @@
             padding: 12px;
             font-family: 'OpenSans-Semibold';}
 
+            .order_block_wrapper mat-card-subtitle {
+              display: flex!important;
+              flex-wrap: wrap!important;
+              justify-content: space-between!important;
+              margin: 0px!important;
+          }
+            .order_block_wrapper mat-card-subtitle span {
+              width: 46%;
+              border-top: solid 1px #ebebeb;
+              padding: 10px 2%;
+              text-align: left!important;
+              font-size: 16px;
+              color: #363636;
+              font-family: 'OpenSans-Regular';
+              float: none!important;
+          }
+          .order_block_wrapper mat-card-subtitle:nth-of-type(even) {
+            background: #f2f8fa;
+        }
 /*--------------------*/
 
                 
