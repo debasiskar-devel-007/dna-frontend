@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../environments/environment';
 import { CookieService } from 'ngx-cookie-service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
 export interface DialogData {
   animal: string;
   name: string;
@@ -543,12 +544,19 @@ export class ProductComponent implements OnInit {
     // document.querySelector('.newproduct_list1').scrollIntoView({ behavior: 'smooth', });
     console.log(item);
     // console.log(i);
+    if(item.free_shipping==null){
+      // console.log('freeshipping null');
+    this.productDetails.delivery = 6.95;
+    }else{
+      this.productDetails.delivery=0.00;
+    }
+  
     this.index = i;
     this.allPackage[i].flag = item._id;
   
     this.productDetails.name = item.productname;
     this.productDetails.price = item.price;
-    this.productDetails.delivery = 6.95;
+    // this.productDetails.delivery = 6.95;
     this.saletax = this.productDetails.price / 100 * 6;
     this.saletax = parseFloat(this.saletax.toFixed(2));
     this.productDetails.saletax = this.saletax;
