@@ -1836,3 +1836,25 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
     border: none;
     margin: 0px 15px!important;
 }
+
+
+.commingsoon .mat-dialog-container{ border: solid 10px #1baffc; min-width: 300px; padding: 0px!important;}
+
+.commingsoon  .mat-card{ border: none!important; box-shadow: none!important;}
+
+.commingsoon  .mat-card-title{ text-align: center; margin: 0; padding: 0 0 10px 0;     font-size: 30px;
+    color: #3e405b;
+    font-family: 'OpenSans-Semibold';}
+
+    .commingsoon button{display: block;
+        width: 120px;
+        border-radius: 4px;
+        background: #e75046 ;
+        text-align: center;
+        padding: 0px;
+        font-size: 18px;
+        color: #ffffff!important;
+        text-transform: uppercase;
+        outline: none!important;
+        font-family: 'OpenSans-Semibold';
+        margin: 0 auto; margin-top: 5px;}
