@@ -22,7 +22,7 @@
 
 .carttext label{ display: block; font-size: 30px; color: #e75248;  font-family:'OpenSans-Semibold';}
 
-.carttext_info{ position: absolute; bottom: 0; display: block; border-top: solid 1px #fff; padding-top: 20px; width: 98%;}
+.carttext_info{  display: block; border-top: solid 1px #fff; padding-top: 20px; width: 98%;}
 
 .remove_btn{ display: block; float: right; width: 118px; background: #048ceb; border: none; box-shadow: none; border-radius: 4px; 
     text-align: center; line-height: 30px; cursor: pointer;
