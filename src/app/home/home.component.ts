@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
 import { MetaService } from '@ngx-meta/core';
 import { ActivatedRoute ,Router} from '@angular/router';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+export interface DialogData {
+  animal: string;
+  name: string;
+}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,7 +13,7 @@ import { ActivatedRoute ,Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public meta: MetaService,public router:Router) { 
+  constructor(public meta: MetaService,public router:Router,public dialog: MatDialog) { 
       // window.scrollTo(500, 0); 
   
     this.meta.setTitle('DNA Of Success - The DNA Master Course');
@@ -29,6 +34,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
   learnproduct(value:any){
+    this.openDialog()
     // console.log(value);
     // this.router.navigateByUrl('/pages/products/'+value)
   }
@@ -36,4 +42,30 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('/pages/products-list/'+value)
 
   }
+  openDialog(): void {
+    const dialogRef = this.dialog.open(CommingSoon, {
+      width: '250px',
+      data: '',
+      panelClass:'commingsoon'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+}
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'commingsoon.html',
+})
+export class CommingSoon {
+
+  constructor(
+    public dialogRef: MatDialogRef<CommingSoon>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
 }

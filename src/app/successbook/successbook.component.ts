@@ -37,7 +37,8 @@ export class SuccessbookComponent implements OnInit {
   public active1: boolean = false;
   public active2: boolean = false;
   public active3: boolean = false;
-  public form1Value: any;
+  formdata1:any={}
+  public form1Value: any=[];
   public form2Value: any;
   public form3Value: any;
   public form4Value: any;
@@ -133,63 +134,7 @@ export class SuccessbookComponent implements OnInit {
     ]
   };
   // 2nd form start here
-  formdata1: any = {
-    successmessage: 'Banner added Successfully !!',
-    redirectpath: '',
-    submitactive: true, // optional, default true
-    submittext: 'Next',
-    // resettext: 'Reset',
-    // canceltext: 'Cancel',
-    // apiUrl: this._apiService.api_url,
-    // endpoint: 'api1/test',
-    jwttoken: '',
-    // cancelroute: '/manage-banner',
-
-    fields: [
-      {
-        label: "Address",
-        name: "address",
-        type: "text",
-        value: '',
-        validations: [
-          { rule: 'required', message: "Select Your State" },
-        ]
-      },
-      {
-        //heading:"",
-        label: "State",
-        name: "state",
-        type: "select",
-        val: this.statesjson,
-        value: '',
-        validations: [
-          { rule: 'required', message: "Select Your State" },
-        ]
-      },
-      {
-        label: 'City',
-        name: 'city',
-        hint: '',
-        type: 'text',
-        val: '',
-        validations: [
-          { rule: 'required', message: 'City is required' }
-        ],
-      },
-      {
-        label: 'Zip',
-        name: 'zip',
-        hint: '',
-        type: 'number',
-        val: '',
-        validations: [
-          { rule: 'required', message: 'Zip is required' }
-        ],
-      },
-
-
-    ]
-  };
+ 
 
   // form 3
   formdata2: any = {
@@ -537,6 +482,83 @@ export class SuccessbookComponent implements OnInit {
       this.form1Value = val.fromval;
       this.menteeSignupData.push(this.form1Value);
     }
+    this.form1Value=val.fromval;
+    this.formdata1 = {
+      successmessage: 'Banner added Successfully !!',
+      redirectpath: '',
+      submitactive: true, // optional, default true
+      submittext: 'Next',
+      // resettext: 'Reset',
+      // canceltext: 'Cancel',
+      // apiUrl: this._apiService.api_url,
+      // endpoint: 'api1/test',
+      jwttoken: '',
+      // cancelroute: '/manage-banner',
+  
+      fields: [
+        {
+          label: 'First Name',
+          name: 'firstname',
+          value:this.form1Value.firstname,
+          type: 'text',
+          validations: [
+            { rule: 'required', message: 'First Name is required' },
+  
+          ]
+        },
+        {
+          label: 'Last Name',
+          name: 'lastname',
+          value: this.form1Value.lastname,
+          type: 'text',
+          validations: [
+            { rule: 'required', message: 'Last Name is required' },
+          ]
+        },
+        {
+          label: "Address",
+          name: "address",
+          type: "text",
+          value: '',
+          validations: [
+            { rule: 'required', message: "Select Your State" },
+          ]
+        },
+        {
+          //heading:"",
+          label: "State",
+          name: "state",
+          type: "select",
+          val: this.statesjson,
+          value: '',
+          validations: [
+            { rule: 'required', message: "Select Your State" },
+          ]
+        },
+        {
+          label: 'City',
+          name: 'city',
+          hint: '',
+          type: 'text',
+          val: '',
+          validations: [
+            { rule: 'required', message: 'City is required' }
+          ],
+        },
+        {
+          label: 'Zip',
+          name: 'zip',
+          hint: '',
+          type: 'number',
+          val: '',
+          validations: [
+            { rule: 'required', message: 'Zip is required' }
+          ],
+        },
+  
+  
+      ]
+    };
   }
   listenFormFieldChange1(val: any) {
     if (val.field == 'fromsubmit') {
@@ -710,7 +732,8 @@ export class AddON {
       if (res.status == 'success') {
         this.router.navigateByUrl('success/' + res.message._id);
         this.dialogRef.close();
-      } else {
+      }
+       if(res.status=='error'){
         this._snackBar.open(res.errormessage, '', {
           duration: 2000,
         });

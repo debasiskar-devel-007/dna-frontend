@@ -138,13 +138,13 @@
                 <h2>ORDER SUMMARY</h2>
                 <div class="order_block_wrapper">
                 <ng-container *ngFor="let item of productDetails[0].product">
-            <mat-card-subtitle>Item:<span>{{item.name}}</span></mat-card-subtitle>
-            <mat-card-subtitle>Quantity:<span>{{item.quantity}}</span></mat-card-subtitle>
+            <mat-card-subtitle><span>Item:</span><span>{{item.name}}</span></mat-card-subtitle>
+            <mat-card-subtitle><span>Quantity:</span><span>{{item.quantity}}</span></mat-card-subtitle>
             </ng-container>
-            <mat-card-subtitle>SubTotal: <span>${{productDetails[0].subtotal}}</span></mat-card-subtitle>
-            <mat-card-subtitle>SaleTax: <span>${{productDetails[0].saletax}}</span></mat-card-subtitle>
-            <mat-card-subtitle>Shipping: <span>${{productDetails[0].shipping_charge}}</span></mat-card-subtitle>
-            <mat-card-subtitle>Total:<span>${{productDetails[0].total}}</span></mat-card-subtitle>
+            <mat-card-subtitle><span>SubTotal:</span> <span>${{productDetails[0].subtotal}}</span></mat-card-subtitle>
+            <mat-card-subtitle><span>SaleTax:</span> <span>${{productDetails[0].saletax}}</span></mat-card-subtitle>
+            <mat-card-subtitle><span>Shipping:</span> <span>${{productDetails[0].shipping_charge}}</span></mat-card-subtitle>
+            <mat-card-subtitle><span>Total:</span><span>${{productDetails[0].total}}</span></mat-card-subtitle>
          
              </div>
 

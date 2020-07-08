@@ -82,7 +82,7 @@ export class BlogdetailComponent implements OnInit {
 
  //get blog data by cat id 
  viewAllByBlogCat(val:any){
-  this.router.navigateByUrl('/blog/'+val._id);
+  this.router.navigateByUrl('/pages/blog/'+val._id);
  }
 
 

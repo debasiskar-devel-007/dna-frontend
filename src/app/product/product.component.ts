@@ -4,7 +4,11 @@ import { ApiService } from '../api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../environments/environment';
 import { CookieService } from 'ngx-cookie-service';
-
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+export interface DialogData {
+  animal: string;
+  name: string;
+}
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -41,7 +45,7 @@ export class ProductComponent implements OnInit {
   public banner_image: any;
 
 
-  constructor(public CookieService: CookieService, public _apiService: ApiService, public ActivatedRoute: ActivatedRoute,
+  constructor(public dialog: MatDialog, public CookieService: CookieService, public _apiService: ApiService, public ActivatedRoute: ActivatedRoute,
     public meta: MetaService, public router: Router) {
     this.meta.setTitle('DNA Of Success - Our Products ');
     this.meta.setTag('og:description', 'Products and packages that help to obtain Jack Zufelt’s incredible program to success and professional mentorship guidance towards achieving your dreams and the Core desires of your heart.');
@@ -57,8 +61,6 @@ export class ProductComponent implements OnInit {
       this.meta.setTag('og:image', 'https://dna.influxiq.com/assets/images/default_image.jpg');
       this.meta.setTag('og:url', 'https://dna.influxiq.com/pages/products');
       this.meta.setTag('twitter:url', 'https://dna.influxiq.com/pages/products');
-
-
     }
 
 
@@ -76,7 +78,7 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
 
-    if (this.ActivatedRoute.snapshot.routeConfig.path == 'landingpage/:class/:_id') {
+    if (this.ActivatedRoute.snapshot.routeConfig.path == 'products/:class/:_id') {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
         this.acctoken = resolveData.packagedata.results.token.access_token;
@@ -536,7 +538,8 @@ export class ProductComponent implements OnInit {
   }
 
   chooseProduct(i: any, item: any) {
-
+    this.openDialog();
+    return;
     // document.querySelector('.newproduct_list1').scrollIntoView({ behavior: 'smooth', });
     // console.log(item);
     // console.log(i);
@@ -559,8 +562,11 @@ export class ProductComponent implements OnInit {
     // console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {
-    //// console.log(val);
+    // console.log(val);
     if (val.field == 'fromsubmit') {
+    // console.log('val');
+    //   this.openDialog();
+    //   return;
       if (val.fromval.message != null && val.fromval.message != '') {
         // console.log(val.fromval.message._id);
         this.router.navigateByUrl('success/' + val.fromval.message._id);
@@ -593,6 +599,31 @@ export class ProductComponent implements OnInit {
       }
 
     }
+  }
+  openDialog(): void {
+    const dialogRef = this.dialog.open(CommingSoon2, {
+      width: '250px',
+      data: '',
+      panelClass:'commingsoon'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+}
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: '../home/commingsoon.html',
+})
+export class CommingSoon2 {
+
+  constructor(
+    public dialogRef: MatDialogRef<CommingSoon2>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
 }
