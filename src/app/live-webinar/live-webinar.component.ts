@@ -74,7 +74,7 @@ export class LiveWebinarComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.data.forEach((response: any) => {
-      // console.warn('shop',response);
+      // console.warn('live webinar webinars',response);
       this.allproduct = response.shop.results.package;
       this.acctoken = response.shop.results.token.access_token;
       // console.log(this.acctoken)
@@ -87,6 +87,7 @@ export class LiveWebinarComponent implements OnInit {
 
 
   productselect(value: any) {
+    // console.log(value);
     let parentid = '';
     let affiliate_id = '';
     if (this.parentdetails != null && this.parentdetails != '') {
@@ -98,15 +99,17 @@ export class LiveWebinarComponent implements OnInit {
         affiliate_id = this.parentdetails._id
       }
     }
-    console.log(parentid);
+    // console.log(parentid);
 
     const product: any = {};
-    product.price = 49;
+    product.price =value.price;
     product.quantity = 1;
     product.name = value.product_name;
+    product.productid = value._id;
     product.sq_no = value.product_sq_no;
     product.image = value.image;
     product.webinarid = value._id;
+    product.free_shipping=value.free_shipping;
     //  console.log(product);
 
     let data: any = {};
@@ -119,8 +122,8 @@ export class LiveWebinarComponent implements OnInit {
       affiliate_id: affiliate_id
     };
 
-    console.log(data);
-
+    //  console.log(data);
+  
     this.apiService.customRequest1(data, 'api/frontendcart', environment['api_url']).subscribe((res: any) => {
       // console.warn(res);
       if (res.status == 'success') {

@@ -5,6 +5,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 // import {CartService} from '../cart.service';
 import {environment} from '../../environments/environment';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+// import * as console from 'console';
 
 export interface DialogData {
   alldata: any;
@@ -22,6 +23,7 @@ public saletax = 0;
 public quantity = 1;
 public uniqueId: any = 0;
 
+
   constructor(public dialog: MatDialog,public CookieService: CookieService, public activatedRoute: ActivatedRoute, public apiService: ApiService, public router: Router) { 
     this.uniqueId=this.CookieService.get('uniqueID')
   }
@@ -31,7 +33,7 @@ public uniqueId: any = 0;
     this.activatedRoute.data.forEach((response: any) => {
       // console.warn('cartdetails',response);
       this.cartDetails = response.cart.results;
-    //  console.warn('cartdetails',this.cartDetails);
+    console.warn('cartdetails',this.cartDetails);
 
       // observal cart data
       if (this.cartDetails.length == 0) {
@@ -50,10 +52,26 @@ public uniqueId: any = 0;
       for (const i in this.cartDetails[0].product) {
         price = price + this.cartDetails[0].product[i].price;
      }
+     //free shipping
+     let shippingFlag: boolean = false;
+     for (const i in this.cartDetails[0].product) {
+      if (this.cartDetails[0].product[i].free_shipping == 0) {
+        shippingFlag = true;
+      }
+    }
+    // console.log('free_shipping',shippingFlag);
+    if (shippingFlag == false) {
+      
+      if (this.cartDetails != null && this.cartDetails[0].shipping_charge == null) { this.cartDetails[0].shipping_charge = 0.00; } else { this.cartDetails[0].shipping_charge = parseFloat(this.cartDetails[0].shipping_charge); }
 
+    } else {
+
+      if (this.cartDetails != null && this.cartDetails[0].shipping_charge == null) { this.cartDetails[0].shipping_charge = 6.95; } else { this.cartDetails[0].shipping_charge = parseFloat(this.cartDetails[0].shipping_charge); }
+    }
       if (this.cartDetails != null && this.cartDetails[0].price == null) {this.cartDetails[0].price =price;
       } else { this.cartDetails[0].price =price;}
-      if (this.cartDetails != null && this.cartDetails[0].shipping_charge == null) {this.cartDetails[0].shipping_charge = 6.95; } else { this.cartDetails[0].shipping_charge = parseInt(this.cartDetails[0].shipping_charge); }
+
+      // if (this.cartDetails != null && this.cartDetails[0].shipping_charge == null) {this.cartDetails[0].shipping_charge = 6.95; } else { this.cartDetails[0].shipping_charge = parseInt(this.cartDetails[0].shipping_charge); }
 
       if (this.cartDetails != null && this.cartDetails[0].subtotal == null) {this.cartDetails[0].subtotal = this.cartDetails[0].price} else { this.cartDetails[0].subtotal = this.cartDetails[0].price}
 
@@ -88,7 +106,23 @@ public uniqueId: any = 0;
     for (const i in this.cartDetails[0].product) {
       price = price + this.cartDetails[0].product[i].price;
    }
-      if(this.cartDetails!=null && this.cartDetails[0].shipping_charge==null)this.cartDetails[0].shipping_charge=6.95;else this.cartDetails[0].shipping_charge=parseInt(this.cartDetails[0].shipping_charge);
+    //free shipping
+    let shippingFlag: boolean = false;
+    for (const i in this.cartDetails[0].product) {
+     if (this.cartDetails[0].product[i].free_shipping == 0) {
+       shippingFlag = true;
+     }
+   }
+   // console.log('free_shipping',shippingFlag);
+   if (shippingFlag == false) {
+     
+     if (this.cartDetails != null && this.cartDetails[0].shipping_charge == null) { this.cartDetails[0].shipping_charge = 0.00; } else { this.cartDetails[0].shipping_charge = parseFloat(this.cartDetails[0].shipping_charge); }
+
+   } else {
+
+     if (this.cartDetails != null && this.cartDetails[0].shipping_charge == null) { this.cartDetails[0].shipping_charge = 6.95; } else { this.cartDetails[0].shipping_charge = parseFloat(this.cartDetails[0].shipping_charge); }
+   }
+      // if(this.cartDetails!=null && this.cartDetails[0].shipping_charge==null)this.cartDetails[0].shipping_charge=6.95;else this.cartDetails[0].shipping_charge=parseInt(this.cartDetails[0].shipping_charge);
 
       if(this.cartDetails!=null && this.cartDetails[0].price==null)this.cartDetails[0].price=price;else this.cartDetails[0].price=price;
 
