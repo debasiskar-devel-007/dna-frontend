@@ -13,6 +13,7 @@ import { MetaService } from '@ngx-meta/core';
 })
 export class MentordetailComponent implements OnInit {
   public mentordetail: any;
+  public p_id: any;
   constructor(public cookieService: CookieService, public activatedRoute: ActivatedRoute, public apiService: ApiService, public router: Router, public sanitizer: DomSanitizer,
     public meta: MetaService, public FB: FacebookService) {
     FB.init({
@@ -58,4 +59,7 @@ export class MentordetailComponent implements OnInit {
     // return val
   }
 
+  showmore(index: any) {
+    this.p_id = index.userid;
+  }
 }

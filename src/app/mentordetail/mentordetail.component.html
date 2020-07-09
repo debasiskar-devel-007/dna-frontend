@@ -11,14 +11,11 @@
                     <h2>I AM A DNA OF SUCCESS MASTER MENTOR
                         <label>Please review our programs with the DNA Master Course.com
                             and choose a package to get started so we can
-                            start working together! </label>
+                            start working together!
+                        </label>
                     </h2>
-
-
                 </span>
             </span>
-
-
         </span>
 
 
@@ -30,7 +27,7 @@
 
                     <span *ngIf="mentordetail.image != null; else elseSpan"> <img src="{{safeurl(mentordetail.image)}}"
                             alt="#"> </span>
-                    <ng-template #elseSpan> km </ng-template>
+                    <ng-template #elseSpan> <img src="https://i.stack.imgur.com/l60Hf.png"> </ng-template>
 
                 </span>
 
@@ -39,61 +36,63 @@
 
                     <h3>Email: {{mentordetail.email != null ? mentordetail.email : 'N/A'}} </h3>
 
-                    <h4>{{mentordetail.fulladdress != null ? mentordetail.fulladdress : 'N/A'}}
+                    <h4>Address: {{mentordetail.fulladdress != null ? mentordetail.fulladdress : 'N/A'}}
                         <br />
                         <span> Mob: {{mentordetail.phone != null ? mentordetail.phone : 'N/A'}} </span></h4>
 
                     <span *ngIf="mentordetail.about_me != null && mentordetail.about_me != ''"
                         [innerHtml]="mentordetail.about_me"></span>
+                    <span
+                        *ngIf="mentordetail != '' &&  mentordetail.about_me != '' && mentordetail.about_me != null && mentordetail.about_me.length >= 340"
+                        class="mentorDetailtext" [ngClass]="{'hide':mentordetail.userid == p_id}"
+                        (click)="openDialogDetail(mentordetail)">read more</span>
 
                     <h6>Mentor Since :
-                        {{mentordetail.createdon_datetime != null ? (mentordetail.createdon_datetime | date:'medium') : 'N/A'}}
+                        {{mentordetail.createdon_datetime != null ? (mentordetail.createdon_datetime | date) : 'N/A'}}
                     </h6>
                 </span>
             </span>
 
             <span class="mentordetail_block2">
 
-                <label class="fb_icon" *ngIf="mentordetail.facebook_id != null"><a target="_blank"
+                <label class="fb_icon" *ngIf="mentordetail.facebook_id != null && mentordetail.facebook_id != ''"><a target="_blank"
                         href="https://www.facebook.com/{{mentordetail.facebook_id}}">https://www.facebook.com/{{mentordetail.facebook_id}}</a></label>
-                <label class="ig_icon" *ngIf="mentordetail.tumblr_id != null"><a target="_blank"
+                <label class="ig_icon" *ngIf="mentordetail.tumblr_id != null && mentordetail.tumblr_id != ''"><a target="_blank"
                         href="https://www.tumblr.com/{{mentordetail.tumblr_id}}">https://www.tumblr.com/{{mentordetail.tumblr_id}}</a></label>
-                <label class="tw_icon" *ngIf="mentordetail.twiter_id != null"><a target="_blank"
+                <label class="tw_icon" *ngIf="mentordetail.twiter_id != null && mentordetail.twiter_id != ''"><a target="_blank"
                         href="https://twitter.com/{{mentordetail.twiter_id}}">https://twitter.com/{{mentordetail.twiter_id}}</a></label>
-                <label class="in_icon" *ngIf="mentordetail.linkedin_id != null"><a target="_blank"
+                <label class="in_icon" *ngIf="mentordetail.linkedin_id != null && mentordetail.linkedin_id != ''"><a target="_blank"
                         href="https://in.linkedin.com/{{mentordetail.linkedin_id}}">https://in.linkedin.com/{{mentordetail.linkedin_id}}</a></label>
             </span>
 
 
             <span class="mentordetail_block3">
-
-                <h2>Gallery</h2>
-
-
-                <span class="mentordetail_block3_wrapper">
-
-                    <!-- !!!!*image  upload size height='560px' width='315px' (16:9 ratio)* -->
-
-                    <span class="MDgaller_imagewrapper">
-                        <span class="MDgaller_imagecon"
-                            *ngIf="mentordetail.youtube_links != null && mentordetail.youtube_links != ''">
-                            <iframe width="560" height="315" [src]='mentordetail.youtube_links' frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </span>
-                    </span>
-                    <ng-container
-                        *ngIf="mentordetail.gallery_image_array != null && mentordetail.gallery_image_array != ''">
-                        <span class="MDgaller_imagewrapper" *ngFor="let item of mentordetail.gallery_image_array">
-                            <span class="MDgaller_imagecon"><img [src]='safeurl(item)'>
+                <ng-container
+                    *ngIf=" mentordetail.youtube_links != '' || (mentordetail.gallery_image_array != null && mentordetail.gallery_image_array.length >0)">
+                    <h2> Gallery</h2>
+                    <span class="mentordetail_block3_wrapper">
+                        <span class="MDgaller_imagewrapper" [ngClass]="{'youtubecls':mentordetail.youtube_links != ''}">
+                            <span class="MDgaller_imagecon"
+                                [ngClass]="{'youtubewrappercls':mentordetail.youtube_links != ''}"
+                                *ngIf="mentordetail.youtube_links != null && mentordetail.youtube_links != ''">
+                                <iframe width="560" height="315" [src]='mentordetail.youtube_links' frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
                             </span>
                         </span>
-                    </ng-container>
-
-
-
-
-                </span>
+                        <ng-container
+                            *ngIf="mentordetail.gallery_image_array != null && mentordetail.gallery_image_array != '' && mentordetail.gallery_image_array.length > 0">
+                            <span class="MDgaller_imagewrapper" *ngFor="let item of mentordetail.gallery_image_array"
+                                [ngClass]="{'imggallerycls':mentordetail.gallery_image_array != ''}">
+                                <span [ngClass]="{'imggalleryinnercls':mentordetail.gallery_image_array != ''}"
+                                    (click)="openDialoggallery(safeurl(item))">
+                                    <img src="{{safeurl(item)}}">
+                                </span>
+                            </span>
+                            <!-- </span> -->
+                        </ng-container>
+                    </span>
+                </ng-container>
 
                 <button class="MDetailPurchase_BTN">Choose this Mentor as your Guide <span>(No Cost for Choice) </span>
                 </button>
