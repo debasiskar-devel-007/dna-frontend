@@ -95,17 +95,17 @@
         margin: 0; 
         font-family: 'OpenSans-Semibold';}
 
-        .table_body thead th{ text-align: left; padding: 10px 10px; }
+        .table_body thead th{ text-align: center; padding: 10px 10px; }
 
         
 
-        .table_body_order thead th{ text-align: left; padding: 10px 10px; border-right: solid 1px #fff;}
+        .table_body_order thead th{ text-align: center; padding: 10px 10px; border-right: solid 1px #fff;}
 
         .table_body_order thead th:last-of-type{border: none;}
 
       
 
-        .table_body td{ text-align: left; padding: 10px 10px; font-size: 18px; font-family: 'OpenSans-Semibold';   color: #262626; }
+        .table_body td{ text-align: center; padding: 10px 10px; font-size: 18px; font-family: 'OpenSans-Semibold';   color: #262626; }
         .table_body tbody tr:nth-of-type(even){  background: #f8f8f7;}
         .table_body tbody tr:nth-of-type(odd){ background: #f1f5f7;}
 
@@ -170,6 +170,12 @@
     }
 
         @media screen and (max-width: 600px) {
+
+            .table_body td {
+                text-align: left;}
+
+                .table_body thead th{
+                    text-align: left;}
 
             .ordersuccess_body_wrapper h2{font-size: 24px;}
     

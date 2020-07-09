@@ -190,7 +190,15 @@ url('https://all-frontend-assets.s3.amazonaws.com/dna-frontend/assets/fonts/robo
 .newhomeblock5_left_block5{display:block;width:100%;margin:0;padding:0;border-top:solid 1px #fff;background:url("../images/nhome_left_con6_bg2.png") no-repeat right top;background-size:70%;border-bottom:solid 1px #fff;}
 .newhomeblock5_left_block5_bg1{display:block;width:100%;margin:0;padding:0;background:url("../images/nhome_left_con6_bg1.png") no-repeat left top;}
 .newhomeblock5_left_block5_bg2{display:block;width:100%;margin:0;padding:0;background:url("../images/nhome_left_con6_overlay.png") no-repeat right top;background-size:cover;position:relative;min-height:320px;}
-.leftblock5_img_div1{display:block;position:absolute;width:322px;top:34px;left:32%;}
+.leftblock5_img_div1 {
+    display: block;
+    position: absolute;
+    width: 250px;
+    top: 100px;
+    left: 38%;
+}
+
+.leftblock5_img_div1 img{ width: 100%;}
 .leftblock5_text_div1{display:block;position:absolute;top:46px;left:52%;font-family:'OpenSans-Bold';font-size:40px;text-transform:uppercase;line-height:40px;}
 .leftblock5_text_div1 b{display:block;background:-webkit-linear-gradient(#ffffff, #cacbcb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .leftblock5_text_div1 span{display:block;background:-webkit-linear-gradient(#ffffff, #cacbcb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
@@ -274,7 +282,7 @@ url('https://all-frontend-assets.s3.amazonaws.com/dna-frontend/assets/fonts/robo
 .product_banner_position{background-position:top right;}
 .product_banner_section .product_banner_col{padding:0px;display:block;}
 .product_banner_section{position:relative;top:0px;z-index:11;padding:0px;}
-.product_banner_section .product_banner_inner_top_content{background:#0092df;margin:0px;padding:20px 10px;}
+.product_banner_section .product_banner_inner_top_content{background:#0092df;margin:0px;padding:20px 10px;     width: 1260px;}
 .product_banner_section .product_banner_inner_top_content p{font-family:'OpenSans-Bold';font-size:16px;text-align:center;color:#fff;text-transform:uppercase;}
 .product_banner_section .product_banner_inner_top_content p span{color:#fff;}
 .producttextblock{width:800px;padding:0 0 50px 25px;}
@@ -340,7 +348,7 @@ url('https://all-frontend-assets.s3.amazonaws.com/dna-frontend/assets/fonts/robo
 .newabout_block6_con3{background:url("../images/new_about_con6_bg3.png") no-repeat center bottom;padding-bottom:25%;padding-top:15px;}
 .newabout_block6_con3 h2{width:90%;margin:0 auto;text-align:center;padding:16px;background:#27c8fb;border:solid 1px #fff;border-radius:10px;font-size:28px;color:#fff;text-transform:uppercase;font-family:'OpenSans-Semibold';}
 .page-newaboutbeto .row{margin-right:0!important;margin-left:0!important;}
-.newaboutbeto_banner_section{padding:0px!important;box-shadow:none;border:none;border-radius:0px;margin:0px!important;background:url("../images/new_aboutbetobanner1.jpg") no-repeat right 0px top!important;background-size:cover;border-radius:0px!important;}
+.newaboutbeto_banner_section{padding:0px!important;box-shadow:none;border:none;border-radius:0px;margin:0px!important;background:url("../images/new_aboutbetobanner1.jpg") no-repeat  0px top!important;background-size:cover;border-radius:0px!important;}
 .producttextblock.newaboutbetobannertxt{width:860px;padding:20px 0 50px 25px;}
 .producttextblock.newaboutbetobannertxt h2{font-size:52px;line-height:52px;}
 .producttextblock.newaboutbetobannertxt .divtext2{font-size:24px;color:#2c2b2b;font-family:'OpenSans-Semibold';line-height:30px;padding:15px 40px 0 0px;text-transform:uppercase;width:90%;}
@@ -371,7 +379,7 @@ url('https://all-frontend-assets.s3.amazonaws.com/dna-frontend/assets/fonts/robo
 .newaboutbeto_block3 .newaboutbeto_block3_row2_wrapper_right{padding:20px 0px;}
 .newaboutbeto_block3 .newaboutbeto_block3_row2_wrapper_right ul{margin:7px 24px 0 0px;padding:0px;font-size:18px;color:#000000;font-family:'OpenSans-Regular';font-weight:normal;line-height:24px;padding-left:174px;}
 .newaboutbeto_block3 ul{margin:7px 0 0 56px;padding:0px;padding-right:459px;}
-.newaboutbeto_block3 ul li{background:url(../images/new_about_con_icon2.png) no-repeat left 10px;font-size:18px;color:#000000;font-family:'OpenSans-Regular';margin:10px 0px;padding:5px 0 5px 40px;line-height:24px;list-style:none;font-weight:normal;}
+.newaboutbeto_block3 ul li{background:url(../images/new_about_con_icon2.png) no-repeat left 5px;font-size:18px;color:#000000;font-family:'OpenSans-Regular';margin:10px 0px;padding:5px 0 5px 40px;line-height:24px;list-style:none;font-weight:normal;}
 .modalclose{background:#ff4f42!important;color:#fff!important;padding:0px!important;height:35px!important;line-height:38px!important;}
 .newaboutbeto_block4 ul{margin:7px 0 0 56px;padding:0px;padding-right:459px;}
 .newaboutbeto_block4 ul li{background:url(../images/new_about_con_icon2.png) no-repeat left 10px;font-size:18px;color:#000000;font-family:'OpenSans-Regular';margin:10px 0px;padding:5px 0 5px 40px;line-height:24px;list-style:none;font-weight:normal;}
@@ -391,11 +399,11 @@ url('https://all-frontend-assets.s3.amazonaws.com/dna-frontend/assets/fonts/robo
 .newaboutbeto_block5_row2_wrapper_right .newabout_block5_btn a{display:block;background:url("../images/new_about_con2_btn_arrow.png") no-repeat right center;font-size:24px;color:#e9ecec;text-transform:uppercase;font-family:'OpenSans-Semibold';padding:5px 46px 5px 18px;}
 .newaboutbeto_block6{margin:0 auto!important;margin-top:38px!important;width:1172px!important;border:solid 1px #cbe1e3!important;padding:2px!important;box-shadow:none!important;border-radius:0px!important;}
 .newaboutbeto_block6 .newaboutbeto_main_wrapper{background:rgba(235,243,244,1);background:-moz-linear-gradient(-45deg, rgba(235,243,244,1) 0%, rgba(160,195,199,1) 100%);background:-webkit-gradient(left top, right bottom, color-stop(0%, rgba(235,243,244,1)), color-stop(100%, rgba(160,195,199,1)));background:-webkit-linear-gradient(-45deg, rgba(235,243,244,1) 0%, rgba(160,195,199,1) 100%);background:-o-linear-gradient(-45deg, rgba(235,243,244,1) 0%, rgba(160,195,199,1) 100%);background:-ms-linear-gradient(-45deg, rgba(235,243,244,1) 0%, rgba(160,195,199,1) 100%);background:linear-gradient(135deg, rgba(235,243,244,1) 0%, rgba(160,195,199,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebf3f4', endColorstr='#a0c3c7', GradientType=1);position:relative;}
-.newaboutbeto_block6_row1_wrapper{background:url("../images/new_aboutbeto_block6_row1_bg1new.png") no-repeat right bottom;min-height:320px;overflow:hidden;padding:20px;}
+.newaboutbeto_block6_row1_wrapper{background:url("../images/new_aboutbeto_block6_row1_bg1new.png") no-repeat right bottom;min-height:320px;overflow:hidden;padding:20px; background-size: cover!important;}
 .newaboutbeto_block6 h2{background:url(../images/new_about_con_icon.png) no-repeat left center;font-size:24px;color:#2a2929;text-transform:uppercase;font-family:'OpenSans-Semibold';margin:0px;padding:5px 0 5px 55px;max-width:75%;}
-.newaboutbeto_block6 h3{margin:7px 0 0 56px;padding:0px;font-size:18px;color:#000000;font-family:'OpenSans-Regular';font-weight:normal;line-height:24px;padding-right:468px;}
+.newaboutbeto_block6 h3{margin:7px 0 0 56px;padding:0px;font-size:18px;color:#000000;font-family:'OpenSans-Regular';font-weight:normal;line-height:24px;padding-right:500px;}
 .newaboutbeto_block6 h3 .span1{width:92%;font-weight:normal !important;display:inline-block;}
-.newaboutbeto_block6 h4{font-weight:bold;display:block;margin:14px 0 0 56px;padding:0px;font-size:24px;color:#000000;font-family:'OpenSans-Semibold';line-height:30px;padding-right:448px;}
+.newaboutbeto_block6 h4{font-weight:bold;display:block;margin:14px 0 0 56px;padding:0px;font-size:24px;color:#000000;font-family:'OpenSans-Semibold';line-height:30px;padding-right:500px;}
 .newaboutbeto_block6 h4 a{color:#fd3223;font-family:'OpenSans-Semibold';text-decoration:underline;}
 .newaboutbeto_block6 h4 a:hover{text-decoration:none;}
 .newaboutbeto_block7{margin:0 auto;margin-top:38px;width:1172px;border:solid 1px #cbe1e3;padding:2px;}
@@ -522,14 +530,14 @@ url('https://all-frontend-assets.s3.amazonaws.com/dna-frontend/assets/fonts/robo
 .newaboutbeto_block3_new{background:#d2ded4 url(../images/newaboutbeto_block4_new_bg.jpg) no-repeat right bottom;padding:20px;padding-bottom:30px;}
 .newaboutbeto_block3_new h3{margin:7px 0 0 56px;padding:0px;font-size:18px;color:#000000;font-family:'OpenSans-Regular';font-weight:normal;line-height:24px;width:660px;}
 .newaboutbeto_block3_new h4{font-size:24px;color:#2a2929;font-family:'OpenSans-Semibold';margin:30px 0 10px 0;padding:5px 0 5px 55px;width:410px;}
-.newaboutbeto_block3_new label{background:url(../images/new_about_con_icon2.png) no-repeat left 10px;font-size:18px;color:#000000;font-family:'OpenSans-Regular';font-weight:normal;margin:0 0 0 56px;padding:3px 0 3px 40px;line-height:24px;list-style:none;display:block;font-weight:normal;}
+.newaboutbeto_block3_new label{background:url(../images/new_about_con_icon2.png) no-repeat left 5px;font-size:18px;color:#000000;font-family:'OpenSans-Regular';font-weight:normal;margin:0 0 0 56px;padding:3px 0 3px 40px;line-height:24px;list-style:none;display:block;font-weight:normal;}
 .newaboutbeto_block1_new{margin:0 auto!important;margin-top:38px!important;width:1172px!important;border:solid 1px #cbe1e3!important;padding:2px!important;box-shadow:none!important;border-radius:0px!important;}
 .newaboutbeto_block1_new_row1_main{background:rgba(243,246,247,1);background:-moz-linear-gradient(left, rgba(243,246,247,1) 0%, rgba(196,224,227,1) 100%);background:-webkit-gradient(left top, right top, color-stop(0%, rgba(243,246,247,1)), color-stop(100%, rgba(196,224,227,1)));background:-webkit-linear-gradient(left, rgba(243,246,247,1) 0%, rgba(196,224,227,1) 100%);background:-o-linear-gradient(left, rgba(243,246,247,1) 0%, rgba(196,224,227,1) 100%);background:-ms-linear-gradient(left, rgba(243,246,247,1) 0%, rgba(196,224,227,1) 100%);background:linear-gradient(to right, rgba(243,246,247,1) 0%, rgba(196,224,227,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3f6f7', endColorstr='#c4e0e3', GradientType=1);}
 .newaboutbeto_block1_new_row1_wrapper{background:url(../images/newaboutbeto_block1_new_img3.png) no-repeat left top;padding:20px 20px 20px 288px;background-size:contain;}
 .new_row1imgdiv{width:150px;float:left;}
-.new_row1imgdiv span{display:block;width:100%;background:#fff;padding:8px;box-shadow:0 0 4px #888;margin:12px 0 0 0;}
+.new_row1imgdiv span{display:block;width:100%;background:#fff;padding:8px;box-shadow:0 0 4px #888;margin:12px 0 0 0; padding-bottom: 4px;}
 .new_row1imgdiv span img{width:100%;}
-.new_row1textdiv{width:690px;float:right;}
+.new_row1textdiv{width:670px;float:right;}
 .new_row1textdiv h2{background:url(../images/new_about_con_icon.png) no-repeat left 10px;font-size:23px;color:#2a2929;font-family:'OpenSans-Semibold';margin:0px;padding:10px 0 5px 55px;line-height:30px;}
 .new_row1textdiv h2 span{color:#ff4d40;}
 .new_row1textdiv h2 a{color:#ff4d40;}
@@ -549,7 +557,7 @@ url('https://all-frontend-assets.s3.amazonaws.com/dna-frontend/assets/fonts/robo
 .newaboutbeto_block1_new_row3_main img{float:left;box-shadow:0 0 4px #888;border:solid 10px #fff;margin:6px 25px 8px 0;}
 .newaboutbeto_block1_new_row3_main_bottom{background:url(../images/newaboutbeto_block1_new_img6.png) no-repeat right top;margin-top:15px;padding-bottom:50px;}
 .newaboutbeto_block1_new_row3_main_bottom h5{margin:0px;padding:0px;padding-right:540px;}
-.newaboutbeto_block1_new_row3_main_bottom label{background:url(../images/new_about_con_icon2.png) no-repeat left 10px;font-size:18px;color:#000000;font-family:'OpenSans-Regular';margin:0 0 0 56px;padding:3px 0 3px 40px;line-height:24px;list-style:none;display:block;font-weight:normal;}
+.newaboutbeto_block1_new_row3_main_bottom label{background:url(../images/new_about_con_icon2.png) no-repeat left 5px;font-size:18px;color:#000000;font-family:'OpenSans-Regular';margin:0 0 0 56px;padding:3px 0 3px 40px;line-height:24px;list-style:none;display:block;font-weight:normal;}
 .newaboutbeto_block1_new_row3_main_bottom h3{font-weight:bold;display:block;margin:14px 0 0 96px;padding:0px;font-size:24px;color:#000000;font-family:'OpenSans-Semibold';line-height:30px;padding-right:510px;}
 .newaboutbeto_block1_new_row3_main_bottom h3 a{color:#fd3223;font-family:'OpenSans-Semibold';text-decoration:underline;}
 .newaboutbeto_block1_new_row3_main_bottom h3 a:hover{text-decoration:none;}
@@ -774,12 +782,12 @@ button{box-shadow:none!important;}
 .nf_conleftimg{display:block;margin:0 auto;width:100%;}
 .clearfix{clear:both;overflow:hidden;}
 .productblockpopup h2{margin:0!important;padding:0!important;font-size:32px!important;color:#e75248!important;font-family:'OpenSans-Semibold'!important;text-transform:uppercase!important;}
-.newaboutbeto_newcon label{background:url(../images/new_about_con_icon2.png) no-repeat left 10px;font-size:18px;color:#000000;font-family:'OpenSans-Regular';margin:0 0 6px 0;padding:3px 0 3px 40px;line-height:24px;list-style:none;display:block;font-weight:normal;}
+.newaboutbeto_newcon label{background:url(../images/new_about_con_icon2.png) no-repeat left 5px;font-size:18px;color:#000000;font-family:'OpenSans-Regular';margin:0 0 15px 0;padding:3px 0 3px 40px;line-height:24px;list-style:none;display:block;font-weight:normal;}
 .newbetolabelcon{display:block;float:left;width:60%;margin-left:0%;}
 .newbetolabelcon:nth-of-type(2){display:block;width:100%;float:none;overflow:hidden;margin-left:0px;padding-top:20px;}
-.newbetolabelcon:nth-of-type(2) label{display:inline-block!important;margin-right:40px;background:url(../images/new_about_con_icon2.png) no-repeat left 7px;}
+.newbetolabelcon:nth-of-type(2) label{display:inline-block!important;margin-right:40px;background:url(../images/new_about_con_icon2.png) no-repeat left 5px;}
 .newaboutbeto_newcon{margin-bottom:10px;}
-.newaboutbeto_newcon img{margin-left:56px;margin-top:20px;}
+.newaboutbeto_newcon img{margin-left:56px;margin-top:20px; width: 290px;}
 .newaboutbeto_newcon h5{font-size:24px;color:#2a2929;margin:0;padding:0 0 15px 0;font-family:'OpenSans-Semibold';}
 .connewbtn{display:block;margin:20px 0!important;width:368px!important;float:none!important;padding:4px 0;overflow:hidden;}
 .home_new_imgblock1{padding-left:0px;}
@@ -1296,15 +1304,15 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .newaffiliatesignup_conbody_new{background:url("../images/newaffiliatesignup_new_bg.jpg") no-repeat center center;}
 .success_table1 th{text-align:center;}
 .success_table1 td{text-align:center;}
-.success_table2 th{text-align:left;}
-.success_table2 td{text-align:left;}
-.success_table2 th:nth-of-type(4){text-align:right;}
-.success_table2 td:nth-of-type(4){text-align:right;}
-.success_table2 th:nth-of-type(5){text-align:right;}
-.success_table2 td:nth-of-type(5){text-align:right;}
+.success_table2 th{text-align:center;}
+.success_table2 td{text-align:center;}
+.success_table2 th:nth-of-type(4){text-align:center;}
+.success_table2 td:nth-of-type(4){text-align:center;}
+.success_table2 th:nth-of-type(5){text-align:center;}
+.success_table2 td:nth-of-type(5){text-align:center;}
 .tablelistdeta td{text-align:right;}
 .newshop_banner_section{padding:0px!important;background:url(../images/new_shoptbanner1.png) no-repeat right top!important;background-size:cover!important;border:none!important;box-shadow:none!important;border-radius:0px!important;}
-.product_banner_section .product_banner_colnew{padding:0px;max-width:inherit;width:74%;margin:0 auto;}
+.product_banner_section .product_banner_colnew{padding:0px;max-width:inherit;width:90%;margin:0 auto;}
 .newshop_block1_wrapper .newshop_img{position:absolute;width:240px;height:120px;top:160px;right:0;background:url(./../images/newshopdevider.png) no-repeat left top;padding:30px 0 0 46px;}
 .newshop_block1_wrapper .newshop_buynow{width:190px;background:rgba(47,62,71,1);background:-moz-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);background:-webkit-gradient(left top, left bottom, color-stop(0%, rgba(47,62,71,1)), color-stop(100%, rgba(30,34,37,1)));background:-webkit-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);background:-o-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);background:-ms-linear-gradient(top, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);background:linear-gradient(to bottom, rgba(47,62,71,1) 0%, rgba(30,34,37,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2f3e47', endColorstr='#1e2225', GradientType=0);font-size:24px;color:#ffffff;text-transform:uppercase;font-family:'OpenSans-Bold';border-radius:4px;position:relative;z-index:99;}
 .newshop_block1_wrapper .newshop_buynow a{display:block;background:url(../images/new_shop_icon2.png) no-repeat 150px center;font-size:24px;color:#cce2e5;text-transform:uppercase;font-family:'OpenSans-Semibold';padding:5px 46px 5px 18px;}

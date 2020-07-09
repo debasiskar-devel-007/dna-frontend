@@ -9,6 +9,7 @@
 .s-top-banner .s-top-banner-wrapper{background:url(../images/s_topbannerleftbg.png) no-repeat -30px bottom;}
 .s-learnmore-section-top{width:786px;left:22px;}
 .s-learnmore-section .s-learnmoreButton{margin:0 0 0 -29px;}
+ 
 }
 @media screen and (max-width:1860px){.newmentorsignup_top_banner .newmentorsignup_top_banner_wrapper{background-position:830px top;}
 .bannerimg1{left:880px;}
@@ -46,8 +47,10 @@
 .newhomeblock5_left_block2{background-position:10% top!important;}
 .newhomeblock5_left_block4_devider{margin-top:-10px;}
 .newhomeblock5_left_block4{padding-bottom:40px;}
-.leftblock5_img_div1{width:280px;left:33%;}
-.leftblock5_img_div1 img{width:100%;}
+/* .leftblock5_img_div1{width:280px;left:33%;}
+.leftblock5_img_div1 img{width:100%;} */
+
+.newhomeblock5_left_block5_bg1{ background-position: -20px top;}
 .leftblock5_img_div2{width:148px;}
 .leftblock5_img_div2 img{width:100%;}
 .newhome_testimonial_linkdiv{padding:11px 5px;}
@@ -155,7 +158,7 @@
 
 
 }
-@media screen and (max-width:1700px){.asnewimgwrapper{height:226px;}
+@media screen and (max-width:1700px){.asnewimgwrapper{height:200px;}
 .newhomeblock5_left_block3_sub{padding:109px 20px;}
 .newhomeblock5_left_block3 .subcon1 .subcon_textdiv2{width:100%;}
 .newhomeblock4_body{background-size:670px;}
@@ -170,9 +173,13 @@
 .newhomeblock3 .newhomeblock3_sub4 h5{width:220px;}
 .newhomeblock3 .newhomeblock3_text h3{height:64px;}
 .newhomeblock5_left_block5_bg1{background-position:-50px top;}
-.leftblock5_img_div1{width:220px;left:33%;top:90px;}
+.leftblock5_img_div1 {
+    width: 220px;
+    left: 37%;
+    top: 116px;
+}
 .leftblock5_text_div1{position:absolute;top:46px;left:48%;}
-.leftblock5_text_div2{left:51%;}
+.leftblock5_text_div2{left:54%;}
 .newmentor_banner_section{background-position:-580px top!important;}
 .s_masterCourse_work_sec .s_masterCourse_work-bg_right .s-masterCourse_work_bg_center{background:url(../images/s_makemone_idol2.png) no-repeat bottom left -398%;}
 .s_mentor_content_wrapper{width:1600px;margin:0 auto;}
@@ -279,6 +286,27 @@
 }
 @media screen and (max-width:1600px){.as_bodycon .newproduct_list2_bottom_wrapper .newproduct_list2_list p:nth-of-type(1){margin-left:-470px;}
 
+.leftblock5_img_div2 {
+    top: 0px;
+    right:10px;
+}
+
+.leftblock5_text_div1 {
+    position: absolute;
+    top: 20px;
+    left: 48%;
+}
+
+.leftblock5_text_div2 {
+    top: 110px;
+}
+
+.leftblock5_img_div1 {
+    width: 220px;
+    left: 39%;
+    top: 135px;
+}
+
 .successbook_topformarrow {
     position: absolute;
     right: -18px;
@@ -360,7 +388,7 @@
 .newhomeblock5_left_block1{background-position:-270px bottom !important;padding-right:364px!important;}
 .newhomeblock5_left_block1 .home_new_imgblock3 h2{color:#000;}
 }
-@media screen and (max-width:1587px){.newaboutbeto_banner_section{background-position:-260px top!important;}
+@media screen and (max-width:1587px){.newaboutbeto_banner_section{background-position:-120px top!important;}
 .newhomeblock3 .newhomeblock3_sub1{background-position:-130px top;}
 .newhomeblock3 .newhomeblock3_sub2{background-position:-130px top;}
 .newhomeblock3 .newhomeblock3_sub3{background-position:-80px top;}
@@ -368,6 +396,8 @@
 .newhomeblock3 .newhomeblock3_text .newhomeblock3_link a:nth-of-type(1){background:#494a64 url("../images/nhome_block3_carticon.png") no-repeat 15px center;border-radius:3px 3px 0 0;}
 .newhomeblock3 .newhomeblock3_text .newhomeblock3_link a:nth-of-type(2){background:#e75046 url("../images/nhome_block3_moreicon.png") no-repeat 15px center;border-left:none;border-radius:0 0 3px 3px;border-top:solid 1px #fff;}
 .newhomeblock3 .newhomeblock3_text .newhomeblock3_link a{float:none;}
+
+.product_banner_section .product_banner_inner_top_content {  width: 1150px;}
 }
 @media screen and (max-width:1580px){.newhomeblock3 .newhomeblock3_sub4{background-position:right top;background-size:cover;}
 .newmentorsignup_block2_text3 {
@@ -386,7 +416,7 @@
 .newmentorsignup_block2_text2{width:45%;}
 .page-newaboutbeto .row{margin:0px;}
 .newhomeblock5_left_block3_sub{padding:79px 20px;}
-.newshop_banner_section{background-position:-305px top!important;}
+.newshop_banner_section{background-position:-360px top!important;}
 .page-newshop .row{margin:0px;}
 .newhomeblock2 .newhomeblock2_body{background-position:-90px top;}
 .newhomeblock5_left_block3_sub .subcon_textdiv1{line-height:34px;font-size:26px;}
@@ -404,7 +434,7 @@
 .s-top-banner .s-top-banner-wrapper .s-top-banner-right{width:310px;top:-15px;}
 .s-top-banner-wrapper .s-top-banner-right .s-inner-form-content h2{margin:0px;padding-bottom:20px;font-size:30px;line-height:34px;}
 .s-top-banner-right .s-formsection button{font-size:18px;}
-.asnewimgwrapper{height:180px;}
+.asnewimgwrapper{height:160px;}
 .newhomeblock5_left_block3_sub{padding:67px 20px;}
 .as_bodycon .newproduct_list2_bottom{background-size:105%;}
 .newhomeblock5_left_block3_sub{padding:51px 20px;}
@@ -478,8 +508,21 @@
 .newhomeblock5_left_block3_sub .subcon_textdiv2{padding-bottom:22px;font-size:16px;}
 .newhomeblock5_left_block3_sub .subcon_textdiv1{line-height:30px;font-size:26px;}
 .newhomeblock5_left_block5_bg1{background-position:-100px top;}
-.leftblock5_img_div1{width:220px;left:32%;top:130px;}
-.leftblock5_text_div1{position:absolute;top:46px;left:41%;}
+.leftblock5_img_div1 {
+    width: 190px;
+    left: 43%;
+    top: 158px;
+}
+.leftblock5_text_div1 {
+    position: absolute;
+    top: 20px;
+    left: 45%;
+}
+
+.leftblock5_text_div2 {
+    left: 46%;
+}
+/* .leftblock5_text_div1{position:absolute;top:46px;left:41%;} */
 .leftblock5_img_div2{top:-10px;right:26px;}
 .newhomeblock5_left_block3_sub{padding:58px 20px;}
 .s-learnmore-section .s-learnmoreButton{padding:67px;width:830px !important;margin:0 0 0 -47px;float:left;font-size:37px;}
@@ -507,7 +550,12 @@
 .s_content_profile h3{width:480px;line-height:32px;}
 .newhomeblock5_left_block1{background-position:-360px bottom !important;padding-right:364px!important;}
 }
-@media screen and (max-width:1480px){.as_bodycon .newproduct_list3_bottom_wrapper{padding:0;background:none;width:52%;}
+@media screen and (max-width:1480px){
+    .newaboutbeto_banner_section {
+        background-position: -170px top!important;
+    }
+    
+    .as_bodycon .newproduct_list3_bottom_wrapper{padding:0;background:none;width:52%;}
 .newmentorsignup_block3_textwrap {
     padding-left: 470px;
 }
@@ -667,6 +715,9 @@
 .protext1{width:90%!important;}
 }
 @media screen and (max-width:1400px){.success_msg_con{background-position:-100px top;}
+.product_banner_section .product_banner_inner_top_content {
+    width: 900px;
+}
 .success_msg_con_aminew{background-position:-400px top;}
 .newmentorsignup_block2_text2{padding-left:15%;}
 .newthewholestory_banner_section{background-position:-350px top !important;}
@@ -736,9 +787,20 @@
 .newhomeblock5_left_block2{background-position:26% top!important;}
 .newhomeblock5_left_block2 h2{width:540px;}
 .newhomeblock5_left_block5_bg1{background-position:-280px top;}
-.leftblock5_img_div1{width:220px;left:18%;top:130px;}
-.leftblock5_text_div1{position:absolute;top:46px;left:34%;}
-.leftblock5_text_div2{left:37%;}
+.leftblock5_img_div1 {
+    width: 200px;
+    left: 27%;
+    top: 150px;
+}
+.leftblock5_text_div1 {
+    position: absolute;
+    top: 10px;
+    left: 34%;
+}
+.leftblock5_text_div2 {
+    left: 34%;
+    top: 97px;
+}
 .leftblock5_img_div2{top:60px;right:86px;}
 .newhomeblock5_left_block5{background-size:cover;}
 .s_content_profile h3{width:520px !important;}
@@ -1101,9 +1163,15 @@
 .newbetolabelconnew2 label{display:block!important;width:100%;}
 .newabout_block5_left h3 img{width:auto;max-width:90%;float:none;margin:15px auto;margin-top:4px;display:block;}
 .home_new_imgblock1{padding-left:20px;padding-right:20px;}
-.home_new_imgblock3{padding:0 20px 30px 20px!important;background-size:44%!important;margin-top:25px;}
+/* .home_new_imgblock3{padding:0 20px 30px 20px!important;background-size:44%!important;margin-top:25px;} */
+.home_new_imgblock3{ background-image: none; padding: 20px; margin: 0px; padding-top: 0px;}
 }
 @media screen and (max-width:1199px){.package3{padding:0px!important;}
+.new_row1imgdiv span{ margin-left: 2px; margin-right: 2px;}
+
+.product_banner_section .product_banner_inner_top_content {
+    width: auto;
+}
 .SB_topformwrapper .form_field_sameaddress {
     margin: 10px auto;
     width: 96%;
@@ -1504,7 +1572,7 @@
 .s-top-banner .s-top-banner-wrapper .s-top-banner-left{width:100%;margin:0 auto;float:none;position:inherit;top:0;left:0;height:auto !important;text-align:center;}
 .s-top-banner .s-top-banner-wrapper .s-content-wrapper{width:90%;margin:0 auto;}
 .s-top-banner .s-top-banner-wrapper{background:url(../images/s_topbannerleftbg.png) no-repeat center top;background-size:100%;float:none;padding:105% 0 5% 0;height:auto;}
-.asnewimgwrapper{height:250px;}
+.asnewimgwrapper{height:200px;}
 .newcon_banner_section .producttextblock h2{color:#0a4361;font-size:38px;}
 .contatcwrapper{width:100%;margin:0 auto;}
 .as_container .left_pro_blog{padding:0 0px 0 0;float:none;width:100%;}
@@ -1558,7 +1626,7 @@
 .blog_detail_div .blog_media_div{width:100%;float:none;}
 .contact_new_form_block_body{width:90%;}
 .foot_menu a{font-size:14px;}
-.producttextblock h2{font-size:38px;color:#0a4361;text-shadow:0px 0px 7px rgba(0, 0, 0, 0.52);}
+.producttextblock h2{font-size:38px;color:#0a4361;  text-shadow: none;}
 .page-newcontact .producttextblock h2{font-size:38px;color:#0a4361;text-shadow:0px 0px 7px rgba(0, 0, 0, 0.52);}
 .newblog_banner_section .producttextblock h2{font-size:38px;color:#0a4361;text-shadow:0px 0px 7px rgba(0, 0, 0, 0.52);}
 .producttextblock.newprodutlistbannertxt h2{font-size:44px;color:#0a4361;text-shadow:0px 0px 7px rgba(0, 0, 0, 0.52);}
@@ -2272,6 +2340,22 @@ success5_2_textblock{text-align:center;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section{background:#ff5b4f;width:auto;text-align:center;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section h5 sup{top:0px;font-size:30px;}
 }
+
+@media screen and (max-width:900px){
+    .newaboutbeto_block1_new_row1_wrapper{ background-image: none; padding-top: 20px;}
+
+    .newaboutbeto_block1_new_row1_wrapper { 
+        padding: 20px; 
+        background-image: none;
+    }
+
+    .new_row1imgdiv span {
+        display: inline-block;
+        width: 45%;
+        margin: 0 1%;
+    }
+}
+
 @media screen and (max-width:880px){.newproduct_list4_con_banner{background-position:295px bottom;}
 .newhomeblock3 .newhomeblock3_sub1{background-position:right top;}
 .newhomeblock3 .newhomeblock3_sub2{background-position:right top;}
@@ -2423,7 +2507,7 @@ success5_2_textblock{text-align:center;}
 .newhomeblock4{background-image:none;}
 .newhomeblock4_body{background-size:100%;}
 .newhomeblock4_bodycon_text{padding-bottom:46%;}
-.home_new_imgblock3{background-size:100%!important;padding:68% 20px 30px 20px!important;}
+/* .home_new_imgblock3{background-size:100%!important;padding:68% 20px 30px 20px!important;} */
 .success_table3{display:block;}
 .success_msg_carttable .success_table3 .success_table3_tdl{display:block;border-right:none;}
 .success_msg_carttable .success_table3 .success_table3_tdr{display:block;border-left:none;}
@@ -2463,6 +2547,12 @@ success5_2_textblock{text-align:center;}
 .newhomeblock3 .newhomeblock3_sub3 h3{width:250px;}
 }
 @media screen and (max-width:640px){.home_top_block_col .top_logo_div img{width:15%!important;margin:0.1%;}
+.new_row1imgdiv span {
+    display: inline-block;
+    width: 40%;
+    margin: 0 1%;
+}
+
 .mentors_detail_block_con_right_btn .mentors_detail_bookbtn{font-size:18px;padding:13px 20px;}
 .newcon6 h2{font-size:42px;line-height:normal;}
 .paymenyinfowrapper .product_form{width:100%;}
@@ -2528,6 +2618,12 @@ span.callaction{padding-top:10px;padding-bottom:10px;float:none;display:block;}
 @media screen and (max-width:560px){.newmentorsignup_top_banner_wrappertext h1{font-size:34px;}
 .newmentorsignup_top_banner_wrappertext h4{font-size:40px;line-height:44px!important;}
 .newmentorsignup_block3_wrapper h2{font-size:40px;}
+
+.new_row1imgdiv span {
+    display:  block;
+    width: auto;
+    margin: 8px 0;
+}
 }
 @media screen and (max-width:554px){.blog_top_btn a{display:inline-block;margin:0 5px 5px 0;}
 .contact_form_newpage .youtubecls .contact_form_input{width:100% !important;float:none;}

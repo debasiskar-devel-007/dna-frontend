@@ -64,7 +64,43 @@
                      
                    </tr>
                  </ng-container>
-            
+                </tbody>
+            </table>
+
+
+            <table width="100%"  cellspacing="0" cellpadding="0">
+                <thead>
+                <tr>
+                    <th   valign="middle" >Sub Total</th>
+                    <th  valign="middle"  >Shipping</th>
+                    <th  valign="middle" >  Sale Tax</th>
+                   
+                    <th  valign="middle"  >Total</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                   
+                        <td  data-label="Sub Total:"  valign="middle"  >${{AllData.subtotal}}</td>
+                         <td data-label="Shipping:"  valign="middle" >${{AllData.shipping_charge}}	</td>
+                 
+                         <td data-label="Sale Tax"  valign="middle">${{AllData.saletax}}</td>
+                        
+                       <td data-label="Total:"  valign="middle" >${{AllData.total}} </td>
+                        
+                      </tr>
+
+                </tbody>
+                
+              </table>
+
+
+
+
+                  
+
+<!--             
                    <tr class="tablelistdeta">
                     <td colspan="2" style="border: none;">&nbsp;</td>
                     <td  valign="middle">Sub Total</td>
@@ -85,9 +121,8 @@
                     <td colspan="2">&nbsp;</td>
                     <td  valign="middle">Total:</td>
                     <td valign="middle"  data-label="Total:">${{AllData.total}}</td>
-                </tr>
-            </tbody>
-                </table>
+                </tr> -->
+            
             </div>
 
         <h5>Billing Shipping Information</h5>
