@@ -1,21 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../api.service';
 import { CookieService } from 'ngx-cookie-service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { FacebookService } from 'ngx-facebook';
 import { MetaService } from '@ngx-meta/core';
+import { MAT_DIALOG_DATA, MatDialogRef, MatDialog } from "@angular/material";
+
+
+export interface DialogDataMentorDetail { details: any; }
+export interface DialogDataGalleryModal { gallery: any; }
 
 @Component({
   selector: 'app-mentordetail',
   templateUrl: './mentordetail.component.html',
   styleUrls: ['./mentordetail.component.css']
 })
+
+
 export class MentordetailComponent implements OnInit {
-  public mentordetail: any;
   public p_id: any;
+  public about_me: any;
+  public gallerymodal: any = '';
+  public mentordetail: any;
+  
   constructor(public cookieService: CookieService, public activatedRoute: ActivatedRoute, public apiService: ApiService, public router: Router, public sanitizer: DomSanitizer,
-    public meta: MetaService, public FB: FacebookService) {
+    public meta: MetaService, public FB: FacebookService, public dialog: MatDialog) {
     FB.init({
       appId: '284977756033837',
       version: 'v2.9'
@@ -53,8 +63,30 @@ export class MentordetailComponent implements OnInit {
     });
   }
 
-  openDialogDetail(val:any) {}
-  openDialoggallery(value:any){}
+  openDialogDetail(mentordetail:any) : void {
+    const dialogRef = this.dialog.open(mentor_detail, {
+      panelClass: 'mentorditailmodal',
+      data: { details: mentordetail },
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      // console.log('The dialog was closed');
+    });
+  }
+
+  openDialoggallery(gallerymodal:any): void {
+    const dialogRef = this.dialog.open(gallery_modal, {
+      panelClass: 'gallerymodal',
+      data: { gallery: gallerymodal },
+     
+    });
+    
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // this.animal = result;
+    });
+  }
+
   safeurl(val) {
     return "https://images.influxiq.com/image.php?url=" + val + "&quality=30";
     // return val
@@ -64,3 +96,49 @@ export class MentordetailComponent implements OnInit {
     this.p_id = index.userid;
   }
 }
+
+
+
+
+
+   /************************Mentor detail mmodal component koushik***************************** */
+
+   @Component({
+    selector: 'mentor_detail',
+    templateUrl: 'mentor_detail.html',
+    styleUrls: ['./mentordetail.component.css']
+  })
+  
+  export class mentor_detail {
+    public detailsView:any;
+    public mentordetail:any;
+    constructor(
+      public dialogRef: MatDialogRef<mentor_detail>,
+      @Inject(MAT_DIALOG_DATA) public data: DialogDataMentorDetail) {}
+  
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
+  }
+
+  
+
+   /************************Gallery mmodal component koushik***************************** */
+
+   @Component({
+    selector: 'gallery_modal',
+    templateUrl: 'gallery_modal.html',
+    styleUrls: ['./mentordetail.component.css']
+  })
+  
+  export class gallery_modal {
+    public galleryView:any;
+    public gallerymodal:any;
+    constructor(
+      public dialogRef: MatDialogRef<gallery_modal>,
+      @Inject(MAT_DIALOG_DATA) public data: DialogDataGalleryModal) {}
+  
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
+  }

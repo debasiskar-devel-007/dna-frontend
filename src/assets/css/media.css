@@ -2836,8 +2836,8 @@ a.home_banner_btn{width:100%;font-size:16px;}
 
 @media screen and (max-width: 1500px) { .MDetailadminDB_block1{ width: 1300px;}
 .MDetailadminDB_block1_con{ background-position: 740px top;}
-.mentordetail_block1_text {  width: 70%; padding-right: 0; }
-.mentordetail_block1_img { width: 25%; }
+/* .mentordetail_block1_text {  width: 70%; padding-right: 0; } */
+/* .mentordetail_block1_img { width: 25%; } */
 }
 @media screen and (max-width: 1380px) {.MDetailadminDB_block1{ width: 1200px;}
  .MDetailadminDB_block1_con{ background-position: 760px top;}
@@ -2852,8 +2852,8 @@ a.home_banner_btn{width:100%;font-size:16px;}
 .MDetailadminDB_block1_con{ background-position: 560px top}
 .MDetailadminDB_block1_con_text{ width: 650px;}
 .mentordetail_block1{ display: block;}
-.mentordetail_block1_img{ width: auto; display: block; margin: 0 auto;  } 
-.mentordetail_block1_img img{ display: block; text-align: center;  padding: 8px; width: auto; max-width: 90%; margin: 0 auto;}
+/* .mentordetail_block1_img{ width: auto; display: block; margin: 0 auto;  }  */
+/* .mentordetail_block1_img img{ display: block; text-align: center;  padding: 8px; width: auto; max-width: 90%; margin: 0 auto;} */
 .mentordetail_block1_text{ width: auto; padding: 25px 0 0 0; text-align: center; display: block;}
 .MDetailadminDB_block1_con_text_block h2{   font-size: 25px;  }
 .MDetailadminDB_block1_con_text_block h2 label{  font-size: 20px;   line-height: 26px; }
@@ -2874,6 +2874,7 @@ a.home_banner_btn{width:100%;font-size:16px;}
 
  @media screen and (max-width: 680px) {.MDetailadminDB_block1_con { background-position: 30% top; background-size: 160%;  padding-top: 60%; }
  .MDgaller_imagewrapper { width: 99%;  }
+ 
 }
 
  

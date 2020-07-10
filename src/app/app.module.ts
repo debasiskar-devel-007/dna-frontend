@@ -44,7 +44,7 @@ import { OrdersuccessComponent } from './ordersuccess/ordersuccess.component';
 import { CartComponent, loginModal } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component'
 import { TemplateModule } from './templatemodule';
-import { MentordetailComponent } from './mentordetail/mentordetail.component';
+import { MentordetailComponent, mentor_detail, gallery_modal } from './mentordetail/mentordetail.component';
 
 //import { ContactComponent } from './contact/contact.component';
 
@@ -105,7 +105,10 @@ export function metaFactory(): MetaLoader {
     CartComponent,
     CheckoutComponent,
     loginModal,
-    MentordetailComponent
+    MentordetailComponent,
+    mentor_detail,
+    gallery_modal
+  
   ],
   imports: [
     // ListingModule,
@@ -133,7 +136,7 @@ export function metaFactory(): MetaLoader {
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: [CommingSoon3,CommingSoon,loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON],
+  entryComponents: [CommingSoon3,CommingSoon,loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON, mentor_detail,gallery_modal],
 })
 export class AppModule {
 
