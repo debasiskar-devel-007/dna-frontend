@@ -74,14 +74,33 @@
            </td>
             
           </tr>
-
+        </table>
           <!-- <tr class="tablelistdeta">
             <td colspan="3" style="border: none;">&nbsp;</td>
             <td  valign="middle">Sub Total</td>
             <td  valign="middle" data-label="Sub Total:">$00.00</td>
         </tr> -->
 
-        <tr class="tablelistdeta">
+        <table width="100%"  cellspacing="0" cellpadding="0" class="success_table2">
+            <thead>
+            <tr>
+                <th   valign="middle">Shipping</th>
+                <th  valign="middle"   >Sale Tax</th>
+                
+                <th  valign="middle"  >Total</th>
+            </tr>
+            </thead>
+
+            <tr class="tablelistdeta1">
+                <td valign="middle"  data-label="Shipping:">${{AllData.shipping_charge}}</td>
+                <td valign="middle"  data-label="Sale Tax:">${{AllData.saletax}}</td>
+                <td valign="middle"  data-label="Total:">${{AllData.total}}</td>
+            </tr>
+           </table>
+
+
+
+        <!-- <tr class="tablelistdeta">
             <td colspan="3">&nbsp;</td>
             <td  valign="middle">Shipping:</td>
             <td valign="middle"  data-label="Shipping:">${{AllData.shipping_charge}}</td>
@@ -95,9 +114,8 @@
             <td colspan="3">&nbsp;</td>
             <td  valign="middle">Total:</td>
             <td valign="middle"  data-label="Total:">${{AllData.total}}</td>
-        </tr>
-
-        </table>
+        </tr> -->
+ 
 
         <h5>Billing Shipping Information</h5>
         <table width="100%"  cellspacing="0" cellpadding="0"  valign="top" class="success_table3">
