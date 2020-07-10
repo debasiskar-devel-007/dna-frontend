@@ -53,7 +53,8 @@ export class MentordetailComponent implements OnInit {
     });
   }
 
-
+  openDialogDetail(val:any) {}
+  openDialoggallery(value:any){}
   safeurl(val) {
     return "https://images.influxiq.com/image.php?url=" + val + "&quality=30";
     // return val
