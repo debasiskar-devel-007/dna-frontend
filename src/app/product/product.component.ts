@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../environments/environment';
 import { CookieService } from 'ngx-cookie-service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+// import * as console from 'console';
 
 export interface DialogData {
   animal: string;
@@ -146,6 +147,29 @@ export class ProductComponent implements OnInit {
 
 
     }
+    //for buy now button
+    if (this.ActivatedRoute.snapshot.url[0].path == 'products-buy') {
+      // console.log('products buy');
+      this.ActivatedRoute.data.subscribe((resolveData: any) => {
+        if (resolveData.packagedata.status == 'success') {
+          this.allPackage = resolveData.packagedata.results.package;
+          this.acctoken = resolveData.packagedata.results.token.access_token;
+          for(const i in this.allPackage){
+           
+            if(this.ActivatedRoute.snapshot.params.buy===i){
+              console.log('if',this.allPackage[i]);
+              this.chooseProduct(this.ActivatedRoute.snapshot.params.buy,this.allPackage[i]);
+            }
+          }
+          setTimeout(() => {
+            document.querySelector('.package' + this.ActivatedRoute.snapshot.params.buy).scrollIntoView({ behavior: 'smooth', });
+          }, 1000);
+        }
+       
+      });
+    }
+
+
     if (this.ActivatedRoute.snapshot.params.class != null && this.ActivatedRoute.snapshot.params.class != undefined) {
       this.CookieService.set('shareid', this.ActivatedRoute.snapshot.params.class);
       this.ActivatedRoute.data.subscribe((resolveData: any) => {

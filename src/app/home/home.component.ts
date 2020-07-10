@@ -34,9 +34,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
   learnproduct(value:any){
-    this.openDialog()
-    // console.log(value);
-    // this.router.navigateByUrl('/pages/products/'+value)
+    // this.openDialog()
+    console.log(value);
+    this.router.navigateByUrl('/pages/products-buy/'+value)
   }
   learnproduct1(value){
     this.router.navigateByUrl('/pages/products-list/'+value)

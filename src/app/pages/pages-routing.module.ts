@@ -84,6 +84,11 @@ const routes: Routes = [
     data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
   },
   {
+    path: 'products-buy/:buy', component: ProductComponent,
+    resolve: { packagedata: TestresolveService },
+    data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
+  },
+  {
     path: 'products', component: ProductComponent,
     resolve: { packagedata: TestresolveService },
     data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
