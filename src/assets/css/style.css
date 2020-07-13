@@ -1647,8 +1647,8 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .mentordetail_block1_text h4{  font-family:'OpenSans-Bold'; font-size: 24px; color: #3e3e3e; margin: 0;  padding: 8px 0;}
 .mentordetail_block1_text h5{  font-family:'OpenSans-Semibold'; font-size: 24px; color: #3e3e3e; margin: 0;  padding: 0;}
 .mentordetail_block1_text h6{ background: #ff5b4f; padding: 6px 16px;  font-family:'OpenSans-Semibold'; font-size: 36px; color: #ffffff; text-transform: capitalize; display: inline-block; margin: 10px 0 0 0;}
-.mentordetail_block2{ display: flex; flex-wrap: wrap; margin: 22px 0;}
-.mentordetail_block2 label{ display: block; width: 50%; margin: 5px 0; background: #ebebeb;}
+/* .mentordetail_block2{ display: flex; flex-wrap: wrap; margin: 22px 0;} */
+/* .mentordetail_block2 label{ display: block; width: 50%; margin: 5px 0; background: #ebebeb;} */
 .mentordetail_block2 .fb_icon{ background:#ebebeb url(../../assets/images/Mentor_Detail_ficon.jpg) no-repeat left center!important;}
 .mentordetail_block2 .ig_icon{ background:#ebebeb url(../../assets/images/Mentor_Detail_iicon.jpg) no-repeat left center!important;}
 .mentordetail_block2 .tw_icon{ background:#ebebeb url(../../assets/images/Mentor_Detail_ticon.jpg) no-repeat left center!important;}
@@ -1658,7 +1658,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .mentordetail_block3 h2{ text-align: center; font-size: 36px; color: #252624; text-transform: uppercase; font-family:'OpenSans-Bold'; margin-bottom: 30px;}
 .mentordetail_block3 h2::after{ content: ''; display: block; margin: 5px auto; width: 160px; height: 1px; background: #6e708e;}
 
-.mentordetail_block3_wrapper{display: block; clear: both; overflow: hidden;}
+/* .mentordetail_block3_wrapper{display: block; clear: both; overflow: hidden;} */
 /* .MDgaller_imagewrapper{ width: 24%; display: block; float: left; padding-left: 1%; margin-bottom: 1.2%;}
 .MDgaller_imagecon{ overflow:hidden; padding-bottom:56.25%; position:relative; height:0; display: block;}
 .MDgaller_imagecon img{ left:0; top:0; height:100%;  width:100%;  position: absolute; }
@@ -1696,8 +1696,12 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c7dc6', endColorstr='#3ccde6', GradientType=1 ); padding: 8px 16px;   font-family:'OpenSans-Bold'; font-size: 36px; color: #ffffff; text-transform: uppercase;margin-bottom: 10px;}
 .mentordetail_block1_text h3{  font-family:'OpenSans-Bold'; font-size: 30px; color: #ff5b4f; margin: 0;  padding: 0; word-break: break-all;}
 
+.mentordetail_block3_wrapper{display: block; clear: both; overflow: hidden;margin: 0 -.5%;}
 
-.aboutmentor{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;height:172px;-webkit-line-clamp:4;-webkit-box-orient:vertical}
+.mentordetail_block2{ display: flex; flex-wrap: wrap; margin: 22px -0.5%;}
+.mentordetail_block2 label{ display: block; width: 49%; margin: .5%; background: #ebebeb;}
+
+.aboutmentor{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;height:164px;-webkit-line-clamp:4;-webkit-box-orient:vertical}
 .aboutmentorbutton{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;padding:0;border-radius:0;-webkit-align-items:stretch;align-items:stretch}
 .mentorDetailtext{padding:0;font-family:'OpenSans-Semibold';font-size:18px;color:#3ccde6;text-transform:capitalize;margin:5px 0 10px;align-items:center;display:flex;cursor:pointer}
 .mentorDetailtext:hover{color:#000}
@@ -1836,9 +1840,12 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
         .mentordetail_block1_text h4 br{display: none;}
         .mentorDetailtext {justify-content: center;}
         .aboutmentorbutton {justify-content: center;}
+        .mentordetail_block2 label a {font-size: 14px;}
+        
     }
     @media screen and (max-width: 840px) {
         .MDetailPurchase_BTN {display: block;}
+        .mentordetail_block1_text h6 {padding: 6px 16px 11px;font-size: 26px;}
     }
     @media screen and (max-width: 540px) {
         .mentordetail_block1_img {width: 94%;height: auto;}
@@ -1857,7 +1864,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
     @media screen and (max-width: 1380px) {
     .imggalleryinnercls {height: 173px;}
     .mentordetail_block1_text h4 {font-size: 18px;}
-    .mentordetail_block1_text h3 {font-size: 24px;}
+    .mentordetail_block1_text h3 {font-size: 22px;}
     }
     @media screen and (max-width: 1280px) {
     .imggalleryinnercls {height: 160px;}
@@ -1903,6 +1910,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
     .imggalleryinnercls {height: 190px;}
     .mentordetail_block1 h2 {font-size: 26px;}
     .mentorditailmodal .detail_modalnew h2.fullname {font-size: 28px;}
+    .mentordetail_block1_text h3 {font-size: 18px;}
     }
     @media screen and (max-width: 680px) {
     .MDgaller_imagewrapper {width: 49%;}
@@ -1912,14 +1920,18 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
             width: 94%;
             height: auto;
         }
+        .mentordetail_block1_text h3 {
+            font-size: 15px;
+        }
+        .mentordetail_block1_text h6 {font-size: 20px;}
     }
 
 
     
     @media screen and (max-width: 480px) {
     .MDgaller_imagewrapper {width: 99%;}
-    .mentordetail_block1_text h3 {font-size: 18px;}
     .mentordetail_block1 h2 {font-size: 21px;}
+    .aboutmentor {height: 130px;}
     }
     
 
