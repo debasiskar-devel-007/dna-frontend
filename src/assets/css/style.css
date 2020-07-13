@@ -130,7 +130,7 @@ url('https://all-frontend-assets.s3.amazonaws.com/dna-frontend/assets/fonts/robo
 .newhomeblock4_bodycon_text{padding:40px 10% 40px 680px;display:block;}
 .newhomeblock4_bodycon_text h2{margin:0;padding:0px;font-size:36px;color:#434358;text-transform:uppercase;font-family:'OpenSans-Semibold';}
 .newhomeblock4_bodycon_text h2 span{color:#e75046;}
-.newhomeblock4_bodycon_text h3{margin:24px 170px 24px 50px;padding:0 0 0 12px;border-left:solid 4px #e75046;font-size:18px;line-height:24px;color:#494a64;font-family:'OpenSans-Semibold';}
+.newhomeblock4_bodycon_text h3{margin:24px 0px 24px 50px;padding:0 0 0 12px;border-left:solid 4px #e75046;font-size:18px;line-height:24px;color:#494a64;font-family:'OpenSans-Semibold';}
 .newhomeblock4_bodycon_text h4{display:inline-block;float:right;margin:0px;padding:0px;}
 .newhomeblock4_bodycon_text h4 a{display:inline-block;background:#495b64;padding:12px 15px;border-radius:2px;font-size:24px;color:#ffffff;text-transform:uppercase;font-family:'OpenSans-Semibold';}
 .newhomeblock5{background:#e4e7e8!important;margin:0px;padding:0px!important;display:block;border:none!important;margin:0!important;border-radius:0px!important;box-shadow:none!important;}
@@ -741,10 +741,10 @@ button{box-shadow:none!important;}
 .as_bodycon .newproduct_list4 .newproduct_list4_top{background:none;border:none;width:39%;float:left;z-index:99;position:relative;}
 .as_bodycon .newproduct_list4_bottom{background:none;border:none;width:58%;float:left;z-index:99;position:relative;}
 .as_bodycon .newproduct_list4_con_banner{display:none;}
-.as_bodycon .newproduct_list4 .bgupwrapper{position:absolute;left:0;z-index:9;bottom:0;}
+.as_bodycon .newproduct_list4 .bgupwrapper{position:absolute;left:0;z-index:9;bottom:0; width: 54%;}
 .as_bodycon .newproduct_list5 .newproduct_list5_top .newproduct_list5_top_wrapper h2{text-align:left;padding:0;font-family:'OpenSans-Semibold';font-size:32px;color:#e75046;}
 .as_bodycon .newproduct_list5 .newproduct_list5_top .newproduct_list5_top_wrapper h3{text-align:left;font-family:'OpenSans-Semibold';font-size:32px;color:#3e405b;}
-.as_bodycon .newproduct_list4 .bgupwrapper img:nth-child(1){max-width:70%;}
+.as_bodycon .newproduct_list4 .bgupwrapper img:nth-child(1){max-width:60%; margin-bottom: -4px;}
 .as_bodycon .newproduct_list4 .bgupwrapper img:nth-child(2){max-width:100%;display:none;}
 .as_bodycon .newproduct_list4_bottom_wrapper h2 p{font-size:17px;background:url(../images/li_listicon.png) no-repeat left 5px;margin-bottom:20px;padding-left:20px;font-weight:normal;}
 .as_bodycon .newproduct_list4 .newproduct_list4_top .newproduct_list4_top_wrapper h3 strong{color:#e75046;font-family:'OpenSans-Semibold';}
@@ -762,7 +762,7 @@ button{box-shadow:none!important;}
 .as_bodycon .newproduct_list5_bottom_wrapper h3{font-size:30px;color:#e75046;margin-bottom:32px;line-height:32px;padding-right:17%;font-weight:normal;}
 .as_bodycon .newproduct_con5_btn1{float:right;}
 .as_bodycon .newproduct_list5 .bgupwrapper{position:absolute;right:-123px;z-index:9;bottom:0;}
-.as_bodycon .newproduct_list5 .bgupwrapper img:nth-child(1){max-width:85%;}
+.as_bodycon .newproduct_list5 .bgupwrapper img:nth-child(1){max-width:85%; margin-bottom: -4px;}
 .as_bodycon .newproduct_list5 .bgupwrapper img:nth-child(2){max-width:100%;display:none;}
 .asbuttomwrapper{display:table;width:100%;border-top:1px solid white;padding-top:15px;}
 .asbuttomwrapper .col{display:table-cell;vertical-align:middle;}
@@ -2116,3 +2116,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
         outline: none!important;
         font-family: 'OpenSans-Semibold';
         margin: 0 auto; margin-top: 5px;}
+
+
+
+      

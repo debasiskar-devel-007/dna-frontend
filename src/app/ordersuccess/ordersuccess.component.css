@@ -95,7 +95,7 @@
         margin: 0; 
         font-family: 'OpenSans-Semibold';}
 
-        .table_body thead th{ text-align: center; padding: 10px 10px; }
+        .table_body thead th{ text-align: center; padding: 10px 10px;     border-right: solid 1px #fff; }
 
         
 
@@ -105,7 +105,9 @@
 
       
 
-        .table_body td{ text-align: center; padding: 10px 10px; font-size: 18px; font-family: 'OpenSans-Semibold';   color: #262626; }
+        .table_body td{ text-align: center; padding: 10px 10px; font-size: 18px; font-family: 'OpenSans-Semibold';   color: #262626;     border-right: solid 1px #cbdade; }
+
+        .table_body td:last-of-type{ border: none;}
         .table_body tbody tr:nth-of-type(even){  background: #f8f8f7;}
         .table_body tbody tr:nth-of-type(odd){ background: #f1f5f7;}
 
@@ -172,7 +174,7 @@
         @media screen and (max-width: 600px) {
 
             .table_body td {
-                text-align: left;}
+                text-align: left; border: none;}
 
                 .table_body thead th{
                     text-align: left;}
