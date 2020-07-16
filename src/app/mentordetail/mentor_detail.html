@@ -1,0 +1,13 @@
+<button type="button" class="close" [mat-dialog-close]="true">
+  <mat-icon>close</mat-icon>
+</button>
+<mat-dialog-content class="detail_modalnew">
+  <!-- <img src="../../assets/images/logo.png" class="logo"> -->
+  <!-- <span class="mentordetailwarpper">
+    <span class="mentorimgwarpper-main">
+      <img [src]="data.details.image" class="iconcls">
+    </span>
+  </span> -->
+  <h2 class="fullname" [innerHtml]="data.details.fullname"></h2>
+  <mat-card-content class="aboutmecls" [innerHtml]="data.details.about_me"></mat-card-content>
+</mat-dialog-content>
