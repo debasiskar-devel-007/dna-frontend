@@ -95,7 +95,6 @@ export class ProductComponent implements OnInit {
         // console.log(resolveData.packagedata.results.package)
         // console.log(resolveData)
       });
-    } else {
       let data: any = {
         "id": this.ActivatedRoute.snapshot.params.class
       }
@@ -103,10 +102,8 @@ export class ProductComponent implements OnInit {
         // console.log(res)
         this.parentdetails = res.result[0];
       })
-    }
-
-
-
+    } 
+    
     if (this.router.url == '/pages/products') {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
@@ -115,6 +112,7 @@ export class ProductComponent implements OnInit {
         //  console.log(resolveData.packagedata) 
       });
     }
+
     let uid = this.CookieService.get('shareid');
     if (uid != null && uid != undefined && uid != '' && this.ActivatedRoute.snapshot.params.class == null) {
       let data: any = {
@@ -126,16 +124,12 @@ export class ProductComponent implements OnInit {
       })
     }
 
-    //console.log(this.ActivatedRoute.snapshot.url[0].path);
-    //  console.log(this.ActivatedRoute.snapshot.params.id.substring(0, 1));
-    //for learn product button in home page
+
     if (this.ActivatedRoute.snapshot.url[0].path == 'products-list') {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         if (resolveData.packagedata.status == 'success') {
           this.allPackage = resolveData.packagedata.results.package;
           this.acctoken = resolveData.packagedata.results.token.access_token;
-          // console.log(this.acctoken);
-          //  console.warn('learn product',resolveData.packagedata) 
           setTimeout(() => {
             document.querySelector('.package' + this.ActivatedRoute.snapshot.params.id).scrollIntoView({ behavior: 'smooth', });
           }, 1000);
@@ -178,30 +172,15 @@ export class ProductComponent implements OnInit {
         // console.log(this.acctoken);
         //console.log(resolveData.packagedata) 
       });
-      //   let data: any = {
-      //   //     this.selectedProduct.good = 1;
-      //   //   }else if(this.ActivatedRoute.snapshot.params.class==2){
-      //   //     this.chooseProduct('','better');
-      //   //     this.selectedProduct.better = 1;
-      //   //   }else if(this.ActivatedRoute.snapshot.params.class==3){
-      //   //     this.chooseProduct('','best');
-      //   //     this.selectedProduct.best = 1;
-      //   //   }else if(this.ActivatedRoute.snapshot.params.class==4){
-      //   //     this.chooseProduct('','mentor');
-      //   //     this.selectedProduct.mentor = 1;
-      //   // }
-      // }       //     this.chooseProduct('','good');
-      //   //     this.selectedProduct.good = 1;
-      //   //   }else if(this.ActivatedRoute.snapshot.params.class==2){
-      //   //     this.chooseProduct('','better');
-      //   //     this.selectedProduct.better = 1;
-      //   //   }else if(this.ActivatedRoute.snapshot.params.class==3){
-      //   //     this.chooseProduct('','best');
-      //   //     this.selectedProduct.best = 1;
-      //   //   }else if(this.ActivatedRoute.snapshot.params.class==4){
-      //   //     this.chooseProduct('','mentor');
-      //   //     this.selectedProduct.mentor = 1;
-      //   // }
+     
+        let data: any = {
+          "id": this.ActivatedRoute.snapshot.params.class
+        }
+        this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
+          // console.log(res)
+          this.parentdetails = res.result[0];
+        })
+        
     }
     // else {
     //   let data: any = {
