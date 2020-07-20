@@ -161,6 +161,8 @@
             margin: 25px auto;
         }
 
+        .success_table1 span{    color: #0b1b28;}
+
 
         @media screen and (max-width: 1500px) {
             .ordersuccess_body { 
