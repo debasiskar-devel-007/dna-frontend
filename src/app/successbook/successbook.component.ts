@@ -341,6 +341,7 @@ export class SuccessbookComponent implements OnInit {
     this.productDetails.total = parseFloat(this.productDetails.total.toFixed(2));
     this.productDetails.usertype = 'mentee';
     this.productDetails.webinarid = [null];
+    this.productDetails.webinar_credit ="1";
 
     this._apiService.getState().subscribe((response: any) => {
 

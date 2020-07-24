@@ -58,7 +58,7 @@ export class MentorsignupComponent implements OnInit {
 
 
 
-    this.productDetails.name = 'Mentor Package for $749"';
+    this.productDetails.name = 'Mentor Package for $749';
     this.productDetails.price = 0;
     this.productDetails.delivery = 6.95;
     this.saletax = this.productDetails.price / 100 * 6;
@@ -69,6 +69,7 @@ export class MentorsignupComponent implements OnInit {
     this.productDetails.total = parseFloat(this.productDetails.total.toFixed(2));
     this.productDetails.usertype = 'mentor';
     this.productDetails.webinarid = [null];
+    this.productDetails.webinar_credit ="1000";
 
     // console.log(this.productDetails)
     this._apiService.getState().subscribe((response: any) => {
