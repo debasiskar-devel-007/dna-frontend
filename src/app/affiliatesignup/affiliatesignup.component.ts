@@ -109,6 +109,26 @@ export class AffiliatesignupComponent implements OnInit {
         },
         {
           heading: "",
+          label: "Email",
+          name: "email",
+          type: 'email',
+          hint: "",
+          validations: [
+            { rule: 'required', message: "Enter Your Email" },
+            { rule: 'pattern', value: this.emailregex, message: "Must be a valid Email" }]
+        },
+        {
+          heading: "",
+          label: "Telephone",
+          name: "phone",
+          value: '',
+          type: "number",
+          validations: [
+            { rule: 'required', message: "Enter Your Telephone Number" },
+          ]
+        },
+        {
+          heading: "",
           label: "Business Name",
           name: "company",
           value: '',
@@ -129,16 +149,7 @@ export class AffiliatesignupComponent implements OnInit {
           //     {rule:'required'},
           //     ]
         },
-        {
-          heading: "",
-          label: "City",
-          name: "city",
-          value: '',
-          type: "text",
-          validations: [
-            { rule: 'required', message: "Enter Your City" },
-          ]
-        },
+        
         {
           heading: "",
           label: "State",
@@ -152,14 +163,15 @@ export class AffiliatesignupComponent implements OnInit {
         },
         {
           heading: "",
-          label: "Telephone",
-          name: "phone",
+          label: "City",
+          name: "city",
           value: '',
-          type: "number",
+          type: "text",
           validations: [
-            { rule: 'required', message: "Enter Your Telephone Number" },
+            { rule: 'required', message: "Enter Your City" },
           ]
         },
+        
         {
           heading: "",
           label: "Zip",
@@ -170,16 +182,7 @@ export class AffiliatesignupComponent implements OnInit {
             { rule: 'required', message: "Enter Your Pin Code" },
           ]
         },
-        {
-          heading: "",
-          label: "Email",
-          name: "email",
-          type: 'email',
-          hint: "",
-          validations: [
-            { rule: 'required', message: "Enter Your Email" },
-            { rule: 'pattern', value: this.emailregex, message: "Must be a valid Email" }]
-        },
+        
         {
           heading: "",
           label: "Website Address",

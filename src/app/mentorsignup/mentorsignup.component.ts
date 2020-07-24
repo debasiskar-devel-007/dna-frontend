@@ -134,6 +134,25 @@ export class MentorsignupComponent implements OnInit {
           ]
         },
         {
+          label: "Email",
+          name: "email",
+          type: 'email',
+          hint: "",
+          validations: [
+            { rule: 'required', message: "Email field Needs to be required" },
+            { rule: 'pattern', value: this.emailregex, message: "Must be a valid Email" }]
+        },
+        {
+          heading: "",
+          label: "Telephone",
+          name: "phone",
+          value: '',
+          type: "number",
+          validations: [
+            { rule: 'required', message: "Enter Your Contact Number" },
+          ]
+        },
+        {
           heading: "",
           label: "Business Name",
           name: "company",
@@ -157,16 +176,6 @@ export class MentorsignupComponent implements OnInit {
         },
         {
           heading: "",
-          label: "City",
-          name: "city",
-          value: '',
-          type: "text",
-          validations: [
-            { rule: 'required', message: "Enter Your City" },
-          ]
-        },
-        {
-          heading: "",
           label: "State",
           name: "state",
           type: "select",
@@ -177,14 +186,16 @@ export class MentorsignupComponent implements OnInit {
         },
         {
           heading: "",
-          label: "Telephone",
-          name: "phone",
+          label: "City",
+          name: "city",
           value: '',
-          type: "number",
+          type: "text",
           validations: [
-            { rule: 'required', message: "Enter Your Contact Number" },
+            { rule: 'required', message: "Enter Your City" },
           ]
         },
+        
+        
         {
           heading: "",
           label: "Zip",
@@ -195,15 +206,7 @@ export class MentorsignupComponent implements OnInit {
             { rule: 'required', message: "Enter Your Pin Code " },
           ]
         },
-        {
-          label: "Email",
-          name: "email",
-          type: 'email',
-          hint: "",
-          validations: [
-            { rule: 'required', message: "Email field Needs to be required" },
-            { rule: 'pattern', value: this.emailregex, message: "Must be a valid Email" }]
-        },
+        
         {
           heading: "",
           label: "Notes",

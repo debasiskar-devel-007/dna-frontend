@@ -236,22 +236,32 @@ export class ProductComponent implements OnInit {
         },
         {
           //heading:"",
+          label: "Email",
+          name: "email",
+          type: 'email',
+          hint: "",
+          validations: [
+            { rule: 'required', message: "Email field Needs to be required" },
+            { rule: 'pattern', value: this.emailregex, message: "Enter a valid Email" }]
+        },
+        {
+          //heading:"",
+          label: "Telephone",
+          name: "phone",
+          value: '',
+          type: "number",
+          validations: [
+            { rule: 'required', message: "Enter Your Contact Number" },
+          ]
+        },
+        {
+          //heading:"",
           label: "Physical Address",
           name: "address",
           value: '',
           type: "text",
           validations: [
             { rule: 'required', message: "Enter Your Address" },
-          ]
-        },
-        {
-          //heading:"",
-          label: "City",
-          name: "city",
-          value: '',
-          type: "text",
-          validations: [
-            { rule: 'required', message: "Enter Your City" },
           ]
         },
         {
@@ -266,6 +276,17 @@ export class ProductComponent implements OnInit {
         },
         {
           //heading:"",
+          label: "City",
+          name: "city",
+          value: '',
+          type: "text",
+          validations: [
+            { rule: 'required', message: "Enter Your City" },
+          ]
+        },
+        
+        {
+          //heading:"",
           label: "Zip",
           name: "zip",
           value: '',
@@ -274,26 +295,8 @@ export class ProductComponent implements OnInit {
             { rule: 'required', message: "Enter Your Zip Code " },
           ]
         },
-        {
-          //heading:"",
-          label: "Telephone",
-          name: "phone",
-          value: '',
-          type: "number",
-          validations: [
-            { rule: 'required', message: "Enter Your Contact Number" },
-          ]
-        },
-        {
-          //heading:"",
-          label: "Email",
-          name: "email",
-          type: 'email',
-          hint: "",
-          validations: [
-            { rule: 'required', message: "Email field Needs to be required" },
-            { rule: 'pattern', value: this.emailregex, message: "Enter a valid Email" }]
-        },
+        
+        
         {
           //heading:"",
           label: "Password",
