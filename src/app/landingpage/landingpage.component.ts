@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { environment } from '../../environments/environment';
 import { MetaService } from '@ngx-meta/core';
@@ -27,7 +27,7 @@ export class LandingpageComponent implements OnInit {
     public CookieService: CookieService,
     public _apiService: ApiService,
     public ActivatedRoute: ActivatedRoute,
-    private meta: MetaService) {
+    private meta: MetaService,public router:Router) {
 
     this.meta.setTitle('DNA Of Success - The Online Training Program');
     this.meta.setTag('og:description', "Realize your truest Core Desires and pursue them with the power of the awesome CONQUERING FORCE within you to live a life of contentment and gratification. “Mentor to Millions” Jack M. Zufelt is here to teach you how to attain absolute satisfaction and happiness in every area of your life.");
@@ -68,7 +68,7 @@ export class LandingpageComponent implements OnInit {
 
     this.formdata = {
       successmessage: "Added Successfully !!",
-      redirectpath: "/pages/products",
+      // redirectpath: "/pages/products",
       submittext: "Submit",
       submitactive: true, //optional, default true
       apiUrl: this._apiService.nodesslurl,
@@ -83,7 +83,7 @@ export class LandingpageComponent implements OnInit {
           type: "text",
           validations: [
             { rule: 'required', message: "Enter Your First Name" },
-            { rule: 'maxLength', value: 10, message: "Maximum 10 letters" },
+            // { rule: 'maxLength', value: 10, message: "Maximum 10 letters" },
             { rule: 'minLength', value: 2, message: "Minimun 2 letters" }
           ]
         },
@@ -95,7 +95,7 @@ export class LandingpageComponent implements OnInit {
           type: "text",
           validations: [
             { rule: 'required', message: "Enter Your last Name" },
-            { rule: 'maxLength', value: 10, message: "Maximum 10 letters" },
+            // { rule: 'maxLength', value: 10, message: "Maximum 10 letters" },
             { rule: 'minLength', value: 2, message: "Minimum 2 letters" }
           ]
         },
@@ -187,5 +187,18 @@ export class LandingpageComponent implements OnInit {
     }
 
   }
+  listenFormFieldChange(val: any) {
+    // console.log(val);
+    if (val.field == 'fromsubmit') {
+      // console.log(val.fromval.status);
+  
+      if (val.fromval.status =='success') {
+    console.log('finally');
+      
+        this.router.navigateByUrl('pages/products');
 
+      }
+
+    }
+  }
 }

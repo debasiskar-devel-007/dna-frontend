@@ -36,6 +36,7 @@
                         [formdata]="formdata"
                         [formfieldrefresh]="formfieldrefresh"
                         [formfieldrefreshdata]="formfieldrefreshdata"
+                        (onFormFieldChange)="listenFormFieldChange($event)"
                         > </lib-showform>
                     
                     <!-- <form  >
