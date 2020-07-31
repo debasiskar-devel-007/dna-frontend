@@ -99,7 +99,7 @@ export class ProductComponent implements OnInit {
         "id": this.ActivatedRoute.snapshot.params.class
       }
       this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-        // console.log(res)
+        console.log(res)
         this.parentdetails = res.result[0];
       })
     } 
@@ -119,7 +119,7 @@ export class ProductComponent implements OnInit {
         "id": this.CookieService.get('shareid')
       }
       this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-        // console.warn(res)
+        console.warn(res)
         this.parentdetails = res.result[0];
       })
     }
@@ -177,7 +177,7 @@ export class ProductComponent implements OnInit {
           "id": this.ActivatedRoute.snapshot.params.class
         }
         this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-          // console.log(res)
+          console.log(res)
           this.parentdetails = res.result[0];
         })
         
@@ -498,7 +498,7 @@ export class ProductComponent implements OnInit {
     };
 
     setTimeout(() => {
-      //console.log(this.parentdetails.type)
+      console.log(this.parentdetails.type)
       if (this.parentdetails != null && this.parentdetails != '') {
         this.formfieldrefreshdata = {
           field: 'addfromcontrol',
@@ -539,7 +539,7 @@ export class ProductComponent implements OnInit {
         }
       }
 
-    }, 3000);
+    }, 5000);
 
 
   }
