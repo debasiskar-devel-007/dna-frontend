@@ -45,11 +45,12 @@ import { CartComponent, loginModal } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component'
 import { TemplateModule } from './templatemodule';
 import { MentordetailComponent, mentor_detail, gallery_modal } from './mentordetail/mentordetail.component';
+import { CompletedsuccessComponent } from './completedsuccess/completedsuccess.component';
 
 //import { ContactComponent } from './contact/contact.component';
 
 
-
+ 
 
 export function metaFactory(): MetaLoader {
   return new MetaStaticLoader({
@@ -107,7 +108,8 @@ export function metaFactory(): MetaLoader {
     loginModal,
     MentordetailComponent,
     mentor_detail,
-    gallery_modal
+    gallery_modal,
+    CompletedsuccessComponent
   
   ],
   imports: [
