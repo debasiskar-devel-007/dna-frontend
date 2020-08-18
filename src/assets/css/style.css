@@ -936,9 +936,7 @@ button{box-shadow:none!important;}
 .newmentorsignup_block2_text3 .newmentorsignup_block2_text3_wrapper p strong{color:#363849;}
 
 .newmentorsignup_block2_text3 .newmentorsignup_block2_text3_wrapper::after{ content: '';  background:url("../images/mentorsignup_new_bottom_arrow.png") no-repeat right top!important;
-width: 41px; height: 33px; position: absolute; right: 0; bottom: -33px;
-
-}
+width: 41px; height: 33px; position: absolute; right: 0; bottom: -33px;}
 
 .newmentorsignup_form{width:380px;box-sizing:border-box;z-index:9;padding-left:0px;position:absolute;right:60px;top:20px;}
 .newmentorsignup_formwrapper{box-sizing:border-box;background:#5ee3f9;border:solid 1px #548672;border-radius:10px;box-shadow:0 0 5px #000;}
@@ -1127,7 +1125,7 @@ width: 41px; height: 33px; position: absolute; right: 0; bottom: -33px;
 .newsuccessgenetics_block3{margin:0 auto;margin-top:38px!important;width:1172px;border:solid 1px #e1ded2;padding:2px;background:#fff;}
 .newsuccessgenetics_main_wrapper{background:rgba(213,230,232,1);background:-moz-linear-gradient(45deg, rgba(213,230,232,1) 0%, rgba(255,255,255,1) 38%, rgba(183,219,223,1) 100%);background:-webkit-gradient(left bottom, right top, color-stop(0%, rgba(213,230,232,1)), color-stop(38%, rgba(255,255,255,1)), color-stop(100%, rgba(183,219,223,1)));background:-webkit-linear-gradient(45deg, rgba(213,230,232,1) 0%, rgba(255,255,255,1) 38%, rgba(183,219,223,1) 100%);background:-o-linear-gradient(45deg, rgba(213,230,232,1) 0%, rgba(255,255,255,1) 38%, rgba(183,219,223,1) 100%);background:-ms-linear-gradient(45deg, rgba(213,230,232,1) 0%, rgba(255,255,255,1) 38%, rgba(183,219,223,1) 100%);background:linear-gradient(45deg, rgba(213,230,232,1) 0%, rgba(255,255,255,1) 38%, rgba(183,219,223,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d5e6e8', endColorstr='#b7dbdf', GradientType=1);position:relative;}
 .newsuccessgenetics_block3_row1_wrapper .content-table{display:table;border-collapse:separate;border-spacing:0px 0;width:100%;}
-newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
+.newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .newsuccessgenetics_block3_row1_wrapper .column{display:table-cell;vertical-align:middle;}
 .newsuccessgenetics_block3_row1_wrapper .imagblock{width:40%;}
 .newsuccessgenetics_block3_row1_wrapper .content1{background:url(../images/newsuccessgenetics_block3_col1_img1.png) no-repeat right bottom;}
@@ -1207,6 +1205,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
 .newaffiliatesignup_formbody .button:first-of-type{background:url(../images/newaffiliatesignup_btn.png) no-repeat left top!important;background-size:100%!important;width:100%!important;height:94px!important;border:none!important;box-shadow:none!important;outline:none!important;cursor:pointer!important;font-size:36px!important;color:#ffffff!important;font-family:'OpenSans-Semibold'!important;text-shadow:0 2px 5px #5f6172!important;text-transform:uppercase!important;display:block!important;margin-top:10px!important;}
 .newaffiliatesignup_formbody .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{display:none!important;}
 .newaffiliatesignup_formbody .mat-form-field-appearance-legacy .mat-form-field-label{top:30px;left:10px;}
+
 .newaffiliatesignup_formbody .mat-error{    color: #b11313;
     font-size: 14px;
     padding-top: 4px;
@@ -1219,6 +1218,7 @@ newsuccessgenetics_block3_row1_wrapper .content-row{display:table-row;}
     left: -195px;
     z-index: 9;
     top: 10px;}
+
 .bannerarrowscroll{cursor:pointer;outline:none;}
 .newmentorsignup_formbody .mat-form-field-underline{display:none;}
 .newmentorsignup_formbody .mat-form-field-subscript-wrapper{display:none;}
