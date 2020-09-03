@@ -331,7 +331,7 @@ export class SuccessbookComponent implements OnInit {
 
 
 
-    this.productDetails.name = 'mentee Package';
+    this.productDetails.name = 'The Second Edition of the “DNA Of Success”';
     this.productDetails.price = 0;
     this.productDetails.delivery = 6.95;
     this.saletax = this.productDetails.price / 100 * 6;
