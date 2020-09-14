@@ -87,7 +87,7 @@ export class LiveWebinarComponent implements OnInit {
 
 
   productselect(value: any) {
-    // console.log(value);
+    console.log(value);
     let parentid = '';
     let affiliate_id = '';
     if (this.parentdetails != null && this.parentdetails != '') {
@@ -110,6 +110,8 @@ export class LiveWebinarComponent implements OnInit {
     product.image = value.image;
     product.webinarid = value._id;
     product.free_shipping=value.free_shipping;
+    product.shortsummary=value.shortsummary;
+    product.description=value.description;
     //  console.log(product);
 
     let data: any = {};
