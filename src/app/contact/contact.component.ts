@@ -44,13 +44,13 @@ export class ContactComponent implements OnInit {
     this.meta.setTag('og:image', 'https://dna.influxiq.com/assets/images/default_image.jpg');
 
     this._apiService.getclientip().subscribe((res: any) => {
-      // console.log(res);
-        this.ip=res.ip;
+      console.log(res);
+        this.ip=res;
         // console.log(this.ip)
 
         
         this.formdata = {
-          successmessage: "Added Successfully !!",
+          successmessage: "Thank you for Your feedback...!",
           redirectpath: "",
           submittext:"Submit",
           // canceltext:"Cancel Now",
