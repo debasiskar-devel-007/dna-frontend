@@ -161,7 +161,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dna-frontend/dev/1600362170966-2020-09-17T17:02:50.966Z/dna-frontend.zip"
+                "S3Key": "serverless/dna-frontend/dev/1601878482173-2020-10-05T06:14:42.173Z/dna-frontend.zip"
               },
               "FunctionName": "dna-frontend-dev-api",
               "Handler": "lambda.universal",
@@ -179,14 +179,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersioncXlFXmNcRNg3uJlvvmpcEV2TYwblQTi9xKvln4G1U": {
+          "ApiLambdaVersionliNCpEq09m9YRM59RMVjWM0MYDy9UQQbRWI9907E": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "DRsQKMk//14ooGKO2B0QAapU3SXoc7xaafAp66Ied2c="
+              "CodeSha256": "owyQMkP5lBa0MKxF1t+anR/CxE9XGKtvozRKxjkEdo4="
             }
           },
           "ApiGatewayRestApi": {
@@ -305,7 +305,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1600362108635": {
+          "ApiGatewayDeployment1601878419185": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -365,7 +365,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersioncXlFXmNcRNg3uJlvvmpcEV2TYwblQTi9xKvln4G1U"
+              "Ref": "ApiLambdaVersionliNCpEq09m9YRM59RMVjWM0MYDy9UQQbRWI9907E"
             }
           },
           "ServiceEndpoint": {
@@ -490,7 +490,7 @@
         "timeout": 10,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersioncXlFXmNcRNg3uJlvvmpcEV2TYwblQTi9xKvln4G1U"
+        "versionLogicalId": "ApiLambdaVersionliNCpEq09m9YRM59RMVjWM0MYDy9UQQbRWI9907E"
       }
     },
     "configValidationMode": "warn",
@@ -521,7 +521,7 @@
           "!node_modules/mime-db/**"
         ],
         "artifact": "/home/oem/Documents/uttam/projects/dna_projects/dna-frontend/.serverless/dna-frontend.zip",
-        "artifactDirectoryName": "serverless/dna-frontend/dev/1600362170966-2020-09-17T17:02:50.966Z"
+        "artifactDirectoryName": "serverless/dna-frontend/dev/1601878482173-2020-10-05T06:14:42.173Z"
       },
       "custom": {
         "$ref": "$[\"service\"][\"custom\"]"
@@ -538,7 +538,7 @@
     "artifact": "/home/oem/Documents/uttam/projects/dna_projects/dna-frontend/.serverless/dna-frontend.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/dna-frontend/dev/1600362170966-2020-09-17T17:02:50.966Z",
+    "artifactDirectoryName": "serverless/dna-frontend/dev/1601878482173-2020-10-05T06:14:42.173Z",
     "artifact": "dna-frontend.zip"
   }
 }
