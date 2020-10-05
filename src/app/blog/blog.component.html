@@ -75,7 +75,7 @@
                         <div class="clearfix"></div>
                         <span class="spandiv blog_detail_bottom">
 
-                            <a href="javascript:void(0);"  class="blog_read" (click)="readMoreDetails(item)">Read More…</a>
+                            <a href="javascript:void(0);"  class="blog_read" (click)="readMoreDetails(item)">Read More...</a>
 
                             <span class="spandiv blog_share">
 
@@ -132,7 +132,7 @@
             </span>
             <span class="spandiv blog_right_con2">
                 <h2>CATEGORIES</h2>
-                <ul>
+                <ul *ngIf="blogCatList != null">
                     
                             <li *ngFor="let category of blogCatList">
                                 <a href="javascript:void(0);" (click)="viewAllByBlogCat(category)">{{category.blogtitle}}</a>
@@ -148,6 +148,7 @@
                             </li> -->
                            
                 </ul>
+                <span *ngIf="blogCatList == null" style="color:rgb(184, 43, 43)">No Record Found</span>
             </span>
         </span>
         <div class="clearfix"></div>
