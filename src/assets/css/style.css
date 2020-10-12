@@ -2228,7 +2228,7 @@ width: 41px; height: 33px; position: absolute; right: 0; bottom: -33px;}
                 background: linear-gradient(to right, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fb0f5', endColorstr='#028ac4', GradientType=1 ); border: solid 1px #fff; border-radius: 8px;
                 font-size: 35px;
-    color: #ffffff;
+    color: #ffffff; line-height: 35px;
     font-family: 'OpenSans-Semibold'; text-shadow: 0 0 2px #0d76a1;
             } 
 
