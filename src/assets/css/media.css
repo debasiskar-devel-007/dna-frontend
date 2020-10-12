@@ -2918,11 +2918,88 @@ a.home_banner_btn{width:100%;font-size:16px;}
 .s_work_Matercontent .s-mastersec_work_left h2{margin-top:8%;}
 }
 
-@media screen and (max-width: 1500px) { .MDetailadminDB_block1{ width: 1300px;}
+
+@media screen and (max-width: 1880px) {
+
+   .aboutbeto_new_body1 {
+        background-position: 120% top;
+    }
+
+    .aboutbeto_new_body2 {
+        background-position: -20% top;
+    }
+}
+
+
+
+@media screen and (max-width: 1700px) {
+
+    .aboutbeto_new_body1 {
+         background-position: 140% top;
+     }
+ }
+ 
+
+@media screen and (max-width: 1640px) {
+    .aboutbeto_newtopbanner_wrapper {
+        width: 1400px; 
+    }
+    .aboutbeto_new_wrapper {
+        width: 1400px; 
+    }
+
+    .aboutbeto_new_body1 {
+        background-position: 160% top;
+    }
+
+    .aboutbeto_new_body2 {
+        background-position: -40% top;
+    }
+
+    .aboutbeto_new_body2_text {
+        width: 750px; 
+    }
+
+
+}
+
+
+@media screen and (max-width: 1580px) {
+
+    .aboutbeto_new_body1 {
+        background-position: 180% top;
+    }
+
+    .aboutbeto_new_body2 {
+        background-position: -60% top;
+    }
+}
+
+@media screen and (max-width: 1500px) { 
+    .aboutbeto_new_body1 {
+        background-position: 200% top;
+    }
+    .aboutbeto_new_body2 {
+        background-position: -80% top;
+    }
+
+    .MDetailadminDB_block1{ width: 1300px;}
 .MDetailadminDB_block1_con{ background-position: 740px top;}
 /* .mentordetail_block1_text {  width: 70%; padding-right: 0; } */
 /* .mentordetail_block1_img { width: 25%; } */
 }
+
+
+@media screen and (max-width: 1440px) {
+    .aboutbeto_newtopbanner_wrapper {
+        width: 1200px; 
+    }
+    .aboutbeto_new_wrapper {
+        width: 1200px; 
+    }
+
+
+
 @media screen and (max-width: 1380px) {.MDetailadminDB_block1{ width: 1200px;}
  .MDetailadminDB_block1_con{ background-position: 760px top;}
  .MDetailadminDB_block2_con_text label{ font-size: 60px;}

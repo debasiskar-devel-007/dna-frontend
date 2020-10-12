@@ -26,6 +26,12 @@ import { CheckoutComponent } from './checkout/checkout.component';
 //import { ContactComponent } from './contact/contact.component';
 // const api_url1 =  environment["api_url1"];
 
+import { AboutbetoComponent } from './aboutbeto/aboutbeto.component';
+
+
+
+
+
 import { CompletedsuccessComponent } from './completedsuccess/completedsuccess.component';
 
 import { MentordetailComponent } from './mentordetail/mentordetail.component';
@@ -33,7 +39,7 @@ const api_url = environment['api_url'];
 
 
 const routes: Routes = [
-
+ 
   {path:'home', component: HomeComponent}, 
   {path:'', component: HomeComponent}, 
   {path:'ordersuccess', component: OrdersuccessComponent},
@@ -49,6 +55,8 @@ const routes: Routes = [
   resolve: { Data: TestresolveService },
     data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
   },
+
+  {path:'aboutbeto', component: AboutbetoComponent}, 
 
 //   {path:'live-webinar', component: LiveWebinarComponent, 
 //   resolve: {
