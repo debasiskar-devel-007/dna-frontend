@@ -4,7 +4,7 @@ import { ApiService } from '../api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../environments/environment';
 import { CookieService } from 'ngx-cookie-service';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 // import * as console from 'console';
 
 export interface DialogData {
@@ -80,7 +80,7 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
 
-    if (this.ActivatedRoute.snapshot.routeConfig.path == 'products/:class/:_id') {
+    if (this.ActivatedRoute.snapshot.routeConfig.path == '/:class/:_id') {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
         this.acctoken = resolveData.packagedata.results.token.access_token;
@@ -90,8 +90,8 @@ export class ProductComponent implements OnInit {
 
         this.meta.setTag('og:image', this.banner_image);
         this.meta.setTag('twitter:image', this.banner_image);
-        this.meta.setTag('og:url', 'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
-        this.meta.setTag('twitter:url', 'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
+        this.meta.setTag('og:url', 'https://dna.influxiq.com/landingpage/' + this.ActivatedRoute.snapshot.params.class + '/' + this.ActivatedRoute.snapshot.params._id);
+        this.meta.setTag('twitter:url', 'https://dna.influxiq.com/landingpage/' + this.ActivatedRoute.snapshot.params.class + '/' + this.ActivatedRoute.snapshot.params._id);
         // console.log(resolveData.packagedata.results.package)
         // console.log(resolveData)
       });
@@ -102,8 +102,8 @@ export class ProductComponent implements OnInit {
         console.log(res)
         this.parentdetails = res.result[0];
       })
-    } 
-    
+    }
+
     if (this.router.url == '/pages/products') {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
@@ -148,18 +148,18 @@ export class ProductComponent implements OnInit {
         if (resolveData.packagedata.status == 'success') {
           this.allPackage = resolveData.packagedata.results.package;
           this.acctoken = resolveData.packagedata.results.token.access_token;
-          for(const i in this.allPackage){
-           
-            if(this.ActivatedRoute.snapshot.params.buy===i){
-              console.log('if',this.allPackage[i]);
-              this.chooseProduct(this.ActivatedRoute.snapshot.params.buy,this.allPackage[i]);
+          for (const i in this.allPackage) {
+
+            if (this.ActivatedRoute.snapshot.params.buy === i) {
+              console.log('if', this.allPackage[i]);
+              this.chooseProduct(this.ActivatedRoute.snapshot.params.buy, this.allPackage[i]);
             }
           }
           setTimeout(() => {
             document.querySelector('.package' + this.ActivatedRoute.snapshot.params.buy).scrollIntoView({ behavior: 'smooth', });
           }, 1000);
         }
-       
+
       });
     }
 
@@ -172,15 +172,15 @@ export class ProductComponent implements OnInit {
         // console.log(this.acctoken);
         //console.log(resolveData.packagedata) 
       });
-     
-        let data: any = {
-          "id": this.ActivatedRoute.snapshot.params.class
-        }
-        this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-          console.log(res)
-          this.parentdetails = res.result[0];
-        })
-        
+
+      let data: any = {
+        "id": this.ActivatedRoute.snapshot.params.class
+      }
+      this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
+        console.log(res)
+        this.parentdetails = res.result[0];
+      })
+
     }
     // else {
     //   let data: any = {
@@ -284,7 +284,7 @@ export class ProductComponent implements OnInit {
             { rule: 'required', message: "Enter Your City" },
           ]
         },
-        
+
         {
           //heading:"",
           label: "Zip",
@@ -295,8 +295,8 @@ export class ProductComponent implements OnInit {
             { rule: 'required', message: "Enter Your Zip Code " },
           ]
         },
-        
-        
+
+
         {
           //heading:"",
           label: "Password",
@@ -550,17 +550,19 @@ export class ProductComponent implements OnInit {
     // document.querySelector('.newproduct_list1').scrollIntoView({ behavior: 'smooth', });
     console.log(item);
     // console.log(i);
-    if(item.free_shipping==null){
+    if (item.free_shipping == null) {
       // console.log('freeshipping null');
-    this.productDetails.delivery = 6.95;
-    }else{
-      this.productDetails.delivery=0.00;
+      this.productDetails.delivery = 6.95;
+      this.productDetails.name =item.productname;
+    } else {
+      this.productDetails.delivery = 0.00;
+      this.productDetails.name = item.productname;
+
     }
-  
+
     this.index = i;
     this.allPackage[i].flag = item._id;
-  
-    this.productDetails.name = item.productname;
+
     this.productDetails.price = item.price;
     // this.productDetails.delivery = 6.95;
     this.saletax = this.productDetails.price / 100 * 6;
@@ -572,15 +574,15 @@ export class ProductComponent implements OnInit {
     this.total = this.productDetails.total;
     this.productDetails.usertype = item.role.toLowerCase();
     this.productDetails.webinarid = item.webinar;
-    this.productDetails.webinar_credit=item.webinar_credit;
+    this.productDetails.webinar_credit = item.webinar_credit;
     // console.warn(this.productDetails);
   }
   listenFormFieldChange(val: any) {
     // console.log(val);
     if (val.field == 'fromsubmit') {
-    // console.log('val');
-    //   this.openDialog();
-    //   return;
+      // console.log('val');
+      //   this.openDialog();
+      //   return;
       if (val.fromval.message != null && val.fromval.message != '') {
         // console.log(val.fromval.message._id);
         this.router.navigateByUrl('success/' + val.fromval.message._id);
@@ -618,7 +620,7 @@ export class ProductComponent implements OnInit {
     const dialogRef = this.dialog.open(CommingSoon2, {
       width: '250px',
       data: '',
-      panelClass:'commingsoon'
+      panelClass: 'commingsoon'
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -634,7 +636,7 @@ export class CommingSoon2 {
 
   constructor(
     public dialogRef: MatDialogRef<CommingSoon2>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
 
   onNoClick(): void {
     this.dialogRef.close();

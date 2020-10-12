@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../environments/environment';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MetaService } from '@ngx-meta/core';
+import {CookieService} from 'ngx-cookie-service';
 
 
 export interface DialogData {
@@ -311,7 +312,7 @@ export class SuccessbookComponent implements OnInit {
     public dialog: MatDialog,
     public _apiService: ApiService,
     public ActivatedRoute: ActivatedRoute,
-    private meta: MetaService) {
+    private meta: MetaService,public router:Router,public cookieService:CookieService ,public _snackBar: MatSnackBar) {
 
     this.meta.setTitle('DNA Of Success - Jack M. Zufelt');
     this.meta.setTag('og:description', "Introducing the Second Edition of Jack M. Zufelt’s International Best-Seller, “The DNA of Success”, with his one-of-a-kind concept to achieving the truest desires. Jack’s methods and concepts are backed by scientific evidence and studies and have been proven to create incredible results.");
@@ -330,7 +331,7 @@ export class SuccessbookComponent implements OnInit {
 
 
 
-    this.productDetails.name = 'mentee Package';
+    this.productDetails.name = 'The Second Edition of the “DNA Of Success”';
     this.productDetails.price = 0;
     this.productDetails.delivery = 6.95;
     this.saletax = this.productDetails.price / 100 * 6;
@@ -572,6 +573,7 @@ export class SuccessbookComponent implements OnInit {
 
     }
   }
+
   listenFormFieldChange2(val: any) {
     if (val.field.name != 'card_type' && val.field.name != 'card_cc' && val.field.name != 'expyear' && val.field.name != 'card_cvv' && val.field.name != 'expmonth') {
 
@@ -655,7 +657,16 @@ export class SuccessbookComponent implements OnInit {
         "affiliate_id": this.menteeSignupData[0].affiliate_id
       }
 
-      this.AddONModal(data);
+      this._snackBar.open('Please Wait To Continue.....!', '', {
+        duration: 1300,
+      });
+
+      // this.AddONModal(data);
+      console.log(data,'data')
+      this.cookieService.set('data',JSON.stringify(data))
+      setTimeout(() => {
+      this.router.navigateByUrl('/completed-success');
+      }, 1500);
     }
   }
 }
@@ -744,6 +755,8 @@ export class AddON {
     });
     //  this.dialogRef.close();
   }
+
+
   onNoClick(): void {
     this.dialogRef.close();
   }

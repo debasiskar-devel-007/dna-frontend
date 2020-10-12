@@ -97,7 +97,7 @@ export class BlogComponent implements OnInit {
  getBlogCatList(){
    let data:any;
    data={
-      "condition":{}
+      "condition":{status:1}
    }
    this.apiService.customRequest(data,'api1/getcategorydata').subscribe(res=>{
      console.log(res)

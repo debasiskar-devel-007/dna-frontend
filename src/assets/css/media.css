@@ -1461,7 +1461,7 @@
 .newthewholestory_block7_row1_wrapper{background-position:bottom right;min-height:inherit;overflow:hidden;padding:20px;padding-bottom:36%;text-align:center;background-size:122%!important;}
 .newthewholestory_block7_row1_wrapper .newabout_block5_btn{width:auto;margin:20px auto 0px;display:inline-block;text-align:center;float:none;}
 .producttextblock.newthewholestorybannertxt .divtext2{padding:15px 15px;width:100%;}
-.newthewholestory_block7_row1_wrapper .newabout_block5_btn a{font-size:18px;background-position:center 10px;padding:45px 10px 10px 10px;}
+.newthewholestory_block7_row1_wrapper .newabout_block5_btn a{font-size:18px; }
 .newmentor_block2{box-shadow:none!important;border-radius:0px!important;margin:0 auto!important;padding:0!important;width:90%;text-align:center;}
 .newmentor_block2_wrapper h2{margin:0px 24px;padding:48px 0 5px 0;background-position:center top;}
 .newmentor_block2_wrapper{padding:24px 0;}
@@ -2918,18 +2918,227 @@ a.home_banner_btn{width:100%;font-size:16px;}
 .s_work_Matercontent .s-mastersec_work_left h2{margin-top:8%;}
 }
 
-@media screen and (max-width: 1500px) { .MDetailadminDB_block1{ width: 1300px;}
+
+@media screen and (max-width: 1880px) {
+
+   .aboutbeto_new_body1 {
+        background-position: 120% top;
+    }
+
+    .aboutbeto_new_body2 {
+        background-position: -20% top;
+    }
+}
+
+
+
+@media screen and (max-width: 1700px) {
+
+    .aboutbeto_new_body1 {
+         background-position: 140% top;
+     }
+ }
+ 
+
+@media screen and (max-width: 1640px) {
+    .aboutbeto_newtopbanner_wrapper {
+        width: 1400px; 
+    }
+    .aboutbeto_new_wrapper {
+        width: 1400px; 
+    }
+
+    .aboutbeto_new_body1 {
+        background-position: 160% top;
+    }
+
+    .aboutbeto_new_body2 {
+        background-position: -40% top;
+    }
+
+    .aboutbeto_new_body2_text {
+        width: 750px; 
+    }
+
+
+}
+
+
+@media screen and (max-width: 1580px) {
+
+    .aboutbeto_new_body1 {
+        background-position: 180% top;
+    }
+
+    .aboutbeto_new_body2 {
+        background-position: -60% top;
+    }
+}
+
+@media screen and (max-width: 1500px) { 
+    .aboutbeto_new_body1 {
+        background-position: 200% top;
+    }
+    .aboutbeto_new_body2 {
+        background-position: -80% top;
+    }
+
+    .MDetailadminDB_block1{ width: 1300px;}
 .MDetailadminDB_block1_con{ background-position: 740px top;}
 /* .mentordetail_block1_text {  width: 70%; padding-right: 0; } */
 /* .mentordetail_block1_img { width: 25%; } */
 }
-@media screen and (max-width: 1380px) {.MDetailadminDB_block1{ width: 1200px;}
+
+
+@media screen and (max-width: 1440px) {
+    .aboutbeto_newtopbanner_wrapper {
+        width: 1200px; 
+    }
+    .aboutbeto_new_wrapper {
+        width: 1200px; 
+    }
+
+    .aboutbeto_new_body1_text {
+        width: 614px;
+    }
+
+    .aboutbeto_new_body1_text p:nth-of-type(2){ width: 1200px;}
+    .aboutbeto_new_body2_text {
+        width:100%;
+    }
+
+    .aboutbeto_new_body2_text h2{ width: 600px; margin-left: 600px;}
+
+    .aboutbeto_new_body2_text ul li{width: 600px; margin-left: 600px;}
+
+    .aboutbeto_new_body2_text ul li:nth-of-type(8){width: auto; margin-left: 0;}
+}
+
+@media screen and (max-width: 1420px) {
+    .aboutbeto_new_body1_text {
+        width: 570px;
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    .aboutbeto_new_body1_text {
+        width: 570px;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .aboutbeto_new_body2_text h2 {
+        width: 540px;
+        margin-left: 647px;
+    }
+
+    .aboutbeto_new_body2_text ul li {
+        width: 540px;
+        margin-left: 647px;
+    }
+    
+    .MDetailadminDB_block1{ width: 1200px;}
  .MDetailadminDB_block1_con{ background-position: 760px top;}
  .MDetailadminDB_block2_con_text label{ font-size: 60px;}
+
+ .aboutbeto_new_body2_text ul li:nth-of-type(7) {
+    width: auto;
+    margin-left: 0;
+}
  }
-@media screen and (max-width: 1280px) {.MDetailadminDB_block1{ width: 1100px;}
+ @media screen and (max-width: 1360px) {
+
+    .aboutbeto_new_body1 {
+        background-position: 220% top;
+    }
+    .aboutbeto_new_body1_text {
+        width: 488px;
+    }
+
+    .aboutbeto_new_body1_text h2{ width: 125%;}
+
+    .aboutbeto_new_body2_text h2 {
+        width: 440px;
+        margin-left: 727px;
+    }
+
+    .aboutbeto_new_body2_text ul li {
+        width: 460px;
+        margin-left: 727px;
+    }
+    .aboutbeto_new_body2_text ul li:nth-of-type(6) {
+        width: auto;
+        margin-left: 0;
+    }
+ }
+
+ @media screen and (max-width: 1300px) {
+ .aboutbeto_new_body1 {
+    background-position: 290% top;}
+}
+
+@media screen and (max-width: 1280px) {
+    
+    .aboutbeto_new_body2 {
+        background-position: -120% top;
+    }
+    .MDetailadminDB_block1{ width: 1100px;}
 .MDetailadminDB_block1_con{ background-position: 730px top;}
 }
+@media screen and (max-width: 1260px) {
+.aboutbeto_new_body1 {
+    background-position: 380% top;}
+
+    .aboutbeto_new_wrapper {
+        width: 1100px;
+    }
+
+    .aboutbeto_new_body2 {
+        background-position: -160% top;
+    }
+
+    .aboutbeto_new_body2_text h2 {
+        width: 440px;
+        margin-left: 648px;
+    }
+
+    .aboutbeto_new_body2_text ul li {
+        width: 440px;
+        margin-left: 648px;
+    }
+
+    .aboutbeto_new_body1_text p:nth-of-type(2) {
+        width: 1100px;
+    }
+
+    .aboutbeto_new_body1_text {
+        width: 448px;
+    }
+    .aboutbeto_new_body1_text h2 {
+        width: 150%;
+    }
+
+    .aboutbeto_newtopbanner_wrapper {
+        width: 1100px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .aboutbeto_new_body1 {
+        background-position: 470% top;
+    }
+    .aboutbeto_new_body1_text h2 {
+        width: 140%;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .aboutbeto_new_body1 {
+        background-position: 500% top;
+    }
+    
+}
+
 @media screen and (max-width: 1199px) { .MDetailadminDB_block1{ width: 90%;}
 
 .as_bodycon .newproduct_list2 .newproduct_list2_top .newproduct_list2_top_wrapper h3{ padding-top: 0px;}
