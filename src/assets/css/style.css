@@ -2115,7 +2115,7 @@ width: 41px; height: 33px; position: absolute; right: 0; bottom: -33px;}
 
 .commingsoon  .mat-card{ border: none!important; box-shadow: none!important;}
 
-.commingsoon  .mat-card-title{ text-align: center; margin: 0; padding: 0 0 10px 0;     font-size: 30px;
+.commingsoon  .mat-card-title{ text-align: center; margin: 0; padding: 15px 0;     font-size: 30px;
     color: #3e405b;
     font-family: 'OpenSans-Semibold';}
 
