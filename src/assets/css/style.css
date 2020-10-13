@@ -2152,21 +2152,23 @@ width: 41px; height: 33px; position: absolute; right: 0; bottom: -33px;}
 .aboutbeto_newtopbanner{ box-shadow: none!important; border: none!important; background: url(../images/about_new_banner.jpg) no-repeat right top!important; background-size: cover!important; 
     border-radius: 0px!important; padding: 0!important; margin: 0!important;}
 
-.aboutbeto_newtopbanner_wrapper{ width: 1600px; margin: 0 auto;}    
+.aboutbeto_newtopbanner_wrapper{ width: 1600px; margin: 0 auto; position: relative;}    
 
-.aboutbeto_newtopbanner_wrapper h2{ margin: 0; text-align: center; background: #2faff5; padding: 20px 10px; font-size: 22px; color: #fff; text-transform: none;
+.aboutbeto_newbannerarrow{ position: absolute;}
+
+.aboutbeto_newtopbanner_wrapper h2{ margin: 0; text-align: center; background: #2faff5; padding:15px 10px; font-size: 22px; color: #fff; text-transform: none;
      font-family:'OpenSans-Bold';}
  
 .aboutbeto_newtopbanner_wrapper h2 span{ color: #f0ff00;}
 
 
-.aboutbeto_newtopbanner_con{ margin: 5px 50px 0 50px; background: url(../images/about_new_beto_img.png) no-repeat left bottom; padding-left: 290px; text-align: center;  min-height: 245px; display: flex; align-items: center;
-    justify-content: center;}
+.aboutbeto_newtopbanner_con{ margin: 5px 0 0 0; background: url(../images/about_new_beto_img.png) no-repeat right bottom; padding-right: 290px; text-align: center;  min-height: 245px; display: flex; align-items: center;
+    justify-content: center; width: 870px;}
 
     .aboutbeto_newtopbanner_con h3{ display: block; font-size: 24px; color: #ffffff; text-transform: uppercase;  font-family: 'OpenSans-Semibold';
-         text-shadow: 0 0 2px #f9ae0a; text-shadow: 0 0 10px #f7a527;}
+         text-shadow: 0 0 8px #92351a;  }
 
-    .aboutbeto_newtopbanner_con h3 label{ display: block;  font-size: 24px;   font-family:'OpenSans-Bold'; font-size: 60px; margin-top: -15px;}
+    .aboutbeto_newtopbanner_con h3 label{ display: block;  font-size: 24px; font-family:'TheBoldFont'; font-size: 60px; margin-top: -15px;}
 
 
  .aboutbeto_body{box-shadow: none!important; border: none!important; 
@@ -2217,7 +2219,7 @@ width: 41px; height: 33px; position: absolute; right: 0; bottom: -33px;}
             .aboutbeto_new_body2 .aboutbeto_new_wrapper{ padding: 0px;}
 
 
-            .aboutbeto_new_body2_text{ width: 800px; float: right;}
+            .aboutbeto_new_body2_text{ width: 740px; float: right;}
 
             .aboutbeto_new_body2_text h2{ margin: 0; padding: 20px 5px; text-align: center; background: rgba(47,176,245,1);
                 background: -moz-linear-gradient(left, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
@@ -2240,15 +2242,245 @@ width: 41px; height: 33px; position: absolute; right: 0; bottom: -33px;}
             }    
 
 
-            .aboutbeto_new_body2 h4{ margin: 0; padding:18px 18px; text-align: left; background: rgba(255,132,0,1);
-                background: -moz-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
-                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,132,0,1)), color-stop(100%, rgba(255,132,0,1)));
-                background: -webkit-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
-                background: -o-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
-                background: -ms-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
-                background: linear-gradient(to right, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8400', endColorstr='#ff8400', GradientType=1 ); border: solid 1px #fff; border-radius: 8px;
-                font-size: 30px; line-height: 32px;
-    color: #ffffff; width: 970px;
-    font-family: 'OpenSans-Semibold'; text-shadow: 0 0 2px #c57116;
-            } 
+ 
+
+
+    .aboutbeto_new_body3{background: url(../images/about_new_bg3.png) no-repeat right top; margin-top: -40px; padding-bottom: 50px;}  
+    
+    
+    .aboutbeto_new_body3_text{ position: relative; width: 878px;}
+
+    .aboutbeto_new_body3_text h2{ margin: 0; padding:18px 18px; text-align: left; background: rgba(255,132,0,1);
+        background: -moz-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,132,0,1)), color-stop(100%, rgba(255,132,0,1)));
+        background: -webkit-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: -o-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: -ms-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: linear-gradient(to right, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8400', endColorstr='#ff8400', GradientType=1 ); border: solid 1px #fff; border-radius: 8px;
+        font-size: 26px; line-height: 32px;
+color: #ffffff; 
+font-family: 'OpenSans-Semibold'; text-shadow: 0 0 2px #c57116;
+    } 
+
+
+    .aboutbeto_new_body3_text h3 {
+        margin: 20px 0 0 0; padding:18px 18px; text-align: left;
+        background: rgba(47,176,245,1);
+        background: -moz-linear-gradient(left, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(47,176,245,1)), color-stop(100%, rgba(2,138,196,1)));
+        background: -webkit-linear-gradient(left, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        background: -o-linear-gradient(left, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        background: -ms-linear-gradient(left, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        background: linear-gradient(to right, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fb0f5', endColorstr='#028ac4', GradientType=1 );
+        border: solid 1px #fff; border-radius: 8px;
+        font-size: 25px; line-height: 32px;
+color: #ffffff; 
+font-family: 'OpenSans-Semibold'; 
+        text-shadow: 0 0 2px #0d76a1;
+    }
+
+
+    .aboutbeto_new_body3_text p {
+        font-size: 18px;
+        color: #2f2f2f;
+        font-family: 'OpenSans-Semibold';
+        margin: 20px 0 0 0;
+        padding: 0;
+    }
+
+    .aboutbeto_new_body3img{ position: absolute; bottom: 0; right: -360px; background: #fff; padding: 10px; box-shadow: 0 0 5px #b6c0c1;}
+
+
+    .aboutbeto_new_body4{background: url(../images/about_new_bg4.png) no-repeat 10% top;  padding-bottom: 40px; margin-top: -10px;}  
+
+
+    .aboutbeto_new_body4_con:nth-of-type(1) .aboutbeto_new_body4_con_subdiv ul{ display: none;}
+
+    .aboutbeto_new_body4_text{ width: 876px; float: right;}
+
+    .aboutbeto_new_body4_text h2 {
+        margin: 0;
+        padding: 15px;
+        text-align: left;
+        background: rgba(255,132,0,1);
+        background: -moz-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,132,0,1)), color-stop(100%, rgba(255,132,0,1)));
+        background: -webkit-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: -o-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: -ms-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: linear-gradient(to right, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8400', endColorstr='#ff8400', GradientType=1 );
+        border: solid 1px #fff;
+        border-radius: 8px;
+        font-size: 26px;
+        line-height: 32px;
+        color: #ffffff;
+        font-family: 'OpenSans-Semibold';
+        text-shadow: 0 0 2px #c57116; text-align: center;
+    }
+
+    .aboutbeto_new_body4_text p {
+        font-size: 18px;
+        color: #2f2f2f;
+        font-family: 'OpenSans-Semibold';
+        margin: 20px 0;
+        padding: 0;
+    }
+
+    .aboutbeto_new_body4_con{ display: flex; flex-wrap: wrap; justify-content: space-between;}
+
+    .aboutbeto_new_body4_con_subdiv{ width: 49%;}
+
+    .aboutbeto_new_body4_con:nth-of-type(1) .aboutbeto_new_body4_con_subdiv{background: rgba(47,176,245,1);
+        background: -moz-linear-gradient(left, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(47,176,245,1)), color-stop(100%, rgba(2,138,196,1)));
+        background: -webkit-linear-gradient(left, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        background: -o-linear-gradient(left, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        background: -ms-linear-gradient(left, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        background: linear-gradient(to right, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fb0f5', endColorstr='#028ac4', GradientType=1 );
+        border: solid 1px #fff; border-radius: 5px 5px 0 0;}
+        
+    .aboutbeto_new_body4_con_subdiv h4{  padding: 10px; font-size: 24px; color: #ffffff;  font-family:'OpenSans-Regular'; font-weight: normal;}
+
+
+    .aboutbeto_new_body4_con:nth-of-type(2) { display: flex; flex-wrap: wrap; justify-content: space-between;}
+    .aboutbeto_new_body4_con:nth-of-type(2) .aboutbeto_new_body4_con_subdiv{background: rgba(48,51,88,1);
+        background: -moz-linear-gradient(left, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(48,51,88,1)), color-stop(100%, rgba(62,64,91,1)));
+        background: -webkit-linear-gradient(left, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+        background: -o-linear-gradient(left, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+        background: -ms-linear-gradient(left, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+        background: linear-gradient(to right, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303358', endColorstr='#3e405b', GradientType=1 );    border: solid 1px #fff; border-top: none;}
+
+
+     .aboutbeto_new_body4_con_subdiv ul{ margin: 0; padding: 5px;  }   
+
+     .aboutbeto_new_body4_con_subdiv ul li{    list-style: none;
+        margin: 10px;
+        padding: 0 0 0 33px;
+        background: url(../images/about_new_beto_icon2.png) no-repeat left 5px;
+        font-size: 18px;
+        color: #d9edef;
+        font-family:'OpenSans-Regular';
+    }
+
+
+
+    .aboutbeto_new_body5{background: url(../images/about_new_bg5.png) no-repeat right bottom;  padding-bottom: 40px; padding-top: 40px; margin-top: -40px;}
+
+    .aboutbeto_new_body5_text{ width: 790px;}
+
+    .aboutbeto_new_body5_text h2 {
+        margin: 0;
+        padding: 15px;
+        text-align: left;
+        background: rgba(255,132,0,1);
+        background: -moz-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,132,0,1)), color-stop(100%, rgba(255,132,0,1)));
+        background: -webkit-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: -o-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: -ms-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: linear-gradient(to right, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8400', endColorstr='#ff8400', GradientType=1 );
+        border: solid 1px #fff;
+        border-radius: 8px;
+        font-size: 26px;
+        line-height: 32px;
+        color: #ffffff;
+        font-family: 'OpenSans-Semibold';
+        text-shadow: 0 0 2px #c57116;
+        text-align: center;
+    }
+
+
+    .aboutbeto_new_body5_text p {
+        font-size: 18px;
+        color: #2f2f2f;
+        font-family: 'OpenSans-Semibold';
+        margin: 20px 0;
+        padding: 0;
+    }
+
+    .aboutbeto_new_body5_text h3 {
+        background: rgba(47,176,245,1);
+        background: -moz-linear-gradient(left, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(47,176,245,1)), color-stop(100%, rgba(2,138,196,1)));
+        background: -webkit-linear-gradient(left, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        background: -o-linear-gradient(left, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        background: -ms-linear-gradient(left, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        background: linear-gradient(to right, rgba(47,176,245,1) 0%, rgba(2,138,196,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fb0f5', endColorstr='#028ac4', GradientType=1 );
+        border: solid 1px #fff;
+        border-radius: 5px 5px 0 0;     padding: 10px;
+        font-size: 24px;
+        color: #ffffff;
+        font-family: 'OpenSans-Semibold';
+        font-weight: normal; text-align: center;
+    }
+
+    .aboutbeto_new_body5_text ul{
+        background: rgba(48,51,88,1);
+        background: -moz-linear-gradient(left, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(48,51,88,1)), color-stop(100%, rgba(62,64,91,1)));
+        background: -webkit-linear-gradient(left, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+        background: -o-linear-gradient(left, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+        background: -ms-linear-gradient(left, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+        background: linear-gradient(to right, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303358', endColorstr='#3e405b', GradientType=1 );
+        border: solid 1px #fff;
+        border-top: none; overflow: hidden; padding: 10px;
+    }
+
+    .aboutbeto_new_body5_text ul li {
+        list-style: none;
+        margin: 10px;
+        padding: 0 0 0 33px;
+        background: url(../images/about_new_beto_icon2.png) no-repeat left 5px;
+        font-size: 18px;
+        color: #d9edef;
+        font-family: 'OpenSans-Regular';
+    }
+
+
+    .aboutbeto_new_body6{background: url(../images/about_new_bg6.png) no-repeat left bottom;  padding-bottom: 170px; padding-top: 40px; margin-top: -40px;}
+
+
+    .aboutbeto_new_body6_text{ width: 750px; float: right;}
+
+
+    .aboutbeto_new_body6_text h2 {
+        margin: 0;
+        padding: 15px;
+        text-align: left;
+        background: rgba(255,132,0,1);
+        background: -moz-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,132,0,1)), color-stop(100%, rgba(255,132,0,1)));
+        background: -webkit-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: -o-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: -ms-linear-gradient(left, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        background: linear-gradient(to right, rgba(255,132,0,1) 0%, rgba(255,132,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8400', endColorstr='#ff8400', GradientType=1 );
+        border: solid 1px #fff;
+        border-radius: 8px;
+        font-size: 26px;
+        line-height: 32px;
+        color: #ffffff;
+        font-family: 'OpenSans-Semibold';
+        text-shadow: 0 0 2px #c57116; 
+    }
+
+    .aboutbeto_new_body6_text p {
+        font-size: 18px;
+        color: #2f2f2f;
+        font-family: 'OpenSans-Semibold';
+        margin: 15px 0;
+        padding: 0;
+    }
+
+    .aboutbeto_new_body6_text h3{ font-size: 20px; color: #ff4e00; margin: 0; padding: 0;   font-family: 'OpenSans-Semibold';}
+
+    .aboutbeto_new_body6_text h3 a{ color: #222222;}
