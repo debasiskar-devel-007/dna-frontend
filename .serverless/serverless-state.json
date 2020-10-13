@@ -5,7 +5,7 @@
       "name": "dna-frontend"
     },
     "provider": {
-      "stage": "dev",
+      "stage": "production",
       "variableSyntax": "\\${([^{}]+?)}",
       "name": "aws",
       "runtime": "nodejs10.x",
@@ -13,6 +13,7 @@
       "timeout": 10,
       "region": "us-east-1",
       "versionFunctions": true,
+      "remoteFunctionData": null,
       "compiledCloudFormationTemplate": {
         "AWSTemplateFormatVersion": "2010-09-09",
         "Description": "The AWS CloudFormation template for this Serverless application",
@@ -74,7 +75,7 @@
           "ApiLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/dna-frontend-dev-api"
+              "LogGroupName": "/aws/lambda/dna-frontend-production-api"
             }
           },
           "IamRoleLambdaExecution": {
@@ -103,7 +104,7 @@
                       "-",
                       [
                         "dna-frontend",
-                        "dev",
+                        "production",
                         "lambda"
                       ]
                     ]
@@ -119,7 +120,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/dna-frontend-dev*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/dna-frontend-production*:*"
                           }
                         ]
                       },
@@ -130,7 +131,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/dna-frontend-dev*:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/dna-frontend-production*:*:*"
                           }
                         ]
                       }
@@ -144,7 +145,7 @@
                   "-",
                   [
                     "dna-frontend",
-                    "dev",
+                    "production",
                     {
                       "Ref": "AWS::Region"
                     },
@@ -161,9 +162,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dna-frontend/dev/1601878482173-2020-10-05T06:14:42.173Z/dna-frontend.zip"
+                "S3Key": "serverless/dna-frontend/production/1602508975154-2020-10-12T13:22:55.154Z/dna-frontend.zip"
               },
-              "FunctionName": "dna-frontend-dev-api",
+              "FunctionName": "dna-frontend-production-api",
               "Handler": "lambda.universal",
               "MemorySize": 192,
               "Role": {
@@ -179,20 +180,20 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionliNCpEq09m9YRM59RMVjWM0MYDy9UQQbRWI9907E": {
+          "ApiLambdaVersionH3ptY3QyBtxAU2coK3vZ7ZVVrxoEbXs1gAU7bVrBWg": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "owyQMkP5lBa0MKxF1t+anR/CxE9XGKtvozRKxjkEdo4="
+              "CodeSha256": "nZ/aZowm3KMX3QAFhZZgvkBrAOb6PsSfmbV2oX1LWYQ="
             }
           },
           "ApiGatewayRestApi": {
             "Type": "AWS::ApiGateway::RestApi",
             "Properties": {
-              "Name": "dev-dna-frontend",
+              "Name": "production-dna-frontend",
               "EndpointConfiguration": {
                 "Types": [
                   "EDGE"
@@ -305,13 +306,13 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1601878419185": {
+          "ApiGatewayDeployment1602508935531": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               },
-              "StageName": "dev"
+              "StageName": "production"
             },
             "DependsOn": [
               "ApiGatewayMethodProxyVarAny",
@@ -365,7 +366,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionliNCpEq09m9YRM59RMVjWM0MYDy9UQQbRWI9907E"
+              "Ref": "ApiLambdaVersionH3ptY3QyBtxAU2coK3vZ7ZVVrxoEbXs1gAU7bVrBWg"
             }
           },
           "ServiceEndpoint": {
@@ -386,7 +387,7 @@
                   {
                     "Ref": "AWS::URLSuffix"
                   },
-                  "/dev"
+                  "/production"
                 ]
               ]
             }
@@ -484,61 +485,22 @@
             "http": "ANY /"
           }
         ],
-        "name": "dna-frontend-dev-api",
+        "name": "dna-frontend-production-api",
         "package": {},
         "memory": 192,
         "timeout": 10,
         "runtime": "nodejs10.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionliNCpEq09m9YRM59RMVjWM0MYDy9UQQbRWI9907E"
+        "versionLogicalId": "ApiLambdaVersionH3ptY3QyBtxAU2coK3vZ7ZVVrxoEbXs1gAU7bVrBWg"
       }
     },
-    "configValidationMode": "warn",
     "serviceFilename": "serverless.yml",
     "layers": {},
-    "initialServerlessConfig": {
-      "service": {
-        "$ref": "$[\"service\"][\"serviceObject\"]"
-      },
-      "plugins": {
-        "$ref": "$[\"service\"][\"plugins\"]"
-      },
-      "provider": {
-        "$ref": "$[\"service\"][\"provider\"]"
-      },
-      "package": {
-        "exclude": [
-          "src/**",
-          "node_modules/**",
-          "firebug-lite/**",
-          "e2e/**",
-          "coverage/**",
-          "!node_modules/aws-serverless-express/**",
-          "!node_modules/binary-case/**",
-          "!node_modules/type-is/**",
-          "!node_modules/media-typer/**",
-          "!node_modules/mime-types/**",
-          "!node_modules/mime-db/**"
-        ],
-        "artifact": "/home/oem/Documents/uttam/projects/dna_projects/dna-frontend/.serverless/dna-frontend.zip",
-        "artifactDirectoryName": "serverless/dna-frontend/dev/1601878482173-2020-10-05T06:14:42.173Z"
-      },
-      "custom": {
-        "$ref": "$[\"service\"][\"custom\"]"
-      },
-      "functions": {
-        "$ref": "$[\"service\"][\"functions\"]"
-      },
-      "layers": {
-        "$ref": "$[\"service\"][\"layers\"]"
-      },
-      "configValidationMode": "warn"
-    },
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "/home/oem/Documents/uttam/projects/dna_projects/dna-frontend/.serverless/dna-frontend.zip"
+    "artifact": "/home/influxiq-03/Downloads/dna-frontend/.serverless/dna-frontend.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/dna-frontend/dev/1601878482173-2020-10-05T06:14:42.173Z",
+    "artifactDirectoryName": "serverless/dna-frontend/production/1602508975154-2020-10-12T13:22:55.154Z",
     "artifact": "dna-frontend.zip"
   }
 }
