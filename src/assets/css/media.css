@@ -3274,7 +3274,123 @@ a.home_banner_btn{width:100%;font-size:16px;}
     }
 }
 
-@media screen and (max-width: 1199px) { .MDetailadminDB_block1{ width: 90%;}
+@media screen and (max-width: 1199px) { 
+    .aboutbeto_new_body6_text p{ text-align: center;}
+
+    .aboutbeto_new_body6_text {
+        width: auto;
+    }
+
+    .aboutbeto_new_body6 {
+        background-position: center bottom;
+        background-size: 100%;
+        padding: 0 0 46% 0;
+    }
+
+    .aboutbeto_new_body5_text p{ text-align: center;}
+    .aboutbeto_new_body5_text {
+        width: auto;
+    }
+    .aboutbeto_new_body5_text h2 {
+        width: auto;
+    }
+    .aboutbeto_new_body5_text p {
+        width: auto;
+    }
+
+    .aboutbeto_new_body5 {
+        background-position: center bottom;
+        background-size: 100%;
+        padding-bottom: 70%;
+    }
+
+    .aboutbeto_new_body4_text p{ text-align: center;}
+
+
+    .aboutbeto_new_body4_text {
+        width: auto;
+        float: none;
+    }
+
+    .aboutbeto_new_body4 {
+        background-position: center bottom;
+        background-size: 100%;
+        padding-bottom: 66%;
+        margin-top: 0;
+    }
+
+    .aboutbeto_new_body3img{ position: inherit; display: block; margin: 0 auto; margin-top: 25px; max-width: 100%; right: 0;}
+
+    .aboutbeto_new_body3_text p{ text-align: center;}
+
+    .aboutbeto_new_body3_text {
+        position: relative;
+        width: auto;
+    }
+
+    .aboutbeto_new_body3 {
+        background-position: center top;
+        background-size: 100%;
+        padding-top: 66%;
+    }
+
+    .aboutbeto_new_body2_text h2 {
+        width: auto;
+        margin-left: 0;
+    }
+
+    .aboutbeto_new_body2_text ul li {
+        width: auto;
+        margin-left: 0;
+    }
+
+    .aboutbeto_new_body2 {
+        background-position: center top;
+        background-size: 100%;
+        padding-top: 74%;
+    }
+
+
+    .aboutbeto_new_body1_text p{ text-align: center;}
+    .aboutbeto_new_body1_text p:nth-of-type(2) {
+        width: auto;
+    }
+
+    .aboutbeto_new_wrapper{ padding-top: 0px;}
+
+    .aboutbeto_new_body1_text h2 {
+        width: auto;
+    }
+
+    .aboutbeto_new_body1_text {
+        width: auto;
+        margin: 0;
+    }
+
+    .aboutbeto_new_body1 {
+        background-position: center top;
+        background-size: 100%;
+        padding-top: 50%;
+    }
+    
+    .aboutbeto_newtopbanner_wrapper {
+        width: 90%;
+    }
+
+    .aboutbeto_new_wrapper {
+        width: 90%;
+    }
+
+    .aboutbeto_newtopbanner_con {
+        width: auto;
+        background-position: center bottom;
+        display: block;
+        min-height: inherit;
+        text-align: center;
+        padding: 30px 0 270px 0;
+    }
+    
+    .MDetailadminDB_block1{ width: 90%;}
 
 .as_bodycon .newproduct_list2 .newproduct_list2_top .newproduct_list2_top_wrapper h3{ padding-top: 0px;}
 
@@ -3312,6 +3428,31 @@ a.home_banner_btn{width:100%;font-size:16px;}
 .MDetailadminDB_block1_con_text_block h2 label{  font-size: 24px;  padding-bottom: 15px; width: 100%;}
 .mentordetail_block2{ display: block;}
 .mentordetail_block2 label{ display: block; width: 100%; margin: 5px 0; background: #ebebeb;}
+}
+
+@media screen and (max-width: 767px) {
+
+    .aboutbeto_new_body4_con {
+        display: block;}
+
+        .aboutbeto_new_body4_con_subdiv {
+            width: auto;
+        }
+
+        .aboutbeto_new_body4_con:nth-of-type(1) .aboutbeto_new_body4_con_subdiv ul {
+            display: block; background: rgba(48,51,88,1);
+            background: -moz-linear-gradient(left, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(48,51,88,1)), color-stop(100%, rgba(62,64,91,1)));
+            background: -webkit-linear-gradient(left, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+            background: -o-linear-gradient(left, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+            background: -ms-linear-gradient(left, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+            background: linear-gradient(to right, rgba(48,51,88,1) 0%, rgba(62,64,91,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303358', endColorstr='#3e405b', GradientType=1 );
+          
+            border-top: none;
+        }
+
+        .aboutbeto_new_body4_con:nth-of-type(2){ display: none;}
 }
 
  @media screen and (max-width: 680px) {.MDetailadminDB_block1_con { background-position: 30% top; background-size: 160%;  padding-top: 60%; }
