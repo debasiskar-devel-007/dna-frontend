@@ -2484,3 +2484,5 @@ font-family: 'OpenSans-Semibold';
     .aboutbeto_new_body6_text h3{ font-size: 20px; color: #ff4e00; margin: 0; padding: 0;   font-family: 'OpenSans-Semibold';}
 
     .aboutbeto_new_body6_text h3 a{ color: #222222;}
+
+    .aboutbeto_new_body6_text h3 a:hover{ color: #711e1e;}

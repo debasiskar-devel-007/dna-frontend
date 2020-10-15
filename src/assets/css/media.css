@@ -3316,10 +3316,10 @@ a.home_banner_btn{width:100%;font-size:16px;}
         background-position: center bottom;
         background-size: 100%;
         padding-bottom: 66%;
-        margin-top: 0;
+        margin-top: -10%;
     }
 
-    .aboutbeto_new_body3img{ position: inherit; display: block; margin: 0 auto; margin-top: 25px; max-width: 100%; right: 0;}
+    .aboutbeto_new_body3img{ position: inherit; display: block; margin: 0 auto; margin-top: 25px; max-width: 90%; right: 0;}
 
     .aboutbeto_new_body3_text p{ text-align: center;}
 
@@ -3329,9 +3329,9 @@ a.home_banner_btn{width:100%;font-size:16px;}
     }
 
     .aboutbeto_new_body3 {
-        background-position: center top;
+        background-position: center bottom;
         background-size: 100%;
-        padding-top: 66%;
+        padding-bottom: 76%;
     }
 
     .aboutbeto_new_body2_text h2 {
@@ -3345,11 +3345,14 @@ a.home_banner_btn{width:100%;font-size:16px;}
     }
 
     .aboutbeto_new_body2 {
-        background-position: center top;
+        background-position: center bottom;
         background-size: 100%;
-        padding-top: 74%;
+        padding-bottom: 77%;
+        margin-top: -8%;
+        padding-top: 0;
     }
 
+    .aboutbeto_new_body2_text h2{ font-size: 30px;}
 
     .aboutbeto_new_body1_text p{ text-align: center;}
     .aboutbeto_new_body1_text p:nth-of-type(2) {
@@ -3368,13 +3371,21 @@ a.home_banner_btn{width:100%;font-size:16px;}
     }
 
     .aboutbeto_new_body1 {
-        background-position: center top;
+        background: url(../images/about_new_bg1mobile.png) no-repeat;
+  
+        background-position: center bottom;
         background-size: 100%;
-        padding-top: 50%;
+        padding-bottom: 62%;
     }
+
+    .aboutbeto_new_body1  .aboutbeto_new_wrapper{ width: 100%;}
+
+    .aboutbeto_new_body1_text h2{ border-radius: 0;}
+
+    .aboutbeto_new_body1_text p{ padding-left: 5%; padding-right: 5%;}
     
     .aboutbeto_newtopbanner_wrapper {
-        width: 90%;
+        width: auto; 
     }
 
     .aboutbeto_new_wrapper {
@@ -3387,7 +3398,7 @@ a.home_banner_btn{width:100%;font-size:16px;}
         display: block;
         min-height: inherit;
         text-align: center;
-        padding: 30px 0 270px 0;
+        padding: 49px 10px 270px 10px;
     }
     
     .MDetailadminDB_block1{ width: 90%;}
@@ -3457,7 +3468,7 @@ a.home_banner_btn{width:100%;font-size:16px;}
 
  @media screen and (max-width: 680px) {.MDetailadminDB_block1_con { background-position: 30% top; background-size: 160%;  padding-top: 60%; }
  .MDgaller_imagewrapper { width: 99%;  }
- 
+ .aboutbeto_new_body3_text h2{ word-break: break-all;}
 }
 
  

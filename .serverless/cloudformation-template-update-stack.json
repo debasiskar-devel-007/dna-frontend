@@ -59,7 +59,7 @@
     "ApiLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/dna-frontend-production-api"
+        "LogGroupName": "/aws/lambda/dna-frontend-dev-api"
       }
     },
     "IamRoleLambdaExecution": {
@@ -88,7 +88,7 @@
                 "-",
                 [
                   "dna-frontend",
-                  "production",
+                  "dev",
                   "lambda"
                 ]
               ]
@@ -104,7 +104,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/dna-frontend-production*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/dna-frontend-dev*:*"
                     }
                   ]
                 },
@@ -115,7 +115,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/dna-frontend-production*:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/dna-frontend-dev*:*:*"
                     }
                   ]
                 }
@@ -129,7 +129,7 @@
             "-",
             [
               "dna-frontend",
-              "production",
+              "dev",
               {
                 "Ref": "AWS::Region"
               },
@@ -146,9 +146,9 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/dna-frontend/production/1602601299792-2020-10-13T15:01:39.792Z/dna-frontend.zip"
+          "S3Key": "serverless/dna-frontend/dev/1602658396740-2020-10-14T06:53:16.740Z/dna-frontend.zip"
         },
-        "FunctionName": "dna-frontend-production-api",
+        "FunctionName": "dna-frontend-dev-api",
         "Handler": "lambda.universal",
         "MemorySize": 192,
         "Role": {
@@ -164,20 +164,20 @@
         "ApiLogGroup"
       ]
     },
-    "ApiLambdaVersionKxPtmhEejTQycbF6YtNN7bgTgQeljIrMs6bE56eDcs": {
+    "ApiLambdaVersionAsvDuludH686c0V3REbhtRXYeoy7whfvUYxP8uU": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "sslZ0XHqy6L+exWvsJ2brlt7QsXZ1hE/ZMYPnCDOBqU="
+        "CodeSha256": "K5oATwAP1WBQyo5278ADX7X9PXuaiSZQCj5tyu6xwIY="
       }
     },
     "ApiGatewayRestApi": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
-        "Name": "production-dna-frontend",
+        "Name": "dev-dna-frontend",
         "EndpointConfiguration": {
           "Types": [
             "EDGE"
@@ -290,13 +290,13 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1602601243439": {
+    "ApiGatewayDeployment1602658345021": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         },
-        "StageName": "production"
+        "StageName": "dev"
       },
       "DependsOn": [
         "ApiGatewayMethodProxyVarAny",
@@ -350,7 +350,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersionKxPtmhEejTQycbF6YtNN7bgTgQeljIrMs6bE56eDcs"
+        "Ref": "ApiLambdaVersionAsvDuludH686c0V3REbhtRXYeoy7whfvUYxP8uU"
       }
     },
     "ServiceEndpoint": {
@@ -371,7 +371,7 @@
             {
               "Ref": "AWS::URLSuffix"
             },
-            "/production"
+            "/dev"
           ]
         ]
       }
