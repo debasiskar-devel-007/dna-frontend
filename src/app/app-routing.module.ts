@@ -30,7 +30,7 @@ import { AboutbetoComponent } from './aboutbeto/aboutbeto.component';
 
 
 
-
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 import { CompletedsuccessComponent } from './completedsuccess/completedsuccess.component';
 
@@ -41,6 +41,7 @@ const api_url = environment['api_url'];
 const routes: Routes = [
  
   {path:'home', component: HomeComponent}, 
+  {path:'testimonials', component: TestimonialsComponent}, 
   {path:'', component: HomeComponent}, 
   {path:'ordersuccess', component: OrdersuccessComponent},
   {path:'completed-success', component: CompletedsuccessComponent},

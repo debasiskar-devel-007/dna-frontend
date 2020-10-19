@@ -47,6 +47,7 @@ import { TemplateModule } from './templatemodule';
 import { MentordetailComponent, mentor_detail, gallery_modal } from './mentordetail/mentordetail.component';
 import { CompletedsuccessComponent } from './completedsuccess/completedsuccess.component';
 import { AboutbetoComponent } from './aboutbeto/aboutbeto.component';
+import { TestimonialsComponent, JoeGarciaDetail, DorisWoodDetail, JasonMossDetail, MaryLouDetail,MikeDeLucaDetail,SteadwickDetail, } from './testimonials/testimonials.component';
 
 //import { ContactComponent } from './contact/contact.component';
 
@@ -112,7 +113,14 @@ export function metaFactory(): MetaLoader {
     mentor_detail,
     gallery_modal,
     CompletedsuccessComponent,
-    AboutbetoComponent
+    AboutbetoComponent,
+    TestimonialsComponent,
+    JoeGarciaDetail,
+    DorisWoodDetail,
+    JasonMossDetail,
+    MaryLouDetail,
+    MikeDeLucaDetail,
+    SteadwickDetail,
   
   ],
   imports: [
@@ -141,7 +149,8 @@ export function metaFactory(): MetaLoader {
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: [CommingSoon3, CommingSoon4, CommingSoon,loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON, mentor_detail,gallery_modal],
+  entryComponents: [CommingSoon3, CommingSoon4, CommingSoon,loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON, mentor_detail,gallery_modal, JoeGarciaDetail, DorisWoodDetail,
+    JasonMossDetail, MaryLouDetail, MikeDeLucaDetail, SteadwickDetail],
 })
 export class AppModule {
 

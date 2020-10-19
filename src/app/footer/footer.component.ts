@@ -73,7 +73,7 @@ export class FooterComponent implements OnInit {
   }
 
 }
-
+ 
 
 /**terms and condition */
 @Component({

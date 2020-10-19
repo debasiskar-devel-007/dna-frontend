@@ -227,7 +227,7 @@
     padding-right: 4%;}
 .newsuccessgenetics_banner_section{background-position:-360px top !important;}
 .s_newAffiliate .girl_image{left:-92px;width:529px;bottom:-20px;}
-.menu_block{width:1400px!important;}
+.menu_block{width:1500px!important;}
 .menu_block .home_banner_menu_section .navbar-nav{margin-top:54px;}
 .home_top_section_col{width:1390px;}
 .home_top_section p{font-size:15px;padding:9px 0 9px 42px;}
@@ -486,7 +486,14 @@
     width: 25px;
 }
 }
-@media screen and (max-width:1540px){.bannerimg1{left:780px;width:360px;}
+@media screen and (max-width:1540px){
+    
+    .menu_block {
+        width: 1400px!important;
+    }
+    .menu_block .home_banner_menu_section .navbar-nav li a{padding: 0 5px;}
+
+    .bannerimg1{left:780px;width:360px;}
 
 .successbook_topformarrow {
     position: absolute;
@@ -622,7 +629,7 @@
 .newhomeblock5_left_block2 h2{width:600px;}
 .newhomeblock5_left_block3_sub{padding:44px 20px;}
 .menu_block{width:1280px!important;}
-.menu_block .home_banner_menu_section .navbar-nav li a{text-transform:capitalize;font-family:'OpenSans-Semibold';font-size:13px;color:#444447;padding:0px 8px 0px 8px;}
+.menu_block .home_banner_menu_section .navbar-nav li a{text-transform:capitalize;font-family:'OpenSans-Semibold';font-size:13px;color:#444447;padding:0px 4px 0px 4px;}
 .menu_block .home_banner_menu_section .navbar-nav{float:right;display:block;margin-top:45px;}
 .as_bodycon .newproduct_list2_bottom_wrapper h2:nth-child(2){padding-left:590px;}
 .as_bodycon .newproduct_list2_bottom_wrapper h2:nth-child(3){padding-left:590px;}
@@ -991,7 +998,7 @@
 .leftblock5_img_div2{top:60px;right:46px;}
 .newshop_banner_section{background-position:-425px top!important;}
 .menu_block{width:1190px!important;}
-.menu_block .home_banner_menu_section .navbar-nav li a{padding:0px 6px 0px 6px;}
+.menu_block .home_banner_menu_section .navbar-nav li a{padding:0px 4px 0px 4px;     font-size: 12px;}
 .as_bodycon .newproduct_list4 .bgupwrapper{left:0px;}
 .s-top-banner .s-top-banner-wrapper .s-top-banner-left .s-top-heading-bottom{font-size:28px;padding:0;}
 .s-learnmore-section-top p{font-size:19px;}
@@ -1229,7 +1236,10 @@
 /* .home_new_imgblock3{padding:0 20px 30px 20px!important;background-size:44%!important;margin-top:25px;} */
 .home_new_imgblock3{ background-image: none; padding: 20px; margin: 0px; padding-top: 0px;}
 }
-@media screen and (max-width:1199px){.package3{padding:0px!important;}
+@media screen and (max-width:1199px){
+    
+    
+    .package3{padding:0px!important;}
 
 .newhomeblock5_left_block1 .home_new_imgblock1 h2 {
     padding-right: 0;
@@ -2325,6 +2335,26 @@
 }
 @media screen and (max-width:991px){
 
+    .testimonialsmodal .mat-dialog-container {
+        padding: 0px;
+        height: 80vh;
+        overflow-y: scroll;
+    }
+    .testimonialsmodal img {
+        background: #fff;
+        padding: 10px; 
+        display: block;
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .testimonialsmodal p { 
+        text-align: center;
+    }
+
+
+
     .mentorsignup_popuptext{border-radius: 10px 10px 0 0;}
 
     .formpopupMS .mat-dialog-container {
@@ -2932,11 +2962,16 @@ a.home_banner_btn{width:100%;font-size:16px;}
     .aboutbeto_new_body4 {
         background-position: 5% top;
     }
+
+    .testimonials_bottom_banner{    padding: 35px 40px 0 40px;}
 }
 
 @media screen and (max-width: 1760px) {
 
     .aboutbeto_new_body3{ background-position: 110% top;}
+
+    .testimonials_bottom_banner_wrapper h3 {
+        font-size: 36px;}
 }
 
 
@@ -2986,10 +3021,163 @@ a.home_banner_btn{width:100%;font-size:16px;}
     .aboutbeto_new_body5_text h2{ width: 930px;}
 
     .aboutbeto_new_body6{ background-position: -20% bottom;}
+
+    .testimonials_newtopbanner_wrapper {
+        width: 1400px;
+    }
+
+    .testimonials_newtopbanner_con{ width: 690px;}
+
+
+    .testimonials_wrapper1{ width: 1300px;}
+    .testimonials_block1 {
+        width: 615px;
+        display: block;
+    }
+
+        .testimonials_block1_text {
+            width: auto;
+        }
+
+        .testimonials_block1_img {
+            width: auto;}
+
+            .testimonials_block1_img img {
+                width: auto;
+                display: block;
+                margin: 0 auto;
+                max-width: 270px;
+            }
+
+            .testimonials_block1_img h2 { 
+                padding: 5px; 
+                margin-top: 10px; 
+            }
+
+            .testimonials_block1_text_wrapper {
+                display: block; 
+                height: 100%; background-position: center bottom;
+                background-size: 100%;
+                padding-bottom: 18%; min-height: 240px;
+            }
+
+
+            .testimonials_block1_text_wrapper h4 {
+                margin: 0;
+                padding: 16px 7px 0 7px;
+                font-size: 20px;}    
+
+
+
+                .testimonials_wrapper2 {
+                    width: 1300px;
+                }
+
+                .testimonials_block2 {
+                    width: 639px;
+                    display: block;
+                }
+
+
+                .testimonials_block2_imgblock {
+                    width: 190px;
+                    position: inherit;
+                    top: 0;
+                    right: 0;
+                    z-index: 99;
+                    display: block;
+                    margin: 0 auto;
+                    margin-top: 15px;
+                }
+
+                .testimonials_block2_imgblock {
+                    width: auto;}
+
+                    .testimonials_block2_imgblock h2{background: rgba(255,91,79,1);
+                        background: -moz-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,91,79,1)), color-stop(100%, rgba(255,117,79,1)));
+                        background: -webkit-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                        background: -o-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                        background: -ms-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                        background: linear-gradient(to right, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5b4f', endColorstr='#ff754f', GradientType=1 );     margin-top: -10px; padding-top: 20px;}               
+
+
+
+   .testimonials_block2_textblock {  width: auto;     min-height: 200px; padding: 30px 15px 30px 50px;}
+                            
+      .testimonials_block2 h3 span{ padding-right: 18px;}
+
+  .testimonials_block2_imgblock img{ position: relative; z-index: 99;}
+
+
+
+
+  .testimonials_wrapper3 {
+    width: 1300px;
+}
+
+.testimonials_block3 {
+    width: 639px;
+    display: block;
+}
+
+
+.testimonials_block3_imgblock {
+    width: 190px;
+    position: inherit;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.testimonials_block3_imgblock {
+    width: auto;}
+
+    .testimonials_block3_imgblock h2{background: rgba(25,167,243,1);
+        background: -moz-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(25,167,243,1)), color-stop(100%, rgba(48,200,251,1)));
+        background: -webkit-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+        background: -o-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+        background: -ms-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+        background: linear-gradient(to right, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19a7f3', endColorstr='#30c8fb', GradientType=1 );     margin-top: -10px; padding-top: 20px;}               
+
+
+
+.testimonials_block3_textblock {  width: auto;     min-height: 200px; padding: 30px 15px 30px 50px;}
+            
+.testimonials_block2 h3 span{ padding-right: 18px;}
+
+.testimonials_block3_imgblock img{ position: relative; z-index: 99;}
+
+
+.testimonials_block3_imgblock span{ position: relative;     margin: 0 auto;}
+
+
+
+.testimonials_block3 .tsbottomarrow { 
+    clip-path: polygon(0 0, 17% 0, 92% 100%, 0% 100%); 
+}
+
+
 }
 
 
 @media screen and (max-width: 1580px) {
+
+    .testimonials_bottom_banner_wrapper{ min-height: 360px;}
+
+    .testimonials_bottom_banner_wrapper h2{ font-size: 70px;}
+
+    .testimonials_bottom_banner_wrapper h3 {
+        font-size: 36px;
+        line-height: 40px;
+        margin: 0 0 10px 0;
+    }
 
     .aboutbeto_new_body1 {
         background-position: 180% top;
@@ -3075,6 +3263,10 @@ a.home_banner_btn{width:100%;font-size:16px;}
         width: 630px;
         float: right;
     }
+
+    .testimonials_newtopbanner_wrapper {
+        width: 1200px;
+    }
 }
 
 @media screen and (max-width: 1420px) {
@@ -3084,6 +3276,10 @@ a.home_banner_btn{width:100%;font-size:16px;}
 
     .aboutbeto_new_body5_text p{ width: 780px;}
 .aboutbeto_new_body5_text h2{ width: 900px;}
+
+.testimonials_bottom_banner_wrapper h2 {
+    font-size: 60px;
+}
 }
 @media screen and (max-width: 1380px) {
     .aboutbeto_new_body2_text h2 {
@@ -3158,6 +3354,36 @@ a.home_banner_btn{width:100%;font-size:16px;}
     .aboutbeto_new_body5 {
         background-position: 180% bottom;
     }
+
+    .testimonials_newtopbanner_con {
+        width: 500px;
+    }
+
+
+    .testimonials_wrapper1{ width: 1190px;}
+    .testimonials_block1 {
+        width: 560px;
+        display: block;
+    }
+
+
+    .testimonials_wrapper2 {
+        width: 1190px;
+    }
+
+    .testimonials_block2 {
+        width: 584px;
+        display: block;
+    }
+
+    .testimonials_wrapper3{
+        width: 1190px;
+    }
+
+    .testimonials_block3 {
+        width: 584px;
+        display: block;
+    }
  }
 
  @media screen and (max-width: 1300px) {
@@ -3180,6 +3406,12 @@ a.home_banner_btn{width:100%;font-size:16px;}
 }
 
 @media screen and (max-width: 1280px) {
+
+    .testimonials_bottom_banner {
+        padding: 35px 25px 0 25px;
+    }
+
+    .testimonials_bottom_banner_wrapper{ padding-right: 260px;}
     
     .aboutbeto_new_body2 {
         background-position: -120% top;
@@ -3248,6 +3480,10 @@ a.home_banner_btn{width:100%;font-size:16px;}
         width: 600px;
         float: right;
     }
+
+    .testimonials_newtopbanner_wrapper {
+        width: 1100px;
+    }
 }
 
 @media screen and (max-width: 1240px) {
@@ -3275,6 +3511,8 @@ a.home_banner_btn{width:100%;font-size:16px;}
 }
 
 @media screen and (max-width: 1199px) { 
+
+    .testimonials_block3{ margin-bottom: 30px;}
     .aboutbeto_new_body6_text p{ text-align: center;}
 
     .aboutbeto_new_body6_text {
@@ -3427,6 +3665,101 @@ a.home_banner_btn{width:100%;font-size:16px;}
 .MDetailadminDB_block1_con_text_block h2{   font-size: 25px;  }
 .MDetailadminDB_block1_con_text_block h2 label{  font-size: 20px;   line-height: 26px; }
 .MDetailPurchase_BTN span{ display: block; padding-bottom: 5px;}
+
+
+.testimonials_newtopbanner_wrapper {
+    width: auto;
+}
+.testimonials_newtopbanner_con {
+    width: auto;
+    background-position: center bottom;
+    display: block;
+    min-height: inherit;
+    text-align: center;
+    padding: 49px 10px 290px 10px;
+}
+
+.testimonials_wrapper1{ width: 90%; display: block;}
+.testimonials_block1 {
+    width: auto; 
+}
+
+.testimonials_block1_text_wrapper{ background-image: none; padding: 10px; min-height: inherit; border-bottom: solid 10px #ff5e4f; padding-top: 0px;}
+
+.testimonials_block1_text_wrapper h3{ background-image: none; height: auto; background-color: #19a7f3; padding: 0px; width: auto;}
+
+.testimonials_block1_text_wrapper h3 span { display: block; padding: 15px; text-align: center;}
+
+.testimonials_block1_text_wrapper h4{ padding: 15px 0; text-align: center;}
+
+.testimonials_block1_img img{ max-width: 100%;}
+
+.testimonials_wrapper2 {
+    width: 90%;
+    display: block;
+}
+
+.testimonials_block2 {
+    width: auto; min-height: inherit;
+}
+
+.testimonials_block2_textblock{ min-height: inherit;}
+
+.testimonials_block2 h3{ position: inherit; height: auto; text-align: center;}
+
+.testimonials_block2_textblock{ padding: 15px 15px; text-align: center;}
+.testimonials_block2_textblock .tes_textq1 {
+    margin-left: 0;
+    display: inline-block;
+    padding-right: 0px;
+}
+
+
+.testimonials_wrapper3 {
+    width: 90%;
+    display: block;
+}
+
+.testimonials_block3 {
+    width: auto; min-height: inherit;
+}
+
+.testimonials_block3_textblock{ min-height: inherit;}
+
+.testimonials_block3 h3{ position: inherit; height: auto; text-align: center; clip-path: none; text-align: center; padding: 18px;     width: auto; bottom: 0;}
+
+.testimonials_block3_textblock{ padding: 15px 15px; text-align: center;}
+.testimonials_block3_textblock .tes_textq3 {
+    margin-left: 0;
+    display: inline-block;
+    padding-right: 0px;
+}
+
+
+.testimonials_block3 .tsbottomarrow{ display: none;}
+
+ 
+
+.testimonials_block3 h3 span{ padding: 0px;}
+
+.testimonials_bottom_banner {
+    padding: 15px 0 0 0;  
+}
+
+.testimonials_bottom_banner_wrapper {
+    padding-right: 0;
+    background-position: center bottom;
+    padding-top: 0px;
+    min-height: inherit;     padding-bottom: 360px;
+}
+
+.testimonials_bottom_banner_wrapper h2 {
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 15px; padding-left: 20px; padding-right: 20px;
+}
+.testimonials_bottom_banner_wrapper h3 {padding-left: 20px; padding-right: 20px;}
+.testimonials_bottom_banner_wrapper h4 {padding-left: 20px; padding-right: 20px;}
 }
 @media screen and (max-width: 991px) {.MDgaller_imagewrapper:nth-child(5n+1) {  width: 99%; padding-left: 0px; margin: 0 0.5% 1% 0.5%;   }
 .MDgaller_imagewrapper {  width: 49%; display: block; float: left;  padding-left: 0;  margin: 0 0.5% 1% 0.5%;  }
@@ -3439,6 +3772,8 @@ a.home_banner_btn{width:100%;font-size:16px;}
 .MDetailadminDB_block1_con_text_block h2 label{  font-size: 24px;  padding-bottom: 15px; width: 100%;}
 .mentordetail_block2{ display: block;}
 .mentordetail_block2 label{ display: block; width: 100%; margin: 5px 0; background: #ebebeb;}
+
+
 }
 
 @media screen and (max-width: 767px) {
@@ -3471,8 +3806,28 @@ a.home_banner_btn{width:100%;font-size:16px;}
  .aboutbeto_new_body3_text h2{ word-break: break-all;}
 }
 
- 
+@media screen and (max-width:480px){
+    .testimonials_bottom_banner_wrapper h2 {
+        font-size:38px;
+        line-height: 45px;
+        padding-bottom: 15px;
+    }
 
+    .testimonials_bottom_banner_wrapper h3 {
+        font-size: 26px;
+        line-height: 30px;}
+
+        .testimonials_bottom_banner_wrapper h4 {
+            font-size: 26px;
+            line-height: 30px;}
+
+
+}
+
+@media screen and (max-width:420px){
+
+.testimonials_newtopbanner_con h3 label{ font-size: 44px;}
+}
 
 @media screen and (max-width:380px){
 

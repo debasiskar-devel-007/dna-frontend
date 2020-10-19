@@ -2486,3 +2486,306 @@ font-family: 'OpenSans-Semibold';
     .aboutbeto_new_body6_text h3 a{ color: #222222;}
 
     .aboutbeto_new_body6_text h3 a:hover{ color: #711e1e;}
+
+
+
+
+    /*------------------------*/
+
+    
+.testimonials_newtopbanner{ box-shadow: none!important; border: none!important; background: url(../images/testimonials_newbannerbg.jpg) no-repeat right top!important; background-size: cover!important; 
+    border-radius: 0px!important; padding: 0!important; margin: 0!important;}
+
+.testimonials_newtopbanner_wrapper{ width: 1600px; margin: 0 auto; position: relative;}    
+
+.testimonials_newbannerarrow{ position: absolute;}
+
+.testimonials_newtopbanner_wrapper h2{ margin: 0; text-align: center; background: #2faff5; padding:15px 10px; font-size: 22px; color: #fff; text-transform: none;
+     font-family:'OpenSans-Bold';}
+ 
+.testimonials_newtopbanner_wrapper h2 span{ color: #f0ff00;}
+
+
+.testimonials_newtopbanner_con{     margin: 0;
+    background: url(../images/new_testimonials_bannerimg.png) no-repeat right bottom;
+    padding-right: 576px;
+    text-align: center;
+    min-height: 245px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 880px;}
+
+    .testimonials_newtopbanner_con h3{ display: block; font-size: 24px; color: #ffffff; text-transform: uppercase;  font-family: 'OpenSans-Semibold';
+         text-shadow: 0 0 8px #2d8cd9;  }
+
+    .testimonials_newtopbanner_con h3 label{ display: block;  font-size: 24px; font-family:'TheBoldFont'; font-size: 60px; margin-top: -15px;}
+
+
+  .testimonials_wrapper1{ display: flex; flex-wrap: wrap; width: 1600px; margin: 23px auto; justify-content: space-between; margin-bottom: 15px;}  
+
+  .testimonials_block1{ width:766px; background: #baced8; padding:12px; display: flex; flex-wrap: wrap; justify-content: space-between; margin: 12px 0;}
+
+
+  .testimonials_block1_img{ width: 274px; padding: 10px; background: #fff;}
+
+  .testimonials_block1_img img{ width: 100%;}
+
+  .testimonials_block1_img h2{ display: block; background: #ff5b4f; padding: 2px; font-size: 24px; color: #fdfdfd; text-align: center; margin-top: 6px; font-family: 'OpenSans-Semibold';}
+
+  .testimonials_block1_text{ width: 454px; padding: 1px; background: #fff url(../images/tes_avt_BG.png) no-repeat right bottom;}
+
+  .testimonials_block1_text_wrapper{      display: block;  background: url(../images/tes_avt_footerbg.png) no-repeat center bottom; height: 100%;}
+
+  .testimonials_block1_text_wrapper h4{ margin: 0; padding: 16px 7px 60px 7px;  font-size: 20px; color: #2e2e2e; font-family: 'OpenSans-Semibold';}
+
+  .testimonials_block1_text_wrapper h3{ background: url(../images/tes_avt_heading1.png) no-repeat right bottom; background-size: cover; width: 90%; height: 100px; padding-right:10%;}
+
+  .testimonials_block1_text_wrapper h3 span{     
+    padding: 5px 12px 0 12px;
+    font-size: 24px;
+    color: #ffffff;
+    font-family: 'OpenSans-Bold';
+    display: block;
+    vertical-align: middle; 
+    height: 100%;
+    align-items: center; text-transform: uppercase; line-height: 26px;} 
+
+    .testimonials_block1_text_wrapper h3 span p{ display: inline; font-size: 16px; }
+
+
+    .testimonials_wrapper2{ width: 1600px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;}
+
+    .testimonials_block2{ width: 790px; margin: 12px 0; background: #eaf0f3; border: solid 1px #d5e1e3; position: relative; min-height: 280px;}
+
+
+    .testimonials_block2_imgblock{ width: 190px; position: absolute; top: 30px; right: 40px; z-index: 99;}
+
+    .testimonials_block2_imgblock img{ background: #fff; padding: 10px; box-shadow: 0 0 5px #ccc; display: block; margin: 0 auto;}
+
+    .testimonials_block2_imgblock h2{ display: block; text-align: center; font-size: 18px; color: #ffffff; font-family: 'OpenSans-Semibold'; padding: 12px 0; margin: 0;}
+
+    .testimonials_block2_textblock{ width: 480px; padding: 30px 0  40px 50px; font-size: 18px; color: #3f3f3f; font-family: 'OpenSans-Semibold';}
+
+    .testimonials_block2_textblock .tes_textq1{       margin-left: -32px;
+        display: inline-block;
+        padding-right: 10px;}
+
+        .testimonials_block2_textblock  a{color: #3f3f3f;  display: inline-block;}      
+
+        .testimonials_block2_textblock  a span{color: #ff5f4f;}   
+        
+        .testimonials_block2_textblock  a:hover span{color: #c44a2a;}        
+
+
+        .testimonials_block2 h3{ display: block;   background: rgba(255,91,79,1);
+            background: -moz-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,91,79,1)), color-stop(100%, rgba(255,117,79,1)));
+            background: -webkit-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+            background: -o-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+            background: -ms-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+            background: linear-gradient(to right, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5b4f', endColorstr='#ff754f', GradientType=1 ); 
+            position: absolute; left: 0; bottom: 0; width: 100%; height: 85px;}   
+
+            .testimonials_block2 h3 span{ display: block; padding: 18px; padding-right: 30%; font-size: 18px; color: #ffffff; font-family: 'OpenSans-Semibold'; line-height: 24px;}   
+            
+            
+
+            .testimonials_wrapper3 {
+                display: flex;
+                flex-wrap: wrap;
+                width: 1600px;
+                margin: 15px auto;
+                justify-content: space-between;
+                margin-bottom: 20px;
+            }
+
+
+            .testimonials_block3{ width: 790px; margin: 12px 0 42px 0; background: #eaf0f3; border: solid 1px #d5e1e3; position: relative; min-height: 240px;}
+
+
+            .testimonials_block3_imgblock{ width: 220px;  position: absolute; top: 15px; right: 40px; z-index: 99;}
+
+            .testimonials_block3_imgblock span{ display: block;  height: 176px;  width: 176px;  overflow: hidden; border-radius: 200px; background: #fff; padding: 10px; box-shadow: 0 0 5px #ccc; }
+        
+            .testimonials_block3_imgblock img{ display: block; margin: 0 auto; width: 100%; border-radius: 200px;}
+        
+            .testimonials_block3_imgblock h2{ display: block; text-align: center; font-size: 18px; color: #ffffff; font-family: 'OpenSans-Semibold'; padding: 10px 0; margin: 0;}
+        
+            .testimonials_block3_textblock{ width: 465px; padding: 30px 0  30px 50px; font-size: 18px; color: #3f3f3f; font-family: 'OpenSans-Semibold';}
+        
+            .testimonials_block3_textblock .tes_textq3{       margin-left: -32px;
+                display: inline-block;
+                padding-right: 10px;}
+        
+                .testimonials_block3_textblock  a{color: #3f3f3f; display: inline-block;}      
+        
+                .testimonials_block3_textblock  a span{color: #ff5f4f;}   
+                
+                .testimonials_block3_textblock  a:hover span{color: #c44a2a;}        
+        
+        
+                .testimonials_block3 h3{ display: block; background: rgba(25,167,243,1);
+                    background: -moz-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+                    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(25,167,243,1)), color-stop(100%, rgba(48,200,251,1)));
+                    background: -webkit-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+                    background: -o-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+                    background: -ms-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+                    background: linear-gradient(to right, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19a7f3', endColorstr='#30c8fb', GradientType=1 ); 
+                    position: absolute; left: 0; bottom: -30px; width: 100%; height: 85px; clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);}   
+        
+                    .testimonials_block3 h3 span{ display: block; padding:6px 18px; padding-right: 32%; font-size: 18px; color: #ffffff; font-family: 'OpenSans-Semibold'; line-height: 24px;}   
+                    
+               .testimonials_block3 .tsbottomarrow{   width: 65px;
+                height: 75px;
+                display: block;
+                background: rgba(255,91,79,1);
+                background: -moz-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,91,79,1)), color-stop(100%, rgba(255,117,79,1)));
+                background: -webkit-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                background: -o-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                background: -ms-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                background: linear-gradient(to right, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5b4f', endColorstr='#ff754f', GradientType=1 );
+                clip-path: polygon(0 0, 1% 0, 92% 100%, 0% 100%);
+                position: absolute;
+                right: -9px;
+                bottom: -20px;
+            }     
+                    
+
+ .testimonials_bottom_banner{ background: url(../images/tes_bottomBG.jpg); background-size: cover; padding: 35px 80px 0 80px;}       
+ 
+
+ .testimonials_bottom_banner_wrapper {
+    background: url(../images/tes_beto_img.png) no-repeat right bottom;
+    min-height: 320px;
+    text-align: center;
+    padding-right: 300px;
+    padding-top: 25px;
+}
+ .testimonials_bottom_banner_wrapper h2{     font-size: 80px;
+    color: #ffffff; margin: 0; padding: 0;
+    text-transform: uppercase;
+    font-family: 'OpenSans-Bold';
+    text-shadow: 2px 2px 5px #f28d18;}
+
+
+    .testimonials_bottom_banner_wrapper h3{     font-size: 40px;
+        color: #ffffff; margin: -12px 0 0 0; padding: 0;
+        text-transform: uppercase;
+        font-family: 'OpenSans-Bold';
+        text-shadow: 2px 2px 5px #f28d18;}
+
+
+        .testimonials_bottom_banner_wrapper h4{     font-size: 35px;
+            color: #2d2d2d; margin: 0 0 0 0; padding: 0;
+            text-transform: uppercase;
+            font-family: 'OpenSans-Bold';
+            text-shadow: 2px 2px 5px #f28d18;}
+
+        .tesviewlink{display: block;
+            margin: 0 auto;
+            margin-top: 14px;
+            width: 230px; border-radius: 5px;
+            line-height: 50px!important;
+            text-align: center;
+            background: rgba(58,59,58,1);
+            background: -moz-linear-gradient(top, rgba(58,59,58,1) 0%, rgba(36,36,36,1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(58,59,58,1)), color-stop(100%, rgba(36,36,36,1)));
+            background: -webkit-linear-gradient(top, rgba(58,59,58,1) 0%, rgba(36,36,36,1) 100%);
+            background: -o-linear-gradient(top, rgba(58,59,58,1) 0%, rgba(36,36,36,1) 100%);
+            background: -ms-linear-gradient(top, rgba(58,59,58,1) 0%, rgba(36,36,36,1) 100%);
+            background: linear-gradient(to bottom, rgba(58,59,58,1) 0%, rgba(36,36,36,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a3b3a', endColorstr='#242424', GradientType=0 );
+            font-size: 16px;
+            color: #ffffff!important;
+            font-family: 'OpenSans-Bold';
+            text-decoration: none;
+            outline: none;
+            letter-spacing: 2px!important;
+            text-transform: uppercase;}    
+
+
+
+            .testimonialsmodal{ width: 800px; background: rgba(255,91,79,1);
+                background: -moz-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,91,79,1)), color-stop(100%, rgba(255,117,79,1)));
+                background: -webkit-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                background: -o-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                background: -ms-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                background: linear-gradient(to right, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5b4f', endColorstr='#ff754f', GradientType=1 ); padding: 10px; border-radius: 10px;}
+
+         .testimonialsmodal_wrapper{ background: #fff; padding: 10px; border-radius: 10px;}   
+         
+         
+         .testimonialsmodal .mat-dialog-container{ padding: 0px;}
+
+
+         .testimonialsmodal h2 {
+            display: block;
+            background: rgba(255,91,79,1);
+            background: -moz-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,91,79,1)), color-stop(100%, rgba(255,117,79,1)));
+            background: -webkit-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+            background: -o-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+            background: -ms-linear-gradient(left, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+            background: linear-gradient(to right, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5b4f', endColorstr='#ff754f', GradientType=1 );
+           
+            clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%); padding-right: 10px; text-align: left;}
+
+
+         .testimonialsmodal h2 span{
+            display: block;
+            background: rgba(25,167,243,1);
+            background: -moz-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(25,167,243,1)), color-stop(100%, rgba(48,200,251,1)));
+            background: -webkit-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+            background: -o-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+            background: -ms-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+            background: linear-gradient(to right, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19a7f3', endColorstr='#30c8fb', GradientType=1 );
+           
+            clip-path: polygon(0 0, 96% 0, 100% 100%, 0% 100%); padding: 2px;
+            font-size: 24px;
+            color: #fdfdfd;     font-family: 'OpenSans-Semibold'; padding: 10px; text-align: left;}
+
+
+
+            .testimonialsmodal p {
+                
+                padding: 15px 0;
+                font-size: 18px;
+                color: #3f3f3f;
+                font-family: 'OpenSans-Semibold';
+            }
+
+
+            .testimonialsmodal img {
+                background: #fff;
+                padding: 10px;
+                box-shadow: 0 0 5px #ccc;
+                display: inline-block;
+                float: left;
+                margin: 0 15px 10px 0;
+            }
+
+            .testimonialsmodal h3{ background: rgba(25,167,243,1);
+                background: -moz-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(25,167,243,1)), color-stop(100%, rgba(48,200,251,1)));
+                background: -webkit-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+                background: -o-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+                background: -ms-linear-gradient(left, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+                background: linear-gradient(to right, rgba(25,167,243,1) 0%, rgba(48,200,251,1) 100%);
+            
+                display: block;
+    padding: 10px; 
+    font-size: 18px;
+    color: #ffffff;
+    font-family: 'OpenSans-Semibold';
+    line-height: 24px; margin-top: 10px;
+            }     
