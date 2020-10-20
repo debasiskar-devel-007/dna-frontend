@@ -2719,10 +2719,10 @@ font-family: 'OpenSans-Semibold';
                 background: linear-gradient(to right, rgba(255,91,79,1) 0%, rgba(255,117,79,1) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5b4f', endColorstr='#ff754f', GradientType=1 ); padding: 10px; border-radius: 10px;}
 
-         .testimonialsmodal_wrapper{ background: #fff; padding: 10px; border-radius: 10px;}   
+         .testimonialsmodal_wrapper{ background: #fff; padding: 10px; border-radius: 10px; }   
          
          
-         .testimonialsmodal .mat-dialog-container{ padding: 0px;}
+         .testimonialsmodal .mat-dialog-container{ padding: 0px; position: relative; overflow-x: hidden;}
 
 
          .testimonialsmodal h2 {
@@ -2789,3 +2789,18 @@ font-family: 'OpenSans-Semibold';
     font-family: 'OpenSans-Semibold';
     line-height: 24px; margin-top: 10px;
             }     
+
+
+            .tesmodalclose {
+                display: block!important;
+                width: 36px;
+                height: 36px;
+                position: absolute!important;
+                padding: 0px!important;
+                right: -6px;
+                top: -6px;
+                background:#fff  url(../images/affiliate_close_pop-_new.png) no-repeat center center!important;
+                background-size: 35px!important; border-radius: 100px!important;
+              
+                cursor: pointer!important; font-size: 0px!important; box-shadow: none!important; -webkit-tap-highlight-color: inherit!important; min-width: inherit!important;
+            }        
