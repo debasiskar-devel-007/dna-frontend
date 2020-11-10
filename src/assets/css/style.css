@@ -876,30 +876,46 @@ button{box-shadow:none!important;}
 .s_newAffiliate .newaffiliatesignup_conleft{width:1270px;margin-left:60px;min-height:100%;float:left;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .title{font-family:"RobotoBlack";font-size:150px;text-transform:uppercase;color:#fff;line-height:120px;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section{width:100%;position:relative;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .sub_title{margin-top:25px;line-height:60px;color:#41456e;font-family:"RobotoBlack";font-size:60px;text-transform:uppercase;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .sub_title{margin-top:25px;line-height:60px;color:#41456e;font-family:"RobotoBlack";font-size:60px;text-transform:uppercase; width: 940px;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .sub_title span{color:#ff4f42;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote{position:absolute;right:100px;bottom:10px;max-width:100%;width:450px;z-index:1;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top{position:absolute;right:0;top:-28px;max-width:100%;width:458px;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section{background:url("../images/affiliatedirection_arrow.png") no-repeat center center;background-size:cover;width:695px;padding:20px;margin-top:30px;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote{    position: absolute;
+    right: 41px;
+    top: 310px;
+    max-width: 120%;
+    width: 555px;
+    z-index: 1;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top{position:absolute;right:60px;top:-28px;max-width:100%;width:510px;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section{background:url("../images/affiliatedirection_arrow.png") no-repeat center center;background-size:cover;width:665px;padding:20px;margin-top:30px;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section h5{margin:0;font-family:"RobotoBold";font-size:36px;text-transform:uppercase;color:#fff;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section h5 span{font-family:"RobotoBlack";font-size:62px;color:#f4ff4c;line-height:55px;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section h5 span{font-family:"RobotoBlack";font-size:62px;color:#f4ff4c;line-height:55px; padding-left: 10px;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section h5 sup{top:-25px;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content{width:600px;margin-top:30px;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content h3{font-size:28px;color:#000;font-family:"RobotoBold";line-height:44px;margin-bottom:0;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content span{font-size:48px;color:#fff;font-family:"RobotoBlack";}
-.s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{font-size:24px;color:#fff;width:96%;font-family:"RobotoBold";text-shadow:1px 1px #252525;line-height:34px;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content{width:600px;margin-top:15px;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content h3{font-size:30px;color:#24221d;font-family:"RobotoBold";line-height:40px;margin-bottom:0;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content span{font-size:48px;color:#fff;font-family:"RobotoBlack"; display: block; text-transform: uppercase;     padding: 10px 0 0 0;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{    font-size: 28px;
+    color: #fff;
+    width: 96%;
+    font-family: "RobotoBold";
+    text-shadow: 1px 1px #252525;
+    line-height: 38px;
+    margin: 40px 0 0 0;
+    text-transform: uppercase;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2 span{color:#ffe952;font-family:"RobotoBold";text-shadow:1px 0.5px #252525;line-height:30px;}
 .small{display:none;}
 .af_small{display:none;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2{background:url("../images/affiliatedirection_arrow2.png") no-repeat center center;background-size:cover;width:800px;padding:20px;margin-top:30px;float:right;padding-left:60px;margin-right:40px;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2 p{font-family:"RobotoBold";font-size:26px;color:#f5ff61;line-height:36px;padding-left:30px;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2 p{font-family:"RobotoBold";font-size:30px;color:#f5ff61;line-height:36px;padding-left:30px;}
+
+.s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af .arrow_2 p span{ font-size: 40px;}
 .s_newAffiliate .girl_image{position:absolute;left:-145px;bottom:-20px;width:587px;}
 .s_newAffiliate .girl_image img{margin-top:10px;max-width:100%;}
 .s_newAffiliate .bottom_con .af_downpara{padding-left:400px;}
 .s_newAffiliate .bottom_con .af_downpara .affiliate_quote{color:#2d2d36;font-size:30px;font-family:'RobotoMedium';line-height:34px;margin-bottom:30px;margin-top:30px;}
+
+.s_newAffiliate .bottom_con .af_downpara .affiliate_quote span{ color: #f5ff5e;}
 .s_newAffiliate .bottom_con .af_downpara .good_news{background:#2d2d36;display:flex;align-items:center;justify-content:space-between;padding:20px;position:relative;}
-.s_newAffiliate .bottom_con .af_downpara .good_news .goodnews_quote{color:#7bebff;font-family:"RobotoMedium";font-size:30px;margin-left:26px;line-height:34px;margin-top:-15px;}
-.s_newAffiliate .bottom_con .af_downpara .good_news img{max-width:100%;height:200px;margin-left:-39px;}
+.s_newAffiliate .bottom_con .af_downpara .good_news .goodnews_quote{color:#7bebff;font-family:"RobotoMedium";font-size:28px;margin-left:26px;line-height:34px;margin-top:-15px; text-transform: uppercase;}
+.s_newAffiliate .bottom_con .af_downpara .good_news img{max-width:100%;height:200px;margin-left:-39px; margin-top: 12px;}
 .video_training_wrapper{background:url("../images/video_w_bg.png") no-repeat center!important;background-size:cover!important;padding:40px 0px!important;border:none!important;box-shadow:none!important;border-radius:0px!important;}
 .video_training_wrapper .text_header{background:#0fc1ff;text-align:center;}
 .video_training_wrapper .text_header p{margin:0;color:#fff;font-family:"RobotoBlack";font-size:55px;padding:15px 65px;line-height:60px;text-transform:uppercase;margin-bottom:40px;text-shadow:1px 1px 1px #000;}
@@ -1195,10 +1211,10 @@ width: 41px; height: 33px; position: absolute; right: 0; bottom: -33px;}
 .home_banner_menu_section .menuiconlabel{display:none;}
 .newaffiliatesignup_formbody .mat-form-field-underline{display:none;}
 .newaffiliatesignup_formbody .mat-form-field-subscript-wrapper{display:none;}
-.newaffiliatesignup_formbody .mat-input-element{box-sizing:border-box;width:100%;margin:0px;height:36px;border-radius:5px;box-shadow:0 0 3px #0d5e81!important;padding:0 1.5%!important;font-family:'OpenSans-Regular';font-size:14px;color:#333;display:block;background:#fff!important;}
+.newaffiliatesignup_formbody .mat-input-element{box-sizing:border-box;width:100%;margin:0px;height:34px;border-radius:5px;box-shadow:0 0 3px #0d5e81!important;padding:0 1.5%!important;font-family:'OpenSans-Regular';font-size:14px;color:#333;display:block;background:#fff!important;}
 .newaffiliatesignup_formbody .mat-select{box-sizing:border-box;width:100%;margin:0px;height:36px;border-radius:5px;box-shadow:0 0 3px #0d5e81!important;padding:0 1.5%!important;font-family:'OpenSans-Regular';font-size:14px;color:#333;display:block;background:#fff!important;}
 .newaffiliatesignup_formbody .mat-select-trigger{height:auto;margin-top:8px;}
-.newaffiliatesignup_formbody textarea.mat-input-element{resize:none!important;height:76px!important;padding:5px 1.5%!important;}
+.newaffiliatesignup_formbody textarea.mat-input-element{resize:none!important;height:60px!important;padding:5px 1.5%!important;}
 .newaffiliatesignup_formbody .mat-form-field-appearance-legacy .mat-form-field-wrapper{padding-bottom:0!important;}
 .newaffiliatesignup_formbody .mat-form-field-infix{border:0px!important;}
 .newaffiliatesignup_formbody .button{display:none!important;}

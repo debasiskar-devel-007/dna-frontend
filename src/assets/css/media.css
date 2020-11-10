@@ -121,7 +121,7 @@
 }
 @media screen and (max-width:1740px){.s-formsection .button:first-of-type{height:90px!important;}
 
-
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .sub_title{ width: 610px;}
 .successbook_topformarrow {
     position: absolute;
     right: -32px;
@@ -156,8 +156,14 @@
 .s_newAffiliate .newaffiliatesignup_conleft{width:1145px;margin-left:0;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .title{font-size:140px;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .sub_title{font-size:52px;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top{width:458px;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote{bottom:0px;width:400px;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top {
+    width: 419px;
+    top: 60px;
+    right: 30px;
+}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote{    bottom: 0px;
+    width: 420px;
+    right: 33px;}
 .s_newAffiliate .girl_image{width:570px;left:-150px;}
 .s_newAffiliate .bottom_con .af_downpara .affiliate_quote{font-size:28px;line-height:34px;margin-bottom:34px;margin-top:24px;}
 .s_newAffiliate .bottom_con .af_downpara .good_news .goodnews_quote{color:#7bebff;font-size:24px;margin-left:26px;line-height:30px;margin-top:-15px;}
@@ -312,6 +318,7 @@
 @media screen and (max-width:1620px){.success_msg_con_aminew{background-position:right top;}
 
 .newhome_testimonial_con br{ display: none;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_part2 .content_af h2{ margin-top: 90px;}
 }
 @media screen and (max-width:1600px){.as_bodycon .newproduct_list2_bottom_wrapper .newproduct_list2_list p:nth-of-type(1){margin-left:-470px;}
 
@@ -413,8 +420,12 @@
 .s-education .s-money-bg{background:url(../images/s_money_bg.png) no-repeat 138% bottom;}
 .newaffiliatesignup_conwrapper{width:1400px;padding:32px 0;}
 .s_newAffiliate .newaffiliatesignup_conleft{width:1045px;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top{width:460px;right:-32px;top:-14px;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote{bottom:0px;right:75px;width:400px;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top{    width: 370px;
+    right: 0;
+    top: 126px;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_quote{    top: 350px;
+    right: -5px;
+    width: 400px}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .title{font-size:135px;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .sub_title{font-size:50px;}
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section h5{font-size:30px;}
@@ -733,9 +744,20 @@
 .newaffiliatesignup_conright{width:320px;}
 .s_newAffiliate .newaffiliatesignup_conleft{width:958px;}
 .s_newAffiliate{background:url(../images/newAffilliateBgSmall.png) no-repeat center top;background-size:cover;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top{width:370px;right:-70px;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content{width:480px;}
-.s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content h3{font-size:24px;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .image_top {
+    width: 370px;
+    right: 20px;
+}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content{width:520px;}
+
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content span {
+    font-size: 46px;}
+.s_newAffiliate .newaffiliatesignup_conleft .content_section .bottom_content h3{    font-size: 24px;
+    line-height: 36px;}
+
+    .s_newAffiliate .newaffiliatesignup_conleft .content_section .arrow_section {
+        width: 565px;
+    }
 .s_newAffiliate .newaffiliatesignup_conleft .content_section .sub_title{font-size:46px;}
 .s_newAffiliate .bottom_con .af_downpara .good_news .goodnews_quote{font-size:22px;line-height:30px;margin-top:-15px;}
 .s_newAffiliate .bottom_con .af_downpara .good_news .goodnews_quote{font-size:22px;line-height:30px;}
