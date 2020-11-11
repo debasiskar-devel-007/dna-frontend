@@ -2819,4 +2819,137 @@ font-family: 'OpenSans-Semibold';
                 background-size: 35px!important; border-radius: 100px!important;
               
                 cursor: pointer!important; font-size: 0px!important; box-shadow: none!important; -webkit-tap-highlight-color: inherit!important; min-width: inherit!important;
-            }        
+            } 
+            
+  .footermodal{ border: solid 5px #ff5b4f; border-radius: 5px;}
+
+
+ /*----------------affiliatenewsignup amitava 11/11/2020-----------------*/
+
+ .ansignup_top_block{ border: none!important; box-shadow: none!important; border-radius: 0px!important;  background:  url(../images/affiliatenewsignup_topbg.jpg) no-repeat left top!important; background-size: cover!important; }
+
+ .ansignup_top_block_wrapper{ width: 1748px; margin: 0 auto;  height: 600px!important; position: relative!important;}
+
+ .ansignup_top_block_text{ width: 830px; margin: 0 0 0 180px; position: relative; z-index: 99; text-align: center; padding-top: 20px;}
+
+ .ansignup_top_block_text h1{ background: -webkit-linear-gradient(left, #04adf7 , #0268d1);
+    background: -o-linear-gradient(right, #04adf7, #0268d1);
+    background: -moz-linear-gradient(right,  #04adf7, #0268d1);
+    background: linear-gradient(to right,  #04adf7 , #0268d1); 
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+    font-size: 72px; text-transform: uppercase; margin: 0; padding: 0; font-family:'OpenSans-Semibold';     line-height: 76px;} 
+
+.ansignup_top_block_text h2{ background: -webkit-linear-gradient(left, #fff600 , #fff600);
+        background: -o-linear-gradient(right, #fff600, #fff600);
+        background: -moz-linear-gradient(right,  #fff600, #fff600);
+        background: linear-gradient(to right,  #fff600 , #fff600); 
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+        font-size: 36px; text-transform: uppercase; margin: 0; padding: 0; font-family:'OpenSans-Bold';} 
+
+ .ansignup_top_block_text h3{  color: #ff5b4f;
+            font-size: 36px; text-transform: uppercase; margin: 0; padding: 0; font-family:'OpenSans-Bold';} 
+     
+ .ansignup_top_block_text h4 { background: #ff5b4f; border-radius: 6px; padding: 14px;   width: 600px; margin:12px auto;  margin-bottom: 20px;  font-size: 20px; color: #fff; text-transform: uppercase;  font-family:'OpenSans-Bold';}           
+
+ .ansignup_top_block_text h5{ font-size: 28px; color: #00aeff; margin: 0; padding: 0;  font-family:'OpenSans-Bold';     line-height: 30px;}
+ 
+ .ansignup_top_block_text h6{ background: -webkit-linear-gradient(left, #fff600 , #fff600);
+    background: -o-linear-gradient(right, #fff600, #fff600);
+    background: -moz-linear-gradient(right,  #fff600, #fff600);
+    background: linear-gradient(to right,  #fff600 , #fff600); 
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+    font-size: 60px; text-transform: uppercase; margin: 0; padding: 0; font-family:'OpenSans-Bold'; line-height: 60px;}
+
+ .affiliatenewsignup_jack{ position: absolute; bottom: -16px; left: 818px;}
+
+ .affiliatenewsignup_toparrow{ position: absolute; bottom: -101px; left: 256px; z-index: 9;}
+
+
+ .ansignup_block2{border: none!important; box-shadow: none!important; border-radius: 0px!important;  background:  url(../images/affiliatenewsignup_block2bg.jpg) no-repeat left top!important; background-size: cover!important; }
+
+ .ansignup_block2_text{ width: 1200px; padding:22px 0; margin-left: 80px; text-align: center;}
+
+ .ansignup_block2_text p{     margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: #ffffff;
+    line-height: 38px;
+    font-family: 'OpenSans-Semibold';
+    text-shadow: 0 2px 6px #052839;  }
+
+ .ansignup_block2_text p span{ color: #baff00;}
+
+ .ansignup_block2_text p u{ color: #fffc00;}
+
+
+ .affiliatenewsignup_form{ width: 355px!important; background: rgb(42,182,234)!important; box-shadow: none!important; border: none!important;
+    background: linear-gradient(90deg, rgba(42,182,234,1) 0%, rgba(141,219,245,1) 50%, rgba(42,182,234,1) 100%)!important; border-radius: 8px; padding: 10px!important;
+ position: absolute!important; top: 48px!important; right: 80px!important; z-index: 99!important;
+}
+
+.affiliatenewsignup_form h2{ background: #ff5b4f; border-radius: 8px 8px 0 0; text-align: center; padding: 15px; font-size: 40px; color: #feffff; text-transform: uppercase; font-family:'robotobold'; line-height: 50px; text-shadow: 0 2px 5px #9e3931;}
+
+.affiliatenewsignup_formdevider{background:  url(../images/affiliatenewsignup_formdevider.png) no-repeat center top!important; background-size: cover!important; width: 100%; height: 3px; }
+
+.affiliatenewsignup_form  .mat-form-field-appearance-fill .mat-form-field-flex {
+    margin: 0!important; padding: 0!important;     display: block!important;
+}
+
+.affiliatenewsignup_form .mat-form-field-appearance-fill .mat-form-field-infix {
+    padding: 0;
+    display: block;
+    width: 100%;
+}
+
+.affiliatenewsignup_form_con{ margin-top: 18px;}
+
+.affiliatenewsignup_form .mat-form-field{     margin: 0 1% 10px 1%!important; padding: 0!important;     display: block!important;} 
+.affiliatenewsignup_form .mat-form-field-underline{display:none;}
+.affiliatenewsignup_form .mat-form-field-subscript-wrapper{display:none;}
+.affiliatenewsignup_form .mat-input-element{box-sizing:border-box;width:100%;margin:0px;height:36px;border-radius:5px;box-shadow:0 0 3px #0d5e81!important;padding:0 1.5%!important;font-family:'OpenSans-Regular';font-size:14px;color:#333;display:block;background:#fff!important;}
+.affiliatenewsignup_form .mat-select{box-sizing:border-box;width:100%;margin:0px;height:36px;border-radius:5px;box-shadow:0 0 3px #0d5e81!important;padding:0 1.5%!important;font-family:'OpenSans-Regular';font-size:14px;color:#333;display:block;background:#fff!important;}
+.affiliatenewsignup_form .mat-select-trigger{height:auto;margin-top:8px;}
+.affiliatenewsignup_form textarea.mat-input-element{resize:none!important;height:80px!important;padding:5px 1.5%!important;}
+.affiliatenewsignup_form .mat-form-field-appearance-legacy .mat-form-field-wrapper{padding-bottom:0!important;}
+.affiliatenewsignup_form .mat-form-field-infix{border:0px!important;}
+/* .affiliatenewsignup_form .button{display:none!important;} */
+.affiliatenewsignup_form .mat-button{background:url(../images/newaffiliatesignup_btn.png) no-repeat left top!important;background-size:100%!important;width:100%!important;height:110px!important;border:none!important;box-shadow:none!important;outline:none!important;cursor:pointer!important;font-size:36px!important;color:#ffffff!important;font-family:'OpenSans-Semibold'!important;text-shadow:0 2px 5px #5f6172!important;text-transform:uppercase!important;display:block!important;margin-top:10px!important;}
+.affiliatenewsignup_form .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{display:none!important;}
+.affiliatenewsignup_form .mat-form-field-appearance-legacy .mat-form-field-label{top:30px;left:10px;}
+
+.affiliatenewsignup_form .mat-form-field-should-float .mat-form-field-label {display:none!important;}
+
+
+
+
+.affiliatenewsignup_form  .mat-form-field-appearance-fill .mat-form-field-label{    top: 22px;
+    margin-top: 0;  left: 10px;}
+
+.affiliatenewsignup_form .mat-error{    color: #b11313;
+    font-size: 14px;
+    padding-top: 4px;
+    position: absolute;
+    background: #000;
+    display: block;
+    width: 180px;
+    padding: 5px;
+    border-radius: 5px;
+    left: -195px;
+    z-index: 9;
+    top: 10px;}
+
+    .affiliatenewsignup_form  .mat-form-field-wrapper {
+        padding-bottom: 0!important;
+    }
+
+    .affiliatenewsignup_form  .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple){ padding: 0px!important;}
+ 
+
+    .affiliatenewsignup_form .mat-form-field-appearance-fill .mat-select-arrow-wrapper {
+        transform: translateY(4px);
+    }
+ 
+/*----------------affiliatenewsignup amitava 11/11/2020 end-----------------*/

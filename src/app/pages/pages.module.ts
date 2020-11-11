@@ -19,6 +19,7 @@ import { ContactComponent } from '../contact/contact.component';
 import { MentorsignupComponent, formModal } from '../mentorsignup/mentorsignup.component';
 import { LandingpageComponent } from '../landingpage/landingpage.component';
 import { AffiliatesignupComponent } from '../affiliatesignup/affiliatesignup.component';
+import { AffiliatenewsignupComponent } from '../affiliatenewsignup/affiliatenewsignup.component';
 
 // import { ContactComponent } from '../contact/contact.component';
 // import { RouterModule } from '@angular/router';
@@ -42,8 +43,8 @@ import { AffiliatesignupComponent } from '../affiliatesignup/affiliatesignup.com
     MentorsignupComponent,
     formModal,
     LandingpageComponent,
-    AffiliatesignupComponent
-
+    AffiliatesignupComponent,
+    AffiliatenewsignupComponent
     // ContactComponent,
     // FooterComponent,
     // HeaderComponent

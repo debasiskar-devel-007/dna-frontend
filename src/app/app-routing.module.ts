@@ -35,6 +35,9 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { CompletedsuccessComponent } from './completedsuccess/completedsuccess.component';
 
 import { MentordetailComponent } from './mentordetail/mentordetail.component';
+
+// import { AffiliatenewsignupComponent } from './affiliatenewsignup/affiliatenewsignup.component';
+
 const api_url = environment['api_url'];
 
 
@@ -58,6 +61,8 @@ const routes: Routes = [
   },
 
   {path:'aboutbeto', component: AboutbetoComponent}, 
+
+  // {path:'affiliatenewsignup', component: AffiliatenewsignupComponent}, 
 
 //   {path:'live-webinar', component: LiveWebinarComponent, 
 //   resolve: {

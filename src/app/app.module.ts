@@ -129,6 +129,7 @@ export function metaFactory(): MetaLoader {
     SymeonRodgerDetail,
     JohnRockDetail,
     KateBakerDetail,
+    // AffiliatenewsignupComponent,
   
   ],
   imports: [

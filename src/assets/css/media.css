@@ -3884,3 +3884,173 @@ a.home_banner_btn{width:100%;font-size:16px;}
     }
 }
  
+
+
+ /*----------------affiliatenewsignup amitava 11/11/2020-----------------*/
+
+ @media screen and (max-width:1800px){
+    .ansignup_top_block_text {  margin: 0 0 0 90px;}
+
+    .affiliatenewsignup_toparrow {  left: 176px;  }
+
+    .affiliatenewsignup_jack {  left: 718px;  }
+
+ }  
+ 
+ @media screen and (max-width:1760px){
+    .affiliatenewsignup_form{ right: 50px!important;}
+
+    .ansignup_block2_text br{ display: none;}
+
+    .ansignup_block2_text {width: 1140px;}
+
+    .ansignup_top_block_wrapper{ width: auto;}
+ }
+
+ @media screen and (max-width:1680px){
+
+    .ansignup_block2_text{ margin-left: 40px;     width: 1060px;}
+
+    .ansignup_top_block_text {
+        margin: 0 0 0 50px;
+    }
+
+    .affiliatenewsignup_toparrow {
+        left: 120px;
+    }
+ }    
+
+ @media screen and (max-width:1620px){
+    .ansignup_block2_text {
+        margin-left: 20px;
+        width: 960px;
+    }
+    .affiliatenewsignup_toparrow {
+        left: 40px;
+    }
+
+    .affiliatenewsignup_jack {
+        left: 665px;
+    }
+    
+ }
+
+ @media screen and (max-width:1540px){
+
+    .ansignup_top_block_text {
+        width: 640px;}
+
+        .ansignup_top_block_text h2{ font-size: 28px;}
+
+        .affiliatenewsignup_toparrow {
+            left: 0;
+        }
+
+        .affiliatenewsignup_jack {
+            left: 585px;
+        }
+ }
+
+
+ @media screen and (max-width:1500px){
+
+    .affiliatenewsignup_toparrow {
+        left: 50px;
+        width: 840px;
+        bottom: -84px;
+    }
+ }
+
+ @media screen and (max-width:1440px){
+    .affiliatenewsignup_jack {   width: 480px;  }
+
+    .ansignup_block2_text {
+        margin-left: 0;
+        width: 900px;
+    }
+
+    .ansignup_block2_text p{ font-size: 28px; line-height: 32px;}
+ }
+
+ @media screen and (max-width:1360px){
+    .affiliatenewsignup_form {
+        width: 300px!important;}
+ }
+
+ @media screen and (max-width:1280px){
+    .affiliatenewsignup_toparrow {
+        left: 20px;}
+        .ansignup_block2_text {
+            margin-left: 0;
+            width: 860px;
+        }
+
+        .ansignup_top_block_text {
+            margin: 0px 0 0 15px;
+        }
+
+        .affiliatenewsignup_jack {
+            left: 545px;
+        }
+ }
+ @media screen and (max-width:1260px){
+    .ansignup_block2_text {    width: 790px;  }
+
+    .affiliatenewsignup_toparrow {
+        left: 20px;
+        width: 787px;
+        bottom: -80px;
+    }
+
+    .ansignup_top_block_text {
+        margin: 0 0 0 0;
+    }
+
+    .ansignup_top_block_text h4{ width: auto;     font-size: 18px;}
+
+    .ansignup_top_block_text {
+        width: 570px;
+    }
+
+    .affiliatenewsignup_jack {
+        left: 495px;     width: 420px; 
+    }
+ }
+ @media screen and (max-width:1199px){
+ .affiliatenewsignup_form {
+    width: auto!important;
+    position: inherit!important;
+    right: 0!important;
+    top: 0!important; margin: 15px!important;
+}
+
+.ansignup_top_block{ background: #0b1a24!important; overflow: hidden;  padding: 0!important;}
+
+.ansignup_top_block_wrapper{ height: auto!important; background: url(../images/affiliatenewsignup_topbg.jpg) no-repeat left top!important; padding: 15px; padding-bottom: 0px; background-size: cover!important;}
+
+.affiliatenewsignup_toparrow{ display: none;}
+
+.affiliatenewsignup_jack {
+    left: 0;
+    width: auto;
+    position: inherit;
+    bottom: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.ansignup_top_block_text {
+    width: auto;
+    padding-bottom: 45px;
+}
+
+.ansignup_block2_text {
+    width: auto; padding: 0;
+}
+
+.affiliatenewsignup_form .mat-button{ width: 360px!important;}
+
+}
+
+/*----------------affiliatenewsignup amitava 11/11/2020 end-----------------*/
