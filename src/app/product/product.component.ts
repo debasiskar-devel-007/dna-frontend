@@ -74,7 +74,6 @@ export class ProductComponent implements OnInit {
         );
       }
     })
-
   }
 
 
@@ -83,7 +82,14 @@ export class ProductComponent implements OnInit {
     if (this.ActivatedRoute.snapshot.routeConfig.path == '/:class/:_id') {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
-        this.acctoken = resolveData.packagedata.results.token.access_token;
+
+        let tdata: any = { "source": "", "condition": {} };
+        this._apiService.customRequest1(tdata, 'api/getwebinartoken', environment['api_url']).subscribe((res: any) => {
+          if (res.status == 'success') {
+            this.acctoken = res.results.access_token;
+          }
+        })
+
         this.banner_image = resolveData.packagedata.results.banner[0].image;
 
         // console.log('@@@@>>>>>',this.ActivatedRoute.params,'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
@@ -104,14 +110,26 @@ export class ProductComponent implements OnInit {
       })
     }
 
+
     if (this.router.url == '/pages/products') {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
-        this.acctoken = resolveData.packagedata.results.token.access_token;
+        // this.acctoken = resolveData.packagedata.results.token.access_token;
         // console.log(this.acctoken);
         //  console.log(resolveData.packagedata) 
+
+        let tdata: any = { "source": "", "condition": {} };
+        this._apiService.customRequest1(tdata, 'api/getwebinartoken', environment['api_url']).subscribe((res: any) => {
+          if (res.status == 'success') {
+            this.acctoken = res.results.access_token;
+          }
+        })
+
+
       });
     }
+
+
 
     let uid = this.CookieService.get('shareid');
     if (uid != null && uid != undefined && uid != '' && this.ActivatedRoute.snapshot.params.class == null) {
@@ -129,7 +147,15 @@ export class ProductComponent implements OnInit {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         if (resolveData.packagedata.status == 'success') {
           this.allPackage = resolveData.packagedata.results.package;
-          this.acctoken = resolveData.packagedata.results.token.access_token;
+          // this.acctoken = resolveData.packagedata.results.token.access_token;
+
+          let tdata: any = { "source": "", "condition": {} };
+          this._apiService.customRequest1(tdata, 'api/getwebinartoken', environment['api_url']).subscribe((res: any) => {
+            if (res.status == 'success') {
+              this.acctoken = res.results.access_token;
+            }
+          })
+
           setTimeout(() => {
             document.querySelector('.package' + this.ActivatedRoute.snapshot.params.id).scrollIntoView({ behavior: 'smooth', });
           }, 1000);
@@ -147,7 +173,16 @@ export class ProductComponent implements OnInit {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         if (resolveData.packagedata.status == 'success') {
           this.allPackage = resolveData.packagedata.results.package;
-          this.acctoken = resolveData.packagedata.results.token.access_token;
+          // this.acctoken = resolveData.packagedata.results.token.access_token;
+
+          let tdata: any = { "source": "", "condition": {} };
+          this._apiService.customRequest1(tdata, 'api/getwebinartoken', environment['api_url']).subscribe((res: any) => {
+            if (res.status == 'success') {
+              this.acctoken = res.results.access_token;
+            }
+          })
+
+
           for (const i in this.allPackage) {
 
             if (this.ActivatedRoute.snapshot.params.buy === i) {
@@ -159,7 +194,6 @@ export class ProductComponent implements OnInit {
             document.querySelector('.package' + this.ActivatedRoute.snapshot.params.buy).scrollIntoView({ behavior: 'smooth', });
           }, 1000);
         }
-
       });
     }
 
@@ -168,9 +202,17 @@ export class ProductComponent implements OnInit {
       this.CookieService.set('shareid', this.ActivatedRoute.snapshot.params.class);
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
-        this.acctoken = resolveData.packagedata.results.token.access_token;
+        // this.acctoken = resolveData.packagedata.results.token.access_token;
         // console.log(this.acctoken);
         //console.log(resolveData.packagedata) 
+
+        let tdata: any = { "source": "", "condition": {} };
+        this._apiService.customRequest1(tdata, 'api/getwebinartoken', environment['api_url']).subscribe((res: any) => {
+          if (res.status == 'success') {
+            this.acctoken = res.results.access_token;
+          }
+        })
+
       });
 
       let data: any = {
@@ -553,7 +595,7 @@ export class ProductComponent implements OnInit {
     if (item.free_shipping == null) {
       // console.log('freeshipping null');
       this.productDetails.delivery = 6.95;
-      this.productDetails.name =item.productname;
+      this.productDetails.name = item.productname;
     } else {
       this.productDetails.delivery = 0.00;
       this.productDetails.name = item.productname;
