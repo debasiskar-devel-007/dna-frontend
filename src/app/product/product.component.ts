@@ -79,7 +79,9 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
 
-    if (this.ActivatedRoute.snapshot.routeConfig.path == '/:class/:_id') {
+    console.log(this.ActivatedRoute.snapshot.routeConfig.path,'??')
+
+    if (this.ActivatedRoute.snapshot.routeConfig.path == 'products/:class/:_id') {
       this.ActivatedRoute.data.subscribe((resolveData: any) => {
         this.allPackage = resolveData.packagedata.results.package;
 
@@ -92,20 +94,18 @@ export class ProductComponent implements OnInit {
 
         this.banner_image = resolveData.packagedata.results.banner[0].image;
 
-        // console.log('@@@@>>>>>',this.ActivatedRoute.params,'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
+        // console.log(this.banner_image,'@@@@>>>>>',this.ActivatedRoute.params,'https://dna.influxiq.com/landingpage/'+ this.ActivatedRoute.snapshot.params.class +'/'+ this.ActivatedRoute.snapshot.params._id);
 
         this.meta.setTag('og:image', this.banner_image);
         this.meta.setTag('twitter:image', this.banner_image);
-        this.meta.setTag('og:url', 'https://dna.influxiq.com/landingpage/' + this.ActivatedRoute.snapshot.params.class + '/' + this.ActivatedRoute.snapshot.params._id);
-        this.meta.setTag('twitter:url', 'https://dna.influxiq.com/landingpage/' + this.ActivatedRoute.snapshot.params.class + '/' + this.ActivatedRoute.snapshot.params._id);
-        // console.log(resolveData.packagedata.results.package)
-        // console.log(resolveData)
+        this.meta.setTag('og:url', 'https://dna.influxiq.com/pages/products/' + this.ActivatedRoute.snapshot.params.class + '/' + this.ActivatedRoute.snapshot.params._id);
+        this.meta.setTag('twitter:url', 'https://dna.influxiq.com/pages/products/' + this.ActivatedRoute.snapshot.params.class + '/' + this.ActivatedRoute.snapshot.params._id);
       });
       let data: any = {
         "id": this.ActivatedRoute.snapshot.params.class
       }
       this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-        console.log(res)
+        // console.log(res)
         this.parentdetails = res.result[0];
       })
     }
@@ -137,7 +137,7 @@ export class ProductComponent implements OnInit {
         "id": this.CookieService.get('shareid')
       }
       this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-        console.warn(res)
+        // console.warn(res)
         this.parentdetails = res.result[0];
       })
     }
@@ -219,7 +219,7 @@ export class ProductComponent implements OnInit {
         "id": this.ActivatedRoute.snapshot.params.class
       }
       this._apiService.customRequest1(data, 'api1/usergetone', environment['api_url']).subscribe((res: any) => {
-        console.log(res)
+        // console.log(res)
         this.parentdetails = res.result[0];
       })
 
@@ -540,7 +540,7 @@ export class ProductComponent implements OnInit {
     };
 
     setTimeout(() => {
-      console.log(this.parentdetails.type)
+      // console.log(this.parentdetails.type)
       if (this.parentdetails != null && this.parentdetails != '') {
         this.formfieldrefreshdata = {
           field: 'addfromcontrol',
@@ -590,7 +590,7 @@ export class ProductComponent implements OnInit {
     // this.openDialog();
     // return;
     // document.querySelector('.newproduct_list1').scrollIntoView({ behavior: 'smooth', });
-    console.log(item);
+    // console.log(item);
     // console.log(i);
     if (item.free_shipping == null) {
       // console.log('freeshipping null');
@@ -666,7 +666,7 @@ export class ProductComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      // console.log('The dialog was closed');
     });
   }
 }

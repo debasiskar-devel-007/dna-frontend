@@ -74,12 +74,16 @@ const routes: Routes = [
     data: { requestcondition: { source: '', condition: {} }, endpoint: 'api/getfrontendpackage' }
   },
 
+
   //banner image display route
   {
     path: 'products/:class/:_id', component: ProductComponent,
     resolve: { packagedata: TestresolveService },
     data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getbannerdataforlandingpage' }
   },
+
+
+
 
   { path: 'products-list/:id', component: ProductComponent,
   resolve: { packagedata: TestresolveService },
@@ -109,11 +113,13 @@ const routes: Routes = [
   },
 
   { path: 'landingpage', component: LandingpageComponent },
+
   {
     path: 'landingpage/:_id', component: LandingpageComponent,
     resolve: { Data: TestresolveService },
     data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
   },
+  
   { path: 'affiliatesignup', component: AffiliatesignupComponent },
   {
     path: 'affiliatesignup/:_id', component: AffiliatesignupComponent,
