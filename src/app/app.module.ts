@@ -16,7 +16,7 @@ import { DemoMaterialModule } from './material-module';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router, RouterModule } from '@angular/router';
 import { HomeComponent,CommingSoon } from './home/home.component';
-import { TermsandCondition, PrivacyPolicy } from './footer/footer.component';
+import { TermsandCondition, PrivacyPolicy, CommingSoon4  } from './footer/footer.component';
 import { HeaderComponent ,CommingSoon3} from './header/header.component';
 // import { NewthewholestoryComponent } from './newthewholestory/newthewholestory.component';
 // import { NewmentorComponent } from './newmentor/newmentor.component';
@@ -46,6 +46,9 @@ import { CheckoutComponent } from './checkout/checkout.component'
 import { TemplateModule } from './templatemodule';
 import { MentordetailComponent, mentor_detail, gallery_modal } from './mentordetail/mentordetail.component';
 import { CompletedsuccessComponent } from './completedsuccess/completedsuccess.component';
+import { AboutbetoComponent } from './aboutbeto/aboutbeto.component';
+import { TestimonialsComponent, JoeGarciaDetail, DorisWoodDetail, JasonMossDetail, MaryLouDetail, MikeDeLucaDetail, SteadwickDetail, JohnSchopfDetail, 
+  PennyLopezDetail, DeanMannheimerDetail, ChristinaWinseDetail, SymeonRodgerDetail, JohnRockDetail, KateBakerDetail  } from './testimonials/testimonials.component';
 
 //import { ContactComponent } from './contact/contact.component';
 
@@ -75,6 +78,7 @@ export function metaFactory(): MetaLoader {
     HomeComponent,
     CommingSoon,
     CommingSoon3,
+    CommingSoon4,
     // FooterComponent,
     // TemplateModule,
     // HeaderComponent,
@@ -109,7 +113,23 @@ export function metaFactory(): MetaLoader {
     MentordetailComponent,
     mentor_detail,
     gallery_modal,
-    CompletedsuccessComponent
+    CompletedsuccessComponent,
+    AboutbetoComponent,
+    TestimonialsComponent,
+    JoeGarciaDetail,
+    DorisWoodDetail,
+    JasonMossDetail,
+    MaryLouDetail,
+    MikeDeLucaDetail,
+    SteadwickDetail,
+    JohnSchopfDetail,
+    PennyLopezDetail,
+    DeanMannheimerDetail,
+    ChristinaWinseDetail,
+    SymeonRodgerDetail,
+    JohnRockDetail,
+    KateBakerDetail,
+    // AffiliatenewsignupComponent,
   
   ],
   imports: [
@@ -138,7 +158,8 @@ export function metaFactory(): MetaLoader {
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent],
-  entryComponents: [CommingSoon3,CommingSoon,loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON, mentor_detail,gallery_modal],
+  entryComponents: [CommingSoon3, CommingSoon4, CommingSoon,loginModal, TermsandCondition, PrivacyPolicy, TermsandConditionSB, PrivacyPolicySB, AddON, mentor_detail,gallery_modal, JoeGarciaDetail, DorisWoodDetail,
+    JasonMossDetail, MaryLouDetail, MikeDeLucaDetail, SteadwickDetail, JohnSchopfDetail, PennyLopezDetail, DeanMannheimerDetail, ChristinaWinseDetail, SymeonRodgerDetail, JohnRockDetail, KateBakerDetail],
 })
 export class AppModule {
 

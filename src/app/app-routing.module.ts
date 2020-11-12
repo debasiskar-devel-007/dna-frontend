@@ -26,15 +26,25 @@ import { CheckoutComponent } from './checkout/checkout.component';
 //import { ContactComponent } from './contact/contact.component';
 // const api_url1 =  environment["api_url1"];
 
+import { AboutbetoComponent } from './aboutbeto/aboutbeto.component';
+
+
+
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+
 import { CompletedsuccessComponent } from './completedsuccess/completedsuccess.component';
 
 import { MentordetailComponent } from './mentordetail/mentordetail.component';
+
+// import { AffiliatenewsignupComponent } from './affiliatenewsignup/affiliatenewsignup.component';
+
 const api_url = environment['api_url'];
 
 
 const routes: Routes = [
-
+ 
   {path:'home', component: HomeComponent}, 
+  {path:'testimonials', component: TestimonialsComponent}, 
   {path:'', component: HomeComponent}, 
   {path:'ordersuccess', component: OrdersuccessComponent},
   {path:'completed-success', component: CompletedsuccessComponent},
@@ -49,6 +59,10 @@ const routes: Routes = [
   resolve: { Data: TestresolveService },
     data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
   },
+
+  {path:'aboutbeto', component: AboutbetoComponent}, 
+
+  // {path:'affiliatenewsignup', component: AffiliatenewsignupComponent}, 
 
 //   {path:'live-webinar', component: LiveWebinarComponent, 
 //   resolve: {

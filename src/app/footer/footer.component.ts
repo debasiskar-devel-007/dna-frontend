@@ -19,6 +19,26 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
+
+
+  comming(){
+    console.log('comming');
+    this.openDialog();
+    
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(CommingSoon4, {
+      // width: '250px',
+      data: '',
+      panelClass:'commingsoon'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+ 
    // terms and condition modal
    termsModal(){
     // window.scrollTo(0, 0);
@@ -53,7 +73,7 @@ export class FooterComponent implements OnInit {
   }
 
 }
-
+ 
 
 /**terms and condition */
 @Component({
@@ -80,6 +100,23 @@ export class PrivacyPolicy {
 
   constructor(
     public dialogRef: MatDialogRef<PrivacyPolicy>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+}
+
+
+@Component({
+  selector: 'overview-example-dialog',
+  templateUrl: '../home/commingsoon.html',
+})
+export class CommingSoon4 {
+
+  constructor(
+    public dialogRef: MatDialogRef<CommingSoon4>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
   onNoClick(): void {

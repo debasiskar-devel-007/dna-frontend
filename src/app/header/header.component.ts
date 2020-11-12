@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
   }
   openDialog() {
     const dialogRef = this.dialog.open(CommingSoon3, {
-      width: '250px',
+      // width: '250px',
       data: '',
       panelClass:'commingsoon'
     });

@@ -16,13 +16,20 @@ import { ContactComponent } from '../contact/contact.component';
 import { MentorsignupComponent } from '../mentorsignup/mentorsignup.component';
 import { LandingpageComponent } from '../landingpage/landingpage.component';
 import { AffiliatesignupComponent } from '../affiliatesignup/affiliatesignup.component';
-//import { ContactComponent } from '../contact/contact.component';
+ import { TestimonialsComponent } from '../testimonials/testimonials.component';
 
+import { AffiliatenewsignupComponent } from '../affiliatenewsignup/affiliatenewsignup.component';
+
+//import { ContactComponent } from '../contact/contact.component';
+ 
 const api_url = environment['api_url'];
 
 const routes: Routes = [
   { path: '', component: PagesComponent },
   { path: 'thewholestory', component: NewthewholestoryComponent },
+
+  // {path:'testimonials', component: TestimonialsComponent},
+
   { path: 'mentor', component: NewmentorComponent },
   {
     path: 'blog', component: BlogComponent, resolve: { blogData: TestresolveService },
@@ -113,6 +120,8 @@ const routes: Routes = [
     resolve: { Data: TestresolveService },
     data: { requestcondition: { source: '', condition: { "_id": "_id" } }, endpoint: 'api1/getuserdatabyid' }
   },
+  {path:'affiliatenewsignup', component: AffiliatenewsignupComponent}, 
+
 
 
 
