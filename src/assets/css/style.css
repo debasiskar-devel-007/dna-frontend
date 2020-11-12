@@ -1607,7 +1607,7 @@ width: 41px; height: 33px; position: absolute; right: 0; bottom: -33px;}
 .checkout_body .productform .mat-select-trigger{height:32px;}
 .checkout_body .productform .mat-select-value{padding-top:8px;}
 .checkout_body .productform .form_field_shipping_zip::after{display:none;}
-.checkout_body .productform .form_field_shipping_phone::after{content:"Pay with Credit or Debit Card";font-size:22px;color:#ffffff;padding:10px;background-color:#1bb2ea;text-align:center;font-weight:normal;display:block;margin:0 0 15px 0;}
+.checkout_body .productform .form_field_card_type::before{content:"Pay with Credit or Debit Card";font-size:22px;color:#ffffff;padding:10px;background-color:#1bb2ea;text-align:center;font-weight:normal;display:block;margin:0 0 15px 0;}
 
 .formpopupMS{width:1200px;    background: #fff;    border-radius: 30px;}
 

@@ -376,7 +376,21 @@ export class CheckoutComponent implements OnInit {
    }
 
   ngOnInit() {
-
+    //console.log('value',this.productDetails[0].total);
+   
+    //this.productDetails[0].total=0;
+    if(this.productDetails[0].total==0){
+      console.log('checking condition');
+      this.formfieldrefreshdata = { field: 'removefromcontrol', 
+      value: ['card_cc','card_cvv', 'expyear', 'expmonth', 'card_type'] 
+    };
+    //console.log('>>',this.formdata);
+        setTimeout(() => {
+          this.formfieldrefreshdata = { field: 'removefromcontrol', 
+          value: ['card_cc','expyear'] 
+        };
+        },1000)
+      }
   }
 
   listenFormFieldChange(val: any) {
