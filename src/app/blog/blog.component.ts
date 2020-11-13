@@ -20,7 +20,7 @@ export class BlogComponent implements OnInit {
   public blogCatList:any;
   public headertxt:any='Date';
   public indexval:any=3;
-
+  public successmsg:boolean = false;
 
   constructor(
     public meta:MetaService,
@@ -44,7 +44,7 @@ export class BlogComponent implements OnInit {
         appId: '284977756033837',
         version: 'v2.9'
       });
-  
+      this.successmsg = true;
   }
 
   ngOnInit() {
@@ -103,6 +103,9 @@ export class BlogComponent implements OnInit {
      console.log(res)
      let resc:any=res;
      this.blogCatList=resc.result;
+     if(this.blogCatList == null){ 
+       this.successmsg = false;
+     }
    })
  }
 

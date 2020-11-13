@@ -148,7 +148,10 @@
                             </li> -->
                            
                 </ul>
-                <span *ngIf="blogCatList == null" style="color:rgb(184, 43, 43)">No Record Found</span>
+                
+                <span *ngIf="!successmsg" style="color:rgb(184, 43, 43)">No Record Found</span>
+             
+                
             </span>
         </span>
         <div class="clearfix"></div>
