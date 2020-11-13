@@ -163,7 +163,7 @@ export class CartComponent implements OnInit {
 
   // remove items of cart from
   removeItem(id: any, idx: any) {
-    this.cartDetails[0].product.splice(idx, idx + 1);
+    this.cartDetails[0].product.splice(idx,  1);
     const removedata: any = {
       id,
       product: this.cartDetails[0]
@@ -175,13 +175,15 @@ export class CartComponent implements OnInit {
         for (const i in this.cartDetails[0].product) {
           price = price + this.cartDetails[0].product[i].price;
         }
-        this.cartDetails[0].subtotal = this.cartDetails[0].price;
+        //console.log('price___',price);
+        this.cartDetails[0].subtotal = price;
         this.saletax = this.cartDetails[0].subtotal / 100 * 6;
         this.saletax = parseFloat(this.saletax.toFixed(2));
         this.cartDetails[0].saletax = this.saletax;
         this.cartDetails[0].total = this.cartDetails[0].subtotal + this.cartDetails[0].saletax + this.cartDetails[0].shipping_charge;
         this.cartDetails[0].total = parseFloat(this.cartDetails[0].total.toFixed(2));
         // observal cart data
+      // console.log(this.cartDetails[0].total,'___total-price__')
         const carData = {
           carData: res.results.product.length
         };
